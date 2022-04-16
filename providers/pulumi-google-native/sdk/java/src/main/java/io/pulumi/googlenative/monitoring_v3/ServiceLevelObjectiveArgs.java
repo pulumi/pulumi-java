@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.enums.ServiceLevelObjectiveCalendarPeriod;
 import io.pulumi.googlenative.monitoring_v3.inputs.ServiceLevelIndicatorArgs;
 import java.lang.Double;
@@ -25,8 +26,8 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     @Import(name="calendarPeriod")
       private final @Nullable Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod;
 
-    public Output<ServiceLevelObjectiveCalendarPeriod> getCalendarPeriod() {
-        return this.calendarPeriod == null ? Output.empty() : this.calendarPeriod;
+    public Output<ServiceLevelObjectiveCalendarPeriod> calendarPeriod() {
+        return this.calendarPeriod == null ? Codegen.empty() : this.calendarPeriod;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     @Import(name="goal")
       private final @Nullable Output<Double> goal;
 
-    public Output<Double> getGoal() {
-        return this.goal == null ? Output.empty() : this.goal;
+    public Output<Double> goal() {
+        return this.goal == null ? Codegen.empty() : this.goal;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     @Import(name="rollingPeriod")
       private final @Nullable Output<String> rollingPeriod;
 
-    public Output<String> getRollingPeriod() {
-        return this.rollingPeriod == null ? Output.empty() : this.rollingPeriod;
+    public Output<String> rollingPeriod() {
+        return this.rollingPeriod == null ? Codegen.empty() : this.rollingPeriod;
     }
 
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -87,15 +88,15 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     @Import(name="serviceLevelIndicator")
       private final @Nullable Output<ServiceLevelIndicatorArgs> serviceLevelIndicator;
 
-    public Output<ServiceLevelIndicatorArgs> getServiceLevelIndicator() {
-        return this.serviceLevelIndicator == null ? Output.empty() : this.serviceLevelIndicator;
+    public Output<ServiceLevelIndicatorArgs> serviceLevelIndicator() {
+        return this.serviceLevelIndicator == null ? Codegen.empty() : this.serviceLevelIndicator;
     }
 
     @Import(name="serviceLevelObjectiveId")
       private final @Nullable Output<String> serviceLevelObjectiveId;
 
-    public Output<String> getServiceLevelObjectiveId() {
-        return this.serviceLevelObjectiveId == null ? Output.empty() : this.serviceLevelObjectiveId;
+    public Output<String> serviceLevelObjectiveId() {
+        return this.serviceLevelObjectiveId == null ? Codegen.empty() : this.serviceLevelObjectiveId;
     }
 
     /**
@@ -105,21 +106,21 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
-    public Output<Map<String,String>> getUserLabels() {
-        return this.userLabels == null ? Output.empty() : this.userLabels;
+    public Output<Map<String,String>> userLabels() {
+        return this.userLabels == null ? Codegen.empty() : this.userLabels;
     }
 
     @Import(name="v3Id", required=true)
       private final Output<String> v3Id;
 
-    public Output<String> getV3Id() {
+    public Output<String> v3Id() {
         return this.v3Id;
     }
 
     @Import(name="v3Id1", required=true)
       private final Output<String> v3Id1;
 
-    public Output<String> getV3Id1() {
+    public Output<String> v3Id1() {
         return this.v3Id1;
     }
 
@@ -149,17 +150,17 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceLevelObjectiveArgs() {
-        this.calendarPeriod = Output.empty();
-        this.displayName = Output.empty();
-        this.goal = Output.empty();
-        this.name = Output.empty();
-        this.rollingPeriod = Output.empty();
-        this.serviceId = Output.empty();
-        this.serviceLevelIndicator = Output.empty();
-        this.serviceLevelObjectiveId = Output.empty();
-        this.userLabels = Output.empty();
-        this.v3Id = Output.empty();
-        this.v3Id1 = Output.empty();
+        this.calendarPeriod = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.goal = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rollingPeriod = Codegen.empty();
+        this.serviceId = Codegen.empty();
+        this.serviceLevelIndicator = Codegen.empty();
+        this.serviceLevelObjectiveId = Codegen.empty();
+        this.userLabels = Codegen.empty();
+        this.v3Id = Codegen.empty();
+        this.v3Id1 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder calendarPeriod(@Nullable ServiceLevelObjectiveCalendarPeriod calendarPeriod) {
-            this.calendarPeriod = Output.ofNullable(calendarPeriod);
+            this.calendarPeriod = Codegen.ofNullable(calendarPeriod);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -215,7 +216,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder goal(@Nullable Output<Double> goal) {
@@ -223,7 +224,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder goal(@Nullable Double goal) {
-            this.goal = Output.ofNullable(goal);
+            this.goal = Codegen.ofNullable(goal);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -231,7 +232,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rollingPeriod(@Nullable Output<String> rollingPeriod) {
@@ -239,7 +240,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder rollingPeriod(@Nullable String rollingPeriod) {
-            this.rollingPeriod = Output.ofNullable(rollingPeriod);
+            this.rollingPeriod = Codegen.ofNullable(rollingPeriod);
             return this;
         }
         public Builder serviceId(Output<String> serviceId) {
@@ -255,7 +256,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder serviceLevelIndicator(@Nullable ServiceLevelIndicatorArgs serviceLevelIndicator) {
-            this.serviceLevelIndicator = Output.ofNullable(serviceLevelIndicator);
+            this.serviceLevelIndicator = Codegen.ofNullable(serviceLevelIndicator);
             return this;
         }
         public Builder serviceLevelObjectiveId(@Nullable Output<String> serviceLevelObjectiveId) {
@@ -263,7 +264,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder serviceLevelObjectiveId(@Nullable String serviceLevelObjectiveId) {
-            this.serviceLevelObjectiveId = Output.ofNullable(serviceLevelObjectiveId);
+            this.serviceLevelObjectiveId = Codegen.ofNullable(serviceLevelObjectiveId);
             return this;
         }
         public Builder userLabels(@Nullable Output<Map<String,String>> userLabels) {
@@ -271,7 +272,7 @@ public final class ServiceLevelObjectiveArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder userLabels(@Nullable Map<String,String> userLabels) {
-            this.userLabels = Output.ofNullable(userLabels);
+            this.userLabels = Codegen.ofNullable(userLabels);
             return this;
         }
         public Builder v3Id(Output<String> v3Id) {

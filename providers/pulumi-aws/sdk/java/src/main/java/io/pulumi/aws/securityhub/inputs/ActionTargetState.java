@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
-    public Output<String> getIdentifier() {
-        return this.identifier == null ? Output.empty() : this.identifier;
+    public Output<String> identifier() {
+        return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ActionTargetState(
@@ -70,10 +71,10 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActionTargetState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.identifier = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.identifier = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -115,7 +116,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder identifier(@Nullable Output<String> identifier) {
@@ -123,7 +124,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Output.ofNullable(identifier);
+            this.identifier = Codegen.ofNullable(identifier);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -131,7 +132,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ActionTargetState build() {
             return new ActionTargetState(arn, description, identifier, name);

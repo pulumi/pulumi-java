@@ -5,6 +5,7 @@ package io.pulumi.aws.ssoadmin;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
     @Import(name="inlinePolicy", required=true)
       private final Output<String> inlinePolicy;
 
-    public Output<String> getInlinePolicy() {
+    public Output<String> inlinePolicy() {
         return this.inlinePolicy;
     }
 
@@ -31,7 +32,7 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -42,7 +43,7 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
     @Import(name="permissionSetArn", required=true)
       private final Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -56,9 +57,9 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
     }
 
     private PermissionSetInlinePolicyArgs() {
-        this.inlinePolicy = Output.empty();
-        this.instanceArn = Output.empty();
-        this.permissionSetArn = Output.empty();
+        this.inlinePolicy = Codegen.empty();
+        this.instanceArn = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
     }
 
     public static Builder builder() {

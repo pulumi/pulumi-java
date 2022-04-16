@@ -29,6 +29,7 @@ import io.pulumi.azurenative.cdn.inputs.UrlSigningActionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -48,7 +49,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<Object>> actions;
 
-    public Output<List<Object>> getActions() {
+    public Output<List<Object>> actions() {
         return this.actions;
     }
 
@@ -59,8 +60,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<List<Object>> conditions;
 
-    public Output<List<Object>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<Object>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchProcessingBehavior")
       private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
-    public Output<Either<String,MatchProcessingBehavior>> getMatchProcessingBehavior() {
-        return this.matchProcessingBehavior == null ? Output.empty() : this.matchProcessingBehavior;
+    public Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior() {
+        return this.matchProcessingBehavior == null ? Codegen.empty() : this.matchProcessingBehavior;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="order", required=true)
       private final Output<Integer> order;
 
-    public Output<Integer> getOrder() {
+    public Output<Integer> order() {
         return this.order;
     }
 
@@ -92,7 +93,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -103,7 +104,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,8 +115,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleSetName", required=true)
       private final Output<String> ruleSetName;
 
-    public Output<String> getRuleSetName() {
+    public Output<String> ruleSetName() {
         return this.ruleSetName;
     }
 
@@ -149,14 +150,14 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleArgs() {
-        this.actions = Output.empty();
-        this.conditions = Output.empty();
-        this.matchProcessingBehavior = Output.empty();
-        this.order = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleName = Output.empty();
-        this.ruleSetName = Output.empty();
+        this.actions = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.matchProcessingBehavior = Codegen.empty();
+        this.order = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.ruleSetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable List<Object> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(Object... conditions) {
@@ -220,7 +221,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
-            this.matchProcessingBehavior = Output.ofNullable(matchProcessingBehavior);
+            this.matchProcessingBehavior = Codegen.ofNullable(matchProcessingBehavior);
             return this;
         }
         public Builder order(Output<Integer> order) {
@@ -252,7 +253,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder ruleSetName(Output<String> ruleSetName) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.serviceAccount;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.IAMBindingArgs;
 import io.pulumi.gcp.serviceAccount.inputs.IAMBindingState;
@@ -79,7 +80,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ IAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ IAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -93,13 +94,13 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the service account IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -117,7 +118,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -131,7 +132,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified name of the service account to apply policy to.
      * 
      */
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 
@@ -157,7 +158,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMBinding(String name, IAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:serviceAccount/iAMBinding:IAMBinding", name, args == null ? IAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:serviceAccount/iAMBinding:IAMBinding", name, args == null ? IAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMBinding(String name, Output<String> id, @Nullable IAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

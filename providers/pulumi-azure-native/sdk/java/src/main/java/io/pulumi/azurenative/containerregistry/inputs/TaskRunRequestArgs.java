@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.OverrideTaskStepPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="agentPoolName")
       private final @Nullable Output<String> agentPoolName;
 
-    public Output<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
+    public Output<String> agentPoolName() {
+        return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isArchiveEnabled")
       private final @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Output<Boolean> getIsArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Output.empty() : this.isArchiveEnabled;
+    public Output<Boolean> isArchiveEnabled() {
+        return this.isArchiveEnabled == null ? Codegen.empty() : this.isArchiveEnabled;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logTemplate")
       private final @Nullable Output<String> logTemplate;
 
-    public Output<String> getLogTemplate() {
-        return this.logTemplate == null ? Output.empty() : this.logTemplate;
+    public Output<String> logTemplate() {
+        return this.logTemplate == null ? Codegen.empty() : this.logTemplate;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overrideTaskStepProperties")
       private final @Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties;
 
-    public Output<OverrideTaskStepPropertiesArgs> getOverrideTaskStepProperties() {
-        return this.overrideTaskStepProperties == null ? Output.empty() : this.overrideTaskStepProperties;
+    public Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties() {
+        return this.overrideTaskStepProperties == null ? Codegen.empty() : this.overrideTaskStepProperties;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskId", required=true)
       private final Output<String> taskId;
 
-    public Output<String> getTaskId() {
+    public Output<String> taskId() {
         return this.taskId;
     }
 
@@ -83,7 +84,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -95,7 +96,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
         Output<String> taskId,
         Output<String> type) {
         this.agentPoolName = agentPoolName;
-        this.isArchiveEnabled = isArchiveEnabled == null ? Output.ofNullable(false) : isArchiveEnabled;
+        this.isArchiveEnabled = isArchiveEnabled == null ? Codegen.ofNullable(false) : isArchiveEnabled;
         this.logTemplate = logTemplate;
         this.overrideTaskStepProperties = overrideTaskStepProperties;
         this.taskId = Objects.requireNonNull(taskId, "expected parameter 'taskId' to be non-null");
@@ -103,12 +104,12 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskRunRequestArgs() {
-        this.agentPoolName = Output.empty();
-        this.isArchiveEnabled = Output.empty();
-        this.logTemplate = Output.empty();
-        this.overrideTaskStepProperties = Output.empty();
-        this.taskId = Output.empty();
-        this.type = Output.empty();
+        this.agentPoolName = Codegen.empty();
+        this.isArchiveEnabled = Codegen.empty();
+        this.logTemplate = Codegen.empty();
+        this.overrideTaskStepProperties = Codegen.empty();
+        this.taskId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Output.ofNullable(agentPoolName);
+            this.agentPoolName = Codegen.ofNullable(agentPoolName);
             return this;
         }
         public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
@@ -154,7 +155,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = Output.ofNullable(isArchiveEnabled);
+            this.isArchiveEnabled = Codegen.ofNullable(isArchiveEnabled);
             return this;
         }
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
@@ -162,7 +163,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Output.ofNullable(logTemplate);
+            this.logTemplate = Codegen.ofNullable(logTemplate);
             return this;
         }
         public Builder overrideTaskStepProperties(@Nullable Output<OverrideTaskStepPropertiesArgs> overrideTaskStepProperties) {
@@ -170,7 +171,7 @@ public final class TaskRunRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesArgs overrideTaskStepProperties) {
-            this.overrideTaskStepProperties = Output.ofNullable(overrideTaskStepProperties);
+            this.overrideTaskStepProperties = Codegen.ofNullable(overrideTaskStepProperties);
             return this;
         }
         public Builder taskId(Output<String> taskId) {

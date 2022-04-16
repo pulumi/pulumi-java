@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigee;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvironmentIamMemberArgs;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamMemberState;
@@ -60,7 +61,7 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=EnvironmentIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ EnvironmentIamMemberCondition> condition;
 
-    public Output</* @Nullable */ EnvironmentIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ EnvironmentIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -74,7 +75,7 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getEnvId() {
+    public Output<String> envId() {
         return this.envId;
     }
     /**
@@ -88,19 +89,19 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
     /**
@@ -118,7 +119,7 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -144,7 +145,7 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvironmentIamMember(String name, EnvironmentIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigee/environmentIamMember:EnvironmentIamMember", name, args == null ? EnvironmentIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigee/environmentIamMember:EnvironmentIamMember", name, args == null ? EnvironmentIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnvironmentIamMember(String name, Output<String> id, @Nullable EnvironmentIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

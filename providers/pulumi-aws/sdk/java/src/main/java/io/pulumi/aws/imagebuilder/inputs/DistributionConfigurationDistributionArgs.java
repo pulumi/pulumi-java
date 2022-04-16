@@ -7,6 +7,7 @@ import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionAm
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     @Import(name="amiDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationArgs> amiDistributionConfiguration;
 
-    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationArgs> getAmiDistributionConfiguration() {
-        return this.amiDistributionConfiguration == null ? Output.empty() : this.amiDistributionConfiguration;
+    public Output<DistributionConfigurationDistributionAmiDistributionConfigurationArgs> amiDistributionConfiguration() {
+        return this.amiDistributionConfiguration == null ? Codegen.empty() : this.amiDistributionConfiguration;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     @Import(name="containerDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> containerDistributionConfiguration;
 
-    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> getContainerDistributionConfiguration() {
-        return this.containerDistributionConfiguration == null ? Output.empty() : this.containerDistributionConfiguration;
+    public Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> containerDistributionConfiguration() {
+        return this.containerDistributionConfiguration == null ? Codegen.empty() : this.containerDistributionConfiguration;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     @Import(name="licenseConfigurationArns")
       private final @Nullable Output<List<String>> licenseConfigurationArns;
 
-    public Output<List<String>> getLicenseConfigurationArns() {
-        return this.licenseConfigurationArns == null ? Output.empty() : this.licenseConfigurationArns;
+    public Output<List<String>> licenseConfigurationArns() {
+        return this.licenseConfigurationArns == null ? Codegen.empty() : this.licenseConfigurationArns;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -73,10 +74,10 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     }
 
     private DistributionConfigurationDistributionArgs() {
-        this.amiDistributionConfiguration = Output.empty();
-        this.containerDistributionConfiguration = Output.empty();
-        this.licenseConfigurationArns = Output.empty();
-        this.region = Output.empty();
+        this.amiDistributionConfiguration = Codegen.empty();
+        this.containerDistributionConfiguration = Codegen.empty();
+        this.licenseConfigurationArns = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             return this;
         }
         public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationArgs amiDistributionConfiguration) {
-            this.amiDistributionConfiguration = Output.ofNullable(amiDistributionConfiguration);
+            this.amiDistributionConfiguration = Codegen.ofNullable(amiDistributionConfiguration);
             return this;
         }
         public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationArgs> containerDistributionConfiguration) {
@@ -118,7 +119,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             return this;
         }
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationArgs containerDistributionConfiguration) {
-            this.containerDistributionConfiguration = Output.ofNullable(containerDistributionConfiguration);
+            this.containerDistributionConfiguration = Codegen.ofNullable(containerDistributionConfiguration);
             return this;
         }
         public Builder licenseConfigurationArns(@Nullable Output<List<String>> licenseConfigurationArns) {
@@ -126,7 +127,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             return this;
         }
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
-            this.licenseConfigurationArns = Output.ofNullable(licenseConfigurationArns);
+            this.licenseConfigurationArns = Codegen.ofNullable(licenseConfigurationArns);
             return this;
         }
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {

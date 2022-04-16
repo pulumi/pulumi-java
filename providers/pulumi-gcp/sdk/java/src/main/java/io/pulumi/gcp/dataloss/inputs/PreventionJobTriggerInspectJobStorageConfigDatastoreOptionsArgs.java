@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsAr
     @Import(name="kind", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs> kind;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs> getKind() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs> kind() {
         return this.kind;
     }
 
@@ -35,7 +36,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsAr
     @Import(name="partitionId", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs> partitionId;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs> getPartitionId() {
+    public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs> partitionId() {
         return this.partitionId;
     }
 
@@ -47,8 +48,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsAr
     }
 
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs() {
-        this.kind = Output.empty();
-        this.partitionId = Output.empty();
+        this.kind = Codegen.empty();
+        this.partitionId = Codegen.empty();
     }
 
     public static Builder builder() {

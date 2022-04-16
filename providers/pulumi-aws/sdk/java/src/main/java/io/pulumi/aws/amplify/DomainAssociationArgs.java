@@ -6,6 +6,7 @@ package io.pulumi.aws.amplify;
 import io.pulumi.aws.amplify.inputs.DomainAssociationSubDomainArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -35,7 +36,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -46,7 +47,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="subDomains", required=true)
       private final Output<List<DomainAssociationSubDomainArgs>> subDomains;
 
-    public Output<List<DomainAssociationSubDomainArgs>> getSubDomains() {
+    public Output<List<DomainAssociationSubDomainArgs>> subDomains() {
         return this.subDomains;
     }
 
@@ -57,8 +58,8 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="waitForVerification")
       private final @Nullable Output<Boolean> waitForVerification;
 
-    public Output<Boolean> getWaitForVerification() {
-        return this.waitForVerification == null ? Output.empty() : this.waitForVerification;
+    public Output<Boolean> waitForVerification() {
+        return this.waitForVerification == null ? Codegen.empty() : this.waitForVerification;
     }
 
     public DomainAssociationArgs(
@@ -73,10 +74,10 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DomainAssociationArgs() {
-        this.appId = Output.empty();
-        this.domainName = Output.empty();
-        this.subDomains = Output.empty();
-        this.waitForVerification = Output.empty();
+        this.appId = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.subDomains = Codegen.empty();
+        this.waitForVerification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder waitForVerification(@Nullable Boolean waitForVerification) {
-            this.waitForVerification = Output.ofNullable(waitForVerification);
+            this.waitForVerification = Codegen.ofNullable(waitForVerification);
             return this;
         }        public DomainAssociationArgs build() {
             return new DomainAssociationArgs(appId, domainName, subDomains, waitForVerification);

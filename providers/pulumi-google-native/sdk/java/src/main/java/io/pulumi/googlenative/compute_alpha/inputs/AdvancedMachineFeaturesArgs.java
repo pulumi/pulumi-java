@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="enableNestedVirtualization")
       private final @Nullable Output<Boolean> enableNestedVirtualization;
 
-    public Output<Boolean> getEnableNestedVirtualization() {
-        return this.enableNestedVirtualization == null ? Output.empty() : this.enableNestedVirtualization;
+    public Output<Boolean> enableNestedVirtualization() {
+        return this.enableNestedVirtualization == null ? Codegen.empty() : this.enableNestedVirtualization;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="enableUefiNetworking")
       private final @Nullable Output<Boolean> enableUefiNetworking;
 
-    public Output<Boolean> getEnableUefiNetworking() {
-        return this.enableUefiNetworking == null ? Output.empty() : this.enableUefiNetworking;
+    public Output<Boolean> enableUefiNetworking() {
+        return this.enableUefiNetworking == null ? Codegen.empty() : this.enableUefiNetworking;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="numaNodeCount")
       private final @Nullable Output<Integer> numaNodeCount;
 
-    public Output<Integer> getNumaNodeCount() {
-        return this.numaNodeCount == null ? Output.empty() : this.numaNodeCount;
+    public Output<Integer> numaNodeCount() {
+        return this.numaNodeCount == null ? Codegen.empty() : this.numaNodeCount;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
-    public Output<Integer> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
+    public Output<Integer> threadsPerCore() {
+        return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="visibleCoreCount")
       private final @Nullable Output<Integer> visibleCoreCount;
 
-    public Output<Integer> getVisibleCoreCount() {
-        return this.visibleCoreCount == null ? Output.empty() : this.visibleCoreCount;
+    public Output<Integer> visibleCoreCount() {
+        return this.visibleCoreCount == null ? Codegen.empty() : this.visibleCoreCount;
     }
 
     public AdvancedMachineFeaturesArgs(
@@ -88,11 +89,11 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     }
 
     private AdvancedMachineFeaturesArgs() {
-        this.enableNestedVirtualization = Output.empty();
-        this.enableUefiNetworking = Output.empty();
-        this.numaNodeCount = Output.empty();
-        this.threadsPerCore = Output.empty();
-        this.visibleCoreCount = Output.empty();
+        this.enableNestedVirtualization = Codegen.empty();
+        this.enableUefiNetworking = Codegen.empty();
+        this.numaNodeCount = Codegen.empty();
+        this.threadsPerCore = Codegen.empty();
+        this.visibleCoreCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
-            this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
+            this.enableNestedVirtualization = Codegen.ofNullable(enableNestedVirtualization);
             return this;
         }
         public Builder enableUefiNetworking(@Nullable Output<Boolean> enableUefiNetworking) {
@@ -136,7 +137,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableUefiNetworking(@Nullable Boolean enableUefiNetworking) {
-            this.enableUefiNetworking = Output.ofNullable(enableUefiNetworking);
+            this.enableUefiNetworking = Codegen.ofNullable(enableUefiNetworking);
             return this;
         }
         public Builder numaNodeCount(@Nullable Output<Integer> numaNodeCount) {
@@ -144,7 +145,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder numaNodeCount(@Nullable Integer numaNodeCount) {
-            this.numaNodeCount = Output.ofNullable(numaNodeCount);
+            this.numaNodeCount = Codegen.ofNullable(numaNodeCount);
             return this;
         }
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
@@ -152,7 +153,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Output.ofNullable(threadsPerCore);
+            this.threadsPerCore = Codegen.ofNullable(threadsPerCore);
             return this;
         }
         public Builder visibleCoreCount(@Nullable Output<Integer> visibleCoreCount) {
@@ -160,7 +161,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder visibleCoreCount(@Nullable Integer visibleCoreCount) {
-            this.visibleCoreCount = Output.ofNullable(visibleCoreCount);
+            this.visibleCoreCount = Codegen.ofNullable(visibleCoreCount);
             return this;
         }        public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(enableNestedVirtualization, enableUefiNetworking, numaNodeCount, threadsPerCore, visibleCoreCount);

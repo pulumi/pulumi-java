@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
-    public Output<String> getMountPath() {
-        return this.mountPath == null ? Output.empty() : this.mountPath;
+    public Output<String> mountPath() {
+        return this.mountPath == null ? Codegen.empty() : this.mountPath;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subPath")
       private final @Nullable Output<String> subPath;
 
-    public Output<String> getSubPath() {
-        return this.subPath == null ? Output.empty() : this.subPath;
+    public Output<String> subPath() {
+        return this.subPath == null ? Codegen.empty() : this.subPath;
     }
 
     public VolumeMountArgs(
@@ -75,10 +76,10 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeMountArgs() {
-        this.mountPath = Output.empty();
-        this.name = Output.empty();
-        this.readOnly = Output.empty();
-        this.subPath = Output.empty();
+        this.mountPath = Codegen.empty();
+        this.name = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.subPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Output.ofNullable(mountPath);
+            this.mountPath = Codegen.ofNullable(mountPath);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -120,7 +121,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -128,7 +129,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder subPath(@Nullable Output<String> subPath) {
@@ -136,7 +137,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subPath(@Nullable String subPath) {
-            this.subPath = Output.ofNullable(subPath);
+            this.subPath = Codegen.ofNullable(subPath);
             return this;
         }        public VolumeMountArgs build() {
             return new VolumeMountArgs(mountPath, name, readOnly, subPath);

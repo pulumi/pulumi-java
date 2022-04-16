@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
     @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable;
     }
 
@@ -31,7 +32,7 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
     @Import(name="rollback", required=true)
       private final Output<Boolean> rollback;
 
-    public Output<Boolean> getRollback() {
+    public Output<Boolean> rollback() {
         return this.rollback;
     }
 
@@ -43,8 +44,8 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
     }
 
     private ServiceDeploymentCircuitBreakerArgs() {
-        this.enable = Output.empty();
-        this.rollback = Output.empty();
+        this.enable = Codegen.empty();
+        this.rollback = Codegen.empty();
     }
 
     public static Builder builder() {

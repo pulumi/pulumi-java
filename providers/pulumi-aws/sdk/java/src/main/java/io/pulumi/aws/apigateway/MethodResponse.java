@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.MethodResponseState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
     /**
@@ -55,7 +56,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return The API resource ID
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -69,7 +70,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return A map of the API models used for the response's content type
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getResponseModels() {
+    public Output</* @Nullable */ Map<String,String>> responseModels() {
         return this.responseModels;
     }
     /**
@@ -87,7 +88,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * would define that the header `X-Some-Header` can be provided on the response.
      * 
      */
-    public Output</* @Nullable */ Map<String,Boolean>> getResponseParameters() {
+    public Output</* @Nullable */ Map<String,Boolean>> responseParameters() {
         return this.responseParameters;
     }
     /**
@@ -101,7 +102,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated REST API
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -115,7 +116,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @return The HTTP status code
      * 
      */
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 
@@ -141,7 +142,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MethodResponse(String name, MethodResponseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/methodResponse:MethodResponse", name, args == null ? MethodResponseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/methodResponse:MethodResponse", name, args == null ? MethodResponseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MethodResponse(String name, Output<String> id, @Nullable MethodResponseState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

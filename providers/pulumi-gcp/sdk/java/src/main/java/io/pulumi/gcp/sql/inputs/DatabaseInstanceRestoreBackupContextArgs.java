@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     @Import(name="backupRunId", required=true)
       private final Output<Integer> backupRunId;
 
-    public Output<Integer> getBackupRunId() {
+    public Output<Integer> backupRunId() {
         return this.backupRunId;
     }
 
@@ -34,8 +35,8 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+    public Output<String> instanceId() {
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatabaseInstanceRestoreBackupContextArgs(
@@ -59,9 +60,9 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
     }
 
     private DatabaseInstanceRestoreBackupContextArgs() {
-        this.backupRunId = Output.empty();
-        this.instanceId = Output.empty();
-        this.project = Output.empty();
+        this.backupRunId = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -109,7 +110,7 @@ public final class DatabaseInstanceRestoreBackupContextArgs extends io.pulumi.re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatabaseInstanceRestoreBackupContextArgs build() {
             return new DatabaseInstanceRestoreBackupContextArgs(backupRunId, instanceId, project);

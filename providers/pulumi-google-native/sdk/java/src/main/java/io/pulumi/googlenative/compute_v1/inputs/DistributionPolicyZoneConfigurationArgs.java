@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public DistributionPolicyZoneConfigurationArgs(@Nullable Output<String> zone) {
@@ -30,7 +31,7 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
     }
 
     private DistributionPolicyZoneConfigurationArgs() {
-        this.zone = Output.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DistributionPolicyZoneConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public DistributionPolicyZoneConfigurationArgs build() {
             return new DistributionPolicyZoneConfigurationArgs(zone);

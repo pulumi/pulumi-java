@@ -24,7 +24,7 @@ public final class IapTestServiceAccountInfoResponse {
      * Describes OAuth2 Client ID of resources protected by Identity-Aware-Proxy(IAP).
      * 
     */
-    public String getTargetAudienceClientId() {
+    public String targetAudienceClientId() {
         return this.targetAudienceClientId;
     }
 

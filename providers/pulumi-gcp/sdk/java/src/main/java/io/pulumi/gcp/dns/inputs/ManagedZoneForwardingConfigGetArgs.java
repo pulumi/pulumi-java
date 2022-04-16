@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigTargetNameServerGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ManagedZoneForwardingConfigGetArgs extends io.pulumi.resource
     @Import(name="targetNameServers", required=true)
       private final Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers;
 
-    public Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> getTargetNameServers() {
+    public Output<List<ManagedZoneForwardingConfigTargetNameServerGetArgs>> targetNameServers() {
         return this.targetNameServers;
     }
 
@@ -33,7 +34,7 @@ public final class ManagedZoneForwardingConfigGetArgs extends io.pulumi.resource
     }
 
     private ManagedZoneForwardingConfigGetArgs() {
-        this.targetNameServers = Output.empty();
+        this.targetNameServers = Codegen.empty();
     }
 
     public static Builder builder() {

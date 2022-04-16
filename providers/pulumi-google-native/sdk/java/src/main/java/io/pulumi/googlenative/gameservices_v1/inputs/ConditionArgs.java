@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gameservices_v1.enums.ConditionIam;
 import io.pulumi.googlenative.gameservices_v1.enums.ConditionOp;
 import io.pulumi.googlenative.gameservices_v1.enums.ConditionSys;
@@ -29,8 +30,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iam")
       private final @Nullable Output<ConditionIam> iam;
 
-    public Output<ConditionIam> getIam() {
-        return this.iam == null ? Output.empty() : this.iam;
+    public Output<ConditionIam> iam() {
+        return this.iam == null ? Codegen.empty() : this.iam;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="op")
       private final @Nullable Output<ConditionOp> op;
 
-    public Output<ConditionOp> getOp() {
-        return this.op == null ? Output.empty() : this.op;
+    public Output<ConditionOp> op() {
+        return this.op == null ? Codegen.empty() : this.op;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="svc")
       private final @Nullable Output<String> svc;
 
-    public Output<String> getSvc() {
-        return this.svc == null ? Output.empty() : this.svc;
+    public Output<String> svc() {
+        return this.svc == null ? Codegen.empty() : this.svc;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sys")
       private final @Nullable Output<ConditionSys> sys;
 
-    public Output<ConditionSys> getSys() {
-        return this.sys == null ? Output.empty() : this.sys;
+    public Output<ConditionSys> sys() {
+        return this.sys == null ? Codegen.empty() : this.sys;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ConditionArgs(
@@ -91,11 +92,11 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConditionArgs() {
-        this.iam = Output.empty();
-        this.op = Output.empty();
-        this.svc = Output.empty();
-        this.sys = Output.empty();
-        this.values = Output.empty();
+        this.iam = Codegen.empty();
+        this.op = Codegen.empty();
+        this.svc = Codegen.empty();
+        this.sys = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iam(@Nullable ConditionIam iam) {
-            this.iam = Output.ofNullable(iam);
+            this.iam = Codegen.ofNullable(iam);
             return this;
         }
         public Builder op(@Nullable Output<ConditionOp> op) {
@@ -139,7 +140,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder op(@Nullable ConditionOp op) {
-            this.op = Output.ofNullable(op);
+            this.op = Codegen.ofNullable(op);
             return this;
         }
         public Builder svc(@Nullable Output<String> svc) {
@@ -147,7 +148,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder svc(@Nullable String svc) {
-            this.svc = Output.ofNullable(svc);
+            this.svc = Codegen.ofNullable(svc);
             return this;
         }
         public Builder sys(@Nullable Output<ConditionSys> sys) {
@@ -155,7 +156,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sys(@Nullable ConditionSys sys) {
-            this.sys = Output.ofNullable(sys);
+            this.sys = Codegen.ofNullable(sys);
             return this;
         }
         public Builder values(@Nullable Output<List<String>> values) {
@@ -163,7 +164,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
     @Import(name="azDistribution")
       private final @Nullable Output<String> azDistribution;
 
-    public Output<String> getAzDistribution() {
-        return this.azDistribution == null ? Output.empty() : this.azDistribution;
+    public Output<String> azDistribution() {
+        return this.azDistribution == null ? Codegen.empty() : this.azDistribution;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
     @Import(name="clientSubnets", required=true)
       private final Output<List<String>> clientSubnets;
 
-    public Output<List<String>> getClientSubnets() {
+    public Output<List<String>> clientSubnets() {
         return this.clientSubnets;
     }
 
@@ -45,7 +46,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
     @Import(name="ebsVolumeSize", required=true)
       private final Output<Integer> ebsVolumeSize;
 
-    public Output<Integer> getEbsVolumeSize() {
+    public Output<Integer> ebsVolumeSize() {
         return this.ebsVolumeSize;
     }
 
@@ -56,7 +57,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -67,7 +68,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
     @Import(name="securityGroups", required=true)
       private final Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
 
@@ -85,11 +86,11 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
     }
 
     private ClusterBrokerNodeGroupInfoArgs() {
-        this.azDistribution = Output.empty();
-        this.clientSubnets = Output.empty();
-        this.ebsVolumeSize = Output.empty();
-        this.instanceType = Output.empty();
-        this.securityGroups = Output.empty();
+        this.azDistribution = Codegen.empty();
+        this.clientSubnets = Codegen.empty();
+        this.ebsVolumeSize = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.securityGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder azDistribution(@Nullable String azDistribution) {
-            this.azDistribution = Output.ofNullable(azDistribution);
+            this.azDistribution = Codegen.ofNullable(azDistribution);
             return this;
         }
         public Builder clientSubnets(Output<List<String>> clientSubnets) {

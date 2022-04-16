@@ -5,6 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Output.empty() : this.dnsServers;
+    public Output<List<String>> dnsServers() {
+        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
-    public Output<String> getHostName() {
-        return this.hostName == null ? Output.empty() : this.hostName;
+    public Output<String> hostName() {
+        return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
-    public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+    public Output<String> policyId() {
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public GuestOSCustomizationArgs(
@@ -88,11 +89,11 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
     }
 
     private GuestOSCustomizationArgs() {
-        this.dnsServers = Output.empty();
-        this.hostName = Output.empty();
-        this.password = Output.empty();
-        this.policyId = Output.empty();
-        this.username = Output.empty();
+        this.dnsServers = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.password = Codegen.empty();
+        this.policyId = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Output.ofNullable(dnsServers);
+            this.dnsServers = Codegen.ofNullable(dnsServers);
             return this;
         }
         public Builder dnsServers(String... dnsServers) {
@@ -139,7 +140,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Output.ofNullable(hostName);
+            this.hostName = Codegen.ofNullable(hostName);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -147,7 +148,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder policyId(@Nullable Output<String> policyId) {
@@ -155,7 +156,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -163,7 +164,7 @@ public final class GuestOSCustomizationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public GuestOSCustomizationArgs build() {
             return new GuestOSCustomizationArgs(dnsServers, hostName, password, policyId, username);

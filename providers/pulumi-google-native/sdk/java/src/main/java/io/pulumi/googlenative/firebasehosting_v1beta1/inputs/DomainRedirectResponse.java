@@ -23,7 +23,7 @@ public final class DomainRedirectResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="domainName", required=true)
       private final String domainName;
 
-    public String getDomainName() {
+    public String domainName() {
         return this.domainName;
     }
 
@@ -34,7 +34,7 @@ public final class DomainRedirectResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

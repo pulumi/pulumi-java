@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
     @Import(name="parameters")
       private final @Nullable Output<List<SystemParameterArgs>> parameters;
 
-    public Output<List<SystemParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<SystemParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+    public Output<String> selector() {
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     public SystemParameterRuleArgs(
@@ -50,8 +51,8 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
     }
 
     private SystemParameterRuleArgs() {
-        this.parameters = Output.empty();
-        this.selector = Output.empty();
+        this.parameters = Codegen.empty();
+        this.selector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder parameters(@Nullable List<SystemParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(SystemParameterArgs... parameters) {
@@ -92,7 +93,7 @@ public final class SystemParameterRuleArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }        public SystemParameterRuleArgs build() {
             return new SystemParameterRuleArgs(parameters, selector);

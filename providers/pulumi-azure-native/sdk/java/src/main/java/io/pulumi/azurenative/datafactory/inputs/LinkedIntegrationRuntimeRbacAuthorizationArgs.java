@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     @Import(name="authorizationType", required=true)
       private final Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType;
     }
 
@@ -38,8 +39,8 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+    public Output<CredentialReferenceArgs> credential() {
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -63,9 +64,9 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     }
 
     private LinkedIntegrationRuntimeRbacAuthorizationArgs() {
-        this.authorizationType = Output.empty();
-        this.credential = Output.empty();
-        this.resourceId = Output.empty();
+        this.authorizationType = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {

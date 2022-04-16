@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * The name of a Dialogflow virtual agent used for end user side intent detection and suggestion. Format: `projects//locations//agent`. When multiple agents are allowed in the same Dialogflow project.
      * 
     */
-    public String getAgent() {
+    public String agent() {
         return this.agent;
     }
 

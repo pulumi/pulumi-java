@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudbilling_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbilling_v1.BillingAccountArgs;
 import java.lang.Boolean;
@@ -32,7 +33,7 @@ public class BillingAccount extends io.pulumi.resources.CustomResource {
      * @return The display name given to the billing account, such as `My Billing Account`. This name is displayed in the Google Cloud Console.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -46,7 +47,7 @@ public class BillingAccount extends io.pulumi.resources.CustomResource {
      * @return If this account is a [subaccount](https://cloud.google.com/billing/docs/concepts), then this will be the resource name of the parent billing account that it is being resold through. Otherwise this will be empty.
      * 
      */
-    public Output<String> getMasterBillingAccount() {
+    public Output<String> masterBillingAccount() {
         return this.masterBillingAccount;
     }
     /**
@@ -60,7 +61,7 @@ public class BillingAccount extends io.pulumi.resources.CustomResource {
      * @return The resource name of the billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF` would be the resource name for billing account `012345-567890-ABCDEF`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -74,7 +75,7 @@ public class BillingAccount extends io.pulumi.resources.CustomResource {
      * @return True if the billing account is open, and will therefore be charged for any usage on associated projects. False if the billing account is closed, and therefore projects associated with it will be unable to use paid services.
      * 
      */
-    public Output<Boolean> getOpen() {
+    public Output<Boolean> open() {
         return this.open;
     }
 
@@ -100,7 +101,7 @@ public class BillingAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BillingAccount(String name, @Nullable BillingAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudbilling/v1:BillingAccount", name, args == null ? BillingAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudbilling/v1:BillingAccount", name, args == null ? BillingAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BillingAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

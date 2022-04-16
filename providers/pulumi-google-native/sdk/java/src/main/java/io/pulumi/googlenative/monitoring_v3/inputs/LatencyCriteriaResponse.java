@@ -23,7 +23,7 @@ public final class LatencyCriteriaResponse extends io.pulumi.resources.InvokeArg
     @Import(name="threshold", required=true)
       private final String threshold;
 
-    public String getThreshold() {
+    public String threshold() {
         return this.threshold;
     }
 

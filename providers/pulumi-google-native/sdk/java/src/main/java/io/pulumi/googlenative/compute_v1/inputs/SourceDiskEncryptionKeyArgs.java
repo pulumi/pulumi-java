@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> diskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
-        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
+    public Output<String> sourceDisk() {
+        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
     public SourceDiskEncryptionKeyArgs(
@@ -45,8 +46,8 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
     }
 
     private SourceDiskEncryptionKeyArgs() {
-        this.diskEncryptionKey = Output.empty();
-        this.sourceDisk = Output.empty();
+        this.diskEncryptionKey = Codegen.empty();
+        this.sourceDisk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder diskEncryptionKey(@Nullable CustomerEncryptionKeyArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
             return this;
         }
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
@@ -84,7 +85,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Output.ofNullable(sourceDisk);
+            this.sourceDisk = Codegen.ofNullable(sourceDisk);
             return this;
         }        public SourceDiskEncryptionKeyArgs build() {
             return new SourceDiskEncryptionKeyArgs(diskEncryptionKey, sourceDisk);

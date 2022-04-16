@@ -39,22 +39,22 @@ public final class ResponseHeadersPolicySecurityHeadersConfig {
         this.xSSProtection = xSSProtection;
     }
 
-    public Optional<ResponseHeadersPolicyContentSecurityPolicy> getContentSecurityPolicy() {
+    public Optional<ResponseHeadersPolicyContentSecurityPolicy> contentSecurityPolicy() {
         return Optional.ofNullable(this.contentSecurityPolicy);
     }
-    public Optional<ResponseHeadersPolicyContentTypeOptions> getContentTypeOptions() {
+    public Optional<ResponseHeadersPolicyContentTypeOptions> contentTypeOptions() {
         return Optional.ofNullable(this.contentTypeOptions);
     }
-    public Optional<ResponseHeadersPolicyFrameOptions> getFrameOptions() {
+    public Optional<ResponseHeadersPolicyFrameOptions> frameOptions() {
         return Optional.ofNullable(this.frameOptions);
     }
-    public Optional<ResponseHeadersPolicyReferrerPolicy> getReferrerPolicy() {
+    public Optional<ResponseHeadersPolicyReferrerPolicy> referrerPolicy() {
         return Optional.ofNullable(this.referrerPolicy);
     }
-    public Optional<ResponseHeadersPolicyStrictTransportSecurity> getStrictTransportSecurity() {
+    public Optional<ResponseHeadersPolicyStrictTransportSecurity> strictTransportSecurity() {
         return Optional.ofNullable(this.strictTransportSecurity);
     }
-    public Optional<ResponseHeadersPolicyXSSProtection> getXSSProtection() {
+    public Optional<ResponseHeadersPolicyXSSProtection> xSSProtection() {
         return Optional.ofNullable(this.xSSProtection);
     }
 

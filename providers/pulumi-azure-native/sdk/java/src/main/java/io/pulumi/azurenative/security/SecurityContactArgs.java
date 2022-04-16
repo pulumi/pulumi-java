@@ -7,6 +7,7 @@ import io.pulumi.azurenative.security.inputs.SecurityContactPropertiesAlertNotif
 import io.pulumi.azurenative.security.inputs.SecurityContactPropertiesNotificationsByRoleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="alertNotifications")
       private final @Nullable Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
 
-    public Output<SecurityContactPropertiesAlertNotificationsArgs> getAlertNotifications() {
-        return this.alertNotifications == null ? Output.empty() : this.alertNotifications;
+    public Output<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications() {
+        return this.alertNotifications == null ? Codegen.empty() : this.alertNotifications;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="emails")
       private final @Nullable Output<String> emails;
 
-    public Output<String> getEmails() {
-        return this.emails == null ? Output.empty() : this.emails;
+    public Output<String> emails() {
+        return this.emails == null ? Codegen.empty() : this.emails;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="notificationsByRole")
       private final @Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
 
-    public Output<SecurityContactPropertiesNotificationsByRoleArgs> getNotificationsByRole() {
-        return this.notificationsByRole == null ? Output.empty() : this.notificationsByRole;
+    public Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole() {
+        return this.notificationsByRole == null ? Codegen.empty() : this.notificationsByRole;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="phone")
       private final @Nullable Output<String> phone;
 
-    public Output<String> getPhone() {
-        return this.phone == null ? Output.empty() : this.phone;
+    public Output<String> phone() {
+        return this.phone == null ? Codegen.empty() : this.phone;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="securityContactName")
       private final @Nullable Output<String> securityContactName;
 
-    public Output<String> getSecurityContactName() {
-        return this.securityContactName == null ? Output.empty() : this.securityContactName;
+    public Output<String> securityContactName() {
+        return this.securityContactName == null ? Codegen.empty() : this.securityContactName;
     }
 
     public SecurityContactArgs(
@@ -85,11 +86,11 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityContactArgs() {
-        this.alertNotifications = Output.empty();
-        this.emails = Output.empty();
-        this.notificationsByRole = Output.empty();
-        this.phone = Output.empty();
-        this.securityContactName = Output.empty();
+        this.alertNotifications = Codegen.empty();
+        this.emails = Codegen.empty();
+        this.notificationsByRole = Codegen.empty();
+        this.phone = Codegen.empty();
+        this.securityContactName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder alertNotifications(@Nullable SecurityContactPropertiesAlertNotificationsArgs alertNotifications) {
-            this.alertNotifications = Output.ofNullable(alertNotifications);
+            this.alertNotifications = Codegen.ofNullable(alertNotifications);
             return this;
         }
         public Builder emails(@Nullable Output<String> emails) {
@@ -133,7 +134,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder emails(@Nullable String emails) {
-            this.emails = Output.ofNullable(emails);
+            this.emails = Codegen.ofNullable(emails);
             return this;
         }
         public Builder notificationsByRole(@Nullable Output<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole) {
@@ -141,7 +142,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder notificationsByRole(@Nullable SecurityContactPropertiesNotificationsByRoleArgs notificationsByRole) {
-            this.notificationsByRole = Output.ofNullable(notificationsByRole);
+            this.notificationsByRole = Codegen.ofNullable(notificationsByRole);
             return this;
         }
         public Builder phone(@Nullable Output<String> phone) {
@@ -149,7 +150,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder phone(@Nullable String phone) {
-            this.phone = Output.ofNullable(phone);
+            this.phone = Codegen.ofNullable(phone);
             return this;
         }
         public Builder securityContactName(@Nullable Output<String> securityContactName) {
@@ -157,7 +158,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder securityContactName(@Nullable String securityContactName) {
-            this.securityContactName = Output.ofNullable(securityContactName);
+            this.securityContactName = Codegen.ofNullable(securityContactName);
             return this;
         }        public SecurityContactArgs build() {
             return new SecurityContactArgs(alertNotifications, emails, notificationsByRole, phone, securityContactName);

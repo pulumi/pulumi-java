@@ -6,6 +6,7 @@ package io.pulumi.googlenative.managedidentities_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.managedidentities_v1.PeeringArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The full names of the Google Compute Engine [networks](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. Caller needs to make sure that CIDR subnets do not overlap between networks, else peering creation will fail.
      * 
      */
-    public Output<String> getAuthorizedNetwork() {
+    public Output<String> authorizedNetwork() {
         return this.authorizedNetwork;
     }
     /**
@@ -44,7 +45,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The time the instance was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -58,7 +59,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return Full domain resource path for the Managed AD Domain involved in peering. The resource path should be in the form: `projects/{project_id}/locations/global/domains/{domain_name}`
      * 
      */
-    public Output<String> getDomainResource() {
+    public Output<String> domainResource() {
         return this.domainResource;
     }
     /**
@@ -72,7 +73,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return Optional. Resource labels to represent user-provided metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -86,7 +87,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return Unique name of the peering in this scope including projects and location using the form: `projects/{project_id}/locations/global/peerings/{peering_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return The current state of this Peering.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -114,7 +115,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return Additional information about the current status of this peering, if available.
      * 
      */
-    public Output<String> getStatusMessage() {
+    public Output<String> statusMessage() {
         return this.statusMessage;
     }
     /**
@@ -128,7 +129,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @return Last update time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -154,7 +155,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Peering(String name, PeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:managedidentities/v1:Peering", name, args == null ? PeeringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:managedidentities/v1:Peering", name, args == null ? PeeringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Peering(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class OriginEndpointMssEncryptionArgs extends io.pulumi.resources.R
     @Import(name="spekeKeyProvider", required=true)
       private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Output<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
@@ -29,7 +30,7 @@ public final class OriginEndpointMssEncryptionArgs extends io.pulumi.resources.R
     }
 
     private OriginEndpointMssEncryptionArgs() {
-        this.spekeKeyProvider = Output.empty();
+        this.spekeKeyProvider = Codegen.empty();
     }
 
     public static Builder builder() {

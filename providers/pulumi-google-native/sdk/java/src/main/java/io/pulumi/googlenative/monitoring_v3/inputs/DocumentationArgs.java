@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
-    public Output<String> getMimeType() {
-        return this.mimeType == null ? Output.empty() : this.mimeType;
+    public Output<String> mimeType() {
+        return this.mimeType == null ? Codegen.empty() : this.mimeType;
     }
 
     public DocumentationArgs(
@@ -48,8 +49,8 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentationArgs() {
-        this.content = Output.empty();
-        this.mimeType = Output.empty();
+        this.content = Codegen.empty();
+        this.mimeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder mimeType(@Nullable Output<String> mimeType) {
@@ -87,7 +88,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = Output.ofNullable(mimeType);
+            this.mimeType = Codegen.ofNullable(mimeType);
             return this;
         }        public DocumentationArgs build() {
             return new DocumentationArgs(content, mimeType);

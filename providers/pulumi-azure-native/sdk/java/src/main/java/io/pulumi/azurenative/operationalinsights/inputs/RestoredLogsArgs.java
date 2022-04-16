@@ -5,6 +5,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endRestoreTime")
       private final @Nullable Output<String> endRestoreTime;
 
-    public Output<String> getEndRestoreTime() {
-        return this.endRestoreTime == null ? Output.empty() : this.endRestoreTime;
+    public Output<String> endRestoreTime() {
+        return this.endRestoreTime == null ? Codegen.empty() : this.endRestoreTime;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startRestoreTime")
       private final @Nullable Output<String> startRestoreTime;
 
-    public Output<String> getStartRestoreTime() {
-        return this.startRestoreTime == null ? Output.empty() : this.startRestoreTime;
+    public Output<String> startRestoreTime() {
+        return this.startRestoreTime == null ? Codegen.empty() : this.startRestoreTime;
     }
 
     public RestoredLogsArgs(
@@ -48,8 +49,8 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestoredLogsArgs() {
-        this.endRestoreTime = Output.empty();
-        this.startRestoreTime = Output.empty();
+        this.endRestoreTime = Codegen.empty();
+        this.startRestoreTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endRestoreTime(@Nullable String endRestoreTime) {
-            this.endRestoreTime = Output.ofNullable(endRestoreTime);
+            this.endRestoreTime = Codegen.ofNullable(endRestoreTime);
             return this;
         }
         public Builder startRestoreTime(@Nullable Output<String> startRestoreTime) {
@@ -87,7 +88,7 @@ public final class RestoredLogsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startRestoreTime(@Nullable String startRestoreTime) {
-            this.startRestoreTime = Output.ofNullable(startRestoreTime);
+            this.startRestoreTime = Codegen.ofNullable(startRestoreTime);
             return this;
         }        public RestoredLogsArgs build() {
             return new RestoredLogsArgs(endRestoreTime, startRestoreTime);

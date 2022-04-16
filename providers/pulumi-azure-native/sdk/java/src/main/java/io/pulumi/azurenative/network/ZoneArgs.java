@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.ZoneType;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="registrationVirtualNetworks")
       private final @Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks;
 
-    public Output<List<SubResourceArgs>> getRegistrationVirtualNetworks() {
-        return this.registrationVirtualNetworks == null ? Output.empty() : this.registrationVirtualNetworks;
+    public Output<List<SubResourceArgs>> registrationVirtualNetworks() {
+        return this.registrationVirtualNetworks == null ? Codegen.empty() : this.registrationVirtualNetworks;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resolutionVirtualNetworks")
       private final @Nullable Output<List<SubResourceArgs>> resolutionVirtualNetworks;
 
-    public Output<List<SubResourceArgs>> getResolutionVirtualNetworks() {
-        return this.resolutionVirtualNetworks == null ? Output.empty() : this.resolutionVirtualNetworks;
+    public Output<List<SubResourceArgs>> resolutionVirtualNetworks() {
+        return this.resolutionVirtualNetworks == null ? Codegen.empty() : this.resolutionVirtualNetworks;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,8 +70,8 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneName")
       private final @Nullable Output<String> zoneName;
 
-    public Output<String> getZoneName() {
-        return this.zoneName == null ? Output.empty() : this.zoneName;
+    public Output<String> zoneName() {
+        return this.zoneName == null ? Codegen.empty() : this.zoneName;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneType")
       private final @Nullable Output<ZoneType> zoneType;
 
-    public Output<ZoneType> getZoneType() {
-        return this.zoneType == null ? Output.empty() : this.zoneType;
+    public Output<ZoneType> zoneType() {
+        return this.zoneType == null ? Codegen.empty() : this.zoneType;
     }
 
     public ZoneArgs(
@@ -109,17 +110,17 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
         this.zoneName = zoneName;
-        this.zoneType = zoneType == null ? Output.ofNullable(io.pulumi.azurenative.network.enums.ZoneType.Public) : zoneType;
+        this.zoneType = zoneType == null ? Codegen.ofNullable(io.pulumi.azurenative.network.enums.ZoneType.Public) : zoneType;
     }
 
     private ZoneArgs() {
-        this.location = Output.empty();
-        this.registrationVirtualNetworks = Output.empty();
-        this.resolutionVirtualNetworks = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.zoneName = Output.empty();
-        this.zoneType = Output.empty();
+        this.location = Codegen.empty();
+        this.registrationVirtualNetworks = Codegen.empty();
+        this.resolutionVirtualNetworks = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zoneName = Codegen.empty();
+        this.zoneType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder registrationVirtualNetworks(@Nullable Output<List<SubResourceArgs>> registrationVirtualNetworks) {
@@ -167,7 +168,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registrationVirtualNetworks(@Nullable List<SubResourceArgs> registrationVirtualNetworks) {
-            this.registrationVirtualNetworks = Output.ofNullable(registrationVirtualNetworks);
+            this.registrationVirtualNetworks = Codegen.ofNullable(registrationVirtualNetworks);
             return this;
         }
         public Builder registrationVirtualNetworks(SubResourceArgs... registrationVirtualNetworks) {
@@ -178,7 +179,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resolutionVirtualNetworks(@Nullable List<SubResourceArgs> resolutionVirtualNetworks) {
-            this.resolutionVirtualNetworks = Output.ofNullable(resolutionVirtualNetworks);
+            this.resolutionVirtualNetworks = Codegen.ofNullable(resolutionVirtualNetworks);
             return this;
         }
         public Builder resolutionVirtualNetworks(SubResourceArgs... resolutionVirtualNetworks) {
@@ -197,7 +198,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder zoneName(@Nullable Output<String> zoneName) {
@@ -205,7 +206,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zoneName(@Nullable String zoneName) {
-            this.zoneName = Output.ofNullable(zoneName);
+            this.zoneName = Codegen.ofNullable(zoneName);
             return this;
         }
         public Builder zoneType(@Nullable Output<ZoneType> zoneType) {
@@ -213,7 +214,7 @@ public final class ZoneArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zoneType(@Nullable ZoneType zoneType) {
-            this.zoneType = Output.ofNullable(zoneType);
+            this.zoneType = Codegen.ofNullable(zoneType);
             return this;
         }        public ZoneArgs build() {
             return new ZoneArgs(location, registrationVirtualNetworks, resolutionVirtualNetworks, resourceGroupName, tags, zoneName, zoneType);

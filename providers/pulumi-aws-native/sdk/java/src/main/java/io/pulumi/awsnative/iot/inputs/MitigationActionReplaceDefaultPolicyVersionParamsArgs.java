@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.enums.MitigationActionReplaceDefaultPolicyVersionParamsTemplateName;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
     @Import(name="templateName", required=true)
       private final Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName;
 
-    public Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> getTemplateName() {
+    public Output<MitigationActionReplaceDefaultPolicyVersionParamsTemplateName> templateName() {
         return this.templateName;
     }
 
@@ -29,7 +30,7 @@ public final class MitigationActionReplaceDefaultPolicyVersionParamsArgs extends
     }
 
     private MitigationActionReplaceDefaultPolicyVersionParamsArgs() {
-        this.templateName = Output.empty();
+        this.templateName = Codegen.empty();
     }
 
     public static Builder builder() {

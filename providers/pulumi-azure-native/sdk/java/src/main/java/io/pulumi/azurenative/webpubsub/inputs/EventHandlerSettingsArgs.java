@@ -6,6 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.inputs.EventHandlerTemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
     @Import(name="items")
       private final @Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items;
 
-    public Output<Map<String,List<EventHandlerTemplateArgs>>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+    public Output<Map<String,List<EventHandlerTemplateArgs>>> items() {
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     public EventHandlerSettingsArgs(@Nullable Output<Map<String,List<EventHandlerTemplateArgs>>> items) {
@@ -37,7 +38,7 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
     }
 
     private EventHandlerSettingsArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -65,7 +66,7 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder items(@Nullable Map<String,List<EventHandlerTemplateArgs>> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }        public EventHandlerSettingsArgs build() {
             return new EventHandlerSettingsArgs(items);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 import io.pulumi.azurenative.operationalinsights.enums.IdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<IdentityType> type;
 
-    public Output<IdentityType> getType() {
+    public Output<IdentityType> type() {
         return this.type;
     }
 
@@ -39,8 +40,8 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
-    public Output<Map<String,Object>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
+    public Output<Map<String,Object>> userAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
     public IdentityArgs(
@@ -51,8 +52,8 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentities = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
             return this;
         }        public IdentityArgs build() {
             return new IdentityArgs(type, userAssignedIdentities);

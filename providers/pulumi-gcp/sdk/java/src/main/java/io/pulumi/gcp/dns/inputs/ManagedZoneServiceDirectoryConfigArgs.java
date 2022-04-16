@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dns.inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     @Import(name="namespace", required=true)
       private final Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
-    public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> getNamespace() {
+    public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace() {
         return this.namespace;
     }
 
@@ -30,7 +31,7 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends io.pulumi.resou
     }
 
     private ManagedZoneServiceDirectoryConfigArgs() {
-        this.namespace = Output.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {

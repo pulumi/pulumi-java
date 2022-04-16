@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QueryMetricArgs;
 import java.lang.Integer;
 import java.lang.Object;
@@ -25,8 +26,8 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
 
-    public Output<String> getCsvDelimiter() {
-        return this.csvDelimiter == null ? Output.empty() : this.csvDelimiter;
+    public Output<String> csvDelimiter() {
+        return this.csvDelimiter == null ? Codegen.empty() : this.csvDelimiter;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
       private final @Nullable Output<List<String>> dimensions;
 
-    public Output<List<String>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<List<String>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -47,14 +48,14 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="envgroupHostname")
       private final @Nullable Output<String> envgroupHostname;
 
-    public Output<String> getEnvgroupHostname() {
-        return this.envgroupHostname == null ? Output.empty() : this.envgroupHostname;
+    public Output<String> envgroupHostname() {
+        return this.envgroupHostname == null ? Codegen.empty() : this.envgroupHostname;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -65,8 +66,8 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupByTimeUnit")
       private final @Nullable Output<String> groupByTimeUnit;
 
-    public Output<String> getGroupByTimeUnit() {
-        return this.groupByTimeUnit == null ? Output.empty() : this.groupByTimeUnit;
+    public Output<String> groupByTimeUnit() {
+        return this.groupByTimeUnit == null ? Codegen.empty() : this.groupByTimeUnit;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limit")
       private final @Nullable Output<Integer> limit;
 
-    public Output<Integer> getLimit() {
-        return this.limit == null ? Output.empty() : this.limit;
+    public Output<Integer> limit() {
+        return this.limit == null ? Codegen.empty() : this.limit;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics;
 
-    public Output<List<GoogleCloudApigeeV1QueryMetricArgs>> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+    public Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics() {
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -109,14 +110,14 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -127,8 +128,8 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
-        return this.outputFormat == null ? Output.empty() : this.outputFormat;
+    public Output<String> outputFormat() {
+        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reportDefinitionId")
       private final @Nullable Output<String> reportDefinitionId;
 
-    public Output<String> getReportDefinitionId() {
-        return this.reportDefinitionId == null ? Output.empty() : this.reportDefinitionId;
+    public Output<String> reportDefinitionId() {
+        return this.reportDefinitionId == null ? Codegen.empty() : this.reportDefinitionId;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeRange", required=true)
       private final Output<Object> timeRange;
 
-    public Output<Object> getTimeRange() {
+    public Output<Object> timeRange() {
         return this.timeRange;
     }
 
@@ -183,19 +184,19 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueryArgs() {
-        this.csvDelimiter = Output.empty();
-        this.dimensions = Output.empty();
-        this.envgroupHostname = Output.empty();
-        this.environmentId = Output.empty();
-        this.filter = Output.empty();
-        this.groupByTimeUnit = Output.empty();
-        this.limit = Output.empty();
-        this.metrics = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.outputFormat = Output.empty();
-        this.reportDefinitionId = Output.empty();
-        this.timeRange = Output.empty();
+        this.csvDelimiter = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.envgroupHostname = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.groupByTimeUnit = Codegen.empty();
+        this.limit = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.outputFormat = Codegen.empty();
+        this.reportDefinitionId = Codegen.empty();
+        this.timeRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -247,7 +248,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
-            this.csvDelimiter = Output.ofNullable(csvDelimiter);
+            this.csvDelimiter = Codegen.ofNullable(csvDelimiter);
             return this;
         }
         public Builder dimensions(@Nullable Output<List<String>> dimensions) {
@@ -255,7 +256,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimensions(@Nullable List<String> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder dimensions(String... dimensions) {
@@ -266,7 +267,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder envgroupHostname(@Nullable String envgroupHostname) {
-            this.envgroupHostname = Output.ofNullable(envgroupHostname);
+            this.envgroupHostname = Codegen.ofNullable(envgroupHostname);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -282,7 +283,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder groupByTimeUnit(@Nullable Output<String> groupByTimeUnit) {
@@ -290,7 +291,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupByTimeUnit(@Nullable String groupByTimeUnit) {
-            this.groupByTimeUnit = Output.ofNullable(groupByTimeUnit);
+            this.groupByTimeUnit = Codegen.ofNullable(groupByTimeUnit);
             return this;
         }
         public Builder limit(@Nullable Output<Integer> limit) {
@@ -298,7 +299,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder limit(@Nullable Integer limit) {
-            this.limit = Output.ofNullable(limit);
+            this.limit = Codegen.ofNullable(limit);
             return this;
         }
         public Builder metrics(@Nullable Output<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics) {
@@ -306,7 +307,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metrics(@Nullable List<GoogleCloudApigeeV1QueryMetricArgs> metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder metrics(GoogleCloudApigeeV1QueryMetricArgs... metrics) {
@@ -317,7 +318,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -333,7 +334,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Output.ofNullable(outputFormat);
+            this.outputFormat = Codegen.ofNullable(outputFormat);
             return this;
         }
         public Builder reportDefinitionId(@Nullable Output<String> reportDefinitionId) {
@@ -341,7 +342,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reportDefinitionId(@Nullable String reportDefinitionId) {
-            this.reportDefinitionId = Output.ofNullable(reportDefinitionId);
+            this.reportDefinitionId = Codegen.ofNullable(reportDefinitionId);
             return this;
         }
         public Builder timeRange(Output<Object> timeRange) {

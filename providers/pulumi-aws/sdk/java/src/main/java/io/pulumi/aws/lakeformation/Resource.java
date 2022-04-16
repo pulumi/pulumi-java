@@ -9,6 +9,7 @@ import io.pulumi.aws.lakeformation.inputs.ResourceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -33,7 +34,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the resource, an S3 path.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +48,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return (Optional) The date and time the resource was last modified in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -61,7 +62,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @return Role that has read/write access to the resource. If not provided, the Lake Formation service-linked role must exist and is used.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -87,7 +88,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(String name, ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lakeformation/resource:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lakeformation/resource:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Resource(String name, Output<String> id, @Nullable ResourceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="faultDomain")
       private final @Nullable Output<Integer> faultDomain;
 
-    public Output<Integer> getFaultDomain() {
-        return this.faultDomain == null ? Output.empty() : this.faultDomain;
+    public Output<Integer> faultDomain() {
+        return this.faultDomain == null ? Codegen.empty() : this.faultDomain;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -49,7 +50,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
-    public Output<String> getTargetResourceName() {
+    public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
 
@@ -60,8 +61,8 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     @Import(name="updateDomain")
       private final @Nullable Output<Integer> updateDomain;
 
-    public Output<Integer> getUpdateDomain() {
-        return this.updateDomain == null ? Output.empty() : this.updateDomain;
+    public Output<Integer> updateDomain() {
+        return this.updateDomain == null ? Codegen.empty() : this.updateDomain;
     }
 
     public AvailabilitySetResourceSettingsArgs(
@@ -76,10 +77,10 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
     }
 
     private AvailabilitySetResourceSettingsArgs() {
-        this.faultDomain = Output.empty();
-        this.resourceType = Output.empty();
-        this.targetResourceName = Output.empty();
-        this.updateDomain = Output.empty();
+        this.faultDomain = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.targetResourceName = Codegen.empty();
+        this.updateDomain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder faultDomain(@Nullable Integer faultDomain) {
-            this.faultDomain = Output.ofNullable(faultDomain);
+            this.faultDomain = Codegen.ofNullable(faultDomain);
             return this;
         }
         public Builder resourceType(Output<String> resourceType) {
@@ -137,7 +138,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder updateDomain(@Nullable Integer updateDomain) {
-            this.updateDomain = Output.ofNullable(updateDomain);
+            this.updateDomain = Codegen.ofNullable(updateDomain);
             return this;
         }        public AvailabilitySetResourceSettingsArgs build() {
             return new AvailabilitySetResourceSettingsArgs(faultDomain, resourceType, targetResourceName, updateDomain);

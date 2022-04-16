@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     @Import(name="variable")
       private final @Nullable Output<String> variable;
 
-    public Output<String> getVariable() {
-        return this.variable == null ? Output.empty() : this.variable;
+    public Output<String> variable() {
+        return this.variable == null ? Codegen.empty() : this.variable;
     }
 
     public ContainerEnvironmentVariableArgs(
@@ -36,8 +37,8 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
     }
 
     private ContainerEnvironmentVariableArgs() {
-        this.value = Output.empty();
-        this.variable = Output.empty();
+        this.value = Codegen.empty();
+        this.variable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder variable(@Nullable Output<String> variable) {
@@ -75,7 +76,7 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
             return this;
         }
         public Builder variable(@Nullable String variable) {
-            this.variable = Output.ofNullable(variable);
+            this.variable = Codegen.ofNullable(variable);
             return this;
         }        public ContainerEnvironmentVariableArgs build() {
             return new ContainerEnvironmentVariableArgs(value, variable);

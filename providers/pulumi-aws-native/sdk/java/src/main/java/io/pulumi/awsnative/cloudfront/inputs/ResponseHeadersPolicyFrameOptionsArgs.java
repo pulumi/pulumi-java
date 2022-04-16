@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +18,14 @@ public final class ResponseHeadersPolicyFrameOptionsArgs extends io.pulumi.resou
     @Import(name="frameOption", required=true)
       private final Output<String> frameOption;
 
-    public Output<String> getFrameOption() {
+    public Output<String> frameOption() {
         return this.frameOption;
     }
 
     @Import(name="override", required=true)
       private final Output<Boolean> override;
 
-    public Output<Boolean> getOverride() {
+    public Output<Boolean> override() {
         return this.override;
     }
 
@@ -36,8 +37,8 @@ public final class ResponseHeadersPolicyFrameOptionsArgs extends io.pulumi.resou
     }
 
     private ResponseHeadersPolicyFrameOptionsArgs() {
-        this.frameOption = Output.empty();
-        this.override = Output.empty();
+        this.frameOption = Codegen.empty();
+        this.override = Codegen.empty();
     }
 
     public static Builder builder() {

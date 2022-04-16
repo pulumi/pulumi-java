@@ -24,7 +24,7 @@ public final class NotificationConfigResponse {
      * Notification config for Pub/Sub.
      * 
     */
-    public PubSubResponse getPubsub() {
+    public PubSubResponse pubsub() {
         return this.pubsub;
     }
 

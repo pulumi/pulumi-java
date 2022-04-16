@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
-    public Output</* @Nullable */ List<CustomerSecretResponse>> getCustomerSecrets() {
+    public Output</* @Nullable */ List<CustomerSecretResponse>> customerSecrets() {
         return this.customerSecrets;
     }
     /**
@@ -57,7 +58,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * @return The arm id of the data store type.
      * 
      */
-    public Output<String> getDataStoreTypeId() {
+    public Output<String> dataStoreTypeId() {
         return this.dataStoreTypeId;
     }
     /**
@@ -71,7 +72,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * @return A generic json used differently by each data source type.
      * 
      */
-    public Output</* @Nullable */ Object> getExtendedProperties() {
+    public Output</* @Nullable */ Object> extendedProperties() {
         return this.extendedProperties;
     }
     /**
@@ -85,7 +86,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * @return Name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * @return Arm Id for the manager resource to which the data source is associated. This is optional.
      * 
      */
-    public Output</* @Nullable */ String> getRepositoryId() {
+    public Output</* @Nullable */ String> repositoryId() {
         return this.repositoryId;
     }
     /**
@@ -113,7 +114,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * @return State of the data source.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -127,7 +128,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * @return Type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -153,7 +154,7 @@ public class DataStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DataStore(String name, DataStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hybriddata:DataStore", name, args == null ? DataStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:hybriddata:DataStore", name, args == null ? DataStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DataStore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

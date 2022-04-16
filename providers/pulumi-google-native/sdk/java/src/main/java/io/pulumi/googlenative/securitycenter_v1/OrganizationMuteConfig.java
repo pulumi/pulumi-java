@@ -6,6 +6,7 @@ package io.pulumi.googlenative.securitycenter_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.securitycenter_v1.OrganizationMuteConfigArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * @return The time at which the mute config was created. This field is set by the server and will be ignored if provided on config creation.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -42,7 +43,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * @return A description of the mute config.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -56,7 +57,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * @return The human readable name to be displayed for the mute config.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -70,7 +71,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * @return An expression that defines the filter to apply across create/update events of findings. While creating a filter string, be mindful of the scope in which the mute configuration is being created. E.g., If a filter contains project = X but is created under the project = Y scope, it might not match any findings. The following field and operator combinations are supported: * severity: `=`, `:` * category: `=`, `:` * resource.name: `=`, `:` * resource.project_name: `=`, `:` * resource.project_display_name: `=`, `:` * resource.folders.resource_folder: `=`, `:` * resource.parent_name: `=`, `:` * resource.parent_display_name: `=`, `:` * resource.type: `=`, `:` * finding_class: `=`, `:` * indicator.ip_addresses: `=`, `:` * indicator.domains: `=`, `:`
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -84,7 +85,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * @return Email address of the user who last edited the mute config. This field is set by the server and will be ignored if provided on config creation or update.
      * 
      */
-    public Output<String> getMostRecentEditor() {
+    public Output<String> mostRecentEditor() {
         return this.mostRecentEditor;
     }
     /**
@@ -98,7 +99,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * @return This field will be ignored if provided on config creation. Format "organizations/{organization}/muteConfigs/{mute_config}" "folders/{folder}/muteConfigs/{mute_config}" "projects/{project}/muteConfigs/{mute_config}"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * @return The most recent time at which the mute config was updated. This field is set by the server and will be ignored if provided on config creation or update.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -138,7 +139,7 @@ public class OrganizationMuteConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationMuteConfig(String name, OrganizationMuteConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:securitycenter/v1:OrganizationMuteConfig", name, args == null ? OrganizationMuteConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:securitycenter/v1:OrganizationMuteConfig", name, args == null ? OrganizationMuteConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationMuteConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

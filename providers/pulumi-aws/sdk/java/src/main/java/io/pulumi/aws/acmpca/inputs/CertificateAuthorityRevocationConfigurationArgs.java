@@ -6,6 +6,7 @@ package io.pulumi.aws.acmpca.inputs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationCrlConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
     @Import(name="crlConfiguration")
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration;
 
-    public Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> getCrlConfiguration() {
-        return this.crlConfiguration == null ? Output.empty() : this.crlConfiguration;
+    public Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration() {
+        return this.crlConfiguration == null ? Codegen.empty() : this.crlConfiguration;
     }
 
     public CertificateAuthorityRevocationConfigurationArgs(@Nullable Output<CertificateAuthorityRevocationConfigurationCrlConfigurationArgs> crlConfiguration) {
@@ -30,7 +31,7 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
     }
 
     private CertificateAuthorityRevocationConfigurationArgs() {
-        this.crlConfiguration = Output.empty();
+        this.crlConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CertificateAuthorityRevocationConfigurationArgs extends io.pu
             return this;
         }
         public Builder crlConfiguration(@Nullable CertificateAuthorityRevocationConfigurationCrlConfigurationArgs crlConfiguration) {
-            this.crlConfiguration = Output.ofNullable(crlConfiguration);
+            this.crlConfiguration = Codegen.ofNullable(crlConfiguration);
             return this;
         }        public CertificateAuthorityRevocationConfigurationArgs build() {
             return new CertificateAuthorityRevocationConfigurationArgs(crlConfiguration);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TriggerMatchingCriteriaGetArgs extends io.pulumi.resources.Re
     @Import(name="attribute", required=true)
       private final Output<String> attribute;
 
-    public Output<String> getAttribute() {
+    public Output<String> attribute() {
         return this.attribute;
     }
 
@@ -31,7 +32,7 @@ public final class TriggerMatchingCriteriaGetArgs extends io.pulumi.resources.Re
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -43,8 +44,8 @@ public final class TriggerMatchingCriteriaGetArgs extends io.pulumi.resources.Re
     }
 
     private TriggerMatchingCriteriaGetArgs() {
-        this.attribute = Output.empty();
-        this.value = Output.empty();
+        this.attribute = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

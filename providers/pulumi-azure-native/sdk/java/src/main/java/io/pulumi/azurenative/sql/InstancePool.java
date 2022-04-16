@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @return The license type. Possible values are 'LicenseIncluded' (price for SQL license is included) and 'BasePrice' (without SQL license price).
      * 
      */
-    public Output<String> getLicenseType() {
+    public Output<String> licenseType() {
         return this.licenseType;
     }
     /**
@@ -58,7 +59,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @return The name and tier of the SKU.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -100,7 +101,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the subnet to place this instance pool in.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -114,7 +115,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +129,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -142,7 +143,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @return Count of vCores belonging to this instance pool.
      * 
      */
-    public Output<Integer> getVCores() {
+    public Output<Integer> vCores() {
         return this.vCores;
     }
 
@@ -168,7 +169,7 @@ public class InstancePool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstancePool(String name, InstancePoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:InstancePool", name, args == null ? InstancePoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:InstancePool", name, args == null ? InstancePoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstancePool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

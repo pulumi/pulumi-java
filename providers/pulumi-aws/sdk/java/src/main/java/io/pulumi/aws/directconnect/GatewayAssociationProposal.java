@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.GatewayAssociationProposalState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @return VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
      * 
      */
-    public Output<List<String>> getAllowedPrefixes() {
+    public Output<List<String>> allowedPrefixes() {
         return this.allowedPrefixes;
     }
     /**
@@ -62,7 +63,7 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @return The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
      * 
      */
-    public Output<String> getAssociatedGatewayId() {
+    public Output<String> associatedGatewayId() {
         return this.associatedGatewayId;
     }
     /**
@@ -76,7 +77,7 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @return The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
      * 
      */
-    public Output<String> getAssociatedGatewayOwnerAccountId() {
+    public Output<String> associatedGatewayOwnerAccountId() {
         return this.associatedGatewayOwnerAccountId;
     }
     /**
@@ -90,7 +91,7 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @return The type of the associated gateway, `transitGateway` or `virtualPrivateGateway`.
      * 
      */
-    public Output<String> getAssociatedGatewayType() {
+    public Output<String> associatedGatewayType() {
         return this.associatedGatewayType;
     }
     /**
@@ -104,7 +105,7 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @return Direct Connect Gateway identifier.
      * 
      */
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
     /**
@@ -118,7 +119,7 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @return AWS Account identifier of the Direct Connect Gateway's owner.
      * 
      */
-    public Output<String> getDxGatewayOwnerAccountId() {
+    public Output<String> dxGatewayOwnerAccountId() {
         return this.dxGatewayOwnerAccountId;
     }
 
@@ -144,7 +145,7 @@ public class GatewayAssociationProposal extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayAssociationProposal(String name, GatewayAssociationProposalArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/gatewayAssociationProposal:GatewayAssociationProposal", name, args == null ? GatewayAssociationProposalArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/gatewayAssociationProposal:GatewayAssociationProposal", name, args == null ? GatewayAssociationProposalArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GatewayAssociationProposal(String name, Output<String> id, @Nullable GatewayAssociationProposalState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

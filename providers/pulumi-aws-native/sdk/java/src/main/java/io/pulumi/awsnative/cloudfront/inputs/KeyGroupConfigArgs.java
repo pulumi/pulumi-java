@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,21 +19,21 @@ public final class KeyGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="items", required=true)
       private final Output<List<String>> items;
 
-    public Output<List<String>> getItems() {
+    public Output<List<String>> items() {
         return this.items;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -46,9 +47,9 @@ public final class KeyGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyGroupConfigArgs() {
-        this.comment = Output.empty();
-        this.items = Output.empty();
-        this.name = Output.empty();
+        this.comment = Codegen.empty();
+        this.items = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class KeyGroupConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder items(Output<List<String>> items) {

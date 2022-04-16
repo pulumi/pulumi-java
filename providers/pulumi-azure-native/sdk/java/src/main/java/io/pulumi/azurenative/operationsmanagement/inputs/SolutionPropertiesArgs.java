@@ -5,6 +5,7 @@ package io.pulumi.azurenative.operationsmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="containedResources")
       private final @Nullable Output<List<String>> containedResources;
 
-    public Output<List<String>> getContainedResources() {
-        return this.containedResources == null ? Output.empty() : this.containedResources;
+    public Output<List<String>> containedResources() {
+        return this.containedResources == null ? Codegen.empty() : this.containedResources;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="referencedResources")
       private final @Nullable Output<List<String>> referencedResources;
 
-    public Output<List<String>> getReferencedResources() {
-        return this.referencedResources == null ? Output.empty() : this.referencedResources;
+    public Output<List<String>> referencedResources() {
+        return this.referencedResources == null ? Codegen.empty() : this.referencedResources;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="workspaceResourceId", required=true)
       private final Output<String> workspaceResourceId;
 
-    public Output<String> getWorkspaceResourceId() {
+    public Output<String> workspaceResourceId() {
         return this.workspaceResourceId;
     }
 
@@ -62,9 +63,9 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SolutionPropertiesArgs() {
-        this.containedResources = Output.empty();
-        this.referencedResources = Output.empty();
-        this.workspaceResourceId = Output.empty();
+        this.containedResources = Codegen.empty();
+        this.referencedResources = Codegen.empty();
+        this.workspaceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder containedResources(@Nullable List<String> containedResources) {
-            this.containedResources = Output.ofNullable(containedResources);
+            this.containedResources = Codegen.ofNullable(containedResources);
             return this;
         }
         public Builder containedResources(String... containedResources) {
@@ -107,7 +108,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder referencedResources(@Nullable List<String> referencedResources) {
-            this.referencedResources = Output.ofNullable(referencedResources);
+            this.referencedResources = Codegen.ofNullable(referencedResources);
             return this;
         }
         public Builder referencedResources(String... referencedResources) {

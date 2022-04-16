@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.inputs.MetricConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -33,7 +34,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="metricConfigurations", required=true)
       private final Output<List<MetricConfigurationArgs>> metricConfigurations;
 
-    public Output<List<MetricConfigurationArgs>> getMetricConfigurations() {
+    public Output<List<MetricConfigurationArgs>> metricConfigurations() {
         return this.metricConfigurations;
     }
 
@@ -44,7 +45,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +56,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="roleName", required=true)
       private final Output<String> roleName;
 
-    public Output<String> getRoleName() {
+    public Output<String> roleName() {
         return this.roleName;
     }
 
@@ -71,10 +72,10 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MonitoringConfigArgs() {
-        this.deviceName = Output.empty();
-        this.metricConfigurations = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roleName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.metricConfigurations = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roleName = Codegen.empty();
     }
 
     public static Builder builder() {

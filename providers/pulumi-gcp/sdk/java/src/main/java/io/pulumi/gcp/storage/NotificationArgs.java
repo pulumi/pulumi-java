@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -34,8 +35,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customAttributes")
       private final @Nullable Output<Map<String,String>> customAttributes;
 
-    public Output<Map<String,String>> getCustomAttributes() {
-        return this.customAttributes == null ? Output.empty() : this.customAttributes;
+    public Output<Map<String,String>> customAttributes() {
+        return this.customAttributes == null ? Codegen.empty() : this.customAttributes;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventTypes")
       private final @Nullable Output<List<String>> eventTypes;
 
-    public Output<List<String>> getEventTypes() {
-        return this.eventTypes == null ? Output.empty() : this.eventTypes;
+    public Output<List<String>> eventTypes() {
+        return this.eventTypes == null ? Codegen.empty() : this.eventTypes;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectNamePrefix")
       private final @Nullable Output<String> objectNamePrefix;
 
-    public Output<String> getObjectNamePrefix() {
-        return this.objectNamePrefix == null ? Output.empty() : this.objectNamePrefix;
+    public Output<String> objectNamePrefix() {
+        return this.objectNamePrefix == null ? Codegen.empty() : this.objectNamePrefix;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="payloadFormat", required=true)
       private final Output<String> payloadFormat;
 
-    public Output<String> getPayloadFormat() {
+    public Output<String> payloadFormat() {
         return this.payloadFormat;
     }
 
@@ -81,7 +82,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic", required=true)
       private final Output<String> topic;
 
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -101,12 +102,12 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotificationArgs() {
-        this.bucket = Output.empty();
-        this.customAttributes = Output.empty();
-        this.eventTypes = Output.empty();
-        this.objectNamePrefix = Output.empty();
-        this.payloadFormat = Output.empty();
-        this.topic = Output.empty();
+        this.bucket = Codegen.empty();
+        this.customAttributes = Codegen.empty();
+        this.eventTypes = Codegen.empty();
+        this.objectNamePrefix = Codegen.empty();
+        this.payloadFormat = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customAttributes(@Nullable Map<String,String> customAttributes) {
-            this.customAttributes = Output.ofNullable(customAttributes);
+            this.customAttributes = Codegen.ofNullable(customAttributes);
             return this;
         }
         public Builder eventTypes(@Nullable Output<List<String>> eventTypes) {
@@ -160,7 +161,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventTypes(@Nullable List<String> eventTypes) {
-            this.eventTypes = Output.ofNullable(eventTypes);
+            this.eventTypes = Codegen.ofNullable(eventTypes);
             return this;
         }
         public Builder eventTypes(String... eventTypes) {
@@ -171,7 +172,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectNamePrefix(@Nullable String objectNamePrefix) {
-            this.objectNamePrefix = Output.ofNullable(objectNamePrefix);
+            this.objectNamePrefix = Codegen.ofNullable(objectNamePrefix);
             return this;
         }
         public Builder payloadFormat(Output<String> payloadFormat) {

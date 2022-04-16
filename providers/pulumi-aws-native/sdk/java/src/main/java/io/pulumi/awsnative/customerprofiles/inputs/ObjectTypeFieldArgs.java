@@ -6,6 +6,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeFieldContentType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="contentType")
       private final @Nullable Output<ObjectTypeFieldContentType> contentType;
 
-    public Output<ObjectTypeFieldContentType> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<ObjectTypeFieldContentType> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<String> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public ObjectTypeFieldArgs(
@@ -62,9 +63,9 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ObjectTypeFieldArgs() {
-        this.contentType = Output.empty();
-        this.source = Output.empty();
-        this.target = Output.empty();
+        this.contentType = Codegen.empty();
+        this.source = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder contentType(@Nullable ObjectTypeFieldContentType contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -104,7 +105,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -112,7 +113,7 @@ public final class ObjectTypeFieldArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public ObjectTypeFieldArgs build() {
             return new ObjectTypeFieldArgs(contentType, source, target);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="callbackUrl", required=true)
       private final Output<String> callbackUrl;
 
-    public Output<String> getCallbackUrl() {
+    public Output<String> callbackUrl() {
         return this.callbackUrl;
     }
 
@@ -37,7 +38,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,7 +49,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -59,8 +60,8 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> getUseCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Output.empty() : this.useCommonAlertSchema;
+    public Output<Boolean> useCommonAlertSchema() {
+        return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 
     public LogicAppReceiverArgs(
@@ -71,14 +72,14 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
         this.callbackUrl = Objects.requireNonNull(callbackUrl, "expected parameter 'callbackUrl' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Output.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
     }
 
     private LogicAppReceiverArgs() {
-        this.callbackUrl = Output.empty();
-        this.name = Output.empty();
-        this.resourceId = Output.empty();
-        this.useCommonAlertSchema = Output.empty();
+        this.callbackUrl = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.useCommonAlertSchema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
+            this.useCommonAlertSchema = Codegen.ofNullable(useCommonAlertSchema);
             return this;
         }        public LogicAppReceiverArgs build() {
             return new LogicAppReceiverArgs(callbackUrl, name, resourceId, useCommonAlertSchema);

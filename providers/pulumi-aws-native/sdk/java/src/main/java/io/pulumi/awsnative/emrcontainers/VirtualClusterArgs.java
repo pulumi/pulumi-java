@@ -7,6 +7,7 @@ import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerProviderA
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerProvider", required=true)
       private final Output<VirtualClusterContainerProviderArgs> containerProvider;
 
-    public Output<VirtualClusterContainerProviderArgs> getContainerProvider() {
+    public Output<VirtualClusterContainerProviderArgs> containerProvider() {
         return this.containerProvider;
     }
 
@@ -35,8 +36,8 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<VirtualClusterTagArgs>> tags;
 
-    public Output<List<VirtualClusterTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<VirtualClusterTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VirtualClusterArgs(
@@ -60,9 +61,9 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualClusterArgs() {
-        this.containerProvider = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.containerProvider = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<VirtualClusterTagArgs>> tags) {
@@ -110,7 +111,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<VirtualClusterTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(VirtualClusterTagArgs... tags) {

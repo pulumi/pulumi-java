@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -44,8 +45,8 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="validateRequestBody")
       private final @Nullable Output<Boolean> validateRequestBody;
 
-    public Output<Boolean> getValidateRequestBody() {
-        return this.validateRequestBody == null ? Output.empty() : this.validateRequestBody;
+    public Output<Boolean> validateRequestBody() {
+        return this.validateRequestBody == null ? Codegen.empty() : this.validateRequestBody;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="validateRequestParameters")
       private final @Nullable Output<Boolean> validateRequestParameters;
 
-    public Output<Boolean> getValidateRequestParameters() {
-        return this.validateRequestParameters == null ? Output.empty() : this.validateRequestParameters;
+    public Output<Boolean> validateRequestParameters() {
+        return this.validateRequestParameters == null ? Codegen.empty() : this.validateRequestParameters;
     }
 
     public RequestValidatorArgs(
@@ -71,10 +72,10 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RequestValidatorArgs() {
-        this.name = Output.empty();
-        this.restApiId = Output.empty();
-        this.validateRequestBody = Output.empty();
-        this.validateRequestParameters = Output.empty();
+        this.name = Codegen.empty();
+        this.restApiId = Codegen.empty();
+        this.validateRequestBody = Codegen.empty();
+        this.validateRequestParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder restApiId(Output<String> restApiId) {
@@ -124,7 +125,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder validateRequestBody(@Nullable Boolean validateRequestBody) {
-            this.validateRequestBody = Output.ofNullable(validateRequestBody);
+            this.validateRequestBody = Codegen.ofNullable(validateRequestBody);
             return this;
         }
         public Builder validateRequestParameters(@Nullable Output<Boolean> validateRequestParameters) {
@@ -132,7 +133,7 @@ public final class RequestValidatorArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder validateRequestParameters(@Nullable Boolean validateRequestParameters) {
-            this.validateRequestParameters = Output.ofNullable(validateRequestParameters);
+            this.validateRequestParameters = Codegen.ofNullable(validateRequestParameters);
             return this;
         }        public RequestValidatorArgs build() {
             return new RequestValidatorArgs(name, restApiId, validateRequestBody, validateRequestParameters);

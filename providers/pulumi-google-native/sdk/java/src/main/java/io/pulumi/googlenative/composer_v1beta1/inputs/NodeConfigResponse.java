@@ -27,7 +27,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
-    public Integer getDiskSizeGb() {
+    public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
 
@@ -38,7 +38,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="enableIpMasqAgent", required=true)
       private final Boolean enableIpMasqAgent;
 
-    public Boolean getEnableIpMasqAgent() {
+    public Boolean enableIpMasqAgent() {
         return this.enableIpMasqAgent;
     }
 
@@ -49,7 +49,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ipAllocationPolicy", required=true)
       private final IPAllocationPolicyResponse ipAllocationPolicy;
 
-    public IPAllocationPolicyResponse getIpAllocationPolicy() {
+    public IPAllocationPolicyResponse ipAllocationPolicy() {
         return this.ipAllocationPolicy;
     }
 
@@ -60,7 +60,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -71,7 +71,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="machineType", required=true)
       private final String machineType;
 
-    public String getMachineType() {
+    public String machineType() {
         return this.machineType;
     }
 
@@ -82,7 +82,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maxPodsPerNode", required=true)
       private final Integer maxPodsPerNode;
 
-    public Integer getMaxPodsPerNode() {
+    public Integer maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
 
@@ -93,7 +93,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="network", required=true)
       private final String network;
 
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
 
@@ -104,7 +104,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
@@ -115,7 +115,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 
@@ -126,7 +126,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
-    public String getSubnetwork() {
+    public String subnetwork() {
         return this.subnetwork;
     }
 
@@ -137,7 +137,7 @@ public final class NodeConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="tags", required=true)
       private final List<String> tags;
 
-    public List<String> getTags() {
+    public List<String> tags() {
         return this.tags;
     }
 

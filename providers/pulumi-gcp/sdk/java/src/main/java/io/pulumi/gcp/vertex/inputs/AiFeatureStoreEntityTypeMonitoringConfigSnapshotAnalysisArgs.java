@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
     @Import(name="monitoringInterval")
       private final @Nullable Output<String> monitoringInterval;
 
-    public Output<String> getMonitoringInterval() {
-        return this.monitoringInterval == null ? Output.empty() : this.monitoringInterval;
+    public Output<String> monitoringInterval() {
+        return this.monitoringInterval == null ? Codegen.empty() : this.monitoringInterval;
     }
 
     public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs(
@@ -46,8 +47,8 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
     }
 
     private AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs() {
-        this.disabled = Output.empty();
-        this.monitoringInterval = Output.empty();
+        this.disabled = Codegen.empty();
+        this.monitoringInterval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder monitoringInterval(@Nullable Output<String> monitoringInterval) {
@@ -85,7 +86,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs 
             return this;
         }
         public Builder monitoringInterval(@Nullable String monitoringInterval) {
-            this.monitoringInterval = Output.ofNullable(monitoringInterval);
+            this.monitoringInterval = Codegen.ofNullable(monitoringInterval);
             return this;
         }        public AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisArgs(disabled, monitoringInterval);

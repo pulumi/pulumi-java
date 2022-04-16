@@ -9,6 +9,7 @@ import io.pulumi.awsnative.connect.inputs.QuickConnectQueueQuickConnectConfigArg
 import io.pulumi.awsnative.connect.inputs.QuickConnectUserQuickConnectConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,29 +25,29 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
     @Import(name="phoneConfig")
       private final @Nullable Output<QuickConnectPhoneNumberQuickConnectConfigArgs> phoneConfig;
 
-    public Output<QuickConnectPhoneNumberQuickConnectConfigArgs> getPhoneConfig() {
-        return this.phoneConfig == null ? Output.empty() : this.phoneConfig;
+    public Output<QuickConnectPhoneNumberQuickConnectConfigArgs> phoneConfig() {
+        return this.phoneConfig == null ? Codegen.empty() : this.phoneConfig;
     }
 
     @Import(name="queueConfig")
       private final @Nullable Output<QuickConnectQueueQuickConnectConfigArgs> queueConfig;
 
-    public Output<QuickConnectQueueQuickConnectConfigArgs> getQueueConfig() {
-        return this.queueConfig == null ? Output.empty() : this.queueConfig;
+    public Output<QuickConnectQueueQuickConnectConfigArgs> queueConfig() {
+        return this.queueConfig == null ? Codegen.empty() : this.queueConfig;
     }
 
     @Import(name="quickConnectType", required=true)
       private final Output<QuickConnectType> quickConnectType;
 
-    public Output<QuickConnectType> getQuickConnectType() {
+    public Output<QuickConnectType> quickConnectType() {
         return this.quickConnectType;
     }
 
     @Import(name="userConfig")
       private final @Nullable Output<QuickConnectUserQuickConnectConfigArgs> userConfig;
 
-    public Output<QuickConnectUserQuickConnectConfigArgs> getUserConfig() {
-        return this.userConfig == null ? Output.empty() : this.userConfig;
+    public Output<QuickConnectUserQuickConnectConfigArgs> userConfig() {
+        return this.userConfig == null ? Codegen.empty() : this.userConfig;
     }
 
     public QuickConnectConfigArgs(
@@ -61,10 +62,10 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
     }
 
     private QuickConnectConfigArgs() {
-        this.phoneConfig = Output.empty();
-        this.queueConfig = Output.empty();
-        this.quickConnectType = Output.empty();
-        this.userConfig = Output.empty();
+        this.phoneConfig = Codegen.empty();
+        this.queueConfig = Codegen.empty();
+        this.quickConnectType = Codegen.empty();
+        this.userConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder phoneConfig(@Nullable QuickConnectPhoneNumberQuickConnectConfigArgs phoneConfig) {
-            this.phoneConfig = Output.ofNullable(phoneConfig);
+            this.phoneConfig = Codegen.ofNullable(phoneConfig);
             return this;
         }
         public Builder queueConfig(@Nullable Output<QuickConnectQueueQuickConnectConfigArgs> queueConfig) {
@@ -106,7 +107,7 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queueConfig(@Nullable QuickConnectQueueQuickConnectConfigArgs queueConfig) {
-            this.queueConfig = Output.ofNullable(queueConfig);
+            this.queueConfig = Codegen.ofNullable(queueConfig);
             return this;
         }
         public Builder quickConnectType(Output<QuickConnectType> quickConnectType) {
@@ -122,7 +123,7 @@ public final class QuickConnectConfigArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder userConfig(@Nullable QuickConnectUserQuickConnectConfigArgs userConfig) {
-            this.userConfig = Output.ofNullable(userConfig);
+            this.userConfig = Codegen.ofNullable(userConfig);
             return this;
         }        public QuickConnectConfigArgs build() {
             return new QuickConnectConfigArgs(phoneConfig, queueConfig, quickConnectType, userConfig);

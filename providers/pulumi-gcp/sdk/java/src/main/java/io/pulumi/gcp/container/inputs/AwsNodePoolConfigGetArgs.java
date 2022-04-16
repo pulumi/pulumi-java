@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigConfigEncryptionGetArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigRootVolumeGetArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigSshConfigGetArgs;
@@ -27,7 +28,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="configEncryption", required=true)
       private final Output<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption;
 
-    public Output<AwsNodePoolConfigConfigEncryptionGetArgs> getConfigEncryption() {
+    public Output<AwsNodePoolConfigConfigEncryptionGetArgs> configEncryption() {
         return this.configEncryption;
     }
 
@@ -38,7 +39,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="iamInstanceProfile", required=true)
       private final Output<String> iamInstanceProfile;
 
-    public Output<String> getIamInstanceProfile() {
+    public Output<String> iamInstanceProfile() {
         return this.iamInstanceProfile;
     }
 
@@ -49,8 +50,8 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="rootVolume")
       private final @Nullable Output<AwsNodePoolConfigRootVolumeGetArgs> rootVolume;
 
-    public Output<AwsNodePoolConfigRootVolumeGetArgs> getRootVolume() {
-        return this.rootVolume == null ? Output.empty() : this.rootVolume;
+    public Output<AwsNodePoolConfigRootVolumeGetArgs> rootVolume() {
+        return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+    public Output<List<String>> securityGroupIds() {
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="sshConfig")
       private final @Nullable Output<AwsNodePoolConfigSshConfigGetArgs> sshConfig;
 
-    public Output<AwsNodePoolConfigSshConfigGetArgs> getSshConfig() {
-        return this.sshConfig == null ? Output.empty() : this.sshConfig;
+    public Output<AwsNodePoolConfigSshConfigGetArgs> sshConfig() {
+        return this.sshConfig == null ? Codegen.empty() : this.sshConfig;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     @Import(name="taints")
       private final @Nullable Output<List<AwsNodePoolConfigTaintGetArgs>> taints;
 
-    public Output<List<AwsNodePoolConfigTaintGetArgs>> getTaints() {
-        return this.taints == null ? Output.empty() : this.taints;
+    public Output<List<AwsNodePoolConfigTaintGetArgs>> taints() {
+        return this.taints == null ? Codegen.empty() : this.taints;
     }
 
     public AwsNodePoolConfigGetArgs(
@@ -141,15 +142,15 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     private AwsNodePoolConfigGetArgs() {
-        this.configEncryption = Output.empty();
-        this.iamInstanceProfile = Output.empty();
-        this.instanceType = Output.empty();
-        this.labels = Output.empty();
-        this.rootVolume = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.sshConfig = Output.empty();
-        this.tags = Output.empty();
-        this.taints = Output.empty();
+        this.configEncryption = Codegen.empty();
+        this.iamInstanceProfile = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.rootVolume = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.sshConfig = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.taints = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -217,7 +218,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder rootVolume(@Nullable Output<AwsNodePoolConfigRootVolumeGetArgs> rootVolume) {
@@ -225,7 +226,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder rootVolume(@Nullable AwsNodePoolConfigRootVolumeGetArgs rootVolume) {
-            this.rootVolume = Output.ofNullable(rootVolume);
+            this.rootVolume = Codegen.ofNullable(rootVolume);
             return this;
         }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
@@ -233,7 +234,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -244,7 +245,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sshConfig(@Nullable AwsNodePoolConfigSshConfigGetArgs sshConfig) {
-            this.sshConfig = Output.ofNullable(sshConfig);
+            this.sshConfig = Codegen.ofNullable(sshConfig);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -252,7 +253,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder taints(@Nullable Output<List<AwsNodePoolConfigTaintGetArgs>> taints) {
@@ -260,7 +261,7 @@ public final class AwsNodePoolConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder taints(@Nullable List<AwsNodePoolConfigTaintGetArgs> taints) {
-            this.taints = Output.ofNullable(taints);
+            this.taints = Codegen.ofNullable(taints);
             return this;
         }
         public Builder taints(AwsNodePoolConfigTaintGetArgs... taints) {

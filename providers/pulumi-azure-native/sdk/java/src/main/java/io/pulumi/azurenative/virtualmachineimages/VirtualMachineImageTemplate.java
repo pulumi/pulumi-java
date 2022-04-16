@@ -24,6 +24,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -59,7 +60,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
      * 
      */
-    public Output</* @Nullable */ Integer> getBuildTimeoutInMinutes() {
+    public Output</* @Nullable */ Integer> buildTimeoutInMinutes() {
         return this.buildTimeoutInMinutes;
     }
     /**
@@ -73,7 +74,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Specifies the properties used to describe the customization steps of the image, like Image source etc
      * 
      */
-    public Output</* @Nullable */ List<Object>> getCustomize() {
+    public Output</* @Nullable */ List<Object>> customize() {
         return this.customize;
     }
     /**
@@ -87,7 +88,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return The distribution targets where the image output needs to go to.
      * 
      */
-    public Output<List<Object>> getDistribute() {
+    public Output<List<Object>> distribute() {
         return this.distribute;
     }
     /**
@@ -101,7 +102,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return The identity of the image template, if configured.
      * 
      */
-    public Output<ImageTemplateIdentityResponse> getIdentity() {
+    public Output<ImageTemplateIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -115,7 +116,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return State of 'run' that is currently executing or was last executed.
      * 
      */
-    public Output<ImageTemplateLastRunStatusResponse> getLastRunStatus() {
+    public Output<ImageTemplateLastRunStatusResponse> lastRunStatus() {
         return this.lastRunStatus;
     }
     /**
@@ -129,7 +130,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -143,7 +144,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -157,7 +158,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Provisioning error, if any
      * 
      */
-    public Output<ProvisioningErrorResponse> getProvisioningError() {
+    public Output<ProvisioningErrorResponse> provisioningError() {
         return this.provisioningError;
     }
     /**
@@ -171,7 +172,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Provisioning state of the resource
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -185,7 +186,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Specifies the properties used to describe the source image.
      * 
      */
-    public Output<Object> getSource() {
+    public Output<Object> source() {
         return this.source;
     }
     /**
@@ -199,7 +200,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -213,7 +214,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -227,7 +228,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @return Describes how virtual machine is set up to build images
      * 
      */
-    public Output</* @Nullable */ ImageTemplateVmProfileResponse> getVmProfile() {
+    public Output</* @Nullable */ ImageTemplateVmProfileResponse> vmProfile() {
         return this.vmProfile;
     }
 
@@ -253,7 +254,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineImageTemplate(String name, VirtualMachineImageTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:virtualmachineimages:VirtualMachineImageTemplate", name, args == null ? VirtualMachineImageTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:virtualmachineimages:VirtualMachineImageTemplate", name, args == null ? VirtualMachineImageTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualMachineImageTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

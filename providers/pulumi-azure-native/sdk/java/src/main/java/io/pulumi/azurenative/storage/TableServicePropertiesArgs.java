@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.inputs.CorsRulesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,8 +34,8 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="cors")
       private final @Nullable Output<CorsRulesArgs> cors;
 
-    public Output<CorsRulesArgs> getCors() {
-        return this.cors == null ? Output.empty() : this.cors;
+    public Output<CorsRulesArgs> cors() {
+        return this.cors == null ? Codegen.empty() : this.cors;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,8 +56,8 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="tableServiceName")
       private final @Nullable Output<String> tableServiceName;
 
-    public Output<String> getTableServiceName() {
-        return this.tableServiceName == null ? Output.empty() : this.tableServiceName;
+    public Output<String> tableServiceName() {
+        return this.tableServiceName == null ? Codegen.empty() : this.tableServiceName;
     }
 
     public TableServicePropertiesArgs(
@@ -71,10 +72,10 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private TableServicePropertiesArgs() {
-        this.accountName = Output.empty();
-        this.cors = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tableServiceName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.cors = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tableServiceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder cors(@Nullable CorsRulesArgs cors) {
-            this.cors = Output.ofNullable(cors);
+            this.cors = Codegen.ofNullable(cors);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -132,7 +133,7 @@ public final class TableServicePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tableServiceName(@Nullable String tableServiceName) {
-            this.tableServiceName = Output.ofNullable(tableServiceName);
+            this.tableServiceName = Codegen.ofNullable(tableServiceName);
             return this;
         }        public TableServicePropertiesArgs build() {
             return new TableServicePropertiesArgs(accountName, cors, resourceGroupName, tableServiceName);

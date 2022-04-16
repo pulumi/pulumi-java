@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudiot_v1.enums.PublicKeyCredentialFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
     @Import(name="format")
       private final @Nullable Output<PublicKeyCredentialFormat> format;
 
-    public Output<PublicKeyCredentialFormat> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<PublicKeyCredentialFormat> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public PublicKeyCredentialArgs(
@@ -49,8 +50,8 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
     }
 
     private PublicKeyCredentialArgs() {
-        this.format = Output.empty();
-        this.key = Output.empty();
+        this.format = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder format(@Nullable PublicKeyCredentialFormat format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -88,7 +89,7 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public PublicKeyCredentialArgs build() {
             return new PublicKeyCredentialArgs(format, key);

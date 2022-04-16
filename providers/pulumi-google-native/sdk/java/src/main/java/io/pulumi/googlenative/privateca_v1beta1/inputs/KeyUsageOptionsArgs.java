@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="certSign")
       private final @Nullable Output<Boolean> certSign;
 
-    public Output<Boolean> getCertSign() {
-        return this.certSign == null ? Output.empty() : this.certSign;
+    public Output<Boolean> certSign() {
+        return this.certSign == null ? Codegen.empty() : this.certSign;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="contentCommitment")
       private final @Nullable Output<Boolean> contentCommitment;
 
-    public Output<Boolean> getContentCommitment() {
-        return this.contentCommitment == null ? Output.empty() : this.contentCommitment;
+    public Output<Boolean> contentCommitment() {
+        return this.contentCommitment == null ? Codegen.empty() : this.contentCommitment;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="crlSign")
       private final @Nullable Output<Boolean> crlSign;
 
-    public Output<Boolean> getCrlSign() {
-        return this.crlSign == null ? Output.empty() : this.crlSign;
+    public Output<Boolean> crlSign() {
+        return this.crlSign == null ? Codegen.empty() : this.crlSign;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dataEncipherment")
       private final @Nullable Output<Boolean> dataEncipherment;
 
-    public Output<Boolean> getDataEncipherment() {
-        return this.dataEncipherment == null ? Output.empty() : this.dataEncipherment;
+    public Output<Boolean> dataEncipherment() {
+        return this.dataEncipherment == null ? Codegen.empty() : this.dataEncipherment;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="decipherOnly")
       private final @Nullable Output<Boolean> decipherOnly;
 
-    public Output<Boolean> getDecipherOnly() {
-        return this.decipherOnly == null ? Output.empty() : this.decipherOnly;
+    public Output<Boolean> decipherOnly() {
+        return this.decipherOnly == null ? Codegen.empty() : this.decipherOnly;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="digitalSignature")
       private final @Nullable Output<Boolean> digitalSignature;
 
-    public Output<Boolean> getDigitalSignature() {
-        return this.digitalSignature == null ? Output.empty() : this.digitalSignature;
+    public Output<Boolean> digitalSignature() {
+        return this.digitalSignature == null ? Codegen.empty() : this.digitalSignature;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="encipherOnly")
       private final @Nullable Output<Boolean> encipherOnly;
 
-    public Output<Boolean> getEncipherOnly() {
-        return this.encipherOnly == null ? Output.empty() : this.encipherOnly;
+    public Output<Boolean> encipherOnly() {
+        return this.encipherOnly == null ? Codegen.empty() : this.encipherOnly;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyAgreement")
       private final @Nullable Output<Boolean> keyAgreement;
 
-    public Output<Boolean> getKeyAgreement() {
-        return this.keyAgreement == null ? Output.empty() : this.keyAgreement;
+    public Output<Boolean> keyAgreement() {
+        return this.keyAgreement == null ? Codegen.empty() : this.keyAgreement;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="keyEncipherment")
       private final @Nullable Output<Boolean> keyEncipherment;
 
-    public Output<Boolean> getKeyEncipherment() {
-        return this.keyEncipherment == null ? Output.empty() : this.keyEncipherment;
+    public Output<Boolean> keyEncipherment() {
+        return this.keyEncipherment == null ? Codegen.empty() : this.keyEncipherment;
     }
 
     public KeyUsageOptionsArgs(
@@ -139,15 +140,15 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private KeyUsageOptionsArgs() {
-        this.certSign = Output.empty();
-        this.contentCommitment = Output.empty();
-        this.crlSign = Output.empty();
-        this.dataEncipherment = Output.empty();
-        this.decipherOnly = Output.empty();
-        this.digitalSignature = Output.empty();
-        this.encipherOnly = Output.empty();
-        this.keyAgreement = Output.empty();
-        this.keyEncipherment = Output.empty();
+        this.certSign = Codegen.empty();
+        this.contentCommitment = Codegen.empty();
+        this.crlSign = Codegen.empty();
+        this.dataEncipherment = Codegen.empty();
+        this.decipherOnly = Codegen.empty();
+        this.digitalSignature = Codegen.empty();
+        this.encipherOnly = Codegen.empty();
+        this.keyAgreement = Codegen.empty();
+        this.keyEncipherment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder certSign(@Nullable Boolean certSign) {
-            this.certSign = Output.ofNullable(certSign);
+            this.certSign = Codegen.ofNullable(certSign);
             return this;
         }
         public Builder contentCommitment(@Nullable Output<Boolean> contentCommitment) {
@@ -199,7 +200,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder contentCommitment(@Nullable Boolean contentCommitment) {
-            this.contentCommitment = Output.ofNullable(contentCommitment);
+            this.contentCommitment = Codegen.ofNullable(contentCommitment);
             return this;
         }
         public Builder crlSign(@Nullable Output<Boolean> crlSign) {
@@ -207,7 +208,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder crlSign(@Nullable Boolean crlSign) {
-            this.crlSign = Output.ofNullable(crlSign);
+            this.crlSign = Codegen.ofNullable(crlSign);
             return this;
         }
         public Builder dataEncipherment(@Nullable Output<Boolean> dataEncipherment) {
@@ -215,7 +216,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
-            this.dataEncipherment = Output.ofNullable(dataEncipherment);
+            this.dataEncipherment = Codegen.ofNullable(dataEncipherment);
             return this;
         }
         public Builder decipherOnly(@Nullable Output<Boolean> decipherOnly) {
@@ -223,7 +224,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder decipherOnly(@Nullable Boolean decipherOnly) {
-            this.decipherOnly = Output.ofNullable(decipherOnly);
+            this.decipherOnly = Codegen.ofNullable(decipherOnly);
             return this;
         }
         public Builder digitalSignature(@Nullable Output<Boolean> digitalSignature) {
@@ -231,7 +232,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder digitalSignature(@Nullable Boolean digitalSignature) {
-            this.digitalSignature = Output.ofNullable(digitalSignature);
+            this.digitalSignature = Codegen.ofNullable(digitalSignature);
             return this;
         }
         public Builder encipherOnly(@Nullable Output<Boolean> encipherOnly) {
@@ -239,7 +240,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder encipherOnly(@Nullable Boolean encipherOnly) {
-            this.encipherOnly = Output.ofNullable(encipherOnly);
+            this.encipherOnly = Codegen.ofNullable(encipherOnly);
             return this;
         }
         public Builder keyAgreement(@Nullable Output<Boolean> keyAgreement) {
@@ -247,7 +248,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder keyAgreement(@Nullable Boolean keyAgreement) {
-            this.keyAgreement = Output.ofNullable(keyAgreement);
+            this.keyAgreement = Codegen.ofNullable(keyAgreement);
             return this;
         }
         public Builder keyEncipherment(@Nullable Output<Boolean> keyEncipherment) {
@@ -255,7 +256,7 @@ public final class KeyUsageOptionsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
-            this.keyEncipherment = Output.ofNullable(keyEncipherment);
+            this.keyEncipherment = Codegen.ofNullable(keyEncipherment);
             return this;
         }        public KeyUsageOptionsArgs build() {
             return new KeyUsageOptionsArgs(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);

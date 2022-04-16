@@ -10,6 +10,7 @@ import io.pulumi.azurenative.devtestlab.inputs.NetworkInterfacePropertiesArgs;
 import io.pulumi.azurenative.devtestlab.inputs.ScheduleCreationParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowClaim")
       private final @Nullable Output<Boolean> allowClaim;
 
-    public Output<Boolean> getAllowClaim() {
-        return this.allowClaim == null ? Output.empty() : this.allowClaim;
+    public Output<Boolean> allowClaim() {
+        return this.allowClaim == null ? Codegen.empty() : this.allowClaim;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifacts")
       private final @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
 
-    public Output<List<ArtifactInstallPropertiesArgs>> getArtifacts() {
-        return this.artifacts == null ? Output.empty() : this.artifacts;
+    public Output<List<ArtifactInstallPropertiesArgs>> artifacts() {
+        return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+    public Output<String> createdDate() {
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customImageId")
       private final @Nullable Output<String> customImageId;
 
-    public Output<String> getCustomImageId() {
-        return this.customImageId == null ? Output.empty() : this.customImageId;
+    public Output<String> customImageId() {
+        return this.customImageId == null ? Codegen.empty() : this.customImageId;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskParameters")
       private final @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
 
-    public Output<List<DataDiskPropertiesArgs>> getDataDiskParameters() {
-        return this.dataDiskParameters == null ? Output.empty() : this.dataDiskParameters;
+    public Output<List<DataDiskPropertiesArgs>> dataDiskParameters() {
+        return this.dataDiskParameters == null ? Codegen.empty() : this.dataDiskParameters;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disallowPublicIpAddress")
       private final @Nullable Output<Boolean> disallowPublicIpAddress;
 
-    public Output<Boolean> getDisallowPublicIpAddress() {
-        return this.disallowPublicIpAddress == null ? Output.empty() : this.disallowPublicIpAddress;
+    public Output<Boolean> disallowPublicIpAddress() {
+        return this.disallowPublicIpAddress == null ? Codegen.empty() : this.disallowPublicIpAddress;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+    public Output<String> environmentId() {
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+    public Output<String> expirationDate() {
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="galleryImageReference")
       private final @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
 
-    public Output<GalleryImageReferenceArgs> getGalleryImageReference() {
-        return this.galleryImageReference == null ? Output.empty() : this.galleryImageReference;
+    public Output<GalleryImageReferenceArgs> galleryImageReference() {
+        return this.galleryImageReference == null ? Codegen.empty() : this.galleryImageReference;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isAuthenticationWithSshKey")
       private final @Nullable Output<Boolean> isAuthenticationWithSshKey;
 
-    public Output<Boolean> getIsAuthenticationWithSshKey() {
-        return this.isAuthenticationWithSshKey == null ? Output.empty() : this.isAuthenticationWithSshKey;
+    public Output<Boolean> isAuthenticationWithSshKey() {
+        return this.isAuthenticationWithSshKey == null ? Codegen.empty() : this.isAuthenticationWithSshKey;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -150,8 +151,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
 
-    public Output<String> getLabSubnetName() {
-        return this.labSubnetName == null ? Output.empty() : this.labSubnetName;
+    public Output<String> labSubnetName() {
+        return this.labSubnetName == null ? Codegen.empty() : this.labSubnetName;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labVirtualNetworkId")
       private final @Nullable Output<String> labVirtualNetworkId;
 
-    public Output<String> getLabVirtualNetworkId() {
-        return this.labVirtualNetworkId == null ? Output.empty() : this.labVirtualNetworkId;
+    public Output<String> labVirtualNetworkId() {
+        return this.labVirtualNetworkId == null ? Codegen.empty() : this.labVirtualNetworkId;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -183,8 +184,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -194,8 +195,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkInterface")
       private final @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
 
-    public Output<NetworkInterfacePropertiesArgs> getNetworkInterface() {
-        return this.networkInterface == null ? Output.empty() : this.networkInterface;
+    public Output<NetworkInterfacePropertiesArgs> networkInterface() {
+        return this.networkInterface == null ? Codegen.empty() : this.networkInterface;
     }
 
     /**
@@ -205,8 +206,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notes")
       private final @Nullable Output<String> notes;
 
-    public Output<String> getNotes() {
-        return this.notes == null ? Output.empty() : this.notes;
+    public Output<String> notes() {
+        return this.notes == null ? Codegen.empty() : this.notes;
     }
 
     /**
@@ -216,8 +217,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerObjectId")
       private final @Nullable Output<String> ownerObjectId;
 
-    public Output<String> getOwnerObjectId() {
-        return this.ownerObjectId == null ? Output.empty() : this.ownerObjectId;
+    public Output<String> ownerObjectId() {
+        return this.ownerObjectId == null ? Codegen.empty() : this.ownerObjectId;
     }
 
     /**
@@ -227,8 +228,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerUserPrincipalName")
       private final @Nullable Output<String> ownerUserPrincipalName;
 
-    public Output<String> getOwnerUserPrincipalName() {
-        return this.ownerUserPrincipalName == null ? Output.empty() : this.ownerUserPrincipalName;
+    public Output<String> ownerUserPrincipalName() {
+        return this.ownerUserPrincipalName == null ? Codegen.empty() : this.ownerUserPrincipalName;
     }
 
     /**
@@ -238,8 +239,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -249,8 +250,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="planId")
       private final @Nullable Output<String> planId;
 
-    public Output<String> getPlanId() {
-        return this.planId == null ? Output.empty() : this.planId;
+    public Output<String> planId() {
+        return this.planId == null ? Codegen.empty() : this.planId;
     }
 
     /**
@@ -260,7 +261,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -271,8 +272,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduleParameters")
       private final @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
 
-    public Output<List<ScheduleCreationParameterArgs>> getScheduleParameters() {
-        return this.scheduleParameters == null ? Output.empty() : this.scheduleParameters;
+    public Output<List<ScheduleCreationParameterArgs>> scheduleParameters() {
+        return this.scheduleParameters == null ? Codegen.empty() : this.scheduleParameters;
     }
 
     /**
@@ -282,8 +283,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<String> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -293,8 +294,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sshKey")
       private final @Nullable Output<String> sshKey;
 
-    public Output<String> getSshKey() {
-        return this.sshKey == null ? Output.empty() : this.sshKey;
+    public Output<String> sshKey() {
+        return this.sshKey == null ? Codegen.empty() : this.sshKey;
     }
 
     /**
@@ -304,8 +305,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
-    public Output<String> getStorageType() {
-        return this.storageType == null ? Output.empty() : this.storageType;
+    public Output<String> storageType() {
+        return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
     /**
@@ -315,8 +316,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -326,8 +327,8 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public VirtualMachineArgs(
@@ -359,12 +360,12 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> storageType,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<String> userName) {
-        this.allowClaim = allowClaim == null ? Output.ofNullable(false) : allowClaim;
+        this.allowClaim = allowClaim == null ? Codegen.ofNullable(false) : allowClaim;
         this.artifacts = artifacts;
         this.createdDate = createdDate;
         this.customImageId = customImageId;
         this.dataDiskParameters = dataDiskParameters;
-        this.disallowPublicIpAddress = disallowPublicIpAddress == null ? Output.ofNullable(false) : disallowPublicIpAddress;
+        this.disallowPublicIpAddress = disallowPublicIpAddress == null ? Codegen.ofNullable(false) : disallowPublicIpAddress;
         this.environmentId = environmentId;
         this.expirationDate = expirationDate;
         this.galleryImageReference = galleryImageReference;
@@ -376,7 +377,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         this.name = name;
         this.networkInterface = networkInterface;
         this.notes = notes;
-        this.ownerObjectId = ownerObjectId == null ? Output.ofNullable("dynamicValue") : ownerObjectId;
+        this.ownerObjectId = ownerObjectId == null ? Codegen.ofNullable("dynamicValue") : ownerObjectId;
         this.ownerUserPrincipalName = ownerUserPrincipalName;
         this.password = password;
         this.planId = planId;
@@ -384,40 +385,40 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
         this.scheduleParameters = scheduleParameters;
         this.size = size;
         this.sshKey = sshKey;
-        this.storageType = storageType == null ? Output.ofNullable("labStorageType") : storageType;
+        this.storageType = storageType == null ? Codegen.ofNullable("labStorageType") : storageType;
         this.tags = tags;
         this.userName = userName;
     }
 
     private VirtualMachineArgs() {
-        this.allowClaim = Output.empty();
-        this.artifacts = Output.empty();
-        this.createdDate = Output.empty();
-        this.customImageId = Output.empty();
-        this.dataDiskParameters = Output.empty();
-        this.disallowPublicIpAddress = Output.empty();
-        this.environmentId = Output.empty();
-        this.expirationDate = Output.empty();
-        this.galleryImageReference = Output.empty();
-        this.isAuthenticationWithSshKey = Output.empty();
-        this.labName = Output.empty();
-        this.labSubnetName = Output.empty();
-        this.labVirtualNetworkId = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.networkInterface = Output.empty();
-        this.notes = Output.empty();
-        this.ownerObjectId = Output.empty();
-        this.ownerUserPrincipalName = Output.empty();
-        this.password = Output.empty();
-        this.planId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scheduleParameters = Output.empty();
-        this.size = Output.empty();
-        this.sshKey = Output.empty();
-        this.storageType = Output.empty();
-        this.tags = Output.empty();
-        this.userName = Output.empty();
+        this.allowClaim = Codegen.empty();
+        this.artifacts = Codegen.empty();
+        this.createdDate = Codegen.empty();
+        this.customImageId = Codegen.empty();
+        this.dataDiskParameters = Codegen.empty();
+        this.disallowPublicIpAddress = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.galleryImageReference = Codegen.empty();
+        this.isAuthenticationWithSshKey = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.labSubnetName = Codegen.empty();
+        this.labVirtualNetworkId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkInterface = Codegen.empty();
+        this.notes = Codegen.empty();
+        this.ownerObjectId = Codegen.empty();
+        this.ownerUserPrincipalName = Codegen.empty();
+        this.password = Codegen.empty();
+        this.planId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scheduleParameters = Codegen.empty();
+        this.size = Codegen.empty();
+        this.sshKey = Codegen.empty();
+        this.storageType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -499,7 +500,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowClaim(@Nullable Boolean allowClaim) {
-            this.allowClaim = Output.ofNullable(allowClaim);
+            this.allowClaim = Codegen.ofNullable(allowClaim);
             return this;
         }
         public Builder artifacts(@Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts) {
@@ -507,7 +508,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifacts(@Nullable List<ArtifactInstallPropertiesArgs> artifacts) {
-            this.artifacts = Output.ofNullable(artifacts);
+            this.artifacts = Codegen.ofNullable(artifacts);
             return this;
         }
         public Builder artifacts(ArtifactInstallPropertiesArgs... artifacts) {
@@ -518,7 +519,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder customImageId(@Nullable Output<String> customImageId) {
@@ -526,7 +527,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customImageId(@Nullable String customImageId) {
-            this.customImageId = Output.ofNullable(customImageId);
+            this.customImageId = Codegen.ofNullable(customImageId);
             return this;
         }
         public Builder dataDiskParameters(@Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters) {
@@ -534,7 +535,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDiskParameters(@Nullable List<DataDiskPropertiesArgs> dataDiskParameters) {
-            this.dataDiskParameters = Output.ofNullable(dataDiskParameters);
+            this.dataDiskParameters = Codegen.ofNullable(dataDiskParameters);
             return this;
         }
         public Builder dataDiskParameters(DataDiskPropertiesArgs... dataDiskParameters) {
@@ -545,7 +546,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
-            this.disallowPublicIpAddress = Output.ofNullable(disallowPublicIpAddress);
+            this.disallowPublicIpAddress = Codegen.ofNullable(disallowPublicIpAddress);
             return this;
         }
         public Builder environmentId(@Nullable Output<String> environmentId) {
@@ -553,7 +554,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
@@ -561,7 +562,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder galleryImageReference(@Nullable Output<GalleryImageReferenceArgs> galleryImageReference) {
@@ -569,7 +570,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder galleryImageReference(@Nullable GalleryImageReferenceArgs galleryImageReference) {
-            this.galleryImageReference = Output.ofNullable(galleryImageReference);
+            this.galleryImageReference = Codegen.ofNullable(galleryImageReference);
             return this;
         }
         public Builder isAuthenticationWithSshKey(@Nullable Output<Boolean> isAuthenticationWithSshKey) {
@@ -577,7 +578,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
-            this.isAuthenticationWithSshKey = Output.ofNullable(isAuthenticationWithSshKey);
+            this.isAuthenticationWithSshKey = Codegen.ofNullable(isAuthenticationWithSshKey);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -593,7 +594,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labSubnetName(@Nullable String labSubnetName) {
-            this.labSubnetName = Output.ofNullable(labSubnetName);
+            this.labSubnetName = Codegen.ofNullable(labSubnetName);
             return this;
         }
         public Builder labVirtualNetworkId(@Nullable Output<String> labVirtualNetworkId) {
@@ -601,7 +602,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labVirtualNetworkId(@Nullable String labVirtualNetworkId) {
-            this.labVirtualNetworkId = Output.ofNullable(labVirtualNetworkId);
+            this.labVirtualNetworkId = Codegen.ofNullable(labVirtualNetworkId);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -609,7 +610,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -617,7 +618,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkInterface(@Nullable Output<NetworkInterfacePropertiesArgs> networkInterface) {
@@ -625,7 +626,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterface(@Nullable NetworkInterfacePropertiesArgs networkInterface) {
-            this.networkInterface = Output.ofNullable(networkInterface);
+            this.networkInterface = Codegen.ofNullable(networkInterface);
             return this;
         }
         public Builder notes(@Nullable Output<String> notes) {
@@ -633,7 +634,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notes(@Nullable String notes) {
-            this.notes = Output.ofNullable(notes);
+            this.notes = Codegen.ofNullable(notes);
             return this;
         }
         public Builder ownerObjectId(@Nullable Output<String> ownerObjectId) {
@@ -641,7 +642,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerObjectId(@Nullable String ownerObjectId) {
-            this.ownerObjectId = Output.ofNullable(ownerObjectId);
+            this.ownerObjectId = Codegen.ofNullable(ownerObjectId);
             return this;
         }
         public Builder ownerUserPrincipalName(@Nullable Output<String> ownerUserPrincipalName) {
@@ -649,7 +650,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
-            this.ownerUserPrincipalName = Output.ofNullable(ownerUserPrincipalName);
+            this.ownerUserPrincipalName = Codegen.ofNullable(ownerUserPrincipalName);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -657,7 +658,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder planId(@Nullable Output<String> planId) {
@@ -665,7 +666,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder planId(@Nullable String planId) {
-            this.planId = Output.ofNullable(planId);
+            this.planId = Codegen.ofNullable(planId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -681,7 +682,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduleParameters(@Nullable List<ScheduleCreationParameterArgs> scheduleParameters) {
-            this.scheduleParameters = Output.ofNullable(scheduleParameters);
+            this.scheduleParameters = Codegen.ofNullable(scheduleParameters);
             return this;
         }
         public Builder scheduleParameters(ScheduleCreationParameterArgs... scheduleParameters) {
@@ -692,7 +693,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable String size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder sshKey(@Nullable Output<String> sshKey) {
@@ -700,7 +701,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sshKey(@Nullable String sshKey) {
-            this.sshKey = Output.ofNullable(sshKey);
+            this.sshKey = Codegen.ofNullable(sshKey);
             return this;
         }
         public Builder storageType(@Nullable Output<String> storageType) {
@@ -708,7 +709,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Output.ofNullable(storageType);
+            this.storageType = Codegen.ofNullable(storageType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -716,7 +717,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -724,7 +725,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public VirtualMachineArgs build() {
             return new VirtualMachineArgs(allowClaim, artifacts, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, galleryImageReference, isAuthenticationWithSshKey, labName, labSubnetName, labVirtualNetworkId, location, name, networkInterface, notes, ownerObjectId, ownerUserPrincipalName, password, planId, resourceGroupName, scheduleParameters, size, sshKey, storageType, tags, userName);

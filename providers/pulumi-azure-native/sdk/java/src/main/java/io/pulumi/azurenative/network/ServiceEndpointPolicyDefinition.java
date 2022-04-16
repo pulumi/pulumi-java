@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * @return A description for this rule. Restricted to 140 chars.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -55,7 +56,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -69,7 +70,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * @return The provisioning state of the service endpoint policy definition resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -97,7 +98,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * @return Service endpoint name.
      * 
      */
-    public Output</* @Nullable */ String> getService() {
+    public Output</* @Nullable */ String> service() {
         return this.service;
     }
     /**
@@ -111,7 +112,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * @return A list of service resources.
      * 
      */
-    public Output</* @Nullable */ List<String>> getServiceResources() {
+    public Output</* @Nullable */ List<String>> serviceResources() {
         return this.serviceResources;
     }
 
@@ -137,7 +138,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceEndpointPolicyDefinition(String name, ServiceEndpointPolicyDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ServiceEndpointPolicyDefinition", name, args == null ? ServiceEndpointPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ServiceEndpointPolicyDefinition", name, args == null ? ServiceEndpointPolicyDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceEndpointPolicyDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

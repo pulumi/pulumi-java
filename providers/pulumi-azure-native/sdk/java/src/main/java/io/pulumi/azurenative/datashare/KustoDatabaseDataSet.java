@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @return Unique id for identifying a data set resource
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -58,7 +59,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * Expected value is 'KustoDatabase'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +73,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @return Resource id of the kusto database.
      * 
      */
-    public Output<String> getKustoDatabaseResourceId() {
+    public Output<String> kustoDatabaseResourceId() {
         return this.kustoDatabaseResourceId;
     }
     /**
@@ -86,7 +87,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @return Location of the kusto cluster.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -100,7 +101,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the kusto database data set.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -128,7 +129,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -142,7 +143,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +169,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KustoDatabaseDataSet(String name, KustoDatabaseDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:KustoDatabaseDataSet", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:KustoDatabaseDataSet", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private KustoDatabaseDataSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

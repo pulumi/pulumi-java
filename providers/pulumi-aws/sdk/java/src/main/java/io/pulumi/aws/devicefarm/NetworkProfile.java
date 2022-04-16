@@ -9,6 +9,7 @@ import io.pulumi.aws.devicefarm.inputs.NetworkProfileState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name of this network profile.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The description of the network profile.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The data throughput rate in bits per second, as an integer from `0` to `104857600`. Default value is `104857600`.
      * 
      */
-    public Output</* @Nullable */ Integer> getDownlinkBandwidthBits() {
+    public Output</* @Nullable */ Integer> downlinkBandwidthBits() {
         return this.downlinkBandwidthBits;
     }
     /**
@@ -85,7 +86,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Delay time for all packets to destination in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> getDownlinkDelayMs() {
+    public Output</* @Nullable */ Integer> downlinkDelayMs() {
         return this.downlinkDelayMs;
     }
     /**
@@ -99,7 +100,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Time variation in the delay of received packets in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> getDownlinkJitterMs() {
+    public Output</* @Nullable */ Integer> downlinkJitterMs() {
         return this.downlinkJitterMs;
     }
     /**
@@ -113,7 +114,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Proportion of received packets that fail to arrive from `0` to `100` percent.
      * 
      */
-    public Output</* @Nullable */ Integer> getDownlinkLossPercent() {
+    public Output</* @Nullable */ Integer> downlinkLossPercent() {
         return this.downlinkLossPercent;
     }
     /**
@@ -127,7 +128,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The name for the network profile.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -141,7 +142,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The ARN of the project for the network profile.
      * 
      */
-    public Output<String> getProjectArn() {
+    public Output<String> projectArn() {
         return this.projectArn;
     }
     /**
@@ -155,7 +156,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +170,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -183,7 +184,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The type of network profile to create. Valid values are listed are `PRIVATE` and `CURATED`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -197,7 +198,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return The data throughput rate in bits per second, as an integer from `0` to `104857600`. Default value is `104857600`.
      * 
      */
-    public Output</* @Nullable */ Integer> getUplinkBandwidthBits() {
+    public Output</* @Nullable */ Integer> uplinkBandwidthBits() {
         return this.uplinkBandwidthBits;
     }
     /**
@@ -211,7 +212,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Delay time for all packets to destination in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> getUplinkDelayMs() {
+    public Output</* @Nullable */ Integer> uplinkDelayMs() {
         return this.uplinkDelayMs;
     }
     /**
@@ -225,7 +226,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Time variation in the delay of received packets in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> getUplinkJitterMs() {
+    public Output</* @Nullable */ Integer> uplinkJitterMs() {
         return this.uplinkJitterMs;
     }
     /**
@@ -239,7 +240,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @return Proportion of received packets that fail to arrive from `0` to `100` percent.
      * 
      */
-    public Output</* @Nullable */ Integer> getUplinkLossPercent() {
+    public Output</* @Nullable */ Integer> uplinkLossPercent() {
         return this.uplinkLossPercent;
     }
 
@@ -265,7 +266,7 @@ public class NetworkProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkProfile(String name, NetworkProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:devicefarm/networkProfile:NetworkProfile", name, args == null ? NetworkProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:devicefarm/networkProfile:NetworkProfile", name, args == null ? NetworkProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkProfile(String name, Output<String> id, @Nullable NetworkProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

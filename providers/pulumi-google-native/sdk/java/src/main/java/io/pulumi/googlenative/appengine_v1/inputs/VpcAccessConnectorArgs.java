@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1.enums.VpcAccessConnectorEgressSetting;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
     @Import(name="egressSetting")
       private final @Nullable Output<VpcAccessConnectorEgressSetting> egressSetting;
 
-    public Output<VpcAccessConnectorEgressSetting> getEgressSetting() {
-        return this.egressSetting == null ? Output.empty() : this.egressSetting;
+    public Output<VpcAccessConnectorEgressSetting> egressSetting() {
+        return this.egressSetting == null ? Codegen.empty() : this.egressSetting;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public VpcAccessConnectorArgs(
@@ -49,8 +50,8 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VpcAccessConnectorArgs() {
-        this.egressSetting = Output.empty();
-        this.name = Output.empty();
+        this.egressSetting = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder egressSetting(@Nullable VpcAccessConnectorEgressSetting egressSetting) {
-            this.egressSetting = Output.ofNullable(egressSetting);
+            this.egressSetting = Codegen.ofNullable(egressSetting);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -88,7 +89,7 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public VpcAccessConnectorArgs build() {
             return new VpcAccessConnectorArgs(egressSetting, name);

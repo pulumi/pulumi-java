@@ -6,6 +6,7 @@ package io.pulumi.gcp.tags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagValueArgs;
 import io.pulumi.gcp.tags.inputs.TagValueState;
@@ -51,7 +52,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -65,7 +66,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return User-assigned description of the TagValue. Must not exceed 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -79,7 +80,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return The generated numeric id for the TagValue.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -93,7 +94,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Output only. Namespaced name of the TagValue. Will be in the format {organizationId}/{tag_key_short_name}/{shortName}.
      * 
      */
-    public Output<String> getNamespacedName() {
+    public Output<String> namespacedName() {
         return this.namespacedName;
     }
     /**
@@ -107,7 +108,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @return Input only. The resource name of the new TagValue's parent. Must be of the form tagKeys/{tag_key_id}.
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -123,7 +124,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    public Output<String> getShortName() {
+    public Output<String> shortName() {
         return this.shortName;
     }
     /**
@@ -139,7 +140,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -165,7 +166,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagValue(String name, TagValueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:tags/tagValue:TagValue", name, args == null ? TagValueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:tags/tagValue:TagValue", name, args == null ? TagValueArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagValue(String name, Output<String> id, @Nullable TagValueState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

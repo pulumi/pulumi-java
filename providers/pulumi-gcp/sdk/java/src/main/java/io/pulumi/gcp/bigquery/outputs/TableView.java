@@ -36,7 +36,7 @@ public final class TableView {
      * A query whose result is persisted.
      * 
     */
-    public String getQuery() {
+    public String query() {
         return this.query;
     }
     /**
@@ -44,7 +44,7 @@ public final class TableView {
      * The default value is true. If set to false, the view will use BigQuery's standard SQL.
      * 
     */
-    public Optional<Boolean> getUseLegacySql() {
+    public Optional<Boolean> useLegacySql() {
         return Optional.ofNullable(this.useLegacySql);
     }
 

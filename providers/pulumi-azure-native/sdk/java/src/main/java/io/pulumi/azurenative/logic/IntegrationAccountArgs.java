@@ -9,6 +9,7 @@ import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="integrationAccountName")
       private final @Nullable Output<String> integrationAccountName;
 
-    public Output<String> getIntegrationAccountName() {
-        return this.integrationAccountName == null ? Output.empty() : this.integrationAccountName;
+    public Output<String> integrationAccountName() {
+        return this.integrationAccountName == null ? Codegen.empty() : this.integrationAccountName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
-    public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
-        return this.integrationServiceEnvironment == null ? Output.empty() : this.integrationServiceEnvironment;
+    public Output<ResourceReferenceArgs> integrationServiceEnvironment() {
+        return this.integrationServiceEnvironment == null ? Codegen.empty() : this.integrationServiceEnvironment;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,8 +71,8 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sku")
       private final @Nullable Output<IntegrationAccountSkuArgs> sku;
 
-    public Output<IntegrationAccountSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<IntegrationAccountSkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
-    public Output<Either<String,WorkflowState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,WorkflowState>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationAccountArgs(
@@ -114,13 +115,13 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
     }
 
     private IntegrationAccountArgs() {
-        this.integrationAccountName = Output.empty();
-        this.integrationServiceEnvironment = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.integrationServiceEnvironment = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder integrationAccountName(@Nullable String integrationAccountName) {
-            this.integrationAccountName = Output.ofNullable(integrationAccountName);
+            this.integrationAccountName = Codegen.ofNullable(integrationAccountName);
             return this;
         }
         public Builder integrationServiceEnvironment(@Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment) {
@@ -168,7 +169,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder integrationServiceEnvironment(@Nullable ResourceReferenceArgs integrationServiceEnvironment) {
-            this.integrationServiceEnvironment = Output.ofNullable(integrationServiceEnvironment);
+            this.integrationServiceEnvironment = Codegen.ofNullable(integrationServiceEnvironment);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -176,7 +177,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -192,7 +193,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sku(@Nullable IntegrationAccountSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder state(@Nullable Output<Either<String,WorkflowState>> state) {
@@ -200,7 +201,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder state(@Nullable Either<String,WorkflowState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -208,7 +209,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationAccountArgs build() {
             return new IntegrationAccountArgs(integrationAccountName, integrationServiceEnvironment, location, resourceGroupName, sku, state, tags);

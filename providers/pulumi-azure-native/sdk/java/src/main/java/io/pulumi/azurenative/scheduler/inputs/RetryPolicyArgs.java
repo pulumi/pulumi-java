@@ -6,6 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.enums.RetryType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryCount")
       private final @Nullable Output<Integer> retryCount;
 
-    public Output<Integer> getRetryCount() {
-        return this.retryCount == null ? Output.empty() : this.retryCount;
+    public Output<Integer> retryCount() {
+        return this.retryCount == null ? Codegen.empty() : this.retryCount;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryInterval")
       private final @Nullable Output<String> retryInterval;
 
-    public Output<String> getRetryInterval() {
-        return this.retryInterval == null ? Output.empty() : this.retryInterval;
+    public Output<String> retryInterval() {
+        return this.retryInterval == null ? Codegen.empty() : this.retryInterval;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retryType")
       private final @Nullable Output<RetryType> retryType;
 
-    public Output<RetryType> getRetryType() {
-        return this.retryType == null ? Output.empty() : this.retryType;
+    public Output<RetryType> retryType() {
+        return this.retryType == null ? Codegen.empty() : this.retryType;
     }
 
     public RetryPolicyArgs(
@@ -59,9 +60,9 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RetryPolicyArgs() {
-        this.retryCount = Output.empty();
-        this.retryInterval = Output.empty();
-        this.retryType = Output.empty();
+        this.retryCount = Codegen.empty();
+        this.retryInterval = Codegen.empty();
+        this.retryType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryCount(@Nullable Integer retryCount) {
-            this.retryCount = Output.ofNullable(retryCount);
+            this.retryCount = Codegen.ofNullable(retryCount);
             return this;
         }
         public Builder retryInterval(@Nullable Output<String> retryInterval) {
@@ -101,7 +102,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryInterval(@Nullable String retryInterval) {
-            this.retryInterval = Output.ofNullable(retryInterval);
+            this.retryInterval = Codegen.ofNullable(retryInterval);
             return this;
         }
         public Builder retryType(@Nullable Output<RetryType> retryType) {
@@ -109,7 +110,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryType(@Nullable RetryType retryType) {
-            this.retryType = Output.ofNullable(retryType);
+            this.retryType = Codegen.ofNullable(retryType);
             return this;
         }        public RetryPolicyArgs build() {
             return new RetryPolicyArgs(retryCount, retryInterval, retryType);

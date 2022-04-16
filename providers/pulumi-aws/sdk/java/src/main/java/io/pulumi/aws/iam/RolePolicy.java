@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.RolePolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -43,7 +44,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * assign a random, unique name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -59,7 +60,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> getNamePrefix() {
+    public Output</* @Nullable */ String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -73,7 +74,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * @return The policy document. This is a JSON formatted string.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -87,7 +88,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * @return The IAM role to attach to the policy.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -113,7 +114,7 @@ public class RolePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RolePolicy(String name, RolePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/rolePolicy:RolePolicy", name, args == null ? RolePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/rolePolicy:RolePolicy", name, args == null ? RolePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RolePolicy(String name, Output<String> id, @Nullable RolePolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

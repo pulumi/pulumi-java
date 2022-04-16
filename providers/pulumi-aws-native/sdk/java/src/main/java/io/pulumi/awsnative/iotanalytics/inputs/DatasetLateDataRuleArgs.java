@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetLateDataRuleConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
     @Import(name="ruleConfiguration", required=true)
       private final Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration;
 
-    public Output<DatasetLateDataRuleConfigurationArgs> getRuleConfiguration() {
+    public Output<DatasetLateDataRuleConfigurationArgs> ruleConfiguration() {
         return this.ruleConfiguration;
     }
 
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     public DatasetLateDataRuleArgs(
@@ -37,8 +38,8 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
     }
 
     private DatasetLateDataRuleArgs() {
-        this.ruleConfiguration = Output.empty();
-        this.ruleName = Output.empty();
+        this.ruleConfiguration = Codegen.empty();
+        this.ruleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DatasetLateDataRuleArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }        public DatasetLateDataRuleArgs build() {
             return new DatasetLateDataRuleArgs(ruleConfiguration, ruleName);

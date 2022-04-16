@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.VariableType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
     @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
-    public Output<Object> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+    public Output<Object> defaultValue() {
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
     @Import(name="type", required=true)
       private final Output<Either<String,VariableType>> type;
 
-    public Output<Either<String,VariableType>> getType() {
+    public Output<Either<String,VariableType>> type() {
         return this.type;
     }
 
@@ -51,8 +52,8 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
     }
 
     private VariableSpecificationArgs() {
-        this.defaultValue = Output.empty();
-        this.type = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class VariableSpecificationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder type(Output<Either<String,VariableType>> type) {

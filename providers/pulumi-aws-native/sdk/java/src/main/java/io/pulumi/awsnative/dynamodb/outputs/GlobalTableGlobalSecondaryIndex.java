@@ -32,16 +32,16 @@ public final class GlobalTableGlobalSecondaryIndex {
         this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
     }
 
-    public String getIndexName() {
+    public String indexName() {
         return this.indexName;
     }
-    public List<GlobalTableKeySchema> getKeySchema() {
+    public List<GlobalTableKeySchema> keySchema() {
         return this.keySchema;
     }
-    public GlobalTableProjection getProjection() {
+    public GlobalTableProjection projection() {
         return this.projection;
     }
-    public Optional<GlobalTableWriteProvisionedThroughputSettings> getWriteProvisionedThroughputSettings() {
+    public Optional<GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings() {
         return Optional.ofNullable(this.writeProvisionedThroughputSettings);
     }
 

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.netapp.enums.ServiceLevel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -37,8 +38,8 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolName")
       private final @Nullable Output<String> poolName;
 
-    public Output<String> getPoolName() {
-        return this.poolName == null ? Output.empty() : this.poolName;
+    public Output<String> poolName() {
+        return this.poolName == null ? Codegen.empty() : this.poolName;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="qosType")
       private final @Nullable Output<Either<String,QosType>> qosType;
 
-    public Output<Either<String,QosType>> getQosType() {
-        return this.qosType == null ? Output.empty() : this.qosType;
+    public Output<Either<String,QosType>> qosType() {
+        return this.qosType == null ? Codegen.empty() : this.qosType;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -81,7 +82,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceLevel", required=true)
       private final Output<Either<String,ServiceLevel>> serviceLevel;
 
-    public Output<Either<String,ServiceLevel>> getServiceLevel() {
+    public Output<Either<String,ServiceLevel>> serviceLevel() {
         return this.serviceLevel;
     }
 
@@ -92,7 +93,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size", required=true)
       private final Output<Double> size;
 
-    public Output<Double> getSize() {
+    public Output<Double> size() {
         return this.size;
     }
 
@@ -103,8 +104,8 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PoolArgs(
@@ -127,14 +128,14 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PoolArgs() {
-        this.accountName = Output.empty();
-        this.location = Output.empty();
-        this.poolName = Output.empty();
-        this.qosType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceLevel = Output.empty();
-        this.size = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.poolName = Codegen.empty();
+        this.qosType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceLevel = Codegen.empty();
+        this.size = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -184,7 +185,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder poolName(@Nullable Output<String> poolName) {
@@ -192,7 +193,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder poolName(@Nullable String poolName) {
-            this.poolName = Output.ofNullable(poolName);
+            this.poolName = Codegen.ofNullable(poolName);
             return this;
         }
         public Builder qosType(@Nullable Output<Either<String,QosType>> qosType) {
@@ -200,7 +201,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qosType(@Nullable Either<String,QosType> qosType) {
-            this.qosType = Output.ofNullable(qosType);
+            this.qosType = Codegen.ofNullable(qosType);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -232,7 +233,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PoolArgs build() {
             return new PoolArgs(accountName, location, poolName, qosType, resourceGroupName, serviceLevel, size, tags);

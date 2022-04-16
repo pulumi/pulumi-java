@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+    public Output<String> dnsName() {
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
     @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
-    public Output<String> getHostedZoneId() {
-        return this.hostedZoneId == null ? Output.empty() : this.hostedZoneId;
+    public Output<String> hostedZoneId() {
+        return this.hostedZoneId == null ? Codegen.empty() : this.hostedZoneId;
     }
 
     public VpcEndpointDnsEntryGetArgs(
@@ -44,8 +45,8 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
     }
 
     private VpcEndpointDnsEntryGetArgs() {
-        this.dnsName = Output.empty();
-        this.hostedZoneId = Output.empty();
+        this.dnsName = Codegen.empty();
+        this.hostedZoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder hostedZoneId(@Nullable Output<String> hostedZoneId) {
@@ -83,7 +84,7 @@ public final class VpcEndpointDnsEntryGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder hostedZoneId(@Nullable String hostedZoneId) {
-            this.hostedZoneId = Output.ofNullable(hostedZoneId);
+            this.hostedZoneId = Codegen.ofNullable(hostedZoneId);
             return this;
         }        public VpcEndpointDnsEntryGetArgs build() {
             return new VpcEndpointDnsEntryGetArgs(dnsName, hostedZoneId);

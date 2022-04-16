@@ -9,6 +9,7 @@ import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSourceArgs
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorTimestampColumnArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
     @Import(name="dimensionList")
       private final @Nullable Output<List<String>> dimensionList;
 
-    public Output<List<String>> getDimensionList() {
-        return this.dimensionList == null ? Output.empty() : this.dimensionList;
+    public Output<List<String>> dimensionList() {
+        return this.dimensionList == null ? Codegen.empty() : this.dimensionList;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
     @Import(name="metricList", required=true)
       private final Output<List<AnomalyDetectorMetricArgs>> metricList;
 
-    public Output<List<AnomalyDetectorMetricArgs>> getMetricList() {
+    public Output<List<AnomalyDetectorMetricArgs>> metricList() {
         return this.metricList;
     }
 
@@ -49,8 +50,8 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
     @Import(name="metricSetDescription")
       private final @Nullable Output<String> metricSetDescription;
 
-    public Output<String> getMetricSetDescription() {
-        return this.metricSetDescription == null ? Output.empty() : this.metricSetDescription;
+    public Output<String> metricSetDescription() {
+        return this.metricSetDescription == null ? Codegen.empty() : this.metricSetDescription;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
     @Import(name="metricSetFrequency")
       private final @Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency;
 
-    public Output<AnomalyDetectorMetricSetMetricSetFrequency> getMetricSetFrequency() {
-        return this.metricSetFrequency == null ? Output.empty() : this.metricSetFrequency;
+    public Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency() {
+        return this.metricSetFrequency == null ? Codegen.empty() : this.metricSetFrequency;
     }
 
     /**
@@ -71,14 +72,14 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
     @Import(name="metricSetName", required=true)
       private final Output<String> metricSetName;
 
-    public Output<String> getMetricSetName() {
+    public Output<String> metricSetName() {
         return this.metricSetName;
     }
 
     @Import(name="metricSource", required=true)
       private final Output<AnomalyDetectorMetricSourceArgs> metricSource;
 
-    public Output<AnomalyDetectorMetricSourceArgs> getMetricSource() {
+    public Output<AnomalyDetectorMetricSourceArgs> metricSource() {
         return this.metricSource;
     }
 
@@ -89,22 +90,22 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
     @Import(name="offset")
       private final @Nullable Output<Integer> offset;
 
-    public Output<Integer> getOffset() {
-        return this.offset == null ? Output.empty() : this.offset;
+    public Output<Integer> offset() {
+        return this.offset == null ? Codegen.empty() : this.offset;
     }
 
     @Import(name="timestampColumn")
       private final @Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn;
 
-    public Output<AnomalyDetectorTimestampColumnArgs> getTimestampColumn() {
-        return this.timestampColumn == null ? Output.empty() : this.timestampColumn;
+    public Output<AnomalyDetectorTimestampColumnArgs> timestampColumn() {
+        return this.timestampColumn == null ? Codegen.empty() : this.timestampColumn;
     }
 
     @Import(name="timezone")
       private final @Nullable Output<String> timezone;
 
-    public Output<String> getTimezone() {
-        return this.timezone == null ? Output.empty() : this.timezone;
+    public Output<String> timezone() {
+        return this.timezone == null ? Codegen.empty() : this.timezone;
     }
 
     public AnomalyDetectorMetricSetArgs(
@@ -129,15 +130,15 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
     }
 
     private AnomalyDetectorMetricSetArgs() {
-        this.dimensionList = Output.empty();
-        this.metricList = Output.empty();
-        this.metricSetDescription = Output.empty();
-        this.metricSetFrequency = Output.empty();
-        this.metricSetName = Output.empty();
-        this.metricSource = Output.empty();
-        this.offset = Output.empty();
-        this.timestampColumn = Output.empty();
-        this.timezone = Output.empty();
+        this.dimensionList = Codegen.empty();
+        this.metricList = Codegen.empty();
+        this.metricSetDescription = Codegen.empty();
+        this.metricSetFrequency = Codegen.empty();
+        this.metricSetName = Codegen.empty();
+        this.metricSource = Codegen.empty();
+        this.offset = Codegen.empty();
+        this.timestampColumn = Codegen.empty();
+        this.timezone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder dimensionList(@Nullable List<String> dimensionList) {
-            this.dimensionList = Output.ofNullable(dimensionList);
+            this.dimensionList = Codegen.ofNullable(dimensionList);
             return this;
         }
         public Builder dimensionList(String... dimensionList) {
@@ -203,7 +204,7 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder metricSetDescription(@Nullable String metricSetDescription) {
-            this.metricSetDescription = Output.ofNullable(metricSetDescription);
+            this.metricSetDescription = Codegen.ofNullable(metricSetDescription);
             return this;
         }
         public Builder metricSetFrequency(@Nullable Output<AnomalyDetectorMetricSetMetricSetFrequency> metricSetFrequency) {
@@ -211,7 +212,7 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder metricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
-            this.metricSetFrequency = Output.ofNullable(metricSetFrequency);
+            this.metricSetFrequency = Codegen.ofNullable(metricSetFrequency);
             return this;
         }
         public Builder metricSetName(Output<String> metricSetName) {
@@ -235,7 +236,7 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder offset(@Nullable Integer offset) {
-            this.offset = Output.ofNullable(offset);
+            this.offset = Codegen.ofNullable(offset);
             return this;
         }
         public Builder timestampColumn(@Nullable Output<AnomalyDetectorTimestampColumnArgs> timestampColumn) {
@@ -243,7 +244,7 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder timestampColumn(@Nullable AnomalyDetectorTimestampColumnArgs timestampColumn) {
-            this.timestampColumn = Output.ofNullable(timestampColumn);
+            this.timestampColumn = Codegen.ofNullable(timestampColumn);
             return this;
         }
         public Builder timezone(@Nullable Output<String> timezone) {
@@ -251,7 +252,7 @@ public final class AnomalyDetectorMetricSetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder timezone(@Nullable String timezone) {
-            this.timezone = Output.ofNullable(timezone);
+            this.timezone = Codegen.ofNullable(timezone);
             return this;
         }        public AnomalyDetectorMetricSetArgs build() {
             return new AnomalyDetectorMetricSetArgs(dimensionList, metricList, metricSetDescription, metricSetFrequency, metricSetName, metricSource, offset, timestampColumn, timezone);

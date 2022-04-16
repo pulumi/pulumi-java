@@ -34,14 +34,14 @@ public final class DeploymentGroupDeploymentStyle {
      * Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
      * 
     */
-    public Optional<String> getDeploymentOption() {
+    public Optional<String> deploymentOption() {
         return Optional.ofNullable(this.deploymentOption);
     }
     /**
      * Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
      * 
     */
-    public Optional<String> getDeploymentType() {
+    public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
 

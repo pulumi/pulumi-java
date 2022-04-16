@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="env")
       private final @Nullable Output<Map<String,String>> env;
 
-    public Output<Map<String,String>> getEnv() {
-        return this.env == null ? Output.empty() : this.env;
+    public Output<Map<String,String>> env() {
+        return this.env == null ? Codegen.empty() : this.env;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     public VertexAIParametersArgs(
@@ -49,8 +50,8 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VertexAIParametersArgs() {
-        this.env = Output.empty();
-        this.network = Output.empty();
+        this.env = Codegen.empty();
+        this.network = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder env(@Nullable Map<String,String> env) {
-            this.env = Output.ofNullable(env);
+            this.env = Codegen.ofNullable(env);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -88,7 +89,7 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }        public VertexAIParametersArgs build() {
             return new VertexAIParametersArgs(env, network);

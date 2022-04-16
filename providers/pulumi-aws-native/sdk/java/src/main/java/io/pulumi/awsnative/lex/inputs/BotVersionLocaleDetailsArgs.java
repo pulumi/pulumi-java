@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.Resou
     @Import(name="sourceBotVersion", required=true)
       private final Output<String> sourceBotVersion;
 
-    public Output<String> getSourceBotVersion() {
+    public Output<String> sourceBotVersion() {
         return this.sourceBotVersion;
     }
 
@@ -29,7 +30,7 @@ public final class BotVersionLocaleDetailsArgs extends io.pulumi.resources.Resou
     }
 
     private BotVersionLocaleDetailsArgs() {
-        this.sourceBotVersion = Output.empty();
+        this.sourceBotVersion = Codegen.empty();
     }
 
     public static Builder builder() {

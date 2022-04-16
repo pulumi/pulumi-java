@@ -9,6 +9,7 @@ import io.pulumi.aws.cfg.inputs.OrganizationManagedRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return Amazon Resource Name (ARN) of the rule
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return Description of the rule
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +73,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return List of AWS account identifiers to exclude from the rule
      * 
      */
-    public Output</* @Nullable */ List<String>> getExcludedAccounts() {
+    public Output</* @Nullable */ List<String>> excludedAccounts() {
         return this.excludedAccounts;
     }
     /**
@@ -86,7 +87,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return A string in JSON format that is passed to the AWS Config Rule Lambda Function
      * 
      */
-    public Output</* @Nullable */ String> getInputParameters() {
+    public Output</* @Nullable */ String> inputParameters() {
         return this.inputParameters;
     }
     /**
@@ -100,7 +101,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
      * 
      */
-    public Output</* @Nullable */ String> getMaximumExecutionFrequency() {
+    public Output</* @Nullable */ String> maximumExecutionFrequency() {
         return this.maximumExecutionFrequency;
     }
     /**
@@ -114,7 +115,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return The name of the rule
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return Identifier of the AWS resource to evaluate
      * 
      */
-    public Output</* @Nullable */ String> getResourceIdScope() {
+    public Output</* @Nullable */ String> resourceIdScope() {
         return this.resourceIdScope;
     }
     /**
@@ -142,7 +143,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return List of types of AWS resources to evaluate
      * 
      */
-    public Output</* @Nullable */ List<String>> getResourceTypesScopes() {
+    public Output</* @Nullable */ List<String>> resourceTypesScopes() {
         return this.resourceTypesScopes;
     }
     /**
@@ -156,7 +157,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return Identifier of an available AWS Config Managed Rule to call. For available values, see the [List of AWS Config Managed Rules](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html) documentation
      * 
      */
-    public Output<String> getRuleIdentifier() {
+    public Output<String> ruleIdentifier() {
         return this.ruleIdentifier;
     }
     /**
@@ -170,7 +171,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return Tag key of AWS resources to evaluate
      * 
      */
-    public Output</* @Nullable */ String> getTagKeyScope() {
+    public Output</* @Nullable */ String> tagKeyScope() {
         return this.tagKeyScope;
     }
     /**
@@ -184,7 +185,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @return Tag value of AWS resources to evaluate
      * 
      */
-    public Output</* @Nullable */ String> getTagValueScope() {
+    public Output</* @Nullable */ String> tagValueScope() {
         return this.tagValueScope;
     }
 
@@ -210,7 +211,7 @@ public class OrganizationManagedRule extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationManagedRule(String name, OrganizationManagedRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/organizationManagedRule:OrganizationManagedRule", name, args == null ? OrganizationManagedRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cfg/organizationManagedRule:OrganizationManagedRule", name, args == null ? OrganizationManagedRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationManagedRule(String name, Output<String> id, @Nullable OrganizationManagedRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

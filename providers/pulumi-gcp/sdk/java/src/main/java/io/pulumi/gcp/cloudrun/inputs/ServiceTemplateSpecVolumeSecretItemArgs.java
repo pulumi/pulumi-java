@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -37,8 +38,8 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
     @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
-    public Output<Integer> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<Integer> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -65,9 +66,9 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
     }
 
     private ServiceTemplateSpecVolumeSecretItemArgs() {
-        this.key = Output.empty();
-        this.mode = Output.empty();
-        this.path = Output.empty();
+        this.key = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
             return this;
         }
         public Builder mode(@Nullable Integer mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder path(Output<String> path) {

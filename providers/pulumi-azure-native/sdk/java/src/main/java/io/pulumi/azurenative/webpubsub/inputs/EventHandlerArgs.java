@@ -6,6 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.inputs.UpstreamAuthSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auth")
       private final @Nullable Output<UpstreamAuthSettingsArgs> auth;
 
-    public Output<UpstreamAuthSettingsArgs> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+    public Output<UpstreamAuthSettingsArgs> auth() {
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemEvents")
       private final @Nullable Output<List<String>> systemEvents;
 
-    public Output<List<String>> getSystemEvents() {
-        return this.systemEvents == null ? Output.empty() : this.systemEvents;
+    public Output<List<String>> systemEvents() {
+        return this.systemEvents == null ? Codegen.empty() : this.systemEvents;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
 
-    public Output<String> getUrlTemplate() {
+    public Output<String> urlTemplate() {
         return this.urlTemplate;
     }
 
@@ -65,8 +66,8 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userEventPattern")
       private final @Nullable Output<String> userEventPattern;
 
-    public Output<String> getUserEventPattern() {
-        return this.userEventPattern == null ? Output.empty() : this.userEventPattern;
+    public Output<String> userEventPattern() {
+        return this.userEventPattern == null ? Codegen.empty() : this.userEventPattern;
     }
 
     public EventHandlerArgs(
@@ -81,10 +82,10 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventHandlerArgs() {
-        this.auth = Output.empty();
-        this.systemEvents = Output.empty();
-        this.urlTemplate = Output.empty();
-        this.userEventPattern = Output.empty();
+        this.auth = Codegen.empty();
+        this.systemEvents = Codegen.empty();
+        this.urlTemplate = Codegen.empty();
+        this.userEventPattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auth(@Nullable UpstreamAuthSettingsArgs auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder systemEvents(@Nullable Output<List<String>> systemEvents) {
@@ -126,7 +127,7 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemEvents(@Nullable List<String> systemEvents) {
-            this.systemEvents = Output.ofNullable(systemEvents);
+            this.systemEvents = Codegen.ofNullable(systemEvents);
             return this;
         }
         public Builder systemEvents(String... systemEvents) {
@@ -145,7 +146,7 @@ public final class EventHandlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userEventPattern(@Nullable String userEventPattern) {
-            this.userEventPattern = Output.ofNullable(userEventPattern);
+            this.userEventPattern = Codegen.ofNullable(userEventPattern);
             return this;
         }        public EventHandlerArgs build() {
             return new EventHandlerArgs(auth, systemEvents, urlTemplate, userEventPattern);

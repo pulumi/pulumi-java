@@ -9,6 +9,7 @@ import io.pulumi.awsnative.s3.inputs.BucketQueueConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTopicConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,29 +26,29 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     @Import(name="eventBridgeConfiguration")
       private final @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
 
-    public Output<BucketEventBridgeConfigurationArgs> getEventBridgeConfiguration() {
-        return this.eventBridgeConfiguration == null ? Output.empty() : this.eventBridgeConfiguration;
+    public Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration() {
+        return this.eventBridgeConfiguration == null ? Codegen.empty() : this.eventBridgeConfiguration;
     }
 
     @Import(name="lambdaConfigurations")
       private final @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
 
-    public Output<List<BucketLambdaConfigurationArgs>> getLambdaConfigurations() {
-        return this.lambdaConfigurations == null ? Output.empty() : this.lambdaConfigurations;
+    public Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations() {
+        return this.lambdaConfigurations == null ? Codegen.empty() : this.lambdaConfigurations;
     }
 
     @Import(name="queueConfigurations")
       private final @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations;
 
-    public Output<List<BucketQueueConfigurationArgs>> getQueueConfigurations() {
-        return this.queueConfigurations == null ? Output.empty() : this.queueConfigurations;
+    public Output<List<BucketQueueConfigurationArgs>> queueConfigurations() {
+        return this.queueConfigurations == null ? Codegen.empty() : this.queueConfigurations;
     }
 
     @Import(name="topicConfigurations")
       private final @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations;
 
-    public Output<List<BucketTopicConfigurationArgs>> getTopicConfigurations() {
-        return this.topicConfigurations == null ? Output.empty() : this.topicConfigurations;
+    public Output<List<BucketTopicConfigurationArgs>> topicConfigurations() {
+        return this.topicConfigurations == null ? Codegen.empty() : this.topicConfigurations;
     }
 
     public BucketNotificationConfigurationArgs(
@@ -62,10 +63,10 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
     }
 
     private BucketNotificationConfigurationArgs() {
-        this.eventBridgeConfiguration = Output.empty();
-        this.lambdaConfigurations = Output.empty();
-        this.queueConfigurations = Output.empty();
-        this.topicConfigurations = Output.empty();
+        this.eventBridgeConfiguration = Codegen.empty();
+        this.lambdaConfigurations = Codegen.empty();
+        this.queueConfigurations = Codegen.empty();
+        this.topicConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder eventBridgeConfiguration(@Nullable BucketEventBridgeConfigurationArgs eventBridgeConfiguration) {
-            this.eventBridgeConfiguration = Output.ofNullable(eventBridgeConfiguration);
+            this.eventBridgeConfiguration = Codegen.ofNullable(eventBridgeConfiguration);
             return this;
         }
         public Builder lambdaConfigurations(@Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations) {
@@ -107,7 +108,7 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfigurationArgs> lambdaConfigurations) {
-            this.lambdaConfigurations = Output.ofNullable(lambdaConfigurations);
+            this.lambdaConfigurations = Codegen.ofNullable(lambdaConfigurations);
             return this;
         }
         public Builder lambdaConfigurations(BucketLambdaConfigurationArgs... lambdaConfigurations) {
@@ -118,7 +119,7 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder queueConfigurations(@Nullable List<BucketQueueConfigurationArgs> queueConfigurations) {
-            this.queueConfigurations = Output.ofNullable(queueConfigurations);
+            this.queueConfigurations = Codegen.ofNullable(queueConfigurations);
             return this;
         }
         public Builder queueConfigurations(BucketQueueConfigurationArgs... queueConfigurations) {
@@ -129,7 +130,7 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder topicConfigurations(@Nullable List<BucketTopicConfigurationArgs> topicConfigurations) {
-            this.topicConfigurations = Output.ofNullable(topicConfigurations);
+            this.topicConfigurations = Codegen.ofNullable(topicConfigurations);
             return this;
         }
         public Builder topicConfigurations(BucketTopicConfigurationArgs... topicConfigurations) {

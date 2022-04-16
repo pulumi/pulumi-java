@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3.SecuritySettingArgs;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse;
@@ -31,7 +32,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. The `DLP De-identify Templates Reader` role is needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.
      * 
      */
-    public Output<String> getDeidentifyTemplate() {
+    public Output<String> deidentifyTemplate() {
         return this.deidentifyTemplate;
     }
     /**
@@ -45,7 +46,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the security settings, unique within the location.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -59,7 +60,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return Controls conversation exporting settings to Insights after conversation is completed. If retention_strategy is set to REMOVE_AFTER_CONVERSATION, Insights export is disabled no matter what you configure here.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse> getInsightsExportSettings() {
+    public Output<GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse> insightsExportSettings() {
         return this.insightsExportSettings;
     }
     /**
@@ -73,7 +74,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return [DLP](https://cloud.google.com/dlp/docs) inspect template name. Use this template to define inspect base settings. The `DLP Inspect Templates Reader` role is needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, we use the default DLP inspect config. The template name will have one of the following formats: `projects//locations//inspectTemplates/` OR `organizations//locations//inspectTemplates/` Note: `inspect_template` must be located in the same region as the `SecuritySettings`.
      * 
      */
-    public Output<String> getInspectTemplate() {
+    public Output<String> inspectTemplate() {
         return this.inspectTemplate;
     }
     /**
@@ -87,7 +88,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return Resource name of the settings. Required for the SecuritySettingsService.UpdateSecuritySettings method. SecuritySettingsService.CreateSecuritySettings populates the name automatically. Format: `projects//locations//securitySettings/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return List of types of data to remove when retention settings triggers purge.
      * 
      */
-    public Output<List<String>> getPurgeDataTypes() {
+    public Output<List<String>> purgeDataTypes() {
         return this.purgeDataTypes;
     }
     /**
@@ -115,7 +116,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return Defines the data for which Dialogflow applies redaction. Dialogflow does not redact data that it does not have access to – for example, Cloud logging.
      * 
      */
-    public Output<String> getRedactionScope() {
+    public Output<String> redactionScope() {
         return this.redactionScope;
     }
     /**
@@ -129,7 +130,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return Strategy that defines how we do redaction.
      * 
      */
-    public Output<String> getRedactionStrategy() {
+    public Output<String> redactionStrategy() {
         return this.redactionStrategy;
     }
     /**
@@ -143,7 +144,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @return Retains data in interaction logging for the specified number of days. This does not apply to Cloud logging, which is owned by the user - not Dialogflow. User must set a value lower than Dialogflow's default 365d TTL. Setting a value higher than that has no effect. A missing value or setting to 0 also means we use Dialogflow's default TTL. Note: Interaction logging is a limited access feature. Talk to your Google representative to check availability for you.
      * 
      */
-    public Output<Integer> getRetentionWindowDays() {
+    public Output<Integer> retentionWindowDays() {
         return this.retentionWindowDays;
     }
 
@@ -169,7 +170,7 @@ public class SecuritySetting extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecuritySetting(String name, SecuritySettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3:SecuritySetting", name, args == null ? SecuritySettingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3:SecuritySetting", name, args == null ? SecuritySettingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecuritySetting(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

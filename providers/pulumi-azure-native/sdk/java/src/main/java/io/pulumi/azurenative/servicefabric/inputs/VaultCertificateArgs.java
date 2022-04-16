@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="certificateStore", required=true)
       private final Output<String> certificateStore;
 
-    public Output<String> getCertificateStore() {
+    public Output<String> certificateStore() {
         return this.certificateStore;
     }
 
@@ -35,7 +36,7 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="certificateUrl", required=true)
       private final Output<String> certificateUrl;
 
-    public Output<String> getCertificateUrl() {
+    public Output<String> certificateUrl() {
         return this.certificateUrl;
     }
 
@@ -47,8 +48,8 @@ public final class VaultCertificateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VaultCertificateArgs() {
-        this.certificateStore = Output.empty();
-        this.certificateUrl = Output.empty();
+        this.certificateStore = Codegen.empty();
+        this.certificateUrl = Codegen.empty();
     }
 
     public static Builder builder() {

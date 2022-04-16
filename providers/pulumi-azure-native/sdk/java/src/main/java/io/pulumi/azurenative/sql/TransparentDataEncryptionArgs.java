@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.TransparentDataEncryptionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -34,7 +35,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +46,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -56,8 +57,8 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<Either<String,TransparentDataEncryptionStatus>> status;
 
-    public Output<Either<String,TransparentDataEncryptionStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,TransparentDataEncryptionStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     @Import(name="transparentDataEncryptionName")
       private final @Nullable Output<String> transparentDataEncryptionName;
 
-    public Output<String> getTransparentDataEncryptionName() {
-        return this.transparentDataEncryptionName == null ? Output.empty() : this.transparentDataEncryptionName;
+    public Output<String> transparentDataEncryptionName() {
+        return this.transparentDataEncryptionName == null ? Codegen.empty() : this.transparentDataEncryptionName;
     }
 
     public TransparentDataEncryptionArgs(
@@ -85,11 +86,11 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
     }
 
     private TransparentDataEncryptionArgs() {
-        this.databaseName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.status = Output.empty();
-        this.transparentDataEncryptionName = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.transparentDataEncryptionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder status(@Nullable Either<String,TransparentDataEncryptionStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
@@ -157,7 +158,7 @@ public final class TransparentDataEncryptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder transparentDataEncryptionName(@Nullable String transparentDataEncryptionName) {
-            this.transparentDataEncryptionName = Output.ofNullable(transparentDataEncryptionName);
+            this.transparentDataEncryptionName = Codegen.ofNullable(transparentDataEncryptionName);
             return this;
         }        public TransparentDataEncryptionArgs build() {
             return new TransparentDataEncryptionArgs(databaseName, resourceGroupName, serverName, status, transparentDataEncryptionName);

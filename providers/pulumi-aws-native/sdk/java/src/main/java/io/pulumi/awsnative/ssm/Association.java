@@ -12,6 +12,7 @@ import io.pulumi.awsnative.ssm.outputs.AssociationTarget;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -30,7 +31,7 @@ public class Association extends io.pulumi.resources.CustomResource {
     @Export(name="applyOnlyAtCronInterval", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> applyOnlyAtCronInterval;
 
-    public Output</* @Nullable */ Boolean> getApplyOnlyAtCronInterval() {
+    public Output</* @Nullable */ Boolean> applyOnlyAtCronInterval() {
         return this.applyOnlyAtCronInterval;
     }
     /**
@@ -44,7 +45,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the association.
      * 
      */
-    public Output<String> getAssociationId() {
+    public Output<String> associationId() {
         return this.associationId;
     }
     /**
@@ -58,25 +59,25 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return The name of the association.
      * 
      */
-    public Output</* @Nullable */ String> getAssociationName() {
+    public Output</* @Nullable */ String> associationName() {
         return this.associationName;
     }
     @Export(name="automationTargetParameterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> automationTargetParameterName;
 
-    public Output</* @Nullable */ String> getAutomationTargetParameterName() {
+    public Output</* @Nullable */ String> automationTargetParameterName() {
         return this.automationTargetParameterName;
     }
     @Export(name="calendarNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> calendarNames;
 
-    public Output</* @Nullable */ List<String>> getCalendarNames() {
+    public Output</* @Nullable */ List<String>> calendarNames() {
         return this.calendarNames;
     }
     @Export(name="complianceSeverity", type=AssociationComplianceSeverity.class, parameters={})
     private Output</* @Nullable */ AssociationComplianceSeverity> complianceSeverity;
 
-    public Output</* @Nullable */ AssociationComplianceSeverity> getComplianceSeverity() {
+    public Output</* @Nullable */ AssociationComplianceSeverity> complianceSeverity() {
         return this.complianceSeverity;
     }
     /**
@@ -90,7 +91,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return The version of the SSM document to associate with the target.
      * 
      */
-    public Output</* @Nullable */ String> getDocumentVersion() {
+    public Output</* @Nullable */ String> documentVersion() {
         return this.documentVersion;
     }
     /**
@@ -104,19 +105,19 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return The ID of the instance that the SSM document is associated with.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceId() {
+    public Output</* @Nullable */ String> instanceId() {
         return this.instanceId;
     }
     @Export(name="maxConcurrency", type=String.class, parameters={})
     private Output</* @Nullable */ String> maxConcurrency;
 
-    public Output</* @Nullable */ String> getMaxConcurrency() {
+    public Output</* @Nullable */ String> maxConcurrency() {
         return this.maxConcurrency;
     }
     @Export(name="maxErrors", type=String.class, parameters={})
     private Output</* @Nullable */ String> maxErrors;
 
-    public Output</* @Nullable */ String> getMaxErrors() {
+    public Output</* @Nullable */ String> maxErrors() {
         return this.maxErrors;
     }
     /**
@@ -130,13 +131,13 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return The name of the SSM document.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="outputLocation", type=AssociationInstanceAssociationOutputLocation.class, parameters={})
     private Output</* @Nullable */ AssociationInstanceAssociationOutputLocation> outputLocation;
 
-    public Output</* @Nullable */ AssociationInstanceAssociationOutputLocation> getOutputLocation() {
+    public Output</* @Nullable */ AssociationInstanceAssociationOutputLocation> outputLocation() {
         return this.outputLocation;
     }
     /**
@@ -150,7 +151,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return Parameter values that the SSM document uses at runtime.
      * 
      */
-    public Output</* @Nullable */ Object> getParameters() {
+    public Output</* @Nullable */ Object> parameters() {
         return this.parameters;
     }
     /**
@@ -164,13 +165,13 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return A Cron or Rate expression that specifies when the association is applied to the target.
      * 
      */
-    public Output</* @Nullable */ String> getScheduleExpression() {
+    public Output</* @Nullable */ String> scheduleExpression() {
         return this.scheduleExpression;
     }
     @Export(name="syncCompliance", type=AssociationSyncCompliance.class, parameters={})
     private Output</* @Nullable */ AssociationSyncCompliance> syncCompliance;
 
-    public Output</* @Nullable */ AssociationSyncCompliance> getSyncCompliance() {
+    public Output</* @Nullable */ AssociationSyncCompliance> syncCompliance() {
         return this.syncCompliance;
     }
     /**
@@ -184,13 +185,13 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @return The targets that the SSM document sends commands to.
      * 
      */
-    public Output</* @Nullable */ List<AssociationTarget>> getTargets() {
+    public Output</* @Nullable */ List<AssociationTarget>> targets() {
         return this.targets;
     }
     @Export(name="waitForSuccessTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> waitForSuccessTimeoutSeconds;
 
-    public Output</* @Nullable */ Integer> getWaitForSuccessTimeoutSeconds() {
+    public Output</* @Nullable */ Integer> waitForSuccessTimeoutSeconds() {
         return this.waitForSuccessTimeoutSeconds;
     }
 
@@ -216,7 +217,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Association(String name, @Nullable AssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ssm:Association", name, args == null ? AssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ssm:Association", name, args == null ? AssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Association(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

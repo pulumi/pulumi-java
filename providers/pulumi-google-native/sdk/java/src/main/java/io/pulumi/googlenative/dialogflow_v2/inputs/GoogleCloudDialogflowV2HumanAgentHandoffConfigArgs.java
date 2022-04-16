@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
     @Import(name="livePersonConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig;
 
-    public Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> getLivePersonConfig() {
-        return this.livePersonConfig == null ? Output.empty() : this.livePersonConfig;
+    public Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs> livePersonConfig() {
+        return this.livePersonConfig == null ? Codegen.empty() : this.livePersonConfig;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
     @Import(name="salesforceLiveAgentConfig")
       private final @Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig;
 
-    public Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> getSalesforceLiveAgentConfig() {
-        return this.salesforceLiveAgentConfig == null ? Output.empty() : this.salesforceLiveAgentConfig;
+    public Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig() {
+        return this.salesforceLiveAgentConfig == null ? Codegen.empty() : this.salesforceLiveAgentConfig;
     }
 
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
     }
 
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs() {
-        this.livePersonConfig = Output.empty();
-        this.salesforceLiveAgentConfig = Output.empty();
+        this.livePersonConfig = Codegen.empty();
+        this.salesforceLiveAgentConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
             return this;
         }
         public Builder livePersonConfig(@Nullable GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigArgs livePersonConfig) {
-            this.livePersonConfig = Output.ofNullable(livePersonConfig);
+            this.livePersonConfig = Codegen.ofNullable(livePersonConfig);
             return this;
         }
         public Builder salesforceLiveAgentConfig(@Nullable Output<GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs> salesforceLiveAgentConfig) {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs extends io
             return this;
         }
         public Builder salesforceLiveAgentConfig(@Nullable GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigArgs salesforceLiveAgentConfig) {
-            this.salesforceLiveAgentConfig = Output.ofNullable(salesforceLiveAgentConfig);
+            this.salesforceLiveAgentConfig = Codegen.ofNullable(salesforceLiveAgentConfig);
             return this;
         }        public GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigArgs(livePersonConfig, salesforceLiveAgentConfig);

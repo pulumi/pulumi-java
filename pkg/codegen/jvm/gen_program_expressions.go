@@ -619,7 +619,7 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 		g.Indented(func() {
 			for _, item := range expr.Items {
 				lit := item.Key.(*model.LiteralValueExpression)
-				key := names.MakeValidIdentifier(names.Camel(lit.Value.AsString()))
+				key := names.MakeValidIdentifier(names.LowerCamelCase(lit.Value.AsString()))
 				attributeType := objectProperties[key]
 				g.makeIndent(w)
 				g.typedObjectExprScope(attributeType, func() {
@@ -705,7 +705,7 @@ func (g *generator) GenScopeTraversalExpression(w io.Writer, expr *model.ScopeTr
 	invokedFunctionSchema, isFunctionInvoke := g.functionInvokes[rootName]
 
 	if isFunctionInvoke {
-		lambdaArg := names.Camel(typeName(invokedFunctionSchema.Outputs))
+		lambdaArg := names.LowerCamelCase(typeName(invokedFunctionSchema.Outputs))
 		// Assume invokes are returning Output<T> instead of CompletableFuture<T>
 		g.Fgenf(w, ".apply(%s -> %s", lambdaArg, lambdaArg)
 	}

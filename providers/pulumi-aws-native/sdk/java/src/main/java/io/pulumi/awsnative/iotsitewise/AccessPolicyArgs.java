@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIdentityArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyIdentity", required=true)
       private final Output<AccessPolicyIdentityArgs> accessPolicyIdentity;
 
-    public Output<AccessPolicyIdentityArgs> getAccessPolicyIdentity() {
+    public Output<AccessPolicyIdentityArgs> accessPolicyIdentity() {
         return this.accessPolicyIdentity;
     }
 
@@ -33,7 +34,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyPermission", required=true)
       private final Output<String> accessPolicyPermission;
 
-    public Output<String> getAccessPolicyPermission() {
+    public Output<String> accessPolicyPermission() {
         return this.accessPolicyPermission;
     }
 
@@ -44,7 +45,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyResource", required=true)
       private final Output<AccessPolicyResourceArgs> accessPolicyResource;
 
-    public Output<AccessPolicyResourceArgs> getAccessPolicyResource() {
+    public Output<AccessPolicyResourceArgs> accessPolicyResource() {
         return this.accessPolicyResource;
     }
 
@@ -58,9 +59,9 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPolicyArgs() {
-        this.accessPolicyIdentity = Output.empty();
-        this.accessPolicyPermission = Output.empty();
-        this.accessPolicyResource = Output.empty();
+        this.accessPolicyIdentity = Codegen.empty();
+        this.accessPolicyPermission = Codegen.empty();
+        this.accessPolicyResource = Codegen.empty();
     }
 
     public static Builder builder() {

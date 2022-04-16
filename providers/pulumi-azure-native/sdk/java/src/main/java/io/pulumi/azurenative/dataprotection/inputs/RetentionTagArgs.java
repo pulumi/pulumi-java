@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagName", required=true)
       private final Output<String> tagName;
 
-    public Output<String> getTagName() {
+    public Output<String> tagName() {
         return this.tagName;
     }
 
@@ -33,7 +34,7 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RetentionTagArgs() {
-        this.tagName = Output.empty();
+        this.tagName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -23,7 +23,7 @@ public final class MaxPodsConstraintResponse extends io.pulumi.resources.InvokeA
     @Import(name="maxPodsPerNode", required=true)
       private final String maxPodsPerNode;
 
-    public String getMaxPodsPerNode() {
+    public String maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
 

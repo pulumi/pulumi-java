@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectAltNamesArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.SubjectArgs;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
-        return this.commonName == null ? Output.empty() : this.commonName;
+    public Output<String> commonName() {
+        return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subject", required=true)
       private final Output<SubjectArgs> subject;
 
-    public Output<SubjectArgs> getSubject() {
+    public Output<SubjectArgs> subject() {
         return this.subject;
     }
 
@@ -49,8 +50,8 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subjectAltName")
       private final @Nullable Output<SubjectAltNamesArgs> subjectAltName;
 
-    public Output<SubjectAltNamesArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
+    public Output<SubjectAltNamesArgs> subjectAltName() {
+        return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
     }
 
     public SubjectConfigArgs(
@@ -63,9 +64,9 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubjectConfigArgs() {
-        this.commonName = Output.empty();
-        this.subject = Output.empty();
-        this.subjectAltName = Output.empty();
+        this.commonName = Codegen.empty();
+        this.subject = Codegen.empty();
+        this.subjectAltName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Output.ofNullable(commonName);
+            this.commonName = Codegen.ofNullable(commonName);
             return this;
         }
         public Builder subject(Output<SubjectArgs> subject) {
@@ -113,7 +114,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subjectAltName(@Nullable SubjectAltNamesArgs subjectAltName) {
-            this.subjectAltName = Output.ofNullable(subjectAltName);
+            this.subjectAltName = Codegen.ofNullable(subjectAltName);
             return this;
         }        public SubjectConfigArgs build() {
             return new SubjectConfigArgs(commonName, subject, subjectAltName);

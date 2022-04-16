@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.FirewallPolicySkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tier")
       private final @Nullable Output<Either<String,FirewallPolicySkuTier>> tier;
 
-    public Output<Either<String,FirewallPolicySkuTier>> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<Either<String,FirewallPolicySkuTier>> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public FirewallPolicySkuArgs(@Nullable Output<Either<String,FirewallPolicySkuTier>> tier) {
@@ -36,7 +37,7 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FirewallPolicySkuArgs() {
-        this.tier = Output.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tier(@Nullable Either<String,FirewallPolicySkuTier> tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public FirewallPolicySkuArgs build() {
             return new FirewallPolicySkuArgs(tier);

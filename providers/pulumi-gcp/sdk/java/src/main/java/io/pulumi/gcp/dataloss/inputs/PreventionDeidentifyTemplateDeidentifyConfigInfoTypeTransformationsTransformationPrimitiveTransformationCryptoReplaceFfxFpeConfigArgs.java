@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs;
@@ -26,8 +27,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="commonAlphabet")
       private final @Nullable Output<String> commonAlphabet;
 
-    public Output<String> getCommonAlphabet() {
-        return this.commonAlphabet == null ? Output.empty() : this.commonAlphabet;
+    public Output<String> commonAlphabet() {
+        return this.commonAlphabet == null ? Codegen.empty() : this.commonAlphabet;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="context")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> context;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> context() {
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="cryptoKey")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> cryptoKey;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> getCryptoKey() {
-        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> cryptoKey() {
+        return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="customAlphabet")
       private final @Nullable Output<String> customAlphabet;
 
-    public Output<String> getCustomAlphabet() {
-        return this.customAlphabet == null ? Output.empty() : this.customAlphabet;
+    public Output<String> customAlphabet() {
+        return this.customAlphabet == null ? Codegen.empty() : this.customAlphabet;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="radix")
       private final @Nullable Output<Integer> radix;
 
-    public Output<Integer> getRadix() {
-        return this.radix == null ? Output.empty() : this.radix;
+    public Output<Integer> radix() {
+        return this.radix == null ? Codegen.empty() : this.radix;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="surrogateInfoType")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> surrogateInfoType;
 
-    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> getSurrogateInfoType() {
-        return this.surrogateInfoType == null ? Output.empty() : this.surrogateInfoType;
+    public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> surrogateInfoType() {
+        return this.surrogateInfoType == null ? Codegen.empty() : this.surrogateInfoType;
     }
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigArgs(
@@ -116,12 +117,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigArgs() {
-        this.commonAlphabet = Output.empty();
-        this.context = Output.empty();
-        this.cryptoKey = Output.empty();
-        this.customAlphabet = Output.empty();
-        this.radix = Output.empty();
-        this.surrogateInfoType = Output.empty();
+        this.commonAlphabet = Codegen.empty();
+        this.context = Codegen.empty();
+        this.cryptoKey = Codegen.empty();
+        this.customAlphabet = Codegen.empty();
+        this.radix = Codegen.empty();
+        this.surrogateInfoType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder commonAlphabet(@Nullable String commonAlphabet) {
-            this.commonAlphabet = Output.ofNullable(commonAlphabet);
+            this.commonAlphabet = Codegen.ofNullable(commonAlphabet);
             return this;
         }
         public Builder context(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs> context) {
@@ -167,7 +168,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder context(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigContextArgs context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder cryptoKey(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs> cryptoKey) {
@@ -175,7 +176,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder cryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Output.ofNullable(cryptoKey);
+            this.cryptoKey = Codegen.ofNullable(cryptoKey);
             return this;
         }
         public Builder customAlphabet(@Nullable Output<String> customAlphabet) {
@@ -183,7 +184,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder customAlphabet(@Nullable String customAlphabet) {
-            this.customAlphabet = Output.ofNullable(customAlphabet);
+            this.customAlphabet = Codegen.ofNullable(customAlphabet);
             return this;
         }
         public Builder radix(@Nullable Output<Integer> radix) {
@@ -191,7 +192,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder radix(@Nullable Integer radix) {
-            this.radix = Output.ofNullable(radix);
+            this.radix = Codegen.ofNullable(radix);
             return this;
         }
         public Builder surrogateInfoType(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs> surrogateInfoType) {
@@ -199,7 +200,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder surrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigSurrogateInfoTypeArgs surrogateInfoType) {
-            this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
+            this.surrogateInfoType = Codegen.ofNullable(surrogateInfoType);
             return this;
         }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigArgs(commonAlphabet, context, cryptoKey, customAlphabet, radix, surrogateInfoType);

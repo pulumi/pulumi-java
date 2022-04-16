@@ -9,6 +9,7 @@ import io.pulumi.aws.wafregional.inputs.WebAclAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * @return ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
      * 
      */
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
     /**
@@ -55,7 +56,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the WAF Regional WebACL to create an association.
      * 
      */
-    public Output<String> getWebAclId() {
+    public Output<String> webAclId() {
         return this.webAclId;
     }
 
@@ -81,7 +82,7 @@ public class WebAclAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAclAssociation(String name, WebAclAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/webAclAssociation:WebAclAssociation", name, args == null ? WebAclAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafregional/webAclAssociation:WebAclAssociation", name, args == null ? WebAclAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAclAssociation(String name, Output<String> id, @Nullable WebAclAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

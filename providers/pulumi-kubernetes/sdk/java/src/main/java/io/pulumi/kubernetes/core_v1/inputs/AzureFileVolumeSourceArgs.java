@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -48,7 +49,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
     @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
-    public Output<String> getShareName() {
+    public Output<String> shareName() {
         return this.shareName;
     }
 
@@ -62,9 +63,9 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureFileVolumeSourceArgs() {
-        this.readOnly = Output.empty();
-        this.secretName = Output.empty();
-        this.shareName = Output.empty();
+        this.readOnly = Codegen.empty();
+        this.secretName = Codegen.empty();
+        this.shareName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AzureFileVolumeSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secretName(Output<String> secretName) {

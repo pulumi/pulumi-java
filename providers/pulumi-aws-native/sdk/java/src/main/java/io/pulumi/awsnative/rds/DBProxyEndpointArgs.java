@@ -7,6 +7,7 @@ import io.pulumi.awsnative.rds.enums.DBProxyEndpointTargetRole;
 import io.pulumi.awsnative.rds.inputs.DBProxyEndpointTagFormatArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dBProxyEndpointName")
       private final @Nullable Output<String> dBProxyEndpointName;
 
-    public Output<String> getDBProxyEndpointName() {
-        return this.dBProxyEndpointName == null ? Output.empty() : this.dBProxyEndpointName;
+    public Output<String> dBProxyEndpointName() {
+        return this.dBProxyEndpointName == null ? Codegen.empty() : this.dBProxyEndpointName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="dBProxyName", required=true)
       private final Output<String> dBProxyName;
 
-    public Output<String> getDBProxyName() {
+    public Output<String> dBProxyName() {
         return this.dBProxyName;
     }
 
@@ -46,8 +47,8 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<DBProxyEndpointTagFormatArgs>> tags;
 
-    public Output<List<DBProxyEndpointTagFormatArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DBProxyEndpointTagFormatArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetRole")
       private final @Nullable Output<DBProxyEndpointTargetRole> targetRole;
 
-    public Output<DBProxyEndpointTargetRole> getTargetRole() {
-        return this.targetRole == null ? Output.empty() : this.targetRole;
+    public Output<DBProxyEndpointTargetRole> targetRole() {
+        return this.targetRole == null ? Codegen.empty() : this.targetRole;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
-    public Output<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
+    public Output<List<String>> vpcSecurityGroupIds() {
+        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
 
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
@@ -99,12 +100,12 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DBProxyEndpointArgs() {
-        this.dBProxyEndpointName = Output.empty();
-        this.dBProxyName = Output.empty();
-        this.tags = Output.empty();
-        this.targetRole = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
-        this.vpcSubnetIds = Output.empty();
+        this.dBProxyEndpointName = Codegen.empty();
+        this.dBProxyName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetRole = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
+        this.vpcSubnetIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dBProxyEndpointName(@Nullable String dBProxyEndpointName) {
-            this.dBProxyEndpointName = Output.ofNullable(dBProxyEndpointName);
+            this.dBProxyEndpointName = Codegen.ofNullable(dBProxyEndpointName);
             return this;
         }
         public Builder dBProxyName(Output<String> dBProxyName) {
@@ -158,7 +159,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable List<DBProxyEndpointTagFormatArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DBProxyEndpointTagFormatArgs... tags) {
@@ -169,7 +170,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetRole(@Nullable DBProxyEndpointTargetRole targetRole) {
-            this.targetRole = Output.ofNullable(targetRole);
+            this.targetRole = Codegen.ofNullable(targetRole);
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
@@ -177,7 +178,7 @@ public final class DBProxyEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {

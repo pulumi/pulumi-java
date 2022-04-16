@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
     @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
-        return this.dxGatewayId == null ? Output.empty() : this.dxGatewayId;
+    public Output<String> dxGatewayId() {
+        return this.dxGatewayId == null ? Codegen.empty() : this.dxGatewayId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
     @Import(name="virtualInterfaceId")
       private final @Nullable Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
-        return this.virtualInterfaceId == null ? Output.empty() : this.virtualInterfaceId;
+    public Output<String> virtualInterfaceId() {
+        return this.virtualInterfaceId == null ? Codegen.empty() : this.virtualInterfaceId;
     }
 
     public HostedTransitVirtualInterfaceAcceptorState(
@@ -84,11 +85,11 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
     }
 
     private HostedTransitVirtualInterfaceAcceptorState() {
-        this.arn = Output.empty();
-        this.dxGatewayId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.virtualInterfaceId = Output.empty();
+        this.arn = Codegen.empty();
+        this.dxGatewayId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.virtualInterfaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder dxGatewayId(@Nullable Output<String> dxGatewayId) {
@@ -132,7 +133,7 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
             return this;
         }
         public Builder dxGatewayId(@Nullable String dxGatewayId) {
-            this.dxGatewayId = Output.ofNullable(dxGatewayId);
+            this.dxGatewayId = Codegen.ofNullable(dxGatewayId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -140,7 +141,7 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -148,7 +149,7 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder virtualInterfaceId(@Nullable Output<String> virtualInterfaceId) {
@@ -156,7 +157,7 @@ public final class HostedTransitVirtualInterfaceAcceptorState extends io.pulumi.
             return this;
         }
         public Builder virtualInterfaceId(@Nullable String virtualInterfaceId) {
-            this.virtualInterfaceId = Output.ofNullable(virtualInterfaceId);
+            this.virtualInterfaceId = Codegen.ofNullable(virtualInterfaceId);
             return this;
         }        public HostedTransitVirtualInterfaceAcceptorState build() {
             return new HostedTransitVirtualInterfaceAcceptorState(arn, dxGatewayId, tags, tagsAll, virtualInterfaceId);

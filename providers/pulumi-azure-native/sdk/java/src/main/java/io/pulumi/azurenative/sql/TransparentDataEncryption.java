@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -55,7 +56,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @return The status of the database transparent data encryption.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -83,7 +84,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class TransparentDataEncryption extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public TransparentDataEncryption(String name, TransparentDataEncryptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:TransparentDataEncryption", name, args == null ? TransparentDataEncryptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:TransparentDataEncryption", name, args == null ? TransparentDataEncryptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransparentDataEncryption(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

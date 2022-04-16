@@ -6,6 +6,7 @@ package io.pulumi.azurenative.operationsmanagement;
 import io.pulumi.azurenative.operationsmanagement.inputs.ManagementAssociationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="managementAssociationName")
       private final @Nullable Output<String> managementAssociationName;
 
-    public Output<String> getManagementAssociationName() {
-        return this.managementAssociationName == null ? Output.empty() : this.managementAssociationName;
+    public Output<String> managementAssociationName() {
+        return this.managementAssociationName == null ? Codegen.empty() : this.managementAssociationName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="properties")
       private final @Nullable Output<ManagementAssociationPropertiesArgs> properties;
 
-    public Output<ManagementAssociationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ManagementAssociationPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="providerName", required=true)
       private final Output<String> providerName;
 
-    public Output<String> getProviderName() {
+    public Output<String> providerName() {
         return this.providerName;
     }
 
@@ -66,7 +67,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -88,7 +89,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
 
@@ -110,13 +111,13 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     private ManagementAssociationArgs() {
-        this.location = Output.empty();
-        this.managementAssociationName = Output.empty();
-        this.properties = Output.empty();
-        this.providerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.resourceType = Output.empty();
+        this.location = Codegen.empty();
+        this.managementAssociationName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managementAssociationName(@Nullable Output<String> managementAssociationName) {
@@ -164,7 +165,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder managementAssociationName(@Nullable String managementAssociationName) {
-            this.managementAssociationName = Output.ofNullable(managementAssociationName);
+            this.managementAssociationName = Codegen.ofNullable(managementAssociationName);
             return this;
         }
         public Builder properties(@Nullable Output<ManagementAssociationPropertiesArgs> properties) {
@@ -172,7 +173,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder properties(@Nullable ManagementAssociationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder providerName(Output<String> providerName) {

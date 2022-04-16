@@ -15,6 +15,7 @@ import io.pulumi.azurenative.servicefabric.inputs.UniformInt64RangePartitionSche
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
+    public Output<String> applicationName() {
         return this.applicationName;
     }
 
@@ -45,7 +46,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -56,8 +57,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="correlationScheme")
       private final @Nullable Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme;
 
-    public Output<List<ServiceCorrelationDescriptionArgs>> getCorrelationScheme() {
-        return this.correlationScheme == null ? Output.empty() : this.correlationScheme;
+    public Output<List<ServiceCorrelationDescriptionArgs>> correlationScheme() {
+        return this.correlationScheme == null ? Codegen.empty() : this.correlationScheme;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultMoveCost")
       private final @Nullable Output<Either<String,MoveCost>> defaultMoveCost;
 
-    public Output<Either<String,MoveCost>> getDefaultMoveCost() {
-        return this.defaultMoveCost == null ? Output.empty() : this.defaultMoveCost;
+    public Output<Either<String,MoveCost>> defaultMoveCost() {
+        return this.defaultMoveCost == null ? Codegen.empty() : this.defaultMoveCost;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionDescription")
       private final @Nullable Output<Object> partitionDescription;
 
-    public Output<Object> getPartitionDescription() {
-        return this.partitionDescription == null ? Output.empty() : this.partitionDescription;
+    public Output<Object> partitionDescription() {
+        return this.partitionDescription == null ? Codegen.empty() : this.partitionDescription;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="placementConstraints")
       private final @Nullable Output<String> placementConstraints;
 
-    public Output<String> getPlacementConstraints() {
-        return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
+    public Output<String> placementConstraints() {
+        return this.placementConstraints == null ? Codegen.empty() : this.placementConstraints;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -122,8 +123,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceDnsName")
       private final @Nullable Output<String> serviceDnsName;
 
-    public Output<String> getServiceDnsName() {
-        return this.serviceDnsName == null ? Output.empty() : this.serviceDnsName;
+    public Output<String> serviceDnsName() {
+        return this.serviceDnsName == null ? Codegen.empty() : this.serviceDnsName;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceKind", required=true)
       private final Output<Either<String,ServiceKind>> serviceKind;
 
-    public Output<Either<String,ServiceKind>> getServiceKind() {
+    public Output<Either<String,ServiceKind>> serviceKind() {
         return this.serviceKind;
     }
 
@@ -144,8 +145,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceLoadMetrics")
       private final @Nullable Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics;
 
-    public Output<List<ServiceLoadMetricDescriptionArgs>> getServiceLoadMetrics() {
-        return this.serviceLoadMetrics == null ? Output.empty() : this.serviceLoadMetrics;
+    public Output<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics() {
+        return this.serviceLoadMetrics == null ? Codegen.empty() : this.serviceLoadMetrics;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servicePackageActivationMode")
       private final @Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode;
 
-    public Output<Either<String,ArmServicePackageActivationMode>> getServicePackageActivationMode() {
-        return this.servicePackageActivationMode == null ? Output.empty() : this.servicePackageActivationMode;
+    public Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode() {
+        return this.servicePackageActivationMode == null ? Codegen.empty() : this.servicePackageActivationMode;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servicePlacementPolicies")
       private final @Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies;
 
-    public Output<List<ServicePlacementPolicyDescriptionArgs>> getServicePlacementPolicies() {
-        return this.servicePlacementPolicies == null ? Output.empty() : this.servicePlacementPolicies;
+    public Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies() {
+        return this.servicePlacementPolicies == null ? Codegen.empty() : this.servicePlacementPolicies;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceTypeName")
       private final @Nullable Output<String> serviceTypeName;
 
-    public Output<String> getServiceTypeName() {
-        return this.serviceTypeName == null ? Output.empty() : this.serviceTypeName;
+    public Output<String> serviceTypeName() {
+        return this.serviceTypeName == null ? Codegen.empty() : this.serviceTypeName;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServiceArgs(
@@ -239,22 +240,22 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.applicationName = Output.empty();
-        this.clusterName = Output.empty();
-        this.correlationScheme = Output.empty();
-        this.defaultMoveCost = Output.empty();
-        this.location = Output.empty();
-        this.partitionDescription = Output.empty();
-        this.placementConstraints = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceDnsName = Output.empty();
-        this.serviceKind = Output.empty();
-        this.serviceLoadMetrics = Output.empty();
-        this.serviceName = Output.empty();
-        this.servicePackageActivationMode = Output.empty();
-        this.servicePlacementPolicies = Output.empty();
-        this.serviceTypeName = Output.empty();
-        this.tags = Output.empty();
+        this.applicationName = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.correlationScheme = Codegen.empty();
+        this.defaultMoveCost = Codegen.empty();
+        this.location = Codegen.empty();
+        this.partitionDescription = Codegen.empty();
+        this.placementConstraints = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceDnsName = Codegen.empty();
+        this.serviceKind = Codegen.empty();
+        this.serviceLoadMetrics = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.servicePackageActivationMode = Codegen.empty();
+        this.servicePlacementPolicies = Codegen.empty();
+        this.serviceTypeName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -328,7 +329,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder correlationScheme(@Nullable List<ServiceCorrelationDescriptionArgs> correlationScheme) {
-            this.correlationScheme = Output.ofNullable(correlationScheme);
+            this.correlationScheme = Codegen.ofNullable(correlationScheme);
             return this;
         }
         public Builder correlationScheme(ServiceCorrelationDescriptionArgs... correlationScheme) {
@@ -339,7 +340,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultMoveCost(@Nullable Either<String,MoveCost> defaultMoveCost) {
-            this.defaultMoveCost = Output.ofNullable(defaultMoveCost);
+            this.defaultMoveCost = Codegen.ofNullable(defaultMoveCost);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -347,7 +348,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder partitionDescription(@Nullable Output<Object> partitionDescription) {
@@ -355,7 +356,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionDescription(@Nullable Object partitionDescription) {
-            this.partitionDescription = Output.ofNullable(partitionDescription);
+            this.partitionDescription = Codegen.ofNullable(partitionDescription);
             return this;
         }
         public Builder placementConstraints(@Nullable Output<String> placementConstraints) {
@@ -363,7 +364,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder placementConstraints(@Nullable String placementConstraints) {
-            this.placementConstraints = Output.ofNullable(placementConstraints);
+            this.placementConstraints = Codegen.ofNullable(placementConstraints);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -379,7 +380,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceDnsName(@Nullable String serviceDnsName) {
-            this.serviceDnsName = Output.ofNullable(serviceDnsName);
+            this.serviceDnsName = Codegen.ofNullable(serviceDnsName);
             return this;
         }
         public Builder serviceKind(Output<Either<String,ServiceKind>> serviceKind) {
@@ -395,7 +396,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionArgs> serviceLoadMetrics) {
-            this.serviceLoadMetrics = Output.ofNullable(serviceLoadMetrics);
+            this.serviceLoadMetrics = Codegen.ofNullable(serviceLoadMetrics);
             return this;
         }
         public Builder serviceLoadMetrics(ServiceLoadMetricDescriptionArgs... serviceLoadMetrics) {
@@ -406,7 +407,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder servicePackageActivationMode(@Nullable Output<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode) {
@@ -414,7 +415,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder servicePackageActivationMode(@Nullable Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
-            this.servicePackageActivationMode = Output.ofNullable(servicePackageActivationMode);
+            this.servicePackageActivationMode = Codegen.ofNullable(servicePackageActivationMode);
             return this;
         }
         public Builder servicePlacementPolicies(@Nullable Output<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {
@@ -422,7 +423,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder servicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionArgs> servicePlacementPolicies) {
-            this.servicePlacementPolicies = Output.ofNullable(servicePlacementPolicies);
+            this.servicePlacementPolicies = Codegen.ofNullable(servicePlacementPolicies);
             return this;
         }
         public Builder servicePlacementPolicies(ServicePlacementPolicyDescriptionArgs... servicePlacementPolicies) {
@@ -433,7 +434,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceTypeName(@Nullable String serviceTypeName) {
-            this.serviceTypeName = Output.ofNullable(serviceTypeName);
+            this.serviceTypeName = Codegen.ofNullable(serviceTypeName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -441,7 +442,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(applicationName, clusterName, correlationScheme, defaultMoveCost, location, partitionDescription, placementConstraints, resourceGroupName, serviceDnsName, serviceKind, serviceLoadMetrics, serviceName, servicePackageActivationMode, servicePlacementPolicies, serviceTypeName, tags);

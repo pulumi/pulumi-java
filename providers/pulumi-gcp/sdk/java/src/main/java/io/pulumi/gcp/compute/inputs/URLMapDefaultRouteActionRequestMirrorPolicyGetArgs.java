@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class URLMapDefaultRouteActionRequestMirrorPolicyGetArgs extends io
     @Import(name="backendService", required=true)
       private final Output<String> backendService;
 
-    public Output<String> getBackendService() {
+    public Output<String> backendService() {
         return this.backendService;
     }
 
@@ -29,7 +30,7 @@ public final class URLMapDefaultRouteActionRequestMirrorPolicyGetArgs extends io
     }
 
     private URLMapDefaultRouteActionRequestMirrorPolicyGetArgs() {
-        this.backendService = Output.empty();
+        this.backendService = Codegen.empty();
     }
 
     public static Builder builder() {

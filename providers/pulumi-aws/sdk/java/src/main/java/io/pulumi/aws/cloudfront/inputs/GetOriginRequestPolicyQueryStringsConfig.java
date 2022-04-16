@@ -17,14 +17,14 @@ public final class GetOriginRequestPolicyQueryStringsConfig extends io.pulumi.re
     @Import(name="queryStringBehavior", required=true)
       private final String queryStringBehavior;
 
-    public String getQueryStringBehavior() {
+    public String queryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @Import(name="queryStrings", required=true)
       private final List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings;
 
-    public List<GetOriginRequestPolicyQueryStringsConfigQueryString> getQueryStrings() {
+    public List<GetOriginRequestPolicyQueryStringsConfigQueryString> queryStrings() {
         return this.queryStrings;
     }
 

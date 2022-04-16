@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="days", required=true)
       private final Output<List<String>> days;
 
-    public Output<List<String>> getDays() {
+    public Output<List<String>> days() {
         return this.days;
     }
 
@@ -37,7 +38,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hours", required=true)
       private final Output<List<Integer>> hours;
 
-    public Output<List<Integer>> getHours() {
+    public Output<List<Integer>> hours() {
         return this.hours;
     }
 
@@ -48,7 +49,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="minutes", required=true)
       private final Output<List<Integer>> minutes;
 
-    public Output<List<Integer>> getMinutes() {
+    public Output<List<Integer>> minutes() {
         return this.minutes;
     }
 
@@ -59,7 +60,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
 
@@ -75,10 +76,10 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RecurrentScheduleArgs() {
-        this.days = Output.empty();
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
-        this.timeZone = Output.empty();
+        this.days = Codegen.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {

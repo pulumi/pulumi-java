@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="approvalRequired")
       private final @Nullable Output<Boolean> approvalRequired;
 
-    public Output<Boolean> getApprovalRequired() {
-        return this.approvalRequired == null ? Output.empty() : this.approvalRequired;
+    public Output<Boolean> approvalRequired() {
+        return this.approvalRequired == null ? Codegen.empty() : this.approvalRequired;
     }
 
     public ApprovalConfigArgs(@Nullable Output<Boolean> approvalRequired) {
@@ -34,7 +35,7 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApprovalConfigArgs() {
-        this.approvalRequired = Output.empty();
+        this.approvalRequired = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ApprovalConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder approvalRequired(@Nullable Boolean approvalRequired) {
-            this.approvalRequired = Output.ofNullable(approvalRequired);
+            this.approvalRequired = Codegen.ofNullable(approvalRequired);
             return this;
         }        public ApprovalConfigArgs build() {
             return new ApprovalConfigArgs(approvalRequired);

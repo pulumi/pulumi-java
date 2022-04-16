@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.TestTargetsForShardArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testTargetsForShard", required=true)
       private final Output<List<TestTargetsForShardArgs>> testTargetsForShard;
 
-    public Output<List<TestTargetsForShardArgs>> getTestTargetsForShard() {
+    public Output<List<TestTargetsForShardArgs>> testTargetsForShard() {
         return this.testTargetsForShard;
     }
 
@@ -34,7 +35,7 @@ public final class ManualShardingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManualShardingArgs() {
-        this.testTargetsForShard = Output.empty();
+        this.testTargetsForShard = Codegen.empty();
     }
 
     public static Builder builder() {

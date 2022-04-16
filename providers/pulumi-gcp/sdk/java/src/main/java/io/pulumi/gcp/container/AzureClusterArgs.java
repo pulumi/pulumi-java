@@ -5,6 +5,7 @@ package io.pulumi.gcp.container;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AzureClusterAuthorizationArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterFleetArgs;
@@ -26,8 +27,8 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<Map<String,String>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorization", required=true)
       private final Output<AzureClusterAuthorizationArgs> authorization;
 
-    public Output<AzureClusterAuthorizationArgs> getAuthorization() {
+    public Output<AzureClusterAuthorizationArgs> authorization() {
         return this.authorization;
     }
 
@@ -48,7 +49,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureRegion", required=true)
       private final Output<String> azureRegion;
 
-    public Output<String> getAzureRegion() {
+    public Output<String> azureRegion() {
         return this.azureRegion;
     }
 
@@ -59,7 +60,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="client", required=true)
       private final Output<String> client;
 
-    public Output<String> getClient() {
+    public Output<String> client() {
         return this.client;
     }
 
@@ -70,7 +71,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="controlPlane", required=true)
       private final Output<AzureClusterControlPlaneArgs> controlPlane;
 
-    public Output<AzureClusterControlPlaneArgs> getControlPlane() {
+    public Output<AzureClusterControlPlaneArgs> controlPlane() {
         return this.controlPlane;
     }
 
@@ -81,8 +82,8 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fleet", required=true)
       private final Output<AzureClusterFleetArgs> fleet;
 
-    public Output<AzureClusterFleetArgs> getFleet() {
+    public Output<AzureClusterFleetArgs> fleet() {
         return this.fleet;
     }
 
@@ -103,7 +104,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -114,8 +115,8 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networking", required=true)
       private final Output<AzureClusterNetworkingArgs> networking;
 
-    public Output<AzureClusterNetworkingArgs> getNetworking() {
+    public Output<AzureClusterNetworkingArgs> networking() {
         return this.networking;
     }
 
@@ -136,8 +137,8 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupId", required=true)
       private final Output<String> resourceGroupId;
 
-    public Output<String> getResourceGroupId() {
+    public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
 
@@ -179,18 +180,18 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AzureClusterArgs() {
-        this.annotations = Output.empty();
-        this.authorization = Output.empty();
-        this.azureRegion = Output.empty();
-        this.client = Output.empty();
-        this.controlPlane = Output.empty();
-        this.description = Output.empty();
-        this.fleet = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.networking = Output.empty();
-        this.project = Output.empty();
-        this.resourceGroupId = Output.empty();
+        this.annotations = Codegen.empty();
+        this.authorization = Codegen.empty();
+        this.azureRegion = Codegen.empty();
+        this.client = Codegen.empty();
+        this.controlPlane = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fleet = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networking = Codegen.empty();
+        this.project = Codegen.empty();
+        this.resourceGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -240,7 +241,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder authorization(Output<AzureClusterAuthorizationArgs> authorization) {
@@ -280,7 +281,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fleet(Output<AzureClusterFleetArgs> fleet) {
@@ -304,7 +305,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networking(Output<AzureClusterNetworkingArgs> networking) {
@@ -320,7 +321,7 @@ public final class AzureClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder resourceGroupId(Output<String> resourceGroupId) {

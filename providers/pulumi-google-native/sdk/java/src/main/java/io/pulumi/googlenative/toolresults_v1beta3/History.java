@@ -6,6 +6,7 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.toolresults_v1beta3.HistoryArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * @return A short human-readable (plain text) name to display in the UI. Maximum of 100 characters. - In response: present if set during create. - In create request: optional
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -44,7 +45,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * @return A unique identifier within a project for this History. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create request: never set
      * 
      */
-    public Output<String> getHistoryId() {
+    public Output<String> historyId() {
         return this.historyId;
     }
     /**
@@ -58,7 +59,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * @return A name to uniquely identify a history within a project. Maximum of 200 characters. - In response always set - In create request: always set
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * @return The platform of the test history. - In response: always set. Returns the platform of the last execution if unknown.
      * 
      */
-    public Output<String> getTestPlatform() {
+    public Output<String> testPlatform() {
         return this.testPlatform;
     }
 
@@ -98,7 +99,7 @@ public class History extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public History(String name, @Nullable HistoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:toolresults/v1beta3:History", name, args == null ? HistoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:toolresults/v1beta3:History", name, args == null ? HistoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private History(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

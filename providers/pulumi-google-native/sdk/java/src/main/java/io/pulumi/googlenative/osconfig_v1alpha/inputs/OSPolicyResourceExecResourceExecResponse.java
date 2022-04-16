@@ -25,7 +25,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
     @Import(name="args", required=true)
       private final List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
 
@@ -36,7 +36,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
     @Import(name="file", required=true)
       private final OSPolicyResourceFileResponse file;
 
-    public OSPolicyResourceFileResponse getFile() {
+    public OSPolicyResourceFileResponse file() {
         return this.file;
     }
 
@@ -47,7 +47,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
     @Import(name="interpreter", required=true)
       private final String interpreter;
 
-    public String getInterpreter() {
+    public String interpreter() {
         return this.interpreter;
     }
 
@@ -58,7 +58,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
     @Import(name="outputFilePath", required=true)
       private final String outputFilePath;
 
-    public String getOutputFilePath() {
+    public String outputFilePath() {
         return this.outputFilePath;
     }
 
@@ -69,7 +69,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends io.pulumi.re
     @Import(name="script", required=true)
       private final String script;
 
-    public String getScript() {
+    public String script() {
         return this.script;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
     @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
 
@@ -31,7 +32,7 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
     @Import(name="featureName", required=true)
       private final Output<String> featureName;
 
-    public Output<String> getFeatureName() {
+    public Output<String> featureName() {
         return this.featureName;
     }
 
@@ -42,7 +43,7 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -56,9 +57,9 @@ public final class ClusterRoleAssociationArgs extends io.pulumi.resources.Resour
     }
 
     private ClusterRoleAssociationArgs() {
-        this.dbClusterIdentifier = Output.empty();
-        this.featureName = Output.empty();
-        this.roleArn = Output.empty();
+        this.dbClusterIdentifier = Codegen.empty();
+        this.featureName = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

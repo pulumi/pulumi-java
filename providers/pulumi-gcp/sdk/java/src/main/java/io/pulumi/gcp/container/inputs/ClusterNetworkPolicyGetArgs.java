@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterNetworkPolicyGetArgs extends io.pulumi.resources.Resou
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -34,8 +35,8 @@ public final class ClusterNetworkPolicyGetArgs extends io.pulumi.resources.Resou
     @Import(name="provider")
       private final @Nullable Output<String> provider;
 
-    public Output<String> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+    public Output<String> provider() {
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     public ClusterNetworkPolicyGetArgs(
@@ -46,8 +47,8 @@ public final class ClusterNetworkPolicyGetArgs extends io.pulumi.resources.Resou
     }
 
     private ClusterNetworkPolicyGetArgs() {
-        this.enabled = Output.empty();
-        this.provider = Output.empty();
+        this.enabled = Codegen.empty();
+        this.provider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class ClusterNetworkPolicyGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder provider(@Nullable String provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }        public ClusterNetworkPolicyGetArgs build() {
             return new ClusterNetworkPolicyGetArgs(enabled, provider);

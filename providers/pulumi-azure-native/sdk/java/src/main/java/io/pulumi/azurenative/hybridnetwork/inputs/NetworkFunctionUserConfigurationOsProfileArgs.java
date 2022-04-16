@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
     @Import(name="customData")
       private final @Nullable Output<String> customData;
 
-    public Output<String> getCustomData() {
-        return this.customData == null ? Output.empty() : this.customData;
+    public Output<String> customData() {
+        return this.customData == null ? Codegen.empty() : this.customData;
     }
 
     public NetworkFunctionUserConfigurationOsProfileArgs(@Nullable Output<String> customData) {
@@ -34,7 +35,7 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
     }
 
     private NetworkFunctionUserConfigurationOsProfileArgs() {
-        this.customData = Output.empty();
+        this.customData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NetworkFunctionUserConfigurationOsProfileArgs extends io.pulu
             return this;
         }
         public Builder customData(@Nullable String customData) {
-            this.customData = Output.ofNullable(customData);
+            this.customData = Codegen.ofNullable(customData);
             return this;
         }        public NetworkFunctionUserConfigurationOsProfileArgs build() {
             return new NetworkFunctionUserConfigurationOsProfileArgs(customData);

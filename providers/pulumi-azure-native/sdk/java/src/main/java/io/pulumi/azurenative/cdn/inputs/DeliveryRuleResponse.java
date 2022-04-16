@@ -50,7 +50,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="actions", required=true)
       private final List<Object> actions;
 
-    public List<Object> getActions() {
+    public List<Object> actions() {
         return this.actions;
     }
 
@@ -61,7 +61,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="conditions")
       private final @Nullable List<Object> conditions;
 
-    public List<Object> getConditions() {
+    public List<Object> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
 
@@ -72,7 +72,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -83,7 +83,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="order", required=true)
       private final Integer order;
 
-    public Integer getOrder() {
+    public Integer order() {
         return this.order;
     }
 

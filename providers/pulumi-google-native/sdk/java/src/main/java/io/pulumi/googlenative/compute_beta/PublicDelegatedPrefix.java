@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.PublicDelegatedPrefixArgs;
 import io.pulumi.googlenative.compute_beta.outputs.PublicDelegatedPrefixPublicDelegatedSubPrefixResponse;
@@ -31,7 +32,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -45,7 +46,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix. An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -73,7 +74,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return The IPv4 address range, in CIDR format, represented by this public delegated prefix.
      * 
      */
-    public Output<String> getIpCidrRange() {
+    public Output<String> ipCidrRange() {
         return this.ipCidrRange;
     }
     /**
@@ -87,7 +88,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return If true, the prefix will be live migrated.
      * 
      */
-    public Output<Boolean> getIsLiveMigration() {
+    public Output<Boolean> isLiveMigration() {
         return this.isLiveMigration;
     }
     /**
@@ -101,7 +102,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#publicDelegatedPrefix for public delegated prefixes.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -115,7 +116,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +130,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
      * 
      */
-    public Output<String> getParentPrefix() {
+    public Output<String> parentPrefix() {
         return this.parentPrefix;
     }
     /**
@@ -143,7 +144,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return The list of sub public delegated prefixes that exist for this public delegated prefix.
      * 
      */
-    public Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse>> getPublicDelegatedSubPrefixs() {
+    public Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse>> publicDelegatedSubPrefixs() {
         return this.publicDelegatedSubPrefixs;
     }
     /**
@@ -157,7 +158,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return URL of the region where the public delegated prefix resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -171,7 +172,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -185,7 +186,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @return The status of the public delegated prefix, which can be one of following values: - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public delegated prefix is being deprovsioned.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -211,7 +212,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicDelegatedPrefix(String name, PublicDelegatedPrefixArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:PublicDelegatedPrefix", name, args == null ? PublicDelegatedPrefixArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:PublicDelegatedPrefix", name, args == null ? PublicDelegatedPrefixArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublicDelegatedPrefix(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

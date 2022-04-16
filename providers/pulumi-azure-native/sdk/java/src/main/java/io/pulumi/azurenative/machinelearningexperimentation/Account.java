@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The immutable id associated with this team account.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -57,7 +58,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The creation date of the machine learning team account in ISO8601 format.
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -71,7 +72,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The description of this workspace.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +86,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The uri for this machine learning team account.
      * 
      */
-    public Output<String> getDiscoveryUri() {
+    public Output<String> discoveryUri() {
         return this.discoveryUri;
     }
     /**
@@ -99,7 +100,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -113,7 +114,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The fully qualified arm id of the user key vault.
      * 
      */
-    public Output<String> getKeyVaultId() {
+    public Output<String> keyVaultId() {
         return this.keyVaultId;
     }
     /**
@@ -127,7 +128,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -141,7 +142,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -155,7 +156,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The current deployment state of team account resource. The provisioningState is to indicate states for resource provisioning.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -169,7 +170,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The no of users/seats who can access this team account. This property defines the charge on the team account.
      * 
      */
-    public Output</* @Nullable */ String> getSeats() {
+    public Output</* @Nullable */ String> seats() {
         return this.seats;
     }
     /**
@@ -183,7 +184,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The properties of the storage account for the machine learning team account.
      * 
      */
-    public Output<StorageAccountPropertiesResponse> getStorageAccount() {
+    public Output<StorageAccountPropertiesResponse> storageAccount() {
         return this.storageAccount;
     }
     /**
@@ -197,7 +198,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -211,7 +212,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -225,7 +226,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @return The fully qualified arm id of the vso account to be used for this team account.
      * 
      */
-    public Output<String> getVsoAccountId() {
+    public Output<String> vsoAccountId() {
         return this.vsoAccountId;
     }
 
@@ -251,7 +252,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningexperimentation:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningexperimentation:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

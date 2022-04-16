@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse extends io.pulumi.re
     @Import(name="partToExtract", required=true)
       private final String partToExtract;
 
-    public String getPartToExtract() {
+    public String partToExtract() {
         return this.partToExtract;
     }
 

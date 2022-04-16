@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cdn.enums.EnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
-    public Output<Either<String,EnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+    public Output<Either<String,EnabledState>> enabledState() {
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
-        return this.endpointName == null ? Output.empty() : this.endpointName;
+    public Output<String> endpointName() {
+        return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="originResponseTimeoutSeconds")
       private final @Nullable Output<Integer> originResponseTimeoutSeconds;
 
-    public Output<Integer> getOriginResponseTimeoutSeconds() {
-        return this.originResponseTimeoutSeconds == null ? Output.empty() : this.originResponseTimeoutSeconds;
+    public Output<Integer> originResponseTimeoutSeconds() {
+        return this.originResponseTimeoutSeconds == null ? Codegen.empty() : this.originResponseTimeoutSeconds;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
-    public Output<String> getProfileName() {
+    public Output<String> profileName() {
         return this.profileName;
     }
 
@@ -80,7 +81,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,8 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AFDEndpointArgs(
@@ -113,13 +114,13 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AFDEndpointArgs() {
-        this.enabledState = Output.empty();
-        this.endpointName = Output.empty();
-        this.location = Output.empty();
-        this.originResponseTimeoutSeconds = Output.empty();
-        this.profileName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.enabledState = Codegen.empty();
+        this.endpointName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.originResponseTimeoutSeconds = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder endpointName(@Nullable Output<String> endpointName) {
@@ -167,7 +168,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Output.ofNullable(endpointName);
+            this.endpointName = Codegen.ofNullable(endpointName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -175,7 +176,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder originResponseTimeoutSeconds(@Nullable Output<Integer> originResponseTimeoutSeconds) {
@@ -183,7 +184,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder originResponseTimeoutSeconds(@Nullable Integer originResponseTimeoutSeconds) {
-            this.originResponseTimeoutSeconds = Output.ofNullable(originResponseTimeoutSeconds);
+            this.originResponseTimeoutSeconds = Codegen.ofNullable(originResponseTimeoutSeconds);
             return this;
         }
         public Builder profileName(Output<String> profileName) {
@@ -207,7 +208,7 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AFDEndpointArgs build() {
             return new AFDEndpointArgs(enabledState, endpointName, location, originResponseTimeoutSeconds, profileName, resourceGroupName, tags);

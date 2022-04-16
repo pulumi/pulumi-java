@@ -26,7 +26,7 @@ public final class CmkKeyVaultPropertiesResponse {
      * The key uri of the Customer Managed Key
      * 
     */
-    public Optional<String> getKeyUri() {
+    public Optional<String> keyUri() {
         return Optional.ofNullable(this.keyUri);
     }
 

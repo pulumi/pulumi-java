@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowBranchToBranchTraffic")
       private final @Nullable Output<Boolean> allowBranchToBranchTraffic;
 
-    public Output<Boolean> getAllowBranchToBranchTraffic() {
-        return this.allowBranchToBranchTraffic == null ? Output.empty() : this.allowBranchToBranchTraffic;
+    public Output<Boolean> allowBranchToBranchTraffic() {
+        return this.allowBranchToBranchTraffic == null ? Codegen.empty() : this.allowBranchToBranchTraffic;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowVnetToVnetTraffic")
       private final @Nullable Output<Boolean> allowVnetToVnetTraffic;
 
-    public Output<Boolean> getAllowVnetToVnetTraffic() {
-        return this.allowVnetToVnetTraffic == null ? Output.empty() : this.allowVnetToVnetTraffic;
+    public Output<Boolean> allowVnetToVnetTraffic() {
+        return this.allowVnetToVnetTraffic == null ? Codegen.empty() : this.allowVnetToVnetTraffic;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableVpnEncryption")
       private final @Nullable Output<Boolean> disableVpnEncryption;
 
-    public Output<Boolean> getDisableVpnEncryption() {
-        return this.disableVpnEncryption == null ? Output.empty() : this.disableVpnEncryption;
+    public Output<Boolean> disableVpnEncryption() {
+        return this.disableVpnEncryption == null ? Codegen.empty() : this.disableVpnEncryption;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,8 +90,8 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualWANName")
       private final @Nullable Output<String> virtualWANName;
 
-    public Output<String> getVirtualWANName() {
-        return this.virtualWANName == null ? Output.empty() : this.virtualWANName;
+    public Output<String> virtualWANName() {
+        return this.virtualWANName == null ? Codegen.empty() : this.virtualWANName;
     }
 
     public VirtualWanArgs(
@@ -137,15 +138,15 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualWanArgs() {
-        this.allowBranchToBranchTraffic = Output.empty();
-        this.allowVnetToVnetTraffic = Output.empty();
-        this.disableVpnEncryption = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
-        this.virtualWANName = Output.empty();
+        this.allowBranchToBranchTraffic = Codegen.empty();
+        this.allowVnetToVnetTraffic = Codegen.empty();
+        this.disableVpnEncryption = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
+        this.virtualWANName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
-            this.allowBranchToBranchTraffic = Output.ofNullable(allowBranchToBranchTraffic);
+            this.allowBranchToBranchTraffic = Codegen.ofNullable(allowBranchToBranchTraffic);
             return this;
         }
         public Builder allowVnetToVnetTraffic(@Nullable Output<Boolean> allowVnetToVnetTraffic) {
@@ -197,7 +198,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowVnetToVnetTraffic(@Nullable Boolean allowVnetToVnetTraffic) {
-            this.allowVnetToVnetTraffic = Output.ofNullable(allowVnetToVnetTraffic);
+            this.allowVnetToVnetTraffic = Codegen.ofNullable(allowVnetToVnetTraffic);
             return this;
         }
         public Builder disableVpnEncryption(@Nullable Output<Boolean> disableVpnEncryption) {
@@ -205,7 +206,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableVpnEncryption(@Nullable Boolean disableVpnEncryption) {
-            this.disableVpnEncryption = Output.ofNullable(disableVpnEncryption);
+            this.disableVpnEncryption = Codegen.ofNullable(disableVpnEncryption);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -213,7 +214,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -221,7 +222,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -237,7 +238,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -245,7 +246,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder virtualWANName(@Nullable Output<String> virtualWANName) {
@@ -253,7 +254,7 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualWANName(@Nullable String virtualWANName) {
-            this.virtualWANName = Output.ofNullable(virtualWANName);
+            this.virtualWANName = Codegen.ofNullable(virtualWANName);
             return this;
         }        public VirtualWanArgs build() {
             return new VirtualWanArgs(allowBranchToBranchTraffic, allowVnetToVnetTraffic, disableVpnEncryption, id, location, resourceGroupName, tags, type, virtualWANName);

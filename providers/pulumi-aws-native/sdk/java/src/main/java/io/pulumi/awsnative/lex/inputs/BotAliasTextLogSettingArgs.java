@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotAliasTextLogDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,15 +23,15 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
     @Import(name="destination")
       private final @Nullable Output<BotAliasTextLogDestinationArgs> destination;
 
-    public Output<BotAliasTextLogDestinationArgs> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<BotAliasTextLogDestinationArgs> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     public BotAliasTextLogSettingArgs(
@@ -41,8 +42,8 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
     }
 
     private BotAliasTextLogSettingArgs() {
-        this.destination = Output.empty();
-        this.enabled = Output.empty();
+        this.destination = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder destination(@Nullable BotAliasTextLogDestinationArgs destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -80,7 +81,7 @@ public final class BotAliasTextLogSettingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }        public BotAliasTextLogSettingArgs build() {
             return new BotAliasTextLogSettingArgs(destination, enabled);

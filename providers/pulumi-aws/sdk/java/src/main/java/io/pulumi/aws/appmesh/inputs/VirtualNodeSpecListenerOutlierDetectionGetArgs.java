@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionBaseE
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     @Import(name="baseEjectionDuration", required=true)
       private final Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> baseEjectionDuration;
 
-    public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> getBaseEjectionDuration() {
+    public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationGetArgs> baseEjectionDuration() {
         return this.baseEjectionDuration;
     }
 
@@ -33,7 +34,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     @Import(name="interval", required=true)
       private final Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> interval;
 
-    public Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> getInterval() {
+    public Output<VirtualNodeSpecListenerOutlierDetectionIntervalGetArgs> interval() {
         return this.interval;
     }
 
@@ -45,7 +46,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     @Import(name="maxEjectionPercent", required=true)
       private final Output<Integer> maxEjectionPercent;
 
-    public Output<Integer> getMaxEjectionPercent() {
+    public Output<Integer> maxEjectionPercent() {
         return this.maxEjectionPercent;
     }
 
@@ -56,7 +57,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     @Import(name="maxServerErrors", required=true)
       private final Output<Integer> maxServerErrors;
 
-    public Output<Integer> getMaxServerErrors() {
+    public Output<Integer> maxServerErrors() {
         return this.maxServerErrors;
     }
 
@@ -72,10 +73,10 @@ public final class VirtualNodeSpecListenerOutlierDetectionGetArgs extends io.pul
     }
 
     private VirtualNodeSpecListenerOutlierDetectionGetArgs() {
-        this.baseEjectionDuration = Output.empty();
-        this.interval = Output.empty();
-        this.maxEjectionPercent = Output.empty();
-        this.maxServerErrors = Output.empty();
+        this.baseEjectionDuration = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.maxEjectionPercent = Codegen.empty();
+        this.maxServerErrors = Codegen.empty();
     }
 
     public static Builder builder() {

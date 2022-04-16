@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
     @Import(name="securityGroup")
       private final @Nullable Output<String> securityGroup;
 
-    public Output<String> getSecurityGroup() {
-        return this.securityGroup == null ? Output.empty() : this.securityGroup;
+    public Output<String> securityGroup() {
+        return this.securityGroup == null ? Codegen.empty() : this.securityGroup;
     }
 
     public AuthenticatorGroupsConfigArgs(
@@ -49,8 +50,8 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
     }
 
     private AuthenticatorGroupsConfigArgs() {
-        this.enabled = Output.empty();
-        this.securityGroup = Output.empty();
+        this.enabled = Codegen.empty();
+        this.securityGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder securityGroup(@Nullable Output<String> securityGroup) {
@@ -88,7 +89,7 @@ public final class AuthenticatorGroupsConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder securityGroup(@Nullable String securityGroup) {
-            this.securityGroup = Output.ofNullable(securityGroup);
+            this.securityGroup = Codegen.ofNullable(securityGroup);
             return this;
         }        public AuthenticatorGroupsConfigArgs build() {
             return new AuthenticatorGroupsConfigArgs(enabled, securityGroup);

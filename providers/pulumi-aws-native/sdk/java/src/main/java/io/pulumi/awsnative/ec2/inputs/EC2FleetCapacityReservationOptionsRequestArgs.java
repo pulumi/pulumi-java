@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.enums.EC2FleetCapacityReservationOptionsRequestUsageStrategy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     @Import(name="usageStrategy")
       private final @Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy;
 
-    public Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> getUsageStrategy() {
-        return this.usageStrategy == null ? Output.empty() : this.usageStrategy;
+    public Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy() {
+        return this.usageStrategy == null ? Codegen.empty() : this.usageStrategy;
     }
 
     public EC2FleetCapacityReservationOptionsRequestArgs(@Nullable Output<EC2FleetCapacityReservationOptionsRequestUsageStrategy> usageStrategy) {
@@ -26,7 +27,7 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
     }
 
     private EC2FleetCapacityReservationOptionsRequestArgs() {
-        this.usageStrategy = Output.empty();
+        this.usageStrategy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class EC2FleetCapacityReservationOptionsRequestArgs extends io.pulu
             return this;
         }
         public Builder usageStrategy(@Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
-            this.usageStrategy = Output.ofNullable(usageStrategy);
+            this.usageStrategy = Codegen.ofNullable(usageStrategy);
             return this;
         }        public EC2FleetCapacityReservationOptionsRequestArgs build() {
             return new EC2FleetCapacityReservationOptionsRequestArgs(usageStrategy);

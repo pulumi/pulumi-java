@@ -5,6 +5,7 @@ package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="aadAuthority")
       private final @Nullable Output<String> aadAuthority;
 
-    public Output<String> getAadAuthority() {
-        return this.aadAuthority == null ? Output.empty() : this.aadAuthority;
+    public Output<String> aadAuthority() {
+        return this.aadAuthority == null ? Codegen.empty() : this.aadAuthority;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="audience")
       private final @Nullable Output<String> audience;
 
-    public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+    public Output<String> audience() {
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
-    public Output<String> getObjectId() {
-        return this.objectId == null ? Output.empty() : this.objectId;
+    public Output<String> objectId() {
+        return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rawCertData")
       private final @Nullable Output<String> rawCertData;
 
-    public Output<String> getRawCertData() {
-        return this.rawCertData == null ? Output.empty() : this.rawCertData;
+    public Output<String> rawCertData() {
+        return this.rawCertData == null ? Codegen.empty() : this.rawCertData;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public SiteSpnPropertiesArgs(
@@ -100,12 +101,12 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SiteSpnPropertiesArgs() {
-        this.aadAuthority = Output.empty();
-        this.applicationId = Output.empty();
-        this.audience = Output.empty();
-        this.objectId = Output.empty();
-        this.rawCertData = Output.empty();
-        this.tenantId = Output.empty();
+        this.aadAuthority = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.audience = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.rawCertData = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder aadAuthority(@Nullable String aadAuthority) {
-            this.aadAuthority = Output.ofNullable(aadAuthority);
+            this.aadAuthority = Codegen.ofNullable(aadAuthority);
             return this;
         }
         public Builder applicationId(@Nullable Output<String> applicationId) {
@@ -151,7 +152,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder audience(@Nullable Output<String> audience) {
@@ -159,7 +160,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder objectId(@Nullable Output<String> objectId) {
@@ -167,7 +168,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Output.ofNullable(objectId);
+            this.objectId = Codegen.ofNullable(objectId);
             return this;
         }
         public Builder rawCertData(@Nullable Output<String> rawCertData) {
@@ -175,7 +176,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rawCertData(@Nullable String rawCertData) {
-            this.rawCertData = Output.ofNullable(rawCertData);
+            this.rawCertData = Codegen.ofNullable(rawCertData);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -183,7 +184,7 @@ public final class SiteSpnPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public SiteSpnPropertiesArgs build() {
             return new SiteSpnPropertiesArgs(aadAuthority, applicationId, audience, objectId, rawCertData, tenantId);

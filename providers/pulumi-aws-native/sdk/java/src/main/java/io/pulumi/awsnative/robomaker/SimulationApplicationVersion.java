@@ -8,6 +8,7 @@ import io.pulumi.awsnative.robomaker.SimulationApplicationVersionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,19 +21,19 @@ public class SimulationApplicationVersion extends io.pulumi.resources.CustomReso
     @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
     @Export(name="applicationVersion", type=String.class, parameters={})
     private Output<String> applicationVersion;
 
-    public Output<String> getApplicationVersion() {
+    public Output<String> applicationVersion() {
         return this.applicationVersion;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class SimulationApplicationVersion extends io.pulumi.resources.CustomReso
      * @return The revision ID of robot application.
      * 
      */
-    public Output</* @Nullable */ String> getCurrentRevisionId() {
+    public Output</* @Nullable */ String> currentRevisionId() {
         return this.currentRevisionId;
     }
 
@@ -72,7 +73,7 @@ public class SimulationApplicationVersion extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public SimulationApplicationVersion(String name, SimulationApplicationVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:robomaker:SimulationApplicationVersion", name, args == null ? SimulationApplicationVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:robomaker:SimulationApplicationVersion", name, args == null ? SimulationApplicationVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SimulationApplicationVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

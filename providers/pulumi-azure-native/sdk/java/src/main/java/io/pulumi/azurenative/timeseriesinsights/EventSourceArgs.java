@@ -8,6 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environmentName", required=true)
       private final Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
 
@@ -36,8 +37,8 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventSourceName")
       private final @Nullable Output<String> eventSourceName;
 
-    public Output<String> getEventSourceName() {
-        return this.eventSourceName == null ? Output.empty() : this.eventSourceName;
+    public Output<String> eventSourceName() {
+        return this.eventSourceName == null ? Codegen.empty() : this.eventSourceName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,EventSourceKind>> kind;
 
-    public Output<Either<String,EventSourceKind>> getKind() {
+    public Output<Either<String,EventSourceKind>> kind() {
         return this.kind;
     }
 
@@ -58,8 +59,8 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="localTimestamp")
       private final @Nullable Output<LocalTimestampArgs> localTimestamp;
 
-    public Output<LocalTimestampArgs> getLocalTimestamp() {
-        return this.localTimestamp == null ? Output.empty() : this.localTimestamp;
+    public Output<LocalTimestampArgs> localTimestamp() {
+        return this.localTimestamp == null ? Codegen.empty() : this.localTimestamp;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,8 +92,8 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EventSourceArgs(
@@ -113,13 +114,13 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventSourceArgs() {
-        this.environmentName = Output.empty();
-        this.eventSourceName = Output.empty();
-        this.kind = Output.empty();
-        this.localTimestamp = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.environmentName = Codegen.empty();
+        this.eventSourceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.localTimestamp = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventSourceName(@Nullable String eventSourceName) {
-            this.eventSourceName = Output.ofNullable(eventSourceName);
+            this.eventSourceName = Codegen.ofNullable(eventSourceName);
             return this;
         }
         public Builder kind(Output<Either<String,EventSourceKind>> kind) {
@@ -183,7 +184,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localTimestamp(@Nullable LocalTimestampArgs localTimestamp) {
-            this.localTimestamp = Output.ofNullable(localTimestamp);
+            this.localTimestamp = Codegen.ofNullable(localTimestamp);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -191,7 +192,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -207,7 +208,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public EventSourceArgs build() {
             return new EventSourceArgs(environmentName, eventSourceName, kind, localTimestamp, location, resourceGroupName, tags);

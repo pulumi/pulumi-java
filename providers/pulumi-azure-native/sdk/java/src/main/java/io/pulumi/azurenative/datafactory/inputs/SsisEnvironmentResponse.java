@@ -28,7 +28,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -39,7 +39,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
     @Import(name="folderId")
       private final @Nullable Double folderId;
 
-    public Optional<Double> getFolderId() {
+    public Optional<Double> folderId() {
         return this.folderId == null ? Optional.empty() : Optional.ofNullable(this.folderId);
     }
 
@@ -50,7 +50,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
     @Import(name="id")
       private final @Nullable Double id;
 
-    public Optional<Double> getId() {
+    public Optional<Double> id() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
     }
 
@@ -61,7 +61,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
@@ -73,7 +73,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -84,7 +84,7 @@ public final class SsisEnvironmentResponse extends io.pulumi.resources.InvokeArg
     @Import(name="variables")
       private final @Nullable List<SsisVariableResponse> variables;
 
-    public List<SsisVariableResponse> getVariables() {
+    public List<SsisVariableResponse> variables() {
         return this.variables == null ? List.of() : this.variables;
     }
 

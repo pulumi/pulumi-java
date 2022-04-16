@@ -6,6 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
     @Import(name="authorizationType", required=true)
       private final Output<String> authorizationType;
 
-    public Output<String> getAuthorizationType() {
+    public Output<String> authorizationType() {
         return this.authorizationType;
     }
 
@@ -37,7 +38,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
     @Import(name="key", required=true)
       private final Output<SecureStringArgs> key;
 
-    public Output<SecureStringArgs> getKey() {
+    public Output<SecureStringArgs> key() {
         return this.key;
     }
 
@@ -49,8 +50,8 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
     }
 
     private LinkedIntegrationRuntimeKeyAuthorizationArgs() {
-        this.authorizationType = Output.empty();
-        this.key = Output.empty();
+        this.authorizationType = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudiot_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudiot_v1.DeviceArgs;
 import io.pulumi.googlenative.cloudiot_v1.outputs.DeviceConfigResponse;
@@ -36,7 +37,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return If a device is blocked, connections or requests from this device will fail. Can be used to temporarily prevent the device from connecting if, for example, the sensor is generating bad data and needs maintenance.
      * 
      */
-    public Output<Boolean> getBlocked() {
+    public Output<Boolean> blocked() {
         return this.blocked;
     }
     /**
@@ -50,7 +51,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The most recent device configuration, which is eventually sent from Cloud IoT Core to the device. If not present on creation, the configuration will be initialized with an empty payload and version value of `1`. To update this field after creation, use the `DeviceManager.ModifyCloudToDeviceConfig` method.
      * 
      */
-    public Output<DeviceConfigResponse> getConfig() {
+    public Output<DeviceConfigResponse> config() {
         return this.config;
     }
     /**
@@ -64,7 +65,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The credentials used to authenticate this device. To allow credential rotation without interruption, multiple device credentials can be bound to this device. No more than 3 credentials can be bound to a single device at a time. When new credentials are added to a device, they are verified against the registry credentials. For details, see the description of the `DeviceRegistry.credentials` field.
      * 
      */
-    public Output<List<DeviceCredentialResponse>> getCredentials() {
+    public Output<List<DeviceCredentialResponse>> credentials() {
         return this.credentials;
     }
     /**
@@ -78,7 +79,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Gateway-related configuration and state.
      * 
      */
-    public Output<GatewayConfigResponse> getGatewayConfig() {
+    public Output<GatewayConfigResponse> gatewayConfig() {
         return this.gatewayConfig;
     }
     /**
@@ -92,7 +93,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] The last time a cloud-to-device config version acknowledgment was received from the device. This field is only for configurations sent through MQTT.
      * 
      */
-    public Output<String> getLastConfigAckTime() {
+    public Output<String> lastConfigAckTime() {
         return this.lastConfigAckTime;
     }
     /**
@@ -106,7 +107,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] The last time a cloud-to-device config version was sent to the device.
      * 
      */
-    public Output<String> getLastConfigSendTime() {
+    public Output<String> lastConfigSendTime() {
         return this.lastConfigSendTime;
     }
     /**
@@ -120,7 +121,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub. 'last_error_time' is the timestamp of this field. If no errors have occurred, this field has an empty message and the status code 0 == OK. Otherwise, this field is expected to have a status code other than OK.
      * 
      */
-    public Output<StatusResponse> getLastErrorStatus() {
+    public Output<StatusResponse> lastErrorStatus() {
         return this.lastErrorStatus;
     }
     /**
@@ -134,7 +135,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub. This field is the timestamp of 'last_error_status'.
      * 
      */
-    public Output<String> getLastErrorTime() {
+    public Output<String> lastErrorTime() {
         return this.lastErrorTime;
     }
     /**
@@ -148,7 +149,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] The last time a telemetry event was received. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.
      * 
      */
-    public Output<String> getLastEventTime() {
+    public Output<String> lastEventTime() {
         return this.lastEventTime;
     }
     /**
@@ -162,7 +163,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] The last time an MQTT `PINGREQ` was received. This field applies only to devices connecting through MQTT. MQTT clients usually only send `PINGREQ` messages if the connection is idle, and no other messages have been sent. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.
      * 
      */
-    public Output<String> getLastHeartbeatTime() {
+    public Output<String> lastHeartbeatTime() {
         return this.lastHeartbeatTime;
     }
     /**
@@ -176,7 +177,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] The last time a state event was received. Timestamps are periodically collected and written to storage; they may be stale by a few minutes.
      * 
      */
-    public Output<String> getLastStateTime() {
+    public Output<String> lastStateTime() {
         return this.lastStateTime;
     }
     /**
@@ -190,7 +191,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return **Beta Feature** The logging verbosity for device activity. If unspecified, DeviceRegistry.log_level will be used.
      * 
      */
-    public Output<String> getLogLevel() {
+    public Output<String> logLevel() {
         return this.logLevel;
     }
     /**
@@ -204,7 +205,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The metadata key-value pairs assigned to the device. This metadata is not interpreted or indexed by Cloud IoT Core. It can be used to add contextual information for the device. Keys must conform to the regular expression a-zA-Z+ and be less than 128 bytes in length. Values are free-form strings. Each value must be less than or equal to 32 KB in size. The total size of all keys and values must be less than 256 KB, and the maximum number of key-value pairs is 500.
      * 
      */
-    public Output<Map<String,String>> getMetadata() {
+    public Output<Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -218,7 +219,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The resource path name. For example, `projects/p1/locations/us-central1/registries/registry0/devices/dev0` or `projects/p1/locations/us-central1/registries/registry0/devices/{num_id}`. When `name` is populated as a response from the service, it always ends in the device numeric ID.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -232,7 +233,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] A server-defined unique numeric ID for the device. This is a more compact way to identify devices, and it is globally unique.
      * 
      */
-    public Output<String> getNumId() {
+    public Output<String> numId() {
         return this.numId;
     }
     /**
@@ -246,7 +247,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return [Output only] The state most recently received from the device. If no state has been reported, this field is not present.
      * 
      */
-    public Output<DeviceStateResponse> getState() {
+    public Output<DeviceStateResponse> state() {
         return this.state;
     }
 
@@ -272,7 +273,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Device(String name, DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudiot/v1:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudiot/v1:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Device(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     @Import(name="commonAttributes")
       private final @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> commonAttributes;
 
-    public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> getCommonAttributes() {
-        return this.commonAttributes == null ? Output.empty() : this.commonAttributes;
+    public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> commonAttributes() {
+        return this.commonAttributes == null ? Codegen.empty() : this.commonAttributes;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
-    public Output<String> getContentEncoding() {
-        return this.contentEncoding == null ? Output.empty() : this.contentEncoding;
+    public Output<String> contentEncoding() {
+        return this.contentEncoding == null ? Codegen.empty() : this.contentEncoding;
     }
 
     public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs(
@@ -46,8 +47,8 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
     }
 
     private FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs() {
-        this.commonAttributes = Output.empty();
-        this.contentEncoding = Output.empty();
+        this.commonAttributes = Codegen.empty();
+        this.contentEncoding = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
             return this;
         }
         public Builder commonAttributes(@Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs> commonAttributes) {
-            this.commonAttributes = Output.ofNullable(commonAttributes);
+            this.commonAttributes = Codegen.ofNullable(commonAttributes);
             return this;
         }
         public Builder commonAttributes(FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs... commonAttributes) {
@@ -88,7 +89,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
             return this;
         }
         public Builder contentEncoding(@Nullable String contentEncoding) {
-            this.contentEncoding = Output.ofNullable(contentEncoding);
+            this.contentEncoding = Codegen.ofNullable(contentEncoding);
             return this;
         }        public FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs build() {
             return new FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationGetArgs(commonAttributes, contentEncoding);

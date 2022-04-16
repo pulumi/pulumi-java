@@ -6,6 +6,7 @@ package io.pulumi.gcp.vertex;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vertex.AiFeatureStoreEntityTypeArgs;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeState;
@@ -39,7 +40,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * nine fractional digits.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -53,7 +54,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @return Used to perform consistent read-modify-write updates.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -67,7 +68,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @return The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
      * 
      */
-    public Output<String> getFeaturestore() {
+    public Output<String> featurestore() {
         return this.featurestore;
     }
     /**
@@ -81,7 +82,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @return A set of key/value label pairs to assign to this EntityType.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -99,7 +100,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AiFeatureStoreEntityTypeMonitoringConfig> getMonitoringConfig() {
+    public Output</* @Nullable */ AiFeatureStoreEntityTypeMonitoringConfig> monitoringConfig() {
         return this.monitoringConfig;
     }
     /**
@@ -113,7 +114,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @return The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +130,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * to nine fractional digits.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -155,7 +156,7 @@ public class AiFeatureStoreEntityType extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public AiFeatureStoreEntityType(String name, AiFeatureStoreEntityTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:vertex/aiFeatureStoreEntityType:AiFeatureStoreEntityType", name, args == null ? AiFeatureStoreEntityTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:vertex/aiFeatureStoreEntityType:AiFeatureStoreEntityType", name, args == null ? AiFeatureStoreEntityTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AiFeatureStoreEntityType(String name, Output<String> id, @Nullable AiFeatureStoreEntityTypeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

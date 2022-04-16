@@ -9,6 +9,7 @@ import io.pulumi.aws.ebs.inputs.DefaultKmsKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -46,7 +47,7 @@ public class DefaultKmsKey extends io.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use to encrypt the EBS volume.
      * 
      */
-    public Output<String> getKeyArn() {
+    public Output<String> keyArn() {
         return this.keyArn;
     }
 
@@ -72,7 +73,7 @@ public class DefaultKmsKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultKmsKey(String name, DefaultKmsKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ebs/defaultKmsKey:DefaultKmsKey", name, args == null ? DefaultKmsKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ebs/defaultKmsKey:DefaultKmsKey", name, args == null ? DefaultKmsKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DefaultKmsKey(String name, Output<String> id, @Nullable DefaultKmsKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
-    public Output<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
+    public Output<String> destinationCidrBlock() {
+        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<String> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public VpnConnectionRouteArgs(
@@ -57,9 +58,9 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VpnConnectionRouteArgs() {
-        this.destinationCidrBlock = Output.empty();
-        this.source = Output.empty();
-        this.state = Output.empty();
+        this.destinationCidrBlock = Codegen.empty();
+        this.source = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -99,7 +100,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -107,7 +108,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public VpnConnectionRouteArgs build() {
             return new VpnConnectionRouteArgs(destinationCidrBlock, source, state);

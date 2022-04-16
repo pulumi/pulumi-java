@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metrics")
       private final @Nullable Output<List<String>> metrics;
 
-    public Output<List<String>> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+    public Output<List<String>> metrics() {
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monitoredResource")
       private final @Nullable Output<String> monitoredResource;
 
-    public Output<String> getMonitoredResource() {
-        return this.monitoredResource == null ? Output.empty() : this.monitoredResource;
+    public Output<String> monitoredResource() {
+        return this.monitoredResource == null ? Codegen.empty() : this.monitoredResource;
     }
 
     public BillingDestinationArgs(
@@ -49,8 +50,8 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BillingDestinationArgs() {
-        this.metrics = Output.empty();
-        this.monitoredResource = Output.empty();
+        this.metrics = Codegen.empty();
+        this.monitoredResource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder metrics(@Nullable List<String> metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder metrics(String... metrics) {
@@ -91,7 +92,7 @@ public final class BillingDestinationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder monitoredResource(@Nullable String monitoredResource) {
-            this.monitoredResource = Output.ofNullable(monitoredResource);
+            this.monitoredResource = Codegen.ofNullable(monitoredResource);
             return this;
         }        public BillingDestinationArgs build() {
             return new BillingDestinationArgs(metrics, monitoredResource);

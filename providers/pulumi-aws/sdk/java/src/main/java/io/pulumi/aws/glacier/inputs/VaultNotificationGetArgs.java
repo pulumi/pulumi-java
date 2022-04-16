@@ -5,6 +5,7 @@ package io.pulumi.aws.glacier.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class VaultNotificationGetArgs extends io.pulumi.resources.Resource
     @Import(name="events", required=true)
       private final Output<List<String>> events;
 
-    public Output<List<String>> getEvents() {
+    public Output<List<String>> events() {
         return this.events;
     }
 
@@ -32,7 +33,7 @@ public final class VaultNotificationGetArgs extends io.pulumi.resources.Resource
     @Import(name="snsTopic", required=true)
       private final Output<String> snsTopic;
 
-    public Output<String> getSnsTopic() {
+    public Output<String> snsTopic() {
         return this.snsTopic;
     }
 
@@ -44,8 +45,8 @@ public final class VaultNotificationGetArgs extends io.pulumi.resources.Resource
     }
 
     private VaultNotificationGetArgs() {
-        this.events = Output.empty();
-        this.snsTopic = Output.empty();
+        this.events = Codegen.empty();
+        this.snsTopic = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.UserRuleKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configurationName", required=true)
       private final Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
+    public Output<String> configurationName() {
         return this.configurationName;
     }
 
@@ -34,7 +35,7 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,UserRuleKind>> kind;
 
-    public Output<Either<String,UserRuleKind>> getKind() {
+    public Output<Either<String,UserRuleKind>> kind() {
         return this.kind;
     }
 
@@ -45,7 +46,7 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
-    public Output<String> getNetworkManagerName() {
+    public Output<String> networkManagerName() {
         return this.networkManagerName;
     }
 
@@ -56,7 +57,7 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +68,7 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleCollectionName", required=true)
       private final Output<String> ruleCollectionName;
 
-    public Output<String> getRuleCollectionName() {
+    public Output<String> ruleCollectionName() {
         return this.ruleCollectionName;
     }
 
@@ -78,8 +79,8 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     public UserRuleArgs(
@@ -98,12 +99,12 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserRuleArgs() {
-        this.configurationName = Output.empty();
-        this.kind = Output.empty();
-        this.networkManagerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleCollectionName = Output.empty();
-        this.ruleName = Output.empty();
+        this.configurationName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.networkManagerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleCollectionName = Codegen.empty();
+        this.ruleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class UserRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }        public UserRuleArgs build() {
             return new UserRuleArgs(configurationName, kind, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);

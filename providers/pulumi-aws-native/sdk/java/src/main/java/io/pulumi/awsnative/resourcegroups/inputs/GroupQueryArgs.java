@@ -6,6 +6,7 @@ package io.pulumi.awsnative.resourcegroups.inputs;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupTagFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,22 +20,22 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceTypeFilters")
       private final @Nullable Output<List<String>> resourceTypeFilters;
 
-    public Output<List<String>> getResourceTypeFilters() {
-        return this.resourceTypeFilters == null ? Output.empty() : this.resourceTypeFilters;
+    public Output<List<String>> resourceTypeFilters() {
+        return this.resourceTypeFilters == null ? Codegen.empty() : this.resourceTypeFilters;
     }
 
     @Import(name="stackIdentifier")
       private final @Nullable Output<String> stackIdentifier;
 
-    public Output<String> getStackIdentifier() {
-        return this.stackIdentifier == null ? Output.empty() : this.stackIdentifier;
+    public Output<String> stackIdentifier() {
+        return this.stackIdentifier == null ? Codegen.empty() : this.stackIdentifier;
     }
 
     @Import(name="tagFilters")
       private final @Nullable Output<List<GroupTagFilterArgs>> tagFilters;
 
-    public Output<List<GroupTagFilterArgs>> getTagFilters() {
-        return this.tagFilters == null ? Output.empty() : this.tagFilters;
+    public Output<List<GroupTagFilterArgs>> tagFilters() {
+        return this.tagFilters == null ? Codegen.empty() : this.tagFilters;
     }
 
     public GroupQueryArgs(
@@ -47,9 +48,9 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupQueryArgs() {
-        this.resourceTypeFilters = Output.empty();
-        this.stackIdentifier = Output.empty();
-        this.tagFilters = Output.empty();
+        this.resourceTypeFilters = Codegen.empty();
+        this.stackIdentifier = Codegen.empty();
+        this.tagFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
-            this.resourceTypeFilters = Output.ofNullable(resourceTypeFilters);
+            this.resourceTypeFilters = Codegen.ofNullable(resourceTypeFilters);
             return this;
         }
         public Builder resourceTypeFilters(String... resourceTypeFilters) {
@@ -92,7 +93,7 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stackIdentifier(@Nullable String stackIdentifier) {
-            this.stackIdentifier = Output.ofNullable(stackIdentifier);
+            this.stackIdentifier = Codegen.ofNullable(stackIdentifier);
             return this;
         }
         public Builder tagFilters(@Nullable Output<List<GroupTagFilterArgs>> tagFilters) {
@@ -100,7 +101,7 @@ public final class GroupQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagFilters(@Nullable List<GroupTagFilterArgs> tagFilters) {
-            this.tagFilters = Output.ofNullable(tagFilters);
+            this.tagFilters = Codegen.ofNullable(tagFilters);
             return this;
         }
         public Builder tagFilters(GroupTagFilterArgs... tagFilters) {

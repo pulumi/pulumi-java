@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizerFunctionArn")
       private final @Nullable Output<String> authorizerFunctionArn;
 
-    public Output<String> getAuthorizerFunctionArn() {
-        return this.authorizerFunctionArn == null ? Output.empty() : this.authorizerFunctionArn;
+    public Output<String> authorizerFunctionArn() {
+        return this.authorizerFunctionArn == null ? Codegen.empty() : this.authorizerFunctionArn;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="signingDisabled")
       private final @Nullable Output<Boolean> signingDisabled;
 
-    public Output<Boolean> getSigningDisabled() {
-        return this.signingDisabled == null ? Output.empty() : this.signingDisabled;
+    public Output<Boolean> signingDisabled() {
+        return this.signingDisabled == null ? Codegen.empty() : this.signingDisabled;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenKeyName")
       private final @Nullable Output<String> tokenKeyName;
 
-    public Output<String> getTokenKeyName() {
-        return this.tokenKeyName == null ? Output.empty() : this.tokenKeyName;
+    public Output<String> tokenKeyName() {
+        return this.tokenKeyName == null ? Codegen.empty() : this.tokenKeyName;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tokenSigningPublicKeys")
       private final @Nullable Output<Map<String,String>> tokenSigningPublicKeys;
 
-    public Output<Map<String,String>> getTokenSigningPublicKeys() {
-        return this.tokenSigningPublicKeys == null ? Output.empty() : this.tokenSigningPublicKeys;
+    public Output<Map<String,String>> tokenSigningPublicKeys() {
+        return this.tokenSigningPublicKeys == null ? Codegen.empty() : this.tokenSigningPublicKeys;
     }
 
     public AuthorizerState(
@@ -111,13 +112,13 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorizerState() {
-        this.arn = Output.empty();
-        this.authorizerFunctionArn = Output.empty();
-        this.name = Output.empty();
-        this.signingDisabled = Output.empty();
-        this.status = Output.empty();
-        this.tokenKeyName = Output.empty();
-        this.tokenSigningPublicKeys = Output.empty();
+        this.arn = Codegen.empty();
+        this.authorizerFunctionArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.signingDisabled = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tokenKeyName = Codegen.empty();
+        this.tokenSigningPublicKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authorizerFunctionArn(@Nullable Output<String> authorizerFunctionArn) {
@@ -165,7 +166,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizerFunctionArn(@Nullable String authorizerFunctionArn) {
-            this.authorizerFunctionArn = Output.ofNullable(authorizerFunctionArn);
+            this.authorizerFunctionArn = Codegen.ofNullable(authorizerFunctionArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -173,7 +174,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder signingDisabled(@Nullable Output<Boolean> signingDisabled) {
@@ -181,7 +182,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signingDisabled(@Nullable Boolean signingDisabled) {
-            this.signingDisabled = Output.ofNullable(signingDisabled);
+            this.signingDisabled = Codegen.ofNullable(signingDisabled);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -189,7 +190,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tokenKeyName(@Nullable Output<String> tokenKeyName) {
@@ -197,7 +198,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tokenKeyName(@Nullable String tokenKeyName) {
-            this.tokenKeyName = Output.ofNullable(tokenKeyName);
+            this.tokenKeyName = Codegen.ofNullable(tokenKeyName);
             return this;
         }
         public Builder tokenSigningPublicKeys(@Nullable Output<Map<String,String>> tokenSigningPublicKeys) {
@@ -205,7 +206,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tokenSigningPublicKeys(@Nullable Map<String,String> tokenSigningPublicKeys) {
-            this.tokenSigningPublicKeys = Output.ofNullable(tokenSigningPublicKeys);
+            this.tokenSigningPublicKeys = Codegen.ofNullable(tokenSigningPublicKeys);
             return this;
         }        public AuthorizerState build() {
             return new AuthorizerState(arn, authorizerFunctionArn, name, signingDisabled, status, tokenKeyName, tokenSigningPublicKeys);

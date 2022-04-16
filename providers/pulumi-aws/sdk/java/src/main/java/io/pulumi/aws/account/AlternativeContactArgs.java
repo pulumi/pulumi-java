@@ -5,6 +5,7 @@ package io.pulumi.aws.account;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="alternateContactType", required=true)
       private final Output<String> alternateContactType;
 
-    public Output<String> getAlternateContactType() {
+    public Output<String> alternateContactType() {
         return this.alternateContactType;
     }
 
@@ -43,7 +44,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
 
@@ -54,8 +55,8 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
-    public Output<String> getPhoneNumber() {
+    public Output<String> phoneNumber() {
         return this.phoneNumber;
     }
 
@@ -76,7 +77,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -96,12 +97,12 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AlternativeContactArgs() {
-        this.accountId = Output.empty();
-        this.alternateContactType = Output.empty();
-        this.emailAddress = Output.empty();
-        this.name = Output.empty();
-        this.phoneNumber = Output.empty();
-        this.title = Output.empty();
+        this.accountId = Codegen.empty();
+        this.alternateContactType = Codegen.empty();
+        this.emailAddress = Codegen.empty();
+        this.name = Codegen.empty();
+        this.phoneNumber = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder alternateContactType(Output<String> alternateContactType) {
@@ -163,7 +164,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder phoneNumber(Output<String> phoneNumber) {

@@ -11,6 +11,7 @@ import io.pulumi.awsnative.servicecatalog.outputs.ServiceActionDefinitionParamet
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -24,31 +25,31 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
     @Export(name="acceptLanguage", type=ServiceActionAcceptLanguage.class, parameters={})
     private Output</* @Nullable */ ServiceActionAcceptLanguage> acceptLanguage;
 
-    public Output</* @Nullable */ ServiceActionAcceptLanguage> getAcceptLanguage() {
+    public Output</* @Nullable */ ServiceActionAcceptLanguage> acceptLanguage() {
         return this.acceptLanguage;
     }
     @Export(name="definition", type=List.class, parameters={ServiceActionDefinitionParameter.class})
     private Output<List<ServiceActionDefinitionParameter>> definition;
 
-    public Output<List<ServiceActionDefinitionParameter>> getDefinition() {
+    public Output<List<ServiceActionDefinitionParameter>> definition() {
         return this.definition;
     }
     @Export(name="definitionType", type=ServiceActionDefinitionType.class, parameters={})
     private Output<ServiceActionDefinitionType> definitionType;
 
-    public Output<ServiceActionDefinitionType> getDefinitionType() {
+    public Output<ServiceActionDefinitionType> definitionType() {
         return this.definitionType;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -74,7 +75,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceAction(String name, ServiceActionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:servicecatalog:ServiceAction", name, args == null ? ServiceActionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:servicecatalog:ServiceAction", name, args == null ? ServiceActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceAction(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

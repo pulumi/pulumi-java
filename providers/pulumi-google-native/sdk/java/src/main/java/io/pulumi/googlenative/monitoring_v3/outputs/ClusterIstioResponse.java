@@ -46,28 +46,28 @@ public final class ClusterIstioResponse {
      * The name of the Kubernetes cluster in which this Istio service is defined. Corresponds to the cluster_name resource label in k8s_cluster resources.
      * 
     */
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
     /**
      * The location of the Kubernetes cluster in which this Istio service is defined. Corresponds to the location resource label in k8s_cluster resources.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the Istio service underlying this service. Corresponds to the destination_service_name metric label in Istio metrics.
      * 
     */
-    public String getServiceName() {
+    public String serviceName() {
         return this.serviceName;
     }
     /**
      * The namespace of the Istio service underlying this service. Corresponds to the destination_service_namespace metric label in Istio metrics.
      * 
     */
-    public String getServiceNamespace() {
+    public String serviceNamespace() {
         return this.serviceNamespace;
     }
 

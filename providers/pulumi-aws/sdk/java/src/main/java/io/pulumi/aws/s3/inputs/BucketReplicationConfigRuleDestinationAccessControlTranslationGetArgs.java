@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
     @Import(name="owner", required=true)
       private final Output<String> owner;
 
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
 
@@ -29,7 +30,7 @@ public final class BucketReplicationConfigRuleDestinationAccessControlTranslatio
     }
 
     private BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs() {
-        this.owner = Output.empty();
+        this.owner = Codegen.empty();
     }
 
     public static Builder builder() {

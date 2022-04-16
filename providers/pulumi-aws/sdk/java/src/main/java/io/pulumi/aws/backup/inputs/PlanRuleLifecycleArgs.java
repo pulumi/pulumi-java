@@ -5,6 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PlanRuleLifecycleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="coldStorageAfter")
       private final @Nullable Output<Integer> coldStorageAfter;
 
-    public Output<Integer> getColdStorageAfter() {
-        return this.coldStorageAfter == null ? Output.empty() : this.coldStorageAfter;
+    public Output<Integer> coldStorageAfter() {
+        return this.coldStorageAfter == null ? Codegen.empty() : this.coldStorageAfter;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PlanRuleLifecycleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="deleteAfter")
       private final @Nullable Output<Integer> deleteAfter;
 
-    public Output<Integer> getDeleteAfter() {
-        return this.deleteAfter == null ? Output.empty() : this.deleteAfter;
+    public Output<Integer> deleteAfter() {
+        return this.deleteAfter == null ? Codegen.empty() : this.deleteAfter;
     }
 
     public PlanRuleLifecycleArgs(
@@ -44,8 +45,8 @@ public final class PlanRuleLifecycleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PlanRuleLifecycleArgs() {
-        this.coldStorageAfter = Output.empty();
-        this.deleteAfter = Output.empty();
+        this.coldStorageAfter = Codegen.empty();
+        this.deleteAfter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PlanRuleLifecycleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder coldStorageAfter(@Nullable Integer coldStorageAfter) {
-            this.coldStorageAfter = Output.ofNullable(coldStorageAfter);
+            this.coldStorageAfter = Codegen.ofNullable(coldStorageAfter);
             return this;
         }
         public Builder deleteAfter(@Nullable Output<Integer> deleteAfter) {
@@ -83,7 +84,7 @@ public final class PlanRuleLifecycleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deleteAfter(@Nullable Integer deleteAfter) {
-            this.deleteAfter = Output.ofNullable(deleteAfter);
+            this.deleteAfter = Codegen.ofNullable(deleteAfter);
             return this;
         }        public PlanRuleLifecycleArgs build() {
             return new PlanRuleLifecycleArgs(coldStorageAfter, deleteAfter);

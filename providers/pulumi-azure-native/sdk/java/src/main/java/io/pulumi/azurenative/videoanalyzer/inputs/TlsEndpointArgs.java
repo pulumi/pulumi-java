@@ -9,6 +9,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.TlsValidationOptionsArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials", required=true)
       private final Output<UsernamePasswordCredentialsArgs> credentials;
 
-    public Output<UsernamePasswordCredentialsArgs> getCredentials() {
+    public Output<UsernamePasswordCredentialsArgs> credentials() {
         return this.credentials;
     }
 
@@ -40,8 +41,8 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustedCertificates")
       private final @Nullable Output<PemCertificateListArgs> trustedCertificates;
 
-    public Output<PemCertificateListArgs> getTrustedCertificates() {
-        return this.trustedCertificates == null ? Output.empty() : this.trustedCertificates;
+    public Output<PemCertificateListArgs> trustedCertificates() {
+        return this.trustedCertificates == null ? Codegen.empty() : this.trustedCertificates;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel")
       private final @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
-    public Output<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
-        return this.tunnel == null ? Output.empty() : this.tunnel;
+    public Output<SecureIotDeviceRemoteTunnelArgs> tunnel() {
+        return this.tunnel == null ? Codegen.empty() : this.tunnel;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -74,7 +75,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -85,8 +86,8 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationOptions")
       private final @Nullable Output<TlsValidationOptionsArgs> validationOptions;
 
-    public Output<TlsValidationOptionsArgs> getValidationOptions() {
-        return this.validationOptions == null ? Output.empty() : this.validationOptions;
+    public Output<TlsValidationOptionsArgs> validationOptions() {
+        return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
     }
 
     public TlsEndpointArgs(
@@ -105,12 +106,12 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TlsEndpointArgs() {
-        this.credentials = Output.empty();
-        this.trustedCertificates = Output.empty();
-        this.tunnel = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
-        this.validationOptions = Output.empty();
+        this.credentials = Codegen.empty();
+        this.trustedCertificates = Codegen.empty();
+        this.tunnel = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
+        this.validationOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustedCertificates(@Nullable PemCertificateListArgs trustedCertificates) {
-            this.trustedCertificates = Output.ofNullable(trustedCertificates);
+            this.trustedCertificates = Codegen.ofNullable(trustedCertificates);
             return this;
         }
         public Builder tunnel(@Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel) {
@@ -164,7 +165,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
-            this.tunnel = Output.ofNullable(tunnel);
+            this.tunnel = Codegen.ofNullable(tunnel);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -188,7 +189,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validationOptions(@Nullable TlsValidationOptionsArgs validationOptions) {
-            this.validationOptions = Output.ofNullable(validationOptions);
+            this.validationOptions = Codegen.ofNullable(validationOptions);
             return this;
         }        public TlsEndpointArgs build() {
             return new TlsEndpointArgs(credentials, trustedCertificates, tunnel, type, url, validationOptions);

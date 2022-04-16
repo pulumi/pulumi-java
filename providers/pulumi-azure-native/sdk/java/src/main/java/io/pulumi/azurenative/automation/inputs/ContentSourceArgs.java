@@ -8,6 +8,7 @@ import io.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hash")
       private final @Nullable Output<ContentHashArgs> hash;
 
-    public Output<ContentHashArgs> getHash() {
-        return this.hash == null ? Output.empty() : this.hash;
+    public Output<ContentHashArgs> hash() {
+        return this.hash == null ? Codegen.empty() : this.hash;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,ContentSourceType>> type;
 
-    public Output<Either<String,ContentSourceType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,ContentSourceType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ContentSourceArgs(
@@ -77,10 +78,10 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContentSourceArgs() {
-        this.hash = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
-        this.version = Output.empty();
+        this.hash = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hash(@Nullable ContentHashArgs hash) {
-            this.hash = Output.ofNullable(hash);
+            this.hash = Codegen.ofNullable(hash);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,ContentSourceType>> type) {
@@ -122,7 +123,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,ContentSourceType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -130,7 +131,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -138,7 +139,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ContentSourceArgs build() {
             return new ContentSourceArgs(hash, type, value, version);

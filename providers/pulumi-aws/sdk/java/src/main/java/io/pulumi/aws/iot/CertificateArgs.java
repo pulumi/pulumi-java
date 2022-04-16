@@ -5,6 +5,7 @@ package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="active", required=true)
       private final Output<Boolean> active;
 
-    public Output<Boolean> getActive() {
+    public Output<Boolean> active() {
         return this.active;
     }
 
@@ -37,8 +38,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="csr")
       private final @Nullable Output<String> csr;
 
-    public Output<String> getCsr() {
-        return this.csr == null ? Output.empty() : this.csr;
+    public Output<String> csr() {
+        return this.csr == null ? Codegen.empty() : this.csr;
     }
 
     public CertificateArgs(
@@ -49,8 +50,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.active = Output.empty();
-        this.csr = Output.empty();
+        this.active = Codegen.empty();
+        this.csr = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder csr(@Nullable String csr) {
-            this.csr = Output.ofNullable(csr);
+            this.csr = Codegen.ofNullable(csr);
             return this;
         }        public CertificateArgs build() {
             return new CertificateArgs(active, csr);

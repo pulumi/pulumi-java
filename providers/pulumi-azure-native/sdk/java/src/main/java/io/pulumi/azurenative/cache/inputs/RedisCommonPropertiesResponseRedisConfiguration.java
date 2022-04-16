@@ -25,7 +25,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="aofStorageConnectionString0")
       private final @Nullable String aofStorageConnectionString0;
 
-    public Optional<String> getAofStorageConnectionString0() {
+    public Optional<String> aofStorageConnectionString0() {
         return this.aofStorageConnectionString0 == null ? Optional.empty() : Optional.ofNullable(this.aofStorageConnectionString0);
     }
 
@@ -36,7 +36,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="aofStorageConnectionString1")
       private final @Nullable String aofStorageConnectionString1;
 
-    public Optional<String> getAofStorageConnectionString1() {
+    public Optional<String> aofStorageConnectionString1() {
         return this.aofStorageConnectionString1 == null ? Optional.empty() : Optional.ofNullable(this.aofStorageConnectionString1);
     }
 
@@ -47,7 +47,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="maxclients", required=true)
       private final String maxclients;
 
-    public String getMaxclients() {
+    public String maxclients() {
         return this.maxclients;
     }
 
@@ -58,7 +58,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="maxfragmentationmemoryReserved")
       private final @Nullable String maxfragmentationmemoryReserved;
 
-    public Optional<String> getMaxfragmentationmemoryReserved() {
+    public Optional<String> maxfragmentationmemoryReserved() {
         return this.maxfragmentationmemoryReserved == null ? Optional.empty() : Optional.ofNullable(this.maxfragmentationmemoryReserved);
     }
 
@@ -69,7 +69,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="maxmemoryDelta")
       private final @Nullable String maxmemoryDelta;
 
-    public Optional<String> getMaxmemoryDelta() {
+    public Optional<String> maxmemoryDelta() {
         return this.maxmemoryDelta == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryDelta);
     }
 
@@ -80,7 +80,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="maxmemoryPolicy")
       private final @Nullable String maxmemoryPolicy;
 
-    public Optional<String> getMaxmemoryPolicy() {
+    public Optional<String> maxmemoryPolicy() {
         return this.maxmemoryPolicy == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryPolicy);
     }
 
@@ -91,7 +91,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="maxmemoryReserved")
       private final @Nullable String maxmemoryReserved;
 
-    public Optional<String> getMaxmemoryReserved() {
+    public Optional<String> maxmemoryReserved() {
         return this.maxmemoryReserved == null ? Optional.empty() : Optional.ofNullable(this.maxmemoryReserved);
     }
 
@@ -102,7 +102,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="rdbBackupEnabled")
       private final @Nullable String rdbBackupEnabled;
 
-    public Optional<String> getRdbBackupEnabled() {
+    public Optional<String> rdbBackupEnabled() {
         return this.rdbBackupEnabled == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupEnabled);
     }
 
@@ -113,7 +113,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="rdbBackupFrequency")
       private final @Nullable String rdbBackupFrequency;
 
-    public Optional<String> getRdbBackupFrequency() {
+    public Optional<String> rdbBackupFrequency() {
         return this.rdbBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupFrequency);
     }
 
@@ -124,7 +124,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="rdbBackupMaxSnapshotCount")
       private final @Nullable String rdbBackupMaxSnapshotCount;
 
-    public Optional<String> getRdbBackupMaxSnapshotCount() {
+    public Optional<String> rdbBackupMaxSnapshotCount() {
         return this.rdbBackupMaxSnapshotCount == null ? Optional.empty() : Optional.ofNullable(this.rdbBackupMaxSnapshotCount);
     }
 
@@ -135,7 +135,7 @@ public final class RedisCommonPropertiesResponseRedisConfiguration extends io.pu
     @Import(name="rdbStorageConnectionString")
       private final @Nullable String rdbStorageConnectionString;
 
-    public Optional<String> getRdbStorageConnectionString() {
+    public Optional<String> rdbStorageConnectionString() {
         return this.rdbStorageConnectionString == null ? Optional.empty() : Optional.ofNullable(this.rdbStorageConnectionString);
     }
 

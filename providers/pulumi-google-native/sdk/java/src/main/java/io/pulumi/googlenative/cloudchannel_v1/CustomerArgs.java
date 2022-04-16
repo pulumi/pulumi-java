@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ContactInfoArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleTypePostalAddressArgs;
 import java.lang.String;
@@ -19,7 +20,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
 
@@ -30,8 +31,8 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alternateEmail")
       private final @Nullable Output<String> alternateEmail;
 
-    public Output<String> getAlternateEmail() {
-        return this.alternateEmail == null ? Output.empty() : this.alternateEmail;
+    public Output<String> alternateEmail() {
+        return this.alternateEmail == null ? Codegen.empty() : this.alternateEmail;
     }
 
     /**
@@ -41,14 +42,14 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelPartnerId")
       private final @Nullable Output<String> channelPartnerId;
 
-    public Output<String> getChannelPartnerId() {
-        return this.channelPartnerId == null ? Output.empty() : this.channelPartnerId;
+    public Output<String> channelPartnerId() {
+        return this.channelPartnerId == null ? Codegen.empty() : this.channelPartnerId;
     }
 
     @Import(name="channelPartnerLinkId", required=true)
       private final Output<String> channelPartnerLinkId;
 
-    public Output<String> getChannelPartnerLinkId() {
+    public Output<String> channelPartnerLinkId() {
         return this.channelPartnerLinkId;
     }
 
@@ -59,7 +60,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -70,8 +71,8 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
-    public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+    public Output<String> languageCode() {
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgDisplayName", required=true)
       private final Output<String> orgDisplayName;
 
-    public Output<String> getOrgDisplayName() {
+    public Output<String> orgDisplayName() {
         return this.orgDisplayName;
     }
 
@@ -92,7 +93,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgPostalAddress", required=true)
       private final Output<GoogleTypePostalAddressArgs> orgPostalAddress;
 
-    public Output<GoogleTypePostalAddressArgs> getOrgPostalAddress() {
+    public Output<GoogleTypePostalAddressArgs> orgPostalAddress() {
         return this.orgPostalAddress;
     }
 
@@ -103,8 +104,8 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryContactInfo")
       private final @Nullable Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo;
 
-    public Output<GoogleCloudChannelV1ContactInfoArgs> getPrimaryContactInfo() {
-        return this.primaryContactInfo == null ? Output.empty() : this.primaryContactInfo;
+    public Output<GoogleCloudChannelV1ContactInfoArgs> primaryContactInfo() {
+        return this.primaryContactInfo == null ? Codegen.empty() : this.primaryContactInfo;
     }
 
     public CustomerArgs(
@@ -129,15 +130,15 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomerArgs() {
-        this.accountId = Output.empty();
-        this.alternateEmail = Output.empty();
-        this.channelPartnerId = Output.empty();
-        this.channelPartnerLinkId = Output.empty();
-        this.domain = Output.empty();
-        this.languageCode = Output.empty();
-        this.orgDisplayName = Output.empty();
-        this.orgPostalAddress = Output.empty();
-        this.primaryContactInfo = Output.empty();
+        this.accountId = Codegen.empty();
+        this.alternateEmail = Codegen.empty();
+        this.channelPartnerId = Codegen.empty();
+        this.channelPartnerLinkId = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.orgDisplayName = Codegen.empty();
+        this.orgPostalAddress = Codegen.empty();
+        this.primaryContactInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alternateEmail(@Nullable String alternateEmail) {
-            this.alternateEmail = Output.ofNullable(alternateEmail);
+            this.alternateEmail = Codegen.ofNullable(alternateEmail);
             return this;
         }
         public Builder channelPartnerId(@Nullable Output<String> channelPartnerId) {
@@ -197,7 +198,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelPartnerId(@Nullable String channelPartnerId) {
-            this.channelPartnerId = Output.ofNullable(channelPartnerId);
+            this.channelPartnerId = Codegen.ofNullable(channelPartnerId);
             return this;
         }
         public Builder channelPartnerLinkId(Output<String> channelPartnerLinkId) {
@@ -221,7 +222,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder orgDisplayName(Output<String> orgDisplayName) {
@@ -245,7 +246,7 @@ public final class CustomerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryContactInfo(@Nullable GoogleCloudChannelV1ContactInfoArgs primaryContactInfo) {
-            this.primaryContactInfo = Output.ofNullable(primaryContactInfo);
+            this.primaryContactInfo = Codegen.ofNullable(primaryContactInfo);
             return this;
         }        public CustomerArgs build() {
             return new CustomerArgs(accountId, alternateEmail, channelPartnerId, channelPartnerLinkId, domain, languageCode, orgDisplayName, orgPostalAddress, primaryContactInfo);

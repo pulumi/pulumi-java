@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,7 +49,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     @Import(name="properties", required=true)
       private final Output<LoadBalancerConfigurationPropertiesArgs> properties;
 
-    public Output<LoadBalancerConfigurationPropertiesArgs> getProperties() {
+    public Output<LoadBalancerConfigurationPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -62,9 +63,9 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private LoadBalancerConfigurationArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(Output<String> name) {

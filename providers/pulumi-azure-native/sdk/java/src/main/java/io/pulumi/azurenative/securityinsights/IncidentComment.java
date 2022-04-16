@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @return Describes the client that created the comment
      * 
      */
-    public Output<ClientInfoResponse> getAuthor() {
+    public Output<ClientInfoResponse> author() {
         return this.author;
     }
     /**
@@ -57,7 +58,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @return The time the comment was created
      * 
      */
-    public Output<String> getCreatedTimeUtc() {
+    public Output<String> createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
@@ -71,7 +72,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -85,7 +86,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @return The time the comment was updated
      * 
      */
-    public Output<String> getLastModifiedTimeUtc() {
+    public Output<String> lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
@@ -99,7 +100,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @return The comment message
      * 
      */
-    public Output<String> getMessage() {
+    public Output<String> message() {
         return this.message;
     }
     /**
@@ -113,7 +114,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -141,7 +142,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class IncidentComment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IncidentComment(String name, IncidentCommentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:IncidentComment", name, args == null ? IncidentCommentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:IncidentComment", name, args == null ? IncidentCommentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IncidentComment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

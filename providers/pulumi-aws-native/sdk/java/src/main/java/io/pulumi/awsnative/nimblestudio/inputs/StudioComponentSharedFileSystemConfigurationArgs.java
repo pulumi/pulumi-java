@@ -5,6 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<String> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
-        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
+    public Output<String> fileSystemId() {
+        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
     @Import(name="linuxMountPoint")
       private final @Nullable Output<String> linuxMountPoint;
 
-    public Output<String> getLinuxMountPoint() {
-        return this.linuxMountPoint == null ? Output.empty() : this.linuxMountPoint;
+    public Output<String> linuxMountPoint() {
+        return this.linuxMountPoint == null ? Codegen.empty() : this.linuxMountPoint;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
     @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
-    public Output<String> getShareName() {
-        return this.shareName == null ? Output.empty() : this.shareName;
+    public Output<String> shareName() {
+        return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
     @Import(name="windowsMountDrive")
       private final @Nullable Output<String> windowsMountDrive;
 
-    public Output<String> getWindowsMountDrive() {
-        return this.windowsMountDrive == null ? Output.empty() : this.windowsMountDrive;
+    public Output<String> windowsMountDrive() {
+        return this.windowsMountDrive == null ? Codegen.empty() : this.windowsMountDrive;
     }
 
     public StudioComponentSharedFileSystemConfigurationArgs(
@@ -87,11 +88,11 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
     }
 
     private StudioComponentSharedFileSystemConfigurationArgs() {
-        this.endpoint = Output.empty();
-        this.fileSystemId = Output.empty();
-        this.linuxMountPoint = Output.empty();
-        this.shareName = Output.empty();
-        this.windowsMountDrive = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
+        this.linuxMountPoint = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.windowsMountDrive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
@@ -135,7 +136,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
             return this;
         }
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Output.ofNullable(fileSystemId);
+            this.fileSystemId = Codegen.ofNullable(fileSystemId);
             return this;
         }
         public Builder linuxMountPoint(@Nullable Output<String> linuxMountPoint) {
@@ -143,7 +144,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
             return this;
         }
         public Builder linuxMountPoint(@Nullable String linuxMountPoint) {
-            this.linuxMountPoint = Output.ofNullable(linuxMountPoint);
+            this.linuxMountPoint = Codegen.ofNullable(linuxMountPoint);
             return this;
         }
         public Builder shareName(@Nullable Output<String> shareName) {
@@ -151,7 +152,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
             return this;
         }
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Output.ofNullable(shareName);
+            this.shareName = Codegen.ofNullable(shareName);
             return this;
         }
         public Builder windowsMountDrive(@Nullable Output<String> windowsMountDrive) {
@@ -159,7 +160,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
             return this;
         }
         public Builder windowsMountDrive(@Nullable String windowsMountDrive) {
-            this.windowsMountDrive = Output.ofNullable(windowsMountDrive);
+            this.windowsMountDrive = Codegen.ofNullable(windowsMountDrive);
             return this;
         }        public StudioComponentSharedFileSystemConfigurationArgs build() {
             return new StudioComponentSharedFileSystemConfigurationArgs(endpoint, fileSystemId, linuxMountPoint, shareName, windowsMountDrive);

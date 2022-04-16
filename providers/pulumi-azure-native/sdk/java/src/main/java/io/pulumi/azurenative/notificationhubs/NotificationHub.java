@@ -17,6 +17,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -50,7 +51,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The AdmCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ AdmCredentialResponse> getAdmCredential() {
+    public Output</* @Nullable */ AdmCredentialResponse> admCredential() {
         return this.admCredential;
     }
     /**
@@ -64,7 +65,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The ApnsCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ ApnsCredentialResponse> getApnsCredential() {
+    public Output</* @Nullable */ ApnsCredentialResponse> apnsCredential() {
         return this.apnsCredential;
     }
     /**
@@ -78,7 +79,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The AuthorizationRules of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ List<SharedAccessAuthorizationRulePropertiesResponse>> getAuthorizationRules() {
+    public Output</* @Nullable */ List<SharedAccessAuthorizationRulePropertiesResponse>> authorizationRules() {
         return this.authorizationRules;
     }
     /**
@@ -92,7 +93,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The BaiduCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ BaiduCredentialResponse> getBaiduCredential() {
+    public Output</* @Nullable */ BaiduCredentialResponse> baiduCredential() {
         return this.baiduCredential;
     }
     /**
@@ -106,7 +107,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The GcmCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ GcmCredentialResponse> getGcmCredential() {
+    public Output</* @Nullable */ GcmCredentialResponse> gcmCredential() {
         return this.gcmCredential;
     }
     /**
@@ -120,7 +121,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -134,7 +135,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The MpnsCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ MpnsCredentialResponse> getMpnsCredential() {
+    public Output</* @Nullable */ MpnsCredentialResponse> mpnsCredential() {
         return this.mpnsCredential;
     }
     /**
@@ -148,7 +149,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -162,7 +163,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The RegistrationTtl of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ String> getRegistrationTtl() {
+    public Output</* @Nullable */ String> registrationTtl() {
         return this.registrationTtl;
     }
     /**
@@ -176,7 +177,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The sku of the created namespace
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -190,7 +191,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -204,7 +205,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -218,7 +219,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @return The WnsCredential of the created NotificationHub
      * 
      */
-    public Output</* @Nullable */ WnsCredentialResponse> getWnsCredential() {
+    public Output</* @Nullable */ WnsCredentialResponse> wnsCredential() {
         return this.wnsCredential;
     }
 
@@ -244,7 +245,7 @@ public class NotificationHub extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationHub(String name, NotificationHubArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:notificationhubs:NotificationHub", name, args == null ? NotificationHubArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:notificationhubs:NotificationHub", name, args == null ? NotificationHubArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationHub(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

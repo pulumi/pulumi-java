@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * @return The end IP address of the firewall rule. Must be IPv6 format. Must be greater than or equal to startIpAddress.
      * 
      */
-    public Output</* @Nullable */ String> getEndIPv6Address() {
+    public Output</* @Nullable */ String> endIPv6Address() {
         return this.endIPv6Address;
     }
     /**
@@ -55,7 +56,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * @return The start IP address of the firewall rule. Must be IPv6 format.
      * 
      */
-    public Output</* @Nullable */ String> getStartIPv6Address() {
+    public Output</* @Nullable */ String> startIPv6Address() {
         return this.startIPv6Address;
     }
     /**
@@ -83,7 +84,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class IPv6FirewallRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IPv6FirewallRule(String name, IPv6FirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:IPv6FirewallRule", name, args == null ? IPv6FirewallRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:IPv6FirewallRule", name, args == null ? IPv6FirewallRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IPv6FirewallRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

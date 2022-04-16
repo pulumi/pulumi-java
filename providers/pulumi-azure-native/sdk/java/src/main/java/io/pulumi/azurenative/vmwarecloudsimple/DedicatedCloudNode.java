@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Availability Zone id, e.g. "az1"
      * 
      */
-    public Output<String> getAvailabilityZoneId() {
+    public Output<String> availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
@@ -58,7 +59,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Availability Zone name, e.g. "Availability Zone 1"
      * 
      */
-    public Output<String> getAvailabilityZoneName() {
+    public Output<String> availabilityZoneName() {
         return this.availabilityZoneName;
     }
     /**
@@ -72,7 +73,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return VMWare Cloud Rack Name
      * 
      */
-    public Output<String> getCloudRackName() {
+    public Output<String> cloudRackName() {
         return this.cloudRackName;
     }
     /**
@@ -86,7 +87,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return date time the resource was created
      * 
      */
-    public Output<String> getCreated() {
+    public Output<String> created() {
         return this.created;
     }
     /**
@@ -100,7 +101,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Azure region
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -114,7 +115,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return SKU's name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return count of nodes to create
      * 
      */
-    public Output<Integer> getNodesCount() {
+    public Output<Integer> nodesCount() {
         return this.nodesCount;
     }
     /**
@@ -142,7 +143,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Placement Group id, e.g. "n1"
      * 
      */
-    public Output<String> getPlacementGroupId() {
+    public Output<String> placementGroupId() {
         return this.placementGroupId;
     }
     /**
@@ -156,7 +157,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Placement Name, e.g. "Placement Group 1"
      * 
      */
-    public Output<String> getPlacementGroupName() {
+    public Output<String> placementGroupName() {
         return this.placementGroupName;
     }
     /**
@@ -170,7 +171,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Private Cloud Id
      * 
      */
-    public Output<String> getPrivateCloudId() {
+    public Output<String> privateCloudId() {
         return this.privateCloudId;
     }
     /**
@@ -184,7 +185,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Resource Pool Name
      * 
      */
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
     /**
@@ -198,7 +199,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -212,7 +213,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return purchase id
      * 
      */
-    public Output<String> getPurchaseId() {
+    public Output<String> purchaseId() {
         return this.purchaseId;
     }
     /**
@@ -226,7 +227,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Dedicated Cloud Nodes SKU
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -240,7 +241,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Node status, indicates is private cloud set up on this node or not
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -254,7 +255,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return Dedicated Cloud Nodes tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -268,7 +269,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return {resourceProviderNamespace}/{resourceType}
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -282,7 +283,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @return VMWare Cluster Name
      * 
      */
-    public Output<String> getVmwareClusterName() {
+    public Output<String> vmwareClusterName() {
         return this.vmwareClusterName;
     }
 
@@ -308,7 +309,7 @@ public class DedicatedCloudNode extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DedicatedCloudNode(String name, DedicatedCloudNodeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:vmwarecloudsimple:DedicatedCloudNode", name, args == null ? DedicatedCloudNodeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:vmwarecloudsimple:DedicatedCloudNode", name, args == null ? DedicatedCloudNodeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DedicatedCloudNode(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

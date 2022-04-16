@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.inputs.PrefixListEntryArgs;
 import io.pulumi.awsnative.ec2.inputs.PrefixListTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressFamily", required=true)
       private final Output<PrefixListAddressFamily> addressFamily;
 
-    public Output<PrefixListAddressFamily> getAddressFamily() {
+    public Output<PrefixListAddressFamily> addressFamily() {
         return this.addressFamily;
     }
 
@@ -37,8 +38,8 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entries")
       private final @Nullable Output<List<PrefixListEntryArgs>> entries;
 
-    public Output<List<PrefixListEntryArgs>> getEntries() {
-        return this.entries == null ? Output.empty() : this.entries;
+    public Output<List<PrefixListEntryArgs>> entries() {
+        return this.entries == null ? Codegen.empty() : this.entries;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxEntries", required=true)
       private final Output<Integer> maxEntries;
 
-    public Output<Integer> getMaxEntries() {
+    public Output<Integer> maxEntries() {
         return this.maxEntries;
     }
 
@@ -59,8 +60,8 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefixListName")
       private final @Nullable Output<String> prefixListName;
 
-    public Output<String> getPrefixListName() {
-        return this.prefixListName == null ? Output.empty() : this.prefixListName;
+    public Output<String> prefixListName() {
+        return this.prefixListName == null ? Codegen.empty() : this.prefixListName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<PrefixListTagArgs>> tags;
 
-    public Output<List<PrefixListTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<PrefixListTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PrefixListArgs(
@@ -88,11 +89,11 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrefixListArgs() {
-        this.addressFamily = Output.empty();
-        this.entries = Output.empty();
-        this.maxEntries = Output.empty();
-        this.prefixListName = Output.empty();
-        this.tags = Output.empty();
+        this.addressFamily = Codegen.empty();
+        this.entries = Codegen.empty();
+        this.maxEntries = Codegen.empty();
+        this.prefixListName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entries(@Nullable List<PrefixListEntryArgs> entries) {
-            this.entries = Output.ofNullable(entries);
+            this.entries = Codegen.ofNullable(entries);
             return this;
         }
         public Builder entries(PrefixListEntryArgs... entries) {
@@ -155,7 +156,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefixListName(@Nullable String prefixListName) {
-            this.prefixListName = Output.ofNullable(prefixListName);
+            this.prefixListName = Codegen.ofNullable(prefixListName);
             return this;
         }
         public Builder tags(@Nullable Output<List<PrefixListTagArgs>> tags) {
@@ -163,7 +164,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<PrefixListTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PrefixListTagArgs... tags) {

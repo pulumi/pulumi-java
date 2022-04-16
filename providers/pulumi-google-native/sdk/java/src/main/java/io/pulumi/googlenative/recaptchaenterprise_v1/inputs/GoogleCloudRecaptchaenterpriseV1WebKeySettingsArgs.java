@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType;
 import java.lang.Boolean;
@@ -29,8 +30,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="allowAllDomains")
       private final @Nullable Output<Boolean> allowAllDomains;
 
-    public Output<Boolean> getAllowAllDomains() {
-        return this.allowAllDomains == null ? Output.empty() : this.allowAllDomains;
+    public Output<Boolean> allowAllDomains() {
+        return this.allowAllDomains == null ? Codegen.empty() : this.allowAllDomains;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="allowAmpTraffic")
       private final @Nullable Output<Boolean> allowAmpTraffic;
 
-    public Output<Boolean> getAllowAmpTraffic() {
-        return this.allowAmpTraffic == null ? Output.empty() : this.allowAmpTraffic;
+    public Output<Boolean> allowAmpTraffic() {
+        return this.allowAmpTraffic == null ? Codegen.empty() : this.allowAmpTraffic;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="allowedDomains")
       private final @Nullable Output<List<String>> allowedDomains;
 
-    public Output<List<String>> getAllowedDomains() {
-        return this.allowedDomains == null ? Output.empty() : this.allowedDomains;
+    public Output<List<String>> allowedDomains() {
+        return this.allowedDomains == null ? Codegen.empty() : this.allowedDomains;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="challengeSecurityPreference")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference> challengeSecurityPreference;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference> getChallengeSecurityPreference() {
-        return this.challengeSecurityPreference == null ? Output.empty() : this.challengeSecurityPreference;
+    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference> challengeSecurityPreference() {
+        return this.challengeSecurityPreference == null ? Codegen.empty() : this.challengeSecurityPreference;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     @Import(name="integrationType", required=true)
       private final Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> integrationType;
 
-    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> getIntegrationType() {
+    public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> integrationType() {
         return this.integrationType;
     }
 
@@ -91,11 +92,11 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
     }
 
     private GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs() {
-        this.allowAllDomains = Output.empty();
-        this.allowAmpTraffic = Output.empty();
-        this.allowedDomains = Output.empty();
-        this.challengeSecurityPreference = Output.empty();
-        this.integrationType = Output.empty();
+        this.allowAllDomains = Codegen.empty();
+        this.allowAmpTraffic = Codegen.empty();
+        this.allowedDomains = Codegen.empty();
+        this.challengeSecurityPreference = Codegen.empty();
+        this.integrationType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
             return this;
         }
         public Builder allowAllDomains(@Nullable Boolean allowAllDomains) {
-            this.allowAllDomains = Output.ofNullable(allowAllDomains);
+            this.allowAllDomains = Codegen.ofNullable(allowAllDomains);
             return this;
         }
         public Builder allowAmpTraffic(@Nullable Output<Boolean> allowAmpTraffic) {
@@ -139,7 +140,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
             return this;
         }
         public Builder allowAmpTraffic(@Nullable Boolean allowAmpTraffic) {
-            this.allowAmpTraffic = Output.ofNullable(allowAmpTraffic);
+            this.allowAmpTraffic = Codegen.ofNullable(allowAmpTraffic);
             return this;
         }
         public Builder allowedDomains(@Nullable Output<List<String>> allowedDomains) {
@@ -147,7 +148,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
             return this;
         }
         public Builder allowedDomains(@Nullable List<String> allowedDomains) {
-            this.allowedDomains = Output.ofNullable(allowedDomains);
+            this.allowedDomains = Codegen.ofNullable(allowedDomains);
             return this;
         }
         public Builder allowedDomains(String... allowedDomains) {
@@ -158,7 +159,7 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs extends io
             return this;
         }
         public Builder challengeSecurityPreference(@Nullable GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreference challengeSecurityPreference) {
-            this.challengeSecurityPreference = Output.ofNullable(challengeSecurityPreference);
+            this.challengeSecurityPreference = Codegen.ofNullable(challengeSecurityPreference);
             return this;
         }
         public Builder integrationType(Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationType> integrationType) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CloudRepoSourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.GerritSourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.GitSourceContextArgs;
@@ -29,8 +30,8 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cloudRepo")
       private final @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
 
-    public Output<CloudRepoSourceContextArgs> getCloudRepo() {
-        return this.cloudRepo == null ? Output.empty() : this.cloudRepo;
+    public Output<CloudRepoSourceContextArgs> cloudRepo() {
+        return this.cloudRepo == null ? Codegen.empty() : this.cloudRepo;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gerrit")
       private final @Nullable Output<GerritSourceContextArgs> gerrit;
 
-    public Output<GerritSourceContextArgs> getGerrit() {
-        return this.gerrit == null ? Output.empty() : this.gerrit;
+    public Output<GerritSourceContextArgs> gerrit() {
+        return this.gerrit == null ? Codegen.empty() : this.gerrit;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="git")
       private final @Nullable Output<GitSourceContextArgs> git;
 
-    public Output<GitSourceContextArgs> getGit() {
-        return this.git == null ? Output.empty() : this.git;
+    public Output<GitSourceContextArgs> git() {
+        return this.git == null ? Codegen.empty() : this.git;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     public SourceContextArgs(
@@ -78,10 +79,10 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceContextArgs() {
-        this.cloudRepo = Output.empty();
-        this.gerrit = Output.empty();
-        this.git = Output.empty();
-        this.labels = Output.empty();
+        this.cloudRepo = Codegen.empty();
+        this.gerrit = Codegen.empty();
+        this.git = Codegen.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudRepo(@Nullable CloudRepoSourceContextArgs cloudRepo) {
-            this.cloudRepo = Output.ofNullable(cloudRepo);
+            this.cloudRepo = Codegen.ofNullable(cloudRepo);
             return this;
         }
         public Builder gerrit(@Nullable Output<GerritSourceContextArgs> gerrit) {
@@ -123,7 +124,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gerrit(@Nullable GerritSourceContextArgs gerrit) {
-            this.gerrit = Output.ofNullable(gerrit);
+            this.gerrit = Codegen.ofNullable(gerrit);
             return this;
         }
         public Builder git(@Nullable Output<GitSourceContextArgs> git) {
@@ -131,7 +132,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder git(@Nullable GitSourceContextArgs git) {
-            this.git = Output.ofNullable(git);
+            this.git = Codegen.ofNullable(git);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -139,7 +140,7 @@ public final class SourceContextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }        public SourceContextArgs build() {
             return new SourceContextArgs(cloudRepo, gerrit, git, labels);

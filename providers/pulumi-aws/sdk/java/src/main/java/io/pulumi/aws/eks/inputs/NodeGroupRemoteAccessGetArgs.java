@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class NodeGroupRemoteAccessGetArgs extends io.pulumi.resources.Reso
     @Import(name="ec2SshKey")
       private final @Nullable Output<String> ec2SshKey;
 
-    public Output<String> getEc2SshKey() {
-        return this.ec2SshKey == null ? Output.empty() : this.ec2SshKey;
+    public Output<String> ec2SshKey() {
+        return this.ec2SshKey == null ? Codegen.empty() : this.ec2SshKey;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class NodeGroupRemoteAccessGetArgs extends io.pulumi.resources.Reso
     @Import(name="sourceSecurityGroupIds")
       private final @Nullable Output<List<String>> sourceSecurityGroupIds;
 
-    public Output<List<String>> getSourceSecurityGroupIds() {
-        return this.sourceSecurityGroupIds == null ? Output.empty() : this.sourceSecurityGroupIds;
+    public Output<List<String>> sourceSecurityGroupIds() {
+        return this.sourceSecurityGroupIds == null ? Codegen.empty() : this.sourceSecurityGroupIds;
     }
 
     public NodeGroupRemoteAccessGetArgs(
@@ -45,8 +46,8 @@ public final class NodeGroupRemoteAccessGetArgs extends io.pulumi.resources.Reso
     }
 
     private NodeGroupRemoteAccessGetArgs() {
-        this.ec2SshKey = Output.empty();
-        this.sourceSecurityGroupIds = Output.empty();
+        this.ec2SshKey = Codegen.empty();
+        this.sourceSecurityGroupIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class NodeGroupRemoteAccessGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder ec2SshKey(@Nullable String ec2SshKey) {
-            this.ec2SshKey = Output.ofNullable(ec2SshKey);
+            this.ec2SshKey = Codegen.ofNullable(ec2SshKey);
             return this;
         }
         public Builder sourceSecurityGroupIds(@Nullable Output<List<String>> sourceSecurityGroupIds) {
@@ -84,7 +85,7 @@ public final class NodeGroupRemoteAccessGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder sourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
-            this.sourceSecurityGroupIds = Output.ofNullable(sourceSecurityGroupIds);
+            this.sourceSecurityGroupIds = Codegen.ofNullable(sourceSecurityGroupIds);
             return this;
         }
         public Builder sourceSecurityGroupIds(String... sourceSecurityGroupIds) {

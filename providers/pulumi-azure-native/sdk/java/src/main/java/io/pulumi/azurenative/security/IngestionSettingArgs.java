@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ingestionSettingName")
       private final @Nullable Output<String> ingestionSettingName;
 
-    public Output<String> getIngestionSettingName() {
-        return this.ingestionSettingName == null ? Output.empty() : this.ingestionSettingName;
+    public Output<String> ingestionSettingName() {
+        return this.ingestionSettingName == null ? Codegen.empty() : this.ingestionSettingName;
     }
 
     public IngestionSettingArgs(@Nullable Output<String> ingestionSettingName) {
@@ -30,7 +31,7 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IngestionSettingArgs() {
-        this.ingestionSettingName = Output.empty();
+        this.ingestionSettingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ingestionSettingName(@Nullable String ingestionSettingName) {
-            this.ingestionSettingName = Output.ofNullable(ingestionSettingName);
+            this.ingestionSettingName = Codegen.ofNullable(ingestionSettingName);
             return this;
         }        public IngestionSettingArgs build() {
             return new IngestionSettingArgs(ingestionSettingName);

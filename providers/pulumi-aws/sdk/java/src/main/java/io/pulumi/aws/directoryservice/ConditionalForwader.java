@@ -9,6 +9,7 @@ import io.pulumi.aws.directoryservice.inputs.ConditionalForwaderState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * @return The id of directory.
      * 
      */
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
     /**
@@ -54,7 +55,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * @return A list of forwarder IP addresses.
      * 
      */
-    public Output<List<String>> getDnsIps() {
+    public Output<List<String>> dnsIps() {
         return this.dnsIps;
     }
     /**
@@ -68,7 +69,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * @return The fully qualified domain name of the remote domain for which forwarders will be used.
      * 
      */
-    public Output<String> getRemoteDomainName() {
+    public Output<String> remoteDomainName() {
         return this.remoteDomainName;
     }
 
@@ -94,7 +95,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConditionalForwader(String name, ConditionalForwaderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directoryservice/conditionalForwader:ConditionalForwader", name, args == null ? ConditionalForwaderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directoryservice/conditionalForwader:ConditionalForwader", name, args == null ? ConditionalForwaderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConditionalForwader(String name, Output<String> id, @Nullable ConditionalForwaderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceArn")
       private final @Nullable Output<String> sourceArn;
 
-    public Output<String> getSourceArn() {
-        return this.sourceArn == null ? Output.empty() : this.sourceArn;
+    public Output<String> sourceArn() {
+        return this.sourceArn == null ? Codegen.empty() : this.sourceArn;
     }
 
     public DatasetMetadataArgs(@Nullable Output<String> sourceArn) {
@@ -30,7 +31,7 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DatasetMetadataArgs() {
-        this.sourceArn = Output.empty();
+        this.sourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DatasetMetadataArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sourceArn(@Nullable String sourceArn) {
-            this.sourceArn = Output.ofNullable(sourceArn);
+            this.sourceArn = Codegen.ofNullable(sourceArn);
             return this;
         }        public DatasetMetadataArgs build() {
             return new DatasetMetadataArgs(sourceArn);

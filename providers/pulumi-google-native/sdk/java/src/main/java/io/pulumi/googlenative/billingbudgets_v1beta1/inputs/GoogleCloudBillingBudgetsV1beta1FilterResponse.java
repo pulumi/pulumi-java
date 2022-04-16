@@ -26,7 +26,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse extends io.pul
     @Import(name="calendarPeriod", required=true)
       private final String calendarPeriod;
 
-    public String getCalendarPeriod() {
+    public String calendarPeriod() {
         return this.calendarPeriod;
     }
 
@@ -37,7 +37,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse extends io.pul
     @Import(name="creditTypes", required=true)
       private final List<String> creditTypes;
 
-    public List<String> getCreditTypes() {
+    public List<String> creditTypes() {
         return this.creditTypes;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse extends io.pul
     @Import(name="creditTypesTreatment", required=true)
       private final String creditTypesTreatment;
 
-    public String getCreditTypesTreatment() {
+    public String creditTypesTreatment() {
         return this.creditTypesTreatment;
     }
 
@@ -59,7 +59,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse extends io.pul
     @Import(name="customPeriod", required=true)
       private final GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod;
 
-    public GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse getCustomPeriod() {
+    public GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod() {
         return this.customPeriod;
     }
 
@@ -70,7 +70,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse extends io.pul
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 
@@ -81,7 +81,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse extends io.pul
     @Import(name="projects", required=true)
       private final List<String> projects;
 
-    public List<String> getProjects() {
+    public List<String> projects() {
         return this.projects;
     }
 
@@ -92,7 +92,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse extends io.pul
     @Import(name="services", required=true)
       private final List<String> services;
 
-    public List<String> getServices() {
+    public List<String> services() {
         return this.services;
     }
 
@@ -103,7 +103,7 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse extends io.pul
     @Import(name="subaccounts", required=true)
       private final List<String> subaccounts;
 
-    public List<String> getSubaccounts() {
+    public List<String> subaccounts() {
         return this.subaccounts;
     }
 

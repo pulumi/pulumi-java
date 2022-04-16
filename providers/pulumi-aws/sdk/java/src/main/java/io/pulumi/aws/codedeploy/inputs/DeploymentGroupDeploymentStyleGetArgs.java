@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
     @Import(name="deploymentOption")
       private final @Nullable Output<String> deploymentOption;
 
-    public Output<String> getDeploymentOption() {
-        return this.deploymentOption == null ? Output.empty() : this.deploymentOption;
+    public Output<String> deploymentOption() {
+        return this.deploymentOption == null ? Codegen.empty() : this.deploymentOption;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
     @Import(name="deploymentType")
       private final @Nullable Output<String> deploymentType;
 
-    public Output<String> getDeploymentType() {
-        return this.deploymentType == null ? Output.empty() : this.deploymentType;
+    public Output<String> deploymentType() {
+        return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 
     public DeploymentGroupDeploymentStyleGetArgs(
@@ -44,8 +45,8 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
     }
 
     private DeploymentGroupDeploymentStyleGetArgs() {
-        this.deploymentOption = Output.empty();
-        this.deploymentType = Output.empty();
+        this.deploymentOption = Codegen.empty();
+        this.deploymentType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder deploymentOption(@Nullable String deploymentOption) {
-            this.deploymentOption = Output.ofNullable(deploymentOption);
+            this.deploymentOption = Codegen.ofNullable(deploymentOption);
             return this;
         }
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
@@ -83,7 +84,7 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = Output.ofNullable(deploymentType);
+            this.deploymentType = Codegen.ofNullable(deploymentType);
             return this;
         }        public DeploymentGroupDeploymentStyleGetArgs build() {
             return new DeploymentGroupDeploymentStyleGetArgs(deploymentOption, deploymentType);

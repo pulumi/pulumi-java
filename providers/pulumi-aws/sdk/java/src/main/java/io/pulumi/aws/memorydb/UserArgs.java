@@ -6,6 +6,7 @@ package io.pulumi.aws.memorydb;
 import io.pulumi.aws.memorydb.inputs.UserAuthenticationModeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessString", required=true)
       private final Output<String> accessString;
 
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString;
     }
 
@@ -34,7 +35,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationMode", required=true)
       private final Output<UserAuthenticationModeArgs> authenticationMode;
 
-    public Output<UserAuthenticationModeArgs> getAuthenticationMode() {
+    public Output<UserAuthenticationModeArgs> authenticationMode() {
         return this.authenticationMode;
     }
 
@@ -45,8 +46,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -85,11 +86,11 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.accessString = Output.empty();
-        this.authenticationMode = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userName = Output.empty();
+        this.accessString = Codegen.empty();
+        this.authenticationMode = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -149,7 +150,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userName(Output<String> userName) {

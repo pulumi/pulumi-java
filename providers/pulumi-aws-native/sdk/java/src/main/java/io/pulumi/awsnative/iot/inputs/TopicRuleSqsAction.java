@@ -18,21 +18,21 @@ public final class TopicRuleSqsAction extends io.pulumi.resources.InvokeArgs {
     @Import(name="queueUrl", required=true)
       private final String queueUrl;
 
-    public String getQueueUrl() {
+    public String queueUrl() {
         return this.queueUrl;
     }
 
     @Import(name="roleArn", required=true)
       private final String roleArn;
 
-    public String getRoleArn() {
+    public String roleArn() {
         return this.roleArn;
     }
 
     @Import(name="useBase64")
       private final @Nullable Boolean useBase64;
 
-    public Optional<Boolean> getUseBase64() {
+    public Optional<Boolean> useBase64() {
         return this.useBase64 == null ? Optional.empty() : Optional.ofNullable(this.useBase64);
     }
 

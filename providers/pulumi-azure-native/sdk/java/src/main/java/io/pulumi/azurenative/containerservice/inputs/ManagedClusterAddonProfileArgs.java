@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
     @Import(name="config")
       private final @Nullable Output<Map<String,String>> config;
 
-    public Output<Map<String,String>> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<Map<String,String>> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -50,8 +51,8 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
     }
 
     private ManagedClusterAddonProfileArgs() {
-        this.config = Output.empty();
-        this.enabled = Output.empty();
+        this.config = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder config(@Nullable Map<String,String> config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.enums.IPAddressAllocationMet
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocationMethod")
       private final @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
 
-    public Output<Either<String,IPAddressAllocationMethod>> getAllocationMethod() {
-        return this.allocationMethod == null ? Output.empty() : this.allocationMethod;
+    public Output<Either<String,IPAddressAllocationMethod>> allocationMethod() {
+        return this.allocationMethod == null ? Codegen.empty() : this.allocationMethod;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Output.empty() : this.dnsServers;
+    public Output<List<String>> dnsServers() {
+        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gateway")
       private final @Nullable Output<List<String>> gateway;
 
-    public Output<List<String>> getGateway() {
-        return this.gateway == null ? Output.empty() : this.gateway;
+    public Output<List<String>> gateway() {
+        return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetMask")
       private final @Nullable Output<String> subnetMask;
 
-    public Output<String> getSubnetMask() {
-        return this.subnetMask == null ? Output.empty() : this.subnetMask;
+    public Output<String> subnetMask() {
+        return this.subnetMask == null ? Codegen.empty() : this.subnetMask;
     }
 
     public NicIPSettingsArgs(
@@ -90,11 +91,11 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NicIPSettingsArgs() {
-        this.allocationMethod = Output.empty();
-        this.dnsServers = Output.empty();
-        this.gateway = Output.empty();
-        this.ipAddress = Output.empty();
-        this.subnetMask = Output.empty();
+        this.allocationMethod = Codegen.empty();
+        this.dnsServers = Codegen.empty();
+        this.gateway = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.subnetMask = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocationMethod(@Nullable Either<String,IPAddressAllocationMethod> allocationMethod) {
-            this.allocationMethod = Output.ofNullable(allocationMethod);
+            this.allocationMethod = Codegen.ofNullable(allocationMethod);
             return this;
         }
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
@@ -138,7 +139,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Output.ofNullable(dnsServers);
+            this.dnsServers = Codegen.ofNullable(dnsServers);
             return this;
         }
         public Builder dnsServers(String... dnsServers) {
@@ -149,7 +150,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gateway(@Nullable List<String> gateway) {
-            this.gateway = Output.ofNullable(gateway);
+            this.gateway = Codegen.ofNullable(gateway);
             return this;
         }
         public Builder gateway(String... gateway) {
@@ -160,7 +161,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder subnetMask(@Nullable Output<String> subnetMask) {
@@ -168,7 +169,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetMask(@Nullable String subnetMask) {
-            this.subnetMask = Output.ofNullable(subnetMask);
+            this.subnetMask = Codegen.ofNullable(subnetMask);
             return this;
         }        public NicIPSettingsArgs build() {
             return new NicIPSettingsArgs(allocationMethod, dnsServers, gateway, ipAddress, subnetMask);

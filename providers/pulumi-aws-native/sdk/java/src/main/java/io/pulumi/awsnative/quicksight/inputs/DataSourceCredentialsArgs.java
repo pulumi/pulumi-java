@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceCredentialPairArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,15 +31,15 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
     @Import(name="copySourceArn")
       private final @Nullable Output<String> copySourceArn;
 
-    public Output<String> getCopySourceArn() {
-        return this.copySourceArn == null ? Output.empty() : this.copySourceArn;
+    public Output<String> copySourceArn() {
+        return this.copySourceArn == null ? Codegen.empty() : this.copySourceArn;
     }
 
     @Import(name="credentialPair")
       private final @Nullable Output<DataSourceCredentialPairArgs> credentialPair;
 
-    public Output<DataSourceCredentialPairArgs> getCredentialPair() {
-        return this.credentialPair == null ? Output.empty() : this.credentialPair;
+    public Output<DataSourceCredentialPairArgs> credentialPair() {
+        return this.credentialPair == null ? Codegen.empty() : this.credentialPair;
     }
 
     public DataSourceCredentialsArgs(
@@ -49,8 +50,8 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
     }
 
     private DataSourceCredentialsArgs() {
-        this.copySourceArn = Output.empty();
-        this.credentialPair = Output.empty();
+        this.copySourceArn = Codegen.empty();
+        this.credentialPair = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder copySourceArn(@Nullable String copySourceArn) {
-            this.copySourceArn = Output.ofNullable(copySourceArn);
+            this.copySourceArn = Codegen.ofNullable(copySourceArn);
             return this;
         }
         public Builder credentialPair(@Nullable Output<DataSourceCredentialPairArgs> credentialPair) {
@@ -88,7 +89,7 @@ public final class DataSourceCredentialsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder credentialPair(@Nullable DataSourceCredentialPairArgs credentialPair) {
-            this.credentialPair = Output.ofNullable(credentialPair);
+            this.credentialPair = Codegen.ofNullable(credentialPair);
             return this;
         }        public DataSourceCredentialsArgs build() {
             return new DataSourceCredentialsArgs(copySourceArn, credentialPair);

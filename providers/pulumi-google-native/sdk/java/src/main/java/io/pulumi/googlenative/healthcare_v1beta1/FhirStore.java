@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.FhirStoreArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.NotificationConfigResponse;
@@ -36,7 +37,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return If true, overrides the default search behavior for this FHIR store to `handling=strict` which returns an error for unrecognized search parameters. If false, uses the FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The handling can always be changed from the default on an individual API call by setting the HTTP header `Prefer: handling=strict` or `Prefer: handling=lenient`.
      * 
      */
-    public Output<Boolean> getDefaultSearchHandlingStrict() {
+    public Output<Boolean> defaultSearchHandlingStrict() {
         return this.defaultSearchHandlingStrict;
     }
     /**
@@ -50,7 +51,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return Immutable. Whether to disable referential integrity in this FHIR store. This field is immutable after FHIR store creation. The default value is false, meaning that the API enforces referential integrity and fails the requests that result in inconsistent state in the FHIR store. When this field is set to true, the API skips referential integrity checks. Consequently, operations that rely on references, such as GetPatientEverything, do not return all the results if broken references exist.
      * 
      */
-    public Output<Boolean> getDisableReferentialIntegrity() {
+    public Output<Boolean> disableReferentialIntegrity() {
         return this.disableReferentialIntegrity;
     }
     /**
@@ -64,7 +65,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return Immutable. Whether to disable resource versioning for this FHIR store. This field can not be changed after the creation of FHIR store. If set to false, which is the default behavior, all write operations cause historical versions to be recorded automatically. The historical versions can be fetched through the history APIs, but cannot be updated. If set to true, no historical versions are kept. The server sends errors for attempts to read the historical versions.
      * 
      */
-    public Output<Boolean> getDisableResourceVersioning() {
+    public Output<Boolean> disableResourceVersioning() {
         return this.disableResourceVersioning;
     }
     /**
@@ -78,7 +79,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return Whether this FHIR store has the [updateCreate capability](https://www.hl7.org/fhir/capabilitystatement-definitions.html#CapabilityStatement.rest.resource.updateCreate). This determines if the client can use an Update operation to create a new resource with a client-specified ID. If false, all IDs are server-assigned through the Create operation and attempts to update a non-existent resource return errors. It is strongly advised not to include or encode any sensitive data such as patient identifiers in client-specified resource IDs. Those IDs are part of the FHIR resource path recorded in Cloud audit logs and Pub/Sub notifications. Those IDs can also be contained in reference fields within other resources.
      * 
      */
-    public Output<Boolean> getEnableUpdateCreate() {
+    public Output<Boolean> enableUpdateCreate() {
         return this.enableUpdateCreate;
     }
     /**
@@ -92,7 +93,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return User-supplied key-value pairs used to organize FHIR stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -106,7 +107,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return Resource name of the FHIR store, of the form `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -120,7 +121,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return If non-empty, publish all resource modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a map with a string describing the action that has triggered the notification. For example, "action":"CreateResource".
      * 
      */
-    public Output<NotificationConfigResponse> getNotificationConfig() {
+    public Output<NotificationConfigResponse> notificationConfig() {
         return this.notificationConfig;
     }
     /**
@@ -134,7 +135,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return Configuration for how FHIR resource can be searched.
      * 
      */
-    public Output<SearchConfigResponse> getSearchConfig() {
+    public Output<SearchConfigResponse> searchConfig() {
         return this.searchConfig;
     }
     /**
@@ -148,7 +149,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return A list of streaming configs that configure the destinations of streaming export for every resource mutation in this FHIR store. Each store is allowed to have up to 10 streaming configs. After a new config is added, the next resource mutation is streamed to the new location in addition to the existing ones. When a location is removed from the list, the server stops streaming to that location. Before adding a new config, you must add the required [`bigquery.dataEditor`](https://cloud.google.com/bigquery/docs/access-control#bigquery.dataEditor) role to your project's **Cloud Healthcare Service Agent** [service account](https://cloud.google.com/iam/docs/service-accounts). Some lag (typically on the order of dozens of seconds) is expected before the results show up in the streaming destination.
      * 
      */
-    public Output<List<StreamConfigResponse>> getStreamConfigs() {
+    public Output<List<StreamConfigResponse>> streamConfigs() {
         return this.streamConfigs;
     }
     /**
@@ -162,7 +163,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return Configuration for how to validate incoming FHIR resources against configured profiles.
      * 
      */
-    public Output<ValidationConfigResponse> getValidationConfig() {
+    public Output<ValidationConfigResponse> validationConfig() {
         return this.validationConfig;
     }
     /**
@@ -176,7 +177,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return Immutable. The FHIR specification version that this FHIR store supports natively. This field is immutable after store creation. Requests are rejected if they contain FHIR resources of a different version. Version is required for every FHIR store.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -202,7 +203,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FhirStore(String name, FhirStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1beta1:FhirStore", name, args == null ? FhirStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1beta1:FhirStore", name, args == null ? FhirStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FhirStore(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

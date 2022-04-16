@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
     @Import(name="kmsKeySelfLink", required=true)
       private final Output<String> kmsKeySelfLink;
 
-    public Output<String> getKmsKeySelfLink() {
+    public Output<String> kmsKeySelfLink() {
         return this.kmsKeySelfLink;
     }
 
@@ -29,7 +30,7 @@ public final class InstanceTemplateDiskDiskEncryptionKeyArgs extends io.pulumi.r
     }
 
     private InstanceTemplateDiskDiskEncryptionKeyArgs() {
-        this.kmsKeySelfLink = Output.empty();
+        this.kmsKeySelfLink = Codegen.empty();
     }
 
     public static Builder builder() {

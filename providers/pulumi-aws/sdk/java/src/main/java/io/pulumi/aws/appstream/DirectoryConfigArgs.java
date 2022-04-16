@@ -6,6 +6,7 @@ package io.pulumi.aws.appstream;
 import io.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="directoryName", required=true)
       private final Output<String> directoryName;
 
-    public Output<String> getDirectoryName() {
+    public Output<String> directoryName() {
         return this.directoryName;
     }
 
@@ -33,7 +34,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="organizationalUnitDistinguishedNames", required=true)
       private final Output<List<String>> organizationalUnitDistinguishedNames;
 
-    public Output<List<String>> getOrganizationalUnitDistinguishedNames() {
+    public Output<List<String>> organizationalUnitDistinguishedNames() {
         return this.organizationalUnitDistinguishedNames;
     }
 
@@ -44,7 +45,7 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceAccountCredentials", required=true)
       private final Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials;
 
-    public Output<DirectoryConfigServiceAccountCredentialsArgs> getServiceAccountCredentials() {
+    public Output<DirectoryConfigServiceAccountCredentialsArgs> serviceAccountCredentials() {
         return this.serviceAccountCredentials;
     }
 
@@ -58,9 +59,9 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DirectoryConfigArgs() {
-        this.directoryName = Output.empty();
-        this.organizationalUnitDistinguishedNames = Output.empty();
-        this.serviceAccountCredentials = Output.empty();
+        this.directoryName = Codegen.empty();
+        this.organizationalUnitDistinguishedNames = Codegen.empty();
+        this.serviceAccountCredentials = Codegen.empty();
     }
 
     public static Builder builder() {

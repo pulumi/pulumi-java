@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The changed time.
      * 
      */
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime;
     }
     /**
@@ -58,7 +59,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The content.
      * 
      */
-    public Output</* @Nullable */ String> getContent() {
+    public Output</* @Nullable */ String> content() {
         return this.content;
     }
     /**
@@ -72,7 +73,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The content link.
      * 
      */
-    public Output<ContentLinkResponse> getContentLink() {
+    public Output<ContentLinkResponse> contentLink() {
         return this.contentLink;
     }
     /**
@@ -86,7 +87,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The content type.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -100,7 +101,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The created time.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -114,7 +115,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The document name.
      * 
      */
-    public Output</* @Nullable */ String> getDocumentName() {
+    public Output</* @Nullable */ String> documentName() {
         return this.documentName;
     }
     /**
@@ -128,7 +129,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The file name.
      * 
      */
-    public Output</* @Nullable */ String> getFileName() {
+    public Output</* @Nullable */ String> fileName() {
         return this.fileName;
     }
     /**
@@ -142,7 +143,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -156,7 +157,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -170,7 +171,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -184,7 +185,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The schema type.
      * 
      */
-    public Output<String> getSchemaType() {
+    public Output<String> schemaType() {
         return this.schemaType;
     }
     /**
@@ -198,7 +199,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -212,7 +213,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return The target namespace of the schema.
      * 
      */
-    public Output</* @Nullable */ String> getTargetNamespace() {
+    public Output</* @Nullable */ String> targetNamespace() {
         return this.targetNamespace;
     }
     /**
@@ -226,7 +227,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -252,7 +253,7 @@ public class IntegrationAccountSchema extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public IntegrationAccountSchema(String name, IntegrationAccountSchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:logic:IntegrationAccountSchema", name, args == null ? IntegrationAccountSchemaArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:logic:IntegrationAccountSchema", name, args == null ? IntegrationAccountSchemaArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IntegrationAccountSchema(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

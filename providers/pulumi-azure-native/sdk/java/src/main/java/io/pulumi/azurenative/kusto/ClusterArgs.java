@@ -13,6 +13,7 @@ import io.pulumi.azurenative.kusto.inputs.VirtualNetworkConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,8 +33,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDiskEncryption")
       private final @Nullable Output<Boolean> enableDiskEncryption;
 
-    public Output<Boolean> getEnableDiskEncryption() {
-        return this.enableDiskEncryption == null ? Output.empty() : this.enableDiskEncryption;
+    public Output<Boolean> enableDiskEncryption() {
+        return this.enableDiskEncryption == null ? Codegen.empty() : this.enableDiskEncryption;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableDoubleEncryption")
       private final @Nullable Output<Boolean> enableDoubleEncryption;
 
-    public Output<Boolean> getEnableDoubleEncryption() {
-        return this.enableDoubleEncryption == null ? Output.empty() : this.enableDoubleEncryption;
+    public Output<Boolean> enableDoubleEncryption() {
+        return this.enableDoubleEncryption == null ? Codegen.empty() : this.enableDoubleEncryption;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enablePurge")
       private final @Nullable Output<Boolean> enablePurge;
 
-    public Output<Boolean> getEnablePurge() {
-        return this.enablePurge == null ? Output.empty() : this.enablePurge;
+    public Output<Boolean> enablePurge() {
+        return this.enablePurge == null ? Codegen.empty() : this.enablePurge;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableStreamingIngest")
       private final @Nullable Output<Boolean> enableStreamingIngest;
 
-    public Output<Boolean> getEnableStreamingIngest() {
-        return this.enableStreamingIngest == null ? Output.empty() : this.enableStreamingIngest;
+    public Output<Boolean> enableStreamingIngest() {
+        return this.enableStreamingIngest == null ? Codegen.empty() : this.enableStreamingIngest;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineType")
       private final @Nullable Output<Either<String,EngineType>> engineType;
 
-    public Output<Either<String,EngineType>> getEngineType() {
-        return this.engineType == null ? Output.empty() : this.engineType;
+    public Output<Either<String,EngineType>> engineType() {
+        return this.engineType == null ? Codegen.empty() : this.engineType;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
+        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="optimizedAutoscale")
       private final @Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale;
 
-    public Output<OptimizedAutoscaleArgs> getOptimizedAutoscale() {
-        return this.optimizedAutoscale == null ? Output.empty() : this.optimizedAutoscale;
+    public Output<OptimizedAutoscaleArgs> optimizedAutoscale() {
+        return this.optimizedAutoscale == null ? Codegen.empty() : this.optimizedAutoscale;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -153,7 +154,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<AzureSkuArgs> sku;
 
-    public Output<AzureSkuArgs> getSku() {
+    public Output<AzureSkuArgs> sku() {
         return this.sku;
     }
 
@@ -164,8 +165,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustedExternalTenants")
       private final @Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants;
 
-    public Output<List<TrustedExternalTenantArgs>> getTrustedExternalTenants() {
-        return this.trustedExternalTenants == null ? Output.empty() : this.trustedExternalTenants;
+    public Output<List<TrustedExternalTenantArgs>> trustedExternalTenants() {
+        return this.trustedExternalTenants == null ? Codegen.empty() : this.trustedExternalTenants;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkConfiguration")
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
-    public Output<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration == null ? Output.empty() : this.virtualNetworkConfiguration;
+    public Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration() {
+        return this.virtualNetworkConfiguration == null ? Codegen.empty() : this.virtualNetworkConfiguration;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+    public Output<List<String>> zones() {
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public ClusterArgs(
@@ -219,10 +220,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
         @Nullable Output<List<String>> zones) {
         this.clusterName = clusterName;
-        this.enableDiskEncryption = enableDiskEncryption == null ? Output.ofNullable(false) : enableDiskEncryption;
-        this.enableDoubleEncryption = enableDoubleEncryption == null ? Output.ofNullable(false) : enableDoubleEncryption;
-        this.enablePurge = enablePurge == null ? Output.ofNullable(false) : enablePurge;
-        this.enableStreamingIngest = enableStreamingIngest == null ? Output.ofNullable(false) : enableStreamingIngest;
+        this.enableDiskEncryption = enableDiskEncryption == null ? Codegen.ofNullable(false) : enableDiskEncryption;
+        this.enableDoubleEncryption = enableDoubleEncryption == null ? Codegen.ofNullable(false) : enableDoubleEncryption;
+        this.enablePurge = enablePurge == null ? Codegen.ofNullable(false) : enablePurge;
+        this.enableStreamingIngest = enableStreamingIngest == null ? Codegen.ofNullable(false) : enableStreamingIngest;
         this.engineType = engineType == null ? Output.ofLeft("V3") : engineType;
         this.identity = identity;
         this.keyVaultProperties = keyVaultProperties;
@@ -237,22 +238,22 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.clusterName = Output.empty();
-        this.enableDiskEncryption = Output.empty();
-        this.enableDoubleEncryption = Output.empty();
-        this.enablePurge = Output.empty();
-        this.enableStreamingIngest = Output.empty();
-        this.engineType = Output.empty();
-        this.identity = Output.empty();
-        this.keyVaultProperties = Output.empty();
-        this.location = Output.empty();
-        this.optimizedAutoscale = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.trustedExternalTenants = Output.empty();
-        this.virtualNetworkConfiguration = Output.empty();
-        this.zones = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.enableDiskEncryption = Codegen.empty();
+        this.enableDoubleEncryption = Codegen.empty();
+        this.enablePurge = Codegen.empty();
+        this.enableStreamingIngest = Codegen.empty();
+        this.engineType = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.keyVaultProperties = Codegen.empty();
+        this.location = Codegen.empty();
+        this.optimizedAutoscale = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.trustedExternalTenants = Codegen.empty();
+        this.virtualNetworkConfiguration = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -310,7 +311,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder enableDiskEncryption(@Nullable Output<Boolean> enableDiskEncryption) {
@@ -318,7 +319,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDiskEncryption(@Nullable Boolean enableDiskEncryption) {
-            this.enableDiskEncryption = Output.ofNullable(enableDiskEncryption);
+            this.enableDiskEncryption = Codegen.ofNullable(enableDiskEncryption);
             return this;
         }
         public Builder enableDoubleEncryption(@Nullable Output<Boolean> enableDoubleEncryption) {
@@ -326,7 +327,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableDoubleEncryption(@Nullable Boolean enableDoubleEncryption) {
-            this.enableDoubleEncryption = Output.ofNullable(enableDoubleEncryption);
+            this.enableDoubleEncryption = Codegen.ofNullable(enableDoubleEncryption);
             return this;
         }
         public Builder enablePurge(@Nullable Output<Boolean> enablePurge) {
@@ -334,7 +335,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enablePurge(@Nullable Boolean enablePurge) {
-            this.enablePurge = Output.ofNullable(enablePurge);
+            this.enablePurge = Codegen.ofNullable(enablePurge);
             return this;
         }
         public Builder enableStreamingIngest(@Nullable Output<Boolean> enableStreamingIngest) {
@@ -342,7 +343,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableStreamingIngest(@Nullable Boolean enableStreamingIngest) {
-            this.enableStreamingIngest = Output.ofNullable(enableStreamingIngest);
+            this.enableStreamingIngest = Codegen.ofNullable(enableStreamingIngest);
             return this;
         }
         public Builder engineType(@Nullable Output<Either<String,EngineType>> engineType) {
@@ -350,7 +351,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineType(@Nullable Either<String,EngineType> engineType) {
-            this.engineType = Output.ofNullable(engineType);
+            this.engineType = Codegen.ofNullable(engineType);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -358,7 +359,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
@@ -366,7 +367,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -374,7 +375,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder optimizedAutoscale(@Nullable Output<OptimizedAutoscaleArgs> optimizedAutoscale) {
@@ -382,7 +383,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder optimizedAutoscale(@Nullable OptimizedAutoscaleArgs optimizedAutoscale) {
-            this.optimizedAutoscale = Output.ofNullable(optimizedAutoscale);
+            this.optimizedAutoscale = Codegen.ofNullable(optimizedAutoscale);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -406,7 +407,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder trustedExternalTenants(@Nullable Output<List<TrustedExternalTenantArgs>> trustedExternalTenants) {
@@ -414,7 +415,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustedExternalTenants(@Nullable List<TrustedExternalTenantArgs> trustedExternalTenants) {
-            this.trustedExternalTenants = Output.ofNullable(trustedExternalTenants);
+            this.trustedExternalTenants = Codegen.ofNullable(trustedExternalTenants);
             return this;
         }
         public Builder trustedExternalTenants(TrustedExternalTenantArgs... trustedExternalTenants) {
@@ -425,7 +426,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = Output.ofNullable(virtualNetworkConfiguration);
+            this.virtualNetworkConfiguration = Codegen.ofNullable(virtualNetworkConfiguration);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -433,7 +434,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

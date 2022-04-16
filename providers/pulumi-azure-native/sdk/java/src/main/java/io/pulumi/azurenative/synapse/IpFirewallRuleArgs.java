@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endIpAddress")
       private final @Nullable Output<String> endIpAddress;
 
-    public Output<String> getEndIpAddress() {
-        return this.endIpAddress == null ? Output.empty() : this.endIpAddress;
+    public Output<String> endIpAddress() {
+        return this.endIpAddress == null ? Codegen.empty() : this.endIpAddress;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,8 +44,8 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startIpAddress")
       private final @Nullable Output<String> startIpAddress;
 
-    public Output<String> getStartIpAddress() {
-        return this.startIpAddress == null ? Output.empty() : this.startIpAddress;
+    public Output<String> startIpAddress() {
+        return this.startIpAddress == null ? Codegen.empty() : this.startIpAddress;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -83,11 +84,11 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpFirewallRuleArgs() {
-        this.endIpAddress = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleName = Output.empty();
-        this.startIpAddress = Output.empty();
-        this.workspaceName = Output.empty();
+        this.endIpAddress = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.startIpAddress = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endIpAddress(@Nullable String endIpAddress) {
-            this.endIpAddress = Output.ofNullable(endIpAddress);
+            this.endIpAddress = Codegen.ofNullable(endIpAddress);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -139,7 +140,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder startIpAddress(@Nullable Output<String> startIpAddress) {
@@ -147,7 +148,7 @@ public final class IpFirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startIpAddress(@Nullable String startIpAddress) {
-            this.startIpAddress = Output.ofNullable(startIpAddress);
+            this.startIpAddress = Codegen.ofNullable(startIpAddress);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

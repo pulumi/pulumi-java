@@ -7,6 +7,7 @@ import io.pulumi.aws.Provider;
 import io.pulumi.aws.iam.Role;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -21,14 +22,14 @@ public final class CreationRoleProviderArgs extends io.pulumi.resources.Resource
     @Import(name="provider", required=true)
       private final Output<Provider> provider;
 
-    public Output<Provider> getProvider() {
+    public Output<Provider> provider() {
         return this.provider;
     }
 
     @Import(name="role", required=true)
       private final Output<Role> role;
 
-    public Output<Role> getRole() {
+    public Output<Role> role() {
         return this.role;
     }
 
@@ -40,8 +41,8 @@ public final class CreationRoleProviderArgs extends io.pulumi.resources.Resource
     }
 
     private CreationRoleProviderArgs() {
-        this.provider = Output.empty();
-        this.role = Output.empty();
+        this.provider = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -12,6 +12,7 @@ import io.pulumi.azurenative.costmanagement.outputs.ExportScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Has the definition for the export.
      * 
      */
-    public Output<ExportDefinitionResponse> getDefinition() {
+    public Output<ExportDefinitionResponse> definition() {
         return this.definition;
     }
     /**
@@ -58,7 +59,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Has delivery information for the export.
      * 
      */
-    public Output<ExportDeliveryInfoResponse> getDeliveryInfo() {
+    public Output<ExportDeliveryInfoResponse> deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
@@ -72,7 +73,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    public Output</* @Nullable */ String> getETag() {
+    public Output</* @Nullable */ String> eTag() {
         return this.eTag;
     }
     /**
@@ -86,7 +87,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return The format of the export being delivered. Currently only 'Csv' is supported.
      * 
      */
-    public Output</* @Nullable */ String> getFormat() {
+    public Output</* @Nullable */ String> format() {
         return this.format;
     }
     /**
@@ -100,7 +101,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return If the export has an active schedule, provides an estimate of the next execution time.
      * 
      */
-    public Output<String> getNextRunTimeEstimate() {
+    public Output<String> nextRunTimeEstimate() {
         return this.nextRunTimeEstimate;
     }
     /**
@@ -128,7 +129,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return If requested, has the most recent execution history for the export.
      * 
      */
-    public Output</* @Nullable */ ExportExecutionListResultResponse> getRunHistory() {
+    public Output</* @Nullable */ ExportExecutionListResultResponse> runHistory() {
         return this.runHistory;
     }
     /**
@@ -142,7 +143,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Has schedule information for the export.
      * 
      */
-    public Output</* @Nullable */ ExportScheduleResponse> getSchedule() {
+    public Output</* @Nullable */ ExportScheduleResponse> schedule() {
         return this.schedule;
     }
     /**
@@ -156,7 +157,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -182,7 +183,7 @@ public class Export extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Export(String name, ExportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:costmanagement:Export", name, args == null ? ExportArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:costmanagement:Export", name, args == null ? ExportArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Export(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

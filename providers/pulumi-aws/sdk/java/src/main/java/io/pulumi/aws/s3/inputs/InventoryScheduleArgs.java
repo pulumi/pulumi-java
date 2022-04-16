@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frequency", required=true)
       private final Output<String> frequency;
 
-    public Output<String> getFrequency() {
+    public Output<String> frequency() {
         return this.frequency;
     }
 
@@ -29,7 +30,7 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private InventoryScheduleArgs() {
-        this.frequency = Output.empty();
+        this.frequency = Codegen.empty();
     }
 
     public static Builder builder() {

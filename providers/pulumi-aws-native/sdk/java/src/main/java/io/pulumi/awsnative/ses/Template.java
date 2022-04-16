@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ses.TemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import javax.annotation.Nullable;
 
 /**
@@ -21,7 +22,7 @@ public class Template extends io.pulumi.resources.CustomResource {
     @Export(name="template", type=io.pulumi.awsnative.ses.outputs.Template.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.ses.outputs.Template> template;
 
-    public Output</* @Nullable */ io.pulumi.awsnative.ses.outputs.Template> getTemplate() {
+    public Output</* @Nullable */ io.pulumi.awsnative.ses.outputs.Template> template() {
         return this.template;
     }
 
@@ -47,7 +48,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Template(String name, @Nullable TemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ses:Template", name, args == null ? TemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ses:Template", name, args == null ? TemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Template(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

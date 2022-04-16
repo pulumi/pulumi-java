@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.IPAMAllocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,13 +22,13 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
     @Export(name="cidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> cidr;
 
-    public Output</* @Nullable */ String> getCidr() {
+    public Output</* @Nullable */ String> cidr() {
         return this.cidr;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -41,7 +42,7 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
      * @return Id of the allocation.
      * 
      */
-    public Output<String> getIpamPoolAllocationId() {
+    public Output<String> ipamPoolAllocationId() {
         return this.ipamPoolAllocationId;
     }
     /**
@@ -55,7 +56,7 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
      * @return Id of the IPAM Pool.
      * 
      */
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
     /**
@@ -69,7 +70,7 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
      * @return The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
      * 
      */
-    public Output</* @Nullable */ Integer> getNetmaskLength() {
+    public Output</* @Nullable */ Integer> netmaskLength() {
         return this.netmaskLength;
     }
 
@@ -95,7 +96,7 @@ public class IPAMAllocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IPAMAllocation(String name, IPAMAllocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:IPAMAllocation", name, args == null ? IPAMAllocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:IPAMAllocation", name, args == null ? IPAMAllocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IPAMAllocation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

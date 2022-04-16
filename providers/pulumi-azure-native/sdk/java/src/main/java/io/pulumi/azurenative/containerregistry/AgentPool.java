@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The count of agent machine
      * 
      */
-    public Output</* @Nullable */ Integer> getCount() {
+    public Output</* @Nullable */ Integer> count() {
         return this.count;
     }
     /**
@@ -59,7 +60,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -73,7 +74,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The OS of agent machine
      * 
      */
-    public Output</* @Nullable */ String> getOs() {
+    public Output</* @Nullable */ String> os() {
         return this.os;
     }
     /**
@@ -101,7 +102,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of this agent pool
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -115,7 +116,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -129,7 +130,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -143,7 +144,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The Tier of agent machine
      * 
      */
-    public Output</* @Nullable */ String> getTier() {
+    public Output</* @Nullable */ String> tier() {
         return this.tier;
     }
     /**
@@ -157,7 +158,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -171,7 +172,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @return The Virtual Network Subnet Resource Id of the agent machine
      * 
      */
-    public Output</* @Nullable */ String> getVirtualNetworkSubnetResourceId() {
+    public Output</* @Nullable */ String> virtualNetworkSubnetResourceId() {
         return this.virtualNetworkSubnetResourceId;
     }
 
@@ -197,7 +198,7 @@ public class AgentPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AgentPool(String name, AgentPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerregistry:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:containerregistry:AgentPool", name, args == null ? AgentPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AgentPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

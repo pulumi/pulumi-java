@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalHeaders")
       private final @Nullable Output<Object> additionalHeaders;
 
-    public Output<Object> getAdditionalHeaders() {
-        return this.additionalHeaders == null ? Output.empty() : this.additionalHeaders;
+    public Output<Object> additionalHeaders() {
+        return this.additionalHeaders == null ? Codegen.empty() : this.additionalHeaders;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+    public Output<Object> disableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpCompressionType")
       private final @Nullable Output<Object> httpCompressionType;
 
-    public Output<Object> getHttpCompressionType() {
-        return this.httpCompressionType == null ? Output.empty() : this.httpCompressionType;
+    public Output<Object> httpCompressionType() {
+        return this.httpCompressionType == null ? Codegen.empty() : this.httpCompressionType;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpRequestTimeout")
       private final @Nullable Output<Object> httpRequestTimeout;
 
-    public Output<Object> getHttpRequestTimeout() {
-        return this.httpRequestTimeout == null ? Output.empty() : this.httpRequestTimeout;
+    public Output<Object> httpRequestTimeout() {
+        return this.httpRequestTimeout == null ? Codegen.empty() : this.httpRequestTimeout;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+    public Output<Object> maxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestInterval")
       private final @Nullable Output<Object> requestInterval;
 
-    public Output<Object> getRequestInterval() {
-        return this.requestInterval == null ? Output.empty() : this.requestInterval;
+    public Output<Object> requestInterval() {
+        return this.requestInterval == null ? Codegen.empty() : this.requestInterval;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestMethod")
       private final @Nullable Output<Object> requestMethod;
 
-    public Output<Object> getRequestMethod() {
-        return this.requestMethod == null ? Output.empty() : this.requestMethod;
+    public Output<Object> requestMethod() {
+        return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> getSinkRetryCount() {
-        return this.sinkRetryCount == null ? Output.empty() : this.sinkRetryCount;
+    public Output<Object> sinkRetryCount() {
+        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> getSinkRetryWait() {
-        return this.sinkRetryWait == null ? Output.empty() : this.sinkRetryWait;
+    public Output<Object> sinkRetryWait() {
+        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -137,8 +138,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> getWriteBatchSize() {
-        return this.writeBatchSize == null ? Output.empty() : this.writeBatchSize;
+    public Output<Object> writeBatchSize() {
+        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> getWriteBatchTimeout() {
-        return this.writeBatchTimeout == null ? Output.empty() : this.writeBatchTimeout;
+    public Output<Object> writeBatchTimeout() {
+        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 
     public RestSinkArgs(
@@ -180,18 +181,18 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestSinkArgs() {
-        this.additionalHeaders = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.httpCompressionType = Output.empty();
-        this.httpRequestTimeout = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.requestInterval = Output.empty();
-        this.requestMethod = Output.empty();
-        this.sinkRetryCount = Output.empty();
-        this.sinkRetryWait = Output.empty();
-        this.type = Output.empty();
-        this.writeBatchSize = Output.empty();
-        this.writeBatchTimeout = Output.empty();
+        this.additionalHeaders = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.httpCompressionType = Codegen.empty();
+        this.httpRequestTimeout = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.requestInterval = Codegen.empty();
+        this.requestMethod = Codegen.empty();
+        this.sinkRetryCount = Codegen.empty();
+        this.sinkRetryWait = Codegen.empty();
+        this.type = Codegen.empty();
+        this.writeBatchSize = Codegen.empty();
+        this.writeBatchTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = Output.ofNullable(additionalHeaders);
+            this.additionalHeaders = Codegen.ofNullable(additionalHeaders);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -249,7 +250,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder httpCompressionType(@Nullable Output<Object> httpCompressionType) {
@@ -257,7 +258,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpCompressionType(@Nullable Object httpCompressionType) {
-            this.httpCompressionType = Output.ofNullable(httpCompressionType);
+            this.httpCompressionType = Codegen.ofNullable(httpCompressionType);
             return this;
         }
         public Builder httpRequestTimeout(@Nullable Output<Object> httpRequestTimeout) {
@@ -265,7 +266,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
-            this.httpRequestTimeout = Output.ofNullable(httpRequestTimeout);
+            this.httpRequestTimeout = Codegen.ofNullable(httpRequestTimeout);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -273,7 +274,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder requestInterval(@Nullable Output<Object> requestInterval) {
@@ -281,7 +282,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestInterval(@Nullable Object requestInterval) {
-            this.requestInterval = Output.ofNullable(requestInterval);
+            this.requestInterval = Codegen.ofNullable(requestInterval);
             return this;
         }
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
@@ -289,7 +290,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = Output.ofNullable(requestMethod);
+            this.requestMethod = Codegen.ofNullable(requestMethod);
             return this;
         }
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
@@ -297,7 +298,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
+            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
             return this;
         }
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
@@ -305,7 +306,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
+            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -321,7 +322,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Output.ofNullable(writeBatchSize);
+            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
@@ -329,7 +330,7 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
+            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
             return this;
         }        public RestSinkArgs build() {
             return new RestSinkArgs(additionalHeaders, disableMetricsCollection, httpCompressionType, httpRequestTimeout, maxConcurrentConnections, requestInterval, requestMethod, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);

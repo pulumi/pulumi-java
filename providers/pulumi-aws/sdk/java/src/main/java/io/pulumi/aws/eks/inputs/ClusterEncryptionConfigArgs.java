@@ -6,6 +6,7 @@ package io.pulumi.aws.eks.inputs;
 import io.pulumi.aws.eks.inputs.ClusterEncryptionConfigProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     @Import(name="provider", required=true)
       private final Output<ClusterEncryptionConfigProviderArgs> provider;
 
-    public Output<ClusterEncryptionConfigProviderArgs> getProvider() {
+    public Output<ClusterEncryptionConfigProviderArgs> provider() {
         return this.provider;
     }
 
@@ -33,7 +34,7 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     @Import(name="resources", required=true)
       private final Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
+    public Output<List<String>> resources() {
         return this.resources;
     }
 
@@ -45,8 +46,8 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     }
 
     private ClusterEncryptionConfigArgs() {
-        this.provider = Output.empty();
-        this.resources = Output.empty();
+        this.provider = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {

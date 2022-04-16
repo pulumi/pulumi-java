@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="loadBalancerFrontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> loadBalancerFrontendIPConfiguration;
 
-    public Output<SubResourceArgs> getLoadBalancerFrontendIPConfiguration() {
-        return this.loadBalancerFrontendIPConfiguration == null ? Output.empty() : this.loadBalancerFrontendIPConfiguration;
+    public Output<SubResourceArgs> loadBalancerFrontendIPConfiguration() {
+        return this.loadBalancerFrontendIPConfiguration == null ? Codegen.empty() : this.loadBalancerFrontendIPConfiguration;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<SubResourceArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     @Import(name="virtualNetwork")
       private final @Nullable Output<SubResourceArgs> virtualNetwork;
 
-    public Output<SubResourceArgs> getVirtualNetwork() {
-        return this.virtualNetwork == null ? Output.empty() : this.virtualNetwork;
+    public Output<SubResourceArgs> virtualNetwork() {
+        return this.virtualNetwork == null ? Codegen.empty() : this.virtualNetwork;
     }
 
     public LoadBalancerBackendAddressArgs(
@@ -88,11 +89,11 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
     }
 
     private LoadBalancerBackendAddressArgs() {
-        this.ipAddress = Output.empty();
-        this.loadBalancerFrontendIPConfiguration = Output.empty();
-        this.name = Output.empty();
-        this.subnet = Output.empty();
-        this.virtualNetwork = Output.empty();
+        this.ipAddress = Codegen.empty();
+        this.loadBalancerFrontendIPConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.virtualNetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder loadBalancerFrontendIPConfiguration(@Nullable Output<SubResourceArgs> loadBalancerFrontendIPConfiguration) {
@@ -136,7 +137,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder loadBalancerFrontendIPConfiguration(@Nullable SubResourceArgs loadBalancerFrontendIPConfiguration) {
-            this.loadBalancerFrontendIPConfiguration = Output.ofNullable(loadBalancerFrontendIPConfiguration);
+            this.loadBalancerFrontendIPConfiguration = Codegen.ofNullable(loadBalancerFrontendIPConfiguration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -144,7 +145,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
@@ -152,7 +153,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder virtualNetwork(@Nullable Output<SubResourceArgs> virtualNetwork) {
@@ -160,7 +161,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder virtualNetwork(@Nullable SubResourceArgs virtualNetwork) {
-            this.virtualNetwork = Output.ofNullable(virtualNetwork);
+            this.virtualNetwork = Codegen.ofNullable(virtualNetwork);
             return this;
         }        public LoadBalancerBackendAddressArgs build() {
             return new LoadBalancerBackendAddressArgs(ipAddress, loadBalancerFrontendIPConfiguration, name, subnet, virtualNetwork);

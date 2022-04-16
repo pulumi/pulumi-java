@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,ServiceNowAuthenticationType>> authenticationType;
 
-    public Output<Either<String,ServiceNowAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,ServiceNowAuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
 
@@ -56,8 +57,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="clientId")
       private final @Nullable Output<Object> clientId;
 
-    public Output<Object> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<Object> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="clientSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="endpoint", required=true)
       private final Output<Object> endpoint;
 
-    public Output<Object> getEndpoint() {
+    public Output<Object> endpoint() {
         return this.endpoint;
     }
 
@@ -122,8 +123,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -156,8 +157,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="useEncryptedEndpoints")
       private final @Nullable Output<Object> useEncryptedEndpoints;
 
-    public Output<Object> getUseEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Output.empty() : this.useEncryptedEndpoints;
+    public Output<Object> useEncryptedEndpoints() {
+        return this.useEncryptedEndpoints == null ? Codegen.empty() : this.useEncryptedEndpoints;
     }
 
     /**
@@ -167,8 +168,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="useHostVerification")
       private final @Nullable Output<Object> useHostVerification;
 
-    public Output<Object> getUseHostVerification() {
-        return this.useHostVerification == null ? Output.empty() : this.useHostVerification;
+    public Output<Object> useHostVerification() {
+        return this.useHostVerification == null ? Codegen.empty() : this.useHostVerification;
     }
 
     /**
@@ -178,8 +179,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="usePeerVerification")
       private final @Nullable Output<Object> usePeerVerification;
 
-    public Output<Object> getUsePeerVerification() {
-        return this.usePeerVerification == null ? Output.empty() : this.usePeerVerification;
+    public Output<Object> usePeerVerification() {
+        return this.usePeerVerification == null ? Codegen.empty() : this.usePeerVerification;
     }
 
     /**
@@ -189,8 +190,8 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="username")
       private final @Nullable Output<Object> username;
 
-    public Output<Object> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<Object> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public ServiceNowLinkedServiceArgs(
@@ -227,21 +228,21 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     private ServiceNowLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.authenticationType = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.endpoint = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.type = Output.empty();
-        this.useEncryptedEndpoints = Output.empty();
-        this.useHostVerification = Output.empty();
-        this.usePeerVerification = Output.empty();
-        this.username = Output.empty();
+        this.annotations = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.type = Codegen.empty();
+        this.useEncryptedEndpoints = Codegen.empty();
+        this.useHostVerification = Codegen.empty();
+        this.usePeerVerification = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -297,7 +298,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -316,7 +317,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
@@ -324,7 +325,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -332,7 +333,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -340,7 +341,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -348,7 +349,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder endpoint(Output<Object> endpoint) {
@@ -364,7 +365,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -372,7 +373,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -388,7 +389,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = Output.ofNullable(useEncryptedEndpoints);
+            this.useEncryptedEndpoints = Codegen.ofNullable(useEncryptedEndpoints);
             return this;
         }
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
@@ -396,7 +397,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = Output.ofNullable(useHostVerification);
+            this.useHostVerification = Codegen.ofNullable(useHostVerification);
             return this;
         }
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
@@ -404,7 +405,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = Output.ofNullable(usePeerVerification);
+            this.usePeerVerification = Codegen.ofNullable(usePeerVerification);
             return this;
         }
         public Builder username(@Nullable Output<Object> username) {
@@ -412,7 +413,7 @@ public final class ServiceNowLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder username(@Nullable Object username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public ServiceNowLinkedServiceArgs build() {
             return new ServiceNowLinkedServiceArgs(annotations, authenticationType, clientId, clientSecret, connectVia, description, encryptedCredential, endpoint, parameters, password, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);

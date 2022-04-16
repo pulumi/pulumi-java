@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
+    public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
@@ -46,8 +47,8 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public HmacKeyArgs(
@@ -60,9 +61,9 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HmacKeyArgs() {
-        this.project = Output.empty();
-        this.serviceAccountEmail = Output.empty();
-        this.state = Output.empty();
+        this.project = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
@@ -110,7 +111,7 @@ public final class HmacKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public HmacKeyArgs build() {
             return new HmacKeyArgs(project, serviceAccountEmail, state);

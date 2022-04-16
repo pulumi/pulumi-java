@@ -6,6 +6,7 @@ package io.pulumi.aws.appsync.inputs;
 import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigAuthorizationConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="authorizationConfig")
       private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig;
 
-    public Output<DataSourceHttpConfigAuthorizationConfigGetArgs> getAuthorizationConfig() {
-        return this.authorizationConfig == null ? Output.empty() : this.authorizationConfig;
+    public Output<DataSourceHttpConfigAuthorizationConfigGetArgs> authorizationConfig() {
+        return this.authorizationConfig == null ? Codegen.empty() : this.authorizationConfig;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
     @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
 
@@ -45,8 +46,8 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
     }
 
     private DataSourceHttpConfigGetArgs() {
-        this.authorizationConfig = Output.empty();
-        this.endpoint = Output.empty();
+        this.authorizationConfig = Codegen.empty();
+        this.endpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DataSourceHttpConfigGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder authorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfigGetArgs authorizationConfig) {
-            this.authorizationConfig = Output.ofNullable(authorizationConfig);
+            this.authorizationConfig = Codegen.ofNullable(authorizationConfig);
             return this;
         }
         public Builder endpoint(Output<String> endpoint) {

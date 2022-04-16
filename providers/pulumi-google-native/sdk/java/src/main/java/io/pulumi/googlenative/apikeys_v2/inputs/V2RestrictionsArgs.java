@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2AndroidKeyRestrictionsArgs;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2ApiTargetArgs;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2BrowserKeyRestrictionsArgs;
@@ -30,8 +31,8 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="androidKeyRestrictions")
       private final @Nullable Output<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions;
 
-    public Output<V2AndroidKeyRestrictionsArgs> getAndroidKeyRestrictions() {
-        return this.androidKeyRestrictions == null ? Output.empty() : this.androidKeyRestrictions;
+    public Output<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions() {
+        return this.androidKeyRestrictions == null ? Codegen.empty() : this.androidKeyRestrictions;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiTargets")
       private final @Nullable Output<List<V2ApiTargetArgs>> apiTargets;
 
-    public Output<List<V2ApiTargetArgs>> getApiTargets() {
-        return this.apiTargets == null ? Output.empty() : this.apiTargets;
+    public Output<List<V2ApiTargetArgs>> apiTargets() {
+        return this.apiTargets == null ? Codegen.empty() : this.apiTargets;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="browserKeyRestrictions")
       private final @Nullable Output<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions;
 
-    public Output<V2BrowserKeyRestrictionsArgs> getBrowserKeyRestrictions() {
-        return this.browserKeyRestrictions == null ? Output.empty() : this.browserKeyRestrictions;
+    public Output<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions() {
+        return this.browserKeyRestrictions == null ? Codegen.empty() : this.browserKeyRestrictions;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosKeyRestrictions")
       private final @Nullable Output<V2IosKeyRestrictionsArgs> iosKeyRestrictions;
 
-    public Output<V2IosKeyRestrictionsArgs> getIosKeyRestrictions() {
-        return this.iosKeyRestrictions == null ? Output.empty() : this.iosKeyRestrictions;
+    public Output<V2IosKeyRestrictionsArgs> iosKeyRestrictions() {
+        return this.iosKeyRestrictions == null ? Codegen.empty() : this.iosKeyRestrictions;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverKeyRestrictions")
       private final @Nullable Output<V2ServerKeyRestrictionsArgs> serverKeyRestrictions;
 
-    public Output<V2ServerKeyRestrictionsArgs> getServerKeyRestrictions() {
-        return this.serverKeyRestrictions == null ? Output.empty() : this.serverKeyRestrictions;
+    public Output<V2ServerKeyRestrictionsArgs> serverKeyRestrictions() {
+        return this.serverKeyRestrictions == null ? Codegen.empty() : this.serverKeyRestrictions;
     }
 
     public V2RestrictionsArgs(
@@ -92,11 +93,11 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private V2RestrictionsArgs() {
-        this.androidKeyRestrictions = Output.empty();
-        this.apiTargets = Output.empty();
-        this.browserKeyRestrictions = Output.empty();
-        this.iosKeyRestrictions = Output.empty();
-        this.serverKeyRestrictions = Output.empty();
+        this.androidKeyRestrictions = Codegen.empty();
+        this.apiTargets = Codegen.empty();
+        this.browserKeyRestrictions = Codegen.empty();
+        this.iosKeyRestrictions = Codegen.empty();
+        this.serverKeyRestrictions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder androidKeyRestrictions(@Nullable V2AndroidKeyRestrictionsArgs androidKeyRestrictions) {
-            this.androidKeyRestrictions = Output.ofNullable(androidKeyRestrictions);
+            this.androidKeyRestrictions = Codegen.ofNullable(androidKeyRestrictions);
             return this;
         }
         public Builder apiTargets(@Nullable Output<List<V2ApiTargetArgs>> apiTargets) {
@@ -140,7 +141,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiTargets(@Nullable List<V2ApiTargetArgs> apiTargets) {
-            this.apiTargets = Output.ofNullable(apiTargets);
+            this.apiTargets = Codegen.ofNullable(apiTargets);
             return this;
         }
         public Builder apiTargets(V2ApiTargetArgs... apiTargets) {
@@ -151,7 +152,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder browserKeyRestrictions(@Nullable V2BrowserKeyRestrictionsArgs browserKeyRestrictions) {
-            this.browserKeyRestrictions = Output.ofNullable(browserKeyRestrictions);
+            this.browserKeyRestrictions = Codegen.ofNullable(browserKeyRestrictions);
             return this;
         }
         public Builder iosKeyRestrictions(@Nullable Output<V2IosKeyRestrictionsArgs> iosKeyRestrictions) {
@@ -159,7 +160,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iosKeyRestrictions(@Nullable V2IosKeyRestrictionsArgs iosKeyRestrictions) {
-            this.iosKeyRestrictions = Output.ofNullable(iosKeyRestrictions);
+            this.iosKeyRestrictions = Codegen.ofNullable(iosKeyRestrictions);
             return this;
         }
         public Builder serverKeyRestrictions(@Nullable Output<V2ServerKeyRestrictionsArgs> serverKeyRestrictions) {
@@ -167,7 +168,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverKeyRestrictions(@Nullable V2ServerKeyRestrictionsArgs serverKeyRestrictions) {
-            this.serverKeyRestrictions = Output.ofNullable(serverKeyRestrictions);
+            this.serverKeyRestrictions = Codegen.ofNullable(serverKeyRestrictions);
             return this;
         }        public V2RestrictionsArgs build() {
             return new V2RestrictionsArgs(androidKeyRestrictions, apiTargets, browserKeyRestrictions, iosKeyRestrictions, serverKeyRestrictions);

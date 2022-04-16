@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeDesiredState;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepArgs;
@@ -29,8 +30,8 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifacts")
       private final @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
 
-    public Output<List<SoftwareRecipeArtifactArgs>> getArtifacts() {
-        return this.artifacts == null ? Output.empty() : this.artifacts;
+    public Output<List<SoftwareRecipeArtifactArgs>> artifacts() {
+        return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredState")
       private final @Nullable Output<SoftwareRecipeDesiredState> desiredState;
 
-    public Output<SoftwareRecipeDesiredState> getDesiredState() {
-        return this.desiredState == null ? Output.empty() : this.desiredState;
+    public Output<SoftwareRecipeDesiredState> desiredState() {
+        return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="installSteps")
       private final @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
 
-    public Output<List<SoftwareRecipeStepArgs>> getInstallSteps() {
-        return this.installSteps == null ? Output.empty() : this.installSteps;
+    public Output<List<SoftwareRecipeStepArgs>> installSteps() {
+        return this.installSteps == null ? Codegen.empty() : this.installSteps;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -73,8 +74,8 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateSteps")
       private final @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
 
-    public Output<List<SoftwareRecipeStepArgs>> getUpdateSteps() {
-        return this.updateSteps == null ? Output.empty() : this.updateSteps;
+    public Output<List<SoftwareRecipeStepArgs>> updateSteps() {
+        return this.updateSteps == null ? Codegen.empty() : this.updateSteps;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public SoftwareRecipeArgs(
@@ -104,12 +105,12 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SoftwareRecipeArgs() {
-        this.artifacts = Output.empty();
-        this.desiredState = Output.empty();
-        this.installSteps = Output.empty();
-        this.name = Output.empty();
-        this.updateSteps = Output.empty();
-        this.version = Output.empty();
+        this.artifacts = Codegen.empty();
+        this.desiredState = Codegen.empty();
+        this.installSteps = Codegen.empty();
+        this.name = Codegen.empty();
+        this.updateSteps = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifacts(@Nullable List<SoftwareRecipeArtifactArgs> artifacts) {
-            this.artifacts = Output.ofNullable(artifacts);
+            this.artifacts = Codegen.ofNullable(artifacts);
             return this;
         }
         public Builder artifacts(SoftwareRecipeArtifactArgs... artifacts) {
@@ -158,7 +159,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder desiredState(@Nullable SoftwareRecipeDesiredState desiredState) {
-            this.desiredState = Output.ofNullable(desiredState);
+            this.desiredState = Codegen.ofNullable(desiredState);
             return this;
         }
         public Builder installSteps(@Nullable Output<List<SoftwareRecipeStepArgs>> installSteps) {
@@ -166,7 +167,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder installSteps(@Nullable List<SoftwareRecipeStepArgs> installSteps) {
-            this.installSteps = Output.ofNullable(installSteps);
+            this.installSteps = Codegen.ofNullable(installSteps);
             return this;
         }
         public Builder installSteps(SoftwareRecipeStepArgs... installSteps) {
@@ -185,7 +186,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateSteps(@Nullable List<SoftwareRecipeStepArgs> updateSteps) {
-            this.updateSteps = Output.ofNullable(updateSteps);
+            this.updateSteps = Codegen.ofNullable(updateSteps);
             return this;
         }
         public Builder updateSteps(SoftwareRecipeStepArgs... updateSteps) {
@@ -196,7 +197,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public SoftwareRecipeArgs build() {
             return new SoftwareRecipeArgs(artifacts, desiredState, installSteps, name, updateSteps, version);

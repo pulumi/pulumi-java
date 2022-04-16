@@ -17,7 +17,7 @@ public final class SpotFleetSpotMaintenanceStrategies extends io.pulumi.resource
     @Import(name="capacityRebalance")
       private final @Nullable SpotFleetSpotCapacityRebalance capacityRebalance;
 
-    public Optional<SpotFleetSpotCapacityRebalance> getCapacityRebalance() {
+    public Optional<SpotFleetSpotCapacityRebalance> capacityRebalance() {
         return this.capacityRebalance == null ? Optional.empty() : Optional.ofNullable(this.capacityRebalance);
     }
 

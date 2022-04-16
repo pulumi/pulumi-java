@@ -11,6 +11,7 @@ import io.pulumi.aws.s3.outputs.AccessPointVpcConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -53,7 +54,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the AWS provider.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -67,7 +68,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The alias of the S3 Access Point.
      * 
      */
-    public Output<String> getAlias() {
+    public Output<String> alias() {
         return this.alias;
     }
     /**
@@ -81,7 +82,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the S3 Access Point.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -95,7 +96,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -111,7 +112,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * Note: S3 access points only support secure access by HTTPS. HTTP isn't supported.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -125,7 +126,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return The VPC endpoints for the S3 Access Point.
      * 
      */
-    public Output<Map<String,String>> getEndpoints() {
+    public Output<Map<String,String>> endpoints() {
         return this.endpoints;
     }
     /**
@@ -139,7 +140,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this access point currently has a policy that allows public access.
      * 
      */
-    public Output<Boolean> getHasPublicAccessPolicy() {
+    public Output<Boolean> hasPublicAccessPolicy() {
         return this.hasPublicAccessPolicy;
     }
     /**
@@ -153,7 +154,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Name you want to assign to this access point.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -167,7 +168,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this access point allows access from the public Internet. Values are `VPC` (the access point doesn't allow access from the public Internet) and `Internet` (the access point allows access from the public Internet, subject to the access point and bucket access policies).
      * 
      */
-    public Output<String> getNetworkOrigin() {
+    public Output<String> networkOrigin() {
         return this.networkOrigin;
     }
     /**
@@ -181,7 +182,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Valid JSON document that specifies the policy that you want to apply to this access point. Removing `policy` from your configuration or setting `policy` to null or an empty string (i.e., `policy = ""`) _will not_ delete the policy since it could have been set by `aws.s3control.AccessPointPolicy`. To remove the `policy`, set it to `"{}"` (an empty JSON document).
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -195,7 +196,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
      * 
      */
-    public Output</* @Nullable */ AccessPointPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
+    public Output</* @Nullable */ AccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
         return this.publicAccessBlockConfiguration;
     }
     /**
@@ -209,7 +210,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @return Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
      * 
      */
-    public Output</* @Nullable */ AccessPointVpcConfiguration> getVpcConfiguration() {
+    public Output</* @Nullable */ AccessPointVpcConfiguration> vpcConfiguration() {
         return this.vpcConfiguration;
     }
 
@@ -235,7 +236,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessPoint(String name, AccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/accessPoint:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3/accessPoint:AccessPoint", name, args == null ? AccessPointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessPoint(String name, Output<String> id, @Nullable AccessPointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

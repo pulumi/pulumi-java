@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     @Import(name="bucketName")
       private final @Nullable Output<Object> bucketName;
 
-    public Output<Object> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+    public Output<Object> bucketName() {
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
 
-    public Output<Object> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+    public Output<Object> fileName() {
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
-    public Output<Object> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+    public Output<Object> folderPath() {
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -71,8 +72,8 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     @Import(name="version")
       private final @Nullable Output<Object> version;
 
-    public Output<Object> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Object> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public AmazonS3CompatibleLocationArgs(
@@ -89,11 +90,11 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
     }
 
     private AmazonS3CompatibleLocationArgs() {
-        this.bucketName = Output.empty();
-        this.fileName = Output.empty();
-        this.folderPath = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.fileName = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder bucketName(@Nullable Object bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder fileName(@Nullable Output<Object> fileName) {
@@ -137,7 +138,7 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder folderPath(@Nullable Output<Object> folderPath) {
@@ -145,7 +146,7 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -161,7 +162,7 @@ public final class AmazonS3CompatibleLocationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder version(@Nullable Object version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public AmazonS3CompatibleLocationArgs build() {
             return new AmazonS3CompatibleLocationArgs(bucketName, fileName, folderPath, type, version);

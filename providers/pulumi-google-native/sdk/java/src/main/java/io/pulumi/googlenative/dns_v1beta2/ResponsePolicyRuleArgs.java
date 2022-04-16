@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1beta2.enums.ResponsePolicyRuleBehavior;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyRuleLocalDataArgs;
 import java.lang.String;
@@ -23,15 +24,15 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="behavior")
       private final @Nullable Output<ResponsePolicyRuleBehavior> behavior;
 
-    public Output<ResponsePolicyRuleBehavior> getBehavior() {
-        return this.behavior == null ? Output.empty() : this.behavior;
+    public Output<ResponsePolicyRuleBehavior> behavior() {
+        return this.behavior == null ? Codegen.empty() : this.behavior;
     }
 
     @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
-    public Output<String> getClientOperationId() {
-        return this.clientOperationId == null ? Output.empty() : this.clientOperationId;
+    public Output<String> clientOperationId() {
+        return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
     }
 
     /**
@@ -41,15 +42,15 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+    public Output<String> dnsName() {
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -59,21 +60,21 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="localData")
       private final @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
 
-    public Output<ResponsePolicyRuleLocalDataArgs> getLocalData() {
-        return this.localData == null ? Output.empty() : this.localData;
+    public Output<ResponsePolicyRuleLocalDataArgs> localData() {
+        return this.localData == null ? Codegen.empty() : this.localData;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="responsePolicy", required=true)
       private final Output<String> responsePolicy;
 
-    public Output<String> getResponsePolicy() {
+    public Output<String> responsePolicy() {
         return this.responsePolicy;
     }
 
@@ -84,8 +85,8 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     public ResponsePolicyRuleArgs(
@@ -108,14 +109,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResponsePolicyRuleArgs() {
-        this.behavior = Output.empty();
-        this.clientOperationId = Output.empty();
-        this.dnsName = Output.empty();
-        this.kind = Output.empty();
-        this.localData = Output.empty();
-        this.project = Output.empty();
-        this.responsePolicy = Output.empty();
-        this.ruleName = Output.empty();
+        this.behavior = Codegen.empty();
+        this.clientOperationId = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.localData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.responsePolicy = Codegen.empty();
+        this.ruleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder behavior(@Nullable ResponsePolicyRuleBehavior behavior) {
-            this.behavior = Output.ofNullable(behavior);
+            this.behavior = Codegen.ofNullable(behavior);
             return this;
         }
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
@@ -165,7 +166,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Output.ofNullable(clientOperationId);
+            this.clientOperationId = Codegen.ofNullable(clientOperationId);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -173,7 +174,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -181,7 +182,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder localData(@Nullable Output<ResponsePolicyRuleLocalDataArgs> localData) {
@@ -189,7 +190,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder localData(@Nullable ResponsePolicyRuleLocalDataArgs localData) {
-            this.localData = Output.ofNullable(localData);
+            this.localData = Codegen.ofNullable(localData);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -197,7 +198,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder responsePolicy(Output<String> responsePolicy) {
@@ -213,7 +214,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }        public ResponsePolicyRuleArgs build() {
             return new ResponsePolicyRuleArgs(behavior, clientOperationId, dnsName, kind, localData, project, responsePolicy, ruleName);

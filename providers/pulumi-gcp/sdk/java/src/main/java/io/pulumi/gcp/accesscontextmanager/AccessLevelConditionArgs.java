@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionDevicePolicyArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
     @Import(name="accessLevel", required=true)
       private final Output<String> accessLevel;
 
-    public Output<String> getAccessLevel() {
+    public Output<String> accessLevel() {
         return this.accessLevel;
     }
 
@@ -38,8 +39,8 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
     @Import(name="devicePolicy")
       private final @Nullable Output<AccessLevelConditionDevicePolicyArgs> devicePolicy;
 
-    public Output<AccessLevelConditionDevicePolicyArgs> getDevicePolicy() {
-        return this.devicePolicy == null ? Output.empty() : this.devicePolicy;
+    public Output<AccessLevelConditionDevicePolicyArgs> devicePolicy() {
+        return this.devicePolicy == null ? Codegen.empty() : this.devicePolicy;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
     @Import(name="ipSubnetworks")
       private final @Nullable Output<List<String>> ipSubnetworks;
 
-    public Output<List<String>> getIpSubnetworks() {
-        return this.ipSubnetworks == null ? Output.empty() : this.ipSubnetworks;
+    public Output<List<String>> ipSubnetworks() {
+        return this.ipSubnetworks == null ? Codegen.empty() : this.ipSubnetworks;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
     @Import(name="negate")
       private final @Nullable Output<Boolean> negate;
 
-    public Output<Boolean> getNegate() {
-        return this.negate == null ? Output.empty() : this.negate;
+    public Output<Boolean> negate() {
+        return this.negate == null ? Codegen.empty() : this.negate;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+    public Output<List<String>> regions() {
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
     @Import(name="requiredAccessLevels")
       private final @Nullable Output<List<String>> requiredAccessLevels;
 
-    public Output<List<String>> getRequiredAccessLevels() {
-        return this.requiredAccessLevels == null ? Output.empty() : this.requiredAccessLevels;
+    public Output<List<String>> requiredAccessLevels() {
+        return this.requiredAccessLevels == null ? Codegen.empty() : this.requiredAccessLevels;
     }
 
     public AccessLevelConditionArgs(
@@ -138,13 +139,13 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
     }
 
     private AccessLevelConditionArgs() {
-        this.accessLevel = Output.empty();
-        this.devicePolicy = Output.empty();
-        this.ipSubnetworks = Output.empty();
-        this.members = Output.empty();
-        this.negate = Output.empty();
-        this.regions = Output.empty();
-        this.requiredAccessLevels = Output.empty();
+        this.accessLevel = Codegen.empty();
+        this.devicePolicy = Codegen.empty();
+        this.ipSubnetworks = Codegen.empty();
+        this.members = Codegen.empty();
+        this.negate = Codegen.empty();
+        this.regions = Codegen.empty();
+        this.requiredAccessLevels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder devicePolicy(@Nullable AccessLevelConditionDevicePolicyArgs devicePolicy) {
-            this.devicePolicy = Output.ofNullable(devicePolicy);
+            this.devicePolicy = Codegen.ofNullable(devicePolicy);
             return this;
         }
         public Builder ipSubnetworks(@Nullable Output<List<String>> ipSubnetworks) {
@@ -200,7 +201,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ipSubnetworks(@Nullable List<String> ipSubnetworks) {
-            this.ipSubnetworks = Output.ofNullable(ipSubnetworks);
+            this.ipSubnetworks = Codegen.ofNullable(ipSubnetworks);
             return this;
         }
         public Builder ipSubnetworks(String... ipSubnetworks) {
@@ -211,7 +212,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -222,7 +223,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder negate(@Nullable Boolean negate) {
-            this.negate = Output.ofNullable(negate);
+            this.negate = Codegen.ofNullable(negate);
             return this;
         }
         public Builder regions(@Nullable Output<List<String>> regions) {
@@ -230,7 +231,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {
@@ -241,7 +242,7 @@ public final class AccessLevelConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder requiredAccessLevels(@Nullable List<String> requiredAccessLevels) {
-            this.requiredAccessLevels = Output.ofNullable(requiredAccessLevels);
+            this.requiredAccessLevels = Codegen.ofNullable(requiredAccessLevels);
             return this;
         }
         public Builder requiredAccessLevels(String... requiredAccessLevels) {

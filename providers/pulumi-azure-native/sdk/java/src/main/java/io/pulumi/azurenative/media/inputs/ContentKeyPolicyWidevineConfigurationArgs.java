@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -36,7 +37,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
     @Import(name="widevineTemplate", required=true)
       private final Output<String> widevineTemplate;
 
-    public Output<String> getWidevineTemplate() {
+    public Output<String> widevineTemplate() {
         return this.widevineTemplate;
     }
 
@@ -48,8 +49,8 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
     }
 
     private ContentKeyPolicyWidevineConfigurationArgs() {
-        this.odataType = Output.empty();
-        this.widevineTemplate = Output.empty();
+        this.odataType = Codegen.empty();
+        this.widevineTemplate = Codegen.empty();
     }
 
     public static Builder builder() {

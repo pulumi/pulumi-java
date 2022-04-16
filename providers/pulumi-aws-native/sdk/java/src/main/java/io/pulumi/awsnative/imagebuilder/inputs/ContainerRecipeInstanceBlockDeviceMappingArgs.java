@@ -6,6 +6,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+    public Output<String> deviceName() {
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
     @Import(name="ebs")
       private final @Nullable Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs;
 
-    public Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs> getEbs() {
-        return this.ebs == null ? Output.empty() : this.ebs;
+    public Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs() {
+        return this.ebs == null ? Codegen.empty() : this.ebs;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
     @Import(name="noDevice")
       private final @Nullable Output<String> noDevice;
 
-    public Output<String> getNoDevice() {
-        return this.noDevice == null ? Output.empty() : this.noDevice;
+    public Output<String> noDevice() {
+        return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
-        return this.virtualName == null ? Output.empty() : this.virtualName;
+    public Output<String> virtualName() {
+        return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 
     public ContainerRecipeInstanceBlockDeviceMappingArgs(
@@ -75,10 +76,10 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
     }
 
     private ContainerRecipeInstanceBlockDeviceMappingArgs() {
-        this.deviceName = Output.empty();
-        this.ebs = Output.empty();
-        this.noDevice = Output.empty();
-        this.virtualName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.ebs = Codegen.empty();
+        this.noDevice = Codegen.empty();
+        this.virtualName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder ebs(@Nullable Output<ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs) {
@@ -120,7 +121,7 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
             return this;
         }
         public Builder ebs(@Nullable ContainerRecipeEbsInstanceBlockDeviceSpecificationArgs ebs) {
-            this.ebs = Output.ofNullable(ebs);
+            this.ebs = Codegen.ofNullable(ebs);
             return this;
         }
         public Builder noDevice(@Nullable Output<String> noDevice) {
@@ -128,7 +129,7 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
             return this;
         }
         public Builder noDevice(@Nullable String noDevice) {
-            this.noDevice = Output.ofNullable(noDevice);
+            this.noDevice = Codegen.ofNullable(noDevice);
             return this;
         }
         public Builder virtualName(@Nullable Output<String> virtualName) {
@@ -136,7 +137,7 @@ public final class ContainerRecipeInstanceBlockDeviceMappingArgs extends io.pulu
             return this;
         }
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Output.ofNullable(virtualName);
+            this.virtualName = Codegen.ofNullable(virtualName);
             return this;
         }        public ContainerRecipeInstanceBlockDeviceMappingArgs build() {
             return new ContainerRecipeInstanceBlockDeviceMappingArgs(deviceName, ebs, noDevice, virtualName);

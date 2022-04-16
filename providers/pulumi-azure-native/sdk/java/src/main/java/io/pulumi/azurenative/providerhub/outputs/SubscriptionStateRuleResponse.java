@@ -23,10 +23,10 @@ public final class SubscriptionStateRuleResponse {
         this.state = state;
     }
 
-    public List<String> getAllowedActions() {
+    public List<String> allowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
 

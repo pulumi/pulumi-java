@@ -34,14 +34,14 @@ public final class ObjectFieldSelector {
      * Version of the schema the FieldPath is written in terms of, defaults to "v1".
      * 
     */
-    public Optional<String> getApiVersion() {
+    public Optional<String> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
     /**
      * Path of the field to select in the specified API version.
      * 
     */
-    public String getFieldPath() {
+    public String fieldPath() {
         return this.fieldPath;
     }
 

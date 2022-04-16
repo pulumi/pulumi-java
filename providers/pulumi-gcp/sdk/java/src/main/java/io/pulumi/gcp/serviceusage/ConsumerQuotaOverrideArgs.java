@@ -5,6 +5,7 @@ package io.pulumi.gcp.serviceusage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+    public Output<Map<String,String>> dimensions() {
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="force")
       private final @Nullable Output<Boolean> force;
 
-    public Output<Boolean> getForce() {
-        return this.force == null ? Output.empty() : this.force;
+    public Output<Boolean> force() {
+        return this.force == null ? Codegen.empty() : this.force;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="limit", required=true)
       private final Output<String> limit;
 
-    public Output<String> getLimit() {
+    public Output<String> limit() {
         return this.limit;
     }
 
@@ -57,7 +58,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="metric", required=true)
       private final Output<String> metric;
 
-    public Output<String> getMetric() {
+    public Output<String> metric() {
         return this.metric;
     }
 
@@ -68,7 +69,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="overrideValue", required=true)
       private final Output<String> overrideValue;
 
-    public Output<String> getOverrideValue() {
+    public Output<String> overrideValue() {
         return this.overrideValue;
     }
 
@@ -80,8 +81,8 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -113,13 +114,13 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
     }
 
     private ConsumerQuotaOverrideArgs() {
-        this.dimensions = Output.empty();
-        this.force = Output.empty();
-        this.limit = Output.empty();
-        this.metric = Output.empty();
-        this.overrideValue = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.dimensions = Codegen.empty();
+        this.force = Codegen.empty();
+        this.limit = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.overrideValue = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder force(@Nullable Output<Boolean> force) {
@@ -167,7 +168,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder force(@Nullable Boolean force) {
-            this.force = Output.ofNullable(force);
+            this.force = Codegen.ofNullable(force);
             return this;
         }
         public Builder limit(Output<String> limit) {
@@ -199,7 +200,7 @@ public final class ConsumerQuotaOverrideArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(Output<String> service) {

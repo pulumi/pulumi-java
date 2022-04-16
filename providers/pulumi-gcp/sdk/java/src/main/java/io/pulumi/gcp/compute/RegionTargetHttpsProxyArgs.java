@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="sslCertificates", required=true)
       private final Output<List<String>> sslCertificates;
 
-    public Output<List<String>> getSslCertificates() {
+    public Output<List<String>> sslCertificates() {
         return this.sslCertificates;
     }
 
@@ -88,7 +89,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     @Import(name="urlMap", required=true)
       private final Output<String> urlMap;
 
-    public Output<String> getUrlMap() {
+    public Output<String> urlMap() {
         return this.urlMap;
     }
 
@@ -108,12 +109,12 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
     }
 
     private RegionTargetHttpsProxyArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.sslCertificates = Output.empty();
-        this.urlMap = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.sslCertificates = Codegen.empty();
+        this.urlMap = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -159,7 +160,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -167,7 +168,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -175,7 +176,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder sslCertificates(Output<List<String>> sslCertificates) {

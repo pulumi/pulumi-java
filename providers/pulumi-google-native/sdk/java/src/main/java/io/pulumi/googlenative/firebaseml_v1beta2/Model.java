@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firebaseml_v1beta2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaseml_v1beta2.ModelArgs;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.ModelStateResponse;
@@ -32,7 +33,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return Lists operation ids associated with this model whose status is NOT done.
      * 
      */
-    public Output<List<OperationResponse>> getActiveOperations() {
+    public Output<List<OperationResponse>> activeOperations() {
         return this.activeOperations;
     }
     /**
@@ -46,7 +47,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return Timestamp when this model was created in Firebase ML.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +61,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The name of the model to create. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores(_) and ASCII digits 0-9. It must start with a letter.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +75,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return See RFC7232 https://tools.ietf.org/html/rfc7232#section-2.3
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -88,7 +89,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The model_hash will change if a new file is available for download.
      * 
      */
-    public Output<String> getModelHash() {
+    public Output<String> modelHash() {
         return this.modelHash;
     }
     /**
@@ -102,7 +103,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}` The name is ignored when creating a model.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return State common to all model types. Includes publishing and validation information.
      * 
      */
-    public Output<ModelStateResponse> getState() {
+    public Output<ModelStateResponse> state() {
         return this.state;
     }
     /**
@@ -130,7 +131,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return User defined tags which can be used to group/filter models during listing
      * 
      */
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags;
     }
     /**
@@ -144,7 +145,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return A TFLite Model
      * 
      */
-    public Output<TfLiteModelResponse> getTfliteModel() {
+    public Output<TfLiteModelResponse> tfliteModel() {
         return this.tfliteModel;
     }
     /**
@@ -158,7 +159,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return Timestamp when this model was updated in Firebase ML.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -184,7 +185,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Model(String name, ModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firebaseml/v1beta2:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firebaseml/v1beta2:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Model(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

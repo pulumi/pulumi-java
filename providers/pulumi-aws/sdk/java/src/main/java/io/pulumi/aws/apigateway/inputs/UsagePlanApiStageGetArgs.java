@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway.inputs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanApiStageThrottleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -34,7 +35,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     @Import(name="stage", required=true)
       private final Output<String> stage;
 
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 
@@ -45,8 +46,8 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     @Import(name="throttles")
       private final @Nullable Output<List<UsagePlanApiStageThrottleGetArgs>> throttles;
 
-    public Output<List<UsagePlanApiStageThrottleGetArgs>> getThrottles() {
-        return this.throttles == null ? Output.empty() : this.throttles;
+    public Output<List<UsagePlanApiStageThrottleGetArgs>> throttles() {
+        return this.throttles == null ? Codegen.empty() : this.throttles;
     }
 
     public UsagePlanApiStageGetArgs(
@@ -59,9 +60,9 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
     }
 
     private UsagePlanApiStageGetArgs() {
-        this.apiId = Output.empty();
-        this.stage = Output.empty();
-        this.throttles = Output.empty();
+        this.apiId = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.throttles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class UsagePlanApiStageGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder throttles(@Nullable List<UsagePlanApiStageThrottleGetArgs> throttles) {
-            this.throttles = Output.ofNullable(throttles);
+            this.throttles = Codegen.ofNullable(throttles);
             return this;
         }
         public Builder throttles(UsagePlanApiStageThrottleGetArgs... throttles) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.privateca_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CertificateTemplateArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateExtensionConstraintsResponse;
@@ -33,7 +34,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @return The time at which this CertificateTemplate was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +48,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @return Optional. A human-readable description of scenarios this template is intended for.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -61,7 +62,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @return Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
      * 
      */
-    public Output<CertificateIdentityConstraintsResponse> getIdentityConstraints() {
+    public Output<CertificateIdentityConstraintsResponse> identityConstraints() {
         return this.identityConstraints;
     }
     /**
@@ -75,7 +76,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @return Optional. Labels with user-defined metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -89,7 +90,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @return The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -103,7 +104,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @return Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
      * 
      */
-    public Output<CertificateExtensionConstraintsResponse> getPassthroughExtensions() {
+    public Output<CertificateExtensionConstraintsResponse> passthroughExtensions() {
         return this.passthroughExtensions;
     }
     /**
@@ -117,7 +118,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @return Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
      * 
      */
-    public Output<X509ParametersResponse> getPredefinedValues() {
+    public Output<X509ParametersResponse> predefinedValues() {
         return this.predefinedValues;
     }
     /**
@@ -131,7 +132,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @return The time at which this CertificateTemplate was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -157,7 +158,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateTemplate(String name, CertificateTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:privateca/v1:CertificateTemplate", name, args == null ? CertificateTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:privateca/v1:CertificateTemplate", name, args == null ? CertificateTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

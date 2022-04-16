@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -57,7 +58,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * @return location of the linked service.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -71,7 +72,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * @return Friendly name of the linked service.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * @return LinkedService specific properties.
      * 
      */
-    public Output<LinkedServicePropsResponse> getProperties() {
+    public Output<LinkedServicePropsResponse> properties() {
         return this.properties;
     }
     /**
@@ -99,7 +100,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * @return Resource type of linked service.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -125,7 +126,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LinkedService(String name, LinkedServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningservices:LinkedService", name, args == null ? LinkedServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningservices:LinkedService", name, args == null ? LinkedServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LinkedService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

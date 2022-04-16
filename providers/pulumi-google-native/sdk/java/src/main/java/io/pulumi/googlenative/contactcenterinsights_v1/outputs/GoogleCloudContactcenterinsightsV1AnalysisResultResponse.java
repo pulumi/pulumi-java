@@ -33,14 +33,14 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
      * Call-specific metadata created by the analysis.
      * 
     */
-    public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse getCallAnalysisMetadata() {
+    public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata() {
         return this.callAnalysisMetadata;
     }
     /**
      * The time at which the analysis ended.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 

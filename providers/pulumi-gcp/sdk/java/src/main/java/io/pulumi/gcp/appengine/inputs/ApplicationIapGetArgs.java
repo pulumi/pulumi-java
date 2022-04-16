@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="oauth2ClientId", required=true)
       private final Output<String> oauth2ClientId;
 
-    public Output<String> getOauth2ClientId() {
+    public Output<String> oauth2ClientId() {
         return this.oauth2ClientId;
     }
 
@@ -46,7 +47,7 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="oauth2ClientSecret", required=true)
       private final Output<String> oauth2ClientSecret;
 
-    public Output<String> getOauth2ClientSecret() {
+    public Output<String> oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
 
@@ -57,8 +58,8 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="oauth2ClientSecretSha256")
       private final @Nullable Output<String> oauth2ClientSecretSha256;
 
-    public Output<String> getOauth2ClientSecretSha256() {
-        return this.oauth2ClientSecretSha256 == null ? Output.empty() : this.oauth2ClientSecretSha256;
+    public Output<String> oauth2ClientSecretSha256() {
+        return this.oauth2ClientSecretSha256 == null ? Codegen.empty() : this.oauth2ClientSecretSha256;
     }
 
     public ApplicationIapGetArgs(
@@ -73,10 +74,10 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ApplicationIapGetArgs() {
-        this.enabled = Output.empty();
-        this.oauth2ClientId = Output.empty();
-        this.oauth2ClientSecret = Output.empty();
-        this.oauth2ClientSecretSha256 = Output.empty();
+        this.enabled = Codegen.empty();
+        this.oauth2ClientId = Codegen.empty();
+        this.oauth2ClientSecret = Codegen.empty();
+        this.oauth2ClientSecretSha256 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder oauth2ClientId(Output<String> oauth2ClientId) {
@@ -134,7 +135,7 @@ public final class ApplicationIapGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder oauth2ClientSecretSha256(@Nullable String oauth2ClientSecretSha256) {
-            this.oauth2ClientSecretSha256 = Output.ofNullable(oauth2ClientSecretSha256);
+            this.oauth2ClientSecretSha256 = Codegen.ofNullable(oauth2ClientSecretSha256);
             return this;
         }        public ApplicationIapGetArgs build() {
             return new ApplicationIapGetArgs(enabled, oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);

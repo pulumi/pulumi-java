@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotAliasAudioLogDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,14 +22,14 @@ public final class BotAliasAudioLogSettingArgs extends io.pulumi.resources.Resou
     @Import(name="destination", required=true)
       private final Output<BotAliasAudioLogDestinationArgs> destination;
 
-    public Output<BotAliasAudioLogDestinationArgs> getDestination() {
+    public Output<BotAliasAudioLogDestinationArgs> destination() {
         return this.destination;
     }
 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -40,8 +41,8 @@ public final class BotAliasAudioLogSettingArgs extends io.pulumi.resources.Resou
     }
 
     private BotAliasAudioLogSettingArgs() {
-        this.destination = Output.empty();
-        this.enabled = Output.empty();
+        this.destination = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {

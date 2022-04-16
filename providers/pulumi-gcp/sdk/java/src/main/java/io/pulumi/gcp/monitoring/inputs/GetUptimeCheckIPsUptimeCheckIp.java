@@ -22,7 +22,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 
@@ -34,7 +34,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -45,7 +45,7 @@ public final class GetUptimeCheckIPsUptimeCheckIp extends io.pulumi.resources.In
     @Import(name="region", required=true)
       private final String region;
 
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceDiskArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cpuCount")
       private final @Nullable Output<Integer> cpuCount;
 
-    public Output<Integer> getCpuCount() {
-        return this.cpuCount == null ? Output.empty() : this.cpuCount;
+    public Output<Integer> cpuCount() {
+        return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disks")
       private final @Nullable Output<List<InstanceDiskArgs>> disks;
 
-    public Output<List<InstanceDiskArgs>> getDisks() {
-        return this.disks == null ? Output.empty() : this.disks;
+    public Output<List<InstanceDiskArgs>> disks() {
+        return this.disks == null ? Codegen.empty() : this.disks;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ramSizeInGb")
       private final @Nullable Output<Integer> ramSizeInGb;
 
-    public Output<Integer> getRamSizeInGb() {
-        return this.ramSizeInGb == null ? Output.empty() : this.ramSizeInGb;
+    public Output<Integer> ramSizeInGb() {
+        return this.ramSizeInGb == null ? Codegen.empty() : this.ramSizeInGb;
     }
 
     public InstanceHardwareArgs(
@@ -63,9 +64,9 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceHardwareArgs() {
-        this.cpuCount = Output.empty();
-        this.disks = Output.empty();
-        this.ramSizeInGb = Output.empty();
+        this.cpuCount = Codegen.empty();
+        this.disks = Codegen.empty();
+        this.ramSizeInGb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = Output.ofNullable(cpuCount);
+            this.cpuCount = Codegen.ofNullable(cpuCount);
             return this;
         }
         public Builder disks(@Nullable Output<List<InstanceDiskArgs>> disks) {
@@ -105,7 +106,7 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disks(@Nullable List<InstanceDiskArgs> disks) {
-            this.disks = Output.ofNullable(disks);
+            this.disks = Codegen.ofNullable(disks);
             return this;
         }
         public Builder disks(InstanceDiskArgs... disks) {
@@ -116,7 +117,7 @@ public final class InstanceHardwareArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
-            this.ramSizeInGb = Output.ofNullable(ramSizeInGb);
+            this.ramSizeInGb = Codegen.ofNullable(ramSizeInGb);
             return this;
         }        public InstanceHardwareArgs build() {
             return new InstanceHardwareArgs(cpuCount, disks, ramSizeInGb);

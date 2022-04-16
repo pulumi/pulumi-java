@@ -24,7 +24,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
 
@@ -35,7 +35,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="path", required=true)
       private final String path;
 
-    public String getPath() {
+    public String path() {
         return this.path;
     }
 
@@ -46,7 +46,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
       private final VersionResponse version;
 
-    public VersionResponse getVersion() {
+    public VersionResponse version() {
         return this.version;
     }
 

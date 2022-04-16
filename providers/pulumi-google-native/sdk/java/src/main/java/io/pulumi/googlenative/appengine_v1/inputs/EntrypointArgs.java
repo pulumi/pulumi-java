@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shell")
       private final @Nullable Output<String> shell;
 
-    public Output<String> getShell() {
-        return this.shell == null ? Output.empty() : this.shell;
+    public Output<String> shell() {
+        return this.shell == null ? Codegen.empty() : this.shell;
     }
 
     public EntrypointArgs(@Nullable Output<String> shell) {
@@ -34,7 +35,7 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntrypointArgs() {
-        this.shell = Output.empty();
+        this.shell = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EntrypointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shell(@Nullable String shell) {
-            this.shell = Output.ofNullable(shell);
+            this.shell = Codegen.ofNullable(shell);
             return this;
         }        public EntrypointArgs build() {
             return new EntrypointArgs(shell);

@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return Additional data on the incident
      * 
      */
-    public Output<IncidentAdditionalDataResponse> getAdditionalData() {
+    public Output<IncidentAdditionalDataResponse> additionalData() {
         return this.additionalData;
     }
     /**
@@ -59,7 +60,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The reason the incident was closed
      * 
      */
-    public Output</* @Nullable */ String> getClassification() {
+    public Output</* @Nullable */ String> classification() {
         return this.classification;
     }
     /**
@@ -73,7 +74,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return Describes the reason the incident was closed
      * 
      */
-    public Output</* @Nullable */ String> getClassificationComment() {
+    public Output</* @Nullable */ String> classificationComment() {
         return this.classificationComment;
     }
     /**
@@ -87,7 +88,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The classification reason the incident was closed with
      * 
      */
-    public Output</* @Nullable */ String> getClassificationReason() {
+    public Output</* @Nullable */ String> classificationReason() {
         return this.classificationReason;
     }
     /**
@@ -101,7 +102,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The time the incident was created
      * 
      */
-    public Output<String> getCreatedTimeUtc() {
+    public Output<String> createdTimeUtc() {
         return this.createdTimeUtc;
     }
     /**
@@ -115,7 +116,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The description of the incident
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -129,7 +130,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -143,7 +144,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The time of the first activity in the incident
      * 
      */
-    public Output</* @Nullable */ String> getFirstActivityTimeUtc() {
+    public Output</* @Nullable */ String> firstActivityTimeUtc() {
         return this.firstActivityTimeUtc;
     }
     /**
@@ -157,7 +158,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return A sequential number
      * 
      */
-    public Output<Integer> getIncidentNumber() {
+    public Output<Integer> incidentNumber() {
         return this.incidentNumber;
     }
     /**
@@ -171,7 +172,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The deep-link url to the incident in Azure portal
      * 
      */
-    public Output<String> getIncidentUrl() {
+    public Output<String> incidentUrl() {
         return this.incidentUrl;
     }
     /**
@@ -185,7 +186,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return List of labels relevant to this incident
      * 
      */
-    public Output</* @Nullable */ List<IncidentLabelResponse>> getLabels() {
+    public Output</* @Nullable */ List<IncidentLabelResponse>> labels() {
         return this.labels;
     }
     /**
@@ -199,7 +200,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The time of the last activity in the incident
      * 
      */
-    public Output</* @Nullable */ String> getLastActivityTimeUtc() {
+    public Output</* @Nullable */ String> lastActivityTimeUtc() {
         return this.lastActivityTimeUtc;
     }
     /**
@@ -213,7 +214,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The last time the incident was updated
      * 
      */
-    public Output<String> getLastModifiedTimeUtc() {
+    public Output<String> lastModifiedTimeUtc() {
         return this.lastModifiedTimeUtc;
     }
     /**
@@ -227,7 +228,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -241,7 +242,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return Describes a user that the incident is assigned to
      * 
      */
-    public Output</* @Nullable */ IncidentOwnerInfoResponse> getOwner() {
+    public Output</* @Nullable */ IncidentOwnerInfoResponse> owner() {
         return this.owner;
     }
     /**
@@ -255,7 +256,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return List of resource ids of Analytic rules related to the incident
      * 
      */
-    public Output<List<String>> getRelatedAnalyticRuleIds() {
+    public Output<List<String>> relatedAnalyticRuleIds() {
         return this.relatedAnalyticRuleIds;
     }
     /**
@@ -269,7 +270,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The severity of the incident
      * 
      */
-    public Output<String> getSeverity() {
+    public Output<String> severity() {
         return this.severity;
     }
     /**
@@ -283,7 +284,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The status of the incident
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -297,7 +298,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return The title of the incident
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
     /**
@@ -311,7 +312,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -337,7 +338,7 @@ public class Incident extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Incident(String name, IncidentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:Incident", name, args == null ? IncidentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:Incident", name, args == null ? IncidentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Incident(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

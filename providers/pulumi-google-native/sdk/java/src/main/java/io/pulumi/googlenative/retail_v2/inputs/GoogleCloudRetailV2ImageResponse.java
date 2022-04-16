@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2ImageResponse extends io.pulumi.resources.
     @Import(name="height", required=true)
       private final Integer height;
 
-    public Integer getHeight() {
+    public Integer height() {
         return this.height;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2ImageResponse extends io.pulumi.resources.
     @Import(name="uri", required=true)
       private final String uri;
 
-    public String getUri() {
+    public String uri() {
         return this.uri;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2ImageResponse extends io.pulumi.resources.
     @Import(name="width", required=true)
       private final Integer width;
 
-    public Integer getWidth() {
+    public Integer width() {
         return this.width;
     }
 

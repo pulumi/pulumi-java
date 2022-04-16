@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudformation.outputs.StackSetAutoDeployment;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Number (ARN) of the IAM Role in the administrator account. This must be defined when using the `SELF_MANAGED` permission model.
      * 
      */
-    public Output</* @Nullable */ String> getAdministrationRoleArn() {
+    public Output</* @Nullable */ String> administrationRoleArn() {
         return this.administrationRoleArn;
     }
     /**
@@ -60,7 +61,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the StackSet.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -74,7 +75,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Configuration block containing the auto-deployment model for your StackSet. This can only be defined when using the `SERVICE_MANAGED` permission model.
      * 
      */
-    public Output</* @Nullable */ StackSetAutoDeployment> getAutoDeployment() {
+    public Output</* @Nullable */ StackSetAutoDeployment> autoDeployment() {
         return this.autoDeployment;
     }
     /**
@@ -88,7 +89,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return A list of capabilities. Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_AUTO_EXPAND`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCapabilities() {
+    public Output</* @Nullable */ List<String>> capabilities() {
         return this.capabilities;
     }
     /**
@@ -102,7 +103,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Description of the StackSet.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -116,7 +117,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Name of the IAM Role in all target accounts for StackSet operations. Defaults to `AWSCloudFormationStackSetExecutionRole` when using the `SELF_MANAGED` permission model. This should not be defined when using the `SERVICE_MANAGED` permission model.
      * 
      */
-    public Output<String> getExecutionRoleName() {
+    public Output<String> executionRoleName() {
         return this.executionRoleName;
     }
     /**
@@ -130,7 +131,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Name of the StackSet. The name must be unique in the region where you create your StackSet. The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start with an alphabetic character and cannot be longer than 128 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +145,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Key-value map of input parameters for the StackSet template. All template parameters, including those with a `Default`, must be configured or ignored with `lifecycle` configuration block `ignore_changes` argument. All `NoEcho` template parameters must be ignored with the `lifecycle` configuration block `ignore_changes` argument.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameters() {
+    public Output</* @Nullable */ Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -158,7 +159,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Describes how the IAM roles required for your StackSet are created. Valid values: `SELF_MANAGED` (default), `SERVICE_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> getPermissionModel() {
+    public Output</* @Nullable */ String> permissionModel() {
         return this.permissionModel;
     }
     /**
@@ -172,7 +173,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Unique identifier of the StackSet.
      * 
      */
-    public Output<String> getStackSetId() {
+    public Output<String> stackSetId() {
         return this.stackSetId;
     }
     /**
@@ -186,7 +187,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return Key-value map of tags to associate with this StackSet and the Stacks created from it. AWS CloudFormation also propagates these tags to supported resources that are created in the Stacks. A maximum number of 50 tags can be specified. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -200,7 +201,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -214,7 +215,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return String containing the CloudFormation template body. Maximum size: 51,200 bytes. Conflicts with `template_url`.
      * 
      */
-    public Output<String> getTemplateBody() {
+    public Output<String> templateBody() {
         return this.templateBody;
     }
     /**
@@ -228,7 +229,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @return String containing the location of a file containing the CloudFormation template body. The URL must point to a template that is located in an Amazon S3 bucket. Maximum location file size: 460,800 bytes. Conflicts with `template_body`.
      * 
      */
-    public Output</* @Nullable */ String> getTemplateUrl() {
+    public Output</* @Nullable */ String> templateUrl() {
         return this.templateUrl;
     }
 
@@ -254,7 +255,7 @@ public class StackSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StackSet(String name, @Nullable StackSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudformation/stackSet:StackSet", name, args == null ? StackSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudformation/stackSet:StackSet", name, args == null ? StackSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StackSet(String name, Output<String> id, @Nullable StackSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

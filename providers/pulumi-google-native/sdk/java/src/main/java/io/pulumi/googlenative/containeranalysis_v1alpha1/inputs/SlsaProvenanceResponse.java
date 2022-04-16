@@ -27,7 +27,7 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="builder", required=true)
       private final SlsaBuilderResponse builder;
 
-    public SlsaBuilderResponse getBuilder() {
+    public SlsaBuilderResponse builder_() {
         return this.builder;
     }
 
@@ -38,7 +38,7 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="materials", required=true)
       private final List<MaterialResponse> materials;
 
-    public List<MaterialResponse> getMaterials() {
+    public List<MaterialResponse> materials() {
         return this.materials;
     }
 
@@ -49,7 +49,7 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="metadata", required=true)
       private final SlsaMetadataResponse metadata;
 
-    public SlsaMetadataResponse getMetadata() {
+    public SlsaMetadataResponse metadata() {
         return this.metadata;
     }
 
@@ -60,7 +60,7 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="recipe", required=true)
       private final SlsaRecipeResponse recipe;
 
-    public SlsaRecipeResponse getRecipe() {
+    public SlsaRecipeResponse recipe() {
         return this.recipe;
     }
 
@@ -108,7 +108,7 @@ public final class SlsaProvenanceResponse extends io.pulumi.resources.InvokeArgs
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder builder(SlsaBuilderResponse builder) {
+        public Builder builder_(SlsaBuilderResponse builder) {
             this.builder = Objects.requireNonNull(builder);
             return this;
         }

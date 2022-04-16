@@ -56,35 +56,35 @@ public final class CorsPolicyResponse {
      * The request headers that the origin domain may specify on the CORS request.
      * 
     */
-    public Optional<String> getAllowedHeaders() {
+    public Optional<String> allowedHeaders() {
         return Optional.ofNullable(this.allowedHeaders);
     }
     /**
      * The methods (HTTP request verbs) that the origin domain may use for a CORS request.
      * 
     */
-    public Optional<String> getAllowedMethods() {
+    public Optional<String> allowedMethods() {
         return Optional.ofNullable(this.allowedMethods);
     }
     /**
      * The origin domains that are permitted to make a request against the service via CORS.
      * 
     */
-    public String getAllowedOrigins() {
+    public String allowedOrigins() {
         return this.allowedOrigins;
     }
     /**
      * The response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer.
      * 
     */
-    public Optional<String> getExposedHeaders() {
+    public Optional<String> exposedHeaders() {
         return Optional.ofNullable(this.exposedHeaders);
     }
     /**
      * The maximum amount time that a browser should cache the preflight OPTIONS request.
      * 
     */
-    public Optional<Double> getMaxAgeInSeconds() {
+    public Optional<Double> maxAgeInSeconds() {
         return Optional.ofNullable(this.maxAgeInSeconds);
     }
 

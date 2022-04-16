@@ -57,28 +57,28 @@ public final class AvroWriteSettingsResponse {
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
     */
-    public Optional<Object> getFileNamePrefix() {
+    public Optional<Object> fileNamePrefix() {
         return Optional.ofNullable(this.fileNamePrefix);
     }
     /**
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
     */
-    public Optional<Object> getMaxRowsPerFile() {
+    public Optional<Object> maxRowsPerFile() {
         return Optional.ofNullable(this.maxRowsPerFile);
     }
     /**
      * Top level record name in write result, which is required in AVRO spec.
      * 
     */
-    public Optional<String> getRecordName() {
+    public Optional<String> recordName() {
         return Optional.ofNullable(this.recordName);
     }
     /**
      * Record namespace in the write result.
      * 
     */
-    public Optional<String> getRecordNamespace() {
+    public Optional<String> recordNamespace() {
         return Optional.ofNullable(this.recordNamespace);
     }
     /**
@@ -86,7 +86,7 @@ public final class AvroWriteSettingsResponse {
      * Expected value is 'AvroWriteSettings'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

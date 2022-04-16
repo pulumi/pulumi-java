@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfigurationArgs
     @Import(name="documentTitleFieldName")
       private final @Nullable Output<String> documentTitleFieldName;
 
-    public Output<String> getDocumentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Output.empty() : this.documentTitleFieldName;
+    public Output<String> documentTitleFieldName() {
+        return this.documentTitleFieldName == null ? Codegen.empty() : this.documentTitleFieldName;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
+    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
+        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     public DataSourceSalesforceStandardObjectAttachmentConfigurationArgs(
@@ -38,8 +39,8 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfigurationArgs
     }
 
     private DataSourceSalesforceStandardObjectAttachmentConfigurationArgs() {
-        this.documentTitleFieldName = Output.empty();
-        this.fieldMappings = Output.empty();
+        this.documentTitleFieldName = Codegen.empty();
+        this.fieldMappings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfigurationArgs
             return this;
         }
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = Output.ofNullable(documentTitleFieldName);
+            this.documentTitleFieldName = Codegen.ofNullable(documentTitleFieldName);
             return this;
         }
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
@@ -77,7 +78,7 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfigurationArgs
             return this;
         }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Output.ofNullable(fieldMappings);
+            this.fieldMappings = Codegen.ofNullable(fieldMappings);
             return this;
         }
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {

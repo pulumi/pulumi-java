@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -37,8 +38,8 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
-    public Output<Boolean> getIgnoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint == null ? Output.empty() : this.ignoreMissingVnetServiceEndpoint;
+    public Output<Boolean> ignoreMissingVnetServiceEndpoint() {
+        return this.ignoreMissingVnetServiceEndpoint == null ? Codegen.empty() : this.ignoreMissingVnetServiceEndpoint;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public VirtualNetworkRuleArgs(
@@ -62,9 +63,9 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VirtualNetworkRuleArgs() {
-        this.id = Output.empty();
-        this.ignoreMissingVnetServiceEndpoint = Output.empty();
-        this.state = Output.empty();
+        this.id = Codegen.empty();
+        this.ignoreMissingVnetServiceEndpoint = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = Output.ofNullable(ignoreMissingVnetServiceEndpoint);
+            this.ignoreMissingVnetServiceEndpoint = Codegen.ofNullable(ignoreMissingVnetServiceEndpoint);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -112,7 +113,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public VirtualNetworkRuleArgs build() {
             return new VirtualNetworkRuleArgs(id, ignoreMissingVnetServiceEndpoint, state);

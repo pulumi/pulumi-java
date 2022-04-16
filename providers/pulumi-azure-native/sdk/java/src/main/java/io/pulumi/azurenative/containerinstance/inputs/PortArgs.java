@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerinstance.enums.ContainerGroupNetworkProtoc
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -39,8 +40,8 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<Either<String,ContainerGroupNetworkProtocol>> protocol;
 
-    public Output<Either<String,ContainerGroupNetworkProtocol>> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<Either<String,ContainerGroupNetworkProtocol>> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public PortArgs(
@@ -51,8 +52,8 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PortArgs() {
-        this.port = Output.empty();
-        this.protocol = Output.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable Either<String,ContainerGroupNetworkProtocol> protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public PortArgs build() {
             return new PortArgs(port, protocol);

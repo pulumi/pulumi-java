@@ -8,6 +8,7 @@ import io.pulumi.azurenative.avs.enums.PlacementPolicyState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     @Import(name="affinityType", required=true)
       private final Output<Either<String,AffinityType>> affinityType;
 
-    public Output<Either<String,AffinityType>> getAffinityType() {
+    public Output<Either<String,AffinityType>> affinityType() {
         return this.affinityType;
     }
 
@@ -40,8 +41,8 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     @Import(name="state")
       private final @Nullable Output<Either<String,PlacementPolicyState>> state;
 
-    public Output<Either<String,PlacementPolicyState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,PlacementPolicyState>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -74,7 +75,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     @Import(name="vmMembers", required=true)
       private final Output<List<String>> vmMembers;
 
-    public Output<List<String>> getVmMembers() {
+    public Output<List<String>> vmMembers() {
         return this.vmMembers;
     }
 
@@ -92,11 +93,11 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
     }
 
     private VmVmPlacementPolicyPropertiesArgs() {
-        this.affinityType = Output.empty();
-        this.displayName = Output.empty();
-        this.state = Output.empty();
-        this.type = Output.empty();
-        this.vmMembers = Output.empty();
+        this.affinityType = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.state = Codegen.empty();
+        this.type = Codegen.empty();
+        this.vmMembers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder state(@Nullable Output<Either<String,PlacementPolicyState>> state) {
@@ -148,7 +149,7 @@ public final class VmVmPlacementPolicyPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder state(@Nullable Either<String,PlacementPolicyState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder type(Output<String> type) {

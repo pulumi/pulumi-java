@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="allowPublicOverrides")
       private final @Nullable Output<Boolean> allowPublicOverrides;
 
-    public Output<Boolean> getAllowPublicOverrides() {
-        return this.allowPublicOverrides == null ? Output.empty() : this.allowPublicOverrides;
+    public Output<Boolean> allowPublicOverrides() {
+        return this.allowPublicOverrides == null ? Codegen.empty() : this.allowPublicOverrides;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="getObject")
       private final @Nullable Output<String> getObject;
 
-    public Output<String> getGetObject() {
-        return this.getObject == null ? Output.empty() : this.getObject;
+    public Output<String> getObject() {
+        return this.getObject == null ? Codegen.empty() : this.getObject;
     }
 
     public BucketAccessRulesArgs(
@@ -49,8 +50,8 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BucketAccessRulesArgs() {
-        this.allowPublicOverrides = Output.empty();
-        this.getObject = Output.empty();
+        this.allowPublicOverrides = Codegen.empty();
+        this.getObject = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder allowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
-            this.allowPublicOverrides = Output.ofNullable(allowPublicOverrides);
+            this.allowPublicOverrides = Codegen.ofNullable(allowPublicOverrides);
             return this;
         }
         public Builder getObject(@Nullable Output<String> getObject) {
@@ -88,7 +89,7 @@ public final class BucketAccessRulesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder getObject(@Nullable String getObject) {
-            this.getObject = Output.ofNullable(getObject);
+            this.getObject = Codegen.ofNullable(getObject);
             return this;
         }        public BucketAccessRulesArgs build() {
             return new BucketAccessRulesArgs(allowPublicOverrides, getObject);

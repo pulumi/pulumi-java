@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
-        return this.issuer == null ? Output.empty() : this.issuer;
+    public Output<String> issuer() {
+        return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="oidcJwks")
       private final @Nullable Output<String> oidcJwks;
 
-    public Output<String> getOidcJwks() {
-        return this.oidcJwks == null ? Output.empty() : this.oidcJwks;
+    public Output<String> oidcJwks() {
+        return this.oidcJwks == null ? Codegen.empty() : this.oidcJwks;
     }
 
     public AuthorityArgs(
@@ -48,8 +49,8 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AuthorityArgs() {
-        this.issuer = Output.empty();
-        this.oidcJwks = Output.empty();
+        this.issuer = Codegen.empty();
+        this.oidcJwks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Output.ofNullable(issuer);
+            this.issuer = Codegen.ofNullable(issuer);
             return this;
         }
         public Builder oidcJwks(@Nullable Output<String> oidcJwks) {
@@ -87,7 +88,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oidcJwks(@Nullable String oidcJwks) {
-            this.oidcJwks = Output.ofNullable(oidcJwks);
+            this.oidcJwks = Codegen.ofNullable(oidcJwks);
             return this;
         }        public AuthorityArgs build() {
             return new AuthorityArgs(issuer, oidcJwks);

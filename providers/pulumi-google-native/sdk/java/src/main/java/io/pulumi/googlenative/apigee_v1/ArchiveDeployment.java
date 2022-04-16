@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ArchiveDeploymentArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * @return The time at which the Archive Deployment was created in milliseconds since the epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -43,7 +44,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * @return Input only. The Google Cloud Storage signed URL returned from GenerateUploadUrl and used to upload the Archive zip file.
      * 
      */
-    public Output<String> getGcsUri() {
+    public Output<String> gcsUri() {
         return this.gcsUri;
     }
     /**
@@ -57,7 +58,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * @return User-supplied key-value pairs used to organize ArchiveDeployments. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -71,7 +72,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * @return Name of the Archive Deployment in the following format: `organizations/{org}/environments/{env}/archiveDeployments/{id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * @return A reference to the LRO that created this Archive Deployment in the following format: `organizations/{org}/operations/{id}`
      * 
      */
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation;
     }
     /**
@@ -99,7 +100,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * @return The time at which the Archive Deployment was updated in milliseconds since the epoch.
      * 
      */
-    public Output<String> getUpdatedAt() {
+    public Output<String> updatedAt() {
         return this.updatedAt;
     }
 
@@ -125,7 +126,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ArchiveDeployment(String name, ArchiveDeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:ArchiveDeployment", name, args == null ? ArchiveDeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:ArchiveDeployment", name, args == null ? ArchiveDeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ArchiveDeployment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

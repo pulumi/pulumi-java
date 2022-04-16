@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AccountAliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountAlias")
       private final @Nullable Output<String> accountAlias;
 
-    public Output<String> getAccountAlias() {
-        return this.accountAlias == null ? Output.empty() : this.accountAlias;
+    public Output<String> accountAlias() {
+        return this.accountAlias == null ? Codegen.empty() : this.accountAlias;
     }
 
     public AccountAliasState(@Nullable Output<String> accountAlias) {
@@ -30,7 +31,7 @@ public final class AccountAliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountAliasState() {
-        this.accountAlias = Output.empty();
+        this.accountAlias = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AccountAliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountAlias(@Nullable String accountAlias) {
-            this.accountAlias = Output.ofNullable(accountAlias);
+            this.accountAlias = Codegen.ofNullable(accountAlias);
             return this;
         }        public AccountAliasState build() {
             return new AccountAliasState(accountAlias);

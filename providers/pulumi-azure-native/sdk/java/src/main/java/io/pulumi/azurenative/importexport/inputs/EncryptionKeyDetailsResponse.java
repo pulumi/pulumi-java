@@ -25,7 +25,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="kekType")
       private final @Nullable String kekType;
 
-    public Optional<String> getKekType() {
+    public Optional<String> kekType() {
         return this.kekType == null ? Optional.empty() : Optional.ofNullable(this.kekType);
     }
 
@@ -36,7 +36,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="kekUrl")
       private final @Nullable String kekUrl;
 
-    public Optional<String> getKekUrl() {
+    public Optional<String> kekUrl() {
         return this.kekUrl == null ? Optional.empty() : Optional.ofNullable(this.kekUrl);
     }
 
@@ -47,7 +47,7 @@ public final class EncryptionKeyDetailsResponse extends io.pulumi.resources.Invo
     @Import(name="kekVaultResourceID")
       private final @Nullable String kekVaultResourceID;
 
-    public Optional<String> getKekVaultResourceID() {
+    public Optional<String> kekVaultResourceID() {
         return this.kekVaultResourceID == null ? Optional.empty() : Optional.ofNullable(this.kekVaultResourceID);
     }
 

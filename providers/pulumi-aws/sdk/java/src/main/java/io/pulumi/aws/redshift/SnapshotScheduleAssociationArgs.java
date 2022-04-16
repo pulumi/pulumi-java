@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
     @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
 
@@ -31,7 +32,7 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
     @Import(name="scheduleIdentifier", required=true)
       private final Output<String> scheduleIdentifier;
 
-    public Output<String> getScheduleIdentifier() {
+    public Output<String> scheduleIdentifier() {
         return this.scheduleIdentifier;
     }
 
@@ -43,8 +44,8 @@ public final class SnapshotScheduleAssociationArgs extends io.pulumi.resources.R
     }
 
     private SnapshotScheduleAssociationArgs() {
-        this.clusterIdentifier = Output.empty();
-        this.scheduleIdentifier = Output.empty();
+        this.clusterIdentifier = Codegen.empty();
+        this.scheduleIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {

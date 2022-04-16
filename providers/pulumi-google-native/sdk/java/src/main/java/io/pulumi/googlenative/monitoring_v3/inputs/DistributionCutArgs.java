@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="distributionFilter")
       private final @Nullable Output<String> distributionFilter;
 
-    public Output<String> getDistributionFilter() {
-        return this.distributionFilter == null ? Output.empty() : this.distributionFilter;
+    public Output<String> distributionFilter() {
+        return this.distributionFilter == null ? Codegen.empty() : this.distributionFilter;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="range")
       private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
-    public Output<GoogleMonitoringV3RangeArgs> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+    public Output<GoogleMonitoringV3RangeArgs> range() {
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     public DistributionCutArgs(
@@ -49,8 +50,8 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DistributionCutArgs() {
-        this.distributionFilter = Output.empty();
-        this.range = Output.empty();
+        this.distributionFilter = Codegen.empty();
+        this.range = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder distributionFilter(@Nullable String distributionFilter) {
-            this.distributionFilter = Output.ofNullable(distributionFilter);
+            this.distributionFilter = Codegen.ofNullable(distributionFilter);
             return this;
         }
         public Builder range(@Nullable Output<GoogleMonitoringV3RangeArgs> range) {
@@ -88,7 +89,7 @@ public final class DistributionCutArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }        public DistributionCutArgs build() {
             return new DistributionCutArgs(distributionFilter, range);

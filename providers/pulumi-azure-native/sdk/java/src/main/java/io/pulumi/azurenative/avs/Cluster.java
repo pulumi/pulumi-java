@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The identity
      * 
      */
-    public Output<Integer> getClusterId() {
+    public Output<Integer> clusterId() {
         return this.clusterId;
     }
     /**
@@ -57,7 +58,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster size
      * 
      */
-    public Output<Integer> getClusterSize() {
+    public Output<Integer> clusterSize() {
         return this.clusterSize;
     }
     /**
@@ -71,7 +72,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The hosts
      * 
      */
-    public Output<List<String>> getHosts() {
+    public Output<List<String>> hosts() {
         return this.hosts;
     }
     /**
@@ -85,7 +86,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The state of the cluster provisioning
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -113,7 +114,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster SKU
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -127,7 +128,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -153,7 +154,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:avs:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:avs:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

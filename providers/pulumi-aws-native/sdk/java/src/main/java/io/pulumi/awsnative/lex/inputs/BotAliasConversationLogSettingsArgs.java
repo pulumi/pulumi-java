@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotAliasAudioLogSettingArgs;
 import io.pulumi.awsnative.lex.inputs.BotAliasTextLogSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,15 +24,15 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
     @Import(name="audioLogSettings")
       private final @Nullable Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings;
 
-    public Output<List<BotAliasAudioLogSettingArgs>> getAudioLogSettings() {
-        return this.audioLogSettings == null ? Output.empty() : this.audioLogSettings;
+    public Output<List<BotAliasAudioLogSettingArgs>> audioLogSettings() {
+        return this.audioLogSettings == null ? Codegen.empty() : this.audioLogSettings;
     }
 
     @Import(name="textLogSettings")
       private final @Nullable Output<List<BotAliasTextLogSettingArgs>> textLogSettings;
 
-    public Output<List<BotAliasTextLogSettingArgs>> getTextLogSettings() {
-        return this.textLogSettings == null ? Output.empty() : this.textLogSettings;
+    public Output<List<BotAliasTextLogSettingArgs>> textLogSettings() {
+        return this.textLogSettings == null ? Codegen.empty() : this.textLogSettings;
     }
 
     public BotAliasConversationLogSettingsArgs(
@@ -42,8 +43,8 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
     }
 
     private BotAliasConversationLogSettingsArgs() {
-        this.audioLogSettings = Output.empty();
-        this.textLogSettings = Output.empty();
+        this.audioLogSettings = Codegen.empty();
+        this.textLogSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder audioLogSettings(@Nullable List<BotAliasAudioLogSettingArgs> audioLogSettings) {
-            this.audioLogSettings = Output.ofNullable(audioLogSettings);
+            this.audioLogSettings = Codegen.ofNullable(audioLogSettings);
             return this;
         }
         public Builder audioLogSettings(BotAliasAudioLogSettingArgs... audioLogSettings) {
@@ -84,7 +85,7 @@ public final class BotAliasConversationLogSettingsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder textLogSettings(@Nullable List<BotAliasTextLogSettingArgs> textLogSettings) {
-            this.textLogSettings = Output.ofNullable(textLogSettings);
+            this.textLogSettings = Codegen.ofNullable(textLogSettings);
             return this;
         }
         public Builder textLogSettings(BotAliasTextLogSettingArgs... textLogSettings) {

@@ -22,6 +22,9 @@ type PackageInfo struct {
 	Packages               map[string]string `json:"packages,omitempty"`
 	DictionaryConstructors bool              `json:"dictionaryConstructors,omitempty"`
 	BasePackage            string            `json:"basePackage"`
+
+	// If set to "gradle" generates a basic set of Gradle build files.
+	BuildFiles string `json:"buildFiles"`
 }
 
 func (i PackageInfo) BasePackageOrDefault() string {

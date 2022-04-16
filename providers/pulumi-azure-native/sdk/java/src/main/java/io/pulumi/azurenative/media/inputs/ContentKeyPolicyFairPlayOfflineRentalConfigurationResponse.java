@@ -19,7 +19,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
     @Import(name="playbackDurationSeconds", required=true)
       private final Double playbackDurationSeconds;
 
-    public Double getPlaybackDurationSeconds() {
+    public Double playbackDurationSeconds() {
         return this.playbackDurationSeconds;
     }
 
@@ -30,7 +30,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse ex
     @Import(name="storageDurationSeconds", required=true)
       private final Double storageDurationSeconds;
 
-    public Double getStorageDurationSeconds() {
+    public Double storageDurationSeconds() {
         return this.storageDurationSeconds;
     }
 

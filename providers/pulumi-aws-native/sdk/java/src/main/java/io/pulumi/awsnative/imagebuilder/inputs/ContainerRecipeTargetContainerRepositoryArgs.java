@@ -6,6 +6,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 import io.pulumi.awsnative.imagebuilder.enums.ContainerRecipeTargetContainerRepositoryService;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
     @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
-        return this.repositoryName == null ? Output.empty() : this.repositoryName;
+    public Output<String> repositoryName() {
+        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
     @Import(name="service")
       private final @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service;
 
-    public Output<ContainerRecipeTargetContainerRepositoryService> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<ContainerRecipeTargetContainerRepositoryService> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public ContainerRecipeTargetContainerRepositoryArgs(
@@ -49,8 +50,8 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
     }
 
     private ContainerRecipeTargetContainerRepositoryArgs() {
-        this.repositoryName = Output.empty();
-        this.service = Output.empty();
+        this.repositoryName = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
             return this;
         }
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Output.ofNullable(repositoryName);
+            this.repositoryName = Codegen.ofNullable(repositoryName);
             return this;
         }
         public Builder service(@Nullable Output<ContainerRecipeTargetContainerRepositoryService> service) {
@@ -88,7 +89,7 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends io.pulum
             return this;
         }
         public Builder service(@Nullable ContainerRecipeTargetContainerRepositoryService service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public ContainerRecipeTargetContainerRepositoryArgs build() {
             return new ContainerRecipeTargetContainerRepositoryArgs(repositoryName, service);

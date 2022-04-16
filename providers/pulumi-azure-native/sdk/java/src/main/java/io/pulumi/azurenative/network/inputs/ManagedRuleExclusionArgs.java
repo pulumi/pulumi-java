@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.ManagedRuleExclusionSelectorMatchOper
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +28,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
     @Import(name="matchVariable", required=true)
       private final Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
 
-    public Output<Either<String,ManagedRuleExclusionMatchVariable>> getMatchVariable() {
+    public Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable() {
         return this.matchVariable;
     }
 
@@ -38,7 +39,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
     @Import(name="selector", required=true)
       private final Output<String> selector;
 
-    public Output<String> getSelector() {
+    public Output<String> selector() {
         return this.selector;
     }
 
@@ -49,7 +50,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
     @Import(name="selectorMatchOperator", required=true)
       private final Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
 
-    public Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> getSelectorMatchOperator() {
+    public Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 
@@ -63,9 +64,9 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
     }
 
     private ManagedRuleExclusionArgs() {
-        this.matchVariable = Output.empty();
-        this.selector = Output.empty();
-        this.selectorMatchOperator = Output.empty();
+        this.matchVariable = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.selectorMatchOperator = Codegen.empty();
     }
 
     public static Builder builder() {

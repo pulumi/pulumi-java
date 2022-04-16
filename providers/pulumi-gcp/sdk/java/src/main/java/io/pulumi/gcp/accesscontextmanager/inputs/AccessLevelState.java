@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomGetArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="basic")
       private final @Nullable Output<AccessLevelBasicGetArgs> basic;
 
-    public Output<AccessLevelBasicGetArgs> getBasic() {
-        return this.basic == null ? Output.empty() : this.basic;
+    public Output<AccessLevelBasicGetArgs> basic() {
+        return this.basic == null ? Codegen.empty() : this.basic;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="custom")
       private final @Nullable Output<AccessLevelCustomGetArgs> custom;
 
-    public Output<AccessLevelCustomGetArgs> getCustom() {
-        return this.custom == null ? Output.empty() : this.custom;
+    public Output<AccessLevelCustomGetArgs> custom() {
+        return this.custom == null ? Codegen.empty() : this.custom;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public AccessLevelState(
@@ -104,12 +105,12 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessLevelState() {
-        this.basic = Output.empty();
-        this.custom = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.title = Output.empty();
+        this.basic = Codegen.empty();
+        this.custom = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder basic(@Nullable AccessLevelBasicGetArgs basic) {
-            this.basic = Output.ofNullable(basic);
+            this.basic = Codegen.ofNullable(basic);
             return this;
         }
         public Builder custom(@Nullable Output<AccessLevelCustomGetArgs> custom) {
@@ -155,7 +156,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder custom(@Nullable AccessLevelCustomGetArgs custom) {
-            this.custom = Output.ofNullable(custom);
+            this.custom = Codegen.ofNullable(custom);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -163,7 +164,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -171,7 +172,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -179,7 +180,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -187,7 +188,7 @@ public final class AccessLevelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public AccessLevelState build() {
             return new AccessLevelState(basic, custom, description, name, parent, title);

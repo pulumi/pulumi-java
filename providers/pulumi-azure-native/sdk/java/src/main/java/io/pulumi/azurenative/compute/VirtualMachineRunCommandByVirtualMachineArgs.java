@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.RunCommandInputParameterArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineRunCommandScriptSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="asyncExecution")
       private final @Nullable Output<Boolean> asyncExecution;
 
-    public Output<Boolean> getAsyncExecution() {
-        return this.asyncExecution == null ? Output.empty() : this.asyncExecution;
+    public Output<Boolean> asyncExecution() {
+        return this.asyncExecution == null ? Codegen.empty() : this.asyncExecution;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="errorBlobUri")
       private final @Nullable Output<String> errorBlobUri;
 
-    public Output<String> getErrorBlobUri() {
-        return this.errorBlobUri == null ? Output.empty() : this.errorBlobUri;
+    public Output<String> errorBlobUri() {
+        return this.errorBlobUri == null ? Codegen.empty() : this.errorBlobUri;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="outputBlobUri")
       private final @Nullable Output<String> outputBlobUri;
 
-    public Output<String> getOutputBlobUri() {
-        return this.outputBlobUri == null ? Output.empty() : this.outputBlobUri;
+    public Output<String> outputBlobUri() {
+        return this.outputBlobUri == null ? Codegen.empty() : this.outputBlobUri;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="parameters")
       private final @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
 
-    public Output<List<RunCommandInputParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<RunCommandInputParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="protectedParameters")
       private final @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
 
-    public Output<List<RunCommandInputParameterArgs>> getProtectedParameters() {
-        return this.protectedParameters == null ? Output.empty() : this.protectedParameters;
+    public Output<List<RunCommandInputParameterArgs>> protectedParameters() {
+        return this.protectedParameters == null ? Codegen.empty() : this.protectedParameters;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,8 +105,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="runAsPassword")
       private final @Nullable Output<String> runAsPassword;
 
-    public Output<String> getRunAsPassword() {
-        return this.runAsPassword == null ? Output.empty() : this.runAsPassword;
+    public Output<String> runAsPassword() {
+        return this.runAsPassword == null ? Codegen.empty() : this.runAsPassword;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="runAsUser")
       private final @Nullable Output<String> runAsUser;
 
-    public Output<String> getRunAsUser() {
-        return this.runAsUser == null ? Output.empty() : this.runAsUser;
+    public Output<String> runAsUser() {
+        return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="runCommandName")
       private final @Nullable Output<String> runCommandName;
 
-    public Output<String> getRunCommandName() {
-        return this.runCommandName == null ? Output.empty() : this.runCommandName;
+    public Output<String> runCommandName() {
+        return this.runCommandName == null ? Codegen.empty() : this.runCommandName;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="source")
       private final @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
 
-    public Output<VirtualMachineRunCommandScriptSourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<VirtualMachineRunCommandScriptSourceArgs> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
+    public Output<Integer> timeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     @Import(name="vmName", required=true)
       private final Output<String> vmName;
 
-    public Output<String> getVmName() {
+    public Output<String> vmName() {
         return this.vmName;
     }
 
@@ -189,7 +190,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<Integer> timeoutInSeconds,
         Output<String> vmName) {
-        this.asyncExecution = asyncExecution == null ? Output.ofNullable(false) : asyncExecution;
+        this.asyncExecution = asyncExecution == null ? Codegen.ofNullable(false) : asyncExecution;
         this.errorBlobUri = errorBlobUri;
         this.location = location;
         this.outputBlobUri = outputBlobUri;
@@ -206,20 +207,20 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
     }
 
     private VirtualMachineRunCommandByVirtualMachineArgs() {
-        this.asyncExecution = Output.empty();
-        this.errorBlobUri = Output.empty();
-        this.location = Output.empty();
-        this.outputBlobUri = Output.empty();
-        this.parameters = Output.empty();
-        this.protectedParameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.runAsPassword = Output.empty();
-        this.runAsUser = Output.empty();
-        this.runCommandName = Output.empty();
-        this.source = Output.empty();
-        this.tags = Output.empty();
-        this.timeoutInSeconds = Output.empty();
-        this.vmName = Output.empty();
+        this.asyncExecution = Codegen.empty();
+        this.errorBlobUri = Codegen.empty();
+        this.location = Codegen.empty();
+        this.outputBlobUri = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.protectedParameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.runAsPassword = Codegen.empty();
+        this.runAsUser = Codegen.empty();
+        this.runCommandName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeoutInSeconds = Codegen.empty();
+        this.vmName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -273,7 +274,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder asyncExecution(@Nullable Boolean asyncExecution) {
-            this.asyncExecution = Output.ofNullable(asyncExecution);
+            this.asyncExecution = Codegen.ofNullable(asyncExecution);
             return this;
         }
         public Builder errorBlobUri(@Nullable Output<String> errorBlobUri) {
@@ -281,7 +282,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder errorBlobUri(@Nullable String errorBlobUri) {
-            this.errorBlobUri = Output.ofNullable(errorBlobUri);
+            this.errorBlobUri = Codegen.ofNullable(errorBlobUri);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -289,7 +290,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder outputBlobUri(@Nullable Output<String> outputBlobUri) {
@@ -297,7 +298,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder outputBlobUri(@Nullable String outputBlobUri) {
-            this.outputBlobUri = Output.ofNullable(outputBlobUri);
+            this.outputBlobUri = Codegen.ofNullable(outputBlobUri);
             return this;
         }
         public Builder parameters(@Nullable Output<List<RunCommandInputParameterArgs>> parameters) {
@@ -305,7 +306,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder parameters(@Nullable List<RunCommandInputParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(RunCommandInputParameterArgs... parameters) {
@@ -316,7 +317,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder protectedParameters(@Nullable List<RunCommandInputParameterArgs> protectedParameters) {
-            this.protectedParameters = Output.ofNullable(protectedParameters);
+            this.protectedParameters = Codegen.ofNullable(protectedParameters);
             return this;
         }
         public Builder protectedParameters(RunCommandInputParameterArgs... protectedParameters) {
@@ -335,7 +336,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder runAsPassword(@Nullable String runAsPassword) {
-            this.runAsPassword = Output.ofNullable(runAsPassword);
+            this.runAsPassword = Codegen.ofNullable(runAsPassword);
             return this;
         }
         public Builder runAsUser(@Nullable Output<String> runAsUser) {
@@ -343,7 +344,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder runAsUser(@Nullable String runAsUser) {
-            this.runAsUser = Output.ofNullable(runAsUser);
+            this.runAsUser = Codegen.ofNullable(runAsUser);
             return this;
         }
         public Builder runCommandName(@Nullable Output<String> runCommandName) {
@@ -351,7 +352,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder runCommandName(@Nullable String runCommandName) {
-            this.runCommandName = Output.ofNullable(runCommandName);
+            this.runCommandName = Codegen.ofNullable(runCommandName);
             return this;
         }
         public Builder source(@Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source) {
@@ -359,7 +360,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder source(@Nullable VirtualMachineRunCommandScriptSourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -367,7 +368,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
@@ -375,7 +376,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
             return this;
         }
         public Builder vmName(Output<String> vmName) {

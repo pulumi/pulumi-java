@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * @return The ENI Attachment ID.
      * 
      */
-    public Output<String> getAttachmentId() {
+    public Output<String> attachmentId() {
         return this.attachmentId;
     }
     /**
@@ -46,7 +47,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * @return Network interface index (int).
      * 
      */
-    public Output<Integer> getDeviceIndex() {
+    public Output<Integer> deviceIndex() {
         return this.deviceIndex;
     }
     /**
@@ -60,7 +61,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * @return Instance ID to attach.
      * 
      */
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
     /**
@@ -74,7 +75,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * @return ENI ID to attach.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -88,7 +89,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * @return The status of the Network Interface Attachment.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -114,7 +115,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInterfaceAttachment(String name, NetworkInterfaceAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/networkInterfaceAttachment:NetworkInterfaceAttachment", name, args == null ? NetworkInterfaceAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/networkInterfaceAttachment:NetworkInterfaceAttachment", name, args == null ? NetworkInterfaceAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkInterfaceAttachment(String name, Output<String> id, @Nullable NetworkInterfaceAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

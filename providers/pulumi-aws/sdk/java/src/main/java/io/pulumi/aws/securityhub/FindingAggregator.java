@@ -9,6 +9,7 @@ import io.pulumi.aws.securityhub.inputs.FindingAggregatorState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class FindingAggregator extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to aggregate findings from all of the available Regions or from a specified list. The options are `ALL_REGIONS`, `ALL_REGIONS_EXCEPT_SPECIFIED` or `SPECIFIED_REGIONS`. When `ALL_REGIONS` or `ALL_REGIONS_EXCEPT_SPECIFIED` are used, Security Hub will automatically aggregate findings from new Regions as Security Hub supports them and you opt into them.
      * 
      */
-    public Output<String> getLinkingMode() {
+    public Output<String> linkingMode() {
         return this.linkingMode;
     }
     /**
@@ -54,7 +55,7 @@ public class FindingAggregator extends io.pulumi.resources.CustomResource {
      * @return List of regions to include or exclude (required if `linking_mode` is set to `ALL_REGIONS_EXCEPT_SPECIFIED` or `SPECIFIED_REGIONS`)
      * 
      */
-    public Output</* @Nullable */ List<String>> getSpecifiedRegions() {
+    public Output</* @Nullable */ List<String>> specifiedRegions() {
         return this.specifiedRegions;
     }
 
@@ -80,7 +81,7 @@ public class FindingAggregator extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FindingAggregator(String name, FindingAggregatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:securityhub/findingAggregator:FindingAggregator", name, args == null ? FindingAggregatorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:securityhub/findingAggregator:FindingAggregator", name, args == null ? FindingAggregatorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FindingAggregator(String name, Output<String> id, @Nullable FindingAggregatorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

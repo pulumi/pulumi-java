@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.LicenseResourceRequirementsArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,29 +35,29 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="resourceRequirements")
       private final @Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements;
 
-    public Output<LicenseResourceRequirementsArgs> getResourceRequirements() {
-        return this.resourceRequirements == null ? Output.empty() : this.resourceRequirements;
+    public Output<LicenseResourceRequirementsArgs> resourceRequirements() {
+        return this.resourceRequirements == null ? Codegen.empty() : this.resourceRequirements;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transferable")
       private final @Nullable Output<Boolean> transferable;
 
-    public Output<Boolean> getTransferable() {
-        return this.transferable == null ? Output.empty() : this.transferable;
+    public Output<Boolean> transferable() {
+        return this.transferable == null ? Codegen.empty() : this.transferable;
     }
 
     public LicenseArgs(
@@ -86,12 +87,12 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LicenseArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.resourceRequirements = Output.empty();
-        this.transferable = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.resourceRequirements = Codegen.empty();
+        this.transferable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -137,7 +138,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -145,7 +146,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -153,7 +154,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder resourceRequirements(@Nullable Output<LicenseResourceRequirementsArgs> resourceRequirements) {
@@ -161,7 +162,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceRequirements(@Nullable LicenseResourceRequirementsArgs resourceRequirements) {
-            this.resourceRequirements = Output.ofNullable(resourceRequirements);
+            this.resourceRequirements = Codegen.ofNullable(resourceRequirements);
             return this;
         }
         public Builder transferable(@Nullable Output<Boolean> transferable) {
@@ -169,7 +170,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transferable(@Nullable Boolean transferable) {
-            this.transferable = Output.ofNullable(transferable);
+            this.transferable = Codegen.ofNullable(transferable);
             return this;
         }        public LicenseArgs build() {
             return new LicenseArgs(description, name, project, requestId, resourceRequirements, transferable);

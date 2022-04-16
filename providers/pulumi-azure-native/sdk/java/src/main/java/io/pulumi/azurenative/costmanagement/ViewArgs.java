@@ -15,6 +15,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportConfigTimePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,8 +33,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accumulated")
       private final @Nullable Output<Either<String,AccumulatedType>> accumulated;
 
-    public Output<Either<String,AccumulatedType>> getAccumulated() {
-        return this.accumulated == null ? Output.empty() : this.accumulated;
+    public Output<Either<String,AccumulatedType>> accumulated() {
+        return this.accumulated == null ? Codegen.empty() : this.accumulated;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="chart")
       private final @Nullable Output<Either<String,ChartType>> chart;
 
-    public Output<Either<String,ChartType>> getChart() {
-        return this.chart == null ? Output.empty() : this.chart;
+    public Output<Either<String,ChartType>> chart() {
+        return this.chart == null ? Codegen.empty() : this.chart;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSet")
       private final @Nullable Output<ReportConfigDatasetArgs> dataSet;
 
-    public Output<ReportConfigDatasetArgs> getDataSet() {
-        return this.dataSet == null ? Output.empty() : this.dataSet;
+    public Output<ReportConfigDatasetArgs> dataSet() {
+        return this.dataSet == null ? Codegen.empty() : this.dataSet;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+    public Output<String> eTag() {
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kpis")
       private final @Nullable Output<List<KpiPropertiesArgs>> kpis;
 
-    public Output<List<KpiPropertiesArgs>> getKpis() {
-        return this.kpis == null ? Output.empty() : this.kpis;
+    public Output<List<KpiPropertiesArgs>> kpis() {
+        return this.kpis == null ? Codegen.empty() : this.kpis;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metric")
       private final @Nullable Output<Either<String,MetricType>> metric;
 
-    public Output<Either<String,MetricType>> getMetric() {
-        return this.metric == null ? Output.empty() : this.metric;
+    public Output<Either<String,MetricType>> metric() {
+        return this.metric == null ? Codegen.empty() : this.metric;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pivots")
       private final @Nullable Output<List<PivotPropertiesArgs>> pivots;
 
-    public Output<List<PivotPropertiesArgs>> getPivots() {
-        return this.pivots == null ? Output.empty() : this.pivots;
+    public Output<List<PivotPropertiesArgs>> pivots() {
+        return this.pivots == null ? Codegen.empty() : this.pivots;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<String> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timePeriod")
       private final @Nullable Output<ReportConfigTimePeriodArgs> timePeriod;
 
-    public Output<ReportConfigTimePeriodArgs> getTimePeriod() {
-        return this.timePeriod == null ? Output.empty() : this.timePeriod;
+    public Output<ReportConfigTimePeriodArgs> timePeriod() {
+        return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeframe", required=true)
       private final Output<Either<String,ReportTimeframeType>> timeframe;
 
-    public Output<Either<String,ReportTimeframeType>> getTimeframe() {
+    public Output<Either<String,ReportTimeframeType>> timeframe() {
         return this.timeframe;
     }
 
@@ -153,7 +154,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<Either<String,ReportType>> type;
 
-    public Output<Either<String,ReportType>> getType() {
+    public Output<Either<String,ReportType>> type() {
         return this.type;
     }
 
@@ -164,8 +165,8 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="viewName")
       private final @Nullable Output<String> viewName;
 
-    public Output<String> getViewName() {
-        return this.viewName == null ? Output.empty() : this.viewName;
+    public Output<String> viewName() {
+        return this.viewName == null ? Codegen.empty() : this.viewName;
     }
 
     public ViewArgs(
@@ -198,19 +199,19 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ViewArgs() {
-        this.accumulated = Output.empty();
-        this.chart = Output.empty();
-        this.dataSet = Output.empty();
-        this.displayName = Output.empty();
-        this.eTag = Output.empty();
-        this.kpis = Output.empty();
-        this.metric = Output.empty();
-        this.pivots = Output.empty();
-        this.scope = Output.empty();
-        this.timePeriod = Output.empty();
-        this.timeframe = Output.empty();
-        this.type = Output.empty();
-        this.viewName = Output.empty();
+        this.accumulated = Codegen.empty();
+        this.chart = Codegen.empty();
+        this.dataSet = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.eTag = Codegen.empty();
+        this.kpis = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.pivots = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.timePeriod = Codegen.empty();
+        this.timeframe = Codegen.empty();
+        this.type = Codegen.empty();
+        this.viewName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -262,7 +263,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accumulated(@Nullable Either<String,AccumulatedType> accumulated) {
-            this.accumulated = Output.ofNullable(accumulated);
+            this.accumulated = Codegen.ofNullable(accumulated);
             return this;
         }
         public Builder chart(@Nullable Output<Either<String,ChartType>> chart) {
@@ -270,7 +271,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder chart(@Nullable Either<String,ChartType> chart) {
-            this.chart = Output.ofNullable(chart);
+            this.chart = Codegen.ofNullable(chart);
             return this;
         }
         public Builder dataSet(@Nullable Output<ReportConfigDatasetArgs> dataSet) {
@@ -278,7 +279,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSet(@Nullable ReportConfigDatasetArgs dataSet) {
-            this.dataSet = Output.ofNullable(dataSet);
+            this.dataSet = Codegen.ofNullable(dataSet);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -286,7 +287,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder eTag(@Nullable Output<String> eTag) {
@@ -294,7 +295,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder kpis(@Nullable Output<List<KpiPropertiesArgs>> kpis) {
@@ -302,7 +303,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kpis(@Nullable List<KpiPropertiesArgs> kpis) {
-            this.kpis = Output.ofNullable(kpis);
+            this.kpis = Codegen.ofNullable(kpis);
             return this;
         }
         public Builder kpis(KpiPropertiesArgs... kpis) {
@@ -313,7 +314,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metric(@Nullable Either<String,MetricType> metric) {
-            this.metric = Output.ofNullable(metric);
+            this.metric = Codegen.ofNullable(metric);
             return this;
         }
         public Builder pivots(@Nullable Output<List<PivotPropertiesArgs>> pivots) {
@@ -321,7 +322,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pivots(@Nullable List<PivotPropertiesArgs> pivots) {
-            this.pivots = Output.ofNullable(pivots);
+            this.pivots = Codegen.ofNullable(pivots);
             return this;
         }
         public Builder pivots(PivotPropertiesArgs... pivots) {
@@ -332,7 +333,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder timePeriod(@Nullable Output<ReportConfigTimePeriodArgs> timePeriod) {
@@ -340,7 +341,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timePeriod(@Nullable ReportConfigTimePeriodArgs timePeriod) {
-            this.timePeriod = Output.ofNullable(timePeriod);
+            this.timePeriod = Codegen.ofNullable(timePeriod);
             return this;
         }
         public Builder timeframe(Output<Either<String,ReportTimeframeType>> timeframe) {
@@ -364,7 +365,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder viewName(@Nullable String viewName) {
-            this.viewName = Output.ofNullable(viewName);
+            this.viewName = Codegen.ofNullable(viewName);
             return this;
         }        public ViewArgs build() {
             return new ViewArgs(accumulated, chart, dataSet, displayName, eTag, kpis, metric, pivots, scope, timePeriod, timeframe, type, viewName);

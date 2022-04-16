@@ -13,6 +13,7 @@ import io.pulumi.aws.glue.outputs.ClassifierXmlClassifier;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -45,7 +46,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return A classifier for Csv content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierCsvClassifier> getCsvClassifier() {
+    public Output</* @Nullable */ ClassifierCsvClassifier> csvClassifier() {
         return this.csvClassifier;
     }
     /**
@@ -59,7 +60,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return A classifier that uses grok patterns. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierGrokClassifier> getGrokClassifier() {
+    public Output</* @Nullable */ ClassifierGrokClassifier> grokClassifier() {
         return this.grokClassifier;
     }
     /**
@@ -73,7 +74,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return A classifier for JSON content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierJsonClassifier> getJsonClassifier() {
+    public Output</* @Nullable */ ClassifierJsonClassifier> jsonClassifier() {
         return this.jsonClassifier;
     }
     /**
@@ -87,7 +88,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return The name of the classifier.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @return A classifier for XML content. Defined below.
      * 
      */
-    public Output</* @Nullable */ ClassifierXmlClassifier> getXmlClassifier() {
+    public Output</* @Nullable */ ClassifierXmlClassifier> xmlClassifier() {
         return this.xmlClassifier;
     }
 
@@ -127,7 +128,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Classifier(String name, @Nullable ClassifierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/classifier:Classifier", name, args == null ? ClassifierArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/classifier:Classifier", name, args == null ? ClassifierArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Classifier(String name, Output<String> id, @Nullable ClassifierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
-    public Output<String> getAwsDevice() {
-        return this.awsDevice == null ? Output.empty() : this.awsDevice;
+    public Output<String> awsDevice() {
+        return this.awsDevice == null ? Codegen.empty() : this.awsDevice;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="bandwidth")
       private final @Nullable Output<String> bandwidth;
 
-    public Output<String> getBandwidth() {
-        return this.bandwidth == null ? Output.empty() : this.bandwidth;
+    public Output<String> bandwidth() {
+        return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
-        return this.connectionId == null ? Output.empty() : this.connectionId;
+    public Output<String> connectionId() {
+        return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="hasLogicalRedundancy")
       private final @Nullable Output<String> hasLogicalRedundancy;
 
-    public Output<String> getHasLogicalRedundancy() {
-        return this.hasLogicalRedundancy == null ? Output.empty() : this.hasLogicalRedundancy;
+    public Output<String> hasLogicalRedundancy() {
+        return this.hasLogicalRedundancy == null ? Codegen.empty() : this.hasLogicalRedundancy;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
-    public Output<Boolean> getJumboFrameCapable() {
-        return this.jumboFrameCapable == null ? Output.empty() : this.jumboFrameCapable;
+    public Output<Boolean> jumboFrameCapable() {
+        return this.jumboFrameCapable == null ? Codegen.empty() : this.jumboFrameCapable;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="lagId")
       private final @Nullable Output<String> lagId;
 
-    public Output<String> getLagId() {
-        return this.lagId == null ? Output.empty() : this.lagId;
+    public Output<String> lagId() {
+        return this.lagId == null ? Codegen.empty() : this.lagId;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="loaIssueTime")
       private final @Nullable Output<String> loaIssueTime;
 
-    public Output<String> getLoaIssueTime() {
-        return this.loaIssueTime == null ? Output.empty() : this.loaIssueTime;
+    public Output<String> loaIssueTime() {
+        return this.loaIssueTime == null ? Codegen.empty() : this.loaIssueTime;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
-        return this.ownerAccountId == null ? Output.empty() : this.ownerAccountId;
+    public Output<String> ownerAccountId() {
+        return this.ownerAccountId == null ? Codegen.empty() : this.ownerAccountId;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
-        return this.partnerName == null ? Output.empty() : this.partnerName;
+    public Output<String> partnerName() {
+        return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
-    public Output<String> getProviderName() {
-        return this.providerName == null ? Output.empty() : this.providerName;
+    public Output<String> providerName() {
+        return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
-        return this.vlan == null ? Output.empty() : this.vlan;
+    public Output<Integer> vlan() {
+        return this.vlan == null ? Codegen.empty() : this.vlan;
     }
 
     public HostedConnectionState(
@@ -215,21 +216,21 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
     }
 
     private HostedConnectionState() {
-        this.awsDevice = Output.empty();
-        this.bandwidth = Output.empty();
-        this.connectionId = Output.empty();
-        this.hasLogicalRedundancy = Output.empty();
-        this.jumboFrameCapable = Output.empty();
-        this.lagId = Output.empty();
-        this.loaIssueTime = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.ownerAccountId = Output.empty();
-        this.partnerName = Output.empty();
-        this.providerName = Output.empty();
-        this.region = Output.empty();
-        this.state = Output.empty();
-        this.vlan = Output.empty();
+        this.awsDevice = Codegen.empty();
+        this.bandwidth = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.hasLogicalRedundancy = Codegen.empty();
+        this.jumboFrameCapable = Codegen.empty();
+        this.lagId = Codegen.empty();
+        this.loaIssueTime = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerAccountId = Codegen.empty();
+        this.partnerName = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.region = Codegen.empty();
+        this.state = Codegen.empty();
+        this.vlan = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -285,7 +286,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder awsDevice(@Nullable String awsDevice) {
-            this.awsDevice = Output.ofNullable(awsDevice);
+            this.awsDevice = Codegen.ofNullable(awsDevice);
             return this;
         }
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
@@ -293,7 +294,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bandwidth(@Nullable String bandwidth) {
-            this.bandwidth = Output.ofNullable(bandwidth);
+            this.bandwidth = Codegen.ofNullable(bandwidth);
             return this;
         }
         public Builder connectionId(@Nullable Output<String> connectionId) {
@@ -301,7 +302,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Output.ofNullable(connectionId);
+            this.connectionId = Codegen.ofNullable(connectionId);
             return this;
         }
         public Builder hasLogicalRedundancy(@Nullable Output<String> hasLogicalRedundancy) {
@@ -309,7 +310,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hasLogicalRedundancy(@Nullable String hasLogicalRedundancy) {
-            this.hasLogicalRedundancy = Output.ofNullable(hasLogicalRedundancy);
+            this.hasLogicalRedundancy = Codegen.ofNullable(hasLogicalRedundancy);
             return this;
         }
         public Builder jumboFrameCapable(@Nullable Output<Boolean> jumboFrameCapable) {
@@ -317,7 +318,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder jumboFrameCapable(@Nullable Boolean jumboFrameCapable) {
-            this.jumboFrameCapable = Output.ofNullable(jumboFrameCapable);
+            this.jumboFrameCapable = Codegen.ofNullable(jumboFrameCapable);
             return this;
         }
         public Builder lagId(@Nullable Output<String> lagId) {
@@ -325,7 +326,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder lagId(@Nullable String lagId) {
-            this.lagId = Output.ofNullable(lagId);
+            this.lagId = Codegen.ofNullable(lagId);
             return this;
         }
         public Builder loaIssueTime(@Nullable Output<String> loaIssueTime) {
@@ -333,7 +334,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder loaIssueTime(@Nullable String loaIssueTime) {
-            this.loaIssueTime = Output.ofNullable(loaIssueTime);
+            this.loaIssueTime = Codegen.ofNullable(loaIssueTime);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -341,7 +342,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -349,7 +350,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerAccountId(@Nullable Output<String> ownerAccountId) {
@@ -357,7 +358,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ownerAccountId(@Nullable String ownerAccountId) {
-            this.ownerAccountId = Output.ofNullable(ownerAccountId);
+            this.ownerAccountId = Codegen.ofNullable(ownerAccountId);
             return this;
         }
         public Builder partnerName(@Nullable Output<String> partnerName) {
@@ -365,7 +366,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Output.ofNullable(partnerName);
+            this.partnerName = Codegen.ofNullable(partnerName);
             return this;
         }
         public Builder providerName(@Nullable Output<String> providerName) {
@@ -373,7 +374,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Output.ofNullable(providerName);
+            this.providerName = Codegen.ofNullable(providerName);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -381,7 +382,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -389,7 +390,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder vlan(@Nullable Output<Integer> vlan) {
@@ -397,7 +398,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder vlan(@Nullable Integer vlan) {
-            this.vlan = Output.ofNullable(vlan);
+            this.vlan = Codegen.ofNullable(vlan);
             return this;
         }        public HostedConnectionState build() {
             return new HostedConnectionState(awsDevice, bandwidth, connectionId, hasLogicalRedundancy, jumboFrameCapable, lagId, loaIssueTime, location, name, ownerAccountId, partnerName, providerName, region, state, vlan);

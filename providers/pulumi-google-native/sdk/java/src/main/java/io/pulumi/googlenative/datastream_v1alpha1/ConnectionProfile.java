@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datastream_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1alpha1.ConnectionProfileArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.ForwardSshTunnelConnectivityResponse;
@@ -37,7 +38,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The create time of the resource.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -51,7 +52,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return Display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -65,7 +66,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return Forward SSH tunnel connectivity.
      * 
      */
-    public Output<ForwardSshTunnelConnectivityResponse> getForwardSshConnectivity() {
+    public Output<ForwardSshTunnelConnectivityResponse> forwardSshConnectivity() {
         return this.forwardSshConnectivity;
     }
     /**
@@ -79,7 +80,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return Cloud Storage ConnectionProfile configuration.
      * 
      */
-    public Output<GcsProfileResponse> getGcsProfile() {
+    public Output<GcsProfileResponse> gcsProfile() {
         return this.gcsProfile;
     }
     /**
@@ -93,7 +94,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return Labels.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -107,7 +108,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return MySQL ConnectionProfile configuration.
      * 
      */
-    public Output<MysqlProfileResponse> getMysqlProfile() {
+    public Output<MysqlProfileResponse> mysqlProfile() {
         return this.mysqlProfile;
     }
     /**
@@ -121,7 +122,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The resource's name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -135,7 +136,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return No connectivity option chosen.
      * 
      */
-    public Output<NoConnectivitySettingsResponse> getNoConnectivity() {
+    public Output<NoConnectivitySettingsResponse> noConnectivity() {
         return this.noConnectivity;
     }
     /**
@@ -149,7 +150,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return Oracle ConnectionProfile configuration.
      * 
      */
-    public Output<OracleProfileResponse> getOracleProfile() {
+    public Output<OracleProfileResponse> oracleProfile() {
         return this.oracleProfile;
     }
     /**
@@ -163,7 +164,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return Private connectivity.
      * 
      */
-    public Output<PrivateConnectivityResponse> getPrivateConnectivity() {
+    public Output<PrivateConnectivityResponse> privateConnectivity() {
         return this.privateConnectivity;
     }
     /**
@@ -177,7 +178,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return Static Service IP connectivity.
      * 
      */
-    public Output<StaticServiceIpConnectivityResponse> getStaticServiceIpConnectivity() {
+    public Output<StaticServiceIpConnectivityResponse> staticServiceIpConnectivity() {
         return this.staticServiceIpConnectivity;
     }
     /**
@@ -191,7 +192,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @return The update time of the resource.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -217,7 +218,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionProfile(String name, ConnectionProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datastream/v1alpha1:ConnectionProfile", name, args == null ? ConnectionProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datastream/v1alpha1:ConnectionProfile", name, args == null ? ConnectionProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectionProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

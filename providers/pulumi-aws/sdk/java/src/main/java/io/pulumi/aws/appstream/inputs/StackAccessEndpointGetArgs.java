@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class StackAccessEndpointGetArgs extends io.pulumi.resources.Resour
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
     @Import(name="vpceId")
       private final @Nullable Output<String> vpceId;
 
-    public Output<String> getVpceId() {
-        return this.vpceId == null ? Output.empty() : this.vpceId;
+    public Output<String> vpceId() {
+        return this.vpceId == null ? Codegen.empty() : this.vpceId;
     }
 
     public StackAccessEndpointGetArgs(
@@ -36,8 +37,8 @@ public final class StackAccessEndpointGetArgs extends io.pulumi.resources.Resour
     }
 
     private StackAccessEndpointGetArgs() {
-        this.endpointType = Output.empty();
-        this.vpceId = Output.empty();
+        this.endpointType = Codegen.empty();
+        this.vpceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class StackAccessEndpointGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpceId(@Nullable String vpceId) {
-            this.vpceId = Output.ofNullable(vpceId);
+            this.vpceId = Codegen.ofNullable(vpceId);
             return this;
         }        public StackAccessEndpointGetArgs build() {
             return new StackAccessEndpointGetArgs(endpointType, vpceId);

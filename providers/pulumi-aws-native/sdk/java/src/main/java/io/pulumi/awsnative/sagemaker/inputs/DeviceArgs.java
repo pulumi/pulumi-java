@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -47,8 +48,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iotThingName")
       private final @Nullable Output<String> iotThingName;
 
-    public Output<String> getIotThingName() {
-        return this.iotThingName == null ? Output.empty() : this.iotThingName;
+    public Output<String> iotThingName() {
+        return this.iotThingName == null ? Codegen.empty() : this.iotThingName;
     }
 
     public DeviceArgs(
@@ -61,9 +62,9 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.description = Output.empty();
-        this.deviceName = Output.empty();
-        this.iotThingName = Output.empty();
+        this.description = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.iotThingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -111,7 +112,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iotThingName(@Nullable String iotThingName) {
-            this.iotThingName = Output.ofNullable(iotThingName);
+            this.iotThingName = Codegen.ofNullable(iotThingName);
             return this;
         }        public DeviceArgs build() {
             return new DeviceArgs(description, deviceName, iotThingName);

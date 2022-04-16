@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.PipelineSourceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
     @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
 
-    public Output<String> getKeyVaultUri() {
+    public Output<String> keyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -38,8 +39,8 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
     @Import(name="type")
       private final @Nullable Output<Either<String,PipelineSourceType>> type;
 
-    public Output<Either<String,PipelineSourceType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,PipelineSourceType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public ImportPipelineSourcePropertiesArgs(
@@ -65,9 +66,9 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
     }
 
     private ImportPipelineSourcePropertiesArgs() {
-        this.keyVaultUri = Output.empty();
-        this.type = Output.empty();
-        this.uri = Output.empty();
+        this.keyVaultUri = Codegen.empty();
+        this.type = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder type(@Nullable Either<String,PipelineSourceType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -115,7 +116,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public ImportPipelineSourcePropertiesArgs build() {
             return new ImportPipelineSourcePropertiesArgs(keyVaultUri, type, uri);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.media.enums.TrackAttribute;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     @Import(name="attribute", required=true)
       private final Output<Either<String,TrackAttribute>> attribute;
 
-    public Output<Either<String,TrackAttribute>> getAttribute() {
+    public Output<Either<String,TrackAttribute>> attribute() {
         return this.attribute;
     }
 
@@ -40,8 +41,8 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     @Import(name="channelMapping")
       private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
-    public Output<Either<String,ChannelMapping>> getChannelMapping() {
-        return this.channelMapping == null ? Output.empty() : this.channelMapping;
+    public Output<Either<String,ChannelMapping>> channelMapping() {
+        return this.channelMapping == null ? Codegen.empty() : this.channelMapping;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     @Import(name="filter", required=true)
       private final Output<Either<String,AttributeFilter>> filter;
 
-    public Output<Either<String,AttributeFilter>> getFilter() {
+    public Output<Either<String,AttributeFilter>> filter() {
         return this.filter;
     }
 
@@ -62,8 +63,8 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     @Import(name="filterValue")
       private final @Nullable Output<String> filterValue;
 
-    public Output<String> getFilterValue() {
-        return this.filterValue == null ? Output.empty() : this.filterValue;
+    public Output<String> filterValue() {
+        return this.filterValue == null ? Codegen.empty() : this.filterValue;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -92,11 +93,11 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     }
 
     private SelectAudioTrackByAttributeArgs() {
-        this.attribute = Output.empty();
-        this.channelMapping = Output.empty();
-        this.filter = Output.empty();
-        this.filterValue = Output.empty();
-        this.odataType = Output.empty();
+        this.attribute = Codegen.empty();
+        this.channelMapping = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.filterValue = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
-            this.channelMapping = Output.ofNullable(channelMapping);
+            this.channelMapping = Codegen.ofNullable(channelMapping);
             return this;
         }
         public Builder filter(Output<Either<String,AttributeFilter>> filter) {
@@ -156,7 +157,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder filterValue(@Nullable String filterValue) {
-            this.filterValue = Output.ofNullable(filterValue);
+            this.filterValue = Codegen.ofNullable(filterValue);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

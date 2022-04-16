@@ -48,28 +48,28 @@ public final class SolutionPlanResponse {
      * name of the solution to be created. For Microsoft published solution it should be in the format of solutionType(workspaceName). SolutionType part is case sensitive. For third party solution, it can be anything.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * name of the solution to enabled/add. For Microsoft published gallery solution it should be in the format of OMSGallery/<solutionType>. This is case sensitive
      * 
     */
-    public Optional<String> getProduct() {
+    public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
      * promotionCode, Not really used now, can you left as empty
      * 
     */
-    public Optional<String> getPromotionCode() {
+    public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
      * Publisher name. For gallery solution, it is Microsoft.
      * 
     */
-    public Optional<String> getPublisher() {
+    public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
 

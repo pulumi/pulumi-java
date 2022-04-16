@@ -6,6 +6,7 @@ package io.pulumi.googlenative.deploymentmanager_v2beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.deploymentmanager_v2beta.TypeProviderArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.CollectionOverrideResponse;
@@ -34,7 +35,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return Allows resource handling overrides for specific collections
      * 
      */
-    public Output<List<CollectionOverrideResponse>> getCollectionOverrides() {
+    public Output<List<CollectionOverrideResponse>> collectionOverrides() {
         return this.collectionOverrides;
     }
     /**
@@ -48,7 +49,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return Credential used when interacting with this type.
      * 
      */
-    public Output<CredentialResponse> getCredential() {
+    public Output<CredentialResponse> credential() {
         return this.credential;
     }
     /**
@@ -62,7 +63,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return List of up to 2 custom certificate authority roots to use for TLS authentication when making calls on behalf of this type provider. If set, TLS authentication will exclusively use these roots instead of relying on publicly trusted certificate authorities when validating TLS certificate authenticity. The certificates must be in base64-encoded PEM format. The maximum size of each certificate must not exceed 10KB.
      * 
      */
-    public Output<List<String>> getCustomCertificateAuthorityRoots() {
+    public Output<List<String>> customCertificateAuthorityRoots() {
         return this.customCertificateAuthorityRoots;
     }
     /**
@@ -76,7 +77,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -90,7 +91,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return Descriptor Url for the this type provider.
      * 
      */
-    public Output<String> getDescriptorUrl() {
+    public Output<String> descriptorUrl() {
         return this.descriptorUrl;
     }
     /**
@@ -104,7 +105,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getInsertTime() {
+    public Output<String> insertTime() {
         return this.insertTime;
     }
     /**
@@ -118,7 +119,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return Map of One Platform labels; provided by the client when the resource is created or updated. Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`
      * 
      */
-    public Output<List<TypeProviderLabelEntryResponse>> getLabels() {
+    public Output<List<TypeProviderLabelEntryResponse>> labels() {
         return this.labels;
     }
     /**
@@ -132,7 +133,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +147,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return The Operation that most recently ran, or is currently running, on this type provider.
      * 
      */
-    public Output<OperationResponse> getOperation() {
+    public Output<OperationResponse> operation() {
         return this.operation;
     }
     /**
@@ -160,7 +161,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return Options to apply when handling any resources in this service.
      * 
      */
-    public Output<OptionsResponse> getOptions() {
+    public Output<OptionsResponse> options() {
         return this.options;
     }
     /**
@@ -174,7 +175,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @return Self link for the type provider.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -200,7 +201,7 @@ public class TypeProvider extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TypeProvider(String name, @Nullable TypeProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:deploymentmanager/v2beta:TypeProvider", name, args == null ? TypeProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:deploymentmanager/v2beta:TypeProvider", name, args == null ? TypeProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TypeProvider(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

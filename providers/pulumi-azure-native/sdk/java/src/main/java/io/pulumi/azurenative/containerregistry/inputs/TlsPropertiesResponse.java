@@ -24,7 +24,7 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="certificate", required=true)
       private final TlsCertificatePropertiesResponse certificate;
 
-    public TlsCertificatePropertiesResponse getCertificate() {
+    public TlsCertificatePropertiesResponse certificate() {
         return this.certificate;
     }
 
@@ -35,7 +35,7 @@ public final class TlsPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

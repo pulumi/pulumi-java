@@ -24,7 +24,7 @@ public final class SerialPipelineResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="stages", required=true)
       private final List<StageResponse> stages;
 
-    public List<StageResponse> getStages() {
+    public List<StageResponse> stages() {
         return this.stages;
     }
 

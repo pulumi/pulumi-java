@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+    public Output<String> apiId() {
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
     @Import(name="contentHandlingStrategy")
       private final @Nullable Output<String> contentHandlingStrategy;
 
-    public Output<String> getContentHandlingStrategy() {
-        return this.contentHandlingStrategy == null ? Output.empty() : this.contentHandlingStrategy;
+    public Output<String> contentHandlingStrategy() {
+        return this.contentHandlingStrategy == null ? Codegen.empty() : this.contentHandlingStrategy;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
     @Import(name="integrationId")
       private final @Nullable Output<String> integrationId;
 
-    public Output<String> getIntegrationId() {
-        return this.integrationId == null ? Output.empty() : this.integrationId;
+    public Output<String> integrationId() {
+        return this.integrationId == null ? Codegen.empty() : this.integrationId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
     @Import(name="integrationResponseKey")
       private final @Nullable Output<String> integrationResponseKey;
 
-    public Output<String> getIntegrationResponseKey() {
-        return this.integrationResponseKey == null ? Output.empty() : this.integrationResponseKey;
+    public Output<String> integrationResponseKey() {
+        return this.integrationResponseKey == null ? Codegen.empty() : this.integrationResponseKey;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
     @Import(name="responseTemplates")
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
-    public Output<Map<String,String>> getResponseTemplates() {
-        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
+    public Output<Map<String,String>> responseTemplates() {
+        return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
     @Import(name="templateSelectionExpression")
       private final @Nullable Output<String> templateSelectionExpression;
 
-    public Output<String> getTemplateSelectionExpression() {
-        return this.templateSelectionExpression == null ? Output.empty() : this.templateSelectionExpression;
+    public Output<String> templateSelectionExpression() {
+        return this.templateSelectionExpression == null ? Codegen.empty() : this.templateSelectionExpression;
     }
 
     public IntegrationResponseState(
@@ -97,12 +98,12 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
     }
 
     private IntegrationResponseState() {
-        this.apiId = Output.empty();
-        this.contentHandlingStrategy = Output.empty();
-        this.integrationId = Output.empty();
-        this.integrationResponseKey = Output.empty();
-        this.responseTemplates = Output.empty();
-        this.templateSelectionExpression = Output.empty();
+        this.apiId = Codegen.empty();
+        this.contentHandlingStrategy = Codegen.empty();
+        this.integrationId = Codegen.empty();
+        this.integrationResponseKey = Codegen.empty();
+        this.responseTemplates = Codegen.empty();
+        this.templateSelectionExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder contentHandlingStrategy(@Nullable Output<String> contentHandlingStrategy) {
@@ -148,7 +149,7 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
-            this.contentHandlingStrategy = Output.ofNullable(contentHandlingStrategy);
+            this.contentHandlingStrategy = Codegen.ofNullable(contentHandlingStrategy);
             return this;
         }
         public Builder integrationId(@Nullable Output<String> integrationId) {
@@ -156,7 +157,7 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder integrationId(@Nullable String integrationId) {
-            this.integrationId = Output.ofNullable(integrationId);
+            this.integrationId = Codegen.ofNullable(integrationId);
             return this;
         }
         public Builder integrationResponseKey(@Nullable Output<String> integrationResponseKey) {
@@ -164,7 +165,7 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder integrationResponseKey(@Nullable String integrationResponseKey) {
-            this.integrationResponseKey = Output.ofNullable(integrationResponseKey);
+            this.integrationResponseKey = Codegen.ofNullable(integrationResponseKey);
             return this;
         }
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
@@ -172,7 +173,7 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Output.ofNullable(responseTemplates);
+            this.responseTemplates = Codegen.ofNullable(responseTemplates);
             return this;
         }
         public Builder templateSelectionExpression(@Nullable Output<String> templateSelectionExpression) {
@@ -180,7 +181,7 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
-            this.templateSelectionExpression = Output.ofNullable(templateSelectionExpression);
+            this.templateSelectionExpression = Codegen.ofNullable(templateSelectionExpression);
             return this;
         }        public IntegrationResponseState build() {
             return new IntegrationResponseState(apiId, contentHandlingStrategy, integrationId, integrationResponseKey, responseTemplates, templateSelectionExpression);

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return A value indicating whether packages within the application may be overwritten using the same version string.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowUpdates() {
+    public Output</* @Nullable */ Boolean> allowUpdates() {
         return this.allowUpdates;
     }
     /**
@@ -56,7 +57,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultVersion() {
+    public Output</* @Nullable */ String> defaultVersion() {
         return this.defaultVersion;
     }
     /**
@@ -70,7 +71,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The display name for the application.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -84,7 +85,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The ETag of the resource, used for concurrency statements.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -98,7 +99,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -138,7 +139,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Application(String name, ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:batch:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:batch:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Application(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

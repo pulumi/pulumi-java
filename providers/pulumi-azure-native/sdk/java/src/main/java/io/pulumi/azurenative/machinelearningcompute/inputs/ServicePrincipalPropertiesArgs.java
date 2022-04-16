@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -35,7 +36,7 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 
@@ -47,8 +48,8 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private ServicePrincipalPropertiesArgs() {
-        this.clientId = Output.empty();
-        this.secret = Output.empty();
+        this.clientId = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.docker;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.ServiceConfigArgs;
 import io.pulumi.docker.Utilities;
 import io.pulumi.docker.inputs.ServiceConfigState;
@@ -41,7 +42,7 @@ public class ServiceConfig extends io.pulumi.resources.CustomResource {
      * @return Base64-url-safe-encoded config data
      * 
      */
-    public Output<String> getData() {
+    public Output<String> data() {
         return this.data;
     }
     /**
@@ -55,7 +56,7 @@ public class ServiceConfig extends io.pulumi.resources.CustomResource {
      * @return User-defined name of the config
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -81,7 +82,7 @@ public class ServiceConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceConfig(String name, ServiceConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("docker:index/serviceConfig:ServiceConfig", name, args == null ? ServiceConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("docker:index/serviceConfig:ServiceConfig", name, args == null ? ServiceConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceConfig(String name, Output<String> id, @Nullable ServiceConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

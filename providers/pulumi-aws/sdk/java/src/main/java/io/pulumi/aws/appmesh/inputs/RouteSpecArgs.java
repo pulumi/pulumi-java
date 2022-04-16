@@ -9,6 +9,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="grpcRoute")
       private final @Nullable Output<RouteSpecGrpcRouteArgs> grpcRoute;
 
-    public Output<RouteSpecGrpcRouteArgs> getGrpcRoute() {
-        return this.grpcRoute == null ? Output.empty() : this.grpcRoute;
+    public Output<RouteSpecGrpcRouteArgs> grpcRoute() {
+        return this.grpcRoute == null ? Codegen.empty() : this.grpcRoute;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="http2Route")
       private final @Nullable Output<RouteSpecHttp2RouteArgs> http2Route;
 
-    public Output<RouteSpecHttp2RouteArgs> getHttp2Route() {
-        return this.http2Route == null ? Output.empty() : this.http2Route;
+    public Output<RouteSpecHttp2RouteArgs> http2Route() {
+        return this.http2Route == null ? Codegen.empty() : this.http2Route;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpRoute")
       private final @Nullable Output<RouteSpecHttpRouteArgs> httpRoute;
 
-    public Output<RouteSpecHttpRouteArgs> getHttpRoute() {
-        return this.httpRoute == null ? Output.empty() : this.httpRoute;
+    public Output<RouteSpecHttpRouteArgs> httpRoute() {
+        return this.httpRoute == null ? Codegen.empty() : this.httpRoute;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tcpRoute")
       private final @Nullable Output<RouteSpecTcpRouteArgs> tcpRoute;
 
-    public Output<RouteSpecTcpRouteArgs> getTcpRoute() {
-        return this.tcpRoute == null ? Output.empty() : this.tcpRoute;
+    public Output<RouteSpecTcpRouteArgs> tcpRoute() {
+        return this.tcpRoute == null ? Codegen.empty() : this.tcpRoute;
     }
 
     public RouteSpecArgs(
@@ -88,11 +89,11 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteSpecArgs() {
-        this.grpcRoute = Output.empty();
-        this.http2Route = Output.empty();
-        this.httpRoute = Output.empty();
-        this.priority = Output.empty();
-        this.tcpRoute = Output.empty();
+        this.grpcRoute = Codegen.empty();
+        this.http2Route = Codegen.empty();
+        this.httpRoute = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.tcpRoute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grpcRoute(@Nullable RouteSpecGrpcRouteArgs grpcRoute) {
-            this.grpcRoute = Output.ofNullable(grpcRoute);
+            this.grpcRoute = Codegen.ofNullable(grpcRoute);
             return this;
         }
         public Builder http2Route(@Nullable Output<RouteSpecHttp2RouteArgs> http2Route) {
@@ -136,7 +137,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder http2Route(@Nullable RouteSpecHttp2RouteArgs http2Route) {
-            this.http2Route = Output.ofNullable(http2Route);
+            this.http2Route = Codegen.ofNullable(http2Route);
             return this;
         }
         public Builder httpRoute(@Nullable Output<RouteSpecHttpRouteArgs> httpRoute) {
@@ -144,7 +145,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpRoute(@Nullable RouteSpecHttpRouteArgs httpRoute) {
-            this.httpRoute = Output.ofNullable(httpRoute);
+            this.httpRoute = Codegen.ofNullable(httpRoute);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -152,7 +153,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder tcpRoute(@Nullable Output<RouteSpecTcpRouteArgs> tcpRoute) {
@@ -160,7 +161,7 @@ public final class RouteSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tcpRoute(@Nullable RouteSpecTcpRouteArgs tcpRoute) {
-            this.tcpRoute = Output.ofNullable(tcpRoute);
+            this.tcpRoute = Codegen.ofNullable(tcpRoute);
             return this;
         }        public RouteSpecArgs build() {
             return new RouteSpecArgs(grpcRoute, http2Route, httpRoute, priority, tcpRoute);

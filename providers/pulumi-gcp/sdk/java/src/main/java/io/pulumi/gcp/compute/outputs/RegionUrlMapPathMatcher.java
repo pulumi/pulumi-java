@@ -86,7 +86,7 @@ public final class RegionUrlMapPathMatcher {
      * the URL's path portion.
      * 
     */
-    public Optional<String> getDefaultService() {
+    public Optional<String> defaultService() {
         return Optional.ofNullable(this.defaultService);
     }
     /**
@@ -96,14 +96,14 @@ public final class RegionUrlMapPathMatcher {
      * Structure is documented below.
      * 
     */
-    public Optional<RegionUrlMapPathMatcherDefaultUrlRedirect> getDefaultUrlRedirect() {
+    public Optional<RegionUrlMapPathMatcherDefaultUrlRedirect> defaultUrlRedirect() {
         return Optional.ofNullable(this.defaultUrlRedirect);
     }
     /**
      * Description of this test case.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -111,7 +111,7 @@ public final class RegionUrlMapPathMatcher {
      * request, in the absence of which the request match fails.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
@@ -124,7 +124,7 @@ public final class RegionUrlMapPathMatcher {
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherPathRule> getPathRules() {
+    public List<RegionUrlMapPathMatcherPathRule> pathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
     }
     /**
@@ -137,7 +137,7 @@ public final class RegionUrlMapPathMatcher {
      * Structure is documented below.
      * 
     */
-    public List<RegionUrlMapPathMatcherRouteRule> getRouteRules() {
+    public List<RegionUrlMapPathMatcherRouteRule> routeRules() {
         return this.routeRules == null ? List.of() : this.routeRules;
     }
 

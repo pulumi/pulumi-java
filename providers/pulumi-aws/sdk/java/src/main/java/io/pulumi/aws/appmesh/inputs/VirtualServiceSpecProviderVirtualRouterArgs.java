@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VirtualServiceSpecProviderVirtualRouterArgs extends io.pulumi
     @Import(name="virtualRouterName", required=true)
       private final Output<String> virtualRouterName;
 
-    public Output<String> getVirtualRouterName() {
+    public Output<String> virtualRouterName() {
         return this.virtualRouterName;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualServiceSpecProviderVirtualRouterArgs extends io.pulumi
     }
 
     private VirtualServiceSpecProviderVirtualRouterArgs() {
-        this.virtualRouterName = Output.empty();
+        this.virtualRouterName = Codegen.empty();
     }
 
     public static Builder builder() {

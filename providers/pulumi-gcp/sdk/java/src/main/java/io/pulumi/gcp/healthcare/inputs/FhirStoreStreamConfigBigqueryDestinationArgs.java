@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
     @Import(name="datasetUri", required=true)
       private final Output<String> datasetUri;
 
-    public Output<String> getDatasetUri() {
+    public Output<String> datasetUri() {
         return this.datasetUri;
     }
 
@@ -33,7 +34,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
     @Import(name="schemaConfig", required=true)
       private final Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
 
-    public Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> getSchemaConfig() {
+    public Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig() {
         return this.schemaConfig;
     }
 
@@ -45,8 +46,8 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
     }
 
     private FhirStoreStreamConfigBigqueryDestinationArgs() {
-        this.datasetUri = Output.empty();
-        this.schemaConfig = Output.empty();
+        this.datasetUri = Codegen.empty();
+        this.schemaConfig = Codegen.empty();
     }
 
     public static Builder builder() {

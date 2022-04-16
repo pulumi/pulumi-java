@@ -12,6 +12,7 @@ import io.pulumi.aws.appstream.outputs.FleetVpcConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +46,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return ARN of the appstream fleet.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +60,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the desired capacity of the fleet. See below.
      * 
      */
-    public Output<FleetComputeCapacity> getComputeCapacity() {
+    public Output<FleetComputeCapacity> computeCapacity() {
         return this.computeCapacity;
     }
     /**
@@ -73,7 +74,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Date and time, in UTC and extended RFC 3339 format, when the fleet was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -87,7 +88,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Description to display.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -101,7 +102,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Amount of time that a streaming session remains active after users disconnect.
      * 
      */
-    public Output<Integer> getDisconnectTimeoutInSeconds() {
+    public Output<Integer> disconnectTimeoutInSeconds() {
         return this.disconnectTimeoutInSeconds;
     }
     /**
@@ -115,7 +116,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Human-readable friendly name for the AppStream fleet.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -129,7 +130,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the name of the directory and organizational unit (OU) to use to join the fleet to a Microsoft Active Directory domain. See below.
      * 
      */
-    public Output<FleetDomainJoinInfo> getDomainJoinInfo() {
+    public Output<FleetDomainJoinInfo> domainJoinInfo() {
         return this.domainJoinInfo;
     }
     /**
@@ -143,7 +144,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Enables or disables default internet access for the fleet.
      * 
      */
-    public Output<Boolean> getEnableDefaultInternetAccess() {
+    public Output<Boolean> enableDefaultInternetAccess() {
         return this.enableDefaultInternetAccess;
     }
     /**
@@ -157,7 +158,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Fleet type. Valid values are: `ON_DEMAND`, `ALWAYS_ON`
      * 
      */
-    public Output<String> getFleetType() {
+    public Output<String> fleetType() {
         return this.fleetType;
     }
     /**
@@ -171,7 +172,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return ARN of the IAM role to apply to the fleet.
      * 
      */
-    public Output<String> getIamRoleArn() {
+    public Output<String> iamRoleArn() {
         return this.iamRoleArn;
     }
     /**
@@ -185,7 +186,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the `disconnect_timeout_in_seconds` time interval begins.
      * 
      */
-    public Output</* @Nullable */ Integer> getIdleDisconnectTimeoutInSeconds() {
+    public Output</* @Nullable */ Integer> idleDisconnectTimeoutInSeconds() {
         return this.idleDisconnectTimeoutInSeconds;
     }
     /**
@@ -199,7 +200,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return ARN of the public, private, or shared image to use.
      * 
      */
-    public Output<String> getImageArn() {
+    public Output<String> imageArn() {
         return this.imageArn;
     }
     /**
@@ -213,7 +214,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Name of the image used to create the fleet.
      * 
      */
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
     /**
@@ -227,7 +228,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Instance type to use when launching fleet instances.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -241,7 +242,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Maximum amount of time that a streaming session can remain active, in seconds.
      * 
      */
-    public Output<Integer> getMaxUserDurationInSeconds() {
+    public Output<Integer> maxUserDurationInSeconds() {
         return this.maxUserDurationInSeconds;
     }
     /**
@@ -255,7 +256,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Unique name for the fleet.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -269,7 +270,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return State of the fleet. Can be `STARTING`, `RUNNING`, `STOPPING` or `STOPPED`
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -283,7 +284,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return AppStream 2.0 view that is displayed to your users when they stream from the fleet. When `APP` is specified, only the windows of applications opened by users display. When `DESKTOP` is specified, the standard desktop that is provided by the operating system displays. If not specified, defaults to `APP`.
      * 
      */
-    public Output<String> getStreamView() {
+    public Output<String> streamView() {
         return this.streamView;
     }
     /**
@@ -297,13 +298,13 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Map of tags to attach to AppStream instances.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -317,7 +318,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the VPC configuration for the image builder. See below.
      * 
      */
-    public Output<FleetVpcConfig> getVpcConfig() {
+    public Output<FleetVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 
@@ -343,7 +344,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Fleet(String name, FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appstream/fleet:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appstream/fleet:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Fleet(String name, Output<String> id, @Nullable FleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

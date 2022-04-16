@@ -7,15 +7,16 @@ import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.internal.DeploymentInternal;
+import io.pulumi.deployment.internal.DeploymentImpl;
 import io.pulumi.exceptions.RunException;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.Reader;
-import java.util.Objects;
 import java.util.Optional;
+
+import static java.util.Objects.requireNonNull;
 
 /**
  * Config is a bag of related configuration state. Each bag contains any number
@@ -30,35 +31,34 @@ import java.util.Optional;
 public class Config {
 
     private final String name;
+    private final DeploymentImpl.Config internalConfig;
 
-    private Config() {
-        this(Deployment.getInstance().getProjectName());
-    }
+    /**
+     * @see io.pulumi.context.StackContext#config()
+     * @see io.pulumi.context.StackContext#config(String)
+     */
+    @InternalUse
+    public Config(DeploymentImpl.Config internalConfig, String name) {
+        this.internalConfig = requireNonNull(internalConfig);
 
-    private Config(String name) {
-        Objects.requireNonNull(name);
-
+        requireNonNull(name);
         if (name.endsWith(":config")) {
             name = name.replaceAll(":config$", "");
         }
-
         this.name = name;
     }
 
     /**
-     * Creates a new @see {@link Config} instance, with default, the name of the current project.
+     * For internal use by providers.
+     * @see io.pulumi.context.StackContext#config()
+     * @see io.pulumi.context.StackContext#config(String)
+     * @deprecated will be removed in the future, use {@link io.pulumi.context.StackContext#config(String)}
      */
-    public static Config of() {
-        return new Config();
-    }
-
-    /**
-     * Creates a new @see {@link Config} instance.
-     *
-     * @param name unique logical name
-     */
+    // TODO: remove after refactoring the deployment
+    @InternalUse
+    @Deprecated
     public static Config of(String name) {
-        return new Config(name);
+        return new Config(Deployment.getInstance().getConfig(), name);
     }
 
     /**
@@ -77,7 +77,9 @@ public class Config {
      */
     public Optional<String> get(String key) {
         var fullKey = fullKey(key);
-        return DeploymentInternal.getInstance().getConfig(fullKey);
+        // FIXME: due to https://github.com/pulumi/pulumi/issues/7127
+        //        there is a check for key being a secret missing here
+        return this.internalConfig.getConfig(fullKey);
     }
 
     /**
@@ -132,7 +134,7 @@ public class Config {
      * Loads an optional configuration value as a JSON string and deserializes it
      * as an object, by its key, or null if it doesn't exist.
      * This works by taking the value associated with {@code key} and passing
-     * it to @see {@link Gson#fromJson(Reader, Class)}.
+     * it to {@link Gson#fromJson(Reader, Class)}.
      */
     public <T> Optional<T> getObject(String key, Class<T> classOfT) {
         var v = get(key);
@@ -148,7 +150,7 @@ public class Config {
      * Loads an optional configuration value as a JSON string and deserializes it
      * as an object, by its key, marking it as a secret or null (empty) if it doesn't exist.
      * This works by taking the value associated with {@code key}
-     * and passing it to @see {@link Gson#fromJson(Reader, Class)}.
+     * and passing it to {@link Gson#fromJson(Reader, Class)}.
      */
     public <T> Output<Optional<T>> getSecretObject(String key, Class<T> classOfT) {
         return Output.ofSecret(getObject(key, classOfT));
@@ -224,7 +226,7 @@ public class Config {
     /**
      * Loads a configuration value as a JSON string and deserializes it into an object.
      * If it doesn't exist, or the configuration value cannot be converted
-     * using @see {@link Gson#fromJson(Reader, Class)}, an error is thrown.
+     * using {@link Gson#fromJson(Reader, Class)}, an error is thrown.
      */
     public <T> T requireObject(String key, Class<T> classOfT) {
         return getObject(key, classOfT).orElseThrow(() -> new ConfigMissingException(fullKey(key)));
@@ -234,7 +236,7 @@ public class Config {
      * Loads a configuration value as a JSON string and deserializes it into an object,
      * marking it as a secret.
      * If it doesn't exist, or the configuration value cannot be converted
-     * using @see {@link Gson#fromJson(Reader, Class)}, an error is thrown.
+     * using {@link Gson#fromJson(Reader, Class)}, an error is thrown.
      */
     public <T> Output<T> requireSecretObject(String key, Class<T> classOfT) {
         return Output.ofSecret(requireObject(key, classOfT));

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     @Import(name="env")
       private final @Nullable Output<String> env;
 
-    public Output<String> getEnv() {
-        return this.env == null ? Output.empty() : this.env;
+    public Output<String> env() {
+        return this.env == null ? Codegen.empty() : this.env;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -47,7 +48,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -61,9 +62,9 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     }
 
     private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs() {
-        this.env = Output.empty();
-        this.instanceId = Output.empty();
-        this.location = Output.empty();
+        this.env = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
             return this;
         }
         public Builder env(@Nullable String env) {
-            this.env = Output.ofNullable(env);
+            this.env = Codegen.ofNullable(env);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {

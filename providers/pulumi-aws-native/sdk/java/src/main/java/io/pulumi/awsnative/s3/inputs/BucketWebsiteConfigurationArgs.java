@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.inputs.BucketRedirectAllRequestsToArgs;
 import io.pulumi.awsnative.s3.inputs.BucketRoutingRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="errorDocument")
       private final @Nullable Output<String> errorDocument;
 
-    public Output<String> getErrorDocument() {
-        return this.errorDocument == null ? Output.empty() : this.errorDocument;
+    public Output<String> errorDocument() {
+        return this.errorDocument == null ? Codegen.empty() : this.errorDocument;
     }
 
     /**
@@ -39,22 +40,22 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="indexDocument")
       private final @Nullable Output<String> indexDocument;
 
-    public Output<String> getIndexDocument() {
-        return this.indexDocument == null ? Output.empty() : this.indexDocument;
+    public Output<String> indexDocument() {
+        return this.indexDocument == null ? Codegen.empty() : this.indexDocument;
     }
 
     @Import(name="redirectAllRequestsTo")
       private final @Nullable Output<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo;
 
-    public Output<BucketRedirectAllRequestsToArgs> getRedirectAllRequestsTo() {
-        return this.redirectAllRequestsTo == null ? Output.empty() : this.redirectAllRequestsTo;
+    public Output<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo() {
+        return this.redirectAllRequestsTo == null ? Codegen.empty() : this.redirectAllRequestsTo;
     }
 
     @Import(name="routingRules")
       private final @Nullable Output<List<BucketRoutingRuleArgs>> routingRules;
 
-    public Output<List<BucketRoutingRuleArgs>> getRoutingRules() {
-        return this.routingRules == null ? Output.empty() : this.routingRules;
+    public Output<List<BucketRoutingRuleArgs>> routingRules() {
+        return this.routingRules == null ? Codegen.empty() : this.routingRules;
     }
 
     public BucketWebsiteConfigurationArgs(
@@ -69,10 +70,10 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private BucketWebsiteConfigurationArgs() {
-        this.errorDocument = Output.empty();
-        this.indexDocument = Output.empty();
-        this.redirectAllRequestsTo = Output.empty();
-        this.routingRules = Output.empty();
+        this.errorDocument = Codegen.empty();
+        this.indexDocument = Codegen.empty();
+        this.redirectAllRequestsTo = Codegen.empty();
+        this.routingRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder errorDocument(@Nullable String errorDocument) {
-            this.errorDocument = Output.ofNullable(errorDocument);
+            this.errorDocument = Codegen.ofNullable(errorDocument);
             return this;
         }
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
@@ -114,7 +115,7 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder indexDocument(@Nullable String indexDocument) {
-            this.indexDocument = Output.ofNullable(indexDocument);
+            this.indexDocument = Codegen.ofNullable(indexDocument);
             return this;
         }
         public Builder redirectAllRequestsTo(@Nullable Output<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo) {
@@ -122,7 +123,7 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder redirectAllRequestsTo(@Nullable BucketRedirectAllRequestsToArgs redirectAllRequestsTo) {
-            this.redirectAllRequestsTo = Output.ofNullable(redirectAllRequestsTo);
+            this.redirectAllRequestsTo = Codegen.ofNullable(redirectAllRequestsTo);
             return this;
         }
         public Builder routingRules(@Nullable Output<List<BucketRoutingRuleArgs>> routingRules) {
@@ -130,7 +131,7 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder routingRules(@Nullable List<BucketRoutingRuleArgs> routingRules) {
-            this.routingRules = Output.ofNullable(routingRules);
+            this.routingRules = Codegen.ofNullable(routingRules);
             return this;
         }
         public Builder routingRules(BucketRoutingRuleArgs... routingRules) {

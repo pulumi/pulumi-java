@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
     @Import(name="authToken")
       private final @Nullable Output<String> authToken;
 
-    public Output<String> getAuthToken() {
-        return this.authToken == null ? Output.empty() : this.authToken;
+    public Output<String> authToken() {
+        return this.authToken == null ? Codegen.empty() : this.authToken;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
     @Import(name="serviceKey")
       private final @Nullable Output<String> serviceKey;
 
-    public Output<String> getServiceKey() {
-        return this.serviceKey == null ? Output.empty() : this.serviceKey;
+    public Output<String> serviceKey() {
+        return this.serviceKey == null ? Codegen.empty() : this.serviceKey;
     }
 
     public NotificationChannelSensitiveLabelsArgs(
@@ -60,9 +61,9 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
     }
 
     private NotificationChannelSensitiveLabelsArgs() {
-        this.authToken = Output.empty();
-        this.password = Output.empty();
-        this.serviceKey = Output.empty();
+        this.authToken = Codegen.empty();
+        this.password = Codegen.empty();
+        this.serviceKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
             return this;
         }
         public Builder authToken(@Nullable String authToken) {
-            this.authToken = Output.ofNullable(authToken);
+            this.authToken = Codegen.ofNullable(authToken);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -102,7 +103,7 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder serviceKey(@Nullable Output<String> serviceKey) {
@@ -110,7 +111,7 @@ public final class NotificationChannelSensitiveLabelsArgs extends io.pulumi.reso
             return this;
         }
         public Builder serviceKey(@Nullable String serviceKey) {
-            this.serviceKey = Output.ofNullable(serviceKey);
+            this.serviceKey = Codegen.ofNullable(serviceKey);
             return this;
         }        public NotificationChannelSensitiveLabelsArgs build() {
             return new NotificationChannelSensitiveLabelsArgs(authToken, password, serviceKey);

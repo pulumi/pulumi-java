@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.enums.RestMatchQuantifier;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
     @Import(name="matchQuantifier")
       private final @Nullable Output<RestMatchQuantifier> matchQuantifier;
 
-    public Output<RestMatchQuantifier> getMatchQuantifier() {
-        return this.matchQuantifier == null ? Output.empty() : this.matchQuantifier;
+    public Output<RestMatchQuantifier> matchQuantifier() {
+        return this.matchQuantifier == null ? Codegen.empty() : this.matchQuantifier;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
     @Import(name="matches")
       private final @Nullable Output<List<String>> matches;
 
-    public Output<List<String>> getMatches() {
-        return this.matches == null ? Output.empty() : this.matches;
+    public Output<List<String>> matches() {
+        return this.matches == null ? Codegen.empty() : this.matches;
     }
 
     public RestResponseRegexArgs(
@@ -50,8 +51,8 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RestResponseRegexArgs() {
-        this.matchQuantifier = Output.empty();
-        this.matches = Output.empty();
+        this.matchQuantifier = Codegen.empty();
+        this.matches = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder matchQuantifier(@Nullable RestMatchQuantifier matchQuantifier) {
-            this.matchQuantifier = Output.ofNullable(matchQuantifier);
+            this.matchQuantifier = Codegen.ofNullable(matchQuantifier);
             return this;
         }
         public Builder matches(@Nullable Output<List<String>> matches) {
@@ -89,7 +90,7 @@ public final class RestResponseRegexArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder matches(@Nullable List<String> matches) {
-            this.matches = Output.ofNullable(matches);
+            this.matches = Codegen.ofNullable(matches);
             return this;
         }
         public Builder matches(String... matches) {

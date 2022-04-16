@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3objectlambda;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="objectLambdaAccessPoint", required=true)
       private final Output<String> objectLambdaAccessPoint;
 
-    public Output<String> getObjectLambdaAccessPoint() {
+    public Output<String> objectLambdaAccessPoint() {
         return this.objectLambdaAccessPoint;
     }
 
@@ -32,7 +33,7 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyDocument", required=true)
       private final Output<Object> policyDocument;
 
-    public Output<Object> getPolicyDocument() {
+    public Output<Object> policyDocument() {
         return this.policyDocument;
     }
 
@@ -44,8 +45,8 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccessPointPolicyArgs() {
-        this.objectLambdaAccessPoint = Output.empty();
-        this.policyDocument = Output.empty();
+        this.objectLambdaAccessPoint = Codegen.empty();
+        this.policyDocument = Codegen.empty();
     }
 
     public static Builder builder() {

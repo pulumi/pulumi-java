@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolName", required=true)
       private final Output<String> poolName;
 
-    public Output<String> getPoolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -34,8 +35,8 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionLockTimeInDays")
       private final @Nullable Output<Integer> retentionLockTimeInDays;
 
-    public Output<Integer> getRetentionLockTimeInDays() {
-        return this.retentionLockTimeInDays == null ? Output.empty() : this.retentionLockTimeInDays;
+    public Output<Integer> retentionLockTimeInDays() {
+        return this.retentionLockTimeInDays == null ? Codegen.empty() : this.retentionLockTimeInDays;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionLockType")
       private final @Nullable Output<String> retentionLockType;
 
-    public Output<String> getRetentionLockType() {
-        return this.retentionLockType == null ? Output.empty() : this.retentionLockType;
+    public Output<String> retentionLockType() {
+        return this.retentionLockType == null ? Codegen.empty() : this.retentionLockType;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageClass", required=true)
       private final Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
 
@@ -67,8 +68,8 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TapePoolArgs(
@@ -85,11 +86,11 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TapePoolArgs() {
-        this.poolName = Output.empty();
-        this.retentionLockTimeInDays = Output.empty();
-        this.retentionLockType = Output.empty();
-        this.storageClass = Output.empty();
-        this.tags = Output.empty();
+        this.poolName = Codegen.empty();
+        this.retentionLockTimeInDays = Codegen.empty();
+        this.retentionLockType = Codegen.empty();
+        this.storageClass = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionLockTimeInDays(@Nullable Integer retentionLockTimeInDays) {
-            this.retentionLockTimeInDays = Output.ofNullable(retentionLockTimeInDays);
+            this.retentionLockTimeInDays = Codegen.ofNullable(retentionLockTimeInDays);
             return this;
         }
         public Builder retentionLockType(@Nullable Output<String> retentionLockType) {
@@ -141,7 +142,7 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionLockType(@Nullable String retentionLockType) {
-            this.retentionLockType = Output.ofNullable(retentionLockType);
+            this.retentionLockType = Codegen.ofNullable(retentionLockType);
             return this;
         }
         public Builder storageClass(Output<String> storageClass) {
@@ -157,7 +158,7 @@ public final class TapePoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public TapePoolArgs build() {
             return new TapePoolArgs(poolName, retentionLockTimeInDays, retentionLockType, storageClass, tags);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
     @Import(name="blobContainerName")
       private final @Nullable Output<String> blobContainerName;
 
-    public Output<String> getBlobContainerName() {
-        return this.blobContainerName == null ? Output.empty() : this.blobContainerName;
+    public Output<String> blobContainerName() {
+        return this.blobContainerName == null ? Codegen.empty() : this.blobContainerName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
     @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
-    public Output<String> getEndpointType() {
+    public Output<String> endpointType() {
         return this.endpointType;
     }
 
@@ -48,8 +49,8 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public StorageBlobDeadLetterDestinationArgs(
@@ -62,9 +63,9 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
     }
 
     private StorageBlobDeadLetterDestinationArgs() {
-        this.blobContainerName = Output.empty();
-        this.endpointType = Output.empty();
-        this.resourceId = Output.empty();
+        this.blobContainerName = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
             return this;
         }
         public Builder blobContainerName(@Nullable String blobContainerName) {
-            this.blobContainerName = Output.ofNullable(blobContainerName);
+            this.blobContainerName = Codegen.ofNullable(blobContainerName);
             return this;
         }
         public Builder endpointType(Output<String> endpointType) {
@@ -112,7 +113,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public StorageBlobDeadLetterDestinationArgs build() {
             return new StorageBlobDeadLetterDestinationArgs(blobContainerName, endpointType, resourceId);

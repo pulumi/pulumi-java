@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pul
     @Import(name="goal", required=true)
       private final String goal;
 
-    public String getGoal() {
+    public String goal() {
         return this.goal;
     }
 
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pul
     @Import(name="metric", required=true)
       private final String metric;
 
-    public String getMetric() {
+    public String metric() {
         return this.metric;
     }
 

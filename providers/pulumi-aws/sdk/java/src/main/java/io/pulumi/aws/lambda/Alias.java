@@ -10,6 +10,7 @@ import io.pulumi.aws.lambda.outputs.AliasRoutingConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -43,7 +44,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) identifying your Lambda function alias.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -57,7 +58,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Description of the alias.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Lambda Function name or ARN.
      * 
      */
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
     /**
@@ -85,7 +86,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
      * 
      */
-    public Output<String> getFunctionVersion() {
+    public Output<String> functionVersion() {
         return this.functionVersion;
     }
     /**
@@ -99,7 +100,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
      * 
      */
-    public Output<String> getInvokeArn() {
+    public Output<String> invokeArn() {
         return this.invokeArn;
     }
     /**
@@ -113,7 +114,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @return The Lambda alias' route configuration settings. Fields documented below
      * 
      */
-    public Output</* @Nullable */ AliasRoutingConfig> getRoutingConfig() {
+    public Output</* @Nullable */ AliasRoutingConfig> routingConfig() {
         return this.routingConfig;
     }
 
@@ -153,7 +154,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Alias(String name, AliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lambda/alias:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lambda/alias:Alias", name, args == null ? AliasArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Alias(String name, Output<String> id, @Nullable AliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

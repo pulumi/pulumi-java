@@ -26,13 +26,13 @@ public final class PipelineSelectAttributes {
         this.next = next;
     }
 
-    public List<String> getAttributes() {
+    public List<String> attributes() {
         return this.attributes;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getNext() {
+    public Optional<String> next() {
         return Optional.ofNullable(this.next);
     }
 

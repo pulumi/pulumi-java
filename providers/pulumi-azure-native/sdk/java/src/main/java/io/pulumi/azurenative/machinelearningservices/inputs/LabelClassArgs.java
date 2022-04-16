@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subclasses")
       private final @Nullable Output<Map<String,LabelClassArgs>> subclasses;
 
-    public Output<Map<String,LabelClassArgs>> getSubclasses() {
-        return this.subclasses == null ? Output.empty() : this.subclasses;
+    public Output<Map<String,LabelClassArgs>> subclasses() {
+        return this.subclasses == null ? Codegen.empty() : this.subclasses;
     }
 
     public LabelClassArgs(
@@ -49,8 +50,8 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabelClassArgs() {
-        this.displayName = Output.empty();
-        this.subclasses = Output.empty();
+        this.displayName = Codegen.empty();
+        this.subclasses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder subclasses(@Nullable Output<Map<String,LabelClassArgs>> subclasses) {
@@ -88,7 +89,7 @@ public final class LabelClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subclasses(@Nullable Map<String,LabelClassArgs> subclasses) {
-            this.subclasses = Output.ofNullable(subclasses);
+            this.subclasses = Codegen.ofNullable(subclasses);
             return this;
         }        public LabelClassArgs build() {
             return new LabelClassArgs(displayName, subclasses);

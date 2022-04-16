@@ -5,6 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -32,7 +33,7 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
     @Import(name="systemIds", required=true)
       private final Output<List<String>> systemIds;
 
-    public Output<List<String>> getSystemIds() {
+    public Output<List<String>> systemIds() {
         return this.systemIds;
     }
 
@@ -43,7 +44,7 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -57,9 +58,9 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
     }
 
     private PackagingConfigurationSpekeKeyProviderArgs() {
-        this.roleArn = Output.empty();
-        this.systemIds = Output.empty();
-        this.url = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.systemIds = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaFunctionRe
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,37 +23,37 @@ public class ComponentVersion extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="componentName", type=String.class, parameters={})
     private Output<String> componentName;
 
-    public Output<String> getComponentName() {
+    public Output<String> componentName() {
         return this.componentName;
     }
     @Export(name="componentVersion", type=String.class, parameters={})
     private Output<String> componentVersion;
 
-    public Output<String> getComponentVersion() {
+    public Output<String> componentVersion() {
         return this.componentVersion;
     }
     @Export(name="inlineRecipe", type=String.class, parameters={})
     private Output</* @Nullable */ String> inlineRecipe;
 
-    public Output</* @Nullable */ String> getInlineRecipe() {
+    public Output</* @Nullable */ String> inlineRecipe() {
         return this.inlineRecipe;
     }
     @Export(name="lambdaFunction", type=ComponentVersionLambdaFunctionRecipeSource.class, parameters={})
     private Output</* @Nullable */ ComponentVersionLambdaFunctionRecipeSource> lambdaFunction;
 
-    public Output</* @Nullable */ ComponentVersionLambdaFunctionRecipeSource> getLambdaFunction() {
+    public Output</* @Nullable */ ComponentVersionLambdaFunctionRecipeSource> lambdaFunction() {
         return this.lambdaFunction;
     }
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
 
@@ -78,7 +79,7 @@ public class ComponentVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ComponentVersion(String name, @Nullable ComponentVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:greengrassv2:ComponentVersion", name, args == null ? ComponentVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:greengrassv2:ComponentVersion", name, args == null ? ComponentVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ComponentVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.testbase.inputs.CommandArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commands", required=true)
       private final Output<List<CommandArgs>> commands;
 
-    public Output<List<CommandArgs>> getCommands() {
+    public Output<List<CommandArgs>> commands() {
         return this.commands;
     }
 
@@ -41,8 +42,8 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isActive")
       private final @Nullable Output<Boolean> isActive;
 
-    public Output<Boolean> getIsActive() {
-        return this.isActive == null ? Output.empty() : this.isActive;
+    public Output<Boolean> isActive() {
+        return this.isActive == null ? Codegen.empty() : this.isActive;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testType", required=true)
       private final Output<Either<String,TestType>> testType;
 
-    public Output<Either<String,TestType>> getTestType() {
+    public Output<Either<String,TestType>> testType() {
         return this.testType;
     }
 
@@ -66,9 +67,9 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TestArgs() {
-        this.commands = Output.empty();
-        this.isActive = Output.empty();
-        this.testType = Output.empty();
+        this.commands = Codegen.empty();
+        this.isActive = Codegen.empty();
+        this.testType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Output.ofNullable(isActive);
+            this.isActive = Codegen.ofNullable(isActive);
             return this;
         }
         public Builder testType(Output<Either<String,TestType>> testType) {

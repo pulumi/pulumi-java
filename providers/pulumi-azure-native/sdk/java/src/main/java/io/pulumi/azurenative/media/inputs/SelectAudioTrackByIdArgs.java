@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.enums.ChannelMapping;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
     @Import(name="channelMapping")
       private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
-    public Output<Either<String,ChannelMapping>> getChannelMapping() {
-        return this.channelMapping == null ? Output.empty() : this.channelMapping;
+    public Output<Either<String,ChannelMapping>> channelMapping() {
+        return this.channelMapping == null ? Codegen.empty() : this.channelMapping;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -51,7 +52,7 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
     @Import(name="trackId", required=true)
       private final Output<Double> trackId;
 
-    public Output<Double> getTrackId() {
+    public Output<Double> trackId() {
         return this.trackId;
     }
 
@@ -65,9 +66,9 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
     }
 
     private SelectAudioTrackByIdArgs() {
-        this.channelMapping = Output.empty();
-        this.odataType = Output.empty();
-        this.trackId = Output.empty();
+        this.channelMapping = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.trackId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
-            this.channelMapping = Output.ofNullable(channelMapping);
+            this.channelMapping = Codegen.ofNullable(channelMapping);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

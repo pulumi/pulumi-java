@@ -6,6 +6,7 @@ package io.pulumi.googlenative.documentai_v1beta3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.documentai_v1beta3.ProcessorArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The time the processor was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +44,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The default processor version.
      * 
      */
-    public Output<String> getDefaultProcessorVersion() {
+    public Output<String> defaultProcessorVersion() {
         return this.defaultProcessorVersion;
     }
     /**
@@ -57,7 +58,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The display name of the processor.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +72,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
      * 
      */
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
     /**
@@ -85,7 +86,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return Immutable. The http endpoint that can be called to invoke processing.
      * 
      */
-    public Output<String> getProcessEndpoint() {
+    public Output<String> processEndpoint() {
         return this.processEndpoint;
     }
     /**
@@ -113,7 +114,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The state of the processor.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -127,7 +128,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @return The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -153,7 +154,7 @@ public class Processor extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Processor(String name, @Nullable ProcessorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:documentai/v1beta3:Processor", name, args == null ? ProcessorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:documentai/v1beta3:Processor", name, args == null ? ProcessorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Processor(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudasset;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudasset.OrganizationFeedArgs;
 import io.pulumi.gcp.cloudasset.inputs.OrganizationFeedState;
@@ -58,7 +59,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssetNames() {
+    public Output</* @Nullable */ List<String>> assetNames() {
         return this.assetNames;
     }
     /**
@@ -80,7 +81,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * supported asset types.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssetTypes() {
+    public Output</* @Nullable */ List<String>> assetTypes() {
         return this.assetTypes;
     }
     /**
@@ -98,7 +99,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * enablement check, quota, and billing.
      * 
      */
-    public Output<String> getBillingProject() {
+    public Output<String> billingProject() {
         return this.billingProject;
     }
     /**
@@ -122,7 +123,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ OrganizationFeedCondition> getCondition() {
+    public Output</* @Nullable */ OrganizationFeedCondition> condition() {
         return this.condition;
     }
     /**
@@ -138,7 +139,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -152,7 +153,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * @return This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
      * 
      */
-    public Output<String> getFeedId() {
+    public Output<String> feedId() {
         return this.feedId;
     }
     /**
@@ -168,7 +169,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<OrganizationFeedFeedOutputConfig> getFeedOutputConfig() {
+    public Output<OrganizationFeedFeedOutputConfig> feedOutputConfig() {
         return this.feedOutputConfig;
     }
     /**
@@ -182,7 +183,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * @return The format will be organizations/{organization_number}/feeds/{client-assigned_feed_identifier}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -196,7 +197,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * @return The organization this feed should be created in.
      * 
      */
-    public Output<String> getOrgId() {
+    public Output<String> orgId() {
         return this.orgId;
     }
 
@@ -222,7 +223,7 @@ public class OrganizationFeed extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationFeed(String name, OrganizationFeedArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudasset/organizationFeed:OrganizationFeed", name, args == null ? OrganizationFeedArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudasset/organizationFeed:OrganizationFeed", name, args == null ? OrganizationFeedArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationFeed(String name, Output<String> id, @Nullable OrganizationFeedState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

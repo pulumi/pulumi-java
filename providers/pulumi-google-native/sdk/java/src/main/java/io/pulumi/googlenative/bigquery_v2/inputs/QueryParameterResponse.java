@@ -21,7 +21,7 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -32,7 +32,7 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="parameterType", required=true)
       private final QueryParameterTypeResponse parameterType;
 
-    public QueryParameterTypeResponse getParameterType() {
+    public QueryParameterTypeResponse parameterType() {
         return this.parameterType;
     }
 
@@ -43,7 +43,7 @@ public final class QueryParameterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="parameterValue", required=true)
       private final QueryParameterValueResponse parameterValue;
 
-    public QueryParameterValueResponse getParameterValue() {
+    public QueryParameterValueResponse parameterValue() {
         return this.parameterValue;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageArgs;
@@ -30,8 +31,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
     @Import(name="conditionalCases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> conditionalCases;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> getConditionalCases() {
-        return this.conditionalCases == null ? Output.empty() : this.conditionalCases;
+    public Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> conditionalCases() {
+        return this.conditionalCases == null ? Codegen.empty() : this.conditionalCases;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
     @Import(name="messages")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> messages;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> getMessages() {
-        return this.messages == null ? Output.empty() : this.messages;
+    public Output<List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> messages() {
+        return this.messages == null ? Codegen.empty() : this.messages;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
     @Import(name="returnPartialResponses")
       private final @Nullable Output<Boolean> returnPartialResponses;
 
-    public Output<Boolean> getReturnPartialResponses() {
-        return this.returnPartialResponses == null ? Output.empty() : this.returnPartialResponses;
+    public Output<Boolean> returnPartialResponses() {
+        return this.returnPartialResponses == null ? Codegen.empty() : this.returnPartialResponses;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
     @Import(name="setParameterActions")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> setParameterActions;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> getSetParameterActions() {
-        return this.setParameterActions == null ? Output.empty() : this.setParameterActions;
+    public Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> setParameterActions() {
+        return this.setParameterActions == null ? Codegen.empty() : this.setParameterActions;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+    public Output<String> tag() {
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
     @Import(name="webhook")
       private final @Nullable Output<String> webhook;
 
-    public Output<String> getWebhook() {
-        return this.webhook == null ? Output.empty() : this.webhook;
+    public Output<String> webhook() {
+        return this.webhook == null ? Codegen.empty() : this.webhook;
     }
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentArgs(
@@ -105,12 +106,12 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
     }
 
     private GoogleCloudDialogflowCxV3beta1FulfillmentArgs() {
-        this.conditionalCases = Output.empty();
-        this.messages = Output.empty();
-        this.returnPartialResponses = Output.empty();
-        this.setParameterActions = Output.empty();
-        this.tag = Output.empty();
-        this.webhook = Output.empty();
+        this.conditionalCases = Codegen.empty();
+        this.messages = Codegen.empty();
+        this.returnPartialResponses = Codegen.empty();
+        this.setParameterActions = Codegen.empty();
+        this.tag = Codegen.empty();
+        this.webhook = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
             return this;
         }
         public Builder conditionalCases(@Nullable List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> conditionalCases) {
-            this.conditionalCases = Output.ofNullable(conditionalCases);
+            this.conditionalCases = Codegen.ofNullable(conditionalCases);
             return this;
         }
         public Builder conditionalCases(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs... conditionalCases) {
@@ -159,7 +160,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
             return this;
         }
         public Builder messages(@Nullable List<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> messages) {
-            this.messages = Output.ofNullable(messages);
+            this.messages = Codegen.ofNullable(messages);
             return this;
         }
         public Builder messages(GoogleCloudDialogflowCxV3beta1ResponseMessageArgs... messages) {
@@ -170,7 +171,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
             return this;
         }
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
-            this.returnPartialResponses = Output.ofNullable(returnPartialResponses);
+            this.returnPartialResponses = Codegen.ofNullable(returnPartialResponses);
             return this;
         }
         public Builder setParameterActions(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs>> setParameterActions) {
@@ -178,7 +179,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
             return this;
         }
         public Builder setParameterActions(@Nullable List<GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs> setParameterActions) {
-            this.setParameterActions = Output.ofNullable(setParameterActions);
+            this.setParameterActions = Codegen.ofNullable(setParameterActions);
             return this;
         }
         public Builder setParameterActions(GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterActionArgs... setParameterActions) {
@@ -189,7 +190,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }
         public Builder webhook(@Nullable Output<String> webhook) {
@@ -197,7 +198,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentArgs extends io.pulu
             return this;
         }
         public Builder webhook(@Nullable String webhook) {
-            this.webhook = Output.ofNullable(webhook);
+            this.webhook = Codegen.ofNullable(webhook);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1FulfillmentArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentArgs(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);

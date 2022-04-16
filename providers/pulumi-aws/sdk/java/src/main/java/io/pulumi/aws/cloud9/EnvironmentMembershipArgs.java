@@ -5,6 +5,7 @@ package io.pulumi.aws.cloud9;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -31,7 +32,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
     @Import(name="permissions", required=true)
       private final Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions;
     }
 
@@ -42,7 +43,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
     @Import(name="userArn", required=true)
       private final Output<String> userArn;
 
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 
@@ -56,9 +57,9 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
     }
 
     private EnvironmentMembershipArgs() {
-        this.environmentId = Output.empty();
-        this.permissions = Output.empty();
-        this.userArn = Output.empty();
+        this.environmentId = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.userArn = Codegen.empty();
     }
 
     public static Builder builder() {

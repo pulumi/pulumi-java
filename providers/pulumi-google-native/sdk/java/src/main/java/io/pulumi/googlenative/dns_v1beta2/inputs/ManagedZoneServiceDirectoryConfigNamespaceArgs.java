@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     @Import(name="deletionTime")
       private final @Nullable Output<String> deletionTime;
 
-    public Output<String> getDeletionTime() {
-        return this.deletionTime == null ? Output.empty() : this.deletionTime;
+    public Output<String> deletionTime() {
+        return this.deletionTime == null ? Codegen.empty() : this.deletionTime;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     @Import(name="namespaceUrl")
       private final @Nullable Output<String> namespaceUrl;
 
-    public Output<String> getNamespaceUrl() {
-        return this.namespaceUrl == null ? Output.empty() : this.namespaceUrl;
+    public Output<String> namespaceUrl() {
+        return this.namespaceUrl == null ? Codegen.empty() : this.namespaceUrl;
     }
 
     public ManagedZoneServiceDirectoryConfigNamespaceArgs(
@@ -53,9 +54,9 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     }
 
     private ManagedZoneServiceDirectoryConfigNamespaceArgs() {
-        this.deletionTime = Output.empty();
-        this.kind = Output.empty();
-        this.namespaceUrl = Output.empty();
+        this.deletionTime = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.namespaceUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
             return this;
         }
         public Builder deletionTime(@Nullable String deletionTime) {
-            this.deletionTime = Output.ofNullable(deletionTime);
+            this.deletionTime = Codegen.ofNullable(deletionTime);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -95,7 +96,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder namespaceUrl(@Nullable Output<String> namespaceUrl) {
@@ -103,7 +104,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
             return this;
         }
         public Builder namespaceUrl(@Nullable String namespaceUrl) {
-            this.namespaceUrl = Output.ofNullable(namespaceUrl);
+            this.namespaceUrl = Codegen.ofNullable(namespaceUrl);
             return this;
         }        public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {
             return new ManagedZoneServiceDirectoryConfigNamespaceArgs(deletionTime, kind, namespaceUrl);

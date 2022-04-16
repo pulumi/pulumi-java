@@ -71,24 +71,24 @@ public final class JobPigConfig {
      * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
      * 
     */
-    public Optional<Boolean> getContinueOnFailure() {
+    public Optional<Boolean> continueOnFailure() {
         return Optional.ofNullable(this.continueOnFailure);
     }
     /**
      * HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
     */
-    public List<String> getJarFileUris() {
+    public List<String> jarFileUris() {
         return this.jarFileUris == null ? List.of() : this.jarFileUris;
     }
-    public Optional<JobPigConfigLoggingConfig> getLoggingConfig() {
+    public Optional<JobPigConfigLoggingConfig> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
      * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
@@ -96,7 +96,7 @@ public final class JobPigConfig {
      * Conflicts with `query_list`
      * 
     */
-    public Optional<String> getQueryFileUri() {
+    public Optional<String> queryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
     /**
@@ -104,14 +104,14 @@ public final class JobPigConfig {
      * Conflicts with `query_file_uri`
      * 
     */
-    public List<String> getQueryLists() {
+    public List<String> queryLists() {
         return this.queryLists == null ? List.of() : this.queryLists;
     }
     /**
      * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
      * 
     */
-    public Map<String,String> getScriptVariables() {
+    public Map<String,String> scriptVariables() {
         return this.scriptVariables == null ? Map.of() : this.scriptVariables;
     }
 

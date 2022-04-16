@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -35,8 +36,8 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     @Import(name="nonKeyAttributes")
       private final @Nullable Output<List<String>> nonKeyAttributes;
 
-    public Output<List<String>> getNonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Output.empty() : this.nonKeyAttributes;
+    public Output<List<String>> nonKeyAttributes() {
+        return this.nonKeyAttributes == null ? Codegen.empty() : this.nonKeyAttributes;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     @Import(name="projectionType", required=true)
       private final Output<String> projectionType;
 
-    public Output<String> getProjectionType() {
+    public Output<String> projectionType() {
         return this.projectionType;
     }
 
@@ -61,7 +62,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     @Import(name="rangeKey", required=true)
       private final Output<String> rangeKey;
 
-    public Output<String> getRangeKey() {
+    public Output<String> rangeKey() {
         return this.rangeKey;
     }
 
@@ -77,10 +78,10 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     }
 
     private TableLocalSecondaryIndexArgs() {
-        this.name = Output.empty();
-        this.nonKeyAttributes = Output.empty();
-        this.projectionType = Output.empty();
-        this.rangeKey = Output.empty();
+        this.name = Codegen.empty();
+        this.nonKeyAttributes = Codegen.empty();
+        this.projectionType = Codegen.empty();
+        this.rangeKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
+            this.nonKeyAttributes = Codegen.ofNullable(nonKeyAttributes);
             return this;
         }
         public Builder nonKeyAttributes(String... nonKeyAttributes) {

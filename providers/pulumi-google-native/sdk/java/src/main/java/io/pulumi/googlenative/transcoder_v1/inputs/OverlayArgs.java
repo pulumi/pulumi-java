@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.ImageArgs;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="animations")
       private final @Nullable Output<List<AnimationArgs>> animations;
 
-    public Output<List<AnimationArgs>> getAnimations() {
-        return this.animations == null ? Output.empty() : this.animations;
+    public Output<List<AnimationArgs>> animations() {
+        return this.animations == null ? Codegen.empty() : this.animations;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<ImageArgs> image;
 
-    public Output<ImageArgs> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+    public Output<ImageArgs> image() {
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     public OverlayArgs(
@@ -50,8 +51,8 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OverlayArgs() {
-        this.animations = Output.empty();
-        this.image = Output.empty();
+        this.animations = Codegen.empty();
+        this.image = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder animations(@Nullable List<AnimationArgs> animations) {
-            this.animations = Output.ofNullable(animations);
+            this.animations = Codegen.ofNullable(animations);
             return this;
         }
         public Builder animations(AnimationArgs... animations) {
@@ -92,7 +93,7 @@ public final class OverlayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder image(@Nullable ImageArgs image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }        public OverlayArgs build() {
             return new OverlayArgs(animations, image);

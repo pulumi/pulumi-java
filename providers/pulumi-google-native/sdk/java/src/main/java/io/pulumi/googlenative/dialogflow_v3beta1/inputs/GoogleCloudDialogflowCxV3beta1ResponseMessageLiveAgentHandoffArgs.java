@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs(@Nullable Output<Map<String,String>> metadata) {
@@ -35,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
     }
 
     private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs() {
-        this.metadata = Output.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs(metadata);

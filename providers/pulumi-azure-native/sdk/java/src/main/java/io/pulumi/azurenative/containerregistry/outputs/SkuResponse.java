@@ -32,14 +32,14 @@ public final class SkuResponse {
      * The SKU name of the container registry. Required for registry creation.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The SKU tier based on the SKU name.
      * 
     */
-    public String getTier() {
+    public String tier() {
         return this.tier;
     }
 

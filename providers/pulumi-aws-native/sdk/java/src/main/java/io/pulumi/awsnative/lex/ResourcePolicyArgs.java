@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lex;
 import io.pulumi.awsnative.lex.inputs.ResourcePolicyPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +18,14 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<ResourcePolicyPolicyArgs> policy;
 
-    public Output<ResourcePolicyPolicyArgs> getPolicy() {
+    public Output<ResourcePolicyPolicyArgs> policy() {
         return this.policy;
     }
 
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -36,8 +37,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourcePolicyArgs() {
-        this.policy = Output.empty();
-        this.resourceArn = Output.empty();
+        this.policy = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {

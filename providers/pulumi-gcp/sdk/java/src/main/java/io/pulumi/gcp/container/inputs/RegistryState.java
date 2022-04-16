@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketSelfLink")
       private final @Nullable Output<String> bucketSelfLink;
 
-    public Output<String> getBucketSelfLink() {
-        return this.bucketSelfLink == null ? Output.empty() : this.bucketSelfLink;
+    public Output<String> bucketSelfLink() {
+        return this.bucketSelfLink == null ? Codegen.empty() : this.bucketSelfLink;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public RegistryState(
@@ -57,9 +58,9 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistryState() {
-        this.bucketSelfLink = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
+        this.bucketSelfLink = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketSelfLink(@Nullable String bucketSelfLink) {
-            this.bucketSelfLink = Output.ofNullable(bucketSelfLink);
+            this.bucketSelfLink = Codegen.ofNullable(bucketSelfLink);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -99,7 +100,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -107,7 +108,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public RegistryState build() {
             return new RegistryState(bucketSelfLink, location, project);

@@ -9,6 +9,7 @@ import io.pulumi.aws.appstream.inputs.UserStackAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class UserStackAssociation extends io.pulumi.resources.CustomResource {
      * @return Authentication type for the user.
      * 
      */
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
     /**
@@ -54,7 +55,7 @@ public class UserStackAssociation extends io.pulumi.resources.CustomResource {
      * @return Specifies whether a welcome email is sent to a user after the user is created in the user pool.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSendEmailNotification() {
+    public Output</* @Nullable */ Boolean> sendEmailNotification() {
         return this.sendEmailNotification;
     }
     /**
@@ -68,7 +69,7 @@ public class UserStackAssociation extends io.pulumi.resources.CustomResource {
      * @return Name of the stack that is associated with the user.
      * 
      */
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
     /**
@@ -82,7 +83,7 @@ public class UserStackAssociation extends io.pulumi.resources.CustomResource {
      * @return Email address of the user who is associated with the stack.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -108,7 +109,7 @@ public class UserStackAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserStackAssociation(String name, UserStackAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appstream/userStackAssociation:UserStackAssociation", name, args == null ? UserStackAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appstream/userStackAssociation:UserStackAssociation", name, args == null ? UserStackAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserStackAssociation(String name, Output<String> id, @Nullable UserStackAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

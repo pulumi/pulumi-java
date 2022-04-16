@@ -6,6 +6,7 @@ package io.pulumi.azurenative.serialconsole;
 import io.pulumi.azurenative.serialconsole.enums.SerialPortState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentResource", required=true)
       private final Output<String> parentResource;
 
-    public Output<String> getParentResource() {
+    public Output<String> parentResource() {
         return this.parentResource;
     }
 
@@ -33,7 +34,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentResourceType", required=true)
       private final Output<String> parentResourceType;
 
-    public Output<String> getParentResourceType() {
+    public Output<String> parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -44,7 +45,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +56,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceProviderNamespace", required=true)
       private final Output<String> resourceProviderNamespace;
 
-    public Output<String> getResourceProviderNamespace() {
+    public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -66,8 +67,8 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serialPort")
       private final @Nullable Output<String> serialPort;
 
-    public Output<String> getSerialPort() {
-        return this.serialPort == null ? Output.empty() : this.serialPort;
+    public Output<String> serialPort() {
+        return this.serialPort == null ? Codegen.empty() : this.serialPort;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<SerialPortState> state;
 
-    public Output<SerialPortState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<SerialPortState> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public SerialPortArgs(
@@ -97,12 +98,12 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SerialPortArgs() {
-        this.parentResource = Output.empty();
-        this.parentResourceType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceProviderNamespace = Output.empty();
-        this.serialPort = Output.empty();
-        this.state = Output.empty();
+        this.parentResource = Codegen.empty();
+        this.parentResourceType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceProviderNamespace = Codegen.empty();
+        this.serialPort = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serialPort(@Nullable String serialPort) {
-            this.serialPort = Output.ofNullable(serialPort);
+            this.serialPort = Codegen.ofNullable(serialPort);
             return this;
         }
         public Builder state(@Nullable Output<SerialPortState> state) {
@@ -180,7 +181,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable SerialPortState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public SerialPortArgs build() {
             return new SerialPortArgs(parentResource, parentResourceType, resourceGroupName, resourceProviderNamespace, serialPort, state);

@@ -10,6 +10,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.JavaScriptFunctionBindingArg
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,8 +32,8 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="binding")
       private final @Nullable Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding;
 
-    public Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> getBinding() {
-        return this.binding == null ? Output.empty() : this.binding;
+    public Output<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding() {
+        return this.binding == null ? Codegen.empty() : this.binding;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="inputs")
       private final @Nullable Output<List<FunctionInputArgs>> inputs;
 
-    public Output<List<FunctionInputArgs>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+    public Output<List<FunctionInputArgs>> inputs() {
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="output")
       private final @Nullable Output<FunctionOutputArgs> output;
 
-    public Output<FunctionOutputArgs> getOutput() {
-        return this.output == null ? Output.empty() : this.output;
+    public Output<FunctionOutputArgs> output() {
+        return this.output == null ? Codegen.empty() : this.output;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -81,10 +82,10 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private ScalarFunctionPropertiesArgs() {
-        this.binding = Output.empty();
-        this.inputs = Output.empty();
-        this.output = Output.empty();
-        this.type = Output.empty();
+        this.binding = Codegen.empty();
+        this.inputs = Codegen.empty();
+        this.output = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder binding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs> binding) {
-            this.binding = Output.ofNullable(binding);
+            this.binding = Codegen.ofNullable(binding);
             return this;
         }
         public Builder inputs(@Nullable Output<List<FunctionInputArgs>> inputs) {
@@ -126,7 +127,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder inputs(@Nullable List<FunctionInputArgs> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder inputs(FunctionInputArgs... inputs) {
@@ -137,7 +138,7 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder output(@Nullable FunctionOutputArgs output) {
-            this.output = Output.ofNullable(output);
+            this.output = Codegen.ofNullable(output);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,8 +33,8 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupName")
       private final @Nullable Output<String> backupName;
 
-    public Output<String> getBackupName() {
-        return this.backupName == null ? Output.empty() : this.backupName;
+    public Output<String> backupName() {
+        return this.backupName == null ? Codegen.empty() : this.backupName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="poolName", required=true)
       private final Output<String> poolName;
 
-    public Output<String> getPoolName() {
+    public Output<String> poolName() {
         return this.poolName;
     }
 
@@ -76,7 +77,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,7 +88,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumeName", required=true)
       private final Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
+    public Output<String> volumeName() {
         return this.volumeName;
     }
 
@@ -109,13 +110,13 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupArgs() {
-        this.accountName = Output.empty();
-        this.backupName = Output.empty();
-        this.label = Output.empty();
-        this.location = Output.empty();
-        this.poolName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.volumeName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.backupName = Codegen.empty();
+        this.label = Codegen.empty();
+        this.location = Codegen.empty();
+        this.poolName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.volumeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupName(@Nullable String backupName) {
-            this.backupName = Output.ofNullable(backupName);
+            this.backupName = Codegen.ofNullable(backupName);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -171,7 +172,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -179,7 +180,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder poolName(Output<String> poolName) {

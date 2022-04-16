@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     @Import(name="attachmentTarget", required=true)
       private final Output<String> attachmentTarget;
 
-    public Output<String> getAttachmentTarget() {
+    public Output<String> attachmentTarget() {
         return this.attachmentTarget;
     }
 
@@ -32,7 +33,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     @Import(name="firewallPolicy", required=true)
       private final Output<String> firewallPolicy;
 
-    public Output<String> getFirewallPolicy() {
+    public Output<String> firewallPolicy() {
         return this.firewallPolicy;
     }
 
@@ -43,8 +44,8 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public FirewallPolicyAssociationArgs(
@@ -57,9 +58,9 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     }
 
     private FirewallPolicyAssociationArgs() {
-        this.attachmentTarget = Output.empty();
-        this.firewallPolicy = Output.empty();
-        this.name = Output.empty();
+        this.attachmentTarget = Codegen.empty();
+        this.firewallPolicy = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public FirewallPolicyAssociationArgs build() {
             return new FirewallPolicyAssociationArgs(attachmentTarget, firewallPolicy, name);

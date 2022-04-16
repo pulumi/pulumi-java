@@ -7,6 +7,7 @@ import io.pulumi.awsnative.resourcegroups.enums.GroupResourceQueryType;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupQueryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,15 +19,15 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
     @Import(name="query")
       private final @Nullable Output<GroupQueryArgs> query;
 
-    public Output<GroupQueryArgs> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<GroupQueryArgs> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     @Import(name="type")
       private final @Nullable Output<GroupResourceQueryType> type;
 
-    public Output<GroupResourceQueryType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<GroupResourceQueryType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GroupResourceQueryArgs(
@@ -37,8 +38,8 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GroupResourceQueryArgs() {
-        this.query = Output.empty();
-        this.type = Output.empty();
+        this.query = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder query(@Nullable GroupQueryArgs query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder type(@Nullable Output<GroupResourceQueryType> type) {
@@ -76,7 +77,7 @@ public final class GroupResourceQueryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder type(@Nullable GroupResourceQueryType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GroupResourceQueryArgs build() {
             return new GroupResourceQueryArgs(query, type);

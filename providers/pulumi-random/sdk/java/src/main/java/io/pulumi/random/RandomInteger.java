@@ -6,6 +6,7 @@ package io.pulumi.random;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.random.RandomIntegerArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomIntegerState;
@@ -44,7 +45,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> getKeepers() {
+    public Output</* @Nullable */ Map<String,Object>> keepers() {
         return this.keepers;
     }
     /**
@@ -58,7 +59,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * @return The maximum inclusive value of the range.
      * 
      */
-    public Output<Integer> getMax() {
+    public Output<Integer> max() {
         return this.max;
     }
     /**
@@ -72,7 +73,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * @return The minimum inclusive value of the range.
      * 
      */
-    public Output<Integer> getMin() {
+    public Output<Integer> min() {
         return this.min;
     }
     /**
@@ -86,7 +87,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * @return The random integer result.
      * 
      */
-    public Output<Integer> getResult() {
+    public Output<Integer> result() {
         return this.result;
     }
     /**
@@ -100,7 +101,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * @return A custom seed to always produce the same value.
      * 
      */
-    public Output</* @Nullable */ String> getSeed() {
+    public Output</* @Nullable */ String> seed() {
         return this.seed;
     }
 
@@ -126,7 +127,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RandomInteger(String name, RandomIntegerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("random:index/randomInteger:RandomInteger", name, args == null ? RandomIntegerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("random:index/randomInteger:RandomInteger", name, args == null ? RandomIntegerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RandomInteger(String name, Output<String> id, @Nullable RandomIntegerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

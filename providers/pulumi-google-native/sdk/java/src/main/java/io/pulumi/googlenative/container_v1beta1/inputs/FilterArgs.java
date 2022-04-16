@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.enums.FilterEventTypeItem;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventType")
       private final @Nullable Output<List<FilterEventTypeItem>> eventType;
 
-    public Output<List<FilterEventTypeItem>> getEventType() {
-        return this.eventType == null ? Output.empty() : this.eventType;
+    public Output<List<FilterEventTypeItem>> eventType() {
+        return this.eventType == null ? Codegen.empty() : this.eventType;
     }
 
     public FilterArgs(@Nullable Output<List<FilterEventTypeItem>> eventType) {
@@ -35,7 +36,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterArgs() {
-        this.eventType = Output.empty();
+        this.eventType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventType(@Nullable List<FilterEventTypeItem> eventType) {
-            this.eventType = Output.ofNullable(eventType);
+            this.eventType = Codegen.ofNullable(eventType);
             return this;
         }
         public Builder eventType(FilterEventTypeItem... eventType) {

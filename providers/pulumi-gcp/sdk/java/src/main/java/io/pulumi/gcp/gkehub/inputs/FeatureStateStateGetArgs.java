@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,22 +18,22 @@ public final class FeatureStateStateGetArgs extends io.pulumi.resources.Resource
     @Import(name="code")
       private final @Nullable Output<String> code;
 
-    public Output<String> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+    public Output<String> code() {
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public FeatureStateStateGetArgs(
@@ -45,9 +46,9 @@ public final class FeatureStateStateGetArgs extends io.pulumi.resources.Resource
     }
 
     private FeatureStateStateGetArgs() {
-        this.code = Output.empty();
-        this.description = Output.empty();
-        this.updateTime = Output.empty();
+        this.code = Codegen.empty();
+        this.description = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class FeatureStateStateGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder code(@Nullable String code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -87,7 +88,7 @@ public final class FeatureStateStateGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -95,7 +96,7 @@ public final class FeatureStateStateGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public FeatureStateStateGetArgs build() {
             return new FeatureStateStateGetArgs(code, description, updateTime);

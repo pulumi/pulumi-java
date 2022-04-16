@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerinstance.inputs.ResourceLimitsArgs;
 import io.pulumi.azurenative.containerinstance.inputs.ResourceRequestsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     @Import(name="limits")
       private final @Nullable Output<ResourceLimitsArgs> limits;
 
-    public Output<ResourceLimitsArgs> getLimits() {
-        return this.limits == null ? Output.empty() : this.limits;
+    public Output<ResourceLimitsArgs> limits() {
+        return this.limits == null ? Codegen.empty() : this.limits;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     @Import(name="requests", required=true)
       private final Output<ResourceRequestsArgs> requests;
 
-    public Output<ResourceRequestsArgs> getRequests() {
+    public Output<ResourceRequestsArgs> requests() {
         return this.requests;
     }
 
@@ -49,8 +50,8 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     }
 
     private ResourceRequirementsArgs() {
-        this.limits = Output.empty();
-        this.requests = Output.empty();
+        this.limits = Codegen.empty();
+        this.requests = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder limits(@Nullable ResourceLimitsArgs limits) {
-            this.limits = Output.ofNullable(limits);
+            this.limits = Codegen.ofNullable(limits);
             return this;
         }
         public Builder requests(Output<ResourceRequestsArgs> requests) {

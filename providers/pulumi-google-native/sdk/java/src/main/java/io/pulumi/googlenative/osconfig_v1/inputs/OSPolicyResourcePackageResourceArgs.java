@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourcePackageResourceDesiredState;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceAPTArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceDebArgs;
@@ -32,8 +33,8 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="apt")
       private final @Nullable Output<OSPolicyResourcePackageResourceAPTArgs> apt;
 
-    public Output<OSPolicyResourcePackageResourceAPTArgs> getApt() {
-        return this.apt == null ? Output.empty() : this.apt;
+    public Output<OSPolicyResourcePackageResourceAPTArgs> apt() {
+        return this.apt == null ? Codegen.empty() : this.apt;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="deb")
       private final @Nullable Output<OSPolicyResourcePackageResourceDebArgs> deb;
 
-    public Output<OSPolicyResourcePackageResourceDebArgs> getDeb() {
-        return this.deb == null ? Output.empty() : this.deb;
+    public Output<OSPolicyResourcePackageResourceDebArgs> deb() {
+        return this.deb == null ? Codegen.empty() : this.deb;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="desiredState", required=true)
       private final Output<OSPolicyResourcePackageResourceDesiredState> desiredState;
 
-    public Output<OSPolicyResourcePackageResourceDesiredState> getDesiredState() {
+    public Output<OSPolicyResourcePackageResourceDesiredState> desiredState() {
         return this.desiredState;
     }
 
@@ -65,8 +66,8 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="googet")
       private final @Nullable Output<OSPolicyResourcePackageResourceGooGetArgs> googet;
 
-    public Output<OSPolicyResourcePackageResourceGooGetArgs> getGooget() {
-        return this.googet == null ? Output.empty() : this.googet;
+    public Output<OSPolicyResourcePackageResourceGooGetArgs> googet() {
+        return this.googet == null ? Codegen.empty() : this.googet;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="msi")
       private final @Nullable Output<OSPolicyResourcePackageResourceMSIArgs> msi;
 
-    public Output<OSPolicyResourcePackageResourceMSIArgs> getMsi() {
-        return this.msi == null ? Output.empty() : this.msi;
+    public Output<OSPolicyResourcePackageResourceMSIArgs> msi() {
+        return this.msi == null ? Codegen.empty() : this.msi;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="rpm")
       private final @Nullable Output<OSPolicyResourcePackageResourceRPMArgs> rpm;
 
-    public Output<OSPolicyResourcePackageResourceRPMArgs> getRpm() {
-        return this.rpm == null ? Output.empty() : this.rpm;
+    public Output<OSPolicyResourcePackageResourceRPMArgs> rpm() {
+        return this.rpm == null ? Codegen.empty() : this.rpm;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="yum")
       private final @Nullable Output<OSPolicyResourcePackageResourceYUMArgs> yum;
 
-    public Output<OSPolicyResourcePackageResourceYUMArgs> getYum() {
-        return this.yum == null ? Output.empty() : this.yum;
+    public Output<OSPolicyResourcePackageResourceYUMArgs> yum() {
+        return this.yum == null ? Codegen.empty() : this.yum;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     @Import(name="zypper")
       private final @Nullable Output<OSPolicyResourcePackageResourceZypperArgs> zypper;
 
-    public Output<OSPolicyResourcePackageResourceZypperArgs> getZypper() {
-        return this.zypper == null ? Output.empty() : this.zypper;
+    public Output<OSPolicyResourcePackageResourceZypperArgs> zypper() {
+        return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 
     public OSPolicyResourcePackageResourceArgs(
@@ -133,14 +134,14 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
     }
 
     private OSPolicyResourcePackageResourceArgs() {
-        this.apt = Output.empty();
-        this.deb = Output.empty();
-        this.desiredState = Output.empty();
-        this.googet = Output.empty();
-        this.msi = Output.empty();
-        this.rpm = Output.empty();
-        this.yum = Output.empty();
-        this.zypper = Output.empty();
+        this.apt = Codegen.empty();
+        this.deb = Codegen.empty();
+        this.desiredState = Codegen.empty();
+        this.googet = Codegen.empty();
+        this.msi = Codegen.empty();
+        this.rpm = Codegen.empty();
+        this.yum = Codegen.empty();
+        this.zypper = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder apt(@Nullable OSPolicyResourcePackageResourceAPTArgs apt) {
-            this.apt = Output.ofNullable(apt);
+            this.apt = Codegen.ofNullable(apt);
             return this;
         }
         public Builder deb(@Nullable Output<OSPolicyResourcePackageResourceDebArgs> deb) {
@@ -190,7 +191,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder deb(@Nullable OSPolicyResourcePackageResourceDebArgs deb) {
-            this.deb = Output.ofNullable(deb);
+            this.deb = Codegen.ofNullable(deb);
             return this;
         }
         public Builder desiredState(Output<OSPolicyResourcePackageResourceDesiredState> desiredState) {
@@ -206,7 +207,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder googet(@Nullable OSPolicyResourcePackageResourceGooGetArgs googet) {
-            this.googet = Output.ofNullable(googet);
+            this.googet = Codegen.ofNullable(googet);
             return this;
         }
         public Builder msi(@Nullable Output<OSPolicyResourcePackageResourceMSIArgs> msi) {
@@ -214,7 +215,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder msi(@Nullable OSPolicyResourcePackageResourceMSIArgs msi) {
-            this.msi = Output.ofNullable(msi);
+            this.msi = Codegen.ofNullable(msi);
             return this;
         }
         public Builder rpm(@Nullable Output<OSPolicyResourcePackageResourceRPMArgs> rpm) {
@@ -222,7 +223,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rpm(@Nullable OSPolicyResourcePackageResourceRPMArgs rpm) {
-            this.rpm = Output.ofNullable(rpm);
+            this.rpm = Codegen.ofNullable(rpm);
             return this;
         }
         public Builder yum(@Nullable Output<OSPolicyResourcePackageResourceYUMArgs> yum) {
@@ -230,7 +231,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder yum(@Nullable OSPolicyResourcePackageResourceYUMArgs yum) {
-            this.yum = Output.ofNullable(yum);
+            this.yum = Codegen.ofNullable(yum);
             return this;
         }
         public Builder zypper(@Nullable Output<OSPolicyResourcePackageResourceZypperArgs> zypper) {
@@ -238,7 +239,7 @@ public final class OSPolicyResourcePackageResourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder zypper(@Nullable OSPolicyResourcePackageResourceZypperArgs zypper) {
-            this.zypper = Output.ofNullable(zypper);
+            this.zypper = Codegen.ofNullable(zypper);
             return this;
         }        public OSPolicyResourcePackageResourceArgs build() {
             return new OSPolicyResourcePackageResourceArgs(apt, deb, desiredState, googet, msi, rpm, yum, zypper);

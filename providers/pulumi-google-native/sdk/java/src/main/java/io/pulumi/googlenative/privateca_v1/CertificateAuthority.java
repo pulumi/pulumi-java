@@ -6,6 +6,7 @@ package io.pulumi.googlenative.privateca_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CertificateAuthorityArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.AccessUrlsResponse;
@@ -36,7 +37,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return URLs for accessing content published by this CA, such as the CA certificate and CRLs.
      * 
      */
-    public Output<AccessUrlsResponse> getAccessUrls() {
+    public Output<AccessUrlsResponse> accessUrls() {
         return this.accessUrls;
     }
     /**
@@ -50,7 +51,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return A structured description of this CertificateAuthority's CA certificate and its issuers. Ordered as self-to-root.
      * 
      */
-    public Output<List<CertificateDescriptionResponse>> getCaCertificateDescriptions() {
+    public Output<List<CertificateDescriptionResponse>> caCertificateDescriptions() {
         return this.caCertificateDescriptions;
     }
     /**
@@ -64,7 +65,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Immutable. The config used to create a self-signed X.509 certificate or CSR.
      * 
      */
-    public Output<CertificateConfigResponse> getConfig() {
+    public Output<CertificateConfigResponse> config() {
         return this.config;
     }
     /**
@@ -78,7 +79,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The time at which this CertificateAuthority was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -92,7 +93,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The time at which this CertificateAuthority was soft deleted, if it is in the DELETED state.
      * 
      */
-    public Output<String> getDeleteTime() {
+    public Output<String> deleteTime() {
         return this.deleteTime;
     }
     /**
@@ -106,7 +107,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The time at which this CertificateAuthority will be permanently purged, if it is in the DELETED state.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -120,7 +121,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Immutable. The name of a Cloud Storage bucket where this CertificateAuthority will publish content, such as the CA certificate and CRLs. This must be a bucket name, without any prefixes (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named `my-bucket`, you would simply specify `my-bucket`. If not specified, a managed bucket will be created.
      * 
      */
-    public Output<String> getGcsBucket() {
+    public Output<String> gcsBucket() {
         return this.gcsBucket;
     }
     /**
@@ -134,7 +135,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Immutable. Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA certificate. Otherwise, it is used to sign a CSR.
      * 
      */
-    public Output<KeyVersionSpecResponse> getKeySpec() {
+    public Output<KeyVersionSpecResponse> keySpec() {
         return this.keySpec;
     }
     /**
@@ -148,7 +149,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Optional. Labels with user-defined metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -162,7 +163,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Immutable. The desired lifetime of the CA certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate.
      * 
      */
-    public Output<String> getLifetime() {
+    public Output<String> lifetime() {
         return this.lifetime;
     }
     /**
@@ -176,7 +177,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The resource name for this CertificateAuthority in the format `projects/*{@literal /}locations/*{@literal /}caPools/*{@literal /}certificateAuthorities/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -190,7 +191,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the current CertificateAuthority's certificate.
      * 
      */
-    public Output<List<String>> getPemCaCertificates() {
+    public Output<List<String>> pemCaCertificates() {
         return this.pemCaCertificates;
     }
     /**
@@ -204,7 +205,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The State for this CertificateAuthority.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -218,7 +219,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Optional. If this is a subordinate CertificateAuthority, this field will be set with the subordinate configuration, which describes its issuers. This may be updated, but this CertificateAuthority must continue to validate.
      * 
      */
-    public Output<SubordinateConfigResponse> getSubordinateConfig() {
+    public Output<SubordinateConfigResponse> subordinateConfig() {
         return this.subordinateConfig;
     }
     /**
@@ -232,7 +233,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The CaPool.Tier of the CaPool that includes this CertificateAuthority.
      * 
      */
-    public Output<String> getTier() {
+    public Output<String> tier() {
         return this.tier;
     }
     /**
@@ -246,7 +247,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return Immutable. The Type of this CertificateAuthority.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -260,7 +261,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @return The time at which this CertificateAuthority was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -286,7 +287,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateAuthority(String name, CertificateAuthorityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:privateca/v1:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:privateca/v1:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateAuthority(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

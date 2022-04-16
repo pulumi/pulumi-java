@@ -7,6 +7,7 @@ import io.pulumi.azurenative.automation.inputs.ContentSourceArgs;
 import io.pulumi.azurenative.automation.inputs.DscConfigurationParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -36,8 +37,8 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
-    public Output<String> getConfigurationName() {
-        return this.configurationName == null ? Output.empty() : this.configurationName;
+    public Output<String> configurationName() {
+        return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="logProgress")
       private final @Nullable Output<Boolean> logProgress;
 
-    public Output<Boolean> getLogProgress() {
-        return this.logProgress == null ? Output.empty() : this.logProgress;
+    public Output<Boolean> logProgress() {
+        return this.logProgress == null ? Codegen.empty() : this.logProgress;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="logVerbose")
       private final @Nullable Output<Boolean> logVerbose;
 
-    public Output<Boolean> getLogVerbose() {
-        return this.logVerbose == null ? Output.empty() : this.logVerbose;
+    public Output<Boolean> logVerbose() {
+        return this.logVerbose == null ? Codegen.empty() : this.logVerbose;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters;
 
-    public Output<Map<String,DscConfigurationParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,DscConfigurationParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -124,7 +125,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="source", required=true)
       private final Output<ContentSourceArgs> source;
 
-    public Output<ContentSourceArgs> getSource() {
+    public Output<ContentSourceArgs> source() {
         return this.source;
     }
 
@@ -135,8 +136,8 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DscConfigurationArgs(
@@ -165,17 +166,17 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DscConfigurationArgs() {
-        this.automationAccountName = Output.empty();
-        this.configurationName = Output.empty();
-        this.description = Output.empty();
-        this.location = Output.empty();
-        this.logProgress = Output.empty();
-        this.logVerbose = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.source = Output.empty();
-        this.tags = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.configurationName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.location = Codegen.empty();
+        this.logProgress = Codegen.empty();
+        this.logVerbose = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -231,7 +232,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Output.ofNullable(configurationName);
+            this.configurationName = Codegen.ofNullable(configurationName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -239,7 +240,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -247,7 +248,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder logProgress(@Nullable Output<Boolean> logProgress) {
@@ -255,7 +256,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder logProgress(@Nullable Boolean logProgress) {
-            this.logProgress = Output.ofNullable(logProgress);
+            this.logProgress = Codegen.ofNullable(logProgress);
             return this;
         }
         public Builder logVerbose(@Nullable Output<Boolean> logVerbose) {
@@ -263,7 +264,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder logVerbose(@Nullable Boolean logVerbose) {
-            this.logVerbose = Output.ofNullable(logVerbose);
+            this.logVerbose = Codegen.ofNullable(logVerbose);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -271,7 +272,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters) {
@@ -279,7 +280,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable Map<String,DscConfigurationParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -303,7 +304,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DscConfigurationArgs build() {
             return new DscConfigurationArgs(automationAccountName, configurationName, description, location, logProgress, logVerbose, name, parameters, resourceGroupName, source, tags);

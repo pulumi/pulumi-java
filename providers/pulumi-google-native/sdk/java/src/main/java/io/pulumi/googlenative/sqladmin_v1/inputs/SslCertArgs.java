@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cert")
       private final @Nullable Output<String> cert;
 
-    public Output<String> getCert() {
-        return this.cert == null ? Output.empty() : this.cert;
+    public Output<String> cert() {
+        return this.cert == null ? Codegen.empty() : this.cert;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certSerialNumber")
       private final @Nullable Output<String> certSerialNumber;
 
-    public Output<String> getCertSerialNumber() {
-        return this.certSerialNumber == null ? Output.empty() : this.certSerialNumber;
+    public Output<String> certSerialNumber() {
+        return this.certSerialNumber == null ? Codegen.empty() : this.certSerialNumber;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
-        return this.commonName == null ? Output.empty() : this.commonName;
+    public Output<String> commonName() {
+        return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+    public Output<String> expirationTime() {
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+    public Output<String> instance() {
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
-    public Output<String> getSha1Fingerprint() {
-        return this.sha1Fingerprint == null ? Output.empty() : this.sha1Fingerprint;
+    public Output<String> sha1Fingerprint() {
+        return this.sha1Fingerprint == null ? Codegen.empty() : this.sha1Fingerprint;
     }
 
     public SslCertArgs(
@@ -139,15 +140,15 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SslCertArgs() {
-        this.cert = Output.empty();
-        this.certSerialNumber = Output.empty();
-        this.commonName = Output.empty();
-        this.createTime = Output.empty();
-        this.expirationTime = Output.empty();
-        this.instance = Output.empty();
-        this.kind = Output.empty();
-        this.selfLink = Output.empty();
-        this.sha1Fingerprint = Output.empty();
+        this.cert = Codegen.empty();
+        this.certSerialNumber = Codegen.empty();
+        this.commonName = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.expirationTime = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.sha1Fingerprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cert(@Nullable String cert) {
-            this.cert = Output.ofNullable(cert);
+            this.cert = Codegen.ofNullable(cert);
             return this;
         }
         public Builder certSerialNumber(@Nullable Output<String> certSerialNumber) {
@@ -199,7 +200,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certSerialNumber(@Nullable String certSerialNumber) {
-            this.certSerialNumber = Output.ofNullable(certSerialNumber);
+            this.certSerialNumber = Codegen.ofNullable(certSerialNumber);
             return this;
         }
         public Builder commonName(@Nullable Output<String> commonName) {
@@ -207,7 +208,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Output.ofNullable(commonName);
+            this.commonName = Codegen.ofNullable(commonName);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -215,7 +216,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
@@ -223,7 +224,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -231,7 +232,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -239,7 +240,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -247,7 +248,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder sha1Fingerprint(@Nullable Output<String> sha1Fingerprint) {
@@ -255,7 +256,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
-            this.sha1Fingerprint = Output.ofNullable(sha1Fingerprint);
+            this.sha1Fingerprint = Codegen.ofNullable(sha1Fingerprint);
             return this;
         }        public SslCertArgs build() {
             return new SslCertArgs(cert, certSerialNumber, commonName, createTime, expirationTime, instance, kind, selfLink, sha1Fingerprint);

@@ -6,6 +6,7 @@ package io.pulumi.aws.cfg;
 import io.pulumi.aws.cfg.inputs.DeliveryChannelSnapshotDeliveryPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
 
-    public Output<String> getS3BucketName() {
+    public Output<String> s3BucketName() {
         return this.s3BucketName;
     }
 
@@ -44,8 +45,8 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
+    public Output<String> s3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="s3KmsKeyArn")
       private final @Nullable Output<String> s3KmsKeyArn;
 
-    public Output<String> getS3KmsKeyArn() {
-        return this.s3KmsKeyArn == null ? Output.empty() : this.s3KmsKeyArn;
+    public Output<String> s3KmsKeyArn() {
+        return this.s3KmsKeyArn == null ? Codegen.empty() : this.s3KmsKeyArn;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="snapshotDeliveryProperties")
       private final @Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties;
 
-    public Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> getSnapshotDeliveryProperties() {
-        return this.snapshotDeliveryProperties == null ? Output.empty() : this.snapshotDeliveryProperties;
+    public Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties() {
+        return this.snapshotDeliveryProperties == null ? Codegen.empty() : this.snapshotDeliveryProperties;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
-        return this.snsTopicArn == null ? Output.empty() : this.snsTopicArn;
+    public Output<String> snsTopicArn() {
+        return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
     }
 
     public DeliveryChannelArgs(
@@ -97,12 +98,12 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DeliveryChannelArgs() {
-        this.name = Output.empty();
-        this.s3BucketName = Output.empty();
-        this.s3KeyPrefix = Output.empty();
-        this.s3KmsKeyArn = Output.empty();
-        this.snapshotDeliveryProperties = Output.empty();
-        this.snsTopicArn = Output.empty();
+        this.name = Codegen.empty();
+        this.s3BucketName = Codegen.empty();
+        this.s3KeyPrefix = Codegen.empty();
+        this.s3KmsKeyArn = Codegen.empty();
+        this.snapshotDeliveryProperties = Codegen.empty();
+        this.snsTopicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder s3BucketName(Output<String> s3BucketName) {
@@ -156,7 +157,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
             return this;
         }
         public Builder s3KmsKeyArn(@Nullable Output<String> s3KmsKeyArn) {
@@ -164,7 +165,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder s3KmsKeyArn(@Nullable String s3KmsKeyArn) {
-            this.s3KmsKeyArn = Output.ofNullable(s3KmsKeyArn);
+            this.s3KmsKeyArn = Codegen.ofNullable(s3KmsKeyArn);
             return this;
         }
         public Builder snapshotDeliveryProperties(@Nullable Output<DeliveryChannelSnapshotDeliveryPropertiesArgs> snapshotDeliveryProperties) {
@@ -172,7 +173,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder snapshotDeliveryProperties(@Nullable DeliveryChannelSnapshotDeliveryPropertiesArgs snapshotDeliveryProperties) {
-            this.snapshotDeliveryProperties = Output.ofNullable(snapshotDeliveryProperties);
+            this.snapshotDeliveryProperties = Codegen.ofNullable(snapshotDeliveryProperties);
             return this;
         }
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
@@ -180,7 +181,7 @@ public final class DeliveryChannelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Output.ofNullable(snsTopicArn);
+            this.snsTopicArn = Codegen.ofNullable(snsTopicArn);
             return this;
         }        public DeliveryChannelArgs build() {
             return new DeliveryChannelArgs(name, s3BucketName, s3KeyPrefix, s3KmsKeyArn, snapshotDeliveryProperties, snsTopicArn);

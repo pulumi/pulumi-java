@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.AttachedDiskArgs;
 import io.pulumi.gcp.compute.inputs.AttachedDiskState;
@@ -63,7 +64,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * the instance.
      * 
      */
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
     /**
@@ -77,7 +78,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * @return `name` or `self_link` of the disk that will be attached.
      * 
      */
-    public Output<String> getDisk() {
+    public Output<String> disk() {
         return this.disk;
     }
     /**
@@ -97,7 +98,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * as properties on the resource or provider.
      * 
      */
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
     /**
@@ -115,7 +116,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * READ_WRITE mode.
      * 
      */
-    public Output</* @Nullable */ String> getMode() {
+    public Output</* @Nullable */ String> mode() {
         return this.mode;
     }
     /**
@@ -131,7 +132,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * `self_link` the project defined in the link will take precedence.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -147,7 +148,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * `self_link` the zone defined in the link will take precedence.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -173,7 +174,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AttachedDisk(String name, AttachedDiskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/attachedDisk:AttachedDisk", name, args == null ? AttachedDiskArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/attachedDisk:AttachedDisk", name, args == null ? AttachedDiskArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AttachedDisk(String name, Output<String> id, @Nullable AttachedDiskState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

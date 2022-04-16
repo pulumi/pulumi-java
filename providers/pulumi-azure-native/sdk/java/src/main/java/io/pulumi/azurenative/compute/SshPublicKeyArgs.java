@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+    public Output<String> publicKey() {
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,8 +56,8 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sshPublicKeyName")
       private final @Nullable Output<String> sshPublicKeyName;
 
-    public Output<String> getSshPublicKeyName() {
-        return this.sshPublicKeyName == null ? Output.empty() : this.sshPublicKeyName;
+    public Output<String> sshPublicKeyName() {
+        return this.sshPublicKeyName == null ? Codegen.empty() : this.sshPublicKeyName;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SshPublicKeyArgs(
@@ -84,11 +85,11 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshPublicKeyArgs() {
-        this.location = Output.empty();
-        this.publicKey = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sshPublicKeyName = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.publicKey = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sshPublicKeyName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder publicKey(@Nullable Output<String> publicKey) {
@@ -132,7 +133,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -148,7 +149,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sshPublicKeyName(@Nullable String sshPublicKeyName) {
-            this.sshPublicKeyName = Output.ofNullable(sshPublicKeyName);
+            this.sshPublicKeyName = Codegen.ofNullable(sshPublicKeyName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -156,7 +157,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(location, publicKey, resourceGroupName, sshPublicKeyName, tags);

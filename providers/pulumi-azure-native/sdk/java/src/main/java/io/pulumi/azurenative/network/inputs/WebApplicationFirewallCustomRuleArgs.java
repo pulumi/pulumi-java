@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.MatchConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     @Import(name="action", required=true)
       private final Output<Either<String,WebApplicationFirewallAction>> action;
 
-    public Output<Either<String,WebApplicationFirewallAction>> getAction() {
+    public Output<Either<String,WebApplicationFirewallAction>> action() {
         return this.action;
     }
 
@@ -42,7 +43,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     @Import(name="matchConditions", required=true)
       private final Output<List<MatchConditionArgs>> matchConditions;
 
-    public Output<List<MatchConditionArgs>> getMatchConditions() {
+    public Output<List<MatchConditionArgs>> matchConditions() {
         return this.matchConditions;
     }
 
@@ -53,8 +54,8 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -75,7 +76,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     @Import(name="ruleType", required=true)
       private final Output<Either<String,WebApplicationFirewallRuleType>> ruleType;
 
-    public Output<Either<String,WebApplicationFirewallRuleType>> getRuleType() {
+    public Output<Either<String,WebApplicationFirewallRuleType>> ruleType() {
         return this.ruleType;
     }
 
@@ -93,11 +94,11 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
     }
 
     private WebApplicationFirewallCustomRuleArgs() {
-        this.action = Output.empty();
-        this.matchConditions = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.ruleType = Output.empty();
+        this.action = Codegen.empty();
+        this.matchConditions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.ruleType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(Output<Integer> priority) {

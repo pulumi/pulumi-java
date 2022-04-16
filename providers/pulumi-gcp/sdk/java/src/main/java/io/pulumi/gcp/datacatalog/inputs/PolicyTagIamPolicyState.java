@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
-    public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+    public Output<String> policyData() {
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     @Import(name="policyTag")
       private final @Nullable Output<String> policyTag;
 
-    public Output<String> getPolicyTag() {
-        return this.policyTag == null ? Output.empty() : this.policyTag;
+    public Output<String> policyTag() {
+        return this.policyTag == null ? Codegen.empty() : this.policyTag;
     }
 
     public PolicyTagIamPolicyState(
@@ -58,9 +59,9 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
     }
 
     private PolicyTagIamPolicyState() {
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
-        this.policyTag = Output.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.policyTag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -100,7 +101,7 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder policyTag(@Nullable Output<String> policyTag) {
@@ -108,7 +109,7 @@ public final class PolicyTagIamPolicyState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder policyTag(@Nullable String policyTag) {
-            this.policyTag = Output.ofNullable(policyTag);
+            this.policyTag = Codegen.ofNullable(policyTag);
             return this;
         }        public PolicyTagIamPolicyState build() {
             return new PolicyTagIamPolicyState(etag, policyData, policyTag);

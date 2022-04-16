@@ -118,91 +118,91 @@ public final class GetBlobServicePropertiesResult {
      * Deprecated in favor of isVersioningEnabled property.
      * 
     */
-    public Optional<Boolean> getAutomaticSnapshotPolicyEnabled() {
+    public Optional<Boolean> automaticSnapshotPolicyEnabled() {
         return Optional.ofNullable(this.automaticSnapshotPolicyEnabled);
     }
     /**
      * The blob service properties for change feed events.
      * 
     */
-    public Optional<ChangeFeedResponse> getChangeFeed() {
+    public Optional<ChangeFeedResponse> changeFeed() {
         return Optional.ofNullable(this.changeFeed);
     }
     /**
      * The blob service properties for container soft delete.
      * 
     */
-    public Optional<DeleteRetentionPolicyResponse> getContainerDeleteRetentionPolicy() {
+    public Optional<DeleteRetentionPolicyResponse> containerDeleteRetentionPolicy() {
         return Optional.ofNullable(this.containerDeleteRetentionPolicy);
     }
     /**
      * Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
      * 
     */
-    public Optional<CorsRulesResponse> getCors() {
+    public Optional<CorsRulesResponse> cors() {
         return Optional.ofNullable(this.cors);
     }
     /**
      * DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
      * 
     */
-    public Optional<String> getDefaultServiceVersion() {
+    public Optional<String> defaultServiceVersion() {
         return Optional.ofNullable(this.defaultServiceVersion);
     }
     /**
      * The blob service properties for blob soft delete.
      * 
     */
-    public Optional<DeleteRetentionPolicyResponse> getDeleteRetentionPolicy() {
+    public Optional<DeleteRetentionPolicyResponse> deleteRetentionPolicy() {
         return Optional.ofNullable(this.deleteRetentionPolicy);
     }
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Versioning is enabled if set to true.
      * 
     */
-    public Optional<Boolean> getIsVersioningEnabled() {
+    public Optional<Boolean> isVersioningEnabled() {
         return Optional.ofNullable(this.isVersioningEnabled);
     }
     /**
      * The blob service property to configure last access time based tracking policy.
      * 
     */
-    public Optional<LastAccessTimeTrackingPolicyResponse> getLastAccessTimeTrackingPolicy() {
+    public Optional<LastAccessTimeTrackingPolicyResponse> lastAccessTimeTrackingPolicy() {
         return Optional.ofNullable(this.lastAccessTimeTrackingPolicy);
     }
     /**
      * The name of the resource
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The blob service properties for blob restore policy.
      * 
     */
-    public Optional<RestorePolicyPropertiesResponse> getRestorePolicy() {
+    public Optional<RestorePolicyPropertiesResponse> restorePolicy() {
         return Optional.ofNullable(this.restorePolicy);
     }
     /**
      * Sku name and tier.
      * 
     */
-    public SkuResponse getSku() {
+    public SkuResponse sku() {
         return this.sku;
     }
     /**
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

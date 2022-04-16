@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionArgs extends io.p
     @Import(name="groups", required=true)
       private final Output<List<String>> groups;
 
-    public Output<List<String>> getGroups() {
+    public Output<List<String>> groups() {
         return this.groups;
     }
 
@@ -30,7 +31,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionArgs extends io.p
     }
 
     private WorkteamMemberDefinitionOidcMemberDefinitionArgs() {
-        this.groups = Output.empty();
+        this.groups = Codegen.empty();
     }
 
     public static Builder builder() {

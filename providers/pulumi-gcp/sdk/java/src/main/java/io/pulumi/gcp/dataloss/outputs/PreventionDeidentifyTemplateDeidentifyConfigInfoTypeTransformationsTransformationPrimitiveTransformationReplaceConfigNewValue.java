@@ -85,7 +85,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * A boolean value.
      * 
     */
-    public Optional<Boolean> getBooleanValue() {
+    public Optional<Boolean> booleanValue() {
         return Optional.ofNullable(this.booleanValue);
     }
     /**
@@ -93,7 +93,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue> getDateValue() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue> dateValue() {
         return Optional.ofNullable(this.dateValue);
     }
     /**
@@ -101,28 +101,28 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
     */
-    public Optional<String> getDayOfWeekValue() {
+    public Optional<String> dayOfWeekValue() {
         return Optional.ofNullable(this.dayOfWeekValue);
     }
     /**
      * A float value.
      * 
     */
-    public Optional<Double> getFloatValue() {
+    public Optional<Double> floatValue() {
         return Optional.ofNullable(this.floatValue);
     }
     /**
      * An integer value.
      * 
     */
-    public Optional<Integer> getIntegerValue() {
+    public Optional<Integer> integerValue() {
         return Optional.ofNullable(this.integerValue);
     }
     /**
      * A string value.
      * 
     */
-    public Optional<String> getStringValue() {
+    public Optional<String> stringValue() {
         return Optional.ofNullable(this.stringValue);
     }
     /**
@@ -130,7 +130,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
     */
-    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue> getTimeValue() {
+    public Optional<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue> timeValue() {
         return Optional.ofNullable(this.timeValue);
     }
     /**
@@ -138,7 +138,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
     */
-    public Optional<String> getTimestampValue() {
+    public Optional<String> timestampValue() {
         return Optional.ofNullable(this.timestampValue);
     }
 

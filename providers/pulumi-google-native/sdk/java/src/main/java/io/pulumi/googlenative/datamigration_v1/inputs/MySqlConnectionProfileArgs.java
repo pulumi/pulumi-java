@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datamigration_v1.inputs.SslConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     @Import(name="cloudSqlId")
       private final @Nullable Output<String> cloudSqlId;
 
-    public Output<String> getCloudSqlId() {
-        return this.cloudSqlId == null ? Output.empty() : this.cloudSqlId;
+    public Output<String> cloudSqlId() {
+        return this.cloudSqlId == null ? Codegen.empty() : this.cloudSqlId;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -49,7 +50,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -60,7 +61,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -71,8 +72,8 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     @Import(name="ssl")
       private final @Nullable Output<SslConfigArgs> ssl;
 
-    public Output<SslConfigArgs> getSsl() {
-        return this.ssl == null ? Output.empty() : this.ssl;
+    public Output<SslConfigArgs> ssl() {
+        return this.ssl == null ? Codegen.empty() : this.ssl;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -102,12 +103,12 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
     }
 
     private MySqlConnectionProfileArgs() {
-        this.cloudSqlId = Output.empty();
-        this.host = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.ssl = Output.empty();
-        this.username = Output.empty();
+        this.cloudSqlId = Codegen.empty();
+        this.host = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.ssl = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder cloudSqlId(@Nullable String cloudSqlId) {
-            this.cloudSqlId = Output.ofNullable(cloudSqlId);
+            this.cloudSqlId = Codegen.ofNullable(cloudSqlId);
             return this;
         }
         public Builder host(Output<String> host) {
@@ -177,7 +178,7 @@ public final class MySqlConnectionProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ssl(@Nullable SslConfigArgs ssl) {
-            this.ssl = Output.ofNullable(ssl);
+            this.ssl = Codegen.ofNullable(ssl);
             return this;
         }
         public Builder username(Output<String> username) {

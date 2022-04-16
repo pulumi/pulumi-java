@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
-        return this.defaultTtl == null ? Output.empty() : this.defaultTtl;
+    public Output<Integer> defaultTtl() {
+        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
-    public Output<Integer> getMaxTtl() {
-        return this.maxTtl == null ? Output.empty() : this.maxTtl;
+    public Output<Integer> maxTtl() {
+        return this.maxTtl == null ? Codegen.empty() : this.maxTtl;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="minTtl")
       private final @Nullable Output<Integer> minTtl;
 
-    public Output<Integer> getMinTtl() {
-        return this.minTtl == null ? Output.empty() : this.minTtl;
+    public Output<Integer> minTtl() {
+        return this.minTtl == null ? Codegen.empty() : this.minTtl;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parametersInCacheKeyAndForwardedToOrigin")
       private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin;
 
-    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> getParametersInCacheKeyAndForwardedToOrigin() {
-        return this.parametersInCacheKeyAndForwardedToOrigin == null ? Output.empty() : this.parametersInCacheKeyAndForwardedToOrigin;
+    public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin() {
+        return this.parametersInCacheKeyAndForwardedToOrigin == null ? Codegen.empty() : this.parametersInCacheKeyAndForwardedToOrigin;
     }
 
     public CachePolicyState(
@@ -111,13 +112,13 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CachePolicyState() {
-        this.comment = Output.empty();
-        this.defaultTtl = Output.empty();
-        this.etag = Output.empty();
-        this.maxTtl = Output.empty();
-        this.minTtl = Output.empty();
-        this.name = Output.empty();
-        this.parametersInCacheKeyAndForwardedToOrigin = Output.empty();
+        this.comment = Codegen.empty();
+        this.defaultTtl = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.maxTtl = Codegen.empty();
+        this.minTtl = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parametersInCacheKeyAndForwardedToOrigin = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
@@ -165,7 +166,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Output.ofNullable(defaultTtl);
+            this.defaultTtl = Codegen.ofNullable(defaultTtl);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -173,7 +174,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder maxTtl(@Nullable Output<Integer> maxTtl) {
@@ -181,7 +182,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxTtl(@Nullable Integer maxTtl) {
-            this.maxTtl = Output.ofNullable(maxTtl);
+            this.maxTtl = Codegen.ofNullable(maxTtl);
             return this;
         }
         public Builder minTtl(@Nullable Output<Integer> minTtl) {
@@ -189,7 +190,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minTtl(@Nullable Integer minTtl) {
-            this.minTtl = Output.ofNullable(minTtl);
+            this.minTtl = Codegen.ofNullable(minTtl);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -197,7 +198,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs> parametersInCacheKeyAndForwardedToOrigin) {
@@ -205,7 +206,7 @@ public final class CachePolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parametersInCacheKeyAndForwardedToOrigin(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginGetArgs parametersInCacheKeyAndForwardedToOrigin) {
-            this.parametersInCacheKeyAndForwardedToOrigin = Output.ofNullable(parametersInCacheKeyAndForwardedToOrigin);
+            this.parametersInCacheKeyAndForwardedToOrigin = Codegen.ofNullable(parametersInCacheKeyAndForwardedToOrigin);
             return this;
         }        public CachePolicyState build() {
             return new CachePolicyState(comment, defaultTtl, etag, maxTtl, minTtl, name, parametersInCacheKeyAndForwardedToOrigin);

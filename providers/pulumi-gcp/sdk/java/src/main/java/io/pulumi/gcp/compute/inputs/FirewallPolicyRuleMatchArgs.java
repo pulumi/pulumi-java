@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.FirewallPolicyRuleMatchLayer4ConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
     @Import(name="destIpRanges")
       private final @Nullable Output<List<String>> destIpRanges;
 
-    public Output<List<String>> getDestIpRanges() {
-        return this.destIpRanges == null ? Output.empty() : this.destIpRanges;
+    public Output<List<String>> destIpRanges() {
+        return this.destIpRanges == null ? Codegen.empty() : this.destIpRanges;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
     @Import(name="layer4Configs", required=true)
       private final Output<List<FirewallPolicyRuleMatchLayer4ConfigArgs>> layer4Configs;
 
-    public Output<List<FirewallPolicyRuleMatchLayer4ConfigArgs>> getLayer4Configs() {
+    public Output<List<FirewallPolicyRuleMatchLayer4ConfigArgs>> layer4Configs() {
         return this.layer4Configs;
     }
 
@@ -45,8 +46,8 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
     @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> getSrcIpRanges() {
-        return this.srcIpRanges == null ? Output.empty() : this.srcIpRanges;
+    public Output<List<String>> srcIpRanges() {
+        return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
     }
 
     public FirewallPolicyRuleMatchArgs(
@@ -59,9 +60,9 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
     }
 
     private FirewallPolicyRuleMatchArgs() {
-        this.destIpRanges = Output.empty();
-        this.layer4Configs = Output.empty();
-        this.srcIpRanges = Output.empty();
+        this.destIpRanges = Codegen.empty();
+        this.layer4Configs = Codegen.empty();
+        this.srcIpRanges = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder destIpRanges(@Nullable List<String> destIpRanges) {
-            this.destIpRanges = Output.ofNullable(destIpRanges);
+            this.destIpRanges = Codegen.ofNullable(destIpRanges);
             return this;
         }
         public Builder destIpRanges(String... destIpRanges) {
@@ -115,7 +116,7 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Output.ofNullable(srcIpRanges);
+            this.srcIpRanges = Codegen.ofNullable(srcIpRanges);
             return this;
         }
         public Builder srcIpRanges(String... srcIpRanges) {

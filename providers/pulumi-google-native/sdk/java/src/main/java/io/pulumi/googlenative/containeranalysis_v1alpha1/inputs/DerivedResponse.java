@@ -27,7 +27,7 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="baseResourceUrl", required=true)
       private final String baseResourceUrl;
 
-    public String getBaseResourceUrl() {
+    public String baseResourceUrl() {
         return this.baseResourceUrl;
     }
 
@@ -38,7 +38,7 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="distance", required=true)
       private final Integer distance;
 
-    public Integer getDistance() {
+    public Integer distance() {
         return this.distance;
     }
 
@@ -49,7 +49,7 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fingerprint", required=true)
       private final FingerprintResponse fingerprint;
 
-    public FingerprintResponse getFingerprint() {
+    public FingerprintResponse fingerprint() {
         return this.fingerprint;
     }
 
@@ -60,7 +60,7 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="layerInfo", required=true)
       private final List<LayerResponse> layerInfo;
 
-    public List<LayerResponse> getLayerInfo() {
+    public List<LayerResponse> layerInfo() {
         return this.layerInfo;
     }
 

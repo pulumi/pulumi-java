@@ -15,6 +15,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.TransformationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compatibilityLevel")
       private final @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel;
 
-    public Output<Either<String,CompatibilityLevel>> getCompatibilityLevel() {
-        return this.compatibilityLevel == null ? Output.empty() : this.compatibilityLevel;
+    public Output<Either<String,CompatibilityLevel>> compatibilityLevel() {
+        return this.compatibilityLevel == null ? Codegen.empty() : this.compatibilityLevel;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataLocale")
       private final @Nullable Output<String> dataLocale;
 
-    public Output<String> getDataLocale() {
-        return this.dataLocale == null ? Output.empty() : this.dataLocale;
+    public Output<String> dataLocale() {
+        return this.dataLocale == null ? Codegen.empty() : this.dataLocale;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventsLateArrivalMaxDelayInSeconds")
       private final @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds;
 
-    public Output<Integer> getEventsLateArrivalMaxDelayInSeconds() {
-        return this.eventsLateArrivalMaxDelayInSeconds == null ? Output.empty() : this.eventsLateArrivalMaxDelayInSeconds;
+    public Output<Integer> eventsLateArrivalMaxDelayInSeconds() {
+        return this.eventsLateArrivalMaxDelayInSeconds == null ? Codegen.empty() : this.eventsLateArrivalMaxDelayInSeconds;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventsOutOfOrderMaxDelayInSeconds")
       private final @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds;
 
-    public Output<Integer> getEventsOutOfOrderMaxDelayInSeconds() {
-        return this.eventsOutOfOrderMaxDelayInSeconds == null ? Output.empty() : this.eventsOutOfOrderMaxDelayInSeconds;
+    public Output<Integer> eventsOutOfOrderMaxDelayInSeconds() {
+        return this.eventsOutOfOrderMaxDelayInSeconds == null ? Codegen.empty() : this.eventsOutOfOrderMaxDelayInSeconds;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventsOutOfOrderPolicy")
       private final @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
 
-    public Output<Either<String,EventsOutOfOrderPolicy>> getEventsOutOfOrderPolicy() {
-        return this.eventsOutOfOrderPolicy == null ? Output.empty() : this.eventsOutOfOrderPolicy;
+    public Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy() {
+        return this.eventsOutOfOrderPolicy == null ? Codegen.empty() : this.eventsOutOfOrderPolicy;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functions")
       private final @Nullable Output<List<FunctionArgs>> functions;
 
-    public Output<List<FunctionArgs>> getFunctions() {
-        return this.functions == null ? Output.empty() : this.functions;
+    public Output<List<FunctionArgs>> functions() {
+        return this.functions == null ? Codegen.empty() : this.functions;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputs")
       private final @Nullable Output<List<InputArgs>> inputs;
 
-    public Output<List<InputArgs>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+    public Output<List<InputArgs>> inputs() {
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
-    public Output<String> getJobName() {
-        return this.jobName == null ? Output.empty() : this.jobName;
+    public Output<String> jobName() {
+        return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputErrorPolicy")
       private final @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy;
 
-    public Output<Either<String,OutputErrorPolicy>> getOutputErrorPolicy() {
-        return this.outputErrorPolicy == null ? Output.empty() : this.outputErrorPolicy;
+    public Output<Either<String,OutputErrorPolicy>> outputErrorPolicy() {
+        return this.outputErrorPolicy == null ? Codegen.empty() : this.outputErrorPolicy;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputStartMode")
       private final @Nullable Output<Either<String,OutputStartMode>> outputStartMode;
 
-    public Output<Either<String,OutputStartMode>> getOutputStartMode() {
-        return this.outputStartMode == null ? Output.empty() : this.outputStartMode;
+    public Output<Either<String,OutputStartMode>> outputStartMode() {
+        return this.outputStartMode == null ? Codegen.empty() : this.outputStartMode;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputStartTime")
       private final @Nullable Output<String> outputStartTime;
 
-    public Output<String> getOutputStartTime() {
-        return this.outputStartTime == null ? Output.empty() : this.outputStartTime;
+    public Output<String> outputStartTime() {
+        return this.outputStartTime == null ? Codegen.empty() : this.outputStartTime;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputs")
       private final @Nullable Output<List<OutputArgs>> outputs;
 
-    public Output<List<OutputArgs>> getOutputs() {
-        return this.outputs == null ? Output.empty() : this.outputs;
+    public Output<List<OutputArgs>> outputs() {
+        return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -188,8 +189,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -210,8 +211,8 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transformation")
       private final @Nullable Output<TransformationArgs> transformation;
 
-    public Output<TransformationArgs> getTransformation() {
-        return this.transformation == null ? Output.empty() : this.transformation;
+    public Output<TransformationArgs> transformation() {
+        return this.transformation == null ? Codegen.empty() : this.transformation;
     }
 
     public StreamingJobArgs(
@@ -252,23 +253,23 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamingJobArgs() {
-        this.compatibilityLevel = Output.empty();
-        this.dataLocale = Output.empty();
-        this.eventsLateArrivalMaxDelayInSeconds = Output.empty();
-        this.eventsOutOfOrderMaxDelayInSeconds = Output.empty();
-        this.eventsOutOfOrderPolicy = Output.empty();
-        this.functions = Output.empty();
-        this.inputs = Output.empty();
-        this.jobName = Output.empty();
-        this.location = Output.empty();
-        this.outputErrorPolicy = Output.empty();
-        this.outputStartMode = Output.empty();
-        this.outputStartTime = Output.empty();
-        this.outputs = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.transformation = Output.empty();
+        this.compatibilityLevel = Codegen.empty();
+        this.dataLocale = Codegen.empty();
+        this.eventsLateArrivalMaxDelayInSeconds = Codegen.empty();
+        this.eventsOutOfOrderMaxDelayInSeconds = Codegen.empty();
+        this.eventsOutOfOrderPolicy = Codegen.empty();
+        this.functions = Codegen.empty();
+        this.inputs = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.outputErrorPolicy = Codegen.empty();
+        this.outputStartMode = Codegen.empty();
+        this.outputStartTime = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transformation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -328,7 +329,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compatibilityLevel(@Nullable Either<String,CompatibilityLevel> compatibilityLevel) {
-            this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
+            this.compatibilityLevel = Codegen.ofNullable(compatibilityLevel);
             return this;
         }
         public Builder dataLocale(@Nullable Output<String> dataLocale) {
@@ -336,7 +337,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataLocale(@Nullable String dataLocale) {
-            this.dataLocale = Output.ofNullable(dataLocale);
+            this.dataLocale = Codegen.ofNullable(dataLocale);
             return this;
         }
         public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds) {
@@ -344,7 +345,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
-            this.eventsLateArrivalMaxDelayInSeconds = Output.ofNullable(eventsLateArrivalMaxDelayInSeconds);
+            this.eventsLateArrivalMaxDelayInSeconds = Codegen.ofNullable(eventsLateArrivalMaxDelayInSeconds);
             return this;
         }
         public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds) {
@@ -352,7 +353,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
-            this.eventsOutOfOrderMaxDelayInSeconds = Output.ofNullable(eventsOutOfOrderMaxDelayInSeconds);
+            this.eventsOutOfOrderMaxDelayInSeconds = Codegen.ofNullable(eventsOutOfOrderMaxDelayInSeconds);
             return this;
         }
         public Builder eventsOutOfOrderPolicy(@Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy) {
@@ -360,7 +361,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventsOutOfOrderPolicy(@Nullable Either<String,EventsOutOfOrderPolicy> eventsOutOfOrderPolicy) {
-            this.eventsOutOfOrderPolicy = Output.ofNullable(eventsOutOfOrderPolicy);
+            this.eventsOutOfOrderPolicy = Codegen.ofNullable(eventsOutOfOrderPolicy);
             return this;
         }
         public Builder functions(@Nullable Output<List<FunctionArgs>> functions) {
@@ -368,7 +369,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functions(@Nullable List<FunctionArgs> functions) {
-            this.functions = Output.ofNullable(functions);
+            this.functions = Codegen.ofNullable(functions);
             return this;
         }
         public Builder functions(FunctionArgs... functions) {
@@ -379,7 +380,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputs(@Nullable List<InputArgs> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder inputs(InputArgs... inputs) {
@@ -390,7 +391,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Output.ofNullable(jobName);
+            this.jobName = Codegen.ofNullable(jobName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -398,7 +399,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder outputErrorPolicy(@Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy) {
@@ -406,7 +407,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputErrorPolicy(@Nullable Either<String,OutputErrorPolicy> outputErrorPolicy) {
-            this.outputErrorPolicy = Output.ofNullable(outputErrorPolicy);
+            this.outputErrorPolicy = Codegen.ofNullable(outputErrorPolicy);
             return this;
         }
         public Builder outputStartMode(@Nullable Output<Either<String,OutputStartMode>> outputStartMode) {
@@ -414,7 +415,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputStartMode(@Nullable Either<String,OutputStartMode> outputStartMode) {
-            this.outputStartMode = Output.ofNullable(outputStartMode);
+            this.outputStartMode = Codegen.ofNullable(outputStartMode);
             return this;
         }
         public Builder outputStartTime(@Nullable Output<String> outputStartTime) {
@@ -422,7 +423,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputStartTime(@Nullable String outputStartTime) {
-            this.outputStartTime = Output.ofNullable(outputStartTime);
+            this.outputStartTime = Codegen.ofNullable(outputStartTime);
             return this;
         }
         public Builder outputs(@Nullable Output<List<OutputArgs>> outputs) {
@@ -430,7 +431,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputs(@Nullable List<OutputArgs> outputs) {
-            this.outputs = Output.ofNullable(outputs);
+            this.outputs = Codegen.ofNullable(outputs);
             return this;
         }
         public Builder outputs(OutputArgs... outputs) {
@@ -449,7 +450,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -457,7 +458,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder transformation(@Nullable Output<TransformationArgs> transformation) {
@@ -465,7 +466,7 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transformation(@Nullable TransformationArgs transformation) {
-            this.transformation = Output.ofNullable(transformation);
+            this.transformation = Codegen.ofNullable(transformation);
             return this;
         }        public StreamingJobArgs build() {
             return new StreamingJobArgs(compatibilityLevel, dataLocale, eventsLateArrivalMaxDelayInSeconds, eventsOutOfOrderMaxDelayInSeconds, eventsOutOfOrderPolicy, functions, inputs, jobName, location, outputErrorPolicy, outputStartMode, outputStartTime, outputs, resourceGroupName, sku, tags, transformation);

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,35 +19,35 @@ public final class ServiceEndpointSpecPortGetArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     @Import(name="publishMode")
       private final @Nullable Output<String> publishMode;
 
-    public Output<String> getPublishMode() {
-        return this.publishMode == null ? Output.empty() : this.publishMode;
+    public Output<String> publishMode() {
+        return this.publishMode == null ? Codegen.empty() : this.publishMode;
     }
 
     @Import(name="publishedPort")
       private final @Nullable Output<Integer> publishedPort;
 
-    public Output<Integer> getPublishedPort() {
-        return this.publishedPort == null ? Output.empty() : this.publishedPort;
+    public Output<Integer> publishedPort() {
+        return this.publishedPort == null ? Codegen.empty() : this.publishedPort;
     }
 
     @Import(name="targetPort", required=true)
       private final Output<Integer> targetPort;
 
-    public Output<Integer> getTargetPort() {
+    public Output<Integer> targetPort() {
         return this.targetPort;
     }
 
@@ -64,11 +65,11 @@ public final class ServiceEndpointSpecPortGetArgs extends io.pulumi.resources.Re
     }
 
     private ServiceEndpointSpecPortGetArgs() {
-        this.name = Output.empty();
-        this.protocol = Output.empty();
-        this.publishMode = Output.empty();
-        this.publishedPort = Output.empty();
-        this.targetPort = Output.empty();
+        this.name = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.publishMode = Codegen.empty();
+        this.publishedPort = Codegen.empty();
+        this.targetPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ServiceEndpointSpecPortGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -112,7 +113,7 @@ public final class ServiceEndpointSpecPortGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder publishMode(@Nullable Output<String> publishMode) {
@@ -120,7 +121,7 @@ public final class ServiceEndpointSpecPortGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder publishMode(@Nullable String publishMode) {
-            this.publishMode = Output.ofNullable(publishMode);
+            this.publishMode = Codegen.ofNullable(publishMode);
             return this;
         }
         public Builder publishedPort(@Nullable Output<Integer> publishedPort) {
@@ -128,7 +129,7 @@ public final class ServiceEndpointSpecPortGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder publishedPort(@Nullable Integer publishedPort) {
-            this.publishedPort = Output.ofNullable(publishedPort);
+            this.publishedPort = Codegen.ofNullable(publishedPort);
             return this;
         }
         public Builder targetPort(Output<Integer> targetPort) {

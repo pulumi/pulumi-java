@@ -29,16 +29,16 @@ public final class EnvironmentConfigWorkloadsConfigScheduler {
         this.storageGb = storageGb;
     }
 
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
-    public Optional<Double> getCpu() {
+    public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
-    public Optional<Double> getMemoryGb() {
+    public Optional<Double> memoryGb() {
         return Optional.ofNullable(this.memoryGb);
     }
-    public Optional<Double> getStorageGb() {
+    public Optional<Double> storageGb() {
         return Optional.ofNullable(this.storageGb);
     }
 

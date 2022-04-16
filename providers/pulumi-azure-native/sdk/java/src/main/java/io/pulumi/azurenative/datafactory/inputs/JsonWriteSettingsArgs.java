@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="filePattern")
       private final @Nullable Output<Object> filePattern;
 
-    public Output<Object> getFilePattern() {
-        return this.filePattern == null ? Output.empty() : this.filePattern;
+    public Output<Object> filePattern() {
+        return this.filePattern == null ? Codegen.empty() : this.filePattern;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -50,8 +51,8 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private JsonWriteSettingsArgs() {
-        this.filePattern = Output.empty();
-        this.type = Output.empty();
+        this.filePattern = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class JsonWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder filePattern(@Nullable Object filePattern) {
-            this.filePattern = Output.ofNullable(filePattern);
+            this.filePattern = Codegen.ofNullable(filePattern);
             return this;
         }
         public Builder type(Output<String> type) {

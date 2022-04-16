@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
      * The list of simple responses.
      * 
     */
-    public List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> getSimpleResponses() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses() {
         return this.simpleResponses;
     }
 

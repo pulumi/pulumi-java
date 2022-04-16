@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Allowed values of the configuration.
      * 
      */
-    public Output<String> getAllowedValues() {
+    public Output<String> allowedValues() {
         return this.allowedValues;
     }
     /**
@@ -55,7 +56,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Data type of the configuration.
      * 
      */
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType;
     }
     /**
@@ -69,7 +70,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Default value of the configuration.
      * 
      */
-    public Output<String> getDefaultValue() {
+    public Output<String> defaultValue() {
         return this.defaultValue;
     }
     /**
@@ -83,7 +84,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Description of the configuration.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -97,7 +98,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -111,7 +112,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Source of the configuration.
      * 
      */
-    public Output</* @Nullable */ String> getSource() {
+    public Output</* @Nullable */ String> source() {
         return this.source;
     }
     /**
@@ -125,7 +126,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -139,7 +140,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @return Value of the configuration.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 
@@ -165,7 +166,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Configuration(String name, ConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dbformysql:Configuration", name, args == null ? ConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:dbformysql:Configuration", name, args == null ? ConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Configuration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigSecurityConfigKerberosConfigGetArgs;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClusterClusterConfigSecurityConfigGetArgs extends io.pulumi.r
     @Import(name="kerberosConfig", required=true)
       private final Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
 
-    public Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> getKerberosConfig() {
+    public Output<ClusterClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig() {
         return this.kerberosConfig;
     }
 
@@ -29,7 +30,7 @@ public final class ClusterClusterConfigSecurityConfigGetArgs extends io.pulumi.r
     }
 
     private ClusterClusterConfigSecurityConfigGetArgs() {
-        this.kerberosConfig = Output.empty();
+        this.kerberosConfig = Codegen.empty();
     }
 
     public static Builder builder() {

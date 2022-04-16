@@ -5,6 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class FrameworkControlInputParameterArgs extends io.pulumi.resource
     @Import(name="parameterName", required=true)
       private final Output<String> parameterName;
 
-    public Output<String> getParameterName() {
+    public Output<String> parameterName() {
         return this.parameterName;
     }
 
     @Import(name="parameterValue", required=true)
       private final Output<String> parameterValue;
 
-    public Output<String> getParameterValue() {
+    public Output<String> parameterValue() {
         return this.parameterValue;
     }
 
@@ -35,8 +36,8 @@ public final class FrameworkControlInputParameterArgs extends io.pulumi.resource
     }
 
     private FrameworkControlInputParameterArgs() {
-        this.parameterName = Output.empty();
-        this.parameterValue = Output.empty();
+        this.parameterName = Codegen.empty();
+        this.parameterValue = Codegen.empty();
     }
 
     public static Builder builder() {

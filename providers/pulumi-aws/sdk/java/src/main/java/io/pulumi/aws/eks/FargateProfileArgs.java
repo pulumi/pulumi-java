@@ -6,6 +6,7 @@ package io.pulumi.aws.eks;
 import io.pulumi.aws.eks.inputs.FargateProfileSelectorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -35,8 +36,8 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fargateProfileName")
       private final @Nullable Output<String> fargateProfileName;
 
-    public Output<String> getFargateProfileName() {
-        return this.fargateProfileName == null ? Output.empty() : this.fargateProfileName;
+    public Output<String> fargateProfileName() {
+        return this.fargateProfileName == null ? Codegen.empty() : this.fargateProfileName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podExecutionRoleArn", required=true)
       private final Output<String> podExecutionRoleArn;
 
-    public Output<String> getPodExecutionRoleArn() {
+    public Output<String> podExecutionRoleArn() {
         return this.podExecutionRoleArn;
     }
 
@@ -57,7 +58,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selectors", required=true)
       private final Output<List<FargateProfileSelectorArgs>> selectors;
 
-    public Output<List<FargateProfileSelectorArgs>> getSelectors() {
+    public Output<List<FargateProfileSelectorArgs>> selectors() {
         return this.selectors;
     }
 
@@ -68,8 +69,8 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+    public Output<List<String>> subnetIds() {
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FargateProfileArgs(
@@ -99,12 +100,12 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FargateProfileArgs() {
-        this.clusterName = Output.empty();
-        this.fargateProfileName = Output.empty();
-        this.podExecutionRoleArn = Output.empty();
-        this.selectors = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.fargateProfileName = Codegen.empty();
+        this.podExecutionRoleArn = Codegen.empty();
+        this.selectors = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fargateProfileName(@Nullable String fargateProfileName) {
-            this.fargateProfileName = Output.ofNullable(fargateProfileName);
+            this.fargateProfileName = Codegen.ofNullable(fargateProfileName);
             return this;
         }
         public Builder podExecutionRoleArn(Output<String> podExecutionRoleArn) {
@@ -177,7 +178,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -188,7 +189,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public FargateProfileArgs build() {
             return new FargateProfileArgs(clusterName, fargateProfileName, podExecutionRoleArn, selectors, subnetIds, tags);

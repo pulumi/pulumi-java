@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.FulfillmentFeatureGetArgs;
 import io.pulumi.gcp.diagflow.inputs.FulfillmentGenericWebServiceGetArgs;
 import java.lang.Boolean;
@@ -25,8 +26,8 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="features")
       private final @Nullable Output<List<FulfillmentFeatureGetArgs>> features;
 
-    public Output<List<FulfillmentFeatureGetArgs>> getFeatures() {
-        return this.features == null ? Output.empty() : this.features;
+    public Output<List<FulfillmentFeatureGetArgs>> features() {
+        return this.features == null ? Codegen.empty() : this.features;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="genericWebService")
       private final @Nullable Output<FulfillmentGenericWebServiceGetArgs> genericWebService;
 
-    public Output<FulfillmentGenericWebServiceGetArgs> getGenericWebService() {
-        return this.genericWebService == null ? Output.empty() : this.genericWebService;
+    public Output<FulfillmentGenericWebServiceGetArgs> genericWebService() {
+        return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public FulfillmentState(
@@ -104,12 +105,12 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FulfillmentState() {
-        this.displayName = Output.empty();
-        this.enabled = Output.empty();
-        this.features = Output.empty();
-        this.genericWebService = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.displayName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.features = Codegen.empty();
+        this.genericWebService = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -155,7 +156,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder features(@Nullable Output<List<FulfillmentFeatureGetArgs>> features) {
@@ -163,7 +164,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder features(@Nullable List<FulfillmentFeatureGetArgs> features) {
-            this.features = Output.ofNullable(features);
+            this.features = Codegen.ofNullable(features);
             return this;
         }
         public Builder features(FulfillmentFeatureGetArgs... features) {
@@ -174,7 +175,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder genericWebService(@Nullable FulfillmentGenericWebServiceGetArgs genericWebService) {
-            this.genericWebService = Output.ofNullable(genericWebService);
+            this.genericWebService = Codegen.ofNullable(genericWebService);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -182,7 +183,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -190,7 +191,7 @@ public final class FulfillmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public FulfillmentState build() {
             return new FulfillmentState(displayName, enabled, features, genericWebService, name, project);

@@ -24,7 +24,7 @@ public final class ReportDeliveryInfoResponse {
      * Has destination for the report being delivered.
      * 
     */
-    public ReportDeliveryDestinationResponse getDestination() {
+    public ReportDeliveryDestinationResponse destination() {
         return this.destination;
     }
 

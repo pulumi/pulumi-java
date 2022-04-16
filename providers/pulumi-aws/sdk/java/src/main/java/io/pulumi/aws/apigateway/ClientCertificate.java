@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.ClientCertificateState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * @return The date when the client certificate was created.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -68,7 +69,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * @return The description of the client certificate.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -82,7 +83,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * @return The date when the client certificate will expire.
      * 
      */
-    public Output<String> getExpirationDate() {
+    public Output<String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -96,7 +97,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * @return The PEM-encoded public key of the client certificate.
      * 
      */
-    public Output<String> getPemEncodedCertificate() {
+    public Output<String> pemEncodedCertificate() {
         return this.pemEncodedCertificate;
     }
     /**
@@ -110,7 +111,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -124,7 +125,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -150,7 +151,7 @@ public class ClientCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClientCertificate(String name, @Nullable ClientCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/clientCertificate:ClientCertificate", name, args == null ? ClientCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/clientCertificate:ClientCertificate", name, args == null ? ClientCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClientCertificate(String name, Output<String> id, @Nullable ClientCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

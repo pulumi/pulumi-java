@@ -17,14 +17,14 @@ public final class GetOrganizationPolicyListPolicyAllow extends io.pulumi.resour
     @Import(name="all", required=true)
       private final Boolean all;
 
-    public Boolean getAll() {
+    public Boolean all() {
         return this.all;
     }
 
     @Import(name="values", required=true)
       private final List<String> values;
 
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

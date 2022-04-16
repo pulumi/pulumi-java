@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class MultiRegionAccessPointRegionArgs extends io.pulumi.resources.
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -25,7 +26,7 @@ public final class MultiRegionAccessPointRegionArgs extends io.pulumi.resources.
     }
 
     private MultiRegionAccessPointRegionArgs() {
-        this.bucket = Output.empty();
+        this.bucket = Codegen.empty();
     }
 
     public static Builder builder() {

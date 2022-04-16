@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.azurenative.compute.inputs.VaultCertificateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceVault")
       private final @Nullable Output<SubResourceArgs> sourceVault;
 
-    public Output<SubResourceArgs> getSourceVault() {
-        return this.sourceVault == null ? Output.empty() : this.sourceVault;
+    public Output<SubResourceArgs> sourceVault() {
+        return this.sourceVault == null ? Codegen.empty() : this.sourceVault;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="vaultCertificates")
       private final @Nullable Output<List<VaultCertificateArgs>> vaultCertificates;
 
-    public Output<List<VaultCertificateArgs>> getVaultCertificates() {
-        return this.vaultCertificates == null ? Output.empty() : this.vaultCertificates;
+    public Output<List<VaultCertificateArgs>> vaultCertificates() {
+        return this.vaultCertificates == null ? Codegen.empty() : this.vaultCertificates;
     }
 
     public VaultSecretGroupArgs(
@@ -50,8 +51,8 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VaultSecretGroupArgs() {
-        this.sourceVault = Output.empty();
-        this.vaultCertificates = Output.empty();
+        this.sourceVault = Codegen.empty();
+        this.vaultCertificates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceVault(@Nullable SubResourceArgs sourceVault) {
-            this.sourceVault = Output.ofNullable(sourceVault);
+            this.sourceVault = Codegen.ofNullable(sourceVault);
             return this;
         }
         public Builder vaultCertificates(@Nullable Output<List<VaultCertificateArgs>> vaultCertificates) {
@@ -89,7 +90,7 @@ public final class VaultSecretGroupArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder vaultCertificates(@Nullable List<VaultCertificateArgs> vaultCertificates) {
-            this.vaultCertificates = Output.ofNullable(vaultCertificates);
+            this.vaultCertificates = Codegen.ofNullable(vaultCertificates);
             return this;
         }
         public Builder vaultCertificates(VaultCertificateArgs... vaultCertificates) {

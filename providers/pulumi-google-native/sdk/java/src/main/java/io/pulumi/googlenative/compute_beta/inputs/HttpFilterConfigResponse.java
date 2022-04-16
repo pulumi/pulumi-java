@@ -23,7 +23,7 @@ public final class HttpFilterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="config", required=true)
       private final String config;
 
-    public String getConfig() {
+    public String config() {
         return this.config;
     }
 
@@ -34,7 +34,7 @@ public final class HttpFilterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="configTypeUrl", required=true)
       private final String configTypeUrl;
 
-    public String getConfigTypeUrl() {
+    public String configTypeUrl() {
         return this.configTypeUrl;
     }
 
@@ -45,7 +45,7 @@ public final class HttpFilterConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="filterName", required=true)
       private final String filterName;
 
-    public String getFilterName() {
+    public String filterName() {
         return this.filterName;
     }
 

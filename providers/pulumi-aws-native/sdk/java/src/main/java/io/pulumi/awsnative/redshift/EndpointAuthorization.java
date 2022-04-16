@@ -8,6 +8,7 @@ import io.pulumi.awsnative.redshift.EndpointAuthorizationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +32,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The target AWS account ID to grant or revoke access for.
      * 
      */
-    public Output<String> getAccount() {
+    public Output<String> account() {
         return this.account;
     }
     /**
@@ -45,7 +46,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return Indicates whether all VPCs in the grantee account are allowed access to the cluster.
      * 
      */
-    public Output<Boolean> getAllowedAllVPCs() {
+    public Output<Boolean> allowedAllVPCs() {
         return this.allowedAllVPCs;
     }
     /**
@@ -59,7 +60,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The VPCs allowed access to the cluster.
      * 
      */
-    public Output<List<String>> getAllowedVPCs() {
+    public Output<List<String>> allowedVPCs() {
         return this.allowedVPCs;
     }
     /**
@@ -73,7 +74,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The time (UTC) when the authorization was created.
      * 
      */
-    public Output<String> getAuthorizeTime() {
+    public Output<String> authorizeTime() {
         return this.authorizeTime;
     }
     /**
@@ -87,7 +88,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The cluster identifier.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -101,7 +102,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The status of the cluster.
      * 
      */
-    public Output<String> getClusterStatus() {
+    public Output<String> clusterStatus() {
         return this.clusterStatus;
     }
     /**
@@ -115,7 +116,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The number of Redshift-managed VPC endpoints created for the authorization.
      * 
      */
-    public Output<Integer> getEndpointCount() {
+    public Output<Integer> endpointCount() {
         return this.endpointCount;
     }
     /**
@@ -129,7 +130,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return  Indicates whether to force the revoke action. If true, the Redshift-managed VPC endpoints associated with the endpoint authorization are also deleted.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForce() {
+    public Output</* @Nullable */ Boolean> force() {
         return this.force;
     }
     /**
@@ -143,7 +144,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the grantee of the cluster.
      * 
      */
-    public Output<String> getGrantee() {
+    public Output<String> grantee() {
         return this.grantee;
     }
     /**
@@ -157,7 +158,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The AWS account ID of the cluster owner.
      * 
      */
-    public Output<String> getGrantor() {
+    public Output<String> grantor() {
         return this.grantor;
     }
     /**
@@ -171,7 +172,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The status of the authorization action.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -185,7 +186,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @return The virtual private cloud (VPC) identifiers to grant or revoke access to.
      * 
      */
-    public Output</* @Nullable */ List<String>> getVpcIds() {
+    public Output</* @Nullable */ List<String>> vpcIds() {
         return this.vpcIds;
     }
 
@@ -211,7 +212,7 @@ public class EndpointAuthorization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EndpointAuthorization(String name, EndpointAuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:redshift:EndpointAuthorization", name, args == null ? EndpointAuthorizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:redshift:EndpointAuthorization", name, args == null ? EndpointAuthorizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EndpointAuthorization(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -20,7 +20,7 @@ public final class FirewallDeniedItemResponse extends io.pulumi.resources.Invoke
     @Import(name="ipProtocol", required=true)
       private final String ipProtocol;
 
-    public String getIpProtocol() {
+    public String ipProtocol() {
         return this.ipProtocol;
     }
 
@@ -31,7 +31,7 @@ public final class FirewallDeniedItemResponse extends io.pulumi.resources.Invoke
     @Import(name="ports", required=true)
       private final List<String> ports;
 
-    public List<String> getPorts() {
+    public List<String> ports() {
         return this.ports;
     }
 

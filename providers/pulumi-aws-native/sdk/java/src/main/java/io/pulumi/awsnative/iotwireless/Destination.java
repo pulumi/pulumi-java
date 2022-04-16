@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iotwireless.outputs.DestinationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @return Destination arn. Returned after successful create.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @return Destination description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @return Destination expression
      * 
      */
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
     /**
@@ -73,7 +74,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @return Must be RuleName
      * 
      */
-    public Output<DestinationExpressionType> getExpressionType() {
+    public Output<DestinationExpressionType> expressionType() {
         return this.expressionType;
     }
     /**
@@ -87,7 +88,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @return Unique name of destination
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @return AWS role ARN that grants access
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -115,7 +116,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    public Output</* @Nullable */ List<DestinationTag>> getTags() {
+    public Output</* @Nullable */ List<DestinationTag>> tags() {
         return this.tags;
     }
 
@@ -141,7 +142,7 @@ public class Destination extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Destination(String name, DestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotwireless:Destination", name, args == null ? DestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotwireless:Destination", name, args == null ? DestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Destination(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.RegexMatchSetRegexMatchTupleFieldToMatchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class RegexMatchSetRegexMatchTupleArgs extends io.pulumi.resources.
     @Import(name="fieldToMatch", required=true)
       private final Output<RegexMatchSetRegexMatchTupleFieldToMatchArgs> fieldToMatch;
 
-    public Output<RegexMatchSetRegexMatchTupleFieldToMatchArgs> getFieldToMatch() {
+    public Output<RegexMatchSetRegexMatchTupleFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -32,7 +33,7 @@ public final class RegexMatchSetRegexMatchTupleArgs extends io.pulumi.resources.
     @Import(name="regexPatternSetId", required=true)
       private final Output<String> regexPatternSetId;
 
-    public Output<String> getRegexPatternSetId() {
+    public Output<String> regexPatternSetId() {
         return this.regexPatternSetId;
     }
 
@@ -46,7 +47,7 @@ public final class RegexMatchSetRegexMatchTupleArgs extends io.pulumi.resources.
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
@@ -60,9 +61,9 @@ public final class RegexMatchSetRegexMatchTupleArgs extends io.pulumi.resources.
     }
 
     private RegexMatchSetRegexMatchTupleArgs() {
-        this.fieldToMatch = Output.empty();
-        this.regexPatternSetId = Output.empty();
-        this.textTransformation = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.regexPatternSetId = Codegen.empty();
+        this.textTransformation = Codegen.empty();
     }
 
     public static Builder builder() {

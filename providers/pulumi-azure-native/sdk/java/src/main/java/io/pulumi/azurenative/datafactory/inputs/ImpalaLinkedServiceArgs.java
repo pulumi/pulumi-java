@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="allowHostNameCNMismatch")
       private final @Nullable Output<Object> allowHostNameCNMismatch;
 
-    public Output<Object> getAllowHostNameCNMismatch() {
-        return this.allowHostNameCNMismatch == null ? Output.empty() : this.allowHostNameCNMismatch;
+    public Output<Object> allowHostNameCNMismatch() {
+        return this.allowHostNameCNMismatch == null ? Codegen.empty() : this.allowHostNameCNMismatch;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="allowSelfSignedServerCert")
       private final @Nullable Output<Object> allowSelfSignedServerCert;
 
-    public Output<Object> getAllowSelfSignedServerCert() {
-        return this.allowSelfSignedServerCert == null ? Output.empty() : this.allowSelfSignedServerCert;
+    public Output<Object> allowSelfSignedServerCert() {
+        return this.allowSelfSignedServerCert == null ? Codegen.empty() : this.allowSelfSignedServerCert;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="authenticationType", required=true)
       private final Output<Either<String,ImpalaAuthenticationType>> authenticationType;
 
-    public Output<Either<String,ImpalaAuthenticationType>> getAuthenticationType() {
+    public Output<Either<String,ImpalaAuthenticationType>> authenticationType() {
         return this.authenticationType;
     }
 
@@ -78,8 +79,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
 
-    public Output<Object> getEnableSsl() {
-        return this.enableSsl == null ? Output.empty() : this.enableSsl;
+    public Output<Object> enableSsl() {
+        return this.enableSsl == null ? Codegen.empty() : this.enableSsl;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="host", required=true)
       private final Output<Object> host;
 
-    public Output<Object> getHost() {
+    public Output<Object> host() {
         return this.host;
     }
 
@@ -133,8 +134,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -155,8 +156,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="port")
       private final @Nullable Output<Object> port;
 
-    public Output<Object> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Object> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="trustedCertPath")
       private final @Nullable Output<Object> trustedCertPath;
 
-    public Output<Object> getTrustedCertPath() {
-        return this.trustedCertPath == null ? Output.empty() : this.trustedCertPath;
+    public Output<Object> trustedCertPath() {
+        return this.trustedCertPath == null ? Codegen.empty() : this.trustedCertPath;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -189,8 +190,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="useSystemTrustStore")
       private final @Nullable Output<Object> useSystemTrustStore;
 
-    public Output<Object> getUseSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Output.empty() : this.useSystemTrustStore;
+    public Output<Object> useSystemTrustStore() {
+        return this.useSystemTrustStore == null ? Codegen.empty() : this.useSystemTrustStore;
     }
 
     /**
@@ -200,8 +201,8 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     @Import(name="username")
       private final @Nullable Output<Object> username;
 
-    public Output<Object> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<Object> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public ImpalaLinkedServiceArgs(
@@ -240,22 +241,22 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ImpalaLinkedServiceArgs() {
-        this.allowHostNameCNMismatch = Output.empty();
-        this.allowSelfSignedServerCert = Output.empty();
-        this.annotations = Output.empty();
-        this.authenticationType = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.enableSsl = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.host = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.trustedCertPath = Output.empty();
-        this.type = Output.empty();
-        this.useSystemTrustStore = Output.empty();
-        this.username = Output.empty();
+        this.allowHostNameCNMismatch = Codegen.empty();
+        this.allowSelfSignedServerCert = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableSsl = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.host = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.trustedCertPath = Codegen.empty();
+        this.type = Codegen.empty();
+        this.useSystemTrustStore = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -313,7 +314,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
-            this.allowHostNameCNMismatch = Output.ofNullable(allowHostNameCNMismatch);
+            this.allowHostNameCNMismatch = Codegen.ofNullable(allowHostNameCNMismatch);
             return this;
         }
         public Builder allowSelfSignedServerCert(@Nullable Output<Object> allowSelfSignedServerCert) {
@@ -321,7 +322,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
-            this.allowSelfSignedServerCert = Output.ofNullable(allowSelfSignedServerCert);
+            this.allowSelfSignedServerCert = Codegen.ofNullable(allowSelfSignedServerCert);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -329,7 +330,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -348,7 +349,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -356,7 +357,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableSsl(@Nullable Output<Object> enableSsl) {
@@ -364,7 +365,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enableSsl(@Nullable Object enableSsl) {
-            this.enableSsl = Output.ofNullable(enableSsl);
+            this.enableSsl = Codegen.ofNullable(enableSsl);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -372,7 +373,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder host(Output<Object> host) {
@@ -388,7 +389,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -396,7 +397,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder port(@Nullable Output<Object> port) {
@@ -404,7 +405,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder port(@Nullable Object port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
@@ -412,7 +413,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = Output.ofNullable(trustedCertPath);
+            this.trustedCertPath = Codegen.ofNullable(trustedCertPath);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -428,7 +429,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = Output.ofNullable(useSystemTrustStore);
+            this.useSystemTrustStore = Codegen.ofNullable(useSystemTrustStore);
             return this;
         }
         public Builder username(@Nullable Output<Object> username) {
@@ -436,7 +437,7 @@ public final class ImpalaLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder username(@Nullable Object username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public ImpalaLinkedServiceArgs build() {
             return new ImpalaLinkedServiceArgs(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, connectVia, description, enableSsl, encryptedCredential, host, parameters, password, port, trustedCertPath, type, useSystemTrustStore, username);

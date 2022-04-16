@@ -6,6 +6,7 @@ package io.pulumi.foobar.submodule1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.foobar.Utilities;
 import io.pulumi.foobar.outputs.TopLevel;
 import io.pulumi.foobar.submodule1.ModuleResourceArgs;
@@ -16,7 +17,7 @@ public class ModuleResource extends io.pulumi.resources.CustomResource {
     @Export(name="thing", type=TopLevel.class, parameters={})
     private Output</* @Nullable */ TopLevel> thing;
 
-    public Output</* @Nullable */ TopLevel> getThing() {
+    public Output</* @Nullable */ TopLevel> thing() {
         return this.thing;
     }
 
@@ -42,7 +43,7 @@ public class ModuleResource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ModuleResource(String name, @Nullable ModuleResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("foo-bar:submodule1:ModuleResource", name, args == null ? ModuleResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("foo-bar:submodule1:ModuleResource", name, args == null ? ModuleResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ModuleResource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

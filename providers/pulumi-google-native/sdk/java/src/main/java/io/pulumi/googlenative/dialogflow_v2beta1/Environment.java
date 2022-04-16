@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2beta1.EnvironmentArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1FulfillmentResponse;
@@ -31,7 +32,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. The agent version loaded into this environment. Supported formats: - `projects//agent/versions/` - `projects//locations//agent/versions/`
      * 
      */
-    public Output<String> getAgentVersion() {
+    public Output<String> agentVersion() {
         return this.agentVersion;
     }
     /**
@@ -45,7 +46,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. The developer-provided description for this environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. The fulfillment settings to use for this environment.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1FulfillmentResponse> getFulfillment() {
+    public Output<GoogleCloudDialogflowV2beta1FulfillmentResponse> fulfillment() {
         return this.fulfillment;
     }
     /**
@@ -73,7 +74,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of this agent environment. Supported formats: - `projects//agent/environments/` - `projects//locations//agent/environments/`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The state of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -101,7 +102,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return Optional. Text to speech settings for this environment.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse> getTextToSpeechSettings() {
+    public Output<GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse> textToSpeechSettings() {
         return this.textToSpeechSettings;
     }
     /**
@@ -115,7 +116,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The last update time of this environment. This field is read-only, i.e., it cannot be set by create and update methods.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -141,7 +142,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Environment(String name, EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2beta1:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v2beta1:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Environment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

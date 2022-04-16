@@ -25,7 +25,7 @@ public final class TableSchemaResponse {
      * Describes the fields in a table.
      * 
     */
-    public List<TableFieldSchemaResponse> getFields() {
+    public List<TableFieldSchemaResponse> fields() {
         return this.fields;
     }
 

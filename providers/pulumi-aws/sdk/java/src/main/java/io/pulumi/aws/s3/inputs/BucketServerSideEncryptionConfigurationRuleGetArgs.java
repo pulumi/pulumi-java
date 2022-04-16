@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BucketServerSideEncryptionConfigurationRuleGetArgs extends io
     @Import(name="applyServerSideEncryptionByDefault", required=true)
       private final Output<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs> applyServerSideEncryptionByDefault;
 
-    public Output<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs> getApplyServerSideEncryptionByDefault() {
+    public Output<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultGetArgs> applyServerSideEncryptionByDefault() {
         return this.applyServerSideEncryptionByDefault;
     }
 
@@ -33,8 +34,8 @@ public final class BucketServerSideEncryptionConfigurationRuleGetArgs extends io
     @Import(name="bucketKeyEnabled")
       private final @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Output<Boolean> getBucketKeyEnabled() {
-        return this.bucketKeyEnabled == null ? Output.empty() : this.bucketKeyEnabled;
+    public Output<Boolean> bucketKeyEnabled() {
+        return this.bucketKeyEnabled == null ? Codegen.empty() : this.bucketKeyEnabled;
     }
 
     public BucketServerSideEncryptionConfigurationRuleGetArgs(
@@ -45,8 +46,8 @@ public final class BucketServerSideEncryptionConfigurationRuleGetArgs extends io
     }
 
     private BucketServerSideEncryptionConfigurationRuleGetArgs() {
-        this.applyServerSideEncryptionByDefault = Output.empty();
-        this.bucketKeyEnabled = Output.empty();
+        this.applyServerSideEncryptionByDefault = Codegen.empty();
+        this.bucketKeyEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class BucketServerSideEncryptionConfigurationRuleGetArgs extends io
             return this;
         }
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
-            this.bucketKeyEnabled = Output.ofNullable(bucketKeyEnabled);
+            this.bucketKeyEnabled = Codegen.ofNullable(bucketKeyEnabled);
             return this;
         }        public BucketServerSideEncryptionConfigurationRuleGetArgs build() {
             return new BucketServerSideEncryptionConfigurationRuleGetArgs(applyServerSideEncryptionByDefault, bucketKeyEnabled);

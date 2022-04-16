@@ -17,6 +17,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -51,7 +52,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Indicates whether another user can take ownership of the virtual machine
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowClaim() {
+    public Output</* @Nullable */ Boolean> allowClaim() {
         return this.allowClaim;
     }
     /**
@@ -65,7 +66,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The applicable schedule for the virtual machine.
      * 
      */
-    public Output<ApplicableScheduleResponse> getApplicableSchedule() {
+    public Output<ApplicableScheduleResponse> applicableSchedule() {
         return this.applicableSchedule;
     }
     /**
@@ -79,7 +80,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The artifact deployment status for the virtual machine.
      * 
      */
-    public Output<ArtifactDeploymentStatusPropertiesResponse> getArtifactDeploymentStatus() {
+    public Output<ArtifactDeploymentStatusPropertiesResponse> artifactDeploymentStatus() {
         return this.artifactDeploymentStatus;
     }
     /**
@@ -93,7 +94,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The artifacts to be installed on the virtual machine.
      * 
      */
-    public Output</* @Nullable */ List<ArtifactInstallPropertiesResponse>> getArtifacts() {
+    public Output</* @Nullable */ List<ArtifactInstallPropertiesResponse>> artifacts() {
         return this.artifacts;
     }
     /**
@@ -107,7 +108,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The resource identifier (Microsoft.Compute) of the virtual machine.
      * 
      */
-    public Output<String> getComputeId() {
+    public Output<String> computeId() {
         return this.computeId;
     }
     /**
@@ -121,7 +122,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The compute virtual machine properties.
      * 
      */
-    public Output<ComputeVmPropertiesResponse> getComputeVm() {
+    public Output<ComputeVmPropertiesResponse> computeVm() {
         return this.computeVm;
     }
     /**
@@ -135,7 +136,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The email address of creator of the virtual machine.
      * 
      */
-    public Output<String> getCreatedByUser() {
+    public Output<String> createdByUser() {
         return this.createdByUser;
     }
     /**
@@ -149,7 +150,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The object identifier of the creator of the virtual machine.
      * 
      */
-    public Output<String> getCreatedByUserId() {
+    public Output<String> createdByUserId() {
         return this.createdByUserId;
     }
     /**
@@ -163,7 +164,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The creation date of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getCreatedDate() {
+    public Output</* @Nullable */ String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -177,7 +178,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The custom image identifier of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getCustomImageId() {
+    public Output</* @Nullable */ String> customImageId() {
         return this.customImageId;
     }
     /**
@@ -191,7 +192,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return New or existing data disks to attach to the virtual machine after creation
      * 
      */
-    public Output</* @Nullable */ List<DataDiskPropertiesResponse>> getDataDiskParameters() {
+    public Output</* @Nullable */ List<DataDiskPropertiesResponse>> dataDiskParameters() {
         return this.dataDiskParameters;
     }
     /**
@@ -205,7 +206,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the virtual machine is to be created without a public IP address.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisallowPublicIpAddress() {
+    public Output</* @Nullable */ Boolean> disallowPublicIpAddress() {
         return this.disallowPublicIpAddress;
     }
     /**
@@ -219,7 +220,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The resource ID of the environment that contains this virtual machine, if any.
      * 
      */
-    public Output</* @Nullable */ String> getEnvironmentId() {
+    public Output</* @Nullable */ String> environmentId() {
         return this.environmentId;
     }
     /**
@@ -233,7 +234,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The expiration date for VM.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationDate() {
+    public Output</* @Nullable */ String> expirationDate() {
         return this.expirationDate;
     }
     /**
@@ -247,7 +248,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified domain name of the virtual machine.
      * 
      */
-    public Output<String> getFqdn() {
+    public Output<String> fqdn() {
         return this.fqdn;
     }
     /**
@@ -261,7 +262,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The Microsoft Azure Marketplace image reference of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ GalleryImageReferenceResponse> getGalleryImageReference() {
+    public Output</* @Nullable */ GalleryImageReferenceResponse> galleryImageReference() {
         return this.galleryImageReference;
     }
     /**
@@ -275,7 +276,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this virtual machine uses an SSH key for authentication.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsAuthenticationWithSshKey() {
+    public Output</* @Nullable */ Boolean> isAuthenticationWithSshKey() {
         return this.isAuthenticationWithSshKey;
     }
     /**
@@ -289,7 +290,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The lab subnet name of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getLabSubnetName() {
+    public Output</* @Nullable */ String> labSubnetName() {
         return this.labSubnetName;
     }
     /**
@@ -303,7 +304,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The lab virtual network identifier of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getLabVirtualNetworkId() {
+    public Output</* @Nullable */ String> labVirtualNetworkId() {
         return this.labVirtualNetworkId;
     }
     /**
@@ -317,7 +318,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Last known compute power state captured in DTL
      * 
      */
-    public Output<String> getLastKnownPowerState() {
+    public Output<String> lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
@@ -331,7 +332,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -345,7 +346,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -359,7 +360,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The network interface properties.
      * 
      */
-    public Output</* @Nullable */ NetworkInterfacePropertiesResponse> getNetworkInterface() {
+    public Output</* @Nullable */ NetworkInterfacePropertiesResponse> networkInterface() {
         return this.networkInterface;
     }
     /**
@@ -373,7 +374,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The notes of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getNotes() {
+    public Output</* @Nullable */ String> notes() {
         return this.notes;
     }
     /**
@@ -387,7 +388,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The OS type of the virtual machine.
      * 
      */
-    public Output<String> getOsType() {
+    public Output<String> osType() {
         return this.osType;
     }
     /**
@@ -401,7 +402,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The object identifier of the owner of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getOwnerObjectId() {
+    public Output</* @Nullable */ String> ownerObjectId() {
         return this.ownerObjectId;
     }
     /**
@@ -415,7 +416,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The user principal name of the virtual machine owner.
      * 
      */
-    public Output</* @Nullable */ String> getOwnerUserPrincipalName() {
+    public Output</* @Nullable */ String> ownerUserPrincipalName() {
         return this.ownerUserPrincipalName;
     }
     /**
@@ -429,7 +430,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The password of the virtual machine administrator.
      * 
      */
-    public Output</* @Nullable */ String> getPassword() {
+    public Output</* @Nullable */ String> password() {
         return this.password;
     }
     /**
@@ -443,7 +444,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The id of the plan associated with the virtual machine image
      * 
      */
-    public Output</* @Nullable */ String> getPlanId() {
+    public Output</* @Nullable */ String> planId() {
         return this.planId;
     }
     /**
@@ -457,7 +458,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -471,7 +472,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Virtual Machine schedules to be created
      * 
      */
-    public Output</* @Nullable */ List<ScheduleCreationParameterResponse>> getScheduleParameters() {
+    public Output</* @Nullable */ List<ScheduleCreationParameterResponse>> scheduleParameters() {
         return this.scheduleParameters;
     }
     /**
@@ -485,7 +486,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The size of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getSize() {
+    public Output</* @Nullable */ String> size() {
         return this.size;
     }
     /**
@@ -499,7 +500,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The SSH key of the virtual machine administrator.
      * 
      */
-    public Output</* @Nullable */ String> getSshKey() {
+    public Output</* @Nullable */ String> sshKey() {
         return this.sshKey;
     }
     /**
@@ -513,7 +514,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Storage type to use for virtual machine (i.e. Standard, Premium).
      * 
      */
-    public Output</* @Nullable */ String> getStorageType() {
+    public Output</* @Nullable */ String> storageType() {
         return this.storageType;
     }
     /**
@@ -527,7 +528,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -541,7 +542,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -555,7 +556,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
@@ -569,7 +570,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return The user name of the virtual machine.
      * 
      */
-    public Output</* @Nullable */ String> getUserName() {
+    public Output</* @Nullable */ String> userName() {
         return this.userName;
     }
     /**
@@ -583,7 +584,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @return Tells source of creation of lab virtual machine. Output property only.
      * 
      */
-    public Output<String> getVirtualMachineCreationSource() {
+    public Output<String> virtualMachineCreationSource() {
         return this.virtualMachineCreationSource;
     }
 
@@ -609,7 +610,7 @@ public class VirtualMachine extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachine(String name, VirtualMachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devtestlab:VirtualMachine", name, args == null ? VirtualMachineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devtestlab:VirtualMachine", name, args == null ? VirtualMachineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualMachine(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

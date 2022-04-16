@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
     @Import(name="enableEntityExtraction")
       private final @Nullable Output<Boolean> enableEntityExtraction;
 
-    public Output<Boolean> getEnableEntityExtraction() {
-        return this.enableEntityExtraction == null ? Output.empty() : this.enableEntityExtraction;
+    public Output<Boolean> enableEntityExtraction() {
+        return this.enableEntityExtraction == null ? Codegen.empty() : this.enableEntityExtraction;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
     @Import(name="enableSentimentAnalysis")
       private final @Nullable Output<Boolean> enableSentimentAnalysis;
 
-    public Output<Boolean> getEnableSentimentAnalysis() {
-        return this.enableSentimentAnalysis == null ? Output.empty() : this.enableSentimentAnalysis;
+    public Output<Boolean> enableSentimentAnalysis() {
+        return this.enableSentimentAnalysis == null ? Codegen.empty() : this.enableSentimentAnalysis;
     }
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
     }
 
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs() {
-        this.enableEntityExtraction = Output.empty();
-        this.enableSentimentAnalysis = Output.empty();
+        this.enableEntityExtraction = Codegen.empty();
+        this.enableSentimentAnalysis = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
             return this;
         }
         public Builder enableEntityExtraction(@Nullable Boolean enableEntityExtraction) {
-            this.enableEntityExtraction = Output.ofNullable(enableEntityExtraction);
+            this.enableEntityExtraction = Codegen.ofNullable(enableEntityExtraction);
             return this;
         }
         public Builder enableSentimentAnalysis(@Nullable Output<Boolean> enableSentimentAnalysis) {
@@ -87,7 +88,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
             return this;
         }
         public Builder enableSentimentAnalysis(@Nullable Boolean enableSentimentAnalysis) {
-            this.enableSentimentAnalysis = Output.ofNullable(enableSentimentAnalysis);
+            this.enableSentimentAnalysis = Codegen.ofNullable(enableSentimentAnalysis);
             return this;
         }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigArgs(enableEntityExtraction, enableSentimentAnalysis);

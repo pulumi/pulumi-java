@@ -26,7 +26,7 @@ public final class DataTransferConfigSensitiveParams {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
     */
-    public String getSecretAccessKey() {
+    public String secretAccessKey() {
         return this.secretAccessKey;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryGroup", required=true)
       private final Output<String> entryGroup;
 
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup;
     }
 
@@ -56,7 +57,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entryId", required=true)
       private final Output<String> entryId;
 
-    public Output<String> getEntryId() {
+    public Output<String> entryId() {
         return this.entryId;
     }
 
@@ -68,8 +69,8 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsFilesetSpec")
       private final @Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec;
 
-    public Output<EntryGcsFilesetSpecArgs> getGcsFilesetSpec() {
-        return this.gcsFilesetSpec == null ? Output.empty() : this.gcsFilesetSpec;
+    public Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec() {
+        return this.gcsFilesetSpec == null ? Codegen.empty() : this.gcsFilesetSpec;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedResource")
       private final @Nullable Output<String> linkedResource;
 
-    public Output<String> getLinkedResource() {
-        return this.linkedResource == null ? Output.empty() : this.linkedResource;
+    public Output<String> linkedResource() {
+        return this.linkedResource == null ? Codegen.empty() : this.linkedResource;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+    public Output<String> schema() {
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSpecifiedSystem")
       private final @Nullable Output<String> userSpecifiedSystem;
 
-    public Output<String> getUserSpecifiedSystem() {
-        return this.userSpecifiedSystem == null ? Output.empty() : this.userSpecifiedSystem;
+    public Output<String> userSpecifiedSystem() {
+        return this.userSpecifiedSystem == null ? Codegen.empty() : this.userSpecifiedSystem;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userSpecifiedType")
       private final @Nullable Output<String> userSpecifiedType;
 
-    public Output<String> getUserSpecifiedType() {
-        return this.userSpecifiedType == null ? Output.empty() : this.userSpecifiedType;
+    public Output<String> userSpecifiedType() {
+        return this.userSpecifiedType == null ? Codegen.empty() : this.userSpecifiedType;
     }
 
     public EntryArgs(
@@ -167,16 +168,16 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntryArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.entryGroup = Output.empty();
-        this.entryId = Output.empty();
-        this.gcsFilesetSpec = Output.empty();
-        this.linkedResource = Output.empty();
-        this.schema = Output.empty();
-        this.type = Output.empty();
-        this.userSpecifiedSystem = Output.empty();
-        this.userSpecifiedType = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entryGroup = Codegen.empty();
+        this.entryId = Codegen.empty();
+        this.gcsFilesetSpec = Codegen.empty();
+        this.linkedResource = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userSpecifiedSystem = Codegen.empty();
+        this.userSpecifiedType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -222,7 +223,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -230,7 +231,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder entryGroup(Output<String> entryGroup) {
@@ -254,7 +255,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsFilesetSpec(@Nullable EntryGcsFilesetSpecArgs gcsFilesetSpec) {
-            this.gcsFilesetSpec = Output.ofNullable(gcsFilesetSpec);
+            this.gcsFilesetSpec = Codegen.ofNullable(gcsFilesetSpec);
             return this;
         }
         public Builder linkedResource(@Nullable Output<String> linkedResource) {
@@ -262,7 +263,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedResource(@Nullable String linkedResource) {
-            this.linkedResource = Output.ofNullable(linkedResource);
+            this.linkedResource = Codegen.ofNullable(linkedResource);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -270,7 +271,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -278,7 +279,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userSpecifiedSystem(@Nullable Output<String> userSpecifiedSystem) {
@@ -286,7 +287,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
-            this.userSpecifiedSystem = Output.ofNullable(userSpecifiedSystem);
+            this.userSpecifiedSystem = Codegen.ofNullable(userSpecifiedSystem);
             return this;
         }
         public Builder userSpecifiedType(@Nullable Output<String> userSpecifiedType) {
@@ -294,7 +295,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
-            this.userSpecifiedType = Output.ofNullable(userSpecifiedType);
+            this.userSpecifiedType = Codegen.ofNullable(userSpecifiedType);
             return this;
         }        public EntryArgs build() {
             return new EntryArgs(description, displayName, entryGroup, entryId, gcsFilesetSpec, linkedResource, schema, type, userSpecifiedSystem, userSpecifiedType);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupQueryArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
     @Import(name="queries")
       private final @Nullable Output<List<DynamicGroupQueryArgs>> queries;
 
-    public Output<List<DynamicGroupQueryArgs>> getQueries() {
-        return this.queries == null ? Output.empty() : this.queries;
+    public Output<List<DynamicGroupQueryArgs>> queries() {
+        return this.queries == null ? Codegen.empty() : this.queries;
     }
 
     public DynamicGroupMetadataArgs(@Nullable Output<List<DynamicGroupQueryArgs>> queries) {
@@ -35,7 +36,7 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
     }
 
     private DynamicGroupMetadataArgs() {
-        this.queries = Output.empty();
+        this.queries = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder queries(@Nullable List<DynamicGroupQueryArgs> queries) {
-            this.queries = Output.ofNullable(queries);
+            this.queries = Codegen.ofNullable(queries);
             return this;
         }
         public Builder queries(DynamicGroupQueryArgs... queries) {

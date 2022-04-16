@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpHeaderMatchArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpQueryParameterMatchArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataFilterArgs;
@@ -30,8 +31,8 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fullPathMatch")
       private final @Nullable Output<String> fullPathMatch;
 
-    public Output<String> getFullPathMatch() {
-        return this.fullPathMatch == null ? Output.empty() : this.fullPathMatch;
+    public Output<String> fullPathMatch() {
+        return this.fullPathMatch == null ? Codegen.empty() : this.fullPathMatch;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="headerMatches")
       private final @Nullable Output<List<HttpHeaderMatchArgs>> headerMatches;
 
-    public Output<List<HttpHeaderMatchArgs>> getHeaderMatches() {
-        return this.headerMatches == null ? Output.empty() : this.headerMatches;
+    public Output<List<HttpHeaderMatchArgs>> headerMatches() {
+        return this.headerMatches == null ? Codegen.empty() : this.headerMatches;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
-    public Output<Boolean> getIgnoreCase() {
-        return this.ignoreCase == null ? Output.empty() : this.ignoreCase;
+    public Output<Boolean> ignoreCase() {
+        return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="metadataFilters")
       private final @Nullable Output<List<MetadataFilterArgs>> metadataFilters;
 
-    public Output<List<MetadataFilterArgs>> getMetadataFilters() {
-        return this.metadataFilters == null ? Output.empty() : this.metadataFilters;
+    public Output<List<MetadataFilterArgs>> metadataFilters() {
+        return this.metadataFilters == null ? Codegen.empty() : this.metadataFilters;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
-    public Output<String> getPrefixMatch() {
-        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
+    public Output<String> prefixMatch() {
+        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queryParameterMatches")
       private final @Nullable Output<List<HttpQueryParameterMatchArgs>> queryParameterMatches;
 
-    public Output<List<HttpQueryParameterMatchArgs>> getQueryParameterMatches() {
-        return this.queryParameterMatches == null ? Output.empty() : this.queryParameterMatches;
+    public Output<List<HttpQueryParameterMatchArgs>> queryParameterMatches() {
+        return this.queryParameterMatches == null ? Codegen.empty() : this.queryParameterMatches;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
-    public Output<String> getRegexMatch() {
-        return this.regexMatch == null ? Output.empty() : this.regexMatch;
+    public Output<String> regexMatch() {
+        return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 
     public HttpRouteRuleMatchArgs(
@@ -118,13 +119,13 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HttpRouteRuleMatchArgs() {
-        this.fullPathMatch = Output.empty();
-        this.headerMatches = Output.empty();
-        this.ignoreCase = Output.empty();
-        this.metadataFilters = Output.empty();
-        this.prefixMatch = Output.empty();
-        this.queryParameterMatches = Output.empty();
-        this.regexMatch = Output.empty();
+        this.fullPathMatch = Codegen.empty();
+        this.headerMatches = Codegen.empty();
+        this.ignoreCase = Codegen.empty();
+        this.metadataFilters = Codegen.empty();
+        this.prefixMatch = Codegen.empty();
+        this.queryParameterMatches = Codegen.empty();
+        this.regexMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder fullPathMatch(@Nullable String fullPathMatch) {
-            this.fullPathMatch = Output.ofNullable(fullPathMatch);
+            this.fullPathMatch = Codegen.ofNullable(fullPathMatch);
             return this;
         }
         public Builder headerMatches(@Nullable Output<List<HttpHeaderMatchArgs>> headerMatches) {
@@ -172,7 +173,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder headerMatches(@Nullable List<HttpHeaderMatchArgs> headerMatches) {
-            this.headerMatches = Output.ofNullable(headerMatches);
+            this.headerMatches = Codegen.ofNullable(headerMatches);
             return this;
         }
         public Builder headerMatches(HttpHeaderMatchArgs... headerMatches) {
@@ -183,7 +184,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
-            this.ignoreCase = Output.ofNullable(ignoreCase);
+            this.ignoreCase = Codegen.ofNullable(ignoreCase);
             return this;
         }
         public Builder metadataFilters(@Nullable Output<List<MetadataFilterArgs>> metadataFilters) {
@@ -191,7 +192,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder metadataFilters(@Nullable List<MetadataFilterArgs> metadataFilters) {
-            this.metadataFilters = Output.ofNullable(metadataFilters);
+            this.metadataFilters = Codegen.ofNullable(metadataFilters);
             return this;
         }
         public Builder metadataFilters(MetadataFilterArgs... metadataFilters) {
@@ -202,7 +203,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder prefixMatch(@Nullable String prefixMatch) {
-            this.prefixMatch = Output.ofNullable(prefixMatch);
+            this.prefixMatch = Codegen.ofNullable(prefixMatch);
             return this;
         }
         public Builder queryParameterMatches(@Nullable Output<List<HttpQueryParameterMatchArgs>> queryParameterMatches) {
@@ -210,7 +211,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queryParameterMatches(@Nullable List<HttpQueryParameterMatchArgs> queryParameterMatches) {
-            this.queryParameterMatches = Output.ofNullable(queryParameterMatches);
+            this.queryParameterMatches = Codegen.ofNullable(queryParameterMatches);
             return this;
         }
         public Builder queryParameterMatches(HttpQueryParameterMatchArgs... queryParameterMatches) {
@@ -221,7 +222,7 @@ public final class HttpRouteRuleMatchArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Output.ofNullable(regexMatch);
+            this.regexMatch = Codegen.ofNullable(regexMatch);
             return this;
         }        public HttpRouteRuleMatchArgs build() {
             return new HttpRouteRuleMatchArgs(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);

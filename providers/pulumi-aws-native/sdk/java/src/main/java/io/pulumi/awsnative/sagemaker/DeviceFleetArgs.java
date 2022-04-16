@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sagemaker.inputs.DeviceFleetEdgeOutputConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DeviceFleetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deviceFleetName")
       private final @Nullable Output<String> deviceFleetName;
 
-    public Output<String> getDeviceFleetName() {
-        return this.deviceFleetName == null ? Output.empty() : this.deviceFleetName;
+    public Output<String> deviceFleetName() {
+        return this.deviceFleetName == null ? Codegen.empty() : this.deviceFleetName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputConfig", required=true)
       private final Output<DeviceFleetEdgeOutputConfigArgs> outputConfig;
 
-    public Output<DeviceFleetEdgeOutputConfigArgs> getOutputConfig() {
+    public Output<DeviceFleetEdgeOutputConfigArgs> outputConfig() {
         return this.outputConfig;
     }
 
@@ -57,7 +58,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -68,8 +69,8 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DeviceFleetTagArgs>> tags;
 
-    public Output<List<DeviceFleetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DeviceFleetTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeviceFleetArgs(
@@ -86,11 +87,11 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceFleetArgs() {
-        this.description = Output.empty();
-        this.deviceFleetName = Output.empty();
-        this.outputConfig = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.deviceFleetName = Codegen.empty();
+        this.outputConfig = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceFleetName(@Nullable Output<String> deviceFleetName) {
@@ -134,7 +135,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceFleetName(@Nullable String deviceFleetName) {
-            this.deviceFleetName = Output.ofNullable(deviceFleetName);
+            this.deviceFleetName = Codegen.ofNullable(deviceFleetName);
             return this;
         }
         public Builder outputConfig(Output<DeviceFleetEdgeOutputConfigArgs> outputConfig) {
@@ -158,7 +159,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DeviceFleetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DeviceFleetTagArgs... tags) {

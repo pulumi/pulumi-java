@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterValueArgs;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameterType")
       private final @Nullable Output<QueryParameterTypeArgs> parameterType;
 
-    public Output<QueryParameterTypeArgs> getParameterType() {
-        return this.parameterType == null ? Output.empty() : this.parameterType;
+    public Output<QueryParameterTypeArgs> parameterType() {
+        return this.parameterType == null ? Codegen.empty() : this.parameterType;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameterValue")
       private final @Nullable Output<QueryParameterValueArgs> parameterValue;
 
-    public Output<QueryParameterValueArgs> getParameterValue() {
-        return this.parameterValue == null ? Output.empty() : this.parameterValue;
+    public Output<QueryParameterValueArgs> parameterValue() {
+        return this.parameterValue == null ? Codegen.empty() : this.parameterValue;
     }
 
     public QueryParameterArgs(
@@ -59,9 +60,9 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueryParameterArgs() {
-        this.name = Output.empty();
-        this.parameterType = Output.empty();
-        this.parameterValue = Output.empty();
+        this.name = Codegen.empty();
+        this.parameterType = Codegen.empty();
+        this.parameterValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameterType(@Nullable Output<QueryParameterTypeArgs> parameterType) {
@@ -101,7 +102,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameterType(@Nullable QueryParameterTypeArgs parameterType) {
-            this.parameterType = Output.ofNullable(parameterType);
+            this.parameterType = Codegen.ofNullable(parameterType);
             return this;
         }
         public Builder parameterValue(@Nullable Output<QueryParameterValueArgs> parameterValue) {
@@ -109,7 +110,7 @@ public final class QueryParameterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameterValue(@Nullable QueryParameterValueArgs parameterValue) {
-            this.parameterValue = Output.ofNullable(parameterValue);
+            this.parameterValue = Codegen.ofNullable(parameterValue);
             return this;
         }        public QueryParameterArgs build() {
             return new QueryParameterArgs(name, parameterType, parameterValue);

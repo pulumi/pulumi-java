@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
     @Import(name="roleEntities")
       private final @Nullable Output<List<String>> roleEntities;
 
-    public Output<List<String>> getRoleEntities() {
-        return this.roleEntities == null ? Output.empty() : this.roleEntities;
+    public Output<List<String>> roleEntities() {
+        return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
     }
 
     public DefaultObjectACLState(
@@ -47,8 +48,8 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
     }
 
     private DefaultObjectACLState() {
-        this.bucket = Output.empty();
-        this.roleEntities = Output.empty();
+        this.bucket = Codegen.empty();
+        this.roleEntities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder roleEntities(@Nullable Output<List<String>> roleEntities) {
@@ -86,7 +87,7 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Output.ofNullable(roleEntities);
+            this.roleEntities = Codegen.ofNullable(roleEntities);
             return this;
         }
         public Builder roleEntities(String... roleEntities) {

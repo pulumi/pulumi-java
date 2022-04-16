@@ -11,6 +11,7 @@ import io.pulumi.awsnative.configuration.outputs.ConfigurationAggregatorTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
     @Export(name="accountAggregationSources", type=List.class, parameters={ConfigurationAggregatorAccountAggregationSource.class})
     private Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> accountAggregationSources;
 
-    public Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> getAccountAggregationSources() {
+    public Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> accountAggregationSources() {
         return this.accountAggregationSources;
     }
     /**
@@ -38,7 +39,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return The Amazon Resource Name (ARN) of the aggregator.
      * 
      */
-    public Output<String> getConfigurationAggregatorArn() {
+    public Output<String> configurationAggregatorArn() {
         return this.configurationAggregatorArn;
     }
     /**
@@ -52,13 +53,13 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return The name of the aggregator.
      * 
      */
-    public Output</* @Nullable */ String> getConfigurationAggregatorName() {
+    public Output</* @Nullable */ String> configurationAggregatorName() {
         return this.configurationAggregatorName;
     }
     @Export(name="organizationAggregationSource", type=ConfigurationAggregatorOrganizationAggregationSource.class, parameters={})
     private Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource;
 
-    public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> getOrganizationAggregationSource() {
+    public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource() {
         return this.organizationAggregationSource;
     }
     /**
@@ -72,7 +73,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @return The tags for the configuration aggregator.
      * 
      */
-    public Output</* @Nullable */ List<ConfigurationAggregatorTag>> getTags() {
+    public Output</* @Nullable */ List<ConfigurationAggregatorTag>> tags() {
         return this.tags;
     }
 
@@ -98,7 +99,7 @@ public class ConfigurationAggregator extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationAggregator(String name, @Nullable ConfigurationAggregatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:configuration:ConfigurationAggregator", name, args == null ? ConfigurationAggregatorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:configuration:ConfigurationAggregator", name, args == null ? ConfigurationAggregatorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConfigurationAggregator(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

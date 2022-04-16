@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.NodeConfigSourceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="active")
       private final @Nullable Output<NodeConfigSourceArgs> active;
 
-    public Output<NodeConfigSourceArgs> getActive() {
-        return this.active == null ? Output.empty() : this.active;
+    public Output<NodeConfigSourceArgs> active() {
+        return this.active == null ? Codegen.empty() : this.active;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="assigned")
       private final @Nullable Output<NodeConfigSourceArgs> assigned;
 
-    public Output<NodeConfigSourceArgs> getAssigned() {
-        return this.assigned == null ? Output.empty() : this.assigned;
+    public Output<NodeConfigSourceArgs> assigned() {
+        return this.assigned == null ? Codegen.empty() : this.assigned;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="error")
       private final @Nullable Output<String> error;
 
-    public Output<String> getError() {
-        return this.error == null ? Output.empty() : this.error;
+    public Output<String> error() {
+        return this.error == null ? Codegen.empty() : this.error;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="lastKnownGood")
       private final @Nullable Output<NodeConfigSourceArgs> lastKnownGood;
 
-    public Output<NodeConfigSourceArgs> getLastKnownGood() {
-        return this.lastKnownGood == null ? Output.empty() : this.lastKnownGood;
+    public Output<NodeConfigSourceArgs> lastKnownGood() {
+        return this.lastKnownGood == null ? Codegen.empty() : this.lastKnownGood;
     }
 
     public NodeConfigStatusArgs(
@@ -75,10 +76,10 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NodeConfigStatusArgs() {
-        this.active = Output.empty();
-        this.assigned = Output.empty();
-        this.error = Output.empty();
-        this.lastKnownGood = Output.empty();
+        this.active = Codegen.empty();
+        this.assigned = Codegen.empty();
+        this.error = Codegen.empty();
+        this.lastKnownGood = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder active(@Nullable NodeConfigSourceArgs active) {
-            this.active = Output.ofNullable(active);
+            this.active = Codegen.ofNullable(active);
             return this;
         }
         public Builder assigned(@Nullable Output<NodeConfigSourceArgs> assigned) {
@@ -120,7 +121,7 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder assigned(@Nullable NodeConfigSourceArgs assigned) {
-            this.assigned = Output.ofNullable(assigned);
+            this.assigned = Codegen.ofNullable(assigned);
             return this;
         }
         public Builder error(@Nullable Output<String> error) {
@@ -128,7 +129,7 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder error(@Nullable String error) {
-            this.error = Output.ofNullable(error);
+            this.error = Codegen.ofNullable(error);
             return this;
         }
         public Builder lastKnownGood(@Nullable Output<NodeConfigSourceArgs> lastKnownGood) {
@@ -136,7 +137,7 @@ public final class NodeConfigStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lastKnownGood(@Nullable NodeConfigSourceArgs lastKnownGood) {
-            this.lastKnownGood = Output.ofNullable(lastKnownGood);
+            this.lastKnownGood = Codegen.ofNullable(lastKnownGood);
             return this;
         }        public NodeConfigStatusArgs build() {
             return new NodeConfigStatusArgs(active, assigned, error, lastKnownGood);

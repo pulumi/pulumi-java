@@ -9,6 +9,7 @@ import io.pulumi.aws.docdb.inputs.ClusterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -56,7 +57,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * `false`.
      * 
      */
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately;
     }
     /**
@@ -70,7 +71,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of cluster
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -86,7 +87,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * instances in the DB cluster can be created in.
      * 
      */
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -100,7 +101,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The days to retain backups for. Default `1`
      * 
      */
-    public Output</* @Nullable */ Integer> getBackupRetentionPeriod() {
+    public Output</* @Nullable */ Integer> backupRetentionPeriod() {
         return this.backupRetentionPeriod;
     }
     /**
@@ -114,7 +115,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster identifier. If omitted, this provider will assign a random, unique identifier.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -128,7 +129,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
      * 
      */
-    public Output<String> getClusterIdentifierPrefix() {
+    public Output<String> clusterIdentifierPrefix() {
         return this.clusterIdentifierPrefix;
     }
     /**
@@ -142,7 +143,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return List of DocDB Instances that are a part of this cluster
      * 
      */
-    public Output<List<String>> getClusterMembers() {
+    public Output<List<String>> clusterMembers() {
         return this.clusterMembers;
     }
     /**
@@ -156,7 +157,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The DocDB Cluster Resource ID
      * 
      */
-    public Output<String> getClusterResourceId() {
+    public Output<String> clusterResourceId() {
         return this.clusterResourceId;
     }
     /**
@@ -170,7 +171,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A cluster parameter group to associate with the cluster.
      * 
      */
-    public Output<String> getDbClusterParameterGroupName() {
+    public Output<String> dbClusterParameterGroupName() {
         return this.dbClusterParameterGroupName;
     }
     /**
@@ -184,7 +185,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A DB subnet group to associate with this DB instance.
      * 
      */
-    public Output<String> getDbSubnetGroupName() {
+    public Output<String> dbSubnetGroupName() {
         return this.dbSubnetGroupName;
     }
     /**
@@ -198,7 +199,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeletionProtection() {
+    public Output</* @Nullable */ Boolean> deletionProtection() {
         return this.deletionProtection;
     }
     /**
@@ -214,7 +215,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The following log types are supported: `audit`, `profiler`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getEnabledCloudwatchLogsExports() {
+    public Output</* @Nullable */ List<String>> enabledCloudwatchLogsExports() {
         return this.enabledCloudwatchLogsExports;
     }
     /**
@@ -228,7 +229,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The DNS address of the DocDB instance
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -242,7 +243,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
      * 
      */
-    public Output</* @Nullable */ String> getEngine() {
+    public Output</* @Nullable */ String> engine() {
         return this.engine;
     }
     /**
@@ -256,7 +257,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The database engine version. Updating this argument results in an outage.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -274,7 +275,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * made.
      * 
      */
-    public Output</* @Nullable */ String> getFinalSnapshotIdentifier() {
+    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
         return this.finalSnapshotIdentifier;
     }
     /**
@@ -288,7 +289,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The global cluster identifier specified on `aws.docdb.GlobalCluster`.
      * 
      */
-    public Output</* @Nullable */ String> getGlobalClusterIdentifier() {
+    public Output</* @Nullable */ String> globalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
     /**
@@ -302,7 +303,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The Route53 Hosted Zone ID of the endpoint
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
     /**
@@ -316,7 +317,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -332,7 +333,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
      * 
      */
-    public Output</* @Nullable */ String> getMasterPassword() {
+    public Output</* @Nullable */ String> masterPassword() {
         return this.masterPassword;
     }
     /**
@@ -346,7 +347,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Username for the master DB user.
      * 
      */
-    public Output<String> getMasterUsername() {
+    public Output<String> masterUsername() {
         return this.masterUsername;
     }
     /**
@@ -360,7 +361,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The port on which the DB accepts connections
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -376,7 +377,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
      * 
      */
-    public Output<String> getPreferredBackupWindow() {
+    public Output<String> preferredBackupWindow() {
         return this.preferredBackupWindow;
     }
     /**
@@ -390,7 +391,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
      * 
      */
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     /**
@@ -404,7 +405,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
      * 
      */
-    public Output<String> getReaderEndpoint() {
+    public Output<String> readerEndpoint() {
         return this.readerEndpoint;
     }
     /**
@@ -418,7 +419,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSkipFinalSnapshot() {
+    public Output</* @Nullable */ Boolean> skipFinalSnapshot() {
         return this.skipFinalSnapshot;
     }
     /**
@@ -432,7 +433,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotIdentifier() {
+    public Output</* @Nullable */ String> snapshotIdentifier() {
         return this.snapshotIdentifier;
     }
     /**
@@ -446,7 +447,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the DB cluster is encrypted. The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getStorageEncrypted() {
+    public Output</* @Nullable */ Boolean> storageEncrypted() {
         return this.storageEncrypted;
     }
     /**
@@ -460,7 +461,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the DB cluster. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -474,7 +475,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -490,7 +491,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * with the Cluster
      * 
      */
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
 
@@ -516,7 +517,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:docdb/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:docdb/cluster:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable ClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

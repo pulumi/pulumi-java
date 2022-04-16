@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
     @Import(name="startingPosition")
       private final @Nullable Output<String> startingPosition;
 
-    public Output<String> getStartingPosition() {
-        return this.startingPosition == null ? Output.empty() : this.startingPosition;
+    public Output<String> startingPosition() {
+        return this.startingPosition == null ? Codegen.empty() : this.startingPosition;
     }
 
     public AnalyticsApplicationInputsStartingPositionConfigurationArgs(@Nullable Output<String> startingPosition) {
@@ -30,7 +31,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
     }
 
     private AnalyticsApplicationInputsStartingPositionConfigurationArgs() {
-        this.startingPosition = Output.empty();
+        this.startingPosition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
             return this;
         }
         public Builder startingPosition(@Nullable String startingPosition) {
-            this.startingPosition = Output.ofNullable(startingPosition);
+            this.startingPosition = Codegen.ofNullable(startingPosition);
             return this;
         }        public AnalyticsApplicationInputsStartingPositionConfigurationArgs build() {
             return new AnalyticsApplicationInputsStartingPositionConfigurationArgs(startingPosition);

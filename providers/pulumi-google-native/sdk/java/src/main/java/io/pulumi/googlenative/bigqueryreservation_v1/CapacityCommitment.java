@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigqueryreservation_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigqueryreservation_v1.CapacityCommitmentArgs;
 import io.pulumi.googlenative.bigqueryreservation_v1.outputs.StatusResponse;
@@ -30,7 +31,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @return The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
      */
-    public Output<String> getCommitmentEndTime() {
+    public Output<String> commitmentEndTime() {
         return this.commitmentEndTime;
     }
     /**
@@ -44,7 +45,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @return The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
      */
-    public Output<String> getCommitmentStartTime() {
+    public Output<String> commitmentStartTime() {
         return this.commitmentStartTime;
     }
     /**
@@ -58,7 +59,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @return For FAILED commitment plan, provides the reason of failure.
      * 
      */
-    public Output<StatusResponse> getFailureStatus() {
+    public Output<StatusResponse> failureStatus() {
         return this.failureStatus;
     }
     /**
@@ -72,7 +73,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @return The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @return Capacity commitment commitment plan.
      * 
      */
-    public Output<String> getPlan() {
+    public Output<String> plan() {
         return this.plan;
     }
     /**
@@ -100,7 +101,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @return The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL and TRIAL commitments.
      * 
      */
-    public Output<String> getRenewalPlan() {
+    public Output<String> renewalPlan() {
         return this.renewalPlan;
     }
     /**
@@ -114,7 +115,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @return Number of slots in this commitment.
      * 
      */
-    public Output<String> getSlotCount() {
+    public Output<String> slotCount() {
         return this.slotCount;
     }
     /**
@@ -128,7 +129,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @return State of the commitment.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -154,7 +155,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CapacityCommitment(String name, @Nullable CapacityCommitmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigqueryreservation/v1:CapacityCommitment", name, args == null ? CapacityCommitmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigqueryreservation/v1:CapacityCommitment", name, args == null ? CapacityCommitmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CapacityCommitment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

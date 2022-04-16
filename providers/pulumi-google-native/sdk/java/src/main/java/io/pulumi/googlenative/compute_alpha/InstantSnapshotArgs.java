@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
-    public Output<Boolean> getGuestFlush() {
-        return this.guestFlush == null ? Output.empty() : this.guestFlush;
+    public Output<Boolean> guestFlush() {
+        return this.guestFlush == null ? Codegen.empty() : this.guestFlush;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -56,22 +57,22 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -81,15 +82,15 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
-        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
+    public Output<String> sourceDisk() {
+        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstantSnapshotArgs(
@@ -112,14 +113,14 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InstantSnapshotArgs() {
-        this.description = Output.empty();
-        this.guestFlush = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.sourceDisk = Output.empty();
-        this.zone = Output.empty();
+        this.description = Codegen.empty();
+        this.guestFlush = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.sourceDisk = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
@@ -169,7 +170,7 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder guestFlush(@Nullable Boolean guestFlush) {
-            this.guestFlush = Output.ofNullable(guestFlush);
+            this.guestFlush = Codegen.ofNullable(guestFlush);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -177,7 +178,7 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -185,7 +186,7 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -193,7 +194,7 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -201,7 +202,7 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
@@ -209,7 +210,7 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Output.ofNullable(sourceDisk);
+            this.sourceDisk = Codegen.ofNullable(sourceDisk);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -217,7 +218,7 @@ public final class InstantSnapshotArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstantSnapshotArgs build() {
             return new InstantSnapshotArgs(description, guestFlush, labels, name, project, requestId, sourceDisk, zone);

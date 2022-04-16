@@ -7,6 +7,7 @@ import io.pulumi.azurenative.appplatform.inputs.DeploymentResourcePropertiesArgs
 import io.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appName", required=true)
       private final Output<String> appName;
 
-    public Output<String> getAppName() {
+    public Output<String> appName() {
         return this.appName;
     }
 
@@ -34,8 +35,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
-        return this.deploymentName == null ? Output.empty() : this.deploymentName;
+    public Output<String> deploymentName() {
+        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<DeploymentResourcePropertiesArgs> properties;
 
-    public Output<DeploymentResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<DeploymentResourcePropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +68,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -78,8 +79,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     public DeploymentArgs(
@@ -98,12 +99,12 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.appName = Output.empty();
-        this.deploymentName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.sku = Output.empty();
+        this.appName = Codegen.empty();
+        this.deploymentName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Output.ofNullable(deploymentName);
+            this.deploymentName = Codegen.ofNullable(deploymentName);
             return this;
         }
         public Builder properties(@Nullable Output<DeploymentResourcePropertiesArgs> properties) {
@@ -157,7 +158,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable DeploymentResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -181,7 +182,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }        public DeploymentArgs build() {
             return new DeploymentArgs(appName, deploymentName, properties, resourceGroupName, serviceName, sku);

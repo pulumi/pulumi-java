@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3.FlowArgs;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EventHandlerResponse;
@@ -32,7 +33,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -46,7 +47,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The human-readable name of the flow.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -60,7 +61,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return A flow's event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page's event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3EventHandlerResponse>> getEventHandlers() {
+    public Output<List<GoogleCloudDialogflowCxV3EventHandlerResponse>> eventHandlers() {
         return this.eventHandlers;
     }
     /**
@@ -74,7 +75,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +89,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return NLU related settings of the flow.
      * 
      */
-    public Output<GoogleCloudDialogflowCxV3NluSettingsResponse> getNluSettings() {
+    public Output<GoogleCloudDialogflowCxV3NluSettingsResponse> nluSettings() {
         return this.nluSettings;
     }
     /**
@@ -102,7 +103,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return A flow's transition route group serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
      * 
      */
-    public Output<List<String>> getTransitionRouteGroups() {
+    public Output<List<String>> transitionRouteGroups() {
         return this.transitionRouteGroups;
     }
     /**
@@ -116,7 +117,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @return A flow's transition routes serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition routes and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
      * 
      */
-    public Output<List<GoogleCloudDialogflowCxV3TransitionRouteResponse>> getTransitionRoutes() {
+    public Output<List<GoogleCloudDialogflowCxV3TransitionRouteResponse>> transitionRoutes() {
         return this.transitionRoutes;
     }
 
@@ -142,7 +143,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Flow(String name, FlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Flow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

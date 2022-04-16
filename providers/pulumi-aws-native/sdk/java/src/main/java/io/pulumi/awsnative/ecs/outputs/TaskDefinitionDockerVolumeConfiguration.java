@@ -33,19 +33,19 @@ public final class TaskDefinitionDockerVolumeConfiguration {
         this.scope = scope;
     }
 
-    public Optional<Boolean> getAutoprovision() {
+    public Optional<Boolean> autoprovision() {
         return Optional.ofNullable(this.autoprovision);
     }
-    public Optional<String> getDriver() {
+    public Optional<String> driver() {
         return Optional.ofNullable(this.driver);
     }
-    public Optional<Object> getDriverOpts() {
+    public Optional<Object> driverOpts() {
         return Optional.ofNullable(this.driverOpts);
     }
-    public Optional<Object> getLabels() {
+    public Optional<Object> labels() {
         return Optional.ofNullable(this.labels);
     }
-    public Optional<String> getScope() {
+    public Optional<String> scope() {
         return Optional.ofNullable(this.scope);
     }
 

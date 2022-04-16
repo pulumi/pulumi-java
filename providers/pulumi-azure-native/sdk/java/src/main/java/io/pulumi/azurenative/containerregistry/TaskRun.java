@@ -16,6 +16,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +51,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return How the run should be forced to rerun even if the run request configuration has not changed
      * 
      */
-    public Output</* @Nullable */ String> getForceUpdateTag() {
+    public Output</* @Nullable */ String> forceUpdateTag() {
         return this.forceUpdateTag;
     }
     /**
@@ -64,7 +65,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityPropertiesResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityPropertiesResponse> identity() {
         return this.identity;
     }
     /**
@@ -78,7 +79,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return The location of the resource
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -92,7 +93,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -106,7 +107,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of this task run
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -120,7 +121,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return The request (parameters) for the run
      * 
      */
-    public Output</* @Nullable */ Object> getRunRequest() {
+    public Output</* @Nullable */ Object> runRequest() {
         return this.runRequest;
     }
     /**
@@ -134,7 +135,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return The result of this task run
      * 
      */
-    public Output<RunResponse> getRunResult() {
+    public Output<RunResponse> runResult() {
         return this.runResult;
     }
     /**
@@ -148,7 +149,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -162,7 +163,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -188,7 +189,7 @@ public class TaskRun extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TaskRun(String name, TaskRunArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerregistry:TaskRun", name, args == null ? TaskRunArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:containerregistry:TaskRun", name, args == null ? TaskRunArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TaskRun(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

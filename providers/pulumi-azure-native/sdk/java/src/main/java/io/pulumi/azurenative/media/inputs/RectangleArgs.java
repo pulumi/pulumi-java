@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="height")
       private final @Nullable Output<String> height;
 
-    public Output<String> getHeight() {
-        return this.height == null ? Output.empty() : this.height;
+    public Output<String> height() {
+        return this.height == null ? Codegen.empty() : this.height;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="left")
       private final @Nullable Output<String> left;
 
-    public Output<String> getLeft() {
-        return this.left == null ? Output.empty() : this.left;
+    public Output<String> left() {
+        return this.left == null ? Codegen.empty() : this.left;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="top")
       private final @Nullable Output<String> top;
 
-    public Output<String> getTop() {
-        return this.top == null ? Output.empty() : this.top;
+    public Output<String> top() {
+        return this.top == null ? Codegen.empty() : this.top;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="width")
       private final @Nullable Output<String> width;
 
-    public Output<String> getWidth() {
-        return this.width == null ? Output.empty() : this.width;
+    public Output<String> width() {
+        return this.width == null ? Codegen.empty() : this.width;
     }
 
     public RectangleArgs(
@@ -74,10 +75,10 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RectangleArgs() {
-        this.height = Output.empty();
-        this.left = Output.empty();
-        this.top = Output.empty();
-        this.width = Output.empty();
+        this.height = Codegen.empty();
+        this.left = Codegen.empty();
+        this.top = Codegen.empty();
+        this.width = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder height(@Nullable String height) {
-            this.height = Output.ofNullable(height);
+            this.height = Codegen.ofNullable(height);
             return this;
         }
         public Builder left(@Nullable Output<String> left) {
@@ -119,7 +120,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder left(@Nullable String left) {
-            this.left = Output.ofNullable(left);
+            this.left = Codegen.ofNullable(left);
             return this;
         }
         public Builder top(@Nullable Output<String> top) {
@@ -127,7 +128,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder top(@Nullable String top) {
-            this.top = Output.ofNullable(top);
+            this.top = Codegen.ofNullable(top);
             return this;
         }
         public Builder width(@Nullable Output<String> width) {
@@ -135,7 +136,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder width(@Nullable String width) {
-            this.width = Output.ofNullable(width);
+            this.width = Codegen.ofNullable(width);
             return this;
         }        public RectangleArgs build() {
             return new RectangleArgs(height, left, top, width);

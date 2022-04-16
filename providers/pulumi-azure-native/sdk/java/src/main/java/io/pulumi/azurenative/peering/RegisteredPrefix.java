@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
      * @return The error message associated with the validation state, if any.
      * 
      */
-    public Output<String> getErrorMessage() {
+    public Output<String> errorMessage() {
         return this.errorMessage;
     }
     /**
@@ -55,7 +56,7 @@ public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
      * @return The peering service prefix key that is to be shared with the customer.
      * 
      */
-    public Output<String> getPeeringServicePrefixKey() {
+    public Output<String> peeringServicePrefixKey() {
         return this.peeringServicePrefixKey;
     }
     /**
@@ -83,7 +84,7 @@ public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
      * @return The customer's prefix from which traffic originates.
      * 
      */
-    public Output</* @Nullable */ String> getPrefix() {
+    public Output</* @Nullable */ String> prefix() {
         return this.prefix;
     }
     /**
@@ -97,7 +98,7 @@ public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
      * @return The prefix validation state.
      * 
      */
-    public Output<String> getPrefixValidationState() {
+    public Output<String> prefixValidationState() {
         return this.prefixValidationState;
     }
     /**
@@ -111,7 +112,7 @@ public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -125,7 +126,7 @@ public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -151,7 +152,7 @@ public class RegisteredPrefix extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegisteredPrefix(String name, RegisteredPrefixArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:peering:RegisteredPrefix", name, args == null ? RegisteredPrefixArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:peering:RegisteredPrefix", name, args == null ? RegisteredPrefixArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegisteredPrefix(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

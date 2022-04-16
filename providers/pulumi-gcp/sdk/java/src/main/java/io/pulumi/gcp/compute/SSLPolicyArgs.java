@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customFeatures")
       private final @Nullable Output<List<String>> customFeatures;
 
-    public Output<List<String>> getCustomFeatures() {
-        return this.customFeatures == null ? Output.empty() : this.customFeatures;
+    public Output<List<String>> customFeatures() {
+        return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minTlsVersion")
       private final @Nullable Output<String> minTlsVersion;
 
-    public Output<String> getMinTlsVersion() {
-        return this.minTlsVersion == null ? Output.empty() : this.minTlsVersion;
+    public Output<String> minTlsVersion() {
+        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="profile")
       private final @Nullable Output<String> profile;
 
-    public Output<String> getProfile() {
-        return this.profile == null ? Output.empty() : this.profile;
+    public Output<String> profile() {
+        return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public SSLPolicyArgs(
@@ -123,12 +124,12 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SSLPolicyArgs() {
-        this.customFeatures = Output.empty();
-        this.description = Output.empty();
-        this.minTlsVersion = Output.empty();
-        this.name = Output.empty();
-        this.profile = Output.empty();
-        this.project = Output.empty();
+        this.customFeatures = Codegen.empty();
+        this.description = Codegen.empty();
+        this.minTlsVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.profile = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customFeatures(@Nullable List<String> customFeatures) {
-            this.customFeatures = Output.ofNullable(customFeatures);
+            this.customFeatures = Codegen.ofNullable(customFeatures);
             return this;
         }
         public Builder customFeatures(String... customFeatures) {
@@ -177,7 +178,7 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
@@ -185,7 +186,7 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
-            this.minTlsVersion = Output.ofNullable(minTlsVersion);
+            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -193,7 +194,7 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder profile(@Nullable Output<String> profile) {
@@ -201,7 +202,7 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profile(@Nullable String profile) {
-            this.profile = Output.ofNullable(profile);
+            this.profile = Codegen.ofNullable(profile);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -209,7 +210,7 @@ public final class SSLPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public SSLPolicyArgs build() {
             return new SSLPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project);

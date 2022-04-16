@@ -5,6 +5,7 @@ package io.pulumi.azurenative.engagementfabric;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -34,8 +35,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelFunctions")
       private final @Nullable Output<List<String>> channelFunctions;
 
-    public Output<List<String>> getChannelFunctions() {
-        return this.channelFunctions == null ? Output.empty() : this.channelFunctions;
+    public Output<List<String>> channelFunctions() {
+        return this.channelFunctions == null ? Codegen.empty() : this.channelFunctions;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelName")
       private final @Nullable Output<String> channelName;
 
-    public Output<String> getChannelName() {
-        return this.channelName == null ? Output.empty() : this.channelName;
+    public Output<String> channelName() {
+        return this.channelName == null ? Codegen.empty() : this.channelName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="channelType", required=true)
       private final Output<String> channelType;
 
-    public Output<String> getChannelType() {
+    public Output<String> channelType() {
         return this.channelType;
     }
 
@@ -67,8 +68,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<Map<String,String>> credentials;
 
-    public Output<Map<String,String>> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+    public Output<Map<String,String>> credentials() {
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -98,12 +99,12 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.accountName = Output.empty();
-        this.channelFunctions = Output.empty();
-        this.channelName = Output.empty();
-        this.channelType = Output.empty();
-        this.credentials = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.channelFunctions = Codegen.empty();
+        this.channelName = Codegen.empty();
+        this.channelType = Codegen.empty();
+        this.credentials = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelFunctions(@Nullable List<String> channelFunctions) {
-            this.channelFunctions = Output.ofNullable(channelFunctions);
+            this.channelFunctions = Codegen.ofNullable(channelFunctions);
             return this;
         }
         public Builder channelFunctions(String... channelFunctions) {
@@ -160,7 +161,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelName(@Nullable String channelName) {
-            this.channelName = Output.ofNullable(channelName);
+            this.channelName = Codegen.ofNullable(channelName);
             return this;
         }
         public Builder channelType(Output<String> channelType) {
@@ -176,7 +177,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable Map<String,String> credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

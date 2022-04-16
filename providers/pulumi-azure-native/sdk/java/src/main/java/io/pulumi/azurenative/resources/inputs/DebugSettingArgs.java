@@ -5,6 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detailLevel")
       private final @Nullable Output<String> detailLevel;
 
-    public Output<String> getDetailLevel() {
-        return this.detailLevel == null ? Output.empty() : this.detailLevel;
+    public Output<String> detailLevel() {
+        return this.detailLevel == null ? Codegen.empty() : this.detailLevel;
     }
 
     public DebugSettingArgs(@Nullable Output<String> detailLevel) {
@@ -34,7 +35,7 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DebugSettingArgs() {
-        this.detailLevel = Output.empty();
+        this.detailLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detailLevel(@Nullable String detailLevel) {
-            this.detailLevel = Output.ofNullable(detailLevel);
+            this.detailLevel = Codegen.ofNullable(detailLevel);
             return this;
         }        public DebugSettingArgs build() {
             return new DebugSettingArgs(detailLevel);

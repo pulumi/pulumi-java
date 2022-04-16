@@ -6,6 +6,7 @@ package io.pulumi.aws.dynamodb;
 import io.pulumi.aws.dynamodb.inputs.GlobalTableReplicaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicas", required=true)
       private final Output<List<GlobalTableReplicaArgs>> replicas;
 
-    public Output<List<GlobalTableReplicaArgs>> getReplicas() {
+    public Output<List<GlobalTableReplicaArgs>> replicas() {
         return this.replicas;
     }
 
@@ -46,8 +47,8 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalTableArgs() {
-        this.name = Output.empty();
-        this.replicas = Output.empty();
+        this.name = Codegen.empty();
+        this.replicas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder replicas(Output<List<GlobalTableReplicaArgs>> replicas) {

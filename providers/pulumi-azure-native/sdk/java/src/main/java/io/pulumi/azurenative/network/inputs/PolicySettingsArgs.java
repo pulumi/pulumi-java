@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,8 +31,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileUploadLimitInMb")
       private final @Nullable Output<Integer> fileUploadLimitInMb;
 
-    public Output<Integer> getFileUploadLimitInMb() {
-        return this.fileUploadLimitInMb == null ? Output.empty() : this.fileUploadLimitInMb;
+    public Output<Integer> fileUploadLimitInMb() {
+        return this.fileUploadLimitInMb == null ? Codegen.empty() : this.fileUploadLimitInMb;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Output<Integer> maxRequestBodySizeInKb;
 
-    public Output<Integer> getMaxRequestBodySizeInKb() {
-        return this.maxRequestBodySizeInKb == null ? Output.empty() : this.maxRequestBodySizeInKb;
+    public Output<Integer> maxRequestBodySizeInKb() {
+        return this.maxRequestBodySizeInKb == null ? Codegen.empty() : this.maxRequestBodySizeInKb;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Either<String,WebApplicationFirewallMode>> mode;
 
-    public Output<Either<String,WebApplicationFirewallMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<Either<String,WebApplicationFirewallMode>> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestBodyCheck")
       private final @Nullable Output<Boolean> requestBodyCheck;
 
-    public Output<Boolean> getRequestBodyCheck() {
-        return this.requestBodyCheck == null ? Output.empty() : this.requestBodyCheck;
+    public Output<Boolean> requestBodyCheck() {
+        return this.requestBodyCheck == null ? Codegen.empty() : this.requestBodyCheck;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state;
 
-    public Output<Either<String,WebApplicationFirewallEnabledState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,WebApplicationFirewallEnabledState>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public PolicySettingsArgs(
@@ -92,11 +93,11 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicySettingsArgs() {
-        this.fileUploadLimitInMb = Output.empty();
-        this.maxRequestBodySizeInKb = Output.empty();
-        this.mode = Output.empty();
-        this.requestBodyCheck = Output.empty();
-        this.state = Output.empty();
+        this.fileUploadLimitInMb = Codegen.empty();
+        this.maxRequestBodySizeInKb = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.requestBodyCheck = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
-            this.fileUploadLimitInMb = Output.ofNullable(fileUploadLimitInMb);
+            this.fileUploadLimitInMb = Codegen.ofNullable(fileUploadLimitInMb);
             return this;
         }
         public Builder maxRequestBodySizeInKb(@Nullable Output<Integer> maxRequestBodySizeInKb) {
@@ -140,7 +141,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
-            this.maxRequestBodySizeInKb = Output.ofNullable(maxRequestBodySizeInKb);
+            this.maxRequestBodySizeInKb = Codegen.ofNullable(maxRequestBodySizeInKb);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,WebApplicationFirewallMode>> mode) {
@@ -148,7 +149,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable Either<String,WebApplicationFirewallMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder requestBodyCheck(@Nullable Output<Boolean> requestBodyCheck) {
@@ -156,7 +157,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
-            this.requestBodyCheck = Output.ofNullable(requestBodyCheck);
+            this.requestBodyCheck = Codegen.ofNullable(requestBodyCheck);
             return this;
         }
         public Builder state(@Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state) {
@@ -164,7 +165,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable Either<String,WebApplicationFirewallEnabledState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public PolicySettingsArgs build() {
             return new PolicySettingsArgs(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);

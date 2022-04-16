@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
     @Import(name="rewriteRules")
       private final @Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
 
-    public Output<List<ApplicationGatewayRewriteRuleArgs>> getRewriteRules() {
-        return this.rewriteRules == null ? Output.empty() : this.rewriteRules;
+    public Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules() {
+        return this.rewriteRules == null ? Codegen.empty() : this.rewriteRules;
     }
 
     public ApplicationGatewayRewriteRuleSetArgs(
@@ -63,9 +64,9 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
     }
 
     private ApplicationGatewayRewriteRuleSetArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.rewriteRules = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rewriteRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -105,7 +106,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rewriteRules(@Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules) {
@@ -113,7 +114,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
             return this;
         }
         public Builder rewriteRules(@Nullable List<ApplicationGatewayRewriteRuleArgs> rewriteRules) {
-            this.rewriteRules = Output.ofNullable(rewriteRules);
+            this.rewriteRules = Codegen.ofNullable(rewriteRules);
             return this;
         }
         public Builder rewriteRules(ApplicationGatewayRewriteRuleArgs... rewriteRules) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
-    public Output<String> getCreationTime() {
-        return this.creationTime == null ? Output.empty() : this.creationTime;
+    public Output<String> creationTime() {
+        return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     @Import(name="volumeId")
       private final @Nullable Output<String> volumeId;
 
-    public Output<String> getVolumeId() {
-        return this.volumeId == null ? Output.empty() : this.volumeId;
+    public Output<String> volumeId() {
+        return this.volumeId == null ? Codegen.empty() : this.volumeId;
     }
 
     public OpenZfsSnapshotState(
@@ -93,12 +94,12 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
     }
 
     private OpenZfsSnapshotState() {
-        this.arn = Output.empty();
-        this.creationTime = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.volumeId = Output.empty();
+        this.arn = Codegen.empty();
+        this.creationTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.volumeId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder creationTime(@Nullable Output<String> creationTime) {
@@ -144,7 +145,7 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = Output.ofNullable(creationTime);
+            this.creationTime = Codegen.ofNullable(creationTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -152,7 +153,7 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -160,7 +161,7 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -168,7 +169,7 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder volumeId(@Nullable Output<String> volumeId) {
@@ -176,7 +177,7 @@ public final class OpenZfsSnapshotState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder volumeId(@Nullable String volumeId) {
-            this.volumeId = Output.ofNullable(volumeId);
+            this.volumeId = Codegen.ofNullable(volumeId);
             return this;
         }        public OpenZfsSnapshotState build() {
             return new OpenZfsSnapshotState(arn, creationTime, name, tags, tagsAll, volumeId);

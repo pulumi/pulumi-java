@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="permissions", required=true)
       private final Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
+    public Output<List<String>> permissions() {
         return this.permissions;
     }
 
@@ -55,7 +56,7 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -66,8 +67,8 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public ObjectCopyGrantArgs(
@@ -84,11 +85,11 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ObjectCopyGrantArgs() {
-        this.email = Output.empty();
-        this.id = Output.empty();
-        this.permissions = Output.empty();
-        this.type = Output.empty();
-        this.uri = Output.empty();
+        this.email = Codegen.empty();
+        this.id = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.type = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -132,7 +133,7 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder permissions(Output<List<String>> permissions) {
@@ -159,7 +160,7 @@ public final class ObjectCopyGrantArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public ObjectCopyGrantArgs build() {
             return new ObjectCopyGrantArgs(email, id, permissions, type, uri);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.RegionNetworkFirewallPolicyVpcNetworkScope;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyAssociationArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleArgs;
@@ -25,8 +26,8 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="associations")
       private final @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
 
-    public Output<List<FirewallPolicyAssociationArgs>> getAssociations() {
-        return this.associations == null ? Output.empty() : this.associations;
+    public Output<List<FirewallPolicyAssociationArgs>> associations() {
+        return this.associations == null ? Codegen.empty() : this.associations;
     }
 
     /**
@@ -36,29 +37,29 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="rules")
       private final @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
 
-    public Output<List<FirewallPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<FirewallPolicyRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
-        return this.shortName == null ? Output.empty() : this.shortName;
+    public Output<String> shortName() {
+        return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     @Import(name="vpcNetworkScope")
       private final @Nullable Output<RegionNetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
 
-    public Output<RegionNetworkFirewallPolicyVpcNetworkScope> getVpcNetworkScope() {
-        return this.vpcNetworkScope == null ? Output.empty() : this.vpcNetworkScope;
+    public Output<RegionNetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope() {
+        return this.vpcNetworkScope == null ? Codegen.empty() : this.vpcNetworkScope;
     }
 
     public RegionNetworkFirewallPolicyArgs(
@@ -114,14 +115,14 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
     }
 
     private RegionNetworkFirewallPolicyArgs() {
-        this.associations = Output.empty();
-        this.description = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.rules = Output.empty();
-        this.shortName = Output.empty();
-        this.vpcNetworkScope = Output.empty();
+        this.associations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.shortName = Codegen.empty();
+        this.vpcNetworkScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder associations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
-            this.associations = Output.ofNullable(associations);
+            this.associations = Codegen.ofNullable(associations);
             return this;
         }
         public Builder associations(FirewallPolicyAssociationArgs... associations) {
@@ -174,7 +175,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -182,7 +183,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -198,7 +199,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder rules(@Nullable Output<List<FirewallPolicyRuleArgs>> rules) {
@@ -206,7 +207,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder rules(@Nullable List<FirewallPolicyRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(FirewallPolicyRuleArgs... rules) {
@@ -217,7 +218,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Output.ofNullable(shortName);
+            this.shortName = Codegen.ofNullable(shortName);
             return this;
         }
         public Builder vpcNetworkScope(@Nullable Output<RegionNetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope) {
@@ -225,7 +226,7 @@ public final class RegionNetworkFirewallPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder vpcNetworkScope(@Nullable RegionNetworkFirewallPolicyVpcNetworkScope vpcNetworkScope) {
-            this.vpcNetworkScope = Output.ofNullable(vpcNetworkScope);
+            this.vpcNetworkScope = Codegen.ofNullable(vpcNetworkScope);
             return this;
         }        public RegionNetworkFirewallPolicyArgs build() {
             return new RegionNetworkFirewallPolicyArgs(associations, description, project, region, requestId, rules, shortName, vpcNetworkScope);

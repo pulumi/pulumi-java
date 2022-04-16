@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @return The available data types for the connector.
      * 
      */
-    public Output</* @Nullable */ TIDataConnectorDataTypesResponse> getDataTypes() {
+    public Output</* @Nullable */ TIDataConnectorDataTypesResponse> dataTypes() {
         return this.dataTypes;
     }
     /**
@@ -56,7 +57,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -72,7 +73,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * Expected value is 'ThreatIntelligence'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -86,7 +87,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @return Azure resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @return The tenant id to connect to, and get the data from.
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -114,7 +115,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @return The lookback period for the feed to be imported.
      * 
      */
-    public Output</* @Nullable */ String> getTipLookbackPeriod() {
+    public Output</* @Nullable */ String> tipLookbackPeriod() {
         return this.tipLookbackPeriod;
     }
     /**
@@ -128,7 +129,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @return Azure resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -154,7 +155,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TIDataConnector(String name, TIDataConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:TIDataConnector", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:securityinsights:TIDataConnector", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private TIDataConnector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

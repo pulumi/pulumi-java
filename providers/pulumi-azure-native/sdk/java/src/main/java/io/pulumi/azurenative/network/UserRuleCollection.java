@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @return Groups for configuration
      * 
      */
-    public Output</* @Nullable */ List<NetworkManagerSecurityGroupItemResponse>> getAppliesToGroups() {
+    public Output</* @Nullable */ List<NetworkManagerSecurityGroupItemResponse>> appliesToGroups() {
         return this.appliesToGroups;
     }
     /**
@@ -57,7 +58,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @return A description of the rule collection.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @return A display name of the rule collection.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -85,7 +86,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -99,7 +100,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -127,7 +128,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -141,7 +142,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class UserRuleCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserRuleCollection(String name, UserRuleCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:UserRuleCollection", name, args == null ? UserRuleCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:UserRuleCollection", name, args == null ? UserRuleCollectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserRuleCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketDefaultRetentionMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,22 +23,22 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
-        return this.days == null ? Output.empty() : this.days;
+    public Output<Integer> days() {
+        return this.days == null ? Codegen.empty() : this.days;
     }
 
     @Import(name="mode")
       private final @Nullable Output<BucketDefaultRetentionMode> mode;
 
-    public Output<BucketDefaultRetentionMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<BucketDefaultRetentionMode> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="years")
       private final @Nullable Output<Integer> years;
 
-    public Output<Integer> getYears() {
-        return this.years == null ? Output.empty() : this.years;
+    public Output<Integer> years() {
+        return this.years == null ? Codegen.empty() : this.years;
     }
 
     public BucketDefaultRetentionArgs(
@@ -50,9 +51,9 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
     }
 
     private BucketDefaultRetentionArgs() {
-        this.days = Output.empty();
-        this.mode = Output.empty();
-        this.years = Output.empty();
+        this.days = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.years = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder days(@Nullable Integer days) {
-            this.days = Output.ofNullable(days);
+            this.days = Codegen.ofNullable(days);
             return this;
         }
         public Builder mode(@Nullable Output<BucketDefaultRetentionMode> mode) {
@@ -92,7 +93,7 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder mode(@Nullable BucketDefaultRetentionMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder years(@Nullable Output<Integer> years) {
@@ -100,7 +101,7 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder years(@Nullable Integer years) {
-            this.years = Output.ofNullable(years);
+            this.years = Codegen.ofNullable(years);
             return this;
         }        public BucketDefaultRetentionArgs build() {
             return new BucketDefaultRetentionArgs(days, mode, years);

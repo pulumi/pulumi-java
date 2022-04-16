@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devspaces;
 import io.pulumi.azurenative.devspaces.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +57,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -67,8 +68,8 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetContainerHostCredentialsBase64", required=true)
       private final Output<String> targetContainerHostCredentialsBase64;
 
-    public Output<String> getTargetContainerHostCredentialsBase64() {
+    public Output<String> targetContainerHostCredentialsBase64() {
         return this.targetContainerHostCredentialsBase64;
     }
 
@@ -89,7 +90,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetContainerHostResourceId", required=true)
       private final Output<String> targetContainerHostResourceId;
 
-    public Output<String> getTargetContainerHostResourceId() {
+    public Output<String> targetContainerHostResourceId() {
         return this.targetContainerHostResourceId;
     }
 
@@ -111,13 +112,13 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ControllerArgs() {
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.targetContainerHostCredentialsBase64 = Output.empty();
-        this.targetContainerHostResourceId = Output.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetContainerHostCredentialsBase64 = Codegen.empty();
+        this.targetContainerHostResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -165,7 +166,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -189,7 +190,7 @@ public final class ControllerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetContainerHostCredentialsBase64(Output<String> targetContainerHostCredentialsBase64) {

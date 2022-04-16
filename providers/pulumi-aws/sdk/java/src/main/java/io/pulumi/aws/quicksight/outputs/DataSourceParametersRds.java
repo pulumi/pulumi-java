@@ -32,14 +32,14 @@ public final class DataSourceParametersRds {
      * The database to which to connect.
      * 
     */
-    public String getDatabase() {
+    public String database() {
         return this.database;
     }
     /**
      * The instance ID to which to connect.
      * 
     */
-    public String getInstanceId() {
+    public String instanceId() {
         return this.instanceId;
     }
 

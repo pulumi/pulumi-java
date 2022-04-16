@@ -10,6 +10,7 @@ import io.pulumi.awsnative.backup.outputs.BackupVaultNotificationObjectType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,43 +24,43 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
     @Export(name="accessPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> accessPolicy;
 
-    public Output</* @Nullable */ Object> getAccessPolicy() {
+    public Output</* @Nullable */ Object> accessPolicy() {
         return this.accessPolicy;
     }
     @Export(name="backupVaultArn", type=String.class, parameters={})
     private Output<String> backupVaultArn;
 
-    public Output<String> getBackupVaultArn() {
+    public Output<String> backupVaultArn() {
         return this.backupVaultArn;
     }
     @Export(name="backupVaultName", type=String.class, parameters={})
     private Output<String> backupVaultName;
 
-    public Output<String> getBackupVaultName() {
+    public Output<String> backupVaultName() {
         return this.backupVaultName;
     }
     @Export(name="backupVaultTags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> backupVaultTags;
 
-    public Output</* @Nullable */ Object> getBackupVaultTags() {
+    public Output</* @Nullable */ Object> backupVaultTags() {
         return this.backupVaultTags;
     }
     @Export(name="encryptionKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyArn;
 
-    public Output</* @Nullable */ String> getEncryptionKeyArn() {
+    public Output</* @Nullable */ String> encryptionKeyArn() {
         return this.encryptionKeyArn;
     }
     @Export(name="lockConfiguration", type=BackupVaultLockConfigurationType.class, parameters={})
     private Output</* @Nullable */ BackupVaultLockConfigurationType> lockConfiguration;
 
-    public Output</* @Nullable */ BackupVaultLockConfigurationType> getLockConfiguration() {
+    public Output</* @Nullable */ BackupVaultLockConfigurationType> lockConfiguration() {
         return this.lockConfiguration;
     }
     @Export(name="notifications", type=BackupVaultNotificationObjectType.class, parameters={})
     private Output</* @Nullable */ BackupVaultNotificationObjectType> notifications;
 
-    public Output</* @Nullable */ BackupVaultNotificationObjectType> getNotifications() {
+    public Output</* @Nullable */ BackupVaultNotificationObjectType> notifications() {
         return this.notifications;
     }
 
@@ -85,7 +86,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackupVault(String name, @Nullable BackupVaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:backup:BackupVault", name, args == null ? BackupVaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:backup:BackupVault", name, args == null ? BackupVaultArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackupVault(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

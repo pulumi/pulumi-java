@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SecurityScanConfigArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigState;
@@ -64,7 +65,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SecurityScanConfigAuthentication> getAuthentication() {
+    public Output</* @Nullable */ SecurityScanConfigAuthentication> authentication() {
         return this.authentication;
     }
     /**
@@ -80,7 +81,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/security-scanner/docs/excluded-urls
      * 
      */
-    public Output</* @Nullable */ List<String>> getBlacklistPatterns() {
+    public Output</* @Nullable */ List<String>> blacklistPatterns() {
         return this.blacklistPatterns;
     }
     /**
@@ -94,7 +95,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * @return The user provider display name of the ScanConfig.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -112,7 +113,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Possible values are `ENABLED` and `DISABLED`.
      * 
      */
-    public Output</* @Nullable */ String> getExportToSecurityCommandCenter() {
+    public Output</* @Nullable */ String> exportToSecurityCommandCenter() {
         return this.exportToSecurityCommandCenter;
     }
     /**
@@ -128,7 +129,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Defaults to 15.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxQps() {
+    public Output</* @Nullable */ Integer> maxQps() {
         return this.maxQps;
     }
     /**
@@ -142,7 +143,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * @return A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -158,7 +159,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -174,7 +175,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SecurityScanConfigSchedule> getSchedule() {
+    public Output</* @Nullable */ SecurityScanConfigSchedule> schedule() {
         return this.schedule;
     }
     /**
@@ -188,7 +189,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * @return The starting URLs from which the scanner finds site pages.
      * 
      */
-    public Output<List<String>> getStartingUrls() {
+    public Output<List<String>> startingUrls() {
         return this.startingUrls;
     }
     /**
@@ -204,7 +205,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Each value may be one of `APP_ENGINE` and `COMPUTE`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTargetPlatforms() {
+    public Output</* @Nullable */ List<String>> targetPlatforms() {
         return this.targetPlatforms;
     }
     /**
@@ -222,7 +223,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
      * 
      */
-    public Output</* @Nullable */ String> getUserAgent() {
+    public Output</* @Nullable */ String> userAgent() {
         return this.userAgent;
     }
 
@@ -248,7 +249,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityScanConfig(String name, SecurityScanConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/securityScanConfig:SecurityScanConfig", name, args == null ? SecurityScanConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/securityScanConfig:SecurityScanConfig", name, args == null ? SecurityScanConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecurityScanConfig(String name, Output<String> id, @Nullable SecurityScanConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

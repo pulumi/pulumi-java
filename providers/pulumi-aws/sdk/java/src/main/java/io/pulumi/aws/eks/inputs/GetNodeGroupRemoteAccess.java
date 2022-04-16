@@ -20,7 +20,7 @@ public final class GetNodeGroupRemoteAccess extends io.pulumi.resources.InvokeAr
     @Import(name="ec2SshKey", required=true)
       private final String ec2SshKey;
 
-    public String getEc2SshKey() {
+    public String ec2SshKey() {
         return this.ec2SshKey;
     }
 
@@ -31,7 +31,7 @@ public final class GetNodeGroupRemoteAccess extends io.pulumi.resources.InvokeAr
     @Import(name="sourceSecurityGroupIds", required=true)
       private final List<String> sourceSecurityGroupIds;
 
-    public List<String> getSourceSecurityGroupIds() {
+    public List<String> sourceSecurityGroupIds() {
         return this.sourceSecurityGroupIds;
     }
 

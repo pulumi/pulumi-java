@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
     @Import(name="input")
       private final @Nullable Output<String> input;
 
-    public Output<String> getInput() {
-        return this.input == null ? Output.empty() : this.input;
+    public Output<String> input() {
+        return this.input == null ? Codegen.empty() : this.input;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs(
@@ -44,8 +45,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs() {
-        this.input = Output.empty();
-        this.name = Output.empty();
+        this.input = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
             return this;
         }
         public Builder input(@Nullable String input) {
-            this.input = Output.ofNullable(input);
+            this.input = Codegen.ofNullable(input);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -83,7 +84,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersStepFunctionsPar
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersStepFunctionsParametersArgs(input, name);

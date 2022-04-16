@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
     @Import(name="defaultEmailOption")
       private final @Nullable Output<String> defaultEmailOption;
 
-    public Output<String> getDefaultEmailOption() {
-        return this.defaultEmailOption == null ? Output.empty() : this.defaultEmailOption;
+    public Output<String> defaultEmailOption() {
+        return this.defaultEmailOption == null ? Codegen.empty() : this.defaultEmailOption;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
     @Import(name="emailMessage")
       private final @Nullable Output<String> emailMessage;
 
-    public Output<String> getEmailMessage() {
-        return this.emailMessage == null ? Output.empty() : this.emailMessage;
+    public Output<String> emailMessage() {
+        return this.emailMessage == null ? Codegen.empty() : this.emailMessage;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
     @Import(name="emailMessageByLink")
       private final @Nullable Output<String> emailMessageByLink;
 
-    public Output<String> getEmailMessageByLink() {
-        return this.emailMessageByLink == null ? Output.empty() : this.emailMessageByLink;
+    public Output<String> emailMessageByLink() {
+        return this.emailMessageByLink == null ? Codegen.empty() : this.emailMessageByLink;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
     @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;
 
-    public Output<String> getEmailSubject() {
-        return this.emailSubject == null ? Output.empty() : this.emailSubject;
+    public Output<String> emailSubject() {
+        return this.emailSubject == null ? Codegen.empty() : this.emailSubject;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
     @Import(name="emailSubjectByLink")
       private final @Nullable Output<String> emailSubjectByLink;
 
-    public Output<String> getEmailSubjectByLink() {
-        return this.emailSubjectByLink == null ? Output.empty() : this.emailSubjectByLink;
+    public Output<String> emailSubjectByLink() {
+        return this.emailSubjectByLink == null ? Codegen.empty() : this.emailSubjectByLink;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
     @Import(name="smsMessage")
       private final @Nullable Output<String> smsMessage;
 
-    public Output<String> getSmsMessage() {
-        return this.smsMessage == null ? Output.empty() : this.smsMessage;
+    public Output<String> smsMessage() {
+        return this.smsMessage == null ? Codegen.empty() : this.smsMessage;
     }
 
     public UserPoolVerificationMessageTemplateArgs(
@@ -96,12 +97,12 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
     }
 
     private UserPoolVerificationMessageTemplateArgs() {
-        this.defaultEmailOption = Output.empty();
-        this.emailMessage = Output.empty();
-        this.emailMessageByLink = Output.empty();
-        this.emailSubject = Output.empty();
-        this.emailSubjectByLink = Output.empty();
-        this.smsMessage = Output.empty();
+        this.defaultEmailOption = Codegen.empty();
+        this.emailMessage = Codegen.empty();
+        this.emailMessageByLink = Codegen.empty();
+        this.emailSubject = Codegen.empty();
+        this.emailSubjectByLink = Codegen.empty();
+        this.smsMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
             return this;
         }
         public Builder defaultEmailOption(@Nullable String defaultEmailOption) {
-            this.defaultEmailOption = Output.ofNullable(defaultEmailOption);
+            this.defaultEmailOption = Codegen.ofNullable(defaultEmailOption);
             return this;
         }
         public Builder emailMessage(@Nullable Output<String> emailMessage) {
@@ -147,7 +148,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
             return this;
         }
         public Builder emailMessage(@Nullable String emailMessage) {
-            this.emailMessage = Output.ofNullable(emailMessage);
+            this.emailMessage = Codegen.ofNullable(emailMessage);
             return this;
         }
         public Builder emailMessageByLink(@Nullable Output<String> emailMessageByLink) {
@@ -155,7 +156,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
             return this;
         }
         public Builder emailMessageByLink(@Nullable String emailMessageByLink) {
-            this.emailMessageByLink = Output.ofNullable(emailMessageByLink);
+            this.emailMessageByLink = Codegen.ofNullable(emailMessageByLink);
             return this;
         }
         public Builder emailSubject(@Nullable Output<String> emailSubject) {
@@ -163,7 +164,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
             return this;
         }
         public Builder emailSubject(@Nullable String emailSubject) {
-            this.emailSubject = Output.ofNullable(emailSubject);
+            this.emailSubject = Codegen.ofNullable(emailSubject);
             return this;
         }
         public Builder emailSubjectByLink(@Nullable Output<String> emailSubjectByLink) {
@@ -171,7 +172,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
             return this;
         }
         public Builder emailSubjectByLink(@Nullable String emailSubjectByLink) {
-            this.emailSubjectByLink = Output.ofNullable(emailSubjectByLink);
+            this.emailSubjectByLink = Codegen.ofNullable(emailSubjectByLink);
             return this;
         }
         public Builder smsMessage(@Nullable Output<String> smsMessage) {
@@ -179,7 +180,7 @@ public final class UserPoolVerificationMessageTemplateArgs extends io.pulumi.res
             return this;
         }
         public Builder smsMessage(@Nullable String smsMessage) {
-            this.smsMessage = Output.ofNullable(smsMessage);
+            this.smsMessage = Codegen.ofNullable(smsMessage);
             return this;
         }        public UserPoolVerificationMessageTemplateArgs build() {
             return new UserPoolVerificationMessageTemplateArgs(defaultEmailOption, emailMessage, emailMessageByLink, emailSubject, emailSubjectByLink, smsMessage);

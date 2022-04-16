@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class VirtualServiceSpecGetArgs extends io.pulumi.resources.Resourc
     @Import(name="provider")
       private final @Nullable Output<VirtualServiceSpecProviderGetArgs> provider;
 
-    public Output<VirtualServiceSpecProviderGetArgs> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+    public Output<VirtualServiceSpecProviderGetArgs> provider() {
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     public VirtualServiceSpecGetArgs(@Nullable Output<VirtualServiceSpecProviderGetArgs> provider) {
@@ -30,7 +31,7 @@ public final class VirtualServiceSpecGetArgs extends io.pulumi.resources.Resourc
     }
 
     private VirtualServiceSpecGetArgs() {
-        this.provider = Output.empty();
+        this.provider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class VirtualServiceSpecGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder provider(@Nullable VirtualServiceSpecProviderGetArgs provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }        public VirtualServiceSpecGetArgs build() {
             return new VirtualServiceSpecGetArgs(provider);

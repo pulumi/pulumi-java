@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CloudFunctionEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public CloudFunctionEndpointArgs(@Nullable Output<String> uri) {
@@ -34,7 +35,7 @@ public final class CloudFunctionEndpointArgs extends io.pulumi.resources.Resourc
     }
 
     private CloudFunctionEndpointArgs() {
-        this.uri = Output.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CloudFunctionEndpointArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public CloudFunctionEndpointArgs build() {
             return new CloudFunctionEndpointArgs(uri);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerinstance.enums.GpuSku;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -38,7 +39,7 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
       private final Output<Either<String,GpuSku>> sku;
 
-    public Output<Either<String,GpuSku>> getSku() {
+    public Output<Either<String,GpuSku>> sku() {
         return this.sku;
     }
 
@@ -50,8 +51,8 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GpuResourceArgs() {
-        this.count = Output.empty();
-        this.sku = Output.empty();
+        this.count = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {

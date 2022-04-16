@@ -10,6 +10,7 @@ import io.pulumi.aws.ecr.outputs.RegistryScanningConfigurationRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @return The registry ID the scanning configuration applies to.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -55,7 +56,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @return One or multiple blocks specifying scanning rules to determine which repository filters are used and at what frequency scanning will occur. See below for schema.
      * 
      */
-    public Output</* @Nullable */ List<RegistryScanningConfigurationRule>> getRules() {
+    public Output</* @Nullable */ List<RegistryScanningConfigurationRule>> rules() {
         return this.rules;
     }
     /**
@@ -69,7 +70,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @return the scanning type to set for the registry. Can be either `ENHANCED` or `BASIC`.
      * 
      */
-    public Output<String> getScanType() {
+    public Output<String> scanType() {
         return this.scanType;
     }
 
@@ -95,7 +96,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public RegistryScanningConfiguration(String name, RegistryScanningConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration", name, args == null ? RegistryScanningConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration", name, args == null ? RegistryScanningConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegistryScanningConfiguration(String name, Output<String> id, @Nullable RegistryScanningConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicelinker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
     @Import(name="authType", required=true)
       private final Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType;
     }
 
@@ -34,7 +35,7 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
     }
 
     private SystemAssignedIdentityAuthInfoArgs() {
-        this.authType = Output.empty();
+        this.authType = Codegen.empty();
     }
 
     public static Builder builder() {

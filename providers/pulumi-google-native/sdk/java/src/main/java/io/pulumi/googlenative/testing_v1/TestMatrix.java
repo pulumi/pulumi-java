@@ -6,6 +6,7 @@ package io.pulumi.googlenative.testing_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.testing_v1.TestMatrixArgs;
 import io.pulumi.googlenative.testing_v1.outputs.ClientInfoResponse;
@@ -39,7 +40,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return Information about the client which invoked the test.
      * 
      */
-    public Output<ClientInfoResponse> getClientInfo() {
+    public Output<ClientInfoResponse> clientInfo() {
         return this.clientInfo;
     }
     /**
@@ -53,7 +54,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return The devices the tests are being executed on.
      * 
      */
-    public Output<EnvironmentMatrixResponse> getEnvironmentMatrix() {
+    public Output<EnvironmentMatrixResponse> environmentMatrix() {
         return this.environmentMatrix;
     }
     /**
@@ -67,7 +68,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return If true, only a single attempt at most will be made to run each execution/shard in the matrix. Flaky test attempts are not affected. Normally, 2 or more attempts are made if a potential infrastructure issue is detected. This feature is for latency sensitive workloads. The incidence of execution failures may be significantly greater for fail-fast matrices and support is more limited because of that expectation.
      * 
      */
-    public Output<Boolean> getFailFast() {
+    public Output<Boolean> failFast() {
         return this.failFast;
     }
     /**
@@ -81,7 +82,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return The number of times a TestExecution should be re-attempted if one or more of its test cases fail for any reason. The maximum number of reruns allowed is 10. Default is 0, which implies no reruns.
      * 
      */
-    public Output<Integer> getFlakyTestAttempts() {
+    public Output<Integer> flakyTestAttempts() {
         return this.flakyTestAttempts;
     }
     /**
@@ -95,7 +96,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return Describes why the matrix is considered invalid. Only useful for matrices in the INVALID state.
      * 
      */
-    public Output<String> getInvalidMatrixDetails() {
+    public Output<String> invalidMatrixDetails() {
         return this.invalidMatrixDetails;
     }
     /**
@@ -109,7 +110,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return Output Only. The overall outcome of the test. Only set when the test matrix state is FINISHED.
      * 
      */
-    public Output<String> getOutcomeSummary() {
+    public Output<String> outcomeSummary() {
         return this.outcomeSummary;
     }
     /**
@@ -123,7 +124,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return The cloud project that owns the test matrix.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -137,7 +138,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return Where the results for the matrix are written.
      * 
      */
-    public Output<ResultStorageResponse> getResultStorage() {
+    public Output<ResultStorageResponse> resultStorage() {
         return this.resultStorage;
     }
     /**
@@ -151,7 +152,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return Indicates the current progress of the test matrix.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -165,7 +166,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return The list of test executions that the service creates for this matrix.
      * 
      */
-    public Output<List<TestExecutionResponse>> getTestExecutions() {
+    public Output<List<TestExecutionResponse>> testExecutions() {
         return this.testExecutions;
     }
     /**
@@ -179,7 +180,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return Unique id set by the service.
      * 
      */
-    public Output<String> getTestMatrixId() {
+    public Output<String> testMatrixId() {
         return this.testMatrixId;
     }
     /**
@@ -193,7 +194,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return How to run the test.
      * 
      */
-    public Output<TestSpecificationResponse> getTestSpecification() {
+    public Output<TestSpecificationResponse> testSpecification() {
         return this.testSpecification;
     }
     /**
@@ -207,7 +208,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @return The time this test matrix was initially created.
      * 
      */
-    public Output<String> getTimestamp() {
+    public Output<String> timestamp() {
         return this.timestamp;
     }
 
@@ -233,7 +234,7 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TestMatrix(String name, TestMatrixArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:testing/v1:TestMatrix", name, args == null ? TestMatrixArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:testing/v1:TestMatrix", name, args == null ? TestMatrixArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TestMatrix(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

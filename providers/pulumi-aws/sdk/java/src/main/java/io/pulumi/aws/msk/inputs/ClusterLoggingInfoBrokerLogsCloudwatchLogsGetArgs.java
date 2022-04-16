@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs extends io.
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -33,8 +34,8 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs extends io.
     @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;
 
-    public Output<String> getLogGroup() {
-        return this.logGroup == null ? Output.empty() : this.logGroup;
+    public Output<String> logGroup() {
+        return this.logGroup == null ? Codegen.empty() : this.logGroup;
     }
 
     public ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs(
@@ -45,8 +46,8 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs extends io.
     }
 
     private ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs() {
-        this.enabled = Output.empty();
-        this.logGroup = Output.empty();
+        this.enabled = Codegen.empty();
+        this.logGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs extends io.
             return this;
         }
         public Builder logGroup(@Nullable String logGroup) {
-            this.logGroup = Output.ofNullable(logGroup);
+            this.logGroup = Codegen.ofNullable(logGroup);
             return this;
         }        public ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs build() {
             return new ClusterLoggingInfoBrokerLogsCloudwatchLogsGetArgs(enabled, logGroup);

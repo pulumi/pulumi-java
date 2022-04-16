@@ -42,28 +42,28 @@ public final class GetVpnGatewayResult {
         this.tags = tags;
     }
 
-    public String getAmazonSideAsn() {
+    public String amazonSideAsn() {
         return this.amazonSideAsn;
     }
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getAttachedVpcId() {
+    public String attachedVpcId() {
         return this.attachedVpcId;
     }
-    public String getAvailabilityZone() {
+    public String availabilityZone() {
         return this.availabilityZone;
     }
-    public List<GetVpnGatewayFilter> getFilters() {
+    public List<GetVpnGatewayFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getState() {
+    public String state() {
         return this.state;
     }
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secureBootEnabled")
       private final @Nullable Output<Boolean> secureBootEnabled;
 
-    public Output<Boolean> getSecureBootEnabled() {
-        return this.secureBootEnabled == null ? Output.empty() : this.secureBootEnabled;
+    public Output<Boolean> secureBootEnabled() {
+        return this.secureBootEnabled == null ? Codegen.empty() : this.secureBootEnabled;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vTpmEnabled")
       private final @Nullable Output<Boolean> vTpmEnabled;
 
-    public Output<Boolean> getVTpmEnabled() {
-        return this.vTpmEnabled == null ? Output.empty() : this.vTpmEnabled;
+    public Output<Boolean> vTpmEnabled() {
+        return this.vTpmEnabled == null ? Codegen.empty() : this.vTpmEnabled;
     }
 
     public UefiSettingsArgs(
@@ -48,8 +49,8 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UefiSettingsArgs() {
-        this.secureBootEnabled = Output.empty();
-        this.vTpmEnabled = Output.empty();
+        this.secureBootEnabled = Codegen.empty();
+        this.vTpmEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secureBootEnabled(@Nullable Boolean secureBootEnabled) {
-            this.secureBootEnabled = Output.ofNullable(secureBootEnabled);
+            this.secureBootEnabled = Codegen.ofNullable(secureBootEnabled);
             return this;
         }
         public Builder vTpmEnabled(@Nullable Output<Boolean> vTpmEnabled) {
@@ -87,7 +88,7 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vTpmEnabled(@Nullable Boolean vTpmEnabled) {
-            this.vTpmEnabled = Output.ofNullable(vTpmEnabled);
+            this.vTpmEnabled = Codegen.ofNullable(vTpmEnabled);
             return this;
         }        public UefiSettingsArgs build() {
             return new UefiSettingsArgs(secureBootEnabled, vTpmEnabled);

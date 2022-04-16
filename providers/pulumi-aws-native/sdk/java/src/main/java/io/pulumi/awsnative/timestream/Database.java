@@ -9,6 +9,7 @@ import io.pulumi.awsnative.timestream.outputs.DatabaseTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public class Database extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -36,7 +37,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The name for the database. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the database name.
      * 
      */
-    public Output</* @Nullable */ String> getDatabaseName() {
+    public Output</* @Nullable */ String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -50,7 +51,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -64,7 +65,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<DatabaseTag>> getTags() {
+    public Output</* @Nullable */ List<DatabaseTag>> tags() {
         return this.tags;
     }
 
@@ -90,7 +91,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Database(String name, @Nullable DatabaseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:timestream:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:timestream:Database", name, args == null ? DatabaseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Database(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

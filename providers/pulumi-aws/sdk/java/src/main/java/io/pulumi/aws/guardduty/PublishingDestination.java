@@ -9,6 +9,7 @@ import io.pulumi.aws.guardduty.inputs.PublishingDestinationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * @return The bucket arn and prefix under which the findings get exported. Bucket-ARN is required, the prefix is optional and will be `AWSLogs/[Account-ID]/GuardDuty/[Region]/` if not provided
      * 
      */
-    public Output<String> getDestinationArn() {
+    public Output<String> destinationArn() {
         return this.destinationArn;
     }
     /**
@@ -53,7 +54,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * @return Currently there is only "S3" available as destination type which is also the default value
      * 
      */
-    public Output</* @Nullable */ String> getDestinationType() {
+    public Output</* @Nullable */ String> destinationType() {
         return this.destinationType;
     }
     /**
@@ -67,7 +68,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * @return The detector ID of the GuardDuty.
      * 
      */
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
     /**
@@ -81,7 +82,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * @return The ARN of the KMS key used to encrypt GuardDuty findings. GuardDuty enforces this to be encrypted.
      * 
      */
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
 
@@ -107,7 +108,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublishingDestination(String name, PublishingDestinationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:guardduty/publishingDestination:PublishingDestination", name, args == null ? PublishingDestinationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:guardduty/publishingDestination:PublishingDestination", name, args == null ? PublishingDestinationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublishingDestination(String name, Output<String> id, @Nullable PublishingDestinationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

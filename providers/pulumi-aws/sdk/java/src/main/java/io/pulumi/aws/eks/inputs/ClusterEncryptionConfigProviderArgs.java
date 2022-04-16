@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ClusterEncryptionConfigProviderArgs extends io.pulumi.resourc
     @Import(name="keyArn", required=true)
       private final Output<String> keyArn;
 
-    public Output<String> getKeyArn() {
+    public Output<String> keyArn() {
         return this.keyArn;
     }
 
@@ -29,7 +30,7 @@ public final class ClusterEncryptionConfigProviderArgs extends io.pulumi.resourc
     }
 
     private ClusterEncryptionConfigProviderArgs() {
-        this.keyArn = Output.empty();
+        this.keyArn = Codegen.empty();
     }
 
     public static Builder builder() {

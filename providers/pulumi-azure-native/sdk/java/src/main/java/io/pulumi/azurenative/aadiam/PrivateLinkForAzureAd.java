@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return Flag indicating whether all tenants are allowed
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllTenants() {
+    public Output</* @Nullable */ Boolean> allTenants() {
         return this.allTenants;
     }
     /**
@@ -57,7 +58,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return Name of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return Guid of the owner tenant
      * 
      */
-    public Output</* @Nullable */ String> getOwnerTenantId() {
+    public Output</* @Nullable */ String> ownerTenantId() {
         return this.ownerTenantId;
     }
     /**
@@ -85,7 +86,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return Name of the resource group
      * 
      */
-    public Output</* @Nullable */ String> getResourceGroup() {
+    public Output</* @Nullable */ String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -99,7 +100,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return Name of the private link policy resource
      * 
      */
-    public Output</* @Nullable */ String> getPropResourceName() {
+    public Output</* @Nullable */ String> resourceName() {
         return this.resourceName;
     }
     /**
@@ -113,7 +114,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return Subscription Identifier
      * 
      */
-    public Output</* @Nullable */ String> getSubscriptionId() {
+    public Output</* @Nullable */ String> subscriptionId() {
         return this.subscriptionId;
     }
     /**
@@ -127,7 +128,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +142,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return The list of tenantIds.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTenants() {
+    public Output</* @Nullable */ List<String>> tenants() {
         return this.tenants;
     }
     /**
@@ -155,7 +156,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @return Type of this resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -181,7 +182,7 @@ public class PrivateLinkForAzureAd extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PrivateLinkForAzureAd(String name, PrivateLinkForAzureAdArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:aadiam:privateLinkForAzureAd", name, args == null ? PrivateLinkForAzureAdArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:aadiam:privateLinkForAzureAd", name, args == null ? PrivateLinkForAzureAdArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PrivateLinkForAzureAd(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

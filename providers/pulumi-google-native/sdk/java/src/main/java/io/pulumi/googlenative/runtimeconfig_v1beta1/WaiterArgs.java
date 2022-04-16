@@ -5,6 +5,7 @@ package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.EndConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configId", required=true)
       private final Output<String> configId;
 
-    public Output<String> getConfigId() {
+    public Output<String> configId() {
         return this.configId;
     }
 
@@ -29,8 +30,8 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failure")
       private final @Nullable Output<EndConditionArgs> failure;
 
-    public Output<EndConditionArgs> getFailure() {
-        return this.failure == null ? Output.empty() : this.failure;
+    public Output<EndConditionArgs> failure() {
+        return this.failure == null ? Codegen.empty() : this.failure;
     }
 
     /**
@@ -40,22 +41,22 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="success")
       private final @Nullable Output<EndConditionArgs> success;
 
-    public Output<EndConditionArgs> getSuccess() {
-        return this.success == null ? Output.empty() : this.success;
+    public Output<EndConditionArgs> success() {
+        return this.success == null ? Codegen.empty() : this.success;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public WaiterArgs(
@@ -98,13 +99,13 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WaiterArgs() {
-        this.configId = Output.empty();
-        this.failure = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.success = Output.empty();
-        this.timeout = Output.empty();
+        this.configId = Codegen.empty();
+        this.failure = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.success = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failure(@Nullable EndConditionArgs failure) {
-            this.failure = Output.ofNullable(failure);
+            this.failure = Codegen.ofNullable(failure);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -160,7 +161,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -168,7 +169,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -176,7 +177,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder success(@Nullable Output<EndConditionArgs> success) {
@@ -184,7 +185,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder success(@Nullable EndConditionArgs success) {
-            this.success = Output.ofNullable(success);
+            this.success = Codegen.ofNullable(success);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -192,7 +193,7 @@ public final class WaiterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public WaiterArgs build() {
             return new WaiterArgs(configId, failure, name, project, requestId, success, timeout);

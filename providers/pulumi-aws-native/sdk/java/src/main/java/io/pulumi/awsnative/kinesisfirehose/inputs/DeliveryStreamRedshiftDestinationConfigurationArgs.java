@@ -11,6 +11,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRedshiftRetryOpt
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,77 +24,77 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
-    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
-        return this.cloudWatchLoggingOptions == null ? Output.empty() : this.cloudWatchLoggingOptions;
+    public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions() {
+        return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
     }
 
     @Import(name="clusterJDBCURL", required=true)
       private final Output<String> clusterJDBCURL;
 
-    public Output<String> getClusterJDBCURL() {
+    public Output<String> clusterJDBCURL() {
         return this.clusterJDBCURL;
     }
 
     @Import(name="copyCommand", required=true)
       private final Output<DeliveryStreamCopyCommandArgs> copyCommand;
 
-    public Output<DeliveryStreamCopyCommandArgs> getCopyCommand() {
+    public Output<DeliveryStreamCopyCommandArgs> copyCommand() {
         return this.copyCommand;
     }
 
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
-    public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
-        return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
+    public Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration() {
+        return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
     @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions;
 
-    public Output<DeliveryStreamRedshiftRetryOptionsArgs> getRetryOptions() {
-        return this.retryOptions == null ? Output.empty() : this.retryOptions;
+    public Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions() {
+        return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
     }
 
     @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
+    public Output<String> roleARN() {
         return this.roleARN;
     }
 
     @Import(name="s3BackupConfiguration")
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
-        return this.s3BackupConfiguration == null ? Output.empty() : this.s3BackupConfiguration;
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration() {
+        return this.s3BackupConfiguration == null ? Codegen.empty() : this.s3BackupConfiguration;
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode;
 
-    public Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> getS3BackupMode() {
-        return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
+    public Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode() {
+        return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
     @Import(name="s3Configuration", required=true)
       private final Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration;
 
-    public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3Configuration() {
+    public Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration() {
         return this.s3Configuration;
     }
 
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -123,17 +124,17 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
     }
 
     private DeliveryStreamRedshiftDestinationConfigurationArgs() {
-        this.cloudWatchLoggingOptions = Output.empty();
-        this.clusterJDBCURL = Output.empty();
-        this.copyCommand = Output.empty();
-        this.password = Output.empty();
-        this.processingConfiguration = Output.empty();
-        this.retryOptions = Output.empty();
-        this.roleARN = Output.empty();
-        this.s3BackupConfiguration = Output.empty();
-        this.s3BackupMode = Output.empty();
-        this.s3Configuration = Output.empty();
-        this.username = Output.empty();
+        this.cloudWatchLoggingOptions = Codegen.empty();
+        this.clusterJDBCURL = Codegen.empty();
+        this.copyCommand = Codegen.empty();
+        this.password = Codegen.empty();
+        this.processingConfiguration = Codegen.empty();
+        this.retryOptions = Codegen.empty();
+        this.roleARN = Codegen.empty();
+        this.s3BackupConfiguration = Codegen.empty();
+        this.s3BackupMode = Codegen.empty();
+        this.s3Configuration = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
             return this;
         }
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = Output.ofNullable(cloudWatchLoggingOptions);
+            this.cloudWatchLoggingOptions = Codegen.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
         public Builder clusterJDBCURL(Output<String> clusterJDBCURL) {
@@ -213,7 +214,7 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
             return this;
         }
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Output.ofNullable(processingConfiguration);
+            this.processingConfiguration = Codegen.ofNullable(processingConfiguration);
             return this;
         }
         public Builder retryOptions(@Nullable Output<DeliveryStreamRedshiftRetryOptionsArgs> retryOptions) {
@@ -221,7 +222,7 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
             return this;
         }
         public Builder retryOptions(@Nullable DeliveryStreamRedshiftRetryOptionsArgs retryOptions) {
-            this.retryOptions = Output.ofNullable(retryOptions);
+            this.retryOptions = Codegen.ofNullable(retryOptions);
             return this;
         }
         public Builder roleARN(Output<String> roleARN) {
@@ -237,7 +238,7 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
             return this;
         }
         public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3BackupConfiguration) {
-            this.s3BackupConfiguration = Output.ofNullable(s3BackupConfiguration);
+            this.s3BackupConfiguration = Codegen.ofNullable(s3BackupConfiguration);
             return this;
         }
         public Builder s3BackupMode(@Nullable Output<DeliveryStreamRedshiftDestinationConfigurationS3BackupMode> s3BackupMode) {
@@ -245,7 +246,7 @@ public final class DeliveryStreamRedshiftDestinationConfigurationArgs extends io
             return this;
         }
         public Builder s3BackupMode(@Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode) {
-            this.s3BackupMode = Output.ofNullable(s3BackupMode);
+            this.s3BackupMode = Codegen.ofNullable(s3BackupMode);
             return this;
         }
         public Builder s3Configuration(Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {

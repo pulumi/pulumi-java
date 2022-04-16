@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionDevicePolicyOsConstraintGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
     @Import(name="allowedDeviceManagementLevels")
       private final @Nullable Output<List<String>> allowedDeviceManagementLevels;
 
-    public Output<List<String>> getAllowedDeviceManagementLevels() {
-        return this.allowedDeviceManagementLevels == null ? Output.empty() : this.allowedDeviceManagementLevels;
+    public Output<List<String>> allowedDeviceManagementLevels() {
+        return this.allowedDeviceManagementLevels == null ? Codegen.empty() : this.allowedDeviceManagementLevels;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
     @Import(name="allowedEncryptionStatuses")
       private final @Nullable Output<List<String>> allowedEncryptionStatuses;
 
-    public Output<List<String>> getAllowedEncryptionStatuses() {
-        return this.allowedEncryptionStatuses == null ? Output.empty() : this.allowedEncryptionStatuses;
+    public Output<List<String>> allowedEncryptionStatuses() {
+        return this.allowedEncryptionStatuses == null ? Codegen.empty() : this.allowedEncryptionStatuses;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
     @Import(name="osConstraints")
       private final @Nullable Output<List<AccessLevelConditionDevicePolicyOsConstraintGetArgs>> osConstraints;
 
-    public Output<List<AccessLevelConditionDevicePolicyOsConstraintGetArgs>> getOsConstraints() {
-        return this.osConstraints == null ? Output.empty() : this.osConstraints;
+    public Output<List<AccessLevelConditionDevicePolicyOsConstraintGetArgs>> osConstraints() {
+        return this.osConstraints == null ? Codegen.empty() : this.osConstraints;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
     @Import(name="requireAdminApproval")
       private final @Nullable Output<Boolean> requireAdminApproval;
 
-    public Output<Boolean> getRequireAdminApproval() {
-        return this.requireAdminApproval == null ? Output.empty() : this.requireAdminApproval;
+    public Output<Boolean> requireAdminApproval() {
+        return this.requireAdminApproval == null ? Codegen.empty() : this.requireAdminApproval;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
     @Import(name="requireCorpOwned")
       private final @Nullable Output<Boolean> requireCorpOwned;
 
-    public Output<Boolean> getRequireCorpOwned() {
-        return this.requireCorpOwned == null ? Output.empty() : this.requireCorpOwned;
+    public Output<Boolean> requireCorpOwned() {
+        return this.requireCorpOwned == null ? Codegen.empty() : this.requireCorpOwned;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
     @Import(name="requireScreenLock")
       private final @Nullable Output<Boolean> requireScreenLock;
 
-    public Output<Boolean> getRequireScreenLock() {
-        return this.requireScreenLock == null ? Output.empty() : this.requireScreenLock;
+    public Output<Boolean> requireScreenLock() {
+        return this.requireScreenLock == null ? Codegen.empty() : this.requireScreenLock;
     }
 
     public AccessLevelConditionDevicePolicyGetArgs(
@@ -106,12 +107,12 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
     }
 
     private AccessLevelConditionDevicePolicyGetArgs() {
-        this.allowedDeviceManagementLevels = Output.empty();
-        this.allowedEncryptionStatuses = Output.empty();
-        this.osConstraints = Output.empty();
-        this.requireAdminApproval = Output.empty();
-        this.requireCorpOwned = Output.empty();
-        this.requireScreenLock = Output.empty();
+        this.allowedDeviceManagementLevels = Codegen.empty();
+        this.allowedEncryptionStatuses = Codegen.empty();
+        this.osConstraints = Codegen.empty();
+        this.requireAdminApproval = Codegen.empty();
+        this.requireCorpOwned = Codegen.empty();
+        this.requireScreenLock = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
             return this;
         }
         public Builder allowedDeviceManagementLevels(@Nullable List<String> allowedDeviceManagementLevels) {
-            this.allowedDeviceManagementLevels = Output.ofNullable(allowedDeviceManagementLevels);
+            this.allowedDeviceManagementLevels = Codegen.ofNullable(allowedDeviceManagementLevels);
             return this;
         }
         public Builder allowedDeviceManagementLevels(String... allowedDeviceManagementLevels) {
@@ -160,7 +161,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
             return this;
         }
         public Builder allowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
-            this.allowedEncryptionStatuses = Output.ofNullable(allowedEncryptionStatuses);
+            this.allowedEncryptionStatuses = Codegen.ofNullable(allowedEncryptionStatuses);
             return this;
         }
         public Builder allowedEncryptionStatuses(String... allowedEncryptionStatuses) {
@@ -171,7 +172,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
             return this;
         }
         public Builder osConstraints(@Nullable List<AccessLevelConditionDevicePolicyOsConstraintGetArgs> osConstraints) {
-            this.osConstraints = Output.ofNullable(osConstraints);
+            this.osConstraints = Codegen.ofNullable(osConstraints);
             return this;
         }
         public Builder osConstraints(AccessLevelConditionDevicePolicyOsConstraintGetArgs... osConstraints) {
@@ -182,7 +183,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
             return this;
         }
         public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
-            this.requireAdminApproval = Output.ofNullable(requireAdminApproval);
+            this.requireAdminApproval = Codegen.ofNullable(requireAdminApproval);
             return this;
         }
         public Builder requireCorpOwned(@Nullable Output<Boolean> requireCorpOwned) {
@@ -190,7 +191,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
             return this;
         }
         public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
-            this.requireCorpOwned = Output.ofNullable(requireCorpOwned);
+            this.requireCorpOwned = Codegen.ofNullable(requireCorpOwned);
             return this;
         }
         public Builder requireScreenLock(@Nullable Output<Boolean> requireScreenLock) {
@@ -198,7 +199,7 @@ public final class AccessLevelConditionDevicePolicyGetArgs extends io.pulumi.res
             return this;
         }
         public Builder requireScreenLock(@Nullable Boolean requireScreenLock) {
-            this.requireScreenLock = Output.ofNullable(requireScreenLock);
+            this.requireScreenLock = Codegen.ofNullable(requireScreenLock);
             return this;
         }        public AccessLevelConditionDevicePolicyGetArgs build() {
             return new AccessLevelConditionDevicePolicyGetArgs(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenLock);

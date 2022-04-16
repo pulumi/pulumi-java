@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -32,8 +33,8 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="commentId")
       private final @Nullable Output<String> commentId;
 
-    public Output<String> getCommentId() {
-        return this.commentId == null ? Output.empty() : this.commentId;
+    public Output<String> commentId() {
+        return this.commentId == null ? Codegen.empty() : this.commentId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+    public Output<String> createdDate() {
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="issueId", required=true)
       private final Output<String> issueId;
 
-    public Output<String> getIssueId() {
+    public Output<String> issueId() {
         return this.issueId;
     }
 
@@ -65,7 +66,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,7 +77,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -87,7 +88,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 
@@ -98,7 +99,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -122,14 +123,14 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ApiIssueCommentArgs() {
-        this.apiId = Output.empty();
-        this.commentId = Output.empty();
-        this.createdDate = Output.empty();
-        this.issueId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.text = Output.empty();
-        this.userId = Output.empty();
+        this.apiId = Codegen.empty();
+        this.commentId = Codegen.empty();
+        this.createdDate = Codegen.empty();
+        this.issueId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.text = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder commentId(@Nullable String commentId) {
-            this.commentId = Output.ofNullable(commentId);
+            this.commentId = Codegen.ofNullable(commentId);
             return this;
         }
         public Builder createdDate(@Nullable Output<String> createdDate) {
@@ -187,7 +188,7 @@ public final class ApiIssueCommentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder issueId(Output<String> issueId) {

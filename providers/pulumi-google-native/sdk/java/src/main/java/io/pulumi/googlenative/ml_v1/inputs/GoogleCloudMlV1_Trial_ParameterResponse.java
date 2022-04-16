@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
     @Import(name="floatValue", required=true)
       private final Double floatValue;
 
-    public Double getFloatValue() {
+    public Double floatValue() {
         return this.floatValue;
     }
 
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
     @Import(name="intValue", required=true)
       private final String intValue;
 
-    public String getIntValue() {
+    public String intValue() {
         return this.intValue;
     }
 
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
     @Import(name="parameter", required=true)
       private final String parameter;
 
-    public String getParameter() {
+    public String parameter() {
         return this.parameter;
     }
 
@@ -57,7 +57,7 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse extends io.pulumi.res
     @Import(name="stringValue", required=true)
       private final String stringValue;
 
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 

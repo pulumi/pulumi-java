@@ -41,21 +41,21 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
      * Retention policy applied to snapshots created by this resource policy.
      * 
     */
-    public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse getRetentionPolicy() {
+    public ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy() {
         return this.retentionPolicy;
     }
     /**
      * A Vm Maintenance Policy specifies what kind of infrastructure maintenance we are allowed to perform on this VM and when. Schedule that is applied to disks covered by this policy.
      * 
     */
-    public ResourcePolicySnapshotSchedulePolicyScheduleResponse getSchedule() {
+    public ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule() {
         return this.schedule;
     }
     /**
      * Properties with which snapshots are created such as labels, encryption keys.
      * 
     */
-    public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse getSnapshotProperties() {
+    public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties() {
         return this.snapshotProperties;
     }
 

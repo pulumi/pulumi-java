@@ -34,14 +34,14 @@ public final class CustomErrorResponse {
      * The list of custom error rules that apply to individual API messages. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
     */
-    public List<CustomErrorRuleResponse> getRules() {
+    public List<CustomErrorRuleResponse> rules() {
         return this.rules;
     }
     /**
      * The list of custom error detail types, e.g. 'google.foo.v1.CustomError'.
      * 
     */
-    public List<String> getTypes() {
+    public List<String> types() {
         return this.types;
     }
 

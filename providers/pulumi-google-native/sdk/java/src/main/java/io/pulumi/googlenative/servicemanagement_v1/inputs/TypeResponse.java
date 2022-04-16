@@ -27,7 +27,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="fields", required=true)
       private final List<FieldResponse> fields;
 
-    public List<FieldResponse> getFields() {
+    public List<FieldResponse> fields() {
         return this.fields;
     }
 
@@ -38,7 +38,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -49,7 +49,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="oneofs", required=true)
       private final List<String> oneofs;
 
-    public List<String> getOneofs() {
+    public List<String> oneofs() {
         return this.oneofs;
     }
 
@@ -60,7 +60,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
-    public List<OptionResponse> getOptions() {
+    public List<OptionResponse> options() {
         return this.options;
     }
 
@@ -71,7 +71,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="sourceContext", required=true)
       private final SourceContextResponse sourceContext;
 
-    public SourceContextResponse getSourceContext() {
+    public SourceContextResponse sourceContext() {
         return this.sourceContext;
     }
 
@@ -82,7 +82,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="syntax", required=true)
       private final String syntax;
 
-    public String getSyntax() {
+    public String syntax() {
         return this.syntax;
     }
 

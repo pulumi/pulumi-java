@@ -5,6 +5,7 @@ package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class DeviceStateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryData")
       private final @Nullable Output<String> binaryData;
 
-    public Output<String> getBinaryData() {
-        return this.binaryData == null ? Output.empty() : this.binaryData;
+    public Output<String> binaryData() {
+        return this.binaryData == null ? Codegen.empty() : this.binaryData;
     }
 
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public DeviceStateArgs(
@@ -36,8 +37,8 @@ public final class DeviceStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceStateArgs() {
-        this.binaryData = Output.empty();
-        this.updateTime = Output.empty();
+        this.binaryData = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class DeviceStateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder binaryData(@Nullable String binaryData) {
-            this.binaryData = Output.ofNullable(binaryData);
+            this.binaryData = Codegen.ofNullable(binaryData);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -75,7 +76,7 @@ public final class DeviceStateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public DeviceStateArgs build() {
             return new DeviceStateArgs(binaryData, updateTime);

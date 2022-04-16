@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return They inventory type.
      * 
      */
-    public Output<String> getInventoryType() {
+    public Output<String> inventoryType() {
         return this.inventoryType;
     }
     /**
@@ -56,7 +57,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -70,7 +71,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the tracked resource id corresponding to the inventory resource.
      * 
      */
-    public Output</* @Nullable */ String> getManagedResourceId() {
+    public Output</* @Nullable */ String> managedResourceId() {
         return this.managedResourceId;
     }
     /**
@@ -84,7 +85,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the vCenter Managed Object name for the inventory item.
      * 
      */
-    public Output</* @Nullable */ String> getMoName() {
+    public Output</* @Nullable */ String> moName() {
         return this.moName;
     }
     /**
@@ -98,7 +99,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the MoRef (Managed Object Reference) ID for the inventory item.
      * 
      */
-    public Output</* @Nullable */ String> getMoRefId() {
+    public Output</* @Nullable */ String> moRefId() {
         return this.moRefId;
     }
     /**
@@ -112,7 +113,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -126,7 +127,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -140,7 +141,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -154,7 +155,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -180,7 +181,7 @@ public class InventoryItem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InventoryItem(String name, InventoryItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:connectedvmwarevsphere:InventoryItem", name, args == null ? InventoryItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:connectedvmwarevsphere:InventoryItem", name, args == null ? InventoryItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InventoryItem(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

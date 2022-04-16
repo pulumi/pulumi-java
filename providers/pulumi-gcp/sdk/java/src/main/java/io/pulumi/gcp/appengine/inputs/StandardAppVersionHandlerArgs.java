@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerScriptArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerStaticFilesArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="authFailAction")
       private final @Nullable Output<String> authFailAction;
 
-    public Output<String> getAuthFailAction() {
-        return this.authFailAction == null ? Output.empty() : this.authFailAction;
+    public Output<String> authFailAction() {
+        return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="login")
       private final @Nullable Output<String> login;
 
-    public Output<String> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+    public Output<String> login() {
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="redirectHttpResponseCode")
       private final @Nullable Output<String> redirectHttpResponseCode;
 
-    public Output<String> getRedirectHttpResponseCode() {
-        return this.redirectHttpResponseCode == null ? Output.empty() : this.redirectHttpResponseCode;
+    public Output<String> redirectHttpResponseCode() {
+        return this.redirectHttpResponseCode == null ? Codegen.empty() : this.redirectHttpResponseCode;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="script")
       private final @Nullable Output<StandardAppVersionHandlerScriptArgs> script;
 
-    public Output<StandardAppVersionHandlerScriptArgs> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+    public Output<StandardAppVersionHandlerScriptArgs> script() {
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="securityLevel")
       private final @Nullable Output<String> securityLevel;
 
-    public Output<String> getSecurityLevel() {
-        return this.securityLevel == null ? Output.empty() : this.securityLevel;
+    public Output<String> securityLevel() {
+        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="staticFiles")
       private final @Nullable Output<StandardAppVersionHandlerStaticFilesArgs> staticFiles;
 
-    public Output<StandardAppVersionHandlerStaticFilesArgs> getStaticFiles() {
-        return this.staticFiles == null ? Output.empty() : this.staticFiles;
+    public Output<StandardAppVersionHandlerStaticFilesArgs> staticFiles() {
+        return this.staticFiles == null ? Codegen.empty() : this.staticFiles;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     @Import(name="urlRegex")
       private final @Nullable Output<String> urlRegex;
 
-    public Output<String> getUrlRegex() {
-        return this.urlRegex == null ? Output.empty() : this.urlRegex;
+    public Output<String> urlRegex() {
+        return this.urlRegex == null ? Codegen.empty() : this.urlRegex;
     }
 
     public StandardAppVersionHandlerArgs(
@@ -119,13 +120,13 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     }
 
     private StandardAppVersionHandlerArgs() {
-        this.authFailAction = Output.empty();
-        this.login = Output.empty();
-        this.redirectHttpResponseCode = Output.empty();
-        this.script = Output.empty();
-        this.securityLevel = Output.empty();
-        this.staticFiles = Output.empty();
-        this.urlRegex = Output.empty();
+        this.authFailAction = Codegen.empty();
+        this.login = Codegen.empty();
+        this.redirectHttpResponseCode = Codegen.empty();
+        this.script = Codegen.empty();
+        this.securityLevel = Codegen.empty();
+        this.staticFiles = Codegen.empty();
+        this.urlRegex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder authFailAction(@Nullable String authFailAction) {
-            this.authFailAction = Output.ofNullable(authFailAction);
+            this.authFailAction = Codegen.ofNullable(authFailAction);
             return this;
         }
         public Builder login(@Nullable Output<String> login) {
@@ -173,7 +174,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder login(@Nullable String login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder redirectHttpResponseCode(@Nullable Output<String> redirectHttpResponseCode) {
@@ -181,7 +182,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder redirectHttpResponseCode(@Nullable String redirectHttpResponseCode) {
-            this.redirectHttpResponseCode = Output.ofNullable(redirectHttpResponseCode);
+            this.redirectHttpResponseCode = Codegen.ofNullable(redirectHttpResponseCode);
             return this;
         }
         public Builder script(@Nullable Output<StandardAppVersionHandlerScriptArgs> script) {
@@ -189,7 +190,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder script(@Nullable StandardAppVersionHandlerScriptArgs script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }
         public Builder securityLevel(@Nullable Output<String> securityLevel) {
@@ -197,7 +198,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder securityLevel(@Nullable String securityLevel) {
-            this.securityLevel = Output.ofNullable(securityLevel);
+            this.securityLevel = Codegen.ofNullable(securityLevel);
             return this;
         }
         public Builder staticFiles(@Nullable Output<StandardAppVersionHandlerStaticFilesArgs> staticFiles) {
@@ -205,7 +206,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder staticFiles(@Nullable StandardAppVersionHandlerStaticFilesArgs staticFiles) {
-            this.staticFiles = Output.ofNullable(staticFiles);
+            this.staticFiles = Codegen.ofNullable(staticFiles);
             return this;
         }
         public Builder urlRegex(@Nullable Output<String> urlRegex) {
@@ -213,7 +214,7 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder urlRegex(@Nullable String urlRegex) {
-            this.urlRegex = Output.ofNullable(urlRegex);
+            this.urlRegex = Codegen.ofNullable(urlRegex);
             return this;
         }        public StandardAppVersionHandlerArgs build() {
             return new StandardAppVersionHandlerArgs(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);

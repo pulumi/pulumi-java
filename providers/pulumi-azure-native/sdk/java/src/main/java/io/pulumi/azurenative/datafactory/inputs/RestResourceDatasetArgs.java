@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,8 +32,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="additionalHeaders")
       private final @Nullable Output<Object> additionalHeaders;
 
-    public Output<Object> getAdditionalHeaders() {
-        return this.additionalHeaders == null ? Output.empty() : this.additionalHeaders;
+    public Output<Object> additionalHeaders() {
+        return this.additionalHeaders == null ? Codegen.empty() : this.additionalHeaders;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+    public Output<DatasetFolderArgs> folder() {
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -86,8 +87,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="paginationRules")
       private final @Nullable Output<Object> paginationRules;
 
-    public Output<Object> getPaginationRules() {
-        return this.paginationRules == null ? Output.empty() : this.paginationRules;
+    public Output<Object> paginationRules() {
+        return this.paginationRules == null ? Codegen.empty() : this.paginationRules;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="relativeUrl")
       private final @Nullable Output<Object> relativeUrl;
 
-    public Output<Object> getRelativeUrl() {
-        return this.relativeUrl == null ? Output.empty() : this.relativeUrl;
+    public Output<Object> relativeUrl() {
+        return this.relativeUrl == null ? Codegen.empty() : this.relativeUrl;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="requestBody")
       private final @Nullable Output<Object> requestBody;
 
-    public Output<Object> getRequestBody() {
-        return this.requestBody == null ? Output.empty() : this.requestBody;
+    public Output<Object> requestBody() {
+        return this.requestBody == null ? Codegen.empty() : this.requestBody;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="requestMethod")
       private final @Nullable Output<Object> requestMethod;
 
-    public Output<Object> getRequestMethod() {
-        return this.requestMethod == null ? Output.empty() : this.requestMethod;
+    public Output<Object> requestMethod() {
+        return this.requestMethod == null ? Codegen.empty() : this.requestMethod;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+    public Output<Object> schema() {
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
-        return this.structure == null ? Output.empty() : this.structure;
+    public Output<Object> structure() {
+        return this.structure == null ? Codegen.empty() : this.structure;
     }
 
     /**
@@ -164,7 +165,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -198,19 +199,19 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
     }
 
     private RestResourceDatasetArgs() {
-        this.additionalHeaders = Output.empty();
-        this.annotations = Output.empty();
-        this.description = Output.empty();
-        this.folder = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.paginationRules = Output.empty();
-        this.parameters = Output.empty();
-        this.relativeUrl = Output.empty();
-        this.requestBody = Output.empty();
-        this.requestMethod = Output.empty();
-        this.schema = Output.empty();
-        this.structure = Output.empty();
-        this.type = Output.empty();
+        this.additionalHeaders = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.paginationRules = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.relativeUrl = Codegen.empty();
+        this.requestBody = Codegen.empty();
+        this.requestMethod = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.structure = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -262,7 +263,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder additionalHeaders(@Nullable Object additionalHeaders) {
-            this.additionalHeaders = Output.ofNullable(additionalHeaders);
+            this.additionalHeaders = Codegen.ofNullable(additionalHeaders);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -270,7 +271,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -281,7 +282,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
@@ -289,7 +290,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -305,7 +306,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder paginationRules(@Nullable Object paginationRules) {
-            this.paginationRules = Output.ofNullable(paginationRules);
+            this.paginationRules = Codegen.ofNullable(paginationRules);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -313,7 +314,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder relativeUrl(@Nullable Output<Object> relativeUrl) {
@@ -321,7 +322,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder relativeUrl(@Nullable Object relativeUrl) {
-            this.relativeUrl = Output.ofNullable(relativeUrl);
+            this.relativeUrl = Codegen.ofNullable(relativeUrl);
             return this;
         }
         public Builder requestBody(@Nullable Output<Object> requestBody) {
@@ -329,7 +330,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder requestBody(@Nullable Object requestBody) {
-            this.requestBody = Output.ofNullable(requestBody);
+            this.requestBody = Codegen.ofNullable(requestBody);
             return this;
         }
         public Builder requestMethod(@Nullable Output<Object> requestMethod) {
@@ -337,7 +338,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder requestMethod(@Nullable Object requestMethod) {
-            this.requestMethod = Output.ofNullable(requestMethod);
+            this.requestMethod = Codegen.ofNullable(requestMethod);
             return this;
         }
         public Builder schema(@Nullable Output<Object> schema) {
@@ -345,7 +346,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schema(@Nullable Object schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder structure(@Nullable Output<Object> structure) {
@@ -353,7 +354,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder structure(@Nullable Object structure) {
-            this.structure = Output.ofNullable(structure);
+            this.structure = Codegen.ofNullable(structure);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.inputs.ApiReferenceArgs;
 import io.pulumi.azurenative.web.inputs.ConnectionStatusDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,8 +23,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="api")
       private final @Nullable Output<ApiReferenceArgs> api;
 
-    public Output<ApiReferenceArgs> getApi() {
-        return this.api == null ? Output.empty() : this.api;
+    public Output<ApiReferenceArgs> api() {
+        return this.api == null ? Codegen.empty() : this.api;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="changedTime")
       private final @Nullable Output<String> changedTime;
 
-    public Output<String> getChangedTime() {
-        return this.changedTime == null ? Output.empty() : this.changedTime;
+    public Output<String> changedTime() {
+        return this.changedTime == null ? Codegen.empty() : this.changedTime;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+    public Output<String> createdTime() {
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="customParameterValues")
       private final @Nullable Output<Map<String,String>> customParameterValues;
 
-    public Output<Map<String,String>> getCustomParameterValues() {
-        return this.customParameterValues == null ? Output.empty() : this.customParameterValues;
+    public Output<Map<String,String>> customParameterValues() {
+        return this.customParameterValues == null ? Codegen.empty() : this.customParameterValues;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="nonSecretParameterValues")
       private final @Nullable Output<Map<String,String>> nonSecretParameterValues;
 
-    public Output<Map<String,String>> getNonSecretParameterValues() {
-        return this.nonSecretParameterValues == null ? Output.empty() : this.nonSecretParameterValues;
+    public Output<Map<String,String>> nonSecretParameterValues() {
+        return this.nonSecretParameterValues == null ? Codegen.empty() : this.nonSecretParameterValues;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="parameterValues")
       private final @Nullable Output<Map<String,String>> parameterValues;
 
-    public Output<Map<String,String>> getParameterValues() {
-        return this.parameterValues == null ? Output.empty() : this.parameterValues;
+    public Output<Map<String,String>> parameterValues() {
+        return this.parameterValues == null ? Codegen.empty() : this.parameterValues;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="statuses")
       private final @Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses;
 
-    public Output<List<ConnectionStatusDefinitionArgs>> getStatuses() {
-        return this.statuses == null ? Output.empty() : this.statuses;
+    public Output<List<ConnectionStatusDefinitionArgs>> statuses() {
+        return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     @Import(name="testLinks")
       private final @Nullable Output<List<ApiConnectionTestLinkArgs>> testLinks;
 
-    public Output<List<ApiConnectionTestLinkArgs>> getTestLinks() {
-        return this.testLinks == null ? Output.empty() : this.testLinks;
+    public Output<List<ApiConnectionTestLinkArgs>> testLinks() {
+        return this.testLinks == null ? Codegen.empty() : this.testLinks;
     }
 
     public ApiConnectionDefinitionPropertiesArgs(
@@ -136,15 +137,15 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     }
 
     private ApiConnectionDefinitionPropertiesArgs() {
-        this.api = Output.empty();
-        this.changedTime = Output.empty();
-        this.createdTime = Output.empty();
-        this.customParameterValues = Output.empty();
-        this.displayName = Output.empty();
-        this.nonSecretParameterValues = Output.empty();
-        this.parameterValues = Output.empty();
-        this.statuses = Output.empty();
-        this.testLinks = Output.empty();
+        this.api = Codegen.empty();
+        this.changedTime = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.customParameterValues = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.nonSecretParameterValues = Codegen.empty();
+        this.parameterValues = Codegen.empty();
+        this.statuses = Codegen.empty();
+        this.testLinks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder api(@Nullable ApiReferenceArgs api) {
-            this.api = Output.ofNullable(api);
+            this.api = Codegen.ofNullable(api);
             return this;
         }
         public Builder changedTime(@Nullable Output<String> changedTime) {
@@ -196,7 +197,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder changedTime(@Nullable String changedTime) {
-            this.changedTime = Output.ofNullable(changedTime);
+            this.changedTime = Codegen.ofNullable(changedTime);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -204,7 +205,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder customParameterValues(@Nullable Output<Map<String,String>> customParameterValues) {
@@ -212,7 +213,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder customParameterValues(@Nullable Map<String,String> customParameterValues) {
-            this.customParameterValues = Output.ofNullable(customParameterValues);
+            this.customParameterValues = Codegen.ofNullable(customParameterValues);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -220,7 +221,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder nonSecretParameterValues(@Nullable Output<Map<String,String>> nonSecretParameterValues) {
@@ -228,7 +229,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder nonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
-            this.nonSecretParameterValues = Output.ofNullable(nonSecretParameterValues);
+            this.nonSecretParameterValues = Codegen.ofNullable(nonSecretParameterValues);
             return this;
         }
         public Builder parameterValues(@Nullable Output<Map<String,String>> parameterValues) {
@@ -236,7 +237,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder parameterValues(@Nullable Map<String,String> parameterValues) {
-            this.parameterValues = Output.ofNullable(parameterValues);
+            this.parameterValues = Codegen.ofNullable(parameterValues);
             return this;
         }
         public Builder statuses(@Nullable Output<List<ConnectionStatusDefinitionArgs>> statuses) {
@@ -244,7 +245,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder statuses(@Nullable List<ConnectionStatusDefinitionArgs> statuses) {
-            this.statuses = Output.ofNullable(statuses);
+            this.statuses = Codegen.ofNullable(statuses);
             return this;
         }
         public Builder statuses(ConnectionStatusDefinitionArgs... statuses) {
@@ -255,7 +256,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder testLinks(@Nullable List<ApiConnectionTestLinkArgs> testLinks) {
-            this.testLinks = Output.ofNullable(testLinks);
+            this.testLinks = Codegen.ofNullable(testLinks);
             return this;
         }
         public Builder testLinks(ApiConnectionTestLinkArgs... testLinks) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,21 +18,21 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
     @Import(name="copyOptions")
       private final @Nullable Output<String> copyOptions;
 
-    public Output<String> getCopyOptions() {
-        return this.copyOptions == null ? Output.empty() : this.copyOptions;
+    public Output<String> copyOptions() {
+        return this.copyOptions == null ? Codegen.empty() : this.copyOptions;
     }
 
     @Import(name="dataTableColumns")
       private final @Nullable Output<String> dataTableColumns;
 
-    public Output<String> getDataTableColumns() {
-        return this.dataTableColumns == null ? Output.empty() : this.dataTableColumns;
+    public Output<String> dataTableColumns() {
+        return this.dataTableColumns == null ? Codegen.empty() : this.dataTableColumns;
     }
 
     @Import(name="dataTableName", required=true)
       private final Output<String> dataTableName;
 
-    public Output<String> getDataTableName() {
+    public Output<String> dataTableName() {
         return this.dataTableName;
     }
 
@@ -45,9 +46,9 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
     }
 
     private DeliveryStreamCopyCommandArgs() {
-        this.copyOptions = Output.empty();
-        this.dataTableColumns = Output.empty();
-        this.dataTableName = Output.empty();
+        this.copyOptions = Codegen.empty();
+        this.dataTableColumns = Codegen.empty();
+        this.dataTableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder copyOptions(@Nullable String copyOptions) {
-            this.copyOptions = Output.ofNullable(copyOptions);
+            this.copyOptions = Codegen.ofNullable(copyOptions);
             return this;
         }
         public Builder dataTableColumns(@Nullable Output<String> dataTableColumns) {
@@ -87,7 +88,7 @@ public final class DeliveryStreamCopyCommandArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder dataTableColumns(@Nullable String dataTableColumns) {
-            this.dataTableColumns = Output.ofNullable(dataTableColumns);
+            this.dataTableColumns = Codegen.ofNullable(dataTableColumns);
             return this;
         }
         public Builder dataTableName(Output<String> dataTableName) {

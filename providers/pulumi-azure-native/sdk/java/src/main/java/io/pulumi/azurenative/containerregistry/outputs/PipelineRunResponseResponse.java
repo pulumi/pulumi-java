@@ -95,70 +95,70 @@ public final class PipelineRunResponseResponse {
      * The digest of the tar used to transfer the artifacts.
      * 
     */
-    public Optional<String> getCatalogDigest() {
+    public Optional<String> catalogDigest() {
         return Optional.ofNullable(this.catalogDigest);
     }
     /**
      * The time the pipeline run finished.
      * 
     */
-    public Optional<String> getFinishTime() {
+    public Optional<String> finishTime() {
         return Optional.ofNullable(this.finishTime);
     }
     /**
      * The artifacts imported in the pipeline run.
      * 
     */
-    public List<String> getImportedArtifacts() {
+    public List<String> importedArtifacts() {
         return this.importedArtifacts == null ? List.of() : this.importedArtifacts;
     }
     /**
      * The detailed error message for the pipeline run in the case of failure.
      * 
     */
-    public Optional<String> getPipelineRunErrorMessage() {
+    public Optional<String> pipelineRunErrorMessage() {
         return Optional.ofNullable(this.pipelineRunErrorMessage);
     }
     /**
      * The current progress of the copy operation.
      * 
     */
-    public Optional<ProgressPropertiesResponse> getProgress() {
+    public Optional<ProgressPropertiesResponse> progress() {
         return Optional.ofNullable(this.progress);
     }
     /**
      * The source of the pipeline run.
      * 
     */
-    public Optional<ImportPipelineSourcePropertiesResponse> getSource() {
+    public Optional<ImportPipelineSourcePropertiesResponse> source() {
         return Optional.ofNullable(this.source);
     }
     /**
      * The time the pipeline run started.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
     /**
      * The current status of the pipeline run.
      * 
     */
-    public Optional<String> getStatus() {
+    public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
      * The target of the pipeline run.
      * 
     */
-    public Optional<ExportPipelineTargetPropertiesResponse> getTarget() {
+    public Optional<ExportPipelineTargetPropertiesResponse> target() {
         return Optional.ofNullable(this.target);
     }
     /**
      * The trigger that caused the pipeline run.
      * 
     */
-    public Optional<PipelineTriggerDescriptorResponse> getTrigger() {
+    public Optional<PipelineTriggerDescriptorResponse> trigger() {
         return Optional.ofNullable(this.trigger);
     }
 

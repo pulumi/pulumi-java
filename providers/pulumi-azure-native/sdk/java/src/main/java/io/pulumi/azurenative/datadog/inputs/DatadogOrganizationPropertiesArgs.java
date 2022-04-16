@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
     @Import(name="apiKey")
       private final @Nullable Output<String> apiKey;
 
-    public Output<String> getApiKey() {
-        return this.apiKey == null ? Output.empty() : this.apiKey;
+    public Output<String> apiKey() {
+        return this.apiKey == null ? Codegen.empty() : this.apiKey;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
     @Import(name="applicationKey")
       private final @Nullable Output<String> applicationKey;
 
-    public Output<String> getApplicationKey() {
-        return this.applicationKey == null ? Output.empty() : this.applicationKey;
+    public Output<String> applicationKey() {
+        return this.applicationKey == null ? Codegen.empty() : this.applicationKey;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
     @Import(name="enterpriseAppId")
       private final @Nullable Output<String> enterpriseAppId;
 
-    public Output<String> getEnterpriseAppId() {
-        return this.enterpriseAppId == null ? Output.empty() : this.enterpriseAppId;
+    public Output<String> enterpriseAppId() {
+        return this.enterpriseAppId == null ? Codegen.empty() : this.enterpriseAppId;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
     @Import(name="linkingAuthCode")
       private final @Nullable Output<String> linkingAuthCode;
 
-    public Output<String> getLinkingAuthCode() {
-        return this.linkingAuthCode == null ? Output.empty() : this.linkingAuthCode;
+    public Output<String> linkingAuthCode() {
+        return this.linkingAuthCode == null ? Codegen.empty() : this.linkingAuthCode;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
     @Import(name="linkingClientId")
       private final @Nullable Output<String> linkingClientId;
 
-    public Output<String> getLinkingClientId() {
-        return this.linkingClientId == null ? Output.empty() : this.linkingClientId;
+    public Output<String> linkingClientId() {
+        return this.linkingClientId == null ? Codegen.empty() : this.linkingClientId;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
     @Import(name="redirectUri")
       private final @Nullable Output<String> redirectUri;
 
-    public Output<String> getRedirectUri() {
-        return this.redirectUri == null ? Output.empty() : this.redirectUri;
+    public Output<String> redirectUri() {
+        return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
     }
 
     public DatadogOrganizationPropertiesArgs(
@@ -100,12 +101,12 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
     }
 
     private DatadogOrganizationPropertiesArgs() {
-        this.apiKey = Output.empty();
-        this.applicationKey = Output.empty();
-        this.enterpriseAppId = Output.empty();
-        this.linkingAuthCode = Output.empty();
-        this.linkingClientId = Output.empty();
-        this.redirectUri = Output.empty();
+        this.apiKey = Codegen.empty();
+        this.applicationKey = Codegen.empty();
+        this.enterpriseAppId = Codegen.empty();
+        this.linkingAuthCode = Codegen.empty();
+        this.linkingClientId = Codegen.empty();
+        this.redirectUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = Output.ofNullable(apiKey);
+            this.apiKey = Codegen.ofNullable(apiKey);
             return this;
         }
         public Builder applicationKey(@Nullable Output<String> applicationKey) {
@@ -151,7 +152,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder applicationKey(@Nullable String applicationKey) {
-            this.applicationKey = Output.ofNullable(applicationKey);
+            this.applicationKey = Codegen.ofNullable(applicationKey);
             return this;
         }
         public Builder enterpriseAppId(@Nullable Output<String> enterpriseAppId) {
@@ -159,7 +160,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder enterpriseAppId(@Nullable String enterpriseAppId) {
-            this.enterpriseAppId = Output.ofNullable(enterpriseAppId);
+            this.enterpriseAppId = Codegen.ofNullable(enterpriseAppId);
             return this;
         }
         public Builder linkingAuthCode(@Nullable Output<String> linkingAuthCode) {
@@ -167,7 +168,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder linkingAuthCode(@Nullable String linkingAuthCode) {
-            this.linkingAuthCode = Output.ofNullable(linkingAuthCode);
+            this.linkingAuthCode = Codegen.ofNullable(linkingAuthCode);
             return this;
         }
         public Builder linkingClientId(@Nullable Output<String> linkingClientId) {
@@ -175,7 +176,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder linkingClientId(@Nullable String linkingClientId) {
-            this.linkingClientId = Output.ofNullable(linkingClientId);
+            this.linkingClientId = Codegen.ofNullable(linkingClientId);
             return this;
         }
         public Builder redirectUri(@Nullable Output<String> redirectUri) {
@@ -183,7 +184,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder redirectUri(@Nullable String redirectUri) {
-            this.redirectUri = Output.ofNullable(redirectUri);
+            this.redirectUri = Codegen.ofNullable(redirectUri);
             return this;
         }        public DatadogOrganizationPropertiesArgs build() {
             return new DatadogOrganizationPropertiesArgs(apiKey, applicationKey, enterpriseAppId, linkingAuthCode, linkingClientId, redirectUri);

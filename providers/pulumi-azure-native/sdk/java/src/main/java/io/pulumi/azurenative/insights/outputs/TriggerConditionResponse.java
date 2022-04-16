@@ -43,21 +43,21 @@ public final class TriggerConditionResponse {
      * Trigger condition for metric query rule
      * 
     */
-    public Optional<LogMetricTriggerResponse> getMetricTrigger() {
+    public Optional<LogMetricTriggerResponse> metricTrigger() {
         return Optional.ofNullable(this.metricTrigger);
     }
     /**
      * Result or count threshold based on which rule should be triggered.
      * 
     */
-    public Double getThreshold() {
+    public Double threshold() {
         return this.threshold;
     }
     /**
      * Evaluation operation for rule - 'GreaterThan' or 'LessThan.
      * 
     */
-    public String getThresholdOperator() {
+    public String thresholdOperator() {
         return this.thresholdOperator;
     }
 

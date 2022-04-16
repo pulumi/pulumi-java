@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
-        return this.period == null ? Output.empty() : this.period;
+    public Output<String> period() {
+        return this.period == null ? Codegen.empty() : this.period;
     }
 
     public AlertPolicyAlertStrategyNotificationRateLimitArgs(@Nullable Output<String> period) {
@@ -30,7 +31,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
     }
 
     private AlertPolicyAlertStrategyNotificationRateLimitArgs() {
-        this.period = Output.empty();
+        this.period = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimitArgs extends io.
             return this;
         }
         public Builder period(@Nullable String period) {
-            this.period = Output.ofNullable(period);
+            this.period = Codegen.ofNullable(period);
             return this;
         }        public AlertPolicyAlertStrategyNotificationRateLimitArgs build() {
             return new AlertPolicyAlertStrategyNotificationRateLimitArgs(period);

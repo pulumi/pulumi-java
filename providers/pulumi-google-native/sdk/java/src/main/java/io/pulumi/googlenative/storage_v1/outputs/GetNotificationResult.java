@@ -76,56 +76,56 @@ public final class GetNotificationResult {
      * An optional list of additional attributes to attach to each Cloud PubSub message published for this notification subscription.
      * 
     */
-    public Map<String,String> getCustomAttributes() {
+    public Map<String,String> customAttributes() {
         return this.customAttributes;
     }
     /**
      * HTTP 1.1 Entity tag for this subscription notification.
      * 
     */
-    public String getEtag() {
+    public String etag() {
         return this.etag;
     }
     /**
      * If present, only send notifications about listed event types. If empty, sent notifications for all event types.
      * 
     */
-    public List<String> getEventTypes() {
+    public List<String> eventTypes() {
         return this.eventTypes;
     }
     /**
      * The kind of item this is. For notifications, this is always storage#notification.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * If present, only apply this notification configuration to object names that begin with this prefix.
      * 
     */
-    public String getObjectNamePrefix() {
+    public String objectNamePrefix() {
         return this.objectNamePrefix;
     }
     /**
      * The desired content of the Payload.
      * 
     */
-    public String getPayloadFormat() {
+    public String payloadFormat() {
         return this.payloadFormat;
     }
     /**
      * The canonical URL of this notification.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
     /**
      * The Cloud PubSub topic to which this subscription publishes. Formatted as: '//pubsub.googleapis.com/projects/{project-identifier}/topics/{my-topic}'
      * 
     */
-    public String getTopic() {
+    public String topic() {
         return this.topic;
     }
 

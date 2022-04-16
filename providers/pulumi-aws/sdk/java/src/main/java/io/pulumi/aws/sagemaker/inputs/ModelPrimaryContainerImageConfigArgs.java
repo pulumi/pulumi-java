@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ModelPrimaryContainerImageConfigArgs extends io.pulumi.resour
     @Import(name="repositoryAccessMode", required=true)
       private final Output<String> repositoryAccessMode;
 
-    public Output<String> getRepositoryAccessMode() {
+    public Output<String> repositoryAccessMode() {
         return this.repositoryAccessMode;
     }
 
@@ -29,7 +30,7 @@ public final class ModelPrimaryContainerImageConfigArgs extends io.pulumi.resour
     }
 
     private ModelPrimaryContainerImageConfigArgs() {
-        this.repositoryAccessMode = Output.empty();
+        this.repositoryAccessMode = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -40,7 +41,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -54,7 +55,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +69,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @return Connection strings.
      * 
      */
-    public Output<Map<String,ConnStringValueTypePairResponse>> getProperties() {
+    public Output<Map<String,ConnStringValueTypePairResponse>> properties() {
         return this.properties;
     }
     /**
@@ -82,7 +83,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -108,7 +109,7 @@ public class WebAppConnectionStringsSlot extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppConnectionStringsSlot(String name, WebAppConnectionStringsSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppConnectionStringsSlot", name, args == null ? WebAppConnectionStringsSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppConnectionStringsSlot", name, args == null ? WebAppConnectionStringsSlotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppConnectionStringsSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

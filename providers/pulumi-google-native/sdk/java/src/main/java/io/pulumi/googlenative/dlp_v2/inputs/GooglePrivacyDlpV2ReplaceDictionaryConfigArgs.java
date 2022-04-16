@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulu
     @Import(name="wordList")
       private final @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
-    public Output<GooglePrivacyDlpV2WordListArgs> getWordList() {
-        return this.wordList == null ? Output.empty() : this.wordList;
+    public Output<GooglePrivacyDlpV2WordListArgs> wordList() {
+        return this.wordList == null ? Codegen.empty() : this.wordList;
     }
 
     public GooglePrivacyDlpV2ReplaceDictionaryConfigArgs(@Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulu
     }
 
     private GooglePrivacyDlpV2ReplaceDictionaryConfigArgs() {
-        this.wordList = Output.empty();
+        this.wordList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends io.pulu
             return this;
         }
         public Builder wordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
-            this.wordList = Output.ofNullable(wordList);
+            this.wordList = Codegen.ofNullable(wordList);
             return this;
         }        public GooglePrivacyDlpV2ReplaceDictionaryConfigArgs build() {
             return new GooglePrivacyDlpV2ReplaceDictionaryConfigArgs(wordList);

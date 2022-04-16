@@ -12,6 +12,7 @@ import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,13 +34,13 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * @return The time at which the schedule was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     @Export(name="endpointName", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointName;
 
-    public Output</* @Nullable */ String> getEndpointName() {
+    public Output</* @Nullable */ String> endpointName() {
         return this.endpointName;
     }
     /**
@@ -53,7 +54,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * @return Contains the reason a monitoring job failed, if it failed.
      * 
      */
-    public Output</* @Nullable */ String> getFailureReason() {
+    public Output</* @Nullable */ String> failureReason() {
         return this.failureReason;
     }
     /**
@@ -67,7 +68,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * @return A timestamp that indicates the last time the monitoring job was modified.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -81,7 +82,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * @return Describes metadata on the last execution to run, if there was one.
      * 
      */
-    public Output</* @Nullable */ MonitoringScheduleMonitoringExecutionSummary> getLastMonitoringExecutionSummary() {
+    public Output</* @Nullable */ MonitoringScheduleMonitoringExecutionSummary> lastMonitoringExecutionSummary() {
         return this.lastMonitoringExecutionSummary;
     }
     /**
@@ -95,19 +96,19 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the monitoring schedule.
      * 
      */
-    public Output<String> getMonitoringScheduleArn() {
+    public Output<String> monitoringScheduleArn() {
         return this.monitoringScheduleArn;
     }
     @Export(name="monitoringScheduleConfig", type=MonitoringScheduleConfig.class, parameters={})
     private Output<MonitoringScheduleConfig> monitoringScheduleConfig;
 
-    public Output<MonitoringScheduleConfig> getMonitoringScheduleConfig() {
+    public Output<MonitoringScheduleConfig> monitoringScheduleConfig() {
         return this.monitoringScheduleConfig;
     }
     @Export(name="monitoringScheduleName", type=String.class, parameters={})
     private Output<String> monitoringScheduleName;
 
-    public Output<String> getMonitoringScheduleName() {
+    public Output<String> monitoringScheduleName() {
         return this.monitoringScheduleName;
     }
     /**
@@ -121,7 +122,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * @return The status of a schedule job.
      * 
      */
-    public Output</* @Nullable */ MonitoringScheduleStatus> getMonitoringScheduleStatus() {
+    public Output</* @Nullable */ MonitoringScheduleStatus> monitoringScheduleStatus() {
         return this.monitoringScheduleStatus;
     }
     /**
@@ -135,7 +136,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<MonitoringScheduleTag>> getTags() {
+    public Output</* @Nullable */ List<MonitoringScheduleTag>> tags() {
         return this.tags;
     }
 
@@ -161,7 +162,7 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MonitoringSchedule(String name, MonitoringScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:MonitoringSchedule", name, args == null ? MonitoringScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:MonitoringSchedule", name, args == null ? MonitoringScheduleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MonitoringSchedule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

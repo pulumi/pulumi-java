@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+    public Output<String> accountName() {
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     @Import(name="autoKeyConfigUrl")
       private final @Nullable Output<String> autoKeyConfigUrl;
 
-    public Output<String> getAutoKeyConfigUrl() {
-        return this.autoKeyConfigUrl == null ? Output.empty() : this.autoKeyConfigUrl;
+    public Output<String> autoKeyConfigUrl() {
+        return this.autoKeyConfigUrl == null ? Codegen.empty() : this.autoKeyConfigUrl;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     @Import(name="fluentdConfigUrl")
       private final @Nullable Output<Object> fluentdConfigUrl;
 
-    public Output<Object> getFluentdConfigUrl() {
-        return this.fluentdConfigUrl == null ? Output.empty() : this.fluentdConfigUrl;
+    public Output<Object> fluentdConfigUrl() {
+        return this.fluentdConfigUrl == null ? Codegen.empty() : this.fluentdConfigUrl;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -82,8 +83,8 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     @Import(name="maConfigUrl")
       private final @Nullable Output<String> maConfigUrl;
 
-    public Output<String> getMaConfigUrl() {
-        return this.maConfigUrl == null ? Output.empty() : this.maConfigUrl;
+    public Output<String> maConfigUrl() {
+        return this.maConfigUrl == null ? Codegen.empty() : this.maConfigUrl;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public AzureInternalMonitoringPipelineSinkDescriptionArgs(
@@ -128,14 +129,14 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
     }
 
     private AzureInternalMonitoringPipelineSinkDescriptionArgs() {
-        this.accountName = Output.empty();
-        this.autoKeyConfigUrl = Output.empty();
-        this.description = Output.empty();
-        this.fluentdConfigUrl = Output.empty();
-        this.kind = Output.empty();
-        this.maConfigUrl = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
+        this.accountName = Codegen.empty();
+        this.autoKeyConfigUrl = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fluentdConfigUrl = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.maConfigUrl = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder autoKeyConfigUrl(@Nullable Output<String> autoKeyConfigUrl) {
@@ -185,7 +186,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
             return this;
         }
         public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
-            this.autoKeyConfigUrl = Output.ofNullable(autoKeyConfigUrl);
+            this.autoKeyConfigUrl = Codegen.ofNullable(autoKeyConfigUrl);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -193,7 +194,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fluentdConfigUrl(@Nullable Output<Object> fluentdConfigUrl) {
@@ -201,7 +202,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
             return this;
         }
         public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
-            this.fluentdConfigUrl = Output.ofNullable(fluentdConfigUrl);
+            this.fluentdConfigUrl = Codegen.ofNullable(fluentdConfigUrl);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -217,7 +218,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
             return this;
         }
         public Builder maConfigUrl(@Nullable String maConfigUrl) {
-            this.maConfigUrl = Output.ofNullable(maConfigUrl);
+            this.maConfigUrl = Codegen.ofNullable(maConfigUrl);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -225,7 +226,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -233,7 +234,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionArgs extends io
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public AzureInternalMonitoringPipelineSinkDescriptionArgs build() {
             return new AzureInternalMonitoringPipelineSinkDescriptionArgs(accountName, autoKeyConfigUrl, description, fluentdConfigUrl, kind, maConfigUrl, name, namespace);

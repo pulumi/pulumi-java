@@ -8,6 +8,7 @@ import io.pulumi.azurenative.resources.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind", required=true)
       private final Output<Either<String,ScriptType>> kind;
 
-    public Output<Either<String,ScriptType>> getKind() {
+    public Output<Either<String,ScriptType>> kind() {
         return this.kind;
     }
 
@@ -47,8 +48,8 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -69,8 +70,8 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
-    public Output<String> getScriptName() {
-        return this.scriptName == null ? Output.empty() : this.scriptName;
+    public Output<String> scriptName() {
+        return this.scriptName == null ? Codegen.empty() : this.scriptName;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeploymentScriptArgs(
@@ -100,12 +101,12 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeploymentScriptArgs() {
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scriptName = Output.empty();
-        this.tags = Output.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scriptName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(Output<Either<String,ScriptType>> kind) {
@@ -159,7 +160,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -175,7 +176,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Output.ofNullable(scriptName);
+            this.scriptName = Codegen.ofNullable(scriptName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -183,7 +184,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DeploymentScriptArgs build() {
             return new DeploymentScriptArgs(identity, kind, location, resourceGroupName, scriptName, tags);

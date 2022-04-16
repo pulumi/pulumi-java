@@ -7,6 +7,7 @@ import io.pulumi.azurenative.healthcareapis.enums.ManagedServiceIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
     @Import(name="type")
       private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
-    public Output<Either<String,ManagedServiceIdentityType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,ManagedServiceIdentityType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ServiceManagedIdentityIdentityArgs(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
@@ -36,7 +37,7 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
     }
 
     private ServiceManagedIdentityIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
             return this;
         }
         public Builder type(@Nullable Either<String,ManagedServiceIdentityType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ServiceManagedIdentityIdentityArgs build() {
             return new ServiceManagedIdentityIdentityArgs(type);

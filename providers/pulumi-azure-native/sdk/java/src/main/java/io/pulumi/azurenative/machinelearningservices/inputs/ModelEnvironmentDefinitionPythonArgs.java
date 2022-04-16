@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     @Import(name="baseCondaEnvironment")
       private final @Nullable Output<String> baseCondaEnvironment;
 
-    public Output<String> getBaseCondaEnvironment() {
-        return this.baseCondaEnvironment == null ? Output.empty() : this.baseCondaEnvironment;
+    public Output<String> baseCondaEnvironment() {
+        return this.baseCondaEnvironment == null ? Codegen.empty() : this.baseCondaEnvironment;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     @Import(name="condaDependencies")
       private final @Nullable Output<Object> condaDependencies;
 
-    public Output<Object> getCondaDependencies() {
-        return this.condaDependencies == null ? Output.empty() : this.condaDependencies;
+    public Output<Object> condaDependencies() {
+        return this.condaDependencies == null ? Codegen.empty() : this.condaDependencies;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     @Import(name="interpreterPath")
       private final @Nullable Output<String> interpreterPath;
 
-    public Output<String> getInterpreterPath() {
-        return this.interpreterPath == null ? Output.empty() : this.interpreterPath;
+    public Output<String> interpreterPath() {
+        return this.interpreterPath == null ? Codegen.empty() : this.interpreterPath;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     @Import(name="userManagedDependencies")
       private final @Nullable Output<Boolean> userManagedDependencies;
 
-    public Output<Boolean> getUserManagedDependencies() {
-        return this.userManagedDependencies == null ? Output.empty() : this.userManagedDependencies;
+    public Output<Boolean> userManagedDependencies() {
+        return this.userManagedDependencies == null ? Codegen.empty() : this.userManagedDependencies;
     }
 
     public ModelEnvironmentDefinitionPythonArgs(
@@ -72,10 +73,10 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     }
 
     private ModelEnvironmentDefinitionPythonArgs() {
-        this.baseCondaEnvironment = Output.empty();
-        this.condaDependencies = Output.empty();
-        this.interpreterPath = Output.empty();
-        this.userManagedDependencies = Output.empty();
+        this.baseCondaEnvironment = Codegen.empty();
+        this.condaDependencies = Codegen.empty();
+        this.interpreterPath = Codegen.empty();
+        this.userManagedDependencies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
             return this;
         }
         public Builder baseCondaEnvironment(@Nullable String baseCondaEnvironment) {
-            this.baseCondaEnvironment = Output.ofNullable(baseCondaEnvironment);
+            this.baseCondaEnvironment = Codegen.ofNullable(baseCondaEnvironment);
             return this;
         }
         public Builder condaDependencies(@Nullable Output<Object> condaDependencies) {
@@ -117,7 +118,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
             return this;
         }
         public Builder condaDependencies(@Nullable Object condaDependencies) {
-            this.condaDependencies = Output.ofNullable(condaDependencies);
+            this.condaDependencies = Codegen.ofNullable(condaDependencies);
             return this;
         }
         public Builder interpreterPath(@Nullable Output<String> interpreterPath) {
@@ -125,7 +126,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
             return this;
         }
         public Builder interpreterPath(@Nullable String interpreterPath) {
-            this.interpreterPath = Output.ofNullable(interpreterPath);
+            this.interpreterPath = Codegen.ofNullable(interpreterPath);
             return this;
         }
         public Builder userManagedDependencies(@Nullable Output<Boolean> userManagedDependencies) {
@@ -133,7 +134,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
             return this;
         }
         public Builder userManagedDependencies(@Nullable Boolean userManagedDependencies) {
-            this.userManagedDependencies = Output.ofNullable(userManagedDependencies);
+            this.userManagedDependencies = Codegen.ofNullable(userManagedDependencies);
             return this;
         }        public ModelEnvironmentDefinitionPythonArgs build() {
             return new ModelEnvironmentDefinitionPythonArgs(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);

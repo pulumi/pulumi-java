@@ -6,6 +6,7 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="application", required=true)
       private final Output<String> application;
 
-    public Output<String> getApplication() {
+    public Output<String> application() {
         return this.application;
     }
 
@@ -32,7 +33,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -43,7 +44,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceType", required=true)
       private final Output<ResourceAssociationResourceType> resourceType;
 
-    public Output<ResourceAssociationResourceType> getPropResourceType() {
+    public Output<ResourceAssociationResourceType> resourceType() {
         return this.resourceType;
     }
 
@@ -57,9 +58,9 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ResourceAssociationArgs() {
-        this.application = Output.empty();
-        this.resource = Output.empty();
-        this.resourceType = Output.empty();
+        this.application = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {

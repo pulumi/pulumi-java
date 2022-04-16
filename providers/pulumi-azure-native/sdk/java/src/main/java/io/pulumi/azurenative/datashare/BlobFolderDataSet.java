@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Container that has the file path.
      * 
      */
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
     /**
@@ -56,7 +57,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Unique id for identifying a data set resource
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -72,7 +73,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * Expected value is 'BlobFolder'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -86,7 +87,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Prefix for blob folder
      * 
      */
-    public Output<String> getPrefix() {
+    public Output<String> prefix() {
         return this.prefix;
     }
     /**
@@ -114,7 +115,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Resource group of storage account
      * 
      */
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
     /**
@@ -128,7 +129,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Storage account name of the source data set
      * 
      */
-    public Output<String> getStorageAccountName() {
+    public Output<String> storageAccountName() {
         return this.storageAccountName;
     }
     /**
@@ -142,7 +143,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Subscription id of storage account
      * 
      */
-    public Output<String> getSubscriptionId() {
+    public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
     /**
@@ -156,7 +157,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -170,7 +171,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -196,7 +197,7 @@ public class BlobFolderDataSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BlobFolderDataSet(String name, BlobFolderDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:BlobFolderDataSet", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:BlobFolderDataSet", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BlobFolderDataSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

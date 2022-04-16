@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
     @Import(name="coarseGrainTimestamp")
       private final @Nullable Output<String> coarseGrainTimestamp;
 
-    public Output<String> getCoarseGrainTimestamp() {
-        return this.coarseGrainTimestamp == null ? Output.empty() : this.coarseGrainTimestamp;
+    public Output<String> coarseGrainTimestamp() {
+        return this.coarseGrainTimestamp == null ? Codegen.empty() : this.coarseGrainTimestamp;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
     @Import(name="fineGrainTimestamp")
       private final @Nullable Output<String> fineGrainTimestamp;
 
-    public Output<String> getFineGrainTimestamp() {
-        return this.fineGrainTimestamp == null ? Output.empty() : this.fineGrainTimestamp;
+    public Output<String> fineGrainTimestamp() {
+        return this.fineGrainTimestamp == null ? Codegen.empty() : this.fineGrainTimestamp;
     }
 
     public DatasetCreateRequestTimeSeriesArgs(
@@ -44,8 +45,8 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
     }
 
     private DatasetCreateRequestTimeSeriesArgs() {
-        this.coarseGrainTimestamp = Output.empty();
-        this.fineGrainTimestamp = Output.empty();
+        this.coarseGrainTimestamp = Codegen.empty();
+        this.fineGrainTimestamp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
             return this;
         }
         public Builder coarseGrainTimestamp(@Nullable String coarseGrainTimestamp) {
-            this.coarseGrainTimestamp = Output.ofNullable(coarseGrainTimestamp);
+            this.coarseGrainTimestamp = Codegen.ofNullable(coarseGrainTimestamp);
             return this;
         }
         public Builder fineGrainTimestamp(@Nullable Output<String> fineGrainTimestamp) {
@@ -83,7 +84,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
             return this;
         }
         public Builder fineGrainTimestamp(@Nullable String fineGrainTimestamp) {
-            this.fineGrainTimestamp = Output.ofNullable(fineGrainTimestamp);
+            this.fineGrainTimestamp = Codegen.ofNullable(fineGrainTimestamp);
             return this;
         }        public DatasetCreateRequestTimeSeriesArgs build() {
             return new DatasetCreateRequestTimeSeriesArgs(coarseGrainTimestamp, fineGrainTimestamp);

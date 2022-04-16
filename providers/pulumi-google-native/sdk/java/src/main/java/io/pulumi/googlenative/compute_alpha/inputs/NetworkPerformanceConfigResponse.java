@@ -15,14 +15,14 @@ public final class NetworkPerformanceConfigResponse extends io.pulumi.resources.
     @Import(name="externalIpEgressBandwidthTier", required=true)
       private final String externalIpEgressBandwidthTier;
 
-    public String getExternalIpEgressBandwidthTier() {
+    public String externalIpEgressBandwidthTier() {
         return this.externalIpEgressBandwidthTier;
     }
 
     @Import(name="totalEgressBandwidthTier", required=true)
       private final String totalEgressBandwidthTier;
 
-    public String getTotalEgressBandwidthTier() {
+    public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
 

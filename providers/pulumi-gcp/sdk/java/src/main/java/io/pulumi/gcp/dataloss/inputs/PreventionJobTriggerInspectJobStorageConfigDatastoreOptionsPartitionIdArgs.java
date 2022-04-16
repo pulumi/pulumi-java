@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     @Import(name="namespaceId")
       private final @Nullable Output<String> namespaceId;
 
-    public Output<String> getNamespaceId() {
-        return this.namespaceId == null ? Output.empty() : this.namespaceId;
+    public Output<String> namespaceId() {
+        return this.namespaceId == null ? Codegen.empty() : this.namespaceId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -44,8 +45,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
     }
 
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs() {
-        this.namespaceId = Output.empty();
-        this.projectId = Output.empty();
+        this.namespaceId = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
             return this;
         }
         public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Output.ofNullable(namespaceId);
+            this.namespaceId = Codegen.ofNullable(namespaceId);
             return this;
         }
         public Builder projectId(Output<String> projectId) {

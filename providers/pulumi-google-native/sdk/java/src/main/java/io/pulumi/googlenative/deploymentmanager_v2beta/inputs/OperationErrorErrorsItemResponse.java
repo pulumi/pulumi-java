@@ -19,7 +19,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
     @Import(name="code", required=true)
       private final String code;
 
-    public String getCode() {
+    public String code() {
         return this.code;
     }
 
@@ -30,7 +30,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 
@@ -41,7 +41,7 @@ public final class OperationErrorErrorsItemResponse extends io.pulumi.resources.
     @Import(name="message", required=true)
       private final String message;
 
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

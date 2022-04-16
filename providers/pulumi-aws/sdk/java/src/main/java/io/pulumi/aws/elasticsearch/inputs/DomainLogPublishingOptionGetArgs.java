@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
     @Import(name="cloudwatchLogGroupArn", required=true)
       private final Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> getCloudwatchLogGroupArn() {
+    public Output<String> cloudwatchLogGroupArn() {
         return this.cloudwatchLogGroupArn;
     }
 
@@ -33,8 +34,8 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
     @Import(name="logType", required=true)
       private final Output<String> logType;
 
-    public Output<String> getLogType() {
+    public Output<String> logType() {
         return this.logType;
     }
 
@@ -58,9 +59,9 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
     }
 
     private DomainLogPublishingOptionGetArgs() {
-        this.cloudwatchLogGroupArn = Output.empty();
-        this.enabled = Output.empty();
-        this.logType = Output.empty();
+        this.cloudwatchLogGroupArn = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.logType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class DomainLogPublishingOptionGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder logType(Output<String> logType) {

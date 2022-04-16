@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class WorkerPoolNetworkConfigArgs extends io.pulumi.resources.Resou
     @Import(name="peeredNetwork", required=true)
       private final Output<String> peeredNetwork;
 
-    public Output<String> getPeeredNetwork() {
+    public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
 
@@ -29,7 +30,7 @@ public final class WorkerPoolNetworkConfigArgs extends io.pulumi.resources.Resou
     }
 
     private WorkerPoolNetworkConfigArgs() {
-        this.peeredNetwork = Output.empty();
+        this.peeredNetwork = Codegen.empty();
     }
 
     public static Builder builder() {

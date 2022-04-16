@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbPassword")
       private final @Nullable Output<String> dbPassword;
 
-    public Output<String> getDbPassword() {
-        return this.dbPassword == null ? Output.empty() : this.dbPassword;
+    public Output<String> dbPassword() {
+        return this.dbPassword == null ? Codegen.empty() : this.dbPassword;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbUser")
       private final @Nullable Output<String> dbUser;
 
-    public Output<String> getDbUser() {
-        return this.dbUser == null ? Output.empty() : this.dbUser;
+    public Output<String> dbUser() {
+        return this.dbUser == null ? Codegen.empty() : this.dbUser;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rdsDbInstanceArn")
       private final @Nullable Output<String> rdsDbInstanceArn;
 
-    public Output<String> getRdsDbInstanceArn() {
-        return this.rdsDbInstanceArn == null ? Output.empty() : this.rdsDbInstanceArn;
+    public Output<String> rdsDbInstanceArn() {
+        return this.rdsDbInstanceArn == null ? Codegen.empty() : this.rdsDbInstanceArn;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
-    public Output<String> getStackId() {
-        return this.stackId == null ? Output.empty() : this.stackId;
+    public Output<String> stackId() {
+        return this.stackId == null ? Codegen.empty() : this.stackId;
     }
 
     public RdsDbInstanceState(
@@ -70,10 +71,10 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RdsDbInstanceState() {
-        this.dbPassword = Output.empty();
-        this.dbUser = Output.empty();
-        this.rdsDbInstanceArn = Output.empty();
-        this.stackId = Output.empty();
+        this.dbPassword = Codegen.empty();
+        this.dbUser = Codegen.empty();
+        this.rdsDbInstanceArn = Codegen.empty();
+        this.stackId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dbPassword(@Nullable String dbPassword) {
-            this.dbPassword = Output.ofNullable(dbPassword);
+            this.dbPassword = Codegen.ofNullable(dbPassword);
             return this;
         }
         public Builder dbUser(@Nullable Output<String> dbUser) {
@@ -115,7 +116,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dbUser(@Nullable String dbUser) {
-            this.dbUser = Output.ofNullable(dbUser);
+            this.dbUser = Codegen.ofNullable(dbUser);
             return this;
         }
         public Builder rdsDbInstanceArn(@Nullable Output<String> rdsDbInstanceArn) {
@@ -123,7 +124,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rdsDbInstanceArn(@Nullable String rdsDbInstanceArn) {
-            this.rdsDbInstanceArn = Output.ofNullable(rdsDbInstanceArn);
+            this.rdsDbInstanceArn = Codegen.ofNullable(rdsDbInstanceArn);
             return this;
         }
         public Builder stackId(@Nullable Output<String> stackId) {
@@ -131,7 +132,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stackId(@Nullable String stackId) {
-            this.stackId = Output.ofNullable(stackId);
+            this.stackId = Codegen.ofNullable(stackId);
             return this;
         }        public RdsDbInstanceState build() {
             return new RdsDbInstanceState(dbPassword, dbUser, rdsDbInstanceArn, stackId);

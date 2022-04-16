@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.enums.PathMatchType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rewrite")
       private final @Nullable Output<String> rewrite;
 
-    public Output<String> getRewrite() {
-        return this.rewrite == null ? Output.empty() : this.rewrite;
+    public Output<String> rewrite() {
+        return this.rewrite == null ? Codegen.empty() : this.rewrite;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<Either<String,PathMatchType>> type;
 
-    public Output<Either<String,PathMatchType>> getType() {
+    public Output<Either<String,PathMatchType>> type() {
         return this.type;
     }
 
@@ -49,7 +50,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -63,9 +64,9 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HttpRouteMatchPathArgs() {
-        this.rewrite = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.rewrite = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder rewrite(@Nullable String rewrite) {
-            this.rewrite = Output.ofNullable(rewrite);
+            this.rewrite = Codegen.ofNullable(rewrite);
             return this;
         }
         public Builder type(Output<Either<String,PathMatchType>> type) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="builderVersion", required=true)
       private final Output<String> builderVersion;
 
-    public Output<String> getBuilderVersion() {
+    public Output<String> builderVersion() {
         return this.builderVersion;
     }
 
@@ -33,7 +34,7 @@ public final class BuildNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildNoteArgs() {
-        this.builderVersion = Output.empty();
+        this.builderVersion = Codegen.empty();
     }
 
     public static Builder builder() {

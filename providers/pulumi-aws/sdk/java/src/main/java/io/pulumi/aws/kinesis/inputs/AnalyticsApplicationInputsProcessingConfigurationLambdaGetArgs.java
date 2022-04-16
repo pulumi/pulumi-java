@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AnalyticsApplicationInputsProcessingConfigurationLambdaGetArg
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -31,7 +32,7 @@ public final class AnalyticsApplicationInputsProcessingConfigurationLambdaGetArg
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -43,8 +44,8 @@ public final class AnalyticsApplicationInputsProcessingConfigurationLambdaGetArg
     }
 
     private AnalyticsApplicationInputsProcessingConfigurationLambdaGetArgs() {
-        this.resourceArn = Output.empty();
-        this.roleArn = Output.empty();
+        this.resourceArn = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

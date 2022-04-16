@@ -6,6 +6,7 @@ package io.pulumi.aws.codebuild;
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="branchFilter")
       private final @Nullable Output<String> branchFilter;
 
-    public Output<String> getBranchFilter() {
-        return this.branchFilter == null ? Output.empty() : this.branchFilter;
+    public Output<String> branchFilter() {
+        return this.branchFilter == null ? Codegen.empty() : this.branchFilter;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buildType")
       private final @Nullable Output<String> buildType;
 
-    public Output<String> getBuildType() {
-        return this.buildType == null ? Output.empty() : this.buildType;
+    public Output<String> buildType() {
+        return this.buildType == null ? Codegen.empty() : this.buildType;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterGroups")
       private final @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
 
-    public Output<List<WebhookFilterGroupArgs>> getFilterGroups() {
-        return this.filterGroups == null ? Output.empty() : this.filterGroups;
+    public Output<List<WebhookFilterGroupArgs>> filterGroups() {
+        return this.filterGroups == null ? Codegen.empty() : this.filterGroups;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
@@ -72,10 +73,10 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.branchFilter = Output.empty();
-        this.buildType = Output.empty();
-        this.filterGroups = Output.empty();
-        this.projectName = Output.empty();
+        this.branchFilter = Codegen.empty();
+        this.buildType = Codegen.empty();
+        this.filterGroups = Codegen.empty();
+        this.projectName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder branchFilter(@Nullable String branchFilter) {
-            this.branchFilter = Output.ofNullable(branchFilter);
+            this.branchFilter = Codegen.ofNullable(branchFilter);
             return this;
         }
         public Builder buildType(@Nullable Output<String> buildType) {
@@ -117,7 +118,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildType(@Nullable String buildType) {
-            this.buildType = Output.ofNullable(buildType);
+            this.buildType = Codegen.ofNullable(buildType);
             return this;
         }
         public Builder filterGroups(@Nullable Output<List<WebhookFilterGroupArgs>> filterGroups) {
@@ -125,7 +126,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filterGroups(@Nullable List<WebhookFilterGroupArgs> filterGroups) {
-            this.filterGroups = Output.ofNullable(filterGroups);
+            this.filterGroups = Codegen.ofNullable(filterGroups);
             return this;
         }
         public Builder filterGroups(WebhookFilterGroupArgs... filterGroups) {

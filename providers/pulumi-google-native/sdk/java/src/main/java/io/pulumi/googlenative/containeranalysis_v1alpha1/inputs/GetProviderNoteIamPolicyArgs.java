@@ -15,14 +15,14 @@ public final class GetProviderNoteIamPolicyArgs extends io.pulumi.resources.Invo
     @Import(name="noteId", required=true)
       private final String noteId;
 
-    public String getNoteId() {
+    public String noteId() {
         return this.noteId;
     }
 
     @Import(name="providerId", required=true)
       private final String providerId;
 
-    public String getProviderId() {
+    public String providerId() {
         return this.providerId;
     }
 

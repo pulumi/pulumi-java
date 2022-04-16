@@ -5,6 +5,7 @@ package io.pulumi.aws.s3control;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -28,8 +29,8 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -53,9 +54,9 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
     }
 
     private ObjectLambdaAccessPointPolicyArgs() {
-        this.accountId = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
+        this.accountId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -95,7 +96,7 @@ public final class ObjectLambdaAccessPointPolicyArgs extends io.pulumi.resources
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policy(Output<String> policy) {

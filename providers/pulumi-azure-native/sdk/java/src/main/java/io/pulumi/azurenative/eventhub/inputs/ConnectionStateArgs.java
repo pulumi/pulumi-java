@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventhub.enums.PrivateLinkConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="status")
       private final @Nullable Output<Either<String,PrivateLinkConnectionStatus>> status;
 
-    public Output<Either<String,PrivateLinkConnectionStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,PrivateLinkConnectionStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public ConnectionStateArgs(
@@ -50,8 +51,8 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ConnectionStateArgs() {
-        this.description = Output.empty();
-        this.status = Output.empty();
+        this.description = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,PrivateLinkConnectionStatus>> status) {
@@ -89,7 +90,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder status(@Nullable Either<String,PrivateLinkConnectionStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public ConnectionStateArgs build() {
             return new ConnectionStateArgs(description, status);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
     @Import(name="openUriAction", required=true)
       private final Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
 
-    public Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> getOpenUriAction() {
+    public Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction() {
         return this.openUriAction;
     }
 
@@ -36,7 +37,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
     }
 
     private GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs() {
-        this.openUriAction = Output.empty();
-        this.title = Output.empty();
+        this.openUriAction = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {

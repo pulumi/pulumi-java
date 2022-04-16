@@ -89,21 +89,21 @@ public final class GetSubnetworkResult {
      * Description of this subnetwork.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The IP address of the gateway.
      * 
     */
-    public String getGatewayAddress() {
+    public String gatewayAddress() {
         return this.gatewayAddress;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
@@ -111,10 +111,10 @@ public final class GetSubnetworkResult {
      * secondary range.
      * 
     */
-    public String getIpCidrRange() {
+    public String ipCidrRange() {
         return this.ipCidrRange;
     }
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
@@ -122,7 +122,7 @@ public final class GetSubnetworkResult {
      * network of this subnetwork.
      * 
     */
-    public String getNetwork() {
+    public String network() {
         return this.network;
     }
     /**
@@ -131,13 +131,13 @@ public final class GetSubnetworkResult {
      * addresses.
      * 
     */
-    public Boolean getPrivateIpGoogleAccess() {
+    public Boolean privateIpGoogleAccess() {
         return this.privateIpGoogleAccess;
     }
-    public String getProject() {
+    public String project() {
         return this.project;
     }
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
@@ -145,10 +145,10 @@ public final class GetSubnetworkResult {
      * VM instances contained in this subnetwork. Structure is documented below.
      * 
     */
-    public List<GetSubnetworkSecondaryIpRange> getSecondaryIpRanges() {
+    public List<GetSubnetworkSecondaryIpRange> secondaryIpRanges() {
         return this.secondaryIpRanges;
     }
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

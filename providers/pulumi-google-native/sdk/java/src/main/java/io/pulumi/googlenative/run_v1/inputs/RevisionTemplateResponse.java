@@ -24,7 +24,7 @@ public final class RevisionTemplateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="metadata", required=true)
       private final ObjectMetaResponse metadata;
 
-    public ObjectMetaResponse getMetadata() {
+    public ObjectMetaResponse metadata() {
         return this.metadata;
     }
 
@@ -35,7 +35,7 @@ public final class RevisionTemplateResponse extends io.pulumi.resources.InvokeAr
     @Import(name="spec", required=true)
       private final RevisionSpecResponse spec;
 
-    public RevisionSpecResponse getSpec() {
+    public RevisionSpecResponse spec() {
         return this.spec;
     }
 

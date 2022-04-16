@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupActionDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +18,14 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
     @Import(name="actionDefinition", required=true)
       private final Output<RuleGroupActionDefinitionArgs> actionDefinition;
 
-    public Output<RuleGroupActionDefinitionArgs> getActionDefinition() {
+    public Output<RuleGroupActionDefinitionArgs> actionDefinition() {
         return this.actionDefinition;
     }
 
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 
@@ -36,8 +37,8 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
     }
 
     private RuleGroupCustomActionArgs() {
-        this.actionDefinition = Output.empty();
-        this.actionName = Output.empty();
+        this.actionDefinition = Codegen.empty();
+        this.actionName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleTypeMoneyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     @Import(name="end")
       private final @Nullable Output<String> end;
 
-    public Output<String> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+    public Output<String> end() {
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     @Import(name="fee")
       private final @Nullable Output<GoogleTypeMoneyArgs> fee;
 
-    public Output<GoogleTypeMoneyArgs> getFee() {
-        return this.fee == null ? Output.empty() : this.fee;
+    public Output<GoogleTypeMoneyArgs> fee() {
+        return this.fee == null ? Codegen.empty() : this.fee;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     @Import(name="start")
       private final @Nullable Output<String> start;
 
-    public Output<String> getStart() {
-        return this.start == null ? Output.empty() : this.start;
+    public Output<String> start() {
+        return this.start == null ? Codegen.empty() : this.start;
     }
 
     public GoogleCloudApigeeV1RateRangeArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
     }
 
     private GoogleCloudApigeeV1RateRangeArgs() {
-        this.end = Output.empty();
-        this.fee = Output.empty();
-        this.start = Output.empty();
+        this.end = Codegen.empty();
+        this.fee = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder end(@Nullable String end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }
         public Builder fee(@Nullable Output<GoogleTypeMoneyArgs> fee) {
@@ -104,7 +105,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder fee(@Nullable GoogleTypeMoneyArgs fee) {
-            this.fee = Output.ofNullable(fee);
+            this.fee = Codegen.ofNullable(fee);
             return this;
         }
         public Builder start(@Nullable Output<String> start) {
@@ -112,7 +113,7 @@ public final class GoogleCloudApigeeV1RateRangeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder start(@Nullable String start) {
-            this.start = Output.ofNullable(start);
+            this.start = Codegen.ofNullable(start);
             return this;
         }        public GoogleCloudApigeeV1RateRangeArgs build() {
             return new GoogleCloudApigeeV1RateRangeArgs(end, fee, start);

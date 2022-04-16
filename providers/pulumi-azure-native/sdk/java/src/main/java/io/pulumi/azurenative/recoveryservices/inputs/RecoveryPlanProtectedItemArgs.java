@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
     @Import(name="virtualMachineId")
       private final @Nullable Output<String> virtualMachineId;
 
-    public Output<String> getVirtualMachineId() {
-        return this.virtualMachineId == null ? Output.empty() : this.virtualMachineId;
+    public Output<String> virtualMachineId() {
+        return this.virtualMachineId == null ? Codegen.empty() : this.virtualMachineId;
     }
 
     public RecoveryPlanProtectedItemArgs(
@@ -48,8 +49,8 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
     }
 
     private RecoveryPlanProtectedItemArgs() {
-        this.id = Output.empty();
-        this.virtualMachineId = Output.empty();
+        this.id = Codegen.empty();
+        this.virtualMachineId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder virtualMachineId(@Nullable Output<String> virtualMachineId) {
@@ -87,7 +88,7 @@ public final class RecoveryPlanProtectedItemArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
-            this.virtualMachineId = Output.ofNullable(virtualMachineId);
+            this.virtualMachineId = Codegen.ofNullable(virtualMachineId);
             return this;
         }        public RecoveryPlanProtectedItemArgs build() {
             return new RecoveryPlanProtectedItemArgs(id, virtualMachineId);

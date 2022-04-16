@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.SubscriptionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowTracing")
       private final @Nullable Output<Boolean> allowTracing;
 
-    public Output<Boolean> getAllowTracing() {
-        return this.allowTracing == null ? Output.empty() : this.allowTracing;
+    public Output<Boolean> allowTracing() {
+        return this.allowTracing == null ? Codegen.empty() : this.allowTracing;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appType")
       private final @Nullable Output<String> appType;
 
-    public Output<String> getAppType() {
-        return this.appType == null ? Output.empty() : this.appType;
+    public Output<String> appType() {
+        return this.appType == null ? Codegen.empty() : this.appType;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -58,8 +59,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notify")
       private final @Nullable Output<Boolean> notify;
 
-    public Output<Boolean> getNotify() {
-        return this.notify == null ? Output.empty() : this.notify;
+    public Output<Boolean> notify_() {
+        return this.notify == null ? Codegen.empty() : this.notify;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
-    public Output<String> getPrimaryKey() {
-        return this.primaryKey == null ? Output.empty() : this.primaryKey;
+    public Output<String> primaryKey() {
+        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,7 +103,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -113,8 +114,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
 
-    public Output<String> getSecondaryKey() {
-        return this.secondaryKey == null ? Output.empty() : this.secondaryKey;
+    public Output<String> secondaryKey() {
+        return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -135,8 +136,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sid")
       private final @Nullable Output<String> sid;
 
-    public Output<String> getSid() {
-        return this.sid == null ? Output.empty() : this.sid;
+    public Output<String> sid() {
+        return this.sid == null ? Codegen.empty() : this.sid;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<SubscriptionState> state;
 
-    public Output<SubscriptionState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<SubscriptionState> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public SubscriptionArgs(
@@ -178,18 +179,18 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.allowTracing = Output.empty();
-        this.appType = Output.empty();
-        this.displayName = Output.empty();
-        this.notify = Output.empty();
-        this.ownerId = Output.empty();
-        this.primaryKey = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scope = Output.empty();
-        this.secondaryKey = Output.empty();
-        this.serviceName = Output.empty();
-        this.sid = Output.empty();
-        this.state = Output.empty();
+        this.allowTracing = Codegen.empty();
+        this.appType = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.notify = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.primaryKey = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.secondaryKey = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.sid = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowTracing(@Nullable Boolean allowTracing) {
-            this.allowTracing = Output.ofNullable(allowTracing);
+            this.allowTracing = Codegen.ofNullable(allowTracing);
             return this;
         }
         public Builder appType(@Nullable Output<String> appType) {
@@ -247,7 +248,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appType(@Nullable String appType) {
-            this.appType = Output.ofNullable(appType);
+            this.appType = Codegen.ofNullable(appType);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -258,12 +259,12 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
-        public Builder notify(@Nullable Output<Boolean> notify) {
+        public Builder notify_(@Nullable Output<Boolean> notify) {
             this.notify = notify;
             return this;
         }
-        public Builder notify(@Nullable Boolean notify) {
-            this.notify = Output.ofNullable(notify);
+        public Builder notify_(@Nullable Boolean notify) {
+            this.notify = Codegen.ofNullable(notify);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -271,7 +272,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder primaryKey(@Nullable Output<String> primaryKey) {
@@ -279,7 +280,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Output.ofNullable(primaryKey);
+            this.primaryKey = Codegen.ofNullable(primaryKey);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -303,7 +304,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Output.ofNullable(secondaryKey);
+            this.secondaryKey = Codegen.ofNullable(secondaryKey);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -319,7 +320,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sid(@Nullable String sid) {
-            this.sid = Output.ofNullable(sid);
+            this.sid = Codegen.ofNullable(sid);
             return this;
         }
         public Builder state(@Nullable Output<SubscriptionState> state) {
@@ -327,7 +328,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable SubscriptionState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public SubscriptionArgs build() {
             return new SubscriptionArgs(allowTracing, appType, displayName, notify, ownerId, primaryKey, resourceGroupName, scope, secondaryKey, serviceName, sid, state);

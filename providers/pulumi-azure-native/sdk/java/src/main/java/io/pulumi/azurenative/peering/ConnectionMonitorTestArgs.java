@@ -5,6 +5,7 @@ package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     @Import(name="connectionMonitorTestName")
       private final @Nullable Output<String> connectionMonitorTestName;
 
-    public Output<String> getConnectionMonitorTestName() {
-        return this.connectionMonitorTestName == null ? Output.empty() : this.connectionMonitorTestName;
+    public Output<String> connectionMonitorTestName() {
+        return this.connectionMonitorTestName == null ? Codegen.empty() : this.connectionMonitorTestName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<String> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> getDestinationPort() {
-        return this.destinationPort == null ? Output.empty() : this.destinationPort;
+    public Output<Integer> destinationPort() {
+        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     @Import(name="peeringServiceName", required=true)
       private final Output<String> peeringServiceName;
 
-    public Output<String> getPeeringServiceName() {
+    public Output<String> peeringServiceName() {
         return this.peeringServiceName;
     }
 
@@ -66,7 +67,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,8 +78,8 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     @Import(name="sourceAgent")
       private final @Nullable Output<String> sourceAgent;
 
-    public Output<String> getSourceAgent() {
-        return this.sourceAgent == null ? Output.empty() : this.sourceAgent;
+    public Output<String> sourceAgent() {
+        return this.sourceAgent == null ? Codegen.empty() : this.sourceAgent;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     @Import(name="testFrequencyInSec")
       private final @Nullable Output<Integer> testFrequencyInSec;
 
-    public Output<Integer> getTestFrequencyInSec() {
-        return this.testFrequencyInSec == null ? Output.empty() : this.testFrequencyInSec;
+    public Output<Integer> testFrequencyInSec() {
+        return this.testFrequencyInSec == null ? Codegen.empty() : this.testFrequencyInSec;
     }
 
     public ConnectionMonitorTestArgs(
@@ -110,13 +111,13 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectionMonitorTestArgs() {
-        this.connectionMonitorTestName = Output.empty();
-        this.destination = Output.empty();
-        this.destinationPort = Output.empty();
-        this.peeringServiceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sourceAgent = Output.empty();
-        this.testFrequencyInSec = Output.empty();
+        this.connectionMonitorTestName = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.destinationPort = Codegen.empty();
+        this.peeringServiceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sourceAgent = Codegen.empty();
+        this.testFrequencyInSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder connectionMonitorTestName(@Nullable String connectionMonitorTestName) {
-            this.connectionMonitorTestName = Output.ofNullable(connectionMonitorTestName);
+            this.connectionMonitorTestName = Codegen.ofNullable(connectionMonitorTestName);
             return this;
         }
         public Builder destination(@Nullable Output<String> destination) {
@@ -164,7 +165,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
@@ -172,7 +173,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Output.ofNullable(destinationPort);
+            this.destinationPort = Codegen.ofNullable(destinationPort);
             return this;
         }
         public Builder peeringServiceName(Output<String> peeringServiceName) {
@@ -196,7 +197,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sourceAgent(@Nullable String sourceAgent) {
-            this.sourceAgent = Output.ofNullable(sourceAgent);
+            this.sourceAgent = Codegen.ofNullable(sourceAgent);
             return this;
         }
         public Builder testFrequencyInSec(@Nullable Output<Integer> testFrequencyInSec) {
@@ -204,7 +205,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder testFrequencyInSec(@Nullable Integer testFrequencyInSec) {
-            this.testFrequencyInSec = Output.ofNullable(testFrequencyInSec);
+            this.testFrequencyInSec = Codegen.ofNullable(testFrequencyInSec);
             return this;
         }        public ConnectionMonitorTestArgs build() {
             return new ConnectionMonitorTestArgs(connectionMonitorTestName, destination, destinationPort, peeringServiceName, resourceGroupName, sourceAgent, testFrequencyInSec);

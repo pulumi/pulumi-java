@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InventoryFilterGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public InventoryFilterGetArgs(@Nullable Output<String> prefix) {
@@ -30,7 +31,7 @@ public final class InventoryFilterGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InventoryFilterGetArgs() {
-        this.prefix = Output.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class InventoryFilterGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public InventoryFilterGetArgs build() {
             return new InventoryFilterGetArgs(prefix);

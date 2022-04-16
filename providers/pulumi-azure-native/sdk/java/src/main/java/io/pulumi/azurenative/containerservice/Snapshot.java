@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return CreationData to be used to specify the source agent pool resource ID to create this snapshot.
      * 
      */
-    public Output</* @Nullable */ CreationDataResponse> getCreationData() {
+    public Output</* @Nullable */ CreationDataResponse> creationData() {
         return this.creationData;
     }
     /**
@@ -58,7 +59,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The type of a snapshot. The default is NodePool.
      * 
      */
-    public Output</* @Nullable */ String> getSnapshotType() {
+    public Output</* @Nullable */ String> snapshotType() {
         return this.snapshotType;
     }
     /**
@@ -100,7 +101,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to this snapshot.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +115,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -128,7 +129,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -154,7 +155,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerservice:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:containerservice:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Snapshot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

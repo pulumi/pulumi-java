@@ -10,6 +10,7 @@ import io.pulumi.awsnative.imagebuilder.enums.ComponentType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +36,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the component.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +50,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The change description of the component.
      * 
      */
-    public Output</* @Nullable */ String> getChangeDescription() {
+    public Output</* @Nullable */ String> changeDescription() {
         return this.changeDescription;
     }
     /**
@@ -63,7 +64,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The data of the component.
      * 
      */
-    public Output</* @Nullable */ String> getData() {
+    public Output</* @Nullable */ String> data() {
         return this.data;
     }
     /**
@@ -77,7 +78,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The description of the component.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -91,7 +92,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The encryption status of the component.
      * 
      */
-    public Output<Boolean> getEncrypted() {
+    public Output<Boolean> encrypted() {
         return this.encrypted;
     }
     /**
@@ -105,7 +106,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The KMS key identifier used to encrypt the component.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -119,7 +120,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The name of the component.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +134,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The platform of the component.
      * 
      */
-    public Output<ComponentPlatform> getPlatform() {
+    public Output<ComponentPlatform> platform() {
         return this.platform;
     }
     /**
@@ -147,7 +148,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The operating system (OS) version supported by the component.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSupportedOsVersions() {
+    public Output</* @Nullable */ List<String>> supportedOsVersions() {
         return this.supportedOsVersions;
     }
     /**
@@ -161,7 +162,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The tags associated with the component.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     /**
@@ -175,7 +176,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The type of the component denotes whether the component is used to build the image or only to test it.
      * 
      */
-    public Output<ComponentType> getType() {
+    public Output<ComponentType> type() {
         return this.type;
     }
     /**
@@ -189,7 +190,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The uri of the component.
      * 
      */
-    public Output</* @Nullable */ String> getUri() {
+    public Output</* @Nullable */ String> uri() {
         return this.uri;
     }
     /**
@@ -203,7 +204,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @return The version of the component.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -229,7 +230,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Component(String name, ComponentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:imagebuilder:Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:imagebuilder:Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Component(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

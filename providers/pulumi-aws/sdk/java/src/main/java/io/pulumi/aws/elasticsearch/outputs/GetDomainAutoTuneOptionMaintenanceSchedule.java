@@ -41,21 +41,21 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule {
      * A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
      * 
     */
-    public String getCronExpressionForRecurrence() {
+    public String cronExpressionForRecurrence() {
         return this.cronExpressionForRecurrence;
     }
     /**
      * Configuration block for the duration of the Auto-Tune maintenance window.
      * 
     */
-    public List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> getDurations() {
+    public List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations() {
         return this.durations;
     }
     /**
      * Date and time at which the Auto-Tune maintenance schedule starts in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
     */
-    public String getStartAt() {
+    public String startAt() {
         return this.startAt;
     }
 

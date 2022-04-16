@@ -6,6 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.inputs.AwsCloudTrailDataConnectorDataTypesLogsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
     @Import(name="logs")
       private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
 
-    public Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> getLogs() {
-        return this.logs == null ? Output.empty() : this.logs;
+    public Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs() {
+        return this.logs == null ? Codegen.empty() : this.logs;
     }
 
     public AwsCloudTrailDataConnectorDataTypesArgs(@Nullable Output<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs) {
@@ -34,7 +35,7 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
     }
 
     private AwsCloudTrailDataConnectorDataTypesArgs() {
-        this.logs = Output.empty();
+        this.logs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
             return this;
         }
         public Builder logs(@Nullable AwsCloudTrailDataConnectorDataTypesLogsArgs logs) {
-            this.logs = Output.ofNullable(logs);
+            this.logs = Codegen.ofNullable(logs);
             return this;
         }        public AwsCloudTrailDataConnectorDataTypesArgs build() {
             return new AwsCloudTrailDataConnectorDataTypesArgs(logs);

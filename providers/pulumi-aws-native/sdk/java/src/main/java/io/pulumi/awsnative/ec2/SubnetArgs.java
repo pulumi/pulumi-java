@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.SubnetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,56 +21,56 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assignIpv6AddressOnCreation")
       private final @Nullable Output<Boolean> assignIpv6AddressOnCreation;
 
-    public Output<Boolean> getAssignIpv6AddressOnCreation() {
-        return this.assignIpv6AddressOnCreation == null ? Output.empty() : this.assignIpv6AddressOnCreation;
+    public Output<Boolean> assignIpv6AddressOnCreation() {
+        return this.assignIpv6AddressOnCreation == null ? Codegen.empty() : this.assignIpv6AddressOnCreation;
     }
 
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
 
-    public Output<String> getCidrBlock() {
+    public Output<String> cidrBlock() {
         return this.cidrBlock;
     }
 
     @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
+    public Output<String> ipv6CidrBlock() {
+        return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
     @Import(name="mapPublicIpOnLaunch")
       private final @Nullable Output<Boolean> mapPublicIpOnLaunch;
 
-    public Output<Boolean> getMapPublicIpOnLaunch() {
-        return this.mapPublicIpOnLaunch == null ? Output.empty() : this.mapPublicIpOnLaunch;
+    public Output<Boolean> mapPublicIpOnLaunch() {
+        return this.mapPublicIpOnLaunch == null ? Codegen.empty() : this.mapPublicIpOnLaunch;
     }
 
     @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
-    public Output<String> getOutpostArn() {
-        return this.outpostArn == null ? Output.empty() : this.outpostArn;
+    public Output<String> outpostArn() {
+        return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<SubnetTagArgs>> tags;
 
-    public Output<List<SubnetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<SubnetTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -93,14 +94,14 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubnetArgs() {
-        this.assignIpv6AddressOnCreation = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.cidrBlock = Output.empty();
-        this.ipv6CidrBlock = Output.empty();
-        this.mapPublicIpOnLaunch = Output.empty();
-        this.outpostArn = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.assignIpv6AddressOnCreation = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.cidrBlock = Codegen.empty();
+        this.ipv6CidrBlock = Codegen.empty();
+        this.mapPublicIpOnLaunch = Codegen.empty();
+        this.outpostArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assignIpv6AddressOnCreation(@Nullable Boolean assignIpv6AddressOnCreation) {
-            this.assignIpv6AddressOnCreation = Output.ofNullable(assignIpv6AddressOnCreation);
+            this.assignIpv6AddressOnCreation = Codegen.ofNullable(assignIpv6AddressOnCreation);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -150,7 +151,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder cidrBlock(Output<String> cidrBlock) {
@@ -166,7 +167,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Codegen.ofNullable(ipv6CidrBlock);
             return this;
         }
         public Builder mapPublicIpOnLaunch(@Nullable Output<Boolean> mapPublicIpOnLaunch) {
@@ -174,7 +175,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
-            this.mapPublicIpOnLaunch = Output.ofNullable(mapPublicIpOnLaunch);
+            this.mapPublicIpOnLaunch = Codegen.ofNullable(mapPublicIpOnLaunch);
             return this;
         }
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
@@ -182,7 +183,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Output.ofNullable(outpostArn);
+            this.outpostArn = Codegen.ofNullable(outpostArn);
             return this;
         }
         public Builder tags(@Nullable Output<List<SubnetTagArgs>> tags) {
@@ -190,7 +191,7 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<SubnetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(SubnetTagArgs... tags) {

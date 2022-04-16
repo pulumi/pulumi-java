@@ -7,6 +7,7 @@ import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncrypt
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -21,7 +22,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
     @Import(name="connectionPasswordEncryption", required=true)
       private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption;
 
-    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> getConnectionPasswordEncryption() {
+    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionGetArgs> connectionPasswordEncryption() {
         return this.connectionPasswordEncryption;
     }
 
@@ -32,7 +33,7 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
     @Import(name="encryptionAtRest", required=true)
       private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest;
 
-    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> getEncryptionAtRest() {
+    public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestGetArgs> encryptionAtRest() {
         return this.encryptionAtRest;
     }
 
@@ -44,8 +45,8 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGet
     }
 
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs() {
-        this.connectionPasswordEncryption = Output.empty();
-        this.encryptionAtRest = Output.empty();
+        this.connectionPasswordEncryption = Codegen.empty();
+        this.encryptionAtRest = Codegen.empty();
     }
 
     public static Builder builder() {

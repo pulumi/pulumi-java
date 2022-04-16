@@ -5,6 +5,7 @@ package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.iot.inputs.DeviceConfigGetArgs;
 import io.pulumi.gcp.iot.inputs.DeviceCredentialGetArgs;
 import io.pulumi.gcp.iot.inputs.DeviceGatewayConfigGetArgs;
@@ -29,8 +30,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="blocked")
       private final @Nullable Output<Boolean> blocked;
 
-    public Output<Boolean> getBlocked() {
-        return this.blocked == null ? Output.empty() : this.blocked;
+    public Output<Boolean> blocked() {
+        return this.blocked == null ? Codegen.empty() : this.blocked;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="configs")
       private final @Nullable Output<List<DeviceConfigGetArgs>> configs;
 
-    public Output<List<DeviceConfigGetArgs>> getConfigs() {
-        return this.configs == null ? Output.empty() : this.configs;
+    public Output<List<DeviceConfigGetArgs>> configs() {
+        return this.configs == null ? Codegen.empty() : this.configs;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
       private final @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
 
-    public Output<List<DeviceCredentialGetArgs>> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+    public Output<List<DeviceCredentialGetArgs>> credentials() {
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayConfig")
       private final @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
 
-    public Output<DeviceGatewayConfigGetArgs> getGatewayConfig() {
-        return this.gatewayConfig == null ? Output.empty() : this.gatewayConfig;
+    public Output<DeviceGatewayConfigGetArgs> gatewayConfig() {
+        return this.gatewayConfig == null ? Codegen.empty() : this.gatewayConfig;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastConfigAckTime")
       private final @Nullable Output<String> lastConfigAckTime;
 
-    public Output<String> getLastConfigAckTime() {
-        return this.lastConfigAckTime == null ? Output.empty() : this.lastConfigAckTime;
+    public Output<String> lastConfigAckTime() {
+        return this.lastConfigAckTime == null ? Codegen.empty() : this.lastConfigAckTime;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastConfigSendTime")
       private final @Nullable Output<String> lastConfigSendTime;
 
-    public Output<String> getLastConfigSendTime() {
-        return this.lastConfigSendTime == null ? Output.empty() : this.lastConfigSendTime;
+    public Output<String> lastConfigSendTime() {
+        return this.lastConfigSendTime == null ? Codegen.empty() : this.lastConfigSendTime;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastErrorStatuses")
       private final @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
 
-    public Output<List<DeviceLastErrorStatusGetArgs>> getLastErrorStatuses() {
-        return this.lastErrorStatuses == null ? Output.empty() : this.lastErrorStatuses;
+    public Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses() {
+        return this.lastErrorStatuses == null ? Codegen.empty() : this.lastErrorStatuses;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastErrorTime")
       private final @Nullable Output<String> lastErrorTime;
 
-    public Output<String> getLastErrorTime() {
-        return this.lastErrorTime == null ? Output.empty() : this.lastErrorTime;
+    public Output<String> lastErrorTime() {
+        return this.lastErrorTime == null ? Codegen.empty() : this.lastErrorTime;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastEventTime")
       private final @Nullable Output<String> lastEventTime;
 
-    public Output<String> getLastEventTime() {
-        return this.lastEventTime == null ? Output.empty() : this.lastEventTime;
+    public Output<String> lastEventTime() {
+        return this.lastEventTime == null ? Codegen.empty() : this.lastEventTime;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastHeartbeatTime")
       private final @Nullable Output<String> lastHeartbeatTime;
 
-    public Output<String> getLastHeartbeatTime() {
-        return this.lastHeartbeatTime == null ? Output.empty() : this.lastHeartbeatTime;
+    public Output<String> lastHeartbeatTime() {
+        return this.lastHeartbeatTime == null ? Codegen.empty() : this.lastHeartbeatTime;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastStateTime")
       private final @Nullable Output<String> lastStateTime;
 
-    public Output<String> getLastStateTime() {
-        return this.lastStateTime == null ? Output.empty() : this.lastStateTime;
+    public Output<String> lastStateTime() {
+        return this.lastStateTime == null ? Codegen.empty() : this.lastStateTime;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
-    public Output<String> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+    public Output<String> logLevel() {
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -187,8 +188,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="numId")
       private final @Nullable Output<String> numId;
 
-    public Output<String> getNumId() {
-        return this.numId == null ? Output.empty() : this.numId;
+    public Output<String> numId() {
+        return this.numId == null ? Codegen.empty() : this.numId;
     }
 
     /**
@@ -198,8 +199,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="registry")
       private final @Nullable Output<String> registry;
 
-    public Output<String> getRegistry() {
-        return this.registry == null ? Output.empty() : this.registry;
+    public Output<String> registry() {
+        return this.registry == null ? Codegen.empty() : this.registry;
     }
 
     /**
@@ -209,8 +210,8 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="states")
       private final @Nullable Output<List<DeviceStateGetArgs>> states;
 
-    public Output<List<DeviceStateGetArgs>> getStates() {
-        return this.states == null ? Output.empty() : this.states;
+    public Output<List<DeviceStateGetArgs>> states() {
+        return this.states == null ? Codegen.empty() : this.states;
     }
 
     public DeviceState(
@@ -251,23 +252,23 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceState() {
-        this.blocked = Output.empty();
-        this.configs = Output.empty();
-        this.credentials = Output.empty();
-        this.gatewayConfig = Output.empty();
-        this.lastConfigAckTime = Output.empty();
-        this.lastConfigSendTime = Output.empty();
-        this.lastErrorStatuses = Output.empty();
-        this.lastErrorTime = Output.empty();
-        this.lastEventTime = Output.empty();
-        this.lastHeartbeatTime = Output.empty();
-        this.lastStateTime = Output.empty();
-        this.logLevel = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.numId = Output.empty();
-        this.registry = Output.empty();
-        this.states = Output.empty();
+        this.blocked = Codegen.empty();
+        this.configs = Codegen.empty();
+        this.credentials = Codegen.empty();
+        this.gatewayConfig = Codegen.empty();
+        this.lastConfigAckTime = Codegen.empty();
+        this.lastConfigSendTime = Codegen.empty();
+        this.lastErrorStatuses = Codegen.empty();
+        this.lastErrorTime = Codegen.empty();
+        this.lastEventTime = Codegen.empty();
+        this.lastHeartbeatTime = Codegen.empty();
+        this.lastStateTime = Codegen.empty();
+        this.logLevel = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.numId = Codegen.empty();
+        this.registry = Codegen.empty();
+        this.states = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -327,7 +328,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blocked(@Nullable Boolean blocked) {
-            this.blocked = Output.ofNullable(blocked);
+            this.blocked = Codegen.ofNullable(blocked);
             return this;
         }
         public Builder configs(@Nullable Output<List<DeviceConfigGetArgs>> configs) {
@@ -335,7 +336,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configs(@Nullable List<DeviceConfigGetArgs> configs) {
-            this.configs = Output.ofNullable(configs);
+            this.configs = Codegen.ofNullable(configs);
             return this;
         }
         public Builder configs(DeviceConfigGetArgs... configs) {
@@ -346,7 +347,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable List<DeviceCredentialGetArgs> credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder credentials(DeviceCredentialGetArgs... credentials) {
@@ -357,7 +358,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayConfig(@Nullable DeviceGatewayConfigGetArgs gatewayConfig) {
-            this.gatewayConfig = Output.ofNullable(gatewayConfig);
+            this.gatewayConfig = Codegen.ofNullable(gatewayConfig);
             return this;
         }
         public Builder lastConfigAckTime(@Nullable Output<String> lastConfigAckTime) {
@@ -365,7 +366,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastConfigAckTime(@Nullable String lastConfigAckTime) {
-            this.lastConfigAckTime = Output.ofNullable(lastConfigAckTime);
+            this.lastConfigAckTime = Codegen.ofNullable(lastConfigAckTime);
             return this;
         }
         public Builder lastConfigSendTime(@Nullable Output<String> lastConfigSendTime) {
@@ -373,7 +374,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastConfigSendTime(@Nullable String lastConfigSendTime) {
-            this.lastConfigSendTime = Output.ofNullable(lastConfigSendTime);
+            this.lastConfigSendTime = Codegen.ofNullable(lastConfigSendTime);
             return this;
         }
         public Builder lastErrorStatuses(@Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses) {
@@ -381,7 +382,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastErrorStatuses(@Nullable List<DeviceLastErrorStatusGetArgs> lastErrorStatuses) {
-            this.lastErrorStatuses = Output.ofNullable(lastErrorStatuses);
+            this.lastErrorStatuses = Codegen.ofNullable(lastErrorStatuses);
             return this;
         }
         public Builder lastErrorStatuses(DeviceLastErrorStatusGetArgs... lastErrorStatuses) {
@@ -392,7 +393,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastErrorTime(@Nullable String lastErrorTime) {
-            this.lastErrorTime = Output.ofNullable(lastErrorTime);
+            this.lastErrorTime = Codegen.ofNullable(lastErrorTime);
             return this;
         }
         public Builder lastEventTime(@Nullable Output<String> lastEventTime) {
@@ -400,7 +401,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastEventTime(@Nullable String lastEventTime) {
-            this.lastEventTime = Output.ofNullable(lastEventTime);
+            this.lastEventTime = Codegen.ofNullable(lastEventTime);
             return this;
         }
         public Builder lastHeartbeatTime(@Nullable Output<String> lastHeartbeatTime) {
@@ -408,7 +409,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastHeartbeatTime(@Nullable String lastHeartbeatTime) {
-            this.lastHeartbeatTime = Output.ofNullable(lastHeartbeatTime);
+            this.lastHeartbeatTime = Codegen.ofNullable(lastHeartbeatTime);
             return this;
         }
         public Builder lastStateTime(@Nullable Output<String> lastStateTime) {
@@ -416,7 +417,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastStateTime(@Nullable String lastStateTime) {
-            this.lastStateTime = Output.ofNullable(lastStateTime);
+            this.lastStateTime = Codegen.ofNullable(lastStateTime);
             return this;
         }
         public Builder logLevel(@Nullable Output<String> logLevel) {
@@ -424,7 +425,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -432,7 +433,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -440,7 +441,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder numId(@Nullable Output<String> numId) {
@@ -448,7 +449,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numId(@Nullable String numId) {
-            this.numId = Output.ofNullable(numId);
+            this.numId = Codegen.ofNullable(numId);
             return this;
         }
         public Builder registry(@Nullable Output<String> registry) {
@@ -456,7 +457,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registry(@Nullable String registry) {
-            this.registry = Output.ofNullable(registry);
+            this.registry = Codegen.ofNullable(registry);
             return this;
         }
         public Builder states(@Nullable Output<List<DeviceStateGetArgs>> states) {
@@ -464,7 +465,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder states(@Nullable List<DeviceStateGetArgs> states) {
-            this.states = Output.ofNullable(states);
+            this.states = Codegen.ofNullable(states);
             return this;
         }
         public Builder states(DeviceStateGetArgs... states) {

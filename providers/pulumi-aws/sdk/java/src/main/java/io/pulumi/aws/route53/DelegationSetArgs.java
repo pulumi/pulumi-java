@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class DelegationSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
-        return this.referenceName == null ? Output.empty() : this.referenceName;
+    public Output<String> referenceName() {
+        return this.referenceName == null ? Codegen.empty() : this.referenceName;
     }
 
     public DelegationSetArgs(@Nullable Output<String> referenceName) {
@@ -31,7 +32,7 @@ public final class DelegationSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DelegationSetArgs() {
-        this.referenceName = Output.empty();
+        this.referenceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class DelegationSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Output.ofNullable(referenceName);
+            this.referenceName = Codegen.ofNullable(referenceName);
             return this;
         }        public DelegationSetArgs build() {
             return new DelegationSetArgs(referenceName);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.ObjectACLArgs;
 import io.pulumi.gcp.storage.inputs.ObjectACLState;
@@ -46,7 +47,7 @@ public class ObjectACL extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket the object is stored in.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -60,7 +61,7 @@ public class ObjectACL extends io.pulumi.resources.CustomResource {
      * @return The name of the object to apply the acl to.
      * 
      */
-    public Output<String> getObject() {
+    public Output<String> object() {
         return this.object;
     }
     /**
@@ -74,7 +75,7 @@ public class ObjectACL extends io.pulumi.resources.CustomResource {
      * @return The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
-    public Output</* @Nullable */ String> getPredefinedAcl() {
+    public Output</* @Nullable */ String> predefinedAcl() {
         return this.predefinedAcl;
     }
     /**
@@ -90,7 +91,7 @@ public class ObjectACL extends io.pulumi.resources.CustomResource {
      * Must be set if `predefined_acl` is not.
      * 
      */
-    public Output<List<String>> getRoleEntities() {
+    public Output<List<String>> roleEntities() {
         return this.roleEntities;
     }
 
@@ -116,7 +117,7 @@ public class ObjectACL extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectACL(String name, ObjectACLArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/objectACL:ObjectACL", name, args == null ? ObjectACLArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/objectACL:ObjectACL", name, args == null ? ObjectACLArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectACL(String name, Output<String> id, @Nullable ObjectACLState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

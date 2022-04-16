@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
     @Import(name="simpleResponses", required=true)
       private final List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
 
-    public List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> getSimpleResponses() {
+    public List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses() {
         return this.simpleResponses;
     }
 

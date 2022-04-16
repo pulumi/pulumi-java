@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="azureStorageSid", required=true)
       private final Output<String> azureStorageSid;
 
-    public Output<String> getAzureStorageSid() {
+    public Output<String> azureStorageSid() {
         return this.azureStorageSid;
     }
 
@@ -35,7 +36,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="domainGuid", required=true)
       private final Output<String> domainGuid;
 
-    public Output<String> getDomainGuid() {
+    public Output<String> domainGuid() {
         return this.domainGuid;
     }
 
@@ -46,7 +47,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -57,7 +58,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="domainSid", required=true)
       private final Output<String> domainSid;
 
-    public Output<String> getDomainSid() {
+    public Output<String> domainSid() {
         return this.domainSid;
     }
 
@@ -68,7 +69,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="forestName", required=true)
       private final Output<String> forestName;
 
-    public Output<String> getForestName() {
+    public Output<String> forestName() {
         return this.forestName;
     }
 
@@ -79,7 +80,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="netBiosDomainName", required=true)
       private final Output<String> netBiosDomainName;
 
-    public Output<String> getNetBiosDomainName() {
+    public Output<String> netBiosDomainName() {
         return this.netBiosDomainName;
     }
 
@@ -99,12 +100,12 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ActiveDirectoryPropertiesArgs() {
-        this.azureStorageSid = Output.empty();
-        this.domainGuid = Output.empty();
-        this.domainName = Output.empty();
-        this.domainSid = Output.empty();
-        this.forestName = Output.empty();
-        this.netBiosDomainName = Output.empty();
+        this.azureStorageSid = Codegen.empty();
+        this.domainGuid = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.domainSid = Codegen.empty();
+        this.forestName = Codegen.empty();
+        this.netBiosDomainName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetGlueConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,28 +19,28 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="glueConfiguration")
       private final @Nullable Output<DatasetGlueConfigurationArgs> glueConfiguration;
 
-    public Output<DatasetGlueConfigurationArgs> getGlueConfiguration() {
-        return this.glueConfiguration == null ? Output.empty() : this.glueConfiguration;
+    public Output<DatasetGlueConfigurationArgs> glueConfiguration() {
+        return this.glueConfiguration == null ? Codegen.empty() : this.glueConfiguration;
     }
 
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -55,10 +56,10 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
     }
 
     private DatasetS3DestinationConfigurationArgs() {
-        this.bucket = Output.empty();
-        this.glueConfiguration = Output.empty();
-        this.key = Output.empty();
-        this.roleArn = Output.empty();
+        this.bucket = Codegen.empty();
+        this.glueConfiguration = Codegen.empty();
+        this.key = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class DatasetS3DestinationConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder glueConfiguration(@Nullable DatasetGlueConfigurationArgs glueConfiguration) {
-            this.glueConfiguration = Output.ofNullable(glueConfiguration);
+            this.glueConfiguration = Codegen.ofNullable(glueConfiguration);
             return this;
         }
         public Builder key(Output<String> key) {

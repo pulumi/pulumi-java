@@ -10,6 +10,7 @@ import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the resource set.
      * 
      */
-    public Output<String> getResourceSetArn() {
+    public Output<String> resourceSetArn() {
         return this.resourceSetArn;
     }
     /**
@@ -45,7 +46,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return The name of the resource set to create.
      * 
      */
-    public Output<String> getResourceSetName() {
+    public Output<String> resourceSetName() {
         return this.resourceSetName;
     }
     /**
@@ -63,7 +64,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
      * 
      */
-    public Output<String> getResourceSetType() {
+    public Output<String> resourceSetType() {
         return this.resourceSetType;
     }
     /**
@@ -77,7 +78,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return A list of resource objects in the resource set.
      * 
      */
-    public Output<List<ResourceSetResource>> getResources() {
+    public Output<List<ResourceSetResource>> resources() {
         return this.resources;
     }
     /**
@@ -91,7 +92,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @return A tag to associate with the parameters for a resource set.
      * 
      */
-    public Output</* @Nullable */ List<ResourceSetTag>> getTags() {
+    public Output</* @Nullable */ List<ResourceSetTag>> tags() {
         return this.tags;
     }
 
@@ -117,7 +118,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceSet(String name, ResourceSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoveryreadiness:ResourceSet", name, args == null ? ResourceSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53recoveryreadiness:ResourceSet", name, args == null ? ResourceSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

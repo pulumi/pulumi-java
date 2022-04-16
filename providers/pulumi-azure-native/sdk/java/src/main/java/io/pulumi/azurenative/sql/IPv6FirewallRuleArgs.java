@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endIPv6Address")
       private final @Nullable Output<String> endIPv6Address;
 
-    public Output<String> getEndIPv6Address() {
-        return this.endIPv6Address == null ? Output.empty() : this.endIPv6Address;
+    public Output<String> endIPv6Address() {
+        return this.endIPv6Address == null ? Codegen.empty() : this.endIPv6Address;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
-    public Output<String> getFirewallRuleName() {
-        return this.firewallRuleName == null ? Output.empty() : this.firewallRuleName;
+    public Output<String> firewallRuleName() {
+        return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,7 +66,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -76,8 +77,8 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="startIPv6Address")
       private final @Nullable Output<String> startIPv6Address;
 
-    public Output<String> getStartIPv6Address() {
-        return this.startIPv6Address == null ? Output.empty() : this.startIPv6Address;
+    public Output<String> startIPv6Address() {
+        return this.startIPv6Address == null ? Codegen.empty() : this.startIPv6Address;
     }
 
     public IPv6FirewallRuleArgs(
@@ -96,12 +97,12 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IPv6FirewallRuleArgs() {
-        this.endIPv6Address = Output.empty();
-        this.firewallRuleName = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.startIPv6Address = Output.empty();
+        this.endIPv6Address = Codegen.empty();
+        this.firewallRuleName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.startIPv6Address = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endIPv6Address(@Nullable String endIPv6Address) {
-            this.endIPv6Address = Output.ofNullable(endIPv6Address);
+            this.endIPv6Address = Codegen.ofNullable(endIPv6Address);
             return this;
         }
         public Builder firewallRuleName(@Nullable Output<String> firewallRuleName) {
@@ -147,7 +148,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = Output.ofNullable(firewallRuleName);
+            this.firewallRuleName = Codegen.ofNullable(firewallRuleName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -155,7 +156,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -179,7 +180,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startIPv6Address(@Nullable String startIPv6Address) {
-            this.startIPv6Address = Output.ofNullable(startIPv6Address);
+            this.startIPv6Address = Codegen.ofNullable(startIPv6Address);
             return this;
         }        public IPv6FirewallRuleArgs build() {
             return new IPv6FirewallRuleArgs(endIPv6Address, firewallRuleName, name, resourceGroupName, serverName, startIPv6Address);

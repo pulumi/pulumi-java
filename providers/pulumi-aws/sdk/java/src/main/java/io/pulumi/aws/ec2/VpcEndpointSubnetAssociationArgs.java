@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -31,7 +32,7 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
     @Import(name="vpcEndpointId", required=true)
       private final Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 
@@ -43,8 +44,8 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
     }
 
     private VpcEndpointSubnetAssociationArgs() {
-        this.subnetId = Output.empty();
-        this.vpcEndpointId = Output.empty();
+        this.subnetId = Codegen.empty();
+        this.vpcEndpointId = Codegen.empty();
     }
 
     public static Builder builder() {

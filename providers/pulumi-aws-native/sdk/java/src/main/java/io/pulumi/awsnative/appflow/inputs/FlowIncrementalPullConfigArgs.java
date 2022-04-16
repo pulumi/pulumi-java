@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
     @Import(name="datetimeTypeFieldName")
       private final @Nullable Output<String> datetimeTypeFieldName;
 
-    public Output<String> getDatetimeTypeFieldName() {
-        return this.datetimeTypeFieldName == null ? Output.empty() : this.datetimeTypeFieldName;
+    public Output<String> datetimeTypeFieldName() {
+        return this.datetimeTypeFieldName == null ? Codegen.empty() : this.datetimeTypeFieldName;
     }
 
     public FlowIncrementalPullConfigArgs(@Nullable Output<String> datetimeTypeFieldName) {
@@ -30,7 +31,7 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
     }
 
     private FlowIncrementalPullConfigArgs() {
-        this.datetimeTypeFieldName = Output.empty();
+        this.datetimeTypeFieldName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder datetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
-            this.datetimeTypeFieldName = Output.ofNullable(datetimeTypeFieldName);
+            this.datetimeTypeFieldName = Codegen.ofNullable(datetimeTypeFieldName);
             return this;
         }        public FlowIncrementalPullConfigArgs build() {
             return new FlowIncrementalPullConfigArgs(datetimeTypeFieldName);

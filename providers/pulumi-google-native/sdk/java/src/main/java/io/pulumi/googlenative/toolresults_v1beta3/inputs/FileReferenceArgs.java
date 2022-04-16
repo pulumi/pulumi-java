@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileUri")
       private final @Nullable Output<String> fileUri;
 
-    public Output<String> getFileUri() {
-        return this.fileUri == null ? Output.empty() : this.fileUri;
+    public Output<String> fileUri() {
+        return this.fileUri == null ? Codegen.empty() : this.fileUri;
     }
 
     public FileReferenceArgs(@Nullable Output<String> fileUri) {
@@ -34,7 +35,7 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileReferenceArgs() {
-        this.fileUri = Output.empty();
+        this.fileUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileUri(@Nullable String fileUri) {
-            this.fileUri = Output.ofNullable(fileUri);
+            this.fileUri = Codegen.ofNullable(fileUri);
             return this;
         }        public FileReferenceArgs build() {
             return new FileReferenceArgs(fileUri);

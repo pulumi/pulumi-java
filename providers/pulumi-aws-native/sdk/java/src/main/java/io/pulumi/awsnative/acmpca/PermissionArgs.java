@@ -5,6 +5,7 @@ package io.pulumi.awsnative.acmpca;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<String>> actions;
 
-    public Output<List<String>> getActions() {
+    public Output<List<String>> actions() {
         return this.actions;
     }
 
@@ -33,7 +34,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
 
-    public Output<String> getCertificateAuthorityArn() {
+    public Output<String> certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
 
@@ -44,7 +45,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="principal", required=true)
       private final Output<String> principal;
 
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
 
@@ -55,8 +56,8 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceAccount")
       private final @Nullable Output<String> sourceAccount;
 
-    public Output<String> getSourceAccount() {
-        return this.sourceAccount == null ? Output.empty() : this.sourceAccount;
+    public Output<String> sourceAccount() {
+        return this.sourceAccount == null ? Codegen.empty() : this.sourceAccount;
     }
 
     public PermissionArgs(
@@ -71,10 +72,10 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionArgs() {
-        this.actions = Output.empty();
-        this.certificateAuthorityArn = Output.empty();
-        this.principal = Output.empty();
-        this.sourceAccount = Output.empty();
+        this.actions = Codegen.empty();
+        this.certificateAuthorityArn = Codegen.empty();
+        this.principal = Codegen.empty();
+        this.sourceAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceAccount(@Nullable String sourceAccount) {
-            this.sourceAccount = Output.ofNullable(sourceAccount);
+            this.sourceAccount = Codegen.ofNullable(sourceAccount);
             return this;
         }        public PermissionArgs build() {
             return new PermissionArgs(actions, certificateAuthorityArn, principal, sourceAccount);

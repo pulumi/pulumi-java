@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsCertificateGetA
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class VirtualGatewaySpecListenerTlsGetArgs extends io.pulumi.resour
     @Import(name="certificate", required=true)
       private final Output<VirtualGatewaySpecListenerTlsCertificateGetArgs> certificate;
 
-    public Output<VirtualGatewaySpecListenerTlsCertificateGetArgs> getCertificate() {
+    public Output<VirtualGatewaySpecListenerTlsCertificateGetArgs> certificate() {
         return this.certificate;
     }
 
@@ -34,7 +35,7 @@ public final class VirtualGatewaySpecListenerTlsGetArgs extends io.pulumi.resour
     @Import(name="mode", required=true)
       private final Output<String> mode;
 
-    public Output<String> getMode() {
+    public Output<String> mode() {
         return this.mode;
     }
 
@@ -45,8 +46,8 @@ public final class VirtualGatewaySpecListenerTlsGetArgs extends io.pulumi.resour
     @Import(name="validation")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationGetArgs> validation;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationGetArgs> getValidation() {
-        return this.validation == null ? Output.empty() : this.validation;
+    public Output<VirtualGatewaySpecListenerTlsValidationGetArgs> validation() {
+        return this.validation == null ? Codegen.empty() : this.validation;
     }
 
     public VirtualGatewaySpecListenerTlsGetArgs(
@@ -59,9 +60,9 @@ public final class VirtualGatewaySpecListenerTlsGetArgs extends io.pulumi.resour
     }
 
     private VirtualGatewaySpecListenerTlsGetArgs() {
-        this.certificate = Output.empty();
-        this.mode = Output.empty();
-        this.validation = Output.empty();
+        this.certificate = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.validation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class VirtualGatewaySpecListenerTlsGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder validation(@Nullable VirtualGatewaySpecListenerTlsValidationGetArgs validation) {
-            this.validation = Output.ofNullable(validation);
+            this.validation = Codegen.ofNullable(validation);
             return this;
         }        public VirtualGatewaySpecListenerTlsGetArgs build() {
             return new VirtualGatewaySpecListenerTlsGetArgs(certificate, mode, validation);

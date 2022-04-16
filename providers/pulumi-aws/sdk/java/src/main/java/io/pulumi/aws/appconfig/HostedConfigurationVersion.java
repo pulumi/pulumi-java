@@ -9,6 +9,7 @@ import io.pulumi.aws.appconfig.inputs.HostedConfigurationVersionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @return The application ID.
      * 
      */
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
     /**
@@ -54,7 +55,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @return The Amazon Resource Name (ARN) of the AppConfig  hosted configuration version.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +69,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @return The configuration profile ID.
      * 
      */
-    public Output<String> getConfigurationProfileId() {
+    public Output<String> configurationProfileId() {
         return this.configurationProfileId;
     }
     /**
@@ -82,7 +83,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @return The content of the configuration or the configuration data.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -96,7 +97,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @return A standard MIME type describing the format of the configuration content. For more information, see [Content-Type](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17).
      * 
      */
-    public Output<String> getContentType() {
+    public Output<String> contentType() {
         return this.contentType;
     }
     /**
@@ -110,7 +111,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @return A description of the configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -124,7 +125,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @return The version number of the hosted configuration.
      * 
      */
-    public Output<Integer> getVersionNumber() {
+    public Output<Integer> versionNumber() {
         return this.versionNumber;
     }
 
@@ -150,7 +151,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedConfigurationVersion(String name, HostedConfigurationVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appconfig/hostedConfigurationVersion:HostedConfigurationVersion", name, args == null ? HostedConfigurationVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appconfig/hostedConfigurationVersion:HostedConfigurationVersion", name, args == null ? HostedConfigurationVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HostedConfigurationVersion(String name, Output<String> id, @Nullable HostedConfigurationVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="arguments")
       private final @Nullable Output<Boolean> arguments;
 
-    public Output<Boolean> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+    public Output<Boolean> arguments() {
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="environment")
       private final @Nullable Output<Boolean> environment;
 
-    public Output<Boolean> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<Boolean> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="materials")
       private final @Nullable Output<Boolean> materials;
 
-    public Output<Boolean> getMaterials() {
-        return this.materials == null ? Output.empty() : this.materials;
+    public Output<Boolean> materials() {
+        return this.materials == null ? Codegen.empty() : this.materials;
     }
 
     public SlsaCompletenessArgs(
@@ -61,9 +62,9 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SlsaCompletenessArgs() {
-        this.arguments = Output.empty();
-        this.environment = Output.empty();
-        this.materials = Output.empty();
+        this.arguments = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.materials = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arguments(@Nullable Boolean arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder environment(@Nullable Output<Boolean> environment) {
@@ -103,7 +104,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder environment(@Nullable Boolean environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder materials(@Nullable Output<Boolean> materials) {
@@ -111,7 +112,7 @@ public final class SlsaCompletenessArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder materials(@Nullable Boolean materials) {
-            this.materials = Output.ofNullable(materials);
+            this.materials = Codegen.ofNullable(materials);
             return this;
         }        public SlsaCompletenessArgs build() {
             return new SlsaCompletenessArgs(arguments, environment, materials);

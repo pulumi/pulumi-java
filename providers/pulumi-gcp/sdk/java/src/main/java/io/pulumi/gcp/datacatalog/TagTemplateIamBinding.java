@@ -6,6 +6,7 @@ package io.pulumi.gcp.datacatalog;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagTemplateIamBindingArgs;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingState;
@@ -19,43 +20,43 @@ public class TagTemplateIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=TagTemplateIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TagTemplateIamBindingCondition> condition;
 
-    public Output</* @Nullable */ TagTemplateIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ TagTemplateIamBindingCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     @Export(name="tagTemplate", type=String.class, parameters={})
     private Output<String> tagTemplate;
 
-    public Output<String> getTagTemplate() {
+    public Output<String> tagTemplate() {
         return this.tagTemplate;
     }
 
@@ -81,7 +82,7 @@ public class TagTemplateIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagTemplateIamBinding(String name, TagTemplateIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/tagTemplateIamBinding:TagTemplateIamBinding", name, args == null ? TagTemplateIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datacatalog/tagTemplateIamBinding:TagTemplateIamBinding", name, args == null ? TagTemplateIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagTemplateIamBinding(String name, Output<String> id, @Nullable TagTemplateIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.ConversationConversationStage;
 import java.lang.String;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationId")
       private final @Nullable Output<String> conversationId;
 
-    public Output<String> getConversationId() {
-        return this.conversationId == null ? Output.empty() : this.conversationId;
+    public Output<String> conversationId() {
+        return this.conversationId == null ? Codegen.empty() : this.conversationId;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationProfile", required=true)
       private final Output<String> conversationProfile;
 
-    public Output<String> getConversationProfile() {
+    public Output<String> conversationProfile() {
         return this.conversationProfile;
     }
 
@@ -40,22 +41,22 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conversationStage")
       private final @Nullable Output<ConversationConversationStage> conversationStage;
 
-    public Output<ConversationConversationStage> getConversationStage() {
-        return this.conversationStage == null ? Output.empty() : this.conversationStage;
+    public Output<ConversationConversationStage> conversationStage() {
+        return this.conversationStage == null ? Codegen.empty() : this.conversationStage;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ConversationArgs(
@@ -72,11 +73,11 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConversationArgs() {
-        this.conversationId = Output.empty();
-        this.conversationProfile = Output.empty();
-        this.conversationStage = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
+        this.conversationId = Codegen.empty();
+        this.conversationProfile = Codegen.empty();
+        this.conversationStage = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conversationId(@Nullable String conversationId) {
-            this.conversationId = Output.ofNullable(conversationId);
+            this.conversationId = Codegen.ofNullable(conversationId);
             return this;
         }
         public Builder conversationProfile(Output<String> conversationProfile) {
@@ -128,7 +129,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conversationStage(@Nullable ConversationConversationStage conversationStage) {
-            this.conversationStage = Output.ofNullable(conversationStage);
+            this.conversationStage = Codegen.ofNullable(conversationStage);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -136,7 +137,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -144,7 +145,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ConversationArgs build() {
             return new ConversationArgs(conversationId, conversationProfile, conversationStage, location, project);

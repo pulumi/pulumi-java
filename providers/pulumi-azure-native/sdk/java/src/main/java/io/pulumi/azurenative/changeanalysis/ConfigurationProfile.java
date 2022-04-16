@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The identity block returned by ARM resource that supports managed identity.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -58,7 +59,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The location where the resource is to be deployed.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -72,7 +73,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The properties of a configuration profile.
      * 
      */
-    public Output<ConfigurationProfileResourcePropertiesResponse> getProperties() {
+    public Output<ConfigurationProfileResourcePropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -100,7 +101,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources
      * 
      */
-    public Output</* @Nullable */ SystemDataResponse> getSystemData() {
+    public Output</* @Nullable */ SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +115,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,7 +141,7 @@ public class ConfigurationProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationProfile(String name, @Nullable ConfigurationProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:changeanalysis:ConfigurationProfile", name, args == null ? ConfigurationProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:changeanalysis:ConfigurationProfile", name, args == null ? ConfigurationProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConfigurationProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

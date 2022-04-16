@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.DocumentKnowledgeTypesItem;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentUri")
       private final @Nullable Output<String> contentUri;
 
-    public Output<String> getContentUri() {
-        return this.contentUri == null ? Output.empty() : this.contentUri;
+    public Output<String> contentUri() {
+        return this.contentUri == null ? Codegen.empty() : this.contentUri;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -58,21 +59,21 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableAutoReload")
       private final @Nullable Output<Boolean> enableAutoReload;
 
-    public Output<Boolean> getEnableAutoReload() {
-        return this.enableAutoReload == null ? Output.empty() : this.enableAutoReload;
+    public Output<Boolean> enableAutoReload() {
+        return this.enableAutoReload == null ? Codegen.empty() : this.enableAutoReload;
     }
 
     @Import(name="importGcsCustomMetadata")
       private final @Nullable Output<String> importGcsCustomMetadata;
 
-    public Output<String> getImportGcsCustomMetadata() {
-        return this.importGcsCustomMetadata == null ? Output.empty() : this.importGcsCustomMetadata;
+    public Output<String> importGcsCustomMetadata() {
+        return this.importGcsCustomMetadata == null ? Codegen.empty() : this.importGcsCustomMetadata;
     }
 
     @Import(name="knowledgeBaseId", required=true)
       private final Output<String> knowledgeBaseId;
 
-    public Output<String> getKnowledgeBaseId() {
+    public Output<String> knowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
@@ -83,15 +84,15 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="knowledgeTypes", required=true)
       private final Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes;
 
-    public Output<List<DocumentKnowledgeTypesItem>> getKnowledgeTypes() {
+    public Output<List<DocumentKnowledgeTypesItem>> knowledgeTypes() {
         return this.knowledgeTypes;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mimeType", required=true)
       private final Output<String> mimeType;
 
-    public Output<String> getMimeType() {
+    public Output<String> mimeType() {
         return this.mimeType;
     }
 
@@ -123,15 +124,15 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rawContent")
       private final @Nullable Output<String> rawContent;
 
-    public Output<String> getRawContent() {
-        return this.rawContent == null ? Output.empty() : this.rawContent;
+    public Output<String> rawContent() {
+        return this.rawContent == null ? Codegen.empty() : this.rawContent;
     }
 
     public DocumentArgs(
@@ -175,19 +176,19 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentArgs() {
-        this.content = Output.empty();
-        this.contentUri = Output.empty();
-        this.displayName = Output.empty();
-        this.enableAutoReload = Output.empty();
-        this.importGcsCustomMetadata = Output.empty();
-        this.knowledgeBaseId = Output.empty();
-        this.knowledgeTypes = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.mimeType = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rawContent = Output.empty();
+        this.content = Codegen.empty();
+        this.contentUri = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enableAutoReload = Codegen.empty();
+        this.importGcsCustomMetadata = Codegen.empty();
+        this.knowledgeBaseId = Codegen.empty();
+        this.knowledgeTypes = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.mimeType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rawContent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentUri(@Nullable Output<String> contentUri) {
@@ -247,7 +248,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentUri(@Nullable String contentUri) {
-            this.contentUri = Output.ofNullable(contentUri);
+            this.contentUri = Codegen.ofNullable(contentUri);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -263,7 +264,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableAutoReload(@Nullable Boolean enableAutoReload) {
-            this.enableAutoReload = Output.ofNullable(enableAutoReload);
+            this.enableAutoReload = Codegen.ofNullable(enableAutoReload);
             return this;
         }
         public Builder importGcsCustomMetadata(@Nullable Output<String> importGcsCustomMetadata) {
@@ -271,7 +272,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder importGcsCustomMetadata(@Nullable String importGcsCustomMetadata) {
-            this.importGcsCustomMetadata = Output.ofNullable(importGcsCustomMetadata);
+            this.importGcsCustomMetadata = Codegen.ofNullable(importGcsCustomMetadata);
             return this;
         }
         public Builder knowledgeBaseId(Output<String> knowledgeBaseId) {
@@ -298,7 +299,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -306,7 +307,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder mimeType(Output<String> mimeType) {
@@ -322,7 +323,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -330,7 +331,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rawContent(@Nullable Output<String> rawContent) {
@@ -338,7 +339,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rawContent(@Nullable String rawContent) {
-            this.rawContent = Output.ofNullable(rawContent);
+            this.rawContent = Codegen.ofNullable(rawContent);
             return this;
         }        public DocumentArgs build() {
             return new DocumentArgs(content, contentUri, displayName, enableAutoReload, importGcsCustomMetadata, knowledgeBaseId, knowledgeTypes, location, metadata, mimeType, name, project, rawContent);

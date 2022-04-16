@@ -6,6 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.MLTransformParametersFindMatchesParametersGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
     @Import(name="findMatchesParameters", required=true)
       private final Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
 
-    public Output<MLTransformParametersFindMatchesParametersGetArgs> getFindMatchesParameters() {
+    public Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters() {
         return this.findMatchesParameters;
     }
 
@@ -32,7 +33,7 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
     @Import(name="transformType", required=true)
       private final Output<String> transformType;
 
-    public Output<String> getTransformType() {
+    public Output<String> transformType() {
         return this.transformType;
     }
 
@@ -44,8 +45,8 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
     }
 
     private MLTransformParametersGetArgs() {
-        this.findMatchesParameters = Output.empty();
-        this.transformType = Output.empty();
+        this.findMatchesParameters = Codegen.empty();
+        this.transformType = Codegen.empty();
     }
 
     public static Builder builder() {

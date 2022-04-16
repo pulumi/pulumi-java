@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     @Import(name="inline")
       private final @Nullable Output<List<String>> inline;
 
-    public Output<List<String>> getInline() {
-        return this.inline == null ? Output.empty() : this.inline;
+    public Output<List<String>> inline() {
+        return this.inline == null ? Codegen.empty() : this.inline;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     @Import(name="runAsSystem")
       private final @Nullable Output<Boolean> runAsSystem;
 
-    public Output<Boolean> getRunAsSystem() {
-        return this.runAsSystem == null ? Output.empty() : this.runAsSystem;
+    public Output<Boolean> runAsSystem() {
+        return this.runAsSystem == null ? Codegen.empty() : this.runAsSystem;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     @Import(name="runElevated")
       private final @Nullable Output<Boolean> runElevated;
 
-    public Output<Boolean> getRunElevated() {
-        return this.runElevated == null ? Output.empty() : this.runElevated;
+    public Output<Boolean> runElevated() {
+        return this.runElevated == null ? Codegen.empty() : this.runElevated;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     @Import(name="scriptUri")
       private final @Nullable Output<String> scriptUri;
 
-    public Output<String> getScriptUri() {
-        return this.scriptUri == null ? Output.empty() : this.scriptUri;
+    public Output<String> scriptUri() {
+        return this.scriptUri == null ? Codegen.empty() : this.scriptUri;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
 
-    public Output<String> getSha256Checksum() {
-        return this.sha256Checksum == null ? Output.empty() : this.sha256Checksum;
+    public Output<String> sha256Checksum() {
+        return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -106,8 +107,8 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     @Import(name="validExitCodes")
       private final @Nullable Output<List<Integer>> validExitCodes;
 
-    public Output<List<Integer>> getValidExitCodes() {
-        return this.validExitCodes == null ? Output.empty() : this.validExitCodes;
+    public Output<List<Integer>> validExitCodes() {
+        return this.validExitCodes == null ? Codegen.empty() : this.validExitCodes;
     }
 
     public ImageTemplatePowerShellCustomizerArgs(
@@ -121,23 +122,23 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
         @Nullable Output<List<Integer>> validExitCodes) {
         this.inline = inline;
         this.name = name;
-        this.runAsSystem = runAsSystem == null ? Output.ofNullable(false) : runAsSystem;
-        this.runElevated = runElevated == null ? Output.ofNullable(false) : runElevated;
+        this.runAsSystem = runAsSystem == null ? Codegen.ofNullable(false) : runAsSystem;
+        this.runElevated = runElevated == null ? Codegen.ofNullable(false) : runElevated;
         this.scriptUri = scriptUri;
-        this.sha256Checksum = sha256Checksum == null ? Output.ofNullable("") : sha256Checksum;
+        this.sha256Checksum = sha256Checksum == null ? Codegen.ofNullable("") : sha256Checksum;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.validExitCodes = validExitCodes;
     }
 
     private ImageTemplatePowerShellCustomizerArgs() {
-        this.inline = Output.empty();
-        this.name = Output.empty();
-        this.runAsSystem = Output.empty();
-        this.runElevated = Output.empty();
-        this.scriptUri = Output.empty();
-        this.sha256Checksum = Output.empty();
-        this.type = Output.empty();
-        this.validExitCodes = Output.empty();
+        this.inline = Codegen.empty();
+        this.name = Codegen.empty();
+        this.runAsSystem = Codegen.empty();
+        this.runElevated = Codegen.empty();
+        this.scriptUri = Codegen.empty();
+        this.sha256Checksum = Codegen.empty();
+        this.type = Codegen.empty();
+        this.validExitCodes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
             return this;
         }
         public Builder inline(@Nullable List<String> inline) {
-            this.inline = Output.ofNullable(inline);
+            this.inline = Codegen.ofNullable(inline);
             return this;
         }
         public Builder inline(String... inline) {
@@ -190,7 +191,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder runAsSystem(@Nullable Output<Boolean> runAsSystem) {
@@ -198,7 +199,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
             return this;
         }
         public Builder runAsSystem(@Nullable Boolean runAsSystem) {
-            this.runAsSystem = Output.ofNullable(runAsSystem);
+            this.runAsSystem = Codegen.ofNullable(runAsSystem);
             return this;
         }
         public Builder runElevated(@Nullable Output<Boolean> runElevated) {
@@ -206,7 +207,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
             return this;
         }
         public Builder runElevated(@Nullable Boolean runElevated) {
-            this.runElevated = Output.ofNullable(runElevated);
+            this.runElevated = Codegen.ofNullable(runElevated);
             return this;
         }
         public Builder scriptUri(@Nullable Output<String> scriptUri) {
@@ -214,7 +215,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
             return this;
         }
         public Builder scriptUri(@Nullable String scriptUri) {
-            this.scriptUri = Output.ofNullable(scriptUri);
+            this.scriptUri = Codegen.ofNullable(scriptUri);
             return this;
         }
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
@@ -222,7 +223,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
             return this;
         }
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Output.ofNullable(sha256Checksum);
+            this.sha256Checksum = Codegen.ofNullable(sha256Checksum);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -238,7 +239,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
             return this;
         }
         public Builder validExitCodes(@Nullable List<Integer> validExitCodes) {
-            this.validExitCodes = Output.ofNullable(validExitCodes);
+            this.validExitCodes = Codegen.ofNullable(validExitCodes);
             return this;
         }
         public Builder validExitCodes(Integer... validExitCodes) {

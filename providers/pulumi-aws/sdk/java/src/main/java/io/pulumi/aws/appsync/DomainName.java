@@ -9,6 +9,7 @@ import io.pulumi.aws.appsync.inputs.DomainNameState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The domain name that AppSync provides.
      * 
      */
-    public Output<String> getAppsyncDomainName() {
+    public Output<String> appsyncDomainName() {
         return this.appsyncDomainName;
     }
     /**
@@ -53,7 +54,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the certificate. This can be an Certificate Manager (ACM) certificate or an Identity and Access Management (IAM) server certificate. The certifiacte must reside in us-east-1.
      * 
      */
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
     /**
@@ -67,7 +68,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return A description of the Domain Name.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -81,7 +82,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The domain name.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -95,7 +96,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @return The ID of your Amazon Route 53 hosted zone.
      * 
      */
-    public Output<String> getHostedZoneId() {
+    public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
 
@@ -121,7 +122,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainName(String name, DomainNameArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/domainName:DomainName", name, args == null ? DomainNameArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appsync/domainName:DomainName", name, args == null ? DomainNameArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainName(String name, Output<String> id, @Nullable DomainNameState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

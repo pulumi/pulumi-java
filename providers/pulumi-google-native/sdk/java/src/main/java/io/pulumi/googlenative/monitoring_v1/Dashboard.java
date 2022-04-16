@@ -6,6 +6,7 @@ package io.pulumi.googlenative.monitoring_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v1.DashboardArgs;
 import io.pulumi.googlenative.monitoring_v1.outputs.ColumnLayoutResponse;
@@ -33,7 +34,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The content is divided into equally spaced columns and the widgets are arranged vertically.
      * 
      */
-    public Output<ColumnLayoutResponse> getColumnLayout() {
+    public Output<ColumnLayoutResponse> columnLayout() {
         return this.columnLayout;
     }
     /**
@@ -47,7 +48,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The mutable, human-readable name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -61,7 +62,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -75,7 +76,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
      * 
      */
-    public Output<GridLayoutResponse> getGridLayout() {
+    public Output<GridLayoutResponse> gridLayout() {
         return this.gridLayout;
     }
     /**
@@ -89,7 +90,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return Labels applied to the dashboard
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -103,7 +104,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
      * 
      */
-    public Output<MosaicLayoutResponse> getMosaicLayout() {
+    public Output<MosaicLayoutResponse> mosaicLayout() {
         return this.mosaicLayout;
     }
     /**
@@ -117,7 +118,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the dashboard.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +132,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @return The content is divided into equally spaced rows and the widgets are arranged horizontally.
      * 
      */
-    public Output<RowLayoutResponse> getRowLayout() {
+    public Output<RowLayoutResponse> rowLayout() {
         return this.rowLayout;
     }
 
@@ -157,7 +158,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dashboard(String name, DashboardArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:monitoring/v1:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:monitoring/v1:Dashboard", name, args == null ? DashboardArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dashboard(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

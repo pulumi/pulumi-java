@@ -22,14 +22,14 @@ public final class WorkGroupResultConfiguration extends io.pulumi.resources.Invo
     @Import(name="encryptionConfiguration")
       private final @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration;
 
-    public Optional<WorkGroupEncryptionConfiguration> getEncryptionConfiguration() {
+    public Optional<WorkGroupEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encryptionConfiguration);
     }
 
     @Import(name="outputLocation")
       private final @Nullable String outputLocation;
 
-    public Optional<String> getOutputLocation() {
+    public Optional<String> outputLocation() {
         return this.outputLocation == null ? Optional.empty() : Optional.ofNullable(this.outputLocation);
     }
 

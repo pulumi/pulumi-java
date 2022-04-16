@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
     @Import(name="networkSettings")
       private final @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
 
-    public Output<ServiceNetworkSettingsNetworkSettingsGetArgs> getNetworkSettings() {
-        return this.networkSettings == null ? Output.empty() : this.networkSettings;
+    public Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings() {
+        return this.networkSettings == null ? Codegen.empty() : this.networkSettings;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public ServiceNetworkSettingsState(
@@ -60,9 +61,9 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
     }
 
     private ServiceNetworkSettingsState() {
-        this.networkSettings = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.networkSettings = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder networkSettings(@Nullable ServiceNetworkSettingsNetworkSettingsGetArgs networkSettings) {
-            this.networkSettings = Output.ofNullable(networkSettings);
+            this.networkSettings = Codegen.ofNullable(networkSettings);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -102,7 +103,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -110,7 +111,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public ServiceNetworkSettingsState build() {
             return new ServiceNetworkSettingsState(networkSettings, project, service);

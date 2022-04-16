@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iam;
 import io.pulumi.awsnative.iam.inputs.ServerCertificateTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,43 +20,43 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
-    public Output<String> getCertificateBody() {
-        return this.certificateBody == null ? Output.empty() : this.certificateBody;
+    public Output<String> certificateBody() {
+        return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
     }
 
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
-        return this.certificateChain == null ? Output.empty() : this.certificateChain;
+    public Output<String> certificateChain() {
+        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+    public Output<String> privateKey() {
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     @Import(name="serverCertificateName")
       private final @Nullable Output<String> serverCertificateName;
 
-    public Output<String> getServerCertificateName() {
-        return this.serverCertificateName == null ? Output.empty() : this.serverCertificateName;
+    public Output<String> serverCertificateName() {
+        return this.serverCertificateName == null ? Codegen.empty() : this.serverCertificateName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ServerCertificateTagArgs>> tags;
 
-    public Output<List<ServerCertificateTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ServerCertificateTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServerCertificateArgs(
@@ -74,12 +75,12 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServerCertificateArgs() {
-        this.certificateBody = Output.empty();
-        this.certificateChain = Output.empty();
-        this.path = Output.empty();
-        this.privateKey = Output.empty();
-        this.serverCertificateName = Output.empty();
-        this.tags = Output.empty();
+        this.certificateBody = Codegen.empty();
+        this.certificateChain = Codegen.empty();
+        this.path = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.serverCertificateName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder certificateBody(@Nullable String certificateBody) {
-            this.certificateBody = Output.ofNullable(certificateBody);
+            this.certificateBody = Codegen.ofNullable(certificateBody);
             return this;
         }
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
@@ -125,7 +126,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Output.ofNullable(certificateChain);
+            this.certificateChain = Codegen.ofNullable(certificateChain);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -133,7 +134,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder privateKey(@Nullable Output<String> privateKey) {
@@ -141,7 +142,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }
         public Builder serverCertificateName(@Nullable Output<String> serverCertificateName) {
@@ -149,7 +150,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serverCertificateName(@Nullable String serverCertificateName) {
-            this.serverCertificateName = Output.ofNullable(serverCertificateName);
+            this.serverCertificateName = Codegen.ofNullable(serverCertificateName);
             return this;
         }
         public Builder tags(@Nullable Output<List<ServerCertificateTagArgs>> tags) {
@@ -157,7 +158,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable List<ServerCertificateTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ServerCertificateTagArgs... tags) {

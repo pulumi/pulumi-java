@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse extend
     @Import(name="speechModelVariant", required=true)
       private final String speechModelVariant;
 
-    public String getSpeechModelVariant() {
+    public String speechModelVariant() {
         return this.speechModelVariant;
     }
 

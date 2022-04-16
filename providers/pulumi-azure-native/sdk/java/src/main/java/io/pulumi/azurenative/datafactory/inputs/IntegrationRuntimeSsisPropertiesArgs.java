@@ -17,6 +17,7 @@ import io.pulumi.azurenative.datafactory.inputs.PackageStoreArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -39,8 +40,8 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     @Import(name="catalogInfo")
       private final @Nullable Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo;
 
-    public Output<IntegrationRuntimeSsisCatalogInfoArgs> getCatalogInfo() {
-        return this.catalogInfo == null ? Output.empty() : this.catalogInfo;
+    public Output<IntegrationRuntimeSsisCatalogInfoArgs> catalogInfo() {
+        return this.catalogInfo == null ? Codegen.empty() : this.catalogInfo;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+    public Output<CredentialReferenceArgs> credential() {
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     @Import(name="customSetupScriptProperties")
       private final @Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties;
 
-    public Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> getCustomSetupScriptProperties() {
-        return this.customSetupScriptProperties == null ? Output.empty() : this.customSetupScriptProperties;
+    public Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties() {
+        return this.customSetupScriptProperties == null ? Codegen.empty() : this.customSetupScriptProperties;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     @Import(name="dataProxyProperties")
       private final @Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties;
 
-    public Output<IntegrationRuntimeDataProxyPropertiesArgs> getDataProxyProperties() {
-        return this.dataProxyProperties == null ? Output.empty() : this.dataProxyProperties;
+    public Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties() {
+        return this.dataProxyProperties == null ? Codegen.empty() : this.dataProxyProperties;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     @Import(name="edition")
       private final @Nullable Output<Either<String,IntegrationRuntimeEdition>> edition;
 
-    public Output<Either<String,IntegrationRuntimeEdition>> getEdition() {
-        return this.edition == null ? Output.empty() : this.edition;
+    public Output<Either<String,IntegrationRuntimeEdition>> edition() {
+        return this.edition == null ? Codegen.empty() : this.edition;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     @Import(name="expressCustomSetupProperties")
       private final @Nullable Output<List<Object>> expressCustomSetupProperties;
 
-    public Output<List<Object>> getExpressCustomSetupProperties() {
-        return this.expressCustomSetupProperties == null ? Output.empty() : this.expressCustomSetupProperties;
+    public Output<List<Object>> expressCustomSetupProperties() {
+        return this.expressCustomSetupProperties == null ? Codegen.empty() : this.expressCustomSetupProperties;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,IntegrationRuntimeLicenseType>> licenseType;
 
-    public Output<Either<String,IntegrationRuntimeLicenseType>> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+    public Output<Either<String,IntegrationRuntimeLicenseType>> licenseType() {
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     @Import(name="packageStores")
       private final @Nullable Output<List<PackageStoreArgs>> packageStores;
 
-    public Output<List<PackageStoreArgs>> getPackageStores() {
-        return this.packageStores == null ? Output.empty() : this.packageStores;
+    public Output<List<PackageStoreArgs>> packageStores() {
+        return this.packageStores == null ? Codegen.empty() : this.packageStores;
     }
 
     public IntegrationRuntimeSsisPropertiesArgs(
@@ -140,14 +141,14 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
     }
 
     private IntegrationRuntimeSsisPropertiesArgs() {
-        this.catalogInfo = Output.empty();
-        this.credential = Output.empty();
-        this.customSetupScriptProperties = Output.empty();
-        this.dataProxyProperties = Output.empty();
-        this.edition = Output.empty();
-        this.expressCustomSetupProperties = Output.empty();
-        this.licenseType = Output.empty();
-        this.packageStores = Output.empty();
+        this.catalogInfo = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.customSetupScriptProperties = Codegen.empty();
+        this.dataProxyProperties = Codegen.empty();
+        this.edition = Codegen.empty();
+        this.expressCustomSetupProperties = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.packageStores = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder catalogInfo(@Nullable IntegrationRuntimeSsisCatalogInfoArgs catalogInfo) {
-            this.catalogInfo = Output.ofNullable(catalogInfo);
+            this.catalogInfo = Codegen.ofNullable(catalogInfo);
             return this;
         }
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
@@ -197,7 +198,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder customSetupScriptProperties(@Nullable Output<IntegrationRuntimeCustomSetupScriptPropertiesArgs> customSetupScriptProperties) {
@@ -205,7 +206,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder customSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesArgs customSetupScriptProperties) {
-            this.customSetupScriptProperties = Output.ofNullable(customSetupScriptProperties);
+            this.customSetupScriptProperties = Codegen.ofNullable(customSetupScriptProperties);
             return this;
         }
         public Builder dataProxyProperties(@Nullable Output<IntegrationRuntimeDataProxyPropertiesArgs> dataProxyProperties) {
@@ -213,7 +214,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder dataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesArgs dataProxyProperties) {
-            this.dataProxyProperties = Output.ofNullable(dataProxyProperties);
+            this.dataProxyProperties = Codegen.ofNullable(dataProxyProperties);
             return this;
         }
         public Builder edition(@Nullable Output<Either<String,IntegrationRuntimeEdition>> edition) {
@@ -221,7 +222,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder edition(@Nullable Either<String,IntegrationRuntimeEdition> edition) {
-            this.edition = Output.ofNullable(edition);
+            this.edition = Codegen.ofNullable(edition);
             return this;
         }
         public Builder expressCustomSetupProperties(@Nullable Output<List<Object>> expressCustomSetupProperties) {
@@ -229,7 +230,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder expressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
-            this.expressCustomSetupProperties = Output.ofNullable(expressCustomSetupProperties);
+            this.expressCustomSetupProperties = Codegen.ofNullable(expressCustomSetupProperties);
             return this;
         }
         public Builder expressCustomSetupProperties(Object... expressCustomSetupProperties) {
@@ -240,7 +241,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder licenseType(@Nullable Either<String,IntegrationRuntimeLicenseType> licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }
         public Builder packageStores(@Nullable Output<List<PackageStoreArgs>> packageStores) {
@@ -248,7 +249,7 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder packageStores(@Nullable List<PackageStoreArgs> packageStores) {
-            this.packageStores = Output.ofNullable(packageStores);
+            this.packageStores = Codegen.ofNullable(packageStores);
             return this;
         }
         public Builder packageStores(PackageStoreArgs... packageStores) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
-    public Output<String> getFunctionArn() {
+    public Output<String> functionArn() {
         return this.functionArn;
     }
 
@@ -32,8 +33,8 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     @Import(name="functionPayload")
       private final @Nullable Output<String> functionPayload;
 
-    public Output<String> getFunctionPayload() {
-        return this.functionPayload == null ? Output.empty() : this.functionPayload;
+    public Output<String> functionPayload() {
+        return this.functionPayload == null ? Codegen.empty() : this.functionPayload;
     }
 
     public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs(
@@ -44,8 +45,8 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     }
 
     private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs() {
-        this.functionArn = Output.empty();
-        this.functionPayload = Output.empty();
+        this.functionArn = Codegen.empty();
+        this.functionPayload = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
             return this;
         }
         public Builder functionPayload(@Nullable String functionPayload) {
-            this.functionPayload = Output.ofNullable(functionPayload);
+            this.functionPayload = Codegen.ofNullable(functionPayload);
             return this;
         }        public ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs build() {
             return new ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs(functionArn, functionPayload);

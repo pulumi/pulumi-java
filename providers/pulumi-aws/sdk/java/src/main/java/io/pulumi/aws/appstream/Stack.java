@@ -13,6 +13,7 @@ import io.pulumi.aws.appstream.outputs.StackUserSetting;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -37,7 +38,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
     @Export(name="accessEndpoints", type=List.class, parameters={StackAccessEndpoint.class})
     private Output<List<StackAccessEndpoint>> accessEndpoints;
 
-    public Output<List<StackAccessEndpoint>> getAccessEndpoints() {
+    public Output<List<StackAccessEndpoint>> accessEndpoints() {
         return this.accessEndpoints;
     }
     /**
@@ -51,7 +52,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Settings for application settings persistence.
      * 
      */
-    public Output<StackApplicationSettings> getApplicationSettings() {
+    public Output<StackApplicationSettings> applicationSettings() {
         return this.applicationSettings;
     }
     /**
@@ -65,7 +66,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return ARN of the appstream stack.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -79,7 +80,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Date and time, in UTC and extended RFC 3339 format, when the stack was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -93,7 +94,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Description for the AppStream stack.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -107,7 +108,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Stack name to display.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -121,7 +122,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Domains where AppStream 2.0 streaming sessions can be embedded in an iframe. You must approve the domains that you want to host embedded AppStream 2.0 streaming sessions.
      * 
      */
-    public Output<List<String>> getEmbedHostDomains() {
+    public Output<List<String>> embedHostDomains() {
         return this.embedHostDomains;
     }
     /**
@@ -135,7 +136,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return URL that users are redirected to after they click the Send Feedback link. If no URL is specified, no Send Feedback link is displayed. .
      * 
      */
-    public Output<String> getFeedbackUrl() {
+    public Output<String> feedbackUrl() {
         return this.feedbackUrl;
     }
     /**
@@ -149,7 +150,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Unique name for the AppStream stack.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -163,7 +164,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return URL that users are redirected to after their streaming session ends.
      * 
      */
-    public Output<String> getRedirectUrl() {
+    public Output<String> redirectUrl() {
         return this.redirectUrl;
     }
     /**
@@ -177,19 +178,19 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the storage connectors to enable. See below.
      * 
      */
-    public Output<List<StackStorageConnector>> getStorageConnectors() {
+    public Output<List<StackStorageConnector>> storageConnectors() {
         return this.storageConnectors;
     }
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -203,7 +204,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the actions that are enabled or disabled for users during their streaming sessions. By default, these actions are enabled. See below.
      * 
      */
-    public Output<List<StackUserSetting>> getUserSettings() {
+    public Output<List<StackUserSetting>> userSettings() {
         return this.userSettings;
     }
 
@@ -229,7 +230,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Stack(String name, @Nullable StackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appstream/stack:Stack", name, args == null ? StackArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appstream/stack:Stack", name, args == null ? StackArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Stack(String name, Output<String> id, @Nullable StackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

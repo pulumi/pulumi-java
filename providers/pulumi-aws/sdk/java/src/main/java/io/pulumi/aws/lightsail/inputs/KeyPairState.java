@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptedFingerprint")
       private final @Nullable Output<String> encryptedFingerprint;
 
-    public Output<String> getEncryptedFingerprint() {
-        return this.encryptedFingerprint == null ? Output.empty() : this.encryptedFingerprint;
+    public Output<String> encryptedFingerprint() {
+        return this.encryptedFingerprint == null ? Codegen.empty() : this.encryptedFingerprint;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptedPrivateKey")
       private final @Nullable Output<String> encryptedPrivateKey;
 
-    public Output<String> getEncryptedPrivateKey() {
-        return this.encryptedPrivateKey == null ? Output.empty() : this.encryptedPrivateKey;
+    public Output<String> encryptedPrivateKey() {
+        return this.encryptedPrivateKey == null ? Codegen.empty() : this.encryptedPrivateKey;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
-    public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+    public Output<String> fingerprint() {
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -69,15 +70,15 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pgpKey")
       private final @Nullable Output<String> pgpKey;
 
-    public Output<String> getPgpKey() {
-        return this.pgpKey == null ? Output.empty() : this.pgpKey;
+    public Output<String> pgpKey() {
+        return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+    public Output<String> privateKey() {
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+    public Output<String> publicKey() {
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     public KeyPairState(
@@ -138,15 +139,15 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyPairState() {
-        this.arn = Output.empty();
-        this.encryptedFingerprint = Output.empty();
-        this.encryptedPrivateKey = Output.empty();
-        this.fingerprint = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.pgpKey = Output.empty();
-        this.privateKey = Output.empty();
-        this.publicKey = Output.empty();
+        this.arn = Codegen.empty();
+        this.encryptedFingerprint = Codegen.empty();
+        this.encryptedPrivateKey = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.pgpKey = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.publicKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder encryptedFingerprint(@Nullable Output<String> encryptedFingerprint) {
@@ -198,7 +199,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptedFingerprint(@Nullable String encryptedFingerprint) {
-            this.encryptedFingerprint = Output.ofNullable(encryptedFingerprint);
+            this.encryptedFingerprint = Codegen.ofNullable(encryptedFingerprint);
             return this;
         }
         public Builder encryptedPrivateKey(@Nullable Output<String> encryptedPrivateKey) {
@@ -206,7 +207,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptedPrivateKey(@Nullable String encryptedPrivateKey) {
-            this.encryptedPrivateKey = Output.ofNullable(encryptedPrivateKey);
+            this.encryptedPrivateKey = Codegen.ofNullable(encryptedPrivateKey);
             return this;
         }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
@@ -214,7 +215,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -222,7 +223,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -230,7 +231,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
@@ -238,7 +239,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Output.ofNullable(pgpKey);
+            this.pgpKey = Codegen.ofNullable(pgpKey);
             return this;
         }
         public Builder privateKey(@Nullable Output<String> privateKey) {
@@ -246,7 +247,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }
         public Builder publicKey(@Nullable Output<String> publicKey) {
@@ -254,7 +255,7 @@ public final class KeyPairState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }        public KeyPairState build() {
             return new KeyPairState(arn, encryptedFingerprint, encryptedPrivateKey, fingerprint, name, namePrefix, pgpKey, privateKey, publicKey);

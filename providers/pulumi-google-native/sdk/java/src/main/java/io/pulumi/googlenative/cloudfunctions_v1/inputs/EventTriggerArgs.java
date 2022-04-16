@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.FailurePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
 
@@ -37,8 +38,8 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failurePolicy")
       private final @Nullable Output<FailurePolicyArgs> failurePolicy;
 
-    public Output<FailurePolicyArgs> getFailurePolicy() {
-        return this.failurePolicy == null ? Output.empty() : this.failurePolicy;
+    public Output<FailurePolicyArgs> failurePolicy() {
+        return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -59,8 +60,8 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service")
       private final @Nullable Output<String> service;
 
-    public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+    public Output<String> service() {
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public EventTriggerArgs(
@@ -75,10 +76,10 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventTriggerArgs() {
-        this.eventType = Output.empty();
-        this.failurePolicy = Output.empty();
-        this.resource = Output.empty();
-        this.service = Output.empty();
+        this.eventType = Codegen.empty();
+        this.failurePolicy = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failurePolicy(@Nullable FailurePolicyArgs failurePolicy) {
-            this.failurePolicy = Output.ofNullable(failurePolicy);
+            this.failurePolicy = Codegen.ofNullable(failurePolicy);
             return this;
         }
         public Builder resource(Output<String> resource) {
@@ -136,7 +137,7 @@ public final class EventTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public EventTriggerArgs build() {
             return new EventTriggerArgs(eventType, failurePolicy, resource, service);

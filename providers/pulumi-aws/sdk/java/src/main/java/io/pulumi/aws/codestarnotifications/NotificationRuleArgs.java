@@ -6,6 +6,7 @@ package io.pulumi.aws.codestarnotifications;
 import io.pulumi.aws.codestarnotifications.inputs.NotificationRuleTargetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="detailType", required=true)
       private final Output<String> detailType;
 
-    public Output<String> getDetailType() {
+    public Output<String> detailType() {
         return this.detailType;
     }
 
@@ -36,7 +37,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="eventTypeIds", required=true)
       private final Output<List<String>> eventTypeIds;
 
-    public Output<List<String>> getEventTypeIds() {
+    public Output<List<String>> eventTypeIds() {
         return this.eventTypeIds;
     }
 
@@ -47,8 +48,8 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -69,8 +70,8 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="targets")
       private final @Nullable Output<List<NotificationRuleTargetArgs>> targets;
 
-    public Output<List<NotificationRuleTargetArgs>> getTargets() {
-        return this.targets == null ? Output.empty() : this.targets;
+    public Output<List<NotificationRuleTargetArgs>> targets() {
+        return this.targets == null ? Codegen.empty() : this.targets;
     }
 
     public NotificationRuleArgs(
@@ -113,13 +114,13 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NotificationRuleArgs() {
-        this.detailType = Output.empty();
-        this.eventTypeIds = Output.empty();
-        this.name = Output.empty();
-        this.resource = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.targets = Output.empty();
+        this.detailType = Codegen.empty();
+        this.eventTypeIds = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resource(Output<String> resource) {
@@ -194,7 +195,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -202,7 +203,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targets(@Nullable Output<List<NotificationRuleTargetArgs>> targets) {
@@ -210,7 +211,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder targets(@Nullable List<NotificationRuleTargetArgs> targets) {
-            this.targets = Output.ofNullable(targets);
+            this.targets = Codegen.ofNullable(targets);
             return this;
         }
         public Builder targets(NotificationRuleTargetArgs... targets) {

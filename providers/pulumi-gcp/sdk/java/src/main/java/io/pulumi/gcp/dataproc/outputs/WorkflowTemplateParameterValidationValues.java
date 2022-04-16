@@ -25,7 +25,7 @@ public final class WorkflowTemplateParameterValidationValues {
      * Optional. Corresponds to the label values of reservation resource.
      * 
     */
-    public List<String> getValues() {
+    public List<String> values() {
         return this.values;
     }
 

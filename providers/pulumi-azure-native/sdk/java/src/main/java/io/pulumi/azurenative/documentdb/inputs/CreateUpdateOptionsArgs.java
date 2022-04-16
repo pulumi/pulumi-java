@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.AutoscaleSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="autoscaleSettings")
       private final @Nullable Output<AutoscaleSettingsArgs> autoscaleSettings;
 
-    public Output<AutoscaleSettingsArgs> getAutoscaleSettings() {
-        return this.autoscaleSettings == null ? Output.empty() : this.autoscaleSettings;
+    public Output<AutoscaleSettingsArgs> autoscaleSettings() {
+        return this.autoscaleSettings == null ? Codegen.empty() : this.autoscaleSettings;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
-    public Output<Integer> getThroughput() {
-        return this.throughput == null ? Output.empty() : this.throughput;
+    public Output<Integer> throughput() {
+        return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 
     public CreateUpdateOptionsArgs(
@@ -49,8 +50,8 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     private CreateUpdateOptionsArgs() {
-        this.autoscaleSettings = Output.empty();
-        this.throughput = Output.empty();
+        this.autoscaleSettings = Codegen.empty();
+        this.throughput = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder autoscaleSettings(@Nullable AutoscaleSettingsArgs autoscaleSettings) {
-            this.autoscaleSettings = Output.ofNullable(autoscaleSettings);
+            this.autoscaleSettings = Codegen.ofNullable(autoscaleSettings);
             return this;
         }
         public Builder throughput(@Nullable Output<Integer> throughput) {
@@ -88,7 +89,7 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Output.ofNullable(throughput);
+            this.throughput = Codegen.ofNullable(throughput);
             return this;
         }        public CreateUpdateOptionsArgs build() {
             return new CreateUpdateOptionsArgs(autoscaleSettings, throughput);

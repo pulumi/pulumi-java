@@ -6,6 +6,7 @@ package io.pulumi.gcp.firestore;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firestore.IndexArgs;
 import io.pulumi.gcp.firestore.inputs.IndexState;
@@ -55,7 +56,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The collection being indexed.
      * 
      */
-    public Output<String> getCollection() {
+    public Output<String> collection() {
         return this.collection;
     }
     /**
@@ -69,7 +70,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @return The Firestore database id. Defaults to `"(default)"`.
      * 
      */
-    public Output</* @Nullable */ String> getDatabase() {
+    public Output</* @Nullable */ String> database() {
         return this.database;
     }
     /**
@@ -95,7 +96,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<IndexField>> getFields() {
+    public Output<List<IndexField>> fields() {
         return this.fields;
     }
     /**
@@ -111,7 +112,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -145,7 +146,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Possible values are `COLLECTION` and `COLLECTION_GROUP`.
      * 
      */
-    public Output</* @Nullable */ String> getQueryScope() {
+    public Output</* @Nullable */ String> queryScope() {
         return this.queryScope;
     }
 
@@ -171,7 +172,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Index(String name, IndexArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:firestore/index:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:firestore/index:Index", name, args == null ? IndexArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Index(String name, Output<String> id, @Nullable IndexState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

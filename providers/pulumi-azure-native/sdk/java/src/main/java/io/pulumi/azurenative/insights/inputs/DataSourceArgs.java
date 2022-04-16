@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.inputs.DataSourceConfigurationArgs;
 import io.pulumi.azurenative.insights.inputs.SinkConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configuration", required=true)
       private final Output<DataSourceConfigurationArgs> configuration;
 
-    public Output<DataSourceConfigurationArgs> getConfiguration() {
+    public Output<DataSourceConfigurationArgs> configuration() {
         return this.configuration;
     }
 
@@ -34,14 +35,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
     @Import(name="sinks", required=true)
       private final Output<List<SinkConfigurationArgs>> sinks;
 
-    public Output<List<SinkConfigurationArgs>> getSinks() {
+    public Output<List<SinkConfigurationArgs>> sinks() {
         return this.sinks;
     }
 
@@ -55,9 +56,9 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.configuration = Output.empty();
-        this.kind = Output.empty();
-        this.sinks = Output.empty();
+        this.configuration = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.sinks = Codegen.empty();
     }
 
     public static Builder builder() {

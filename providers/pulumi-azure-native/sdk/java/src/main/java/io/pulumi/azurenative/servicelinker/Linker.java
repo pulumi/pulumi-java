@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * @return The authentication type.
      * 
      */
-    public Output</* @Nullable */ Object> getAuthInfo() {
+    public Output</* @Nullable */ Object> authInfo() {
         return this.authInfo;
     }
     /**
@@ -62,7 +63,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * @return The application client type
      * 
      */
-    public Output</* @Nullable */ String> getClientType() {
+    public Output</* @Nullable */ String> clientType() {
         return this.clientType;
     }
     /**
@@ -76,7 +77,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -90,7 +91,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * @return The provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -104,7 +105,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -118,7 +119,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * @return The resource Id of target service.
      * 
      */
-    public Output</* @Nullable */ String> getTargetId() {
+    public Output</* @Nullable */ String> targetId() {
         return this.targetId;
     }
     /**
@@ -132,7 +133,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -158,7 +159,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Linker(String name, LinkerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicelinker:Linker", name, args == null ? LinkerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:servicelinker:Linker", name, args == null ? LinkerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Linker(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

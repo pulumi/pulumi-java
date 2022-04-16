@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +59,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return The Gateway on which VirtualRouter is hosted.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getHostedGateway() {
+    public Output</* @Nullable */ SubResourceResponse> hostedGateway() {
         return this.hostedGateway;
     }
     /**
@@ -72,7 +73,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return The Subnet on which VirtualRouter is hosted.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getHostedSubnet() {
+    public Output</* @Nullable */ SubResourceResponse> hostedSubnet() {
         return this.hostedSubnet;
     }
     /**
@@ -86,7 +87,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -100,7 +101,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return List of references to VirtualRouterPeerings.
      * 
      */
-    public Output<List<SubResourceResponse>> getPeerings() {
+    public Output<List<SubResourceResponse>> peerings() {
         return this.peerings;
     }
     /**
@@ -128,7 +129,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -142,7 +143,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -170,7 +171,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return VirtualRouter ASN.
      * 
      */
-    public Output</* @Nullable */ Double> getVirtualRouterAsn() {
+    public Output</* @Nullable */ Double> virtualRouterAsn() {
         return this.virtualRouterAsn;
     }
     /**
@@ -184,7 +185,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @return VirtualRouter IPs.
      * 
      */
-    public Output</* @Nullable */ List<String>> getVirtualRouterIps() {
+    public Output</* @Nullable */ List<String>> virtualRouterIps() {
         return this.virtualRouterIps;
     }
 
@@ -210,7 +211,7 @@ public class VirtualRouter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualRouter(String name, VirtualRouterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualRouter", name, args == null ? VirtualRouterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VirtualRouter", name, args == null ? VirtualRouterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualRouter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

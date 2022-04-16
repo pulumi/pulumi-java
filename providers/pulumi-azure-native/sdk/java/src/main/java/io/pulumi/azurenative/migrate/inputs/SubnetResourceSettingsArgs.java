@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.inputs.NsgReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
-    public Output<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
+    public Output<String> addressPrefix() {
+        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="networkSecurityGroup")
       private final @Nullable Output<NsgReferenceArgs> networkSecurityGroup;
 
-    public Output<NsgReferenceArgs> getNetworkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Output.empty() : this.networkSecurityGroup;
+    public Output<NsgReferenceArgs> networkSecurityGroup() {
+        return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
     }
 
     public SubnetResourceSettingsArgs(
@@ -62,9 +63,9 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private SubnetResourceSettingsArgs() {
-        this.addressPrefix = Output.empty();
-        this.name = Output.empty();
-        this.networkSecurityGroup = Output.empty();
+        this.addressPrefix = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkSecurityGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Output.ofNullable(addressPrefix);
+            this.addressPrefix = Codegen.ofNullable(addressPrefix);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkSecurityGroup(@Nullable Output<NsgReferenceArgs> networkSecurityGroup) {
@@ -112,7 +113,7 @@ public final class SubnetResourceSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder networkSecurityGroup(@Nullable NsgReferenceArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Output.ofNullable(networkSecurityGroup);
+            this.networkSecurityGroup = Codegen.ofNullable(networkSecurityGroup);
             return this;
         }        public SubnetResourceSettingsArgs build() {
             return new SubnetResourceSettingsArgs(addressPrefix, name, networkSecurityGroup);

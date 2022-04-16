@@ -9,6 +9,7 @@ import io.pulumi.awsnative.route53recoveryreadiness.outputs.RecoveryGroupTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCells() {
+    public Output</* @Nullable */ List<String>> cells() {
         return this.cells;
     }
     /**
@@ -44,7 +45,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource.
      * 
      */
-    public Output<String> getRecoveryGroupArn() {
+    public Output<String> recoveryGroupArn() {
         return this.recoveryGroupArn;
     }
     /**
@@ -58,7 +59,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the recovery group to create.
      * 
      */
-    public Output<String> getRecoveryGroupName() {
+    public Output<String> recoveryGroupName() {
         return this.recoveryGroupName;
     }
     /**
@@ -72,7 +73,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource.
      * 
      */
-    public Output</* @Nullable */ List<RecoveryGroupTag>> getTags() {
+    public Output</* @Nullable */ List<RecoveryGroupTag>> tags() {
         return this.tags;
     }
 
@@ -98,7 +99,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RecoveryGroup(String name, @Nullable RecoveryGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoveryreadiness:RecoveryGroup", name, args == null ? RecoveryGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53recoveryreadiness:RecoveryGroup", name, args == null ? RecoveryGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RecoveryGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

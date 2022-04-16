@@ -6,6 +6,7 @@ package io.pulumi.gcp.appengine;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.StandardAppVersionArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionState;
@@ -69,7 +70,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ StandardAppVersionAutomaticScaling> getAutomaticScaling() {
+    public Output</* @Nullable */ StandardAppVersionAutomaticScaling> automaticScaling() {
         return this.automaticScaling;
     }
     /**
@@ -85,7 +86,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ StandardAppVersionBasicScaling> getBasicScaling() {
+    public Output</* @Nullable */ StandardAppVersionBasicScaling> basicScaling() {
         return this.basicScaling;
     }
     /**
@@ -99,7 +100,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @return If set to `true`, the service will be deleted if it is the last version.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeleteServiceOnDestroy() {
+    public Output</* @Nullable */ Boolean> deleteServiceOnDestroy() {
         return this.deleteServiceOnDestroy;
     }
     /**
@@ -115,7 +116,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<StandardAppVersionDeployment> getDeployment() {
+    public Output<StandardAppVersionDeployment> deployment() {
         return this.deployment;
     }
     /**
@@ -131,7 +132,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<StandardAppVersionEntrypoint> getEntrypoint() {
+    public Output<StandardAppVersionEntrypoint> entrypoint() {
         return this.entrypoint;
     }
     /**
@@ -145,7 +146,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @return Environment variables available to the application.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getEnvVariables() {
+    public Output</* @Nullable */ Map<String,String>> envVariables() {
         return this.envVariables;
     }
     /**
@@ -163,7 +164,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<StandardAppVersionHandler>> getHandlers() {
+    public Output<List<StandardAppVersionHandler>> handlers() {
         return this.handlers;
     }
     /**
@@ -179,7 +180,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getInboundServices() {
+    public Output</* @Nullable */ List<String>> inboundServices() {
         return this.inboundServices;
     }
     /**
@@ -199,7 +200,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
      * 
      */
-    public Output<String> getInstanceClass() {
+    public Output<String> instanceClass() {
         return this.instanceClass;
     }
     /**
@@ -215,7 +216,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<StandardAppVersionLibrary>> getLibraries() {
+    public Output</* @Nullable */ List<StandardAppVersionLibrary>> libraries() {
         return this.libraries;
     }
     /**
@@ -231,7 +232,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ StandardAppVersionManualScaling> getManualScaling() {
+    public Output</* @Nullable */ StandardAppVersionManualScaling> manualScaling() {
         return this.manualScaling;
     }
     /**
@@ -245,7 +246,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @return Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -259,7 +260,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @return If set to `true`, the application version will not be deleted.
      * 
      */
-    public Output</* @Nullable */ Boolean> getNoopOnDestroy() {
+    public Output</* @Nullable */ Boolean> noopOnDestroy() {
         return this.noopOnDestroy;
     }
     /**
@@ -275,7 +276,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -289,7 +290,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @return Desired runtime. Example python27.
      * 
      */
-    public Output<String> getRuntime() {
+    public Output<String> runtime() {
         return this.runtime;
     }
     /**
@@ -307,7 +308,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
-    public Output</* @Nullable */ String> getRuntimeApiVersion() {
+    public Output</* @Nullable */ String> runtimeApiVersion() {
         return this.runtimeApiVersion;
     }
     /**
@@ -321,7 +322,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @return AppEngine service resource
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
     /**
@@ -335,7 +336,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @return Whether multiple requests can be dispatched to this version at once.
      * 
      */
-    public Output</* @Nullable */ Boolean> getThreadsafe() {
+    public Output</* @Nullable */ Boolean> threadsafe() {
         return this.threadsafe;
     }
     /**
@@ -349,7 +350,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @return Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
      * 
      */
-    public Output</* @Nullable */ String> getVersionId() {
+    public Output</* @Nullable */ String> versionId() {
         return this.versionId;
     }
     /**
@@ -365,7 +366,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ StandardAppVersionVpcAccessConnector> getVpcAccessConnector() {
+    public Output</* @Nullable */ StandardAppVersionVpcAccessConnector> vpcAccessConnector() {
         return this.vpcAccessConnector;
     }
 
@@ -391,7 +392,7 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StandardAppVersion(String name, StandardAppVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:appengine/standardAppVersion:StandardAppVersion", name, args == null ? StandardAppVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:appengine/standardAppVersion:StandardAppVersion", name, args == null ? StandardAppVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StandardAppVersion(String name, Output<String> id, @Nullable StandardAppVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

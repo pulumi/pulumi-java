@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lightsail.inputs.ContainerEnvironmentVariableArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPortInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
-    public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+    public Output<List<String>> command() {
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+    public Output<String> containerName() {
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="environment")
       private final @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment;
 
-    public Output<List<ContainerEnvironmentVariableArgs>> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<List<ContainerEnvironmentVariableArgs>> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="image")
       private final @Nullable Output<String> image;
 
-    public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+    public Output<String> image() {
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ports")
       private final @Nullable Output<List<ContainerPortInfoArgs>> ports;
 
-    public Output<List<ContainerPortInfoArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+    public Output<List<ContainerPortInfoArgs>> ports() {
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     public ContainerArgs(
@@ -90,11 +91,11 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerArgs() {
-        this.command = Output.empty();
-        this.containerName = Output.empty();
-        this.environment = Output.empty();
-        this.image = Output.empty();
-        this.ports = Output.empty();
+        this.command = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.image = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {
@@ -141,7 +142,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder environment(@Nullable Output<List<ContainerEnvironmentVariableArgs>> environment) {
@@ -149,7 +150,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environment(@Nullable List<ContainerEnvironmentVariableArgs> environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder environment(ContainerEnvironmentVariableArgs... environment) {
@@ -160,7 +161,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder ports(@Nullable Output<List<ContainerPortInfoArgs>> ports) {
@@ -168,7 +169,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ports(@Nullable List<ContainerPortInfoArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(ContainerPortInfoArgs... ports) {

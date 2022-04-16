@@ -34,19 +34,19 @@ public final class ResponseHeadersPolicyConfig {
         this.securityHeadersConfig = securityHeadersConfig;
     }
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
-    public Optional<ResponseHeadersPolicyCorsConfig> getCorsConfig() {
+    public Optional<ResponseHeadersPolicyCorsConfig> corsConfig() {
         return Optional.ofNullable(this.corsConfig);
     }
-    public Optional<ResponseHeadersPolicyCustomHeadersConfig> getCustomHeadersConfig() {
+    public Optional<ResponseHeadersPolicyCustomHeadersConfig> customHeadersConfig() {
         return Optional.ofNullable(this.customHeadersConfig);
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<ResponseHeadersPolicySecurityHeadersConfig> getSecurityHeadersConfig() {
+    public Optional<ResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfig() {
         return Optional.ofNullable(this.securityHeadersConfig);
     }
 

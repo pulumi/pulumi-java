@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     @Import(name="aadAuthority", required=true)
       private final Output<String> aadAuthority;
 
-    public Output<String> getAadAuthority() {
+    public Output<String> aadAuthority() {
         return this.aadAuthority;
     }
 
@@ -35,7 +36,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
+    public Output<String> applicationId() {
         return this.applicationId;
     }
 
@@ -46,7 +47,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     @Import(name="audience", required=true)
       private final Output<String> audience;
 
-    public Output<String> getAudience() {
+    public Output<String> audience() {
         return this.audience;
     }
 
@@ -57,7 +58,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -68,7 +69,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -86,11 +87,11 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     }
 
     private IdentityProviderInputArgs() {
-        this.aadAuthority = Output.empty();
-        this.applicationId = Output.empty();
-        this.audience = Output.empty();
-        this.objectId = Output.empty();
-        this.tenantId = Output.empty();
+        this.aadAuthority = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.audience = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {

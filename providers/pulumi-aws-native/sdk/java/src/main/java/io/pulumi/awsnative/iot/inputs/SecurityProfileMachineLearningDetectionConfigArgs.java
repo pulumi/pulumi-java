@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.enums.SecurityProfileMachineLearningDetectionConfigConfidenceLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
     @Import(name="confidenceLevel")
       private final @Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 
-    public Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
-        return this.confidenceLevel == null ? Output.empty() : this.confidenceLevel;
+    public Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel() {
+        return this.confidenceLevel == null ? Codegen.empty() : this.confidenceLevel;
     }
 
     public SecurityProfileMachineLearningDetectionConfigArgs(@Nullable Output<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel) {
@@ -34,7 +35,7 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
     }
 
     private SecurityProfileMachineLearningDetectionConfigArgs() {
-        this.confidenceLevel = Output.empty();
+        this.confidenceLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
             return this;
         }
         public Builder confidenceLevel(@Nullable SecurityProfileMachineLearningDetectionConfigConfidenceLevel confidenceLevel) {
-            this.confidenceLevel = Output.ofNullable(confidenceLevel);
+            this.confidenceLevel = Codegen.ofNullable(confidenceLevel);
             return this;
         }        public SecurityProfileMachineLearningDetectionConfigArgs build() {
             return new SecurityProfileMachineLearningDetectionConfigArgs(confidenceLevel);

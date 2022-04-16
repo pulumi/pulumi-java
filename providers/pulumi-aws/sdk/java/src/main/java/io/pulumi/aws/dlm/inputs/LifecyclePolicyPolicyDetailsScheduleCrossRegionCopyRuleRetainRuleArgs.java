@@ -5,6 +5,7 @@ package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
     @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
-    public Output<Integer> getInterval() {
+    public Output<Integer> interval() {
         return this.interval;
     }
 
@@ -32,7 +33,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
     @Import(name="intervalUnit", required=true)
       private final Output<String> intervalUnit;
 
-    public Output<String> getIntervalUnit() {
+    public Output<String> intervalUnit() {
         return this.intervalUnit;
     }
 
@@ -44,8 +45,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
     }
 
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs() {
-        this.interval = Output.empty();
-        this.intervalUnit = Output.empty();
+        this.interval = Codegen.empty();
+        this.intervalUnit = Codegen.empty();
     }
 
     public static Builder builder() {

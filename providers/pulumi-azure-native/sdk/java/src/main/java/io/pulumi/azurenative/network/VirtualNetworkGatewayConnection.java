@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -51,7 +52,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The authorizationKey.
      * 
      */
-    public Output</* @Nullable */ String> getAuthorizationKey() {
+    public Output</* @Nullable */ String> authorizationKey() {
         return this.authorizationKey;
     }
     /**
@@ -65,7 +66,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The connection mode for this connection.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionMode() {
+    public Output</* @Nullable */ String> connectionMode() {
         return this.connectionMode;
     }
     /**
@@ -79,7 +80,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Connection protocol used for this connection.
      * 
      */
-    public Output</* @Nullable */ String> getConnectionProtocol() {
+    public Output</* @Nullable */ String> connectionProtocol() {
         return this.connectionProtocol;
     }
     /**
@@ -93,7 +94,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Virtual Network Gateway connection status.
      * 
      */
-    public Output<String> getConnectionStatus() {
+    public Output<String> connectionStatus() {
         return this.connectionStatus;
     }
     /**
@@ -107,7 +108,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Gateway connection type.
      * 
      */
-    public Output<String> getConnectionType() {
+    public Output<String> connectionType() {
         return this.connectionType;
     }
     /**
@@ -121,7 +122,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The dead peer detection timeout of this connection in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getDpdTimeoutSeconds() {
+    public Output</* @Nullable */ Integer> dpdTimeoutSeconds() {
         return this.dpdTimeoutSeconds;
     }
     /**
@@ -135,7 +136,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The egress bytes transferred in this connection.
      * 
      */
-    public Output<Double> getEgressBytesTransferred() {
+    public Output<Double> egressBytesTransferred() {
         return this.egressBytesTransferred;
     }
     /**
@@ -149,7 +150,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return EnableBgp flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableBgp() {
+    public Output</* @Nullable */ Boolean> enableBgp() {
         return this.enableBgp;
     }
     /**
@@ -163,7 +164,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -177,7 +178,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Bypass ExpressRoute Gateway for data forwarding.
      * 
      */
-    public Output</* @Nullable */ Boolean> getExpressRouteGatewayBypass() {
+    public Output</* @Nullable */ Boolean> expressRouteGatewayBypass() {
         return this.expressRouteGatewayBypass;
     }
     /**
@@ -191,7 +192,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The ingress bytes transferred in this connection.
      * 
      */
-    public Output<Double> getIngressBytesTransferred() {
+    public Output<Double> ingressBytesTransferred() {
         return this.ingressBytesTransferred;
     }
     /**
@@ -205,7 +206,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The IPSec Policies to be considered by this connection.
      * 
      */
-    public Output</* @Nullable */ List<IpsecPolicyResponse>> getIpsecPolicies() {
+    public Output</* @Nullable */ List<IpsecPolicyResponse>> ipsecPolicies() {
         return this.ipsecPolicies;
     }
     /**
@@ -219,7 +220,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The reference to local network gateway resource.
      * 
      */
-    public Output</* @Nullable */ LocalNetworkGatewayResponse> getLocalNetworkGateway2() {
+    public Output</* @Nullable */ LocalNetworkGatewayResponse> localNetworkGateway2() {
         return this.localNetworkGateway2;
     }
     /**
@@ -233,7 +234,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -247,7 +248,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -261,7 +262,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The reference to peerings resource.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getPeer() {
+    public Output</* @Nullable */ SubResourceResponse> peer() {
         return this.peer;
     }
     /**
@@ -275,7 +276,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The provisioning state of the virtual network gateway connection resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -289,7 +290,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The resource GUID property of the virtual network gateway connection resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -303,7 +304,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The routing weight.
      * 
      */
-    public Output</* @Nullable */ Integer> getRoutingWeight() {
+    public Output</* @Nullable */ Integer> routingWeight() {
         return this.routingWeight;
     }
     /**
@@ -317,7 +318,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The IPSec shared key.
      * 
      */
-    public Output</* @Nullable */ String> getSharedKey() {
+    public Output</* @Nullable */ String> sharedKey() {
         return this.sharedKey;
     }
     /**
@@ -331,7 +332,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -345,7 +346,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The Traffic Selector Policies to be considered by this connection.
      * 
      */
-    public Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> getTrafficSelectorPolicies() {
+    public Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies() {
         return this.trafficSelectorPolicies;
     }
     /**
@@ -359,7 +360,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Collection of all tunnels' connection health status.
      * 
      */
-    public Output<List<TunnelConnectionHealthResponse>> getTunnelConnectionStatus() {
+    public Output<List<TunnelConnectionHealthResponse>> tunnelConnectionStatus() {
         return this.tunnelConnectionStatus;
     }
     /**
@@ -373,7 +374,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -387,7 +388,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Use private local Azure IP for the connection.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUseLocalAzureIpAddress() {
+    public Output</* @Nullable */ Boolean> useLocalAzureIpAddress() {
         return this.useLocalAzureIpAddress;
     }
     /**
@@ -401,7 +402,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return Enable policy-based traffic selectors.
      * 
      */
-    public Output</* @Nullable */ Boolean> getUsePolicyBasedTrafficSelectors() {
+    public Output</* @Nullable */ Boolean> usePolicyBasedTrafficSelectors() {
         return this.usePolicyBasedTrafficSelectors;
     }
     /**
@@ -415,7 +416,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The reference to virtual network gateway resource.
      * 
      */
-    public Output<VirtualNetworkGatewayResponse> getVirtualNetworkGateway1() {
+    public Output<VirtualNetworkGatewayResponse> virtualNetworkGateway1() {
         return this.virtualNetworkGateway1;
     }
     /**
@@ -429,7 +430,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @return The reference to virtual network gateway resource.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkGatewayResponse> getVirtualNetworkGateway2() {
+    public Output</* @Nullable */ VirtualNetworkGatewayResponse> virtualNetworkGateway2() {
         return this.virtualNetworkGateway2;
     }
 
@@ -455,7 +456,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualNetworkGatewayConnection(String name, VirtualNetworkGatewayConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualNetworkGatewayConnection", name, args == null ? VirtualNetworkGatewayConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VirtualNetworkGatewayConnection", name, args == null ? VirtualNetworkGatewayConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualNetworkGatewayConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

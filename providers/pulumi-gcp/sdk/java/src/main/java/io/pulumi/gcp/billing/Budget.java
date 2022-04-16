@@ -6,6 +6,7 @@ package io.pulumi.gcp.billing;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.BudgetArgs;
 import io.pulumi.gcp.billing.inputs.BudgetState;
@@ -70,7 +71,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BudgetAllUpdatesRule> getAllUpdatesRule() {
+    public Output</* @Nullable */ BudgetAllUpdatesRule> allUpdatesRule() {
         return this.allUpdatesRule;
     }
     /**
@@ -86,7 +87,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<BudgetAmount> getAmount() {
+    public Output<BudgetAmount> amount() {
         return this.amount;
     }
     /**
@@ -100,7 +101,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return ID of the billing account to set a budget on.
      * 
      */
-    public Output<String> getBillingAccount() {
+    public Output<String> billingAccount() {
         return this.billingAccount;
     }
     /**
@@ -118,7 +119,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<BudgetBudgetFilter> getBudgetFilter() {
+    public Output<BudgetBudgetFilter> budgetFilter() {
         return this.budgetFilter;
     }
     /**
@@ -132,7 +133,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return User data for display name in UI. Must be <= 60 chars.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -148,7 +149,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * billingAccounts/{billingAccountId}/budgets/{budgetId}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -168,7 +169,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<BudgetThresholdRule>> getThresholdRules() {
+    public Output<List<BudgetThresholdRule>> thresholdRules() {
         return this.thresholdRules;
     }
 
@@ -194,7 +195,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Budget(String name, BudgetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/budget:Budget", name, args == null ? BudgetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:billing/budget:Budget", name, args == null ? BudgetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Budget(String name, Output<String> id, @Nullable BudgetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

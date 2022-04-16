@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigateway_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigateway_v1beta.GatewayArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}
      * 
      */
-    public Output<String> getApiConfig() {
+    public Output<String> apiConfig() {
         return this.apiConfig;
     }
     /**
@@ -44,7 +45,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Created time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -58,7 +59,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The default API Gateway host name of the form `{gateway_id}-{hash}.{region_code}.gateway.dev`.
      * 
      */
-    public Output<String> getDefaultHostname() {
+    public Output<String> defaultHostname() {
         return this.defaultHostname;
     }
     /**
@@ -72,7 +73,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Optional. Display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -86,7 +87,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -100,7 +101,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Resource name of the Gateway. Format: projects/{project}/locations/{location}/gateways/{gateway}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The current state of the Gateway.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -128,7 +129,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Updated time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -154,7 +155,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Gateway(String name, GatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigateway/v1beta:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigateway/v1beta:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Gateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

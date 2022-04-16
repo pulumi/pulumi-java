@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudscheduler_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.JobArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.AppEngineHttpTargetResponse;
@@ -34,7 +35,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return App Engine HTTP target.
      * 
      */
-    public Output<AppEngineHttpTargetResponse> getAppEngineHttpTarget() {
+    public Output<AppEngineHttpTargetResponse> appEngineHttpTarget() {
         return this.appEngineHttpTarget;
     }
     /**
@@ -48,7 +49,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. The failed attempt can be viewed in execution logs. Cloud Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours 15 seconds. * For PubSub targets, this field is ignored.
      * 
      */
-    public Output<String> getAttemptDeadline() {
+    public Output<String> attemptDeadline() {
         return this.attemptDeadline;
     }
     /**
@@ -62,7 +63,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optionally caller-specified in CreateJob or UpdateJob. A human-readable description for the job. This string must not contain more than 500 characters.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -76,7 +77,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return HTTP target.
      * 
      */
-    public Output<HttpTargetResponse> getHttpTarget() {
+    public Output<HttpTargetResponse> httpTarget() {
         return this.httpTarget;
     }
     /**
@@ -90,7 +91,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The time the last job attempt started.
      * 
      */
-    public Output<String> getLastAttemptTime() {
+    public Output<String> lastAttemptTime() {
         return this.lastAttemptTime;
     }
     /**
@@ -104,7 +105,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Immutable. This field is used to manage the legacy App Engine Cron jobs using the Cloud Scheduler API. If the field is set to true, the job will be considered a legacy job. Note that App Engine Cron jobs have fewer features than Cloud Scheduler jobs, e.g., are only limited to App Engine targets.
      * 
      */
-    public Output<Boolean> getLegacyAppEngineCron() {
+    public Output<Boolean> legacyAppEngineCron() {
         return this.legacyAppEngineCron;
     }
     /**
@@ -118,7 +119,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Optionally caller-specified in CreateJob, after which it becomes output only. The job name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects) * `LOCATION_ID` is the canonical ID for the job's location. The list of available locations can be obtained by calling ListLocations. For more information, see https://cloud.google.com/about/locations/. * `JOB_ID` can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or underscores (_). The maximum length is 500 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -132,7 +133,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Pub/Sub target.
      * 
      */
-    public Output<PubsubTargetResponse> getPubsubTarget() {
+    public Output<PubsubTargetResponse> pubsubTarget() {
         return this.pubsubTarget;
     }
     /**
@@ -146,7 +147,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Settings that determine the retry behavior.
      * 
      */
-    public Output<RetryConfigResponse> getRetryConfig() {
+    public Output<RetryConfigResponse> retryConfig() {
         return this.retryConfig;
     }
     /**
@@ -160,7 +161,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Required, except when used with UpdateJob. Describes the schedule on which the job will be executed. The schedule can be either of the following types: * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud Scheduler will never allow two simultaneously outstanding executions. For example, this implies that if the `n+1`th execution is scheduled to run at 16:00 but the `n`th execution takes until 16:15, the `n+1`th execution will not start until `16:15`. A scheduled start time will be delayed if the previous execution has not ended when its scheduled time occurs. If retry_count > 0 and a job attempt fails, the job will be tried a total of retry_count times, with exponential backoff, until the next scheduled start time.
      * 
      */
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
     /**
@@ -174,7 +175,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The next time the job is scheduled. Note that this may be a retry of a previously failed attempt or the next execution time according to the schedule.
      * 
      */
-    public Output<String> getScheduleTime() {
+    public Output<String> scheduleTime() {
         return this.scheduleTime;
     }
     /**
@@ -188,7 +189,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return State of the job.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -202,7 +203,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The response from the target for the last attempted execution.
      * 
      */
-    public Output<StatusResponse> getStatus() {
+    public Output<StatusResponse> status() {
         return this.status;
     }
     /**
@@ -216,7 +217,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return Specifies the time zone to be used in interpreting schedule. The value of this field must be a time zone name from the [tz database](http://en.wikipedia.org/wiki/Tz_database). Note that some time zones include a provision for daylight savings time. The rules for daylight saving time are determined by the chosen tz. For UTC use the string "utc". If a time zone is not specified, the default will be in UTC (also known as GMT).
      * 
      */
-    public Output<String> getTimeZone() {
+    public Output<String> timeZone() {
         return this.timeZone;
     }
     /**
@@ -230,7 +231,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @return The creation time of the job.
      * 
      */
-    public Output<String> getUserUpdateTime() {
+    public Output<String> userUpdateTime() {
         return this.userUpdateTime;
     }
 
@@ -256,7 +257,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Job(String name, @Nullable JobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudscheduler/v1beta1:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudscheduler/v1beta1:Job", name, args == null ? JobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Job(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

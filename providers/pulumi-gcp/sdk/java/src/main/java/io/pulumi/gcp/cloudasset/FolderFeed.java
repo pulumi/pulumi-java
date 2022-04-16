@@ -6,6 +6,7 @@ package io.pulumi.gcp.cloudasset;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudasset.FolderFeedArgs;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedState;
@@ -58,7 +59,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssetNames() {
+    public Output</* @Nullable */ List<String>> assetNames() {
         return this.assetNames;
     }
     /**
@@ -80,7 +81,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * supported asset types.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAssetTypes() {
+    public Output</* @Nullable */ List<String>> assetTypes() {
         return this.assetTypes;
     }
     /**
@@ -98,7 +99,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * enablement check, quota, and billing.
      * 
      */
-    public Output<String> getBillingProject() {
+    public Output<String> billingProject() {
         return this.billingProject;
     }
     /**
@@ -122,7 +123,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FolderFeedCondition> getCondition() {
+    public Output</* @Nullable */ FolderFeedCondition> condition() {
         return this.condition;
     }
     /**
@@ -138,7 +139,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -152,7 +153,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * @return This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
      * 
      */
-    public Output<String> getFeedId() {
+    public Output<String> feedId() {
         return this.feedId;
     }
     /**
@@ -168,7 +169,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<FolderFeedFeedOutputConfig> getFeedOutputConfig() {
+    public Output<FolderFeedFeedOutputConfig> feedOutputConfig() {
         return this.feedOutputConfig;
     }
     /**
@@ -182,7 +183,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * @return The folder this feed should be created in.
      * 
      */
-    public Output<String> getFolder() {
+    public Output<String> folder() {
         return this.folder;
     }
     /**
@@ -196,7 +197,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * @return The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and folders/[FOLDER_NUMBER] are accepted.
      * 
      */
-    public Output<String> getFolderId() {
+    public Output<String> folderId() {
         return this.folderId;
     }
     /**
@@ -210,7 +211,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * @return The format will be folders/{folder_number}/feeds/{client-assigned_feed_identifier}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -236,7 +237,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FolderFeed(String name, FolderFeedArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:cloudasset/folderFeed:FolderFeed", name, args == null ? FolderFeedArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:cloudasset/folderFeed:FolderFeed", name, args == null ? FolderFeedArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FolderFeed(String name, Output<String> id, @Nullable FolderFeedState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

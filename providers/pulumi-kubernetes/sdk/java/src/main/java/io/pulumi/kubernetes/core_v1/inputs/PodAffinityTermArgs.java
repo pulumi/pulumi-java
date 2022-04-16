@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="labelSelector")
       private final @Nullable Output<LabelSelectorArgs> labelSelector;
 
-    public Output<LabelSelectorArgs> getLabelSelector() {
-        return this.labelSelector == null ? Output.empty() : this.labelSelector;
+    public Output<LabelSelectorArgs> labelSelector() {
+        return this.labelSelector == null ? Codegen.empty() : this.labelSelector;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namespaceSelector")
       private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Output<LabelSelectorArgs> getNamespaceSelector() {
-        return this.namespaceSelector == null ? Output.empty() : this.namespaceSelector;
+    public Output<LabelSelectorArgs> namespaceSelector() {
+        return this.namespaceSelector == null ? Codegen.empty() : this.namespaceSelector;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="namespaces")
       private final @Nullable Output<List<String>> namespaces;
 
-    public Output<List<String>> getNamespaces() {
-        return this.namespaces == null ? Output.empty() : this.namespaces;
+    public Output<List<String>> namespaces() {
+        return this.namespaces == null ? Codegen.empty() : this.namespaces;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="topologyKey", required=true)
       private final Output<String> topologyKey;
 
-    public Output<String> getTopologyKey() {
+    public Output<String> topologyKey() {
         return this.topologyKey;
     }
 
@@ -76,10 +77,10 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PodAffinityTermArgs() {
-        this.labelSelector = Output.empty();
-        this.namespaceSelector = Output.empty();
-        this.namespaces = Output.empty();
-        this.topologyKey = Output.empty();
+        this.labelSelector = Codegen.empty();
+        this.namespaceSelector = Codegen.empty();
+        this.namespaces = Codegen.empty();
+        this.topologyKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder labelSelector(@Nullable LabelSelectorArgs labelSelector) {
-            this.labelSelector = Output.ofNullable(labelSelector);
+            this.labelSelector = Codegen.ofNullable(labelSelector);
             return this;
         }
         public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
@@ -121,7 +122,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
-            this.namespaceSelector = Output.ofNullable(namespaceSelector);
+            this.namespaceSelector = Codegen.ofNullable(namespaceSelector);
             return this;
         }
         public Builder namespaces(@Nullable Output<List<String>> namespaces) {
@@ -129,7 +130,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namespaces(@Nullable List<String> namespaces) {
-            this.namespaces = Output.ofNullable(namespaces);
+            this.namespaces = Codegen.ofNullable(namespaces);
             return this;
         }
         public Builder namespaces(String... namespaces) {

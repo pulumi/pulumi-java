@@ -10,6 +10,7 @@ import io.pulumi.aws.glue.outputs.UserDefinedFunctionResourceUri;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +48,7 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
      * @return ID of the Glue Catalog to create the function in. If omitted, this defaults to the AWS Account ID.
      * 
      */
-    public Output</* @Nullable */ String> getCatalogId() {
+    public Output</* @Nullable */ String> catalogId() {
         return this.catalogId;
     }
     /**
@@ -61,13 +62,13 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
      * @return The Java class that contains the function code.
      * 
      */
-    public Output<String> getClassName() {
+    public Output<String> className() {
         return this.className;
     }
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -81,7 +82,7 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
      * @return The name of the Database to create the Function.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -95,7 +96,7 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
      * @return The name of the function.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -109,7 +110,7 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
      * @return The owner of the function.
      * 
      */
-    public Output<String> getOwnerName() {
+    public Output<String> ownerName() {
         return this.ownerName;
     }
     /**
@@ -123,7 +124,7 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
      * @return The owner type. can be one of `USER`, `ROLE`, and `GROUP`.
      * 
      */
-    public Output<String> getOwnerType() {
+    public Output<String> ownerType() {
         return this.ownerType;
     }
     /**
@@ -137,7 +138,7 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
      * @return The configuration block for Resource URIs. See resource uris below for more details.
      * 
      */
-    public Output</* @Nullable */ List<UserDefinedFunctionResourceUri>> getResourceUris() {
+    public Output</* @Nullable */ List<UserDefinedFunctionResourceUri>> resourceUris() {
         return this.resourceUris;
     }
 
@@ -163,7 +164,7 @@ public class UserDefinedFunction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserDefinedFunction(String name, UserDefinedFunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/userDefinedFunction:UserDefinedFunction", name, args == null ? UserDefinedFunctionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/userDefinedFunction:UserDefinedFunction", name, args == null ? UserDefinedFunctionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserDefinedFunction(String name, Output<String> id, @Nullable UserDefinedFunctionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

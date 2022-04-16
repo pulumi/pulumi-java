@@ -6,6 +6,7 @@ package io.pulumi.googlenative.file_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.file_v1.BackupArgs;
 import java.lang.Boolean;
@@ -31,7 +32,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Capacity of the source file share when the backup was created.
      * 
      */
-    public Output<String> getCapacityGb() {
+    public Output<String> capacityGb() {
         return this.capacityGb;
     }
     /**
@@ -45,7 +46,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The time when the backup was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -59,7 +60,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Amount of bytes that will be downloaded if the backup is restored. This may be different than storage bytes, since sequential backups of the same disk will share storage.
      * 
      */
-    public Output<String> getDownloadBytes() {
+    public Output<String> downloadBytes() {
         return this.downloadBytes;
     }
     /**
@@ -87,7 +88,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Resource labels to represent user provided metadata.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -101,7 +102,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Reserved for future use.
      * 
      */
-    public Output<Boolean> getSatisfiesPzs() {
+    public Output<Boolean> satisfiesPzs() {
         return this.satisfiesPzs;
     }
     /**
@@ -129,7 +130,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Name of the file share in the source Cloud Filestore instance that the backup is created from.
      * 
      */
-    public Output<String> getSourceFileShare() {
+    public Output<String> sourceFileShare() {
         return this.sourceFileShare;
     }
     /**
@@ -143,7 +144,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
      * 
      */
-    public Output<String> getSourceInstance() {
+    public Output<String> sourceInstance() {
         return this.sourceInstance;
     }
     /**
@@ -157,7 +158,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The service tier of the source Cloud Filestore instance that this backup is created from.
      * 
      */
-    public Output<String> getSourceInstanceTier() {
+    public Output<String> sourceInstanceTier() {
         return this.sourceInstanceTier;
     }
     /**
@@ -171,7 +172,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The backup state.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -185,7 +186,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The size of the storage used by the backup. As backups share storage, this number is expected to change with backup creation/deletion.
      * 
      */
-    public Output<String> getStorageBytes() {
+    public Output<String> storageBytes() {
         return this.storageBytes;
     }
 
@@ -211,7 +212,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Backup(String name, BackupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:file/v1:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:file/v1:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Backup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

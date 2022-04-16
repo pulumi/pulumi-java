@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.enums.ContainerType;
 import io.pulumi.azurenative.batch.inputs.ContainerRegistryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="containerImageNames")
       private final @Nullable Output<List<String>> containerImageNames;
 
-    public Output<List<String>> getContainerImageNames() {
-        return this.containerImageNames == null ? Output.empty() : this.containerImageNames;
+    public Output<List<String>> containerImageNames() {
+        return this.containerImageNames == null ? Codegen.empty() : this.containerImageNames;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     @Import(name="containerRegistries")
       private final @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
 
-    public Output<List<ContainerRegistryArgs>> getContainerRegistries() {
-        return this.containerRegistries == null ? Output.empty() : this.containerRegistries;
+    public Output<List<ContainerRegistryArgs>> containerRegistries() {
+        return this.containerRegistries == null ? Codegen.empty() : this.containerRegistries;
     }
 
     @Import(name="type", required=true)
       private final Output<ContainerType> type;
 
-    public Output<ContainerType> getType() {
+    public Output<ContainerType> type() {
         return this.type;
     }
 
@@ -56,9 +57,9 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private ContainerConfigurationArgs() {
-        this.containerImageNames = Output.empty();
-        this.containerRegistries = Output.empty();
-        this.type = Output.empty();
+        this.containerImageNames = Codegen.empty();
+        this.containerRegistries = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder containerImageNames(@Nullable List<String> containerImageNames) {
-            this.containerImageNames = Output.ofNullable(containerImageNames);
+            this.containerImageNames = Codegen.ofNullable(containerImageNames);
             return this;
         }
         public Builder containerImageNames(String... containerImageNames) {
@@ -101,7 +102,7 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder containerRegistries(@Nullable List<ContainerRegistryArgs> containerRegistries) {
-            this.containerRegistries = Output.ofNullable(containerRegistries);
+            this.containerRegistries = Codegen.ofNullable(containerRegistries);
             return this;
         }
         public Builder containerRegistries(ContainerRegistryArgs... containerRegistries) {

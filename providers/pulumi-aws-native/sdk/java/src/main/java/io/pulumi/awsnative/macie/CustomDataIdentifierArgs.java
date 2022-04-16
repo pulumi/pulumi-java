@@ -5,6 +5,7 @@ package io.pulumi.awsnative.macie;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="ignoreWords")
       private final @Nullable Output<List<String>> ignoreWords;
 
-    public Output<List<String>> getIgnoreWords() {
-        return this.ignoreWords == null ? Output.empty() : this.ignoreWords;
+    public Output<List<String>> ignoreWords() {
+        return this.ignoreWords == null ? Codegen.empty() : this.ignoreWords;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="keywords")
       private final @Nullable Output<List<String>> keywords;
 
-    public Output<List<String>> getKeywords() {
-        return this.keywords == null ? Output.empty() : this.keywords;
+    public Output<List<String>> keywords() {
+        return this.keywords == null ? Codegen.empty() : this.keywords;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="maximumMatchDistance")
       private final @Nullable Output<Integer> maximumMatchDistance;
 
-    public Output<Integer> getMaximumMatchDistance() {
-        return this.maximumMatchDistance == null ? Output.empty() : this.maximumMatchDistance;
+    public Output<Integer> maximumMatchDistance() {
+        return this.maximumMatchDistance == null ? Codegen.empty() : this.maximumMatchDistance;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     @Import(name="regex", required=true)
       private final Output<String> regex;
 
-    public Output<String> getRegex() {
+    public Output<String> regex() {
         return this.regex;
     }
 
@@ -98,12 +99,12 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
     }
 
     private CustomDataIdentifierArgs() {
-        this.description = Output.empty();
-        this.ignoreWords = Output.empty();
-        this.keywords = Output.empty();
-        this.maximumMatchDistance = Output.empty();
-        this.name = Output.empty();
-        this.regex = Output.empty();
+        this.description = Codegen.empty();
+        this.ignoreWords = Codegen.empty();
+        this.keywords = Codegen.empty();
+        this.maximumMatchDistance = Codegen.empty();
+        this.name = Codegen.empty();
+        this.regex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ignoreWords(@Nullable Output<List<String>> ignoreWords) {
@@ -149,7 +150,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ignoreWords(@Nullable List<String> ignoreWords) {
-            this.ignoreWords = Output.ofNullable(ignoreWords);
+            this.ignoreWords = Codegen.ofNullable(ignoreWords);
             return this;
         }
         public Builder ignoreWords(String... ignoreWords) {
@@ -160,7 +161,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder keywords(@Nullable List<String> keywords) {
-            this.keywords = Output.ofNullable(keywords);
+            this.keywords = Codegen.ofNullable(keywords);
             return this;
         }
         public Builder keywords(String... keywords) {
@@ -171,7 +172,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder maximumMatchDistance(@Nullable Integer maximumMatchDistance) {
-            this.maximumMatchDistance = Output.ofNullable(maximumMatchDistance);
+            this.maximumMatchDistance = Codegen.ofNullable(maximumMatchDistance);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -179,7 +180,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder regex(Output<String> regex) {

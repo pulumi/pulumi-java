@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs ex
     @Import(name="parameterId")
       private final @Nullable Output<String> parameterId;
 
-    public Output<String> getParameterId() {
-        return this.parameterId == null ? Output.empty() : this.parameterId;
+    public Output<String> parameterId() {
+        return this.parameterId == null ? Codegen.empty() : this.parameterId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs ex
     @Import(name="text", required=true)
       private final Output<String> text;
 
-    public Output<String> getText() {
+    public Output<String> text() {
         return this.text;
     }
 
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs ex
     }
 
     private GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs() {
-        this.parameterId = Output.empty();
-        this.text = Output.empty();
+        this.parameterId = Codegen.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartArgs ex
             return this;
         }
         public Builder parameterId(@Nullable String parameterId) {
-            this.parameterId = Output.ofNullable(parameterId);
+            this.parameterId = Codegen.ofNullable(parameterId);
             return this;
         }
         public Builder text(Output<String> text) {

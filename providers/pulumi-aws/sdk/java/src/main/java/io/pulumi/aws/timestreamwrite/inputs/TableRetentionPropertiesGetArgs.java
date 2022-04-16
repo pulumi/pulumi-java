@@ -5,6 +5,7 @@ package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TableRetentionPropertiesGetArgs extends io.pulumi.resources.R
     @Import(name="magneticStoreRetentionPeriodInDays", required=true)
       private final Output<Integer> magneticStoreRetentionPeriodInDays;
 
-    public Output<Integer> getMagneticStoreRetentionPeriodInDays() {
+    public Output<Integer> magneticStoreRetentionPeriodInDays() {
         return this.magneticStoreRetentionPeriodInDays;
     }
 
@@ -31,7 +32,7 @@ public final class TableRetentionPropertiesGetArgs extends io.pulumi.resources.R
     @Import(name="memoryStoreRetentionPeriodInHours", required=true)
       private final Output<Integer> memoryStoreRetentionPeriodInHours;
 
-    public Output<Integer> getMemoryStoreRetentionPeriodInHours() {
+    public Output<Integer> memoryStoreRetentionPeriodInHours() {
         return this.memoryStoreRetentionPeriodInHours;
     }
 
@@ -43,8 +44,8 @@ public final class TableRetentionPropertiesGetArgs extends io.pulumi.resources.R
     }
 
     private TableRetentionPropertiesGetArgs() {
-        this.magneticStoreRetentionPeriodInDays = Output.empty();
-        this.memoryStoreRetentionPeriodInHours = Output.empty();
+        this.magneticStoreRetentionPeriodInDays = Codegen.empty();
+        this.memoryStoreRetentionPeriodInHours = Codegen.empty();
     }
 
     public static Builder builder() {

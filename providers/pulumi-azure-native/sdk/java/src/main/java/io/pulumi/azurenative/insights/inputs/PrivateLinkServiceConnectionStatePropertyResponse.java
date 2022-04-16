@@ -23,7 +23,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
     @Import(name="actionsRequired", required=true)
       private final String actionsRequired;
 
-    public String getActionsRequired() {
+    public String actionsRequired() {
         return this.actionsRequired;
     }
 
@@ -34,7 +34,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -45,7 +45,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

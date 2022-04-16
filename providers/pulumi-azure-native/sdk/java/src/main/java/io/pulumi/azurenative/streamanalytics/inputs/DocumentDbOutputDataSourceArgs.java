@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
-        return this.accountKey == null ? Output.empty() : this.accountKey;
+    public Output<String> accountKey() {
+        return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="collectionNamePattern")
       private final @Nullable Output<String> collectionNamePattern;
 
-    public Output<String> getCollectionNamePattern() {
-        return this.collectionNamePattern == null ? Output.empty() : this.collectionNamePattern;
+    public Output<String> collectionNamePattern() {
+        return this.collectionNamePattern == null ? Codegen.empty() : this.collectionNamePattern;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<String> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="documentId")
       private final @Nullable Output<String> documentId;
 
-    public Output<String> getDocumentId() {
-        return this.documentId == null ? Output.empty() : this.documentId;
+    public Output<String> documentId() {
+        return this.documentId == null ? Codegen.empty() : this.documentId;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
-    public Output<String> getPartitionKey() {
-        return this.partitionKey == null ? Output.empty() : this.partitionKey;
+    public Output<String> partitionKey() {
+        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -114,13 +115,13 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
     }
 
     private DocumentDbOutputDataSourceArgs() {
-        this.accountId = Output.empty();
-        this.accountKey = Output.empty();
-        this.collectionNamePattern = Output.empty();
-        this.database = Output.empty();
-        this.documentId = Output.empty();
-        this.partitionKey = Output.empty();
-        this.type = Output.empty();
+        this.accountId = Codegen.empty();
+        this.accountKey = Codegen.empty();
+        this.collectionNamePattern = Codegen.empty();
+        this.database = Codegen.empty();
+        this.documentId = Codegen.empty();
+        this.partitionKey = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder accountKey(@Nullable Output<String> accountKey) {
@@ -168,7 +169,7 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Output.ofNullable(accountKey);
+            this.accountKey = Codegen.ofNullable(accountKey);
             return this;
         }
         public Builder collectionNamePattern(@Nullable Output<String> collectionNamePattern) {
@@ -176,7 +177,7 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder collectionNamePattern(@Nullable String collectionNamePattern) {
-            this.collectionNamePattern = Output.ofNullable(collectionNamePattern);
+            this.collectionNamePattern = Codegen.ofNullable(collectionNamePattern);
             return this;
         }
         public Builder database(@Nullable Output<String> database) {
@@ -184,7 +185,7 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder documentId(@Nullable Output<String> documentId) {
@@ -192,7 +193,7 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder documentId(@Nullable String documentId) {
-            this.documentId = Output.ofNullable(documentId);
+            this.documentId = Codegen.ofNullable(documentId);
             return this;
         }
         public Builder partitionKey(@Nullable Output<String> partitionKey) {
@@ -200,7 +201,7 @@ public final class DocumentDbOutputDataSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Output.ofNullable(partitionKey);
+            this.partitionKey = Codegen.ofNullable(partitionKey);
             return this;
         }
         public Builder type(Output<String> type) {

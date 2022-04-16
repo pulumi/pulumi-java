@@ -10,6 +10,7 @@ import io.pulumi.awsnative.s3.inputs.BucketReplicationRuleFilterArgs;
 import io.pulumi.awsnative.s3.inputs.BucketSourceSelectionCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,22 +28,22 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="deleteMarkerReplication")
       private final @Nullable Output<BucketDeleteMarkerReplicationArgs> deleteMarkerReplication;
 
-    public Output<BucketDeleteMarkerReplicationArgs> getDeleteMarkerReplication() {
-        return this.deleteMarkerReplication == null ? Output.empty() : this.deleteMarkerReplication;
+    public Output<BucketDeleteMarkerReplicationArgs> deleteMarkerReplication() {
+        return this.deleteMarkerReplication == null ? Codegen.empty() : this.deleteMarkerReplication;
     }
 
     @Import(name="destination", required=true)
       private final Output<BucketReplicationDestinationArgs> destination;
 
-    public Output<BucketReplicationDestinationArgs> getDestination() {
+    public Output<BucketReplicationDestinationArgs> destination() {
         return this.destination;
     }
 
     @Import(name="filter")
       private final @Nullable Output<BucketReplicationRuleFilterArgs> filter;
 
-    public Output<BucketReplicationRuleFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<BucketReplicationRuleFilterArgs> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -63,22 +64,22 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="sourceSelectionCriteria")
       private final @Nullable Output<BucketSourceSelectionCriteriaArgs> sourceSelectionCriteria;
 
-    public Output<BucketSourceSelectionCriteriaArgs> getSourceSelectionCriteria() {
-        return this.sourceSelectionCriteria == null ? Output.empty() : this.sourceSelectionCriteria;
+    public Output<BucketSourceSelectionCriteriaArgs> sourceSelectionCriteria() {
+        return this.sourceSelectionCriteria == null ? Codegen.empty() : this.sourceSelectionCriteria;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="status", required=true)
       private final Output<BucketReplicationRuleStatus> status;
 
-    public Output<BucketReplicationRuleStatus> getStatus() {
+    public Output<BucketReplicationRuleStatus> status() {
         return this.status;
     }
 
@@ -112,14 +113,14 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private BucketReplicationRuleArgs() {
-        this.deleteMarkerReplication = Output.empty();
-        this.destination = Output.empty();
-        this.filter = Output.empty();
-        this.id = Output.empty();
-        this.prefix = Output.empty();
-        this.priority = Output.empty();
-        this.sourceSelectionCriteria = Output.empty();
-        this.status = Output.empty();
+        this.deleteMarkerReplication = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.id = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.sourceSelectionCriteria = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder deleteMarkerReplication(@Nullable BucketDeleteMarkerReplicationArgs deleteMarkerReplication) {
-            this.deleteMarkerReplication = Output.ofNullable(deleteMarkerReplication);
+            this.deleteMarkerReplication = Codegen.ofNullable(deleteMarkerReplication);
             return this;
         }
         public Builder destination(Output<BucketReplicationDestinationArgs> destination) {
@@ -177,7 +178,7 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filter(@Nullable BucketReplicationRuleFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -185,7 +186,7 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -193,7 +194,7 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -201,7 +202,7 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder sourceSelectionCriteria(@Nullable Output<BucketSourceSelectionCriteriaArgs> sourceSelectionCriteria) {
@@ -209,7 +210,7 @@ public final class BucketReplicationRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sourceSelectionCriteria(@Nullable BucketSourceSelectionCriteriaArgs sourceSelectionCriteria) {
-            this.sourceSelectionCriteria = Output.ofNullable(sourceSelectionCriteria);
+            this.sourceSelectionCriteria = Codegen.ofNullable(sourceSelectionCriteria);
             return this;
         }
         public Builder status(Output<BucketReplicationRuleStatus> status) {

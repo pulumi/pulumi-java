@@ -16,14 +16,14 @@ public final class ExperimentTreatmentToWeight extends io.pulumi.resources.Invok
     @Import(name="splitWeight", required=true)
       private final Integer splitWeight;
 
-    public Integer getSplitWeight() {
+    public Integer splitWeight() {
         return this.splitWeight;
     }
 
     @Import(name="treatment", required=true)
       private final String treatment;
 
-    public String getTreatment() {
+    public String treatment() {
         return this.treatment;
     }
 

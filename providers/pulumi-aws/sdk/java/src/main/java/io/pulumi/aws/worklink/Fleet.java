@@ -11,6 +11,7 @@ import io.pulumi.aws.worklink.outputs.FleetNetwork;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The ARN of the created WorkLink Fleet.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
      * 
      */
-    public Output</* @Nullable */ String> getAuditStreamArn() {
+    public Output</* @Nullable */ String> auditStreamArn() {
         return this.auditStreamArn;
     }
     /**
@@ -68,7 +69,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The identifier used by users to sign in to the Amazon WorkLink app.
      * 
      */
-    public Output<String> getCompanyCode() {
+    public Output<String> companyCode() {
         return this.companyCode;
     }
     /**
@@ -82,7 +83,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The time that the fleet was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -96,7 +97,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
      * 
      */
-    public Output</* @Nullable */ String> getDeviceCaCertificate() {
+    public Output</* @Nullable */ String> deviceCaCertificate() {
         return this.deviceCaCertificate;
     }
     /**
@@ -110,7 +111,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The name of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -124,7 +125,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ FleetIdentityProvider> getIdentityProvider() {
+    public Output</* @Nullable */ FleetIdentityProvider> identityProvider() {
         return this.identityProvider;
     }
     /**
@@ -138,7 +139,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The time that the fleet was last updated.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -152,7 +153,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return A region-unique name for the AMI.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -166,7 +167,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Provide this to allow manage the company network configuration for the fleet. Fields documented below.
      * 
      */
-    public Output</* @Nullable */ FleetNetwork> getNetwork() {
+    public Output</* @Nullable */ FleetNetwork> network() {
         return this.network;
     }
     /**
@@ -180,7 +181,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getOptimizeForEndUserLocation() {
+    public Output</* @Nullable */ Boolean> optimizeForEndUserLocation() {
         return this.optimizeForEndUserLocation;
     }
 
@@ -206,7 +207,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Fleet(String name, @Nullable FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:worklink/fleet:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:worklink/fleet:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Fleet(String name, Output<String> id, @Nullable FleetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

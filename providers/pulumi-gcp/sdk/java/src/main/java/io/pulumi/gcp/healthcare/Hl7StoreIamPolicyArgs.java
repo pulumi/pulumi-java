@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +24,7 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hl7V2StoreId", required=true)
       private final Output<String> hl7V2StoreId;
 
-    public Output<String> getHl7V2StoreId() {
+    public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
@@ -35,7 +36,7 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -47,8 +48,8 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private Hl7StoreIamPolicyArgs() {
-        this.hl7V2StoreId = Output.empty();
-        this.policyData = Output.empty();
+        this.hl7V2StoreId = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {

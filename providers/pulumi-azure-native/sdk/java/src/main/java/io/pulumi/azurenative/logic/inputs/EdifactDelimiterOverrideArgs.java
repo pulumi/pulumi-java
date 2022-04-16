@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.EdifactDecimalIndicator;
 import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
 
-    public Output<Integer> getComponentSeparator() {
+    public Output<Integer> componentSeparator() {
         return this.componentSeparator;
     }
 
@@ -39,7 +40,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
 
-    public Output<Integer> getDataElementSeparator() {
+    public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -50,7 +51,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="decimalPointIndicator", required=true)
       private final Output<EdifactDecimalIndicator> decimalPointIndicator;
 
-    public Output<EdifactDecimalIndicator> getDecimalPointIndicator() {
+    public Output<EdifactDecimalIndicator> decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
 
@@ -61,8 +62,8 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="messageAssociationAssignedCode")
       private final @Nullable Output<String> messageAssociationAssignedCode;
 
-    public Output<String> getMessageAssociationAssignedCode() {
-        return this.messageAssociationAssignedCode == null ? Output.empty() : this.messageAssociationAssignedCode;
+    public Output<String> messageAssociationAssignedCode() {
+        return this.messageAssociationAssignedCode == null ? Codegen.empty() : this.messageAssociationAssignedCode;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
-    public Output<String> getMessageId() {
-        return this.messageId == null ? Output.empty() : this.messageId;
+    public Output<String> messageId() {
+        return this.messageId == null ? Codegen.empty() : this.messageId;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="messageRelease")
       private final @Nullable Output<String> messageRelease;
 
-    public Output<String> getMessageRelease() {
-        return this.messageRelease == null ? Output.empty() : this.messageRelease;
+    public Output<String> messageRelease() {
+        return this.messageRelease == null ? Codegen.empty() : this.messageRelease;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="messageVersion")
       private final @Nullable Output<String> messageVersion;
 
-    public Output<String> getMessageVersion() {
-        return this.messageVersion == null ? Output.empty() : this.messageVersion;
+    public Output<String> messageVersion() {
+        return this.messageVersion == null ? Codegen.empty() : this.messageVersion;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="releaseIndicator", required=true)
       private final Output<Integer> releaseIndicator;
 
-    public Output<Integer> getReleaseIndicator() {
+    public Output<Integer> releaseIndicator() {
         return this.releaseIndicator;
     }
 
@@ -116,7 +117,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="repetitionSeparator", required=true)
       private final Output<Integer> repetitionSeparator;
 
-    public Output<Integer> getRepetitionSeparator() {
+    public Output<Integer> repetitionSeparator() {
         return this.repetitionSeparator;
     }
 
@@ -127,7 +128,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
 
-    public Output<Integer> getSegmentTerminator() {
+    public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -138,7 +139,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
-    public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
+    public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -149,8 +150,8 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;
 
-    public Output<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
+    public Output<String> targetNamespace() {
+        return this.targetNamespace == null ? Codegen.empty() : this.targetNamespace;
     }
 
     public EdifactDelimiterOverrideArgs(
@@ -181,18 +182,18 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
     }
 
     private EdifactDelimiterOverrideArgs() {
-        this.componentSeparator = Output.empty();
-        this.dataElementSeparator = Output.empty();
-        this.decimalPointIndicator = Output.empty();
-        this.messageAssociationAssignedCode = Output.empty();
-        this.messageId = Output.empty();
-        this.messageRelease = Output.empty();
-        this.messageVersion = Output.empty();
-        this.releaseIndicator = Output.empty();
-        this.repetitionSeparator = Output.empty();
-        this.segmentTerminator = Output.empty();
-        this.segmentTerminatorSuffix = Output.empty();
-        this.targetNamespace = Output.empty();
+        this.componentSeparator = Codegen.empty();
+        this.dataElementSeparator = Codegen.empty();
+        this.decimalPointIndicator = Codegen.empty();
+        this.messageAssociationAssignedCode = Codegen.empty();
+        this.messageId = Codegen.empty();
+        this.messageRelease = Codegen.empty();
+        this.messageVersion = Codegen.empty();
+        this.releaseIndicator = Codegen.empty();
+        this.repetitionSeparator = Codegen.empty();
+        this.segmentTerminator = Codegen.empty();
+        this.segmentTerminatorSuffix = Codegen.empty();
+        this.targetNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -266,7 +267,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
-            this.messageAssociationAssignedCode = Output.ofNullable(messageAssociationAssignedCode);
+            this.messageAssociationAssignedCode = Codegen.ofNullable(messageAssociationAssignedCode);
             return this;
         }
         public Builder messageId(@Nullable Output<String> messageId) {
@@ -274,7 +275,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = Output.ofNullable(messageId);
+            this.messageId = Codegen.ofNullable(messageId);
             return this;
         }
         public Builder messageRelease(@Nullable Output<String> messageRelease) {
@@ -282,7 +283,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder messageRelease(@Nullable String messageRelease) {
-            this.messageRelease = Output.ofNullable(messageRelease);
+            this.messageRelease = Codegen.ofNullable(messageRelease);
             return this;
         }
         public Builder messageVersion(@Nullable Output<String> messageVersion) {
@@ -290,7 +291,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder messageVersion(@Nullable String messageVersion) {
-            this.messageVersion = Output.ofNullable(messageVersion);
+            this.messageVersion = Codegen.ofNullable(messageVersion);
             return this;
         }
         public Builder releaseIndicator(Output<Integer> releaseIndicator) {
@@ -330,7 +331,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Output.ofNullable(targetNamespace);
+            this.targetNamespace = Codegen.ofNullable(targetNamespace);
             return this;
         }        public EdifactDelimiterOverrideArgs build() {
             return new EdifactDelimiterOverrideArgs(componentSeparator, dataElementSeparator, decimalPointIndicator, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, targetNamespace);

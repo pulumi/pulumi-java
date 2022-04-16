@@ -9,6 +9,7 @@ import io.pulumi.aws.ssm.inputs.ParameterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return A regular expression used to validate the parameter value.
      * 
      */
-    public Output</* @Nullable */ String> getAllowedPattern() {
+    public Output</* @Nullable */ String> allowedPattern() {
         return this.allowedPattern;
     }
     /**
@@ -56,7 +57,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return The ARN of the parameter.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +73,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * ](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html)
      * 
      */
-    public Output<String> getDataType() {
+    public Output<String> dataType() {
         return this.dataType;
     }
     /**
@@ -86,7 +87,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return The description of the parameter.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -100,7 +101,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return The KMS key id or arn for encrypting a SecureString.
      * 
      */
-    public Output<String> getKeyId() {
+    public Output<String> keyId() {
         return this.keyId;
     }
     /**
@@ -114,7 +115,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return The name of the parameter. If the name contains a path (e.g., any forward slashes (`/`)), it must be fully qualified with a leading forward slash (`/`). For additional requirements and constraints, see the [AWS SSM User Guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -128,7 +129,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return Overwrite an existing parameter. If not specified, will default to `false` if the resource has not been created by this provider to avoid overwrite of existing resource and will default to `true` otherwise (lifecycle rules should then be used to manage the update behavior).
      * 
      */
-    public Output</* @Nullable */ Boolean> getOverwrite() {
+    public Output</* @Nullable */ Boolean> overwrite() {
         return this.overwrite;
     }
     /**
@@ -142,7 +143,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -170,7 +171,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return The tier of the parameter. If not specified, will default to `Standard`. Valid tiers are `Standard`, `Advanced`, and `Intelligent-Tiering`. For more information on parameter tiers, see the [AWS SSM Parameter tier comparison and guide](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html).
      * 
      */
-    public Output</* @Nullable */ String> getTier() {
+    public Output</* @Nullable */ String> tier() {
         return this.tier;
     }
     /**
@@ -184,7 +185,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return The type of the parameter. Valid types are `String`, `StringList` and `SecureString`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -198,7 +199,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return The value of the parameter.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
     /**
@@ -212,7 +213,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @return The version of the parameter.
      * 
      */
-    public Output<Integer> getVersion() {
+    public Output<Integer> version() {
         return this.version;
     }
 
@@ -238,7 +239,7 @@ public class Parameter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Parameter(String name, ParameterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssm/parameter:Parameter", name, args == null ? ParameterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ssm/parameter:Parameter", name, args == null ? ParameterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Parameter(String name, Output<String> id, @Nullable ParameterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

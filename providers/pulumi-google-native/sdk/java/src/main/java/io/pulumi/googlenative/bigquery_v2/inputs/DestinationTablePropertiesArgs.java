@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+    public Output<String> expirationTime() {
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+    public Output<String> friendlyName() {
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     public DestinationTablePropertiesArgs(
@@ -71,10 +72,10 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
     }
 
     private DestinationTablePropertiesArgs() {
-        this.description = Output.empty();
-        this.expirationTime = Output.empty();
-        this.friendlyName = Output.empty();
-        this.labels = Output.empty();
+        this.description = Codegen.empty();
+        this.expirationTime = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
@@ -116,7 +117,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -124,7 +125,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -132,7 +133,7 @@ public final class DestinationTablePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }        public DestinationTablePropertiesArgs build() {
             return new DestinationTablePropertiesArgs(description, expirationTime, friendlyName, labels);

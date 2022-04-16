@@ -5,6 +5,7 @@ package io.pulumi.aws.macie;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class MemberAccountAssociationArgs extends io.pulumi.resources.Reso
     @Import(name="memberAccountId", required=true)
       private final Output<String> memberAccountId;
 
-    public Output<String> getMemberAccountId() {
+    public Output<String> memberAccountId() {
         return this.memberAccountId;
     }
 
@@ -29,7 +30,7 @@ public final class MemberAccountAssociationArgs extends io.pulumi.resources.Reso
     }
 
     private MemberAccountAssociationArgs() {
-        this.memberAccountId = Output.empty();
+        this.memberAccountId = Codegen.empty();
     }
 
     public static Builder builder() {

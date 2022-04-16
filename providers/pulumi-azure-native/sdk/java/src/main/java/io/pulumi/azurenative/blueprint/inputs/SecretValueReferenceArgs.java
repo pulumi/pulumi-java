@@ -6,6 +6,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 import io.pulumi.azurenative.blueprint.inputs.KeyVaultReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="keyVault", required=true)
       private final Output<KeyVaultReferenceArgs> keyVault;
 
-    public Output<KeyVaultReferenceArgs> getKeyVault() {
+    public Output<KeyVaultReferenceArgs> keyVault() {
         return this.keyVault;
     }
 
@@ -37,7 +38,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
-    public Output<String> getSecretName() {
+    public Output<String> secretName() {
         return this.secretName;
     }
 
@@ -48,8 +49,8 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;
 
-    public Output<String> getSecretVersion() {
-        return this.secretVersion == null ? Output.empty() : this.secretVersion;
+    public Output<String> secretVersion() {
+        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 
     public SecretValueReferenceArgs(
@@ -62,9 +63,9 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
     }
 
     private SecretValueReferenceArgs() {
-        this.keyVault = Output.empty();
-        this.secretName = Output.empty();
-        this.secretVersion = Output.empty();
+        this.keyVault = Codegen.empty();
+        this.secretName = Codegen.empty();
+        this.secretVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class SecretValueReferenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Output.ofNullable(secretVersion);
+            this.secretVersion = Codegen.ofNullable(secretVersion);
             return this;
         }        public SecretValueReferenceArgs build() {
             return new SecretValueReferenceArgs(keyVault, secretName, secretVersion);

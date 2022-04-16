@@ -9,6 +9,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.ScopeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions")
       private final @Nullable Output<ConditionsArgs> conditions;
 
-    public Output<ConditionsArgs> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<ConditionsArgs> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
 
-    public Output<ScopeArgs> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<ScopeArgs> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,ActionRuleStatus>> status;
 
-    public Output<Either<String,ActionRuleStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,ActionRuleStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -92,11 +93,11 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiagnosticsArgs() {
-        this.conditions = Output.empty();
-        this.description = Output.empty();
-        this.scope = Output.empty();
-        this.status = Output.empty();
-        this.type = Output.empty();
+        this.conditions = Codegen.empty();
+        this.description = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable ConditionsArgs conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -140,7 +141,7 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder scope(@Nullable Output<ScopeArgs> scope) {
@@ -148,7 +149,7 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable ScopeArgs scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,ActionRuleStatus>> status) {
@@ -156,7 +157,7 @@ public final class DiagnosticsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,ActionRuleStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPrefixesAdvertisedV4")
       private final @Nullable Output<Integer> maxPrefixesAdvertisedV4;
 
-    public Output<Integer> getMaxPrefixesAdvertisedV4() {
-        return this.maxPrefixesAdvertisedV4 == null ? Output.empty() : this.maxPrefixesAdvertisedV4;
+    public Output<Integer> maxPrefixesAdvertisedV4() {
+        return this.maxPrefixesAdvertisedV4 == null ? Codegen.empty() : this.maxPrefixesAdvertisedV4;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxPrefixesAdvertisedV6")
       private final @Nullable Output<Integer> maxPrefixesAdvertisedV6;
 
-    public Output<Integer> getMaxPrefixesAdvertisedV6() {
-        return this.maxPrefixesAdvertisedV6 == null ? Output.empty() : this.maxPrefixesAdvertisedV6;
+    public Output<Integer> maxPrefixesAdvertisedV6() {
+        return this.maxPrefixesAdvertisedV6 == null ? Codegen.empty() : this.maxPrefixesAdvertisedV6;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="md5AuthenticationKey")
       private final @Nullable Output<String> md5AuthenticationKey;
 
-    public Output<String> getMd5AuthenticationKey() {
-        return this.md5AuthenticationKey == null ? Output.empty() : this.md5AuthenticationKey;
+    public Output<String> md5AuthenticationKey() {
+        return this.md5AuthenticationKey == null ? Codegen.empty() : this.md5AuthenticationKey;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="microsoftSessionIPv4Address")
       private final @Nullable Output<String> microsoftSessionIPv4Address;
 
-    public Output<String> getMicrosoftSessionIPv4Address() {
-        return this.microsoftSessionIPv4Address == null ? Output.empty() : this.microsoftSessionIPv4Address;
+    public Output<String> microsoftSessionIPv4Address() {
+        return this.microsoftSessionIPv4Address == null ? Codegen.empty() : this.microsoftSessionIPv4Address;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="microsoftSessionIPv6Address")
       private final @Nullable Output<String> microsoftSessionIPv6Address;
 
-    public Output<String> getMicrosoftSessionIPv6Address() {
-        return this.microsoftSessionIPv6Address == null ? Output.empty() : this.microsoftSessionIPv6Address;
+    public Output<String> microsoftSessionIPv6Address() {
+        return this.microsoftSessionIPv6Address == null ? Codegen.empty() : this.microsoftSessionIPv6Address;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerSessionIPv4Address")
       private final @Nullable Output<String> peerSessionIPv4Address;
 
-    public Output<String> getPeerSessionIPv4Address() {
-        return this.peerSessionIPv4Address == null ? Output.empty() : this.peerSessionIPv4Address;
+    public Output<String> peerSessionIPv4Address() {
+        return this.peerSessionIPv4Address == null ? Codegen.empty() : this.peerSessionIPv4Address;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="peerSessionIPv6Address")
       private final @Nullable Output<String> peerSessionIPv6Address;
 
-    public Output<String> getPeerSessionIPv6Address() {
-        return this.peerSessionIPv6Address == null ? Output.empty() : this.peerSessionIPv6Address;
+    public Output<String> peerSessionIPv6Address() {
+        return this.peerSessionIPv6Address == null ? Codegen.empty() : this.peerSessionIPv6Address;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionPrefixV4")
       private final @Nullable Output<String> sessionPrefixV4;
 
-    public Output<String> getSessionPrefixV4() {
-        return this.sessionPrefixV4 == null ? Output.empty() : this.sessionPrefixV4;
+    public Output<String> sessionPrefixV4() {
+        return this.sessionPrefixV4 == null ? Codegen.empty() : this.sessionPrefixV4;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sessionPrefixV6")
       private final @Nullable Output<String> sessionPrefixV6;
 
-    public Output<String> getSessionPrefixV6() {
-        return this.sessionPrefixV6 == null ? Output.empty() : this.sessionPrefixV6;
+    public Output<String> sessionPrefixV6() {
+        return this.sessionPrefixV6 == null ? Codegen.empty() : this.sessionPrefixV6;
     }
 
     public BgpSessionArgs(
@@ -140,15 +141,15 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BgpSessionArgs() {
-        this.maxPrefixesAdvertisedV4 = Output.empty();
-        this.maxPrefixesAdvertisedV6 = Output.empty();
-        this.md5AuthenticationKey = Output.empty();
-        this.microsoftSessionIPv4Address = Output.empty();
-        this.microsoftSessionIPv6Address = Output.empty();
-        this.peerSessionIPv4Address = Output.empty();
-        this.peerSessionIPv6Address = Output.empty();
-        this.sessionPrefixV4 = Output.empty();
-        this.sessionPrefixV6 = Output.empty();
+        this.maxPrefixesAdvertisedV4 = Codegen.empty();
+        this.maxPrefixesAdvertisedV6 = Codegen.empty();
+        this.md5AuthenticationKey = Codegen.empty();
+        this.microsoftSessionIPv4Address = Codegen.empty();
+        this.microsoftSessionIPv6Address = Codegen.empty();
+        this.peerSessionIPv4Address = Codegen.empty();
+        this.peerSessionIPv6Address = Codegen.empty();
+        this.sessionPrefixV4 = Codegen.empty();
+        this.sessionPrefixV6 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxPrefixesAdvertisedV4(@Nullable Integer maxPrefixesAdvertisedV4) {
-            this.maxPrefixesAdvertisedV4 = Output.ofNullable(maxPrefixesAdvertisedV4);
+            this.maxPrefixesAdvertisedV4 = Codegen.ofNullable(maxPrefixesAdvertisedV4);
             return this;
         }
         public Builder maxPrefixesAdvertisedV6(@Nullable Output<Integer> maxPrefixesAdvertisedV6) {
@@ -200,7 +201,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxPrefixesAdvertisedV6(@Nullable Integer maxPrefixesAdvertisedV6) {
-            this.maxPrefixesAdvertisedV6 = Output.ofNullable(maxPrefixesAdvertisedV6);
+            this.maxPrefixesAdvertisedV6 = Codegen.ofNullable(maxPrefixesAdvertisedV6);
             return this;
         }
         public Builder md5AuthenticationKey(@Nullable Output<String> md5AuthenticationKey) {
@@ -208,7 +209,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder md5AuthenticationKey(@Nullable String md5AuthenticationKey) {
-            this.md5AuthenticationKey = Output.ofNullable(md5AuthenticationKey);
+            this.md5AuthenticationKey = Codegen.ofNullable(md5AuthenticationKey);
             return this;
         }
         public Builder microsoftSessionIPv4Address(@Nullable Output<String> microsoftSessionIPv4Address) {
@@ -216,7 +217,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder microsoftSessionIPv4Address(@Nullable String microsoftSessionIPv4Address) {
-            this.microsoftSessionIPv4Address = Output.ofNullable(microsoftSessionIPv4Address);
+            this.microsoftSessionIPv4Address = Codegen.ofNullable(microsoftSessionIPv4Address);
             return this;
         }
         public Builder microsoftSessionIPv6Address(@Nullable Output<String> microsoftSessionIPv6Address) {
@@ -224,7 +225,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder microsoftSessionIPv6Address(@Nullable String microsoftSessionIPv6Address) {
-            this.microsoftSessionIPv6Address = Output.ofNullable(microsoftSessionIPv6Address);
+            this.microsoftSessionIPv6Address = Codegen.ofNullable(microsoftSessionIPv6Address);
             return this;
         }
         public Builder peerSessionIPv4Address(@Nullable Output<String> peerSessionIPv4Address) {
@@ -232,7 +233,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerSessionIPv4Address(@Nullable String peerSessionIPv4Address) {
-            this.peerSessionIPv4Address = Output.ofNullable(peerSessionIPv4Address);
+            this.peerSessionIPv4Address = Codegen.ofNullable(peerSessionIPv4Address);
             return this;
         }
         public Builder peerSessionIPv6Address(@Nullable Output<String> peerSessionIPv6Address) {
@@ -240,7 +241,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerSessionIPv6Address(@Nullable String peerSessionIPv6Address) {
-            this.peerSessionIPv6Address = Output.ofNullable(peerSessionIPv6Address);
+            this.peerSessionIPv6Address = Codegen.ofNullable(peerSessionIPv6Address);
             return this;
         }
         public Builder sessionPrefixV4(@Nullable Output<String> sessionPrefixV4) {
@@ -248,7 +249,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sessionPrefixV4(@Nullable String sessionPrefixV4) {
-            this.sessionPrefixV4 = Output.ofNullable(sessionPrefixV4);
+            this.sessionPrefixV4 = Codegen.ofNullable(sessionPrefixV4);
             return this;
         }
         public Builder sessionPrefixV6(@Nullable Output<String> sessionPrefixV6) {
@@ -256,7 +257,7 @@ public final class BgpSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sessionPrefixV6(@Nullable String sessionPrefixV6) {
-            this.sessionPrefixV6 = Output.ofNullable(sessionPrefixV6);
+            this.sessionPrefixV6 = Codegen.ofNullable(sessionPrefixV6);
             return this;
         }        public BgpSessionArgs build() {
             return new BgpSessionArgs(maxPrefixesAdvertisedV4, maxPrefixesAdvertisedV6, md5AuthenticationKey, microsoftSessionIPv4Address, microsoftSessionIPv6Address, peerSessionIPv4Address, peerSessionIPv6Address, sessionPrefixV4, sessionPrefixV6);

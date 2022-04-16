@@ -15,21 +15,21 @@ public final class GetArchiveDeploymentArgs extends io.pulumi.resources.InvokeAr
     @Import(name="archiveDeploymentId", required=true)
       private final String archiveDeploymentId;
 
-    public String getArchiveDeploymentId() {
+    public String archiveDeploymentId() {
         return this.archiveDeploymentId;
     }
 
     @Import(name="environmentId", required=true)
       private final String environmentId;
 
-    public String getEnvironmentId() {
+    public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

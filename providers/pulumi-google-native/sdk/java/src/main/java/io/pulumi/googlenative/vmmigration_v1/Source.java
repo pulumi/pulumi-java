@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vmmigration_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.SourceArgs;
 import io.pulumi.googlenative.vmmigration_v1.outputs.VmwareSourceDetailsResponse;
@@ -31,7 +32,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The create time timestamp.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -45,7 +46,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return User-provided description of the source.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The labels of the source.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -73,7 +74,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The Source name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return The update time timestamp.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -101,7 +102,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @return Vmware type source details.
      * 
      */
-    public Output<VmwareSourceDetailsResponse> getVmware() {
+    public Output<VmwareSourceDetailsResponse> vmware() {
         return this.vmware;
     }
 
@@ -127,7 +128,7 @@ public class Source extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Source(String name, SourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1:Source", name, args == null ? SourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vmmigration/v1:Source", name, args == null ? SourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Source(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

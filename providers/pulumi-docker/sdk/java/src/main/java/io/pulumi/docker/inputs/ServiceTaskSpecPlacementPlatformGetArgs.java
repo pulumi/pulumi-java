@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class ServiceTaskSpecPlacementPlatformGetArgs extends io.pulumi.res
     @Import(name="architecture", required=true)
       private final Output<String> architecture;
 
-    public Output<String> getArchitecture() {
+    public Output<String> architecture() {
         return this.architecture;
     }
 
     @Import(name="os", required=true)
       private final Output<String> os;
 
-    public Output<String> getOs() {
+    public Output<String> os() {
         return this.os;
     }
 
@@ -35,8 +36,8 @@ public final class ServiceTaskSpecPlacementPlatformGetArgs extends io.pulumi.res
     }
 
     private ServiceTaskSpecPlacementPlatformGetArgs() {
-        this.architecture = Output.empty();
-        this.os = Output.empty();
+        this.architecture = Codegen.empty();
+        this.os = Codegen.empty();
     }
 
     public static Builder builder() {

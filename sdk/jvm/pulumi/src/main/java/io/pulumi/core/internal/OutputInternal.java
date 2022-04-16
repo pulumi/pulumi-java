@@ -55,6 +55,14 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
         ));
     }
 
+    /**
+     * Do not use directly, use {@link OutputFactory}
+     */
+    @InternalUse
+    OutputInternal(CompletableFuture<OutputData<T>> dataFuture, int dummy /* FIXME: remove dummy after refactoring complete */) {
+        this.dataFuture = requireNonNull(dataFuture);
+    }
+
     @InternalUse
     public OutputInternal(Set<Resource> resources, T value) {
         this(CompletableFuture.completedFuture(
@@ -128,14 +136,19 @@ public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
         return this.dataFuture.thenApply(OutputData::isSecret);
     }
 
-    @InternalUse
-    public CompletableFuture<Boolean> isEmpty() {
-        return this.dataFuture.thenApply(OutputData::isEmpty);
-    }
-
-    @InternalUse
-    public CompletableFuture<Boolean> isPresent() {
-        return this.dataFuture.thenApply(OutputData::isPresent);
+    @Override
+    public String toString() {
+        return String.join("\n",
+                "Calling 'toString' on an 'Output<T>' is not supported.",
+                "This is because the value of an 'Output' is asynchronous.",
+                "",
+                "To get the value of an Output<T> as an Output<String> consider either:",
+                "1: applyValue(v -> String.format(\"prefix%ssuffix\", v))",
+                "2: Output.format(\"prefix%ssuffix\", o)",
+                "",
+                "See https://pulumi.io/help/outputs for more details.",
+                "This function may throw in a future version of Pulumi."
+        );
     }
 
     // Static section -----

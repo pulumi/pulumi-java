@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.LogLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     @Import(name="level")
       private final @Nullable Output<LogLevel> level;
 
-    public Output<LogLevel> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+    public Output<LogLevel> level() {
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
-    public Output<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
+    public Output<Integer> retentionInDays() {
+        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     @Import(name="sasUrl")
       private final @Nullable Output<String> sasUrl;
 
-    public Output<String> getSasUrl() {
-        return this.sasUrl == null ? Output.empty() : this.sasUrl;
+    public Output<String> sasUrl() {
+        return this.sasUrl == null ? Codegen.empty() : this.sasUrl;
     }
 
     public AzureBlobStorageApplicationLogsConfigArgs(
@@ -65,9 +66,9 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     }
 
     private AzureBlobStorageApplicationLogsConfigArgs() {
-        this.level = Output.empty();
-        this.retentionInDays = Output.empty();
-        this.sasUrl = Output.empty();
+        this.level = Codegen.empty();
+        this.retentionInDays = Codegen.empty();
+        this.sasUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder level(@Nullable LogLevel level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
@@ -107,7 +108,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Output.ofNullable(retentionInDays);
+            this.retentionInDays = Codegen.ofNullable(retentionInDays);
             return this;
         }
         public Builder sasUrl(@Nullable Output<String> sasUrl) {
@@ -115,7 +116,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder sasUrl(@Nullable String sasUrl) {
-            this.sasUrl = Output.ofNullable(sasUrl);
+            this.sasUrl = Codegen.ofNullable(sasUrl);
             return this;
         }        public AzureBlobStorageApplicationLogsConfigArgs build() {
             return new AzureBlobStorageApplicationLogsConfigArgs(level, retentionInDays, sasUrl);

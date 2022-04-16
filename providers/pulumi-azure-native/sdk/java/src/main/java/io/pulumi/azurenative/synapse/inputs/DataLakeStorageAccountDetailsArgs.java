@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
     @Import(name="accountUrl")
       private final @Nullable Output<String> accountUrl;
 
-    public Output<String> getAccountUrl() {
-        return this.accountUrl == null ? Output.empty() : this.accountUrl;
+    public Output<String> accountUrl() {
+        return this.accountUrl == null ? Codegen.empty() : this.accountUrl;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
     @Import(name="filesystem")
       private final @Nullable Output<String> filesystem;
 
-    public Output<String> getFilesystem() {
-        return this.filesystem == null ? Output.empty() : this.filesystem;
+    public Output<String> filesystem() {
+        return this.filesystem == null ? Codegen.empty() : this.filesystem;
     }
 
     public DataLakeStorageAccountDetailsArgs(
@@ -48,8 +49,8 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
     }
 
     private DataLakeStorageAccountDetailsArgs() {
-        this.accountUrl = Output.empty();
-        this.filesystem = Output.empty();
+        this.accountUrl = Codegen.empty();
+        this.filesystem = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
             return this;
         }
         public Builder accountUrl(@Nullable String accountUrl) {
-            this.accountUrl = Output.ofNullable(accountUrl);
+            this.accountUrl = Codegen.ofNullable(accountUrl);
             return this;
         }
         public Builder filesystem(@Nullable Output<String> filesystem) {
@@ -87,7 +88,7 @@ public final class DataLakeStorageAccountDetailsArgs extends io.pulumi.resources
             return this;
         }
         public Builder filesystem(@Nullable String filesystem) {
-            this.filesystem = Output.ofNullable(filesystem);
+            this.filesystem = Codegen.ofNullable(filesystem);
             return this;
         }        public DataLakeStorageAccountDetailsArgs build() {
             return new DataLakeStorageAccountDetailsArgs(accountUrl, filesystem);

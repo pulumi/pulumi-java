@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dockerImageUri", required=true)
       private final Output<String> dockerImageUri;
 
-    public Output<String> getDockerImageUri() {
+    public Output<String> dockerImageUri() {
         return this.dockerImageUri;
     }
 
@@ -39,7 +40,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dockerSpecificationType", required=true)
       private final Output<String> dockerSpecificationType;
 
-    public Output<String> getDockerSpecificationType() {
+    public Output<String> dockerSpecificationType() {
         return this.dockerSpecificationType;
     }
 
@@ -50,8 +51,8 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="platform")
       private final @Nullable Output<DockerImagePlatformArgs> platform;
 
-    public Output<DockerImagePlatformArgs> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+    public Output<DockerImagePlatformArgs> platform() {
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     public DockerImageArgs(
@@ -64,9 +65,9 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DockerImageArgs() {
-        this.dockerImageUri = Output.empty();
-        this.dockerSpecificationType = Output.empty();
-        this.platform = Output.empty();
+        this.dockerImageUri = Codegen.empty();
+        this.dockerSpecificationType = Codegen.empty();
+        this.platform = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platform(@Nullable DockerImagePlatformArgs platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }        public DockerImageArgs build() {
             return new DockerImageArgs(dockerImageUri, dockerSpecificationType, platform);

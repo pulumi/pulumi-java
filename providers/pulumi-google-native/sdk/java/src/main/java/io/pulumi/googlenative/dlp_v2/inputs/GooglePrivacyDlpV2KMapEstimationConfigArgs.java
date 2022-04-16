@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2AuxiliaryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TaggedFieldArgs;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
     @Import(name="auxiliaryTables")
       private final @Nullable Output<List<GooglePrivacyDlpV2AuxiliaryTableArgs>> auxiliaryTables;
 
-    public Output<List<GooglePrivacyDlpV2AuxiliaryTableArgs>> getAuxiliaryTables() {
-        return this.auxiliaryTables == null ? Output.empty() : this.auxiliaryTables;
+    public Output<List<GooglePrivacyDlpV2AuxiliaryTableArgs>> auxiliaryTables() {
+        return this.auxiliaryTables == null ? Codegen.empty() : this.auxiliaryTables;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
     @Import(name="quasiIds", required=true)
       private final Output<List<GooglePrivacyDlpV2TaggedFieldArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2TaggedFieldArgs>> getQuasiIds() {
+    public Output<List<GooglePrivacyDlpV2TaggedFieldArgs>> quasiIds() {
         return this.quasiIds;
     }
 
@@ -50,8 +51,8 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
     @Import(name="regionCode")
       private final @Nullable Output<String> regionCode;
 
-    public Output<String> getRegionCode() {
-        return this.regionCode == null ? Output.empty() : this.regionCode;
+    public Output<String> regionCode() {
+        return this.regionCode == null ? Codegen.empty() : this.regionCode;
     }
 
     public GooglePrivacyDlpV2KMapEstimationConfigArgs(
@@ -64,9 +65,9 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
     }
 
     private GooglePrivacyDlpV2KMapEstimationConfigArgs() {
-        this.auxiliaryTables = Output.empty();
-        this.quasiIds = Output.empty();
-        this.regionCode = Output.empty();
+        this.auxiliaryTables = Codegen.empty();
+        this.quasiIds = Codegen.empty();
+        this.regionCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
             return this;
         }
         public Builder auxiliaryTables(@Nullable List<GooglePrivacyDlpV2AuxiliaryTableArgs> auxiliaryTables) {
-            this.auxiliaryTables = Output.ofNullable(auxiliaryTables);
+            this.auxiliaryTables = Codegen.ofNullable(auxiliaryTables);
             return this;
         }
         public Builder auxiliaryTables(GooglePrivacyDlpV2AuxiliaryTableArgs... auxiliaryTables) {
@@ -120,7 +121,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigArgs extends io.pulumi.
             return this;
         }
         public Builder regionCode(@Nullable String regionCode) {
-            this.regionCode = Output.ofNullable(regionCode);
+            this.regionCode = Codegen.ofNullable(regionCode);
             return this;
         }        public GooglePrivacyDlpV2KMapEstimationConfigArgs build() {
             return new GooglePrivacyDlpV2KMapEstimationConfigArgs(auxiliaryTables, quasiIds, regionCode);

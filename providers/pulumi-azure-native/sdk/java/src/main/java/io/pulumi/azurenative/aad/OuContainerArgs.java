@@ -5,6 +5,7 @@ package io.pulumi.azurenative.aad;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+    public Output<String> accountName() {
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainServiceName", required=true)
       private final Output<String> domainServiceName;
 
-    public Output<String> getDomainServiceName() {
+    public Output<String> domainServiceName() {
         return this.domainServiceName;
     }
 
@@ -43,8 +44,8 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ouContainerName")
       private final @Nullable Output<String> ouContainerName;
 
-    public Output<String> getOuContainerName() {
-        return this.ouContainerName == null ? Output.empty() : this.ouContainerName;
+    public Output<String> ouContainerName() {
+        return this.ouContainerName == null ? Codegen.empty() : this.ouContainerName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,8 +77,8 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spn")
       private final @Nullable Output<String> spn;
 
-    public Output<String> getSpn() {
-        return this.spn == null ? Output.empty() : this.spn;
+    public Output<String> spn() {
+        return this.spn == null ? Codegen.empty() : this.spn;
     }
 
     public OuContainerArgs(
@@ -96,12 +97,12 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OuContainerArgs() {
-        this.accountName = Output.empty();
-        this.domainServiceName = Output.empty();
-        this.ouContainerName = Output.empty();
-        this.password = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.spn = Output.empty();
+        this.accountName = Codegen.empty();
+        this.domainServiceName = Codegen.empty();
+        this.ouContainerName = Codegen.empty();
+        this.password = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.spn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder domainServiceName(Output<String> domainServiceName) {
@@ -155,7 +156,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ouContainerName(@Nullable String ouContainerName) {
-            this.ouContainerName = Output.ofNullable(ouContainerName);
+            this.ouContainerName = Codegen.ofNullable(ouContainerName);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -163,7 +164,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -179,7 +180,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spn(@Nullable String spn) {
-            this.spn = Output.ofNullable(spn);
+            this.spn = Codegen.ofNullable(spn);
             return this;
         }        public OuContainerArgs build() {
             return new OuContainerArgs(accountName, domainServiceName, ouContainerName, password, resourceGroupName, spn);

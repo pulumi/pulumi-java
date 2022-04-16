@@ -5,6 +5,7 @@ package io.pulumi.googlenative.baremetalsolution_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crontabSpec")
       private final @Nullable Output<String> crontabSpec;
 
-    public Output<String> getCrontabSpec() {
-        return this.crontabSpec == null ? Output.empty() : this.crontabSpec;
+    public Output<String> crontabSpec() {
+        return this.crontabSpec == null ? Codegen.empty() : this.crontabSpec;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionCount")
       private final @Nullable Output<Integer> retentionCount;
 
-    public Output<Integer> getRetentionCount() {
-        return this.retentionCount == null ? Output.empty() : this.retentionCount;
+    public Output<Integer> retentionCount() {
+        return this.retentionCount == null ? Codegen.empty() : this.retentionCount;
     }
 
     public ScheduleArgs(
@@ -62,9 +63,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.crontabSpec = Output.empty();
-        this.prefix = Output.empty();
-        this.retentionCount = Output.empty();
+        this.crontabSpec = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.retentionCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crontabSpec(@Nullable String crontabSpec) {
-            this.crontabSpec = Output.ofNullable(crontabSpec);
+            this.crontabSpec = Codegen.ofNullable(crontabSpec);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -104,7 +105,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder retentionCount(@Nullable Output<Integer> retentionCount) {
@@ -112,7 +113,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionCount(@Nullable Integer retentionCount) {
-            this.retentionCount = Output.ofNullable(retentionCount);
+            this.retentionCount = Codegen.ofNullable(retentionCount);
             return this;
         }        public ScheduleArgs build() {
             return new ScheduleArgs(crontabSpec, prefix, retentionCount);

@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -49,7 +50,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The access control configuration.
      * 
      */
-    public Output</* @Nullable */ FlowAccessControlConfigurationResponse> getAccessControl() {
+    public Output</* @Nullable */ FlowAccessControlConfigurationResponse> accessControl() {
         return this.accessControl;
     }
     /**
@@ -63,7 +64,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Gets the access endpoint.
      * 
      */
-    public Output<String> getAccessEndpoint() {
+    public Output<String> accessEndpoint() {
         return this.accessEndpoint;
     }
     /**
@@ -77,7 +78,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Gets the changed time.
      * 
      */
-    public Output<String> getChangedTime() {
+    public Output<String> changedTime() {
         return this.changedTime;
     }
     /**
@@ -91,7 +92,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Gets the created time.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -105,7 +106,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The definition.
      * 
      */
-    public Output</* @Nullable */ Object> getDefinition() {
+    public Output</* @Nullable */ Object> definition() {
         return this.definition;
     }
     /**
@@ -119,7 +120,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The endpoints configuration.
      * 
      */
-    public Output</* @Nullable */ FlowEndpointsConfigurationResponse> getEndpointsConfiguration() {
+    public Output</* @Nullable */ FlowEndpointsConfigurationResponse> endpointsConfiguration() {
         return this.endpointsConfiguration;
     }
     /**
@@ -133,7 +134,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Managed service identity properties.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -147,7 +148,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The integration account.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationAccount() {
+    public Output</* @Nullable */ ResourceReferenceResponse> integrationAccount() {
         return this.integrationAccount;
     }
     /**
@@ -161,7 +162,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The integration service environment.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> getIntegrationServiceEnvironment() {
+    public Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment() {
         return this.integrationServiceEnvironment;
     }
     /**
@@ -175,7 +176,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -189,7 +190,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Gets the resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -203,7 +204,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The parameters.
      * 
      */
-    public Output</* @Nullable */ Map<String,WorkflowParameterResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,WorkflowParameterResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -217,7 +218,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Gets the provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -231,7 +232,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The sku.
      * 
      */
-    public Output<SkuResponse> getSku() {
+    public Output<SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -245,7 +246,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The state.
      * 
      */
-    public Output</* @Nullable */ String> getState() {
+    public Output</* @Nullable */ String> state() {
         return this.state;
     }
     /**
@@ -259,7 +260,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -273,7 +274,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Gets the resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -287,7 +288,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @return Gets the version.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -313,7 +314,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workflow(String name, WorkflowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:logic:Workflow", name, args == null ? WorkflowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:logic:Workflow", name, args == null ? WorkflowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workflow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

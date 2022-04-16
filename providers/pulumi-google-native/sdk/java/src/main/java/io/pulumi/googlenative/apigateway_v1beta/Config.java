@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigateway_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigateway_v1beta.ConfigArgs;
 import io.pulumi.googlenative.apigateway_v1beta.outputs.ApigatewayApiConfigFileResponse;
@@ -35,7 +36,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Created time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -49,7 +50,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Optional. Display name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -63,7 +64,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Immutable. Gateway specific configuration.
      * 
      */
-    public Output<ApigatewayGatewayConfigResponse> getGatewayConfig() {
+    public Output<ApigatewayGatewayConfigResponse> gatewayConfig() {
         return this.gatewayConfig;
     }
     /**
@@ -77,7 +78,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.
      * 
      */
-    public Output<String> getGatewayServiceAccount() {
+    public Output<String> gatewayServiceAccount() {
         return this.gatewayServiceAccount;
     }
     /**
@@ -91,7 +92,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Optional. gRPC service definition files. If specified, openapi_documents must not be included.
      * 
      */
-    public Output<List<ApigatewayApiConfigGrpcServiceDefinitionResponse>> getGrpcServices() {
+    public Output<List<ApigatewayApiConfigGrpcServiceDefinitionResponse>> grpcServices() {
         return this.grpcServices;
     }
     /**
@@ -105,7 +106,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -119,7 +120,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using "last one wins" semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
      * 
      */
-    public Output<List<ApigatewayApiConfigFileResponse>> getManagedServiceConfigs() {
+    public Output<List<ApigatewayApiConfigFileResponse>> managedServiceConfigs() {
         return this.managedServiceConfigs;
     }
     /**
@@ -133,7 +134,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Resource name of the API Config. Format: projects/{project}/locations/global/apis/{api}/configs/{api_config}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -147,7 +148,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
      * 
      */
-    public Output<List<ApigatewayApiConfigOpenApiDocumentResponse>> getOpenapiDocuments() {
+    public Output<List<ApigatewayApiConfigOpenApiDocumentResponse>> openapiDocuments() {
         return this.openapiDocuments;
     }
     /**
@@ -161,7 +162,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The ID of the associated Service Config ( https://cloud.google.com/service-infrastructure/docs/glossary#config).
      * 
      */
-    public Output<String> getServiceConfigId() {
+    public Output<String> serviceConfigId() {
         return this.serviceConfigId;
     }
     /**
@@ -175,7 +176,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return State of the API Config.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -189,7 +190,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return Updated time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -215,7 +216,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Config(String name, ConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigateway/v1beta:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigateway/v1beta:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Config(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

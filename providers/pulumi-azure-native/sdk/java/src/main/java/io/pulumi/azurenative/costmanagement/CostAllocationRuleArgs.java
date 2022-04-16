@@ -6,6 +6,7 @@ package io.pulumi.azurenative.costmanagement;
 import io.pulumi.azurenative.costmanagement.inputs.CostAllocationRulePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
 
@@ -33,8 +34,8 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<CostAllocationRulePropertiesArgs> properties;
 
-    public Output<CostAllocationRulePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<CostAllocationRulePropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     public CostAllocationRuleArgs(
@@ -58,9 +59,9 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CostAllocationRuleArgs() {
-        this.billingAccountId = Output.empty();
-        this.properties = Output.empty();
-        this.ruleName = Output.empty();
+        this.billingAccountId = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.ruleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder properties(@Nullable CostAllocationRulePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder ruleName(@Nullable Output<String> ruleName) {
@@ -108,7 +109,7 @@ public final class CostAllocationRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }        public CostAllocationRuleArgs build() {
             return new CostAllocationRuleArgs(billingAccountId, properties, ruleName);

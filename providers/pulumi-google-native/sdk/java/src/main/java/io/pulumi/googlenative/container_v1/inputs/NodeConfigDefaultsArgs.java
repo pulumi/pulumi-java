@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.GcfsConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gcfsConfig")
       private final @Nullable Output<GcfsConfigArgs> gcfsConfig;
 
-    public Output<GcfsConfigArgs> getGcfsConfig() {
-        return this.gcfsConfig == null ? Output.empty() : this.gcfsConfig;
+    public Output<GcfsConfigArgs> gcfsConfig() {
+        return this.gcfsConfig == null ? Codegen.empty() : this.gcfsConfig;
     }
 
     public NodeConfigDefaultsArgs(@Nullable Output<GcfsConfigArgs> gcfsConfig) {
@@ -34,7 +35,7 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private NodeConfigDefaultsArgs() {
-        this.gcfsConfig = Output.empty();
+        this.gcfsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NodeConfigDefaultsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder gcfsConfig(@Nullable GcfsConfigArgs gcfsConfig) {
-            this.gcfsConfig = Output.ofNullable(gcfsConfig);
+            this.gcfsConfig = Codegen.ofNullable(gcfsConfig);
             return this;
         }        public NodeConfigDefaultsArgs build() {
             return new NodeConfigDefaultsArgs(gcfsConfig);

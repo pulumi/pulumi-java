@@ -9,6 +9,7 @@ import io.pulumi.aws.s3control.inputs.BucketPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -55,7 +56,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @return JSON string of the resource policy.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -81,7 +82,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketPolicy(String name, BucketPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/bucketPolicy:BucketPolicy", name, args == null ? BucketPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/bucketPolicy:BucketPolicy", name, args == null ? BucketPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketPolicy(String name, Output<String> id, @Nullable BucketPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

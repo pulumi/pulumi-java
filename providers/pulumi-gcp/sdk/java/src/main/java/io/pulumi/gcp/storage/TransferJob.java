@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.TransferJobArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobState;
@@ -48,7 +49,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return When the Transfer Job was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -62,7 +63,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return When the Transfer Job was deleted.
      * 
      */
-    public Output<String> getDeletionTime() {
+    public Output<String> deletionTime() {
         return this.deletionTime;
     }
     /**
@@ -76,7 +77,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Unique description to identify the Transfer Job.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -90,7 +91,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return When the Transfer Job was last modified.
      * 
      */
-    public Output<String> getLastModificationTime() {
+    public Output<String> lastModificationTime() {
         return this.lastModificationTime;
     }
     /**
@@ -104,7 +105,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return The name of the Transfer Job.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -120,7 +121,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -134,7 +135,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
      * 
      */
-    public Output</* @Nullable */ TransferJobSchedule> getSchedule() {
+    public Output</* @Nullable */ TransferJobSchedule> schedule() {
         return this.schedule;
     }
     /**
@@ -148,7 +149,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -162,7 +163,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @return Transfer specification. Structure documented below.
      * 
      */
-    public Output<TransferJobTransferSpec> getTransferSpec() {
+    public Output<TransferJobTransferSpec> transferSpec() {
         return this.transferSpec;
     }
 
@@ -188,7 +189,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TransferJob(String name, TransferJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/transferJob:TransferJob", name, args == null ? TransferJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/transferJob:TransferJob", name, args == null ? TransferJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransferJob(String name, Output<String> id, @Nullable TransferJobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

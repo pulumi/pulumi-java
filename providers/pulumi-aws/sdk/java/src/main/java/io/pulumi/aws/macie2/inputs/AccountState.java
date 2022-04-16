@@ -5,6 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+    public Output<String> createdAt() {
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="findingPublishingFrequency")
       private final @Nullable Output<String> findingPublishingFrequency;
 
-    public Output<String> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
+    public Output<String> findingPublishingFrequency() {
+        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
-        return this.serviceRole == null ? Output.empty() : this.serviceRole;
+    public Output<String> serviceRole() {
+        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updatedAt")
       private final @Nullable Output<String> updatedAt;
 
-    public Output<String> getUpdatedAt() {
-        return this.updatedAt == null ? Output.empty() : this.updatedAt;
+    public Output<String> updatedAt() {
+        return this.updatedAt == null ? Codegen.empty() : this.updatedAt;
     }
 
     public AccountState(
@@ -83,11 +84,11 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountState() {
-        this.createdAt = Output.empty();
-        this.findingPublishingFrequency = Output.empty();
-        this.serviceRole = Output.empty();
-        this.status = Output.empty();
-        this.updatedAt = Output.empty();
+        this.createdAt = Codegen.empty();
+        this.findingPublishingFrequency = Codegen.empty();
+        this.serviceRole = Codegen.empty();
+        this.status = Codegen.empty();
+        this.updatedAt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
@@ -131,7 +132,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
             return this;
         }
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
@@ -139,7 +140,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Output.ofNullable(serviceRole);
+            this.serviceRole = Codegen.ofNullable(serviceRole);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -147,7 +148,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder updatedAt(@Nullable Output<String> updatedAt) {
@@ -155,7 +156,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updatedAt(@Nullable String updatedAt) {
-            this.updatedAt = Output.ofNullable(updatedAt);
+            this.updatedAt = Codegen.ofNullable(updatedAt);
             return this;
         }        public AccountState build() {
             return new AccountState(createdAt, findingPublishingFrequency, serviceRole, status, updatedAt);

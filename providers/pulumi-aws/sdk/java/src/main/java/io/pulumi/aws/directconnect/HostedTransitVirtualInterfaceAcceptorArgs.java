@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
     @Import(name="dxGatewayId", required=true)
       private final Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
 
@@ -33,8 +34,8 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
     @Import(name="virtualInterfaceId", required=true)
       private final Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 
@@ -58,9 +59,9 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
     }
 
     private HostedTransitVirtualInterfaceAcceptorArgs() {
-        this.dxGatewayId = Output.empty();
-        this.tags = Output.empty();
-        this.virtualInterfaceId = Output.empty();
+        this.dxGatewayId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualInterfaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {

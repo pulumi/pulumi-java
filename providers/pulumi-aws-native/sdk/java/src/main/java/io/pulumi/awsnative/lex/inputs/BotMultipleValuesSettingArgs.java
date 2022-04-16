@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
     @Import(name="allowMultipleValues")
       private final @Nullable Output<Boolean> allowMultipleValues;
 
-    public Output<Boolean> getAllowMultipleValues() {
-        return this.allowMultipleValues == null ? Output.empty() : this.allowMultipleValues;
+    public Output<Boolean> allowMultipleValues() {
+        return this.allowMultipleValues == null ? Codegen.empty() : this.allowMultipleValues;
     }
 
     public BotMultipleValuesSettingArgs(@Nullable Output<Boolean> allowMultipleValues) {
@@ -30,7 +31,7 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
     }
 
     private BotMultipleValuesSettingArgs() {
-        this.allowMultipleValues = Output.empty();
+        this.allowMultipleValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class BotMultipleValuesSettingArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowMultipleValues(@Nullable Boolean allowMultipleValues) {
-            this.allowMultipleValues = Output.ofNullable(allowMultipleValues);
+            this.allowMultipleValues = Codegen.ofNullable(allowMultipleValues);
             return this;
         }        public BotMultipleValuesSettingArgs build() {
             return new BotMultipleValuesSettingArgs(allowMultipleValues);

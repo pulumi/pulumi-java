@@ -39,21 +39,21 @@ public final class OperationErrorErrorsItemResponse {
      * The error type identifier for this error.
      * 
     */
-    public String getCode() {
+    public String code() {
         return this.code;
     }
     /**
      * Indicates the field in the request that caused the error. This property is optional.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * An optional, human-readable error message.
      * 
     */
-    public String getMessage() {
+    public String message() {
         return this.message;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
-        return this.resourceArn == null ? Output.empty() : this.resourceArn;
+    public Output<String> resourceArn() {
+        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public TagState(
@@ -57,9 +58,9 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagState() {
-        this.key = Output.empty();
-        this.resourceArn = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.resourceArn = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder resourceArn(@Nullable Output<String> resourceArn) {
@@ -99,7 +100,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Output.ofNullable(resourceArn);
+            this.resourceArn = Codegen.ofNullable(resourceArn);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -107,7 +108,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public TagState build() {
             return new TagState(key, resourceArn, value);

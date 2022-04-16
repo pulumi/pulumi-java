@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="allowlistValues", required=true)
       private final Output<List<String>> allowlistValues;
 
-    public Output<List<String>> getAllowlistValues() {
+    public Output<List<String>> allowlistValues() {
         return this.allowlistValues;
     }
 
@@ -37,7 +38,7 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -49,7 +50,7 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -63,9 +64,9 @@ public final class AllowlistCustomAlertRuleArgs extends io.pulumi.resources.Reso
     }
 
     private AllowlistCustomAlertRuleArgs() {
-        this.allowlistValues = Output.empty();
-        this.isEnabled = Output.empty();
-        this.ruleType = Output.empty();
+        this.allowlistValues = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.ruleType = Codegen.empty();
     }
 
     public static Builder builder() {

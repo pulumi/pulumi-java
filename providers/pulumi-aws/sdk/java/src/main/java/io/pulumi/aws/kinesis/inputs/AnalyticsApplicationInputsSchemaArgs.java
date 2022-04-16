@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordColumn
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
     @Import(name="recordColumns", required=true)
       private final Output<List<AnalyticsApplicationInputsSchemaRecordColumnArgs>> recordColumns;
 
-    public Output<List<AnalyticsApplicationInputsSchemaRecordColumnArgs>> getRecordColumns() {
+    public Output<List<AnalyticsApplicationInputsSchemaRecordColumnArgs>> recordColumns() {
         return this.recordColumns;
     }
 
@@ -36,8 +37,8 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
     @Import(name="recordEncoding")
       private final @Nullable Output<String> recordEncoding;
 
-    public Output<String> getRecordEncoding() {
-        return this.recordEncoding == null ? Output.empty() : this.recordEncoding;
+    public Output<String> recordEncoding() {
+        return this.recordEncoding == null ? Codegen.empty() : this.recordEncoding;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
     @Import(name="recordFormat", required=true)
       private final Output<AnalyticsApplicationInputsSchemaRecordFormatArgs> recordFormat;
 
-    public Output<AnalyticsApplicationInputsSchemaRecordFormatArgs> getRecordFormat() {
+    public Output<AnalyticsApplicationInputsSchemaRecordFormatArgs> recordFormat() {
         return this.recordFormat;
     }
 
@@ -62,9 +63,9 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
     }
 
     private AnalyticsApplicationInputsSchemaArgs() {
-        this.recordColumns = Output.empty();
-        this.recordEncoding = Output.empty();
-        this.recordFormat = Output.empty();
+        this.recordColumns = Codegen.empty();
+        this.recordEncoding = Codegen.empty();
+        this.recordFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AnalyticsApplicationInputsSchemaArgs extends io.pulumi.resour
             return this;
         }
         public Builder recordEncoding(@Nullable String recordEncoding) {
-            this.recordEncoding = Output.ofNullable(recordEncoding);
+            this.recordEncoding = Codegen.ofNullable(recordEncoding);
             return this;
         }
         public Builder recordFormat(Output<AnalyticsApplicationInputsSchemaRecordFormatArgs> recordFormat) {

@@ -28,16 +28,16 @@ public final class ExperimentTreatmentObject {
         this.variation = variation;
     }
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
-    public String getFeature() {
+    public String feature() {
         return this.feature;
     }
-    public String getTreatmentName() {
+    public String treatmentName() {
         return this.treatmentName;
     }
-    public String getVariation() {
+    public String variation() {
         return this.variation;
     }
 

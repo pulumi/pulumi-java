@@ -15,7 +15,7 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse extends io.
     @Import(name="kind", required=true)
       private final String kind;
 
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
 
@@ -26,7 +26,7 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse extends io.
     @Import(name="networkUrl", required=true)
       private final String networkUrl;
 
-    public String getNetworkUrl() {
+    public String networkUrl() {
         return this.networkUrl;
     }
 

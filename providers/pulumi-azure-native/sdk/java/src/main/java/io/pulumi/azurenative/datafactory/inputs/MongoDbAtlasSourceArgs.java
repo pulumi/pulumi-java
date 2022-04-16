@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.MongoDbCursorMethodsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> getAdditionalColumns() {
-        return this.additionalColumns == null ? Output.empty() : this.additionalColumns;
+    public Output<Object> additionalColumns() {
+        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="batchSize")
       private final @Nullable Output<Object> batchSize;
 
-    public Output<Object> getBatchSize() {
-        return this.batchSize == null ? Output.empty() : this.batchSize;
+    public Output<Object> batchSize() {
+        return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="cursorMethods")
       private final @Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods;
 
-    public Output<MongoDbCursorMethodsPropertiesArgs> getCursorMethods() {
-        return this.cursorMethods == null ? Output.empty() : this.cursorMethods;
+    public Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods() {
+        return this.cursorMethods == null ? Codegen.empty() : this.cursorMethods;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+    public Output<Object> disableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="filter")
       private final @Nullable Output<Object> filter;
 
-    public Output<Object> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<Object> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+    public Output<Object> maxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
 
-    public Output<Object> getQueryTimeout() {
-        return this.queryTimeout == null ? Output.empty() : this.queryTimeout;
+    public Output<Object> queryTimeout() {
+        return this.queryTimeout == null ? Codegen.empty() : this.queryTimeout;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
+    public Output<Object> sourceRetryCount() {
+        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
+    public Output<Object> sourceRetryWait() {
+        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -155,16 +156,16 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private MongoDbAtlasSourceArgs() {
-        this.additionalColumns = Output.empty();
-        this.batchSize = Output.empty();
-        this.cursorMethods = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.filter = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.queryTimeout = Output.empty();
-        this.sourceRetryCount = Output.empty();
-        this.sourceRetryWait = Output.empty();
-        this.type = Output.empty();
+        this.additionalColumns = Codegen.empty();
+        this.batchSize = Codegen.empty();
+        this.cursorMethods = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.queryTimeout = Codegen.empty();
+        this.sourceRetryCount = Codegen.empty();
+        this.sourceRetryWait = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Output.ofNullable(additionalColumns);
+            this.additionalColumns = Codegen.ofNullable(additionalColumns);
             return this;
         }
         public Builder batchSize(@Nullable Output<Object> batchSize) {
@@ -218,7 +219,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder batchSize(@Nullable Object batchSize) {
-            this.batchSize = Output.ofNullable(batchSize);
+            this.batchSize = Codegen.ofNullable(batchSize);
             return this;
         }
         public Builder cursorMethods(@Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods) {
@@ -226,7 +227,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cursorMethods(@Nullable MongoDbCursorMethodsPropertiesArgs cursorMethods) {
-            this.cursorMethods = Output.ofNullable(cursorMethods);
+            this.cursorMethods = Codegen.ofNullable(cursorMethods);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -234,7 +235,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder filter(@Nullable Output<Object> filter) {
@@ -242,7 +243,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder filter(@Nullable Object filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -250,7 +251,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
@@ -258,7 +259,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = Output.ofNullable(queryTimeout);
+            this.queryTimeout = Codegen.ofNullable(queryTimeout);
             return this;
         }
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
@@ -266,7 +267,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
             return this;
         }
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
@@ -274,7 +275,7 @@ public final class MongoDbAtlasSourceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
             return this;
         }
         public Builder type(Output<String> type) {

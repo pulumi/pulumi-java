@@ -6,6 +6,7 @@ package io.pulumi.gcp.billing;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.SubAccountArgs;
 import io.pulumi.gcp.billing.inputs.SubAccountState;
@@ -40,7 +41,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * @return The billing account id.
      * 
      */
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
     /**
@@ -58,7 +59,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * Default is "".
      * 
      */
-    public Output</* @Nullable */ String> getDeletionPolicy() {
+    public Output</* @Nullable */ String> deletionPolicy() {
         return this.deletionPolicy;
     }
     /**
@@ -72,7 +73,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * @return The display name of the billing account.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -88,7 +89,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
      * 
      */
-    public Output<String> getMasterBillingAccount() {
+    public Output<String> masterBillingAccount() {
         return this.masterBillingAccount;
     }
     /**
@@ -102,7 +103,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * @return The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * @return `true` if the billing account is open, `false` if the billing account is closed.
      * 
      */
-    public Output<Boolean> getOpen() {
+    public Output<Boolean> open() {
         return this.open;
     }
 
@@ -142,7 +143,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubAccount(String name, SubAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/subAccount:SubAccount", name, args == null ? SubAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:billing/subAccount:SubAccount", name, args == null ? SubAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SubAccount(String name, Output<String> id, @Nullable SubAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

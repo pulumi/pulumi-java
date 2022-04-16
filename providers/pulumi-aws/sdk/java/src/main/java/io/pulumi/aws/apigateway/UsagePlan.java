@@ -12,6 +12,7 @@ import io.pulumi.aws.apigateway.outputs.UsagePlanThrottleSettings;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return The associated API stages of the usage plan.
      * 
      */
-    public Output</* @Nullable */ List<UsagePlanApiStage>> getApiStages() {
+    public Output</* @Nullable */ List<UsagePlanApiStage>> apiStages() {
         return this.apiStages;
     }
     /**
@@ -58,7 +59,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +73,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return The description of a usage plan.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -86,7 +87,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return The name of the usage plan.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
      * 
      */
-    public Output</* @Nullable */ String> getProductCode() {
+    public Output</* @Nullable */ String> productCode() {
         return this.productCode;
     }
     /**
@@ -114,7 +115,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return The quota settings of the usage plan.
      * 
      */
-    public Output</* @Nullable */ UsagePlanQuotaSettings> getQuotaSettings() {
+    public Output</* @Nullable */ UsagePlanQuotaSettings> quotaSettings() {
         return this.quotaSettings;
     }
     /**
@@ -128,7 +129,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -156,7 +157,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @return The throttling limits of the usage plan.
      * 
      */
-    public Output</* @Nullable */ UsagePlanThrottleSettings> getThrottleSettings() {
+    public Output</* @Nullable */ UsagePlanThrottleSettings> throttleSettings() {
         return this.throttleSettings;
     }
 
@@ -182,7 +183,7 @@ public class UsagePlan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UsagePlan(String name, @Nullable UsagePlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/usagePlan:UsagePlan", name, args == null ? UsagePlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/usagePlan:UsagePlan", name, args == null ? UsagePlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UsagePlan(String name, Output<String> id, @Nullable UsagePlanState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

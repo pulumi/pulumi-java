@@ -7,6 +7,7 @@ import io.pulumi.awsnative.devicefarm.enums.DevicePoolRuleAttribute;
 import io.pulumi.awsnative.devicefarm.enums.DevicePoolRuleOperator;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attribute")
       private final @Nullable Output<DevicePoolRuleAttribute> attribute;
 
-    public Output<DevicePoolRuleAttribute> getAttribute() {
-        return this.attribute == null ? Output.empty() : this.attribute;
+    public Output<DevicePoolRuleAttribute> attribute() {
+        return this.attribute == null ? Codegen.empty() : this.attribute;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operator")
       private final @Nullable Output<DevicePoolRuleOperator> operator;
 
-    public Output<DevicePoolRuleOperator> getOperator() {
-        return this.operator == null ? Output.empty() : this.operator;
+    public Output<DevicePoolRuleOperator> operator() {
+        return this.operator == null ? Codegen.empty() : this.operator;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public DevicePoolRuleArgs(
@@ -63,9 +64,9 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DevicePoolRuleArgs() {
-        this.attribute = Output.empty();
-        this.operator = Output.empty();
-        this.value = Output.empty();
+        this.attribute = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attribute(@Nullable DevicePoolRuleAttribute attribute) {
-            this.attribute = Output.ofNullable(attribute);
+            this.attribute = Codegen.ofNullable(attribute);
             return this;
         }
         public Builder operator(@Nullable Output<DevicePoolRuleOperator> operator) {
@@ -105,7 +106,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operator(@Nullable DevicePoolRuleOperator operator) {
-            this.operator = Output.ofNullable(operator);
+            this.operator = Codegen.ofNullable(operator);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -113,7 +114,7 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public DevicePoolRuleArgs build() {
             return new DevicePoolRuleArgs(attribute, operator, value);

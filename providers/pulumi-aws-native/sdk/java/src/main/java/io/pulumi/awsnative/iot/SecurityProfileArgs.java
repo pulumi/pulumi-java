@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricToRetainArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="additionalMetricsToRetainV2")
       private final @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
 
-    public Output<List<SecurityProfileMetricToRetainArgs>> getAdditionalMetricsToRetainV2() {
-        return this.additionalMetricsToRetainV2 == null ? Output.empty() : this.additionalMetricsToRetainV2;
+    public Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2() {
+        return this.additionalMetricsToRetainV2 == null ? Codegen.empty() : this.additionalMetricsToRetainV2;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="alertTargets")
       private final @Nullable Output<Object> alertTargets;
 
-    public Output<Object> getAlertTargets() {
-        return this.alertTargets == null ? Output.empty() : this.alertTargets;
+    public Output<Object> alertTargets() {
+        return this.alertTargets == null ? Codegen.empty() : this.alertTargets;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="behaviors")
       private final @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
 
-    public Output<List<SecurityProfileBehaviorArgs>> getBehaviors() {
-        return this.behaviors == null ? Output.empty() : this.behaviors;
+    public Output<List<SecurityProfileBehaviorArgs>> behaviors() {
+        return this.behaviors == null ? Codegen.empty() : this.behaviors;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="securityProfileDescription")
       private final @Nullable Output<String> securityProfileDescription;
 
-    public Output<String> getSecurityProfileDescription() {
-        return this.securityProfileDescription == null ? Output.empty() : this.securityProfileDescription;
+    public Output<String> securityProfileDescription() {
+        return this.securityProfileDescription == null ? Codegen.empty() : this.securityProfileDescription;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="securityProfileName")
       private final @Nullable Output<String> securityProfileName;
 
-    public Output<String> getSecurityProfileName() {
-        return this.securityProfileName == null ? Output.empty() : this.securityProfileName;
+    public Output<String> securityProfileName() {
+        return this.securityProfileName == null ? Codegen.empty() : this.securityProfileName;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<SecurityProfileTagArgs>> tags;
 
-    public Output<List<SecurityProfileTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<SecurityProfileTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetArns")
       private final @Nullable Output<List<String>> targetArns;
 
-    public Output<List<String>> getTargetArns() {
-        return this.targetArns == null ? Output.empty() : this.targetArns;
+    public Output<List<String>> targetArns() {
+        return this.targetArns == null ? Codegen.empty() : this.targetArns;
     }
 
     public SecurityProfileArgs(
@@ -114,13 +115,13 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SecurityProfileArgs() {
-        this.additionalMetricsToRetainV2 = Output.empty();
-        this.alertTargets = Output.empty();
-        this.behaviors = Output.empty();
-        this.securityProfileDescription = Output.empty();
-        this.securityProfileName = Output.empty();
-        this.tags = Output.empty();
-        this.targetArns = Output.empty();
+        this.additionalMetricsToRetainV2 = Codegen.empty();
+        this.alertTargets = Codegen.empty();
+        this.behaviors = Codegen.empty();
+        this.securityProfileDescription = Codegen.empty();
+        this.securityProfileName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetArns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder additionalMetricsToRetainV2(@Nullable List<SecurityProfileMetricToRetainArgs> additionalMetricsToRetainV2) {
-            this.additionalMetricsToRetainV2 = Output.ofNullable(additionalMetricsToRetainV2);
+            this.additionalMetricsToRetainV2 = Codegen.ofNullable(additionalMetricsToRetainV2);
             return this;
         }
         public Builder additionalMetricsToRetainV2(SecurityProfileMetricToRetainArgs... additionalMetricsToRetainV2) {
@@ -171,7 +172,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder alertTargets(@Nullable Object alertTargets) {
-            this.alertTargets = Output.ofNullable(alertTargets);
+            this.alertTargets = Codegen.ofNullable(alertTargets);
             return this;
         }
         public Builder behaviors(@Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors) {
@@ -179,7 +180,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder behaviors(@Nullable List<SecurityProfileBehaviorArgs> behaviors) {
-            this.behaviors = Output.ofNullable(behaviors);
+            this.behaviors = Codegen.ofNullable(behaviors);
             return this;
         }
         public Builder behaviors(SecurityProfileBehaviorArgs... behaviors) {
@@ -190,7 +191,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder securityProfileDescription(@Nullable String securityProfileDescription) {
-            this.securityProfileDescription = Output.ofNullable(securityProfileDescription);
+            this.securityProfileDescription = Codegen.ofNullable(securityProfileDescription);
             return this;
         }
         public Builder securityProfileName(@Nullable Output<String> securityProfileName) {
@@ -198,7 +199,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder securityProfileName(@Nullable String securityProfileName) {
-            this.securityProfileName = Output.ofNullable(securityProfileName);
+            this.securityProfileName = Codegen.ofNullable(securityProfileName);
             return this;
         }
         public Builder tags(@Nullable Output<List<SecurityProfileTagArgs>> tags) {
@@ -206,7 +207,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable List<SecurityProfileTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(SecurityProfileTagArgs... tags) {
@@ -217,7 +218,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetArns(@Nullable List<String> targetArns) {
-            this.targetArns = Output.ofNullable(targetArns);
+            this.targetArns = Codegen.ofNullable(targetArns);
             return this;
         }
         public Builder targetArns(String... targetArns) {

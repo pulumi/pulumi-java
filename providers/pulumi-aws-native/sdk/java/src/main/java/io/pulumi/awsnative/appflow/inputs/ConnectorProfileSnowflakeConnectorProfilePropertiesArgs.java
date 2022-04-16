@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+    public Output<String> accountName() {
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -43,8 +44,8 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+    public Output<String> bucketPrefix() {
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="privateLinkServiceName")
       private final @Nullable Output<String> privateLinkServiceName;
 
-    public Output<String> getPrivateLinkServiceName() {
-        return this.privateLinkServiceName == null ? Output.empty() : this.privateLinkServiceName;
+    public Output<String> privateLinkServiceName() {
+        return this.privateLinkServiceName == null ? Codegen.empty() : this.privateLinkServiceName;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="stage", required=true)
       private final Output<String> stage;
 
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 
@@ -88,7 +89,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     @Import(name="warehouse", required=true)
       private final Output<String> warehouse;
 
-    public Output<String> getWarehouse() {
+    public Output<String> warehouse() {
         return this.warehouse;
     }
 
@@ -110,13 +111,13 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
     }
 
     private ConnectorProfileSnowflakeConnectorProfilePropertiesArgs() {
-        this.accountName = Output.empty();
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.privateLinkServiceName = Output.empty();
-        this.region = Output.empty();
-        this.stage = Output.empty();
-        this.warehouse = Output.empty();
+        this.accountName = Codegen.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.privateLinkServiceName = Codegen.empty();
+        this.region = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.warehouse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder bucketName(Output<String> bucketName) {
@@ -172,7 +173,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder privateLinkServiceName(@Nullable Output<String> privateLinkServiceName) {
@@ -180,7 +181,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
             return this;
         }
         public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
-            this.privateLinkServiceName = Output.ofNullable(privateLinkServiceName);
+            this.privateLinkServiceName = Codegen.ofNullable(privateLinkServiceName);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -188,7 +189,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder stage(Output<String> stage) {

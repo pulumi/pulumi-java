@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.inputs.PrivateEndpointConnectionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     @Import(name="properties", required=true)
       private final Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
-    public Output<PrivateEndpointConnectionPropertiesArgs> getProperties() {
+    public Output<PrivateEndpointConnectionPropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -33,7 +34,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.properties = Output.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {

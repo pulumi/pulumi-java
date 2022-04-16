@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
 
-    public Output<String> getDistributionType() {
+    public Output<String> distributionType() {
         return this.distributionType;
     }
 
@@ -38,8 +39,8 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="processCount")
       private final @Nullable Output<Integer> processCount;
 
-    public Output<Integer> getProcessCount() {
-        return this.processCount == null ? Output.empty() : this.processCount;
+    public Output<Integer> processCount() {
+        return this.processCount == null ? Codegen.empty() : this.processCount;
     }
 
     public PyTorchArgs(
@@ -50,8 +51,8 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PyTorchArgs() {
-        this.distributionType = Output.empty();
-        this.processCount = Output.empty();
+        this.distributionType = Codegen.empty();
+        this.processCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class PyTorchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder processCount(@Nullable Integer processCount) {
-            this.processCount = Output.ofNullable(processCount);
+            this.processCount = Codegen.ofNullable(processCount);
             return this;
         }        public PyTorchArgs build() {
             return new PyTorchArgs(distributionType, processCount);

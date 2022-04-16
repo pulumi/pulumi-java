@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesis.inputs.VideoStreamState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -59,7 +60,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return A time stamp that indicates when the stream was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -73,7 +74,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is `0`, indicating that the stream does not persist data.
      * 
      */
-    public Output</* @Nullable */ Integer> getDataRetentionInHours() {
+    public Output</* @Nullable */ Integer> dataRetentionInHours() {
         return this.dataRetentionInHours;
     }
     /**
@@ -87,7 +88,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return The name of the device that is writing to the stream. **In the current implementation, Kinesis Video Streams does not use this name.**
      * 
      */
-    public Output</* @Nullable */ String> getDeviceName() {
+    public Output</* @Nullable */ String> deviceName() {
         return this.deviceName;
     }
     /**
@@ -101,7 +102,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (`aws/kinesisvideo`) is used.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -115,7 +116,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml). If you choose to specify the MediaType, see [Naming Requirements](https://tools.ietf.org/html/rfc6838#section-4.2) for guidelines.
      * 
      */
-    public Output</* @Nullable */ String> getMediaType() {
+    public Output</* @Nullable */ String> mediaType() {
         return this.mediaType;
     }
     /**
@@ -131,7 +132,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * AWS account and region the Stream is created in.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +146,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -159,7 +160,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -173,7 +174,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @return The version of the stream.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -199,7 +200,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VideoStream(String name, @Nullable VideoStreamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesis/videoStream:VideoStream", name, args == null ? VideoStreamArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kinesis/videoStream:VideoStream", name, args == null ? VideoStreamArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VideoStream(String name, Output<String> id, @Nullable VideoStreamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

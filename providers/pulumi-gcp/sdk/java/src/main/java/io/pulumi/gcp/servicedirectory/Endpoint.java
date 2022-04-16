@@ -6,6 +6,7 @@ package io.pulumi.gcp.servicedirectory;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.EndpointArgs;
 import io.pulumi.gcp.servicedirectory.inputs.EndpointState;
@@ -55,7 +56,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return IPv4 or IPv6 address of the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getAddress() {
+    public Output</* @Nullable */ String> address() {
         return this.address;
     }
     /**
@@ -71,7 +72,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * lowercase letters or the hyphen character.
      * 
      */
-    public Output<String> getEndpointId() {
+    public Output<String> endpointId() {
         return this.endpointId;
     }
     /**
@@ -91,7 +92,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getMetadata() {
+    public Output</* @Nullable */ Map<String,String>> metadata() {
         return this.metadata;
     }
     /**
@@ -105,7 +106,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The resource name for the endpoint in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*'.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +120,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The URL to the network, such as projects/PROJECT_NUMBER/locations/global/networks/NETWORK_NAME.
      * 
      */
-    public Output</* @Nullable */ String> getNetwork() {
+    public Output</* @Nullable */ String> network() {
         return this.network;
     }
     /**
@@ -135,7 +136,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * range of [0, 65535]. If unspecified, the default is 0.
      * 
      */
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     /**
@@ -149,7 +150,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @return The resource name of the service that this endpoint provides.
      * 
      */
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -175,7 +176,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Endpoint(String name, EndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/endpoint:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:servicedirectory/endpoint:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Endpoint(String name, Output<String> id, @Nullable EndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

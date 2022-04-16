@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessEntryArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
@@ -24,8 +25,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="dataset")
       private final @Nullable Output<DatasetAccessEntryArgs> dataset;
 
-    public Output<DatasetAccessEntryArgs> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+    public Output<DatasetAccessEntryArgs> dataset() {
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="domain")
       private final @Nullable Output<String> domain;
 
-    public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+    public Output<String> domain() {
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="groupByEmail")
       private final @Nullable Output<String> groupByEmail;
 
-    public Output<String> getGroupByEmail() {
-        return this.groupByEmail == null ? Output.empty() : this.groupByEmail;
+    public Output<String> groupByEmail() {
+        return this.groupByEmail == null ? Codegen.empty() : this.groupByEmail;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="iamMember")
       private final @Nullable Output<String> iamMember;
 
-    public Output<String> getIamMember() {
-        return this.iamMember == null ? Output.empty() : this.iamMember;
+    public Output<String> iamMember() {
+        return this.iamMember == null ? Codegen.empty() : this.iamMember;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="routine")
       private final @Nullable Output<RoutineReferenceArgs> routine;
 
-    public Output<RoutineReferenceArgs> getRoutine() {
-        return this.routine == null ? Output.empty() : this.routine;
+    public Output<RoutineReferenceArgs> routine() {
+        return this.routine == null ? Codegen.empty() : this.routine;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="specialGroup")
       private final @Nullable Output<String> specialGroup;
 
-    public Output<String> getSpecialGroup() {
-        return this.specialGroup == null ? Output.empty() : this.specialGroup;
+    public Output<String> specialGroup() {
+        return this.specialGroup == null ? Codegen.empty() : this.specialGroup;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="userByEmail")
       private final @Nullable Output<String> userByEmail;
 
-    public Output<String> getUserByEmail() {
-        return this.userByEmail == null ? Output.empty() : this.userByEmail;
+    public Output<String> userByEmail() {
+        return this.userByEmail == null ? Codegen.empty() : this.userByEmail;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     @Import(name="view")
       private final @Nullable Output<TableReferenceArgs> view;
 
-    public Output<TableReferenceArgs> getView() {
-        return this.view == null ? Output.empty() : this.view;
+    public Output<TableReferenceArgs> view() {
+        return this.view == null ? Codegen.empty() : this.view;
     }
 
     public DatasetAccessItemArgs(
@@ -138,15 +139,15 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetAccessItemArgs() {
-        this.dataset = Output.empty();
-        this.domain = Output.empty();
-        this.groupByEmail = Output.empty();
-        this.iamMember = Output.empty();
-        this.role = Output.empty();
-        this.routine = Output.empty();
-        this.specialGroup = Output.empty();
-        this.userByEmail = Output.empty();
-        this.view = Output.empty();
+        this.dataset = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.groupByEmail = Codegen.empty();
+        this.iamMember = Codegen.empty();
+        this.role = Codegen.empty();
+        this.routine = Codegen.empty();
+        this.specialGroup = Codegen.empty();
+        this.userByEmail = Codegen.empty();
+        this.view = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataset(@Nullable DatasetAccessEntryArgs dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -198,7 +199,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder groupByEmail(@Nullable Output<String> groupByEmail) {
@@ -206,7 +207,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder groupByEmail(@Nullable String groupByEmail) {
-            this.groupByEmail = Output.ofNullable(groupByEmail);
+            this.groupByEmail = Codegen.ofNullable(groupByEmail);
             return this;
         }
         public Builder iamMember(@Nullable Output<String> iamMember) {
@@ -214,7 +215,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder iamMember(@Nullable String iamMember) {
-            this.iamMember = Output.ofNullable(iamMember);
+            this.iamMember = Codegen.ofNullable(iamMember);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -222,7 +223,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder routine(@Nullable Output<RoutineReferenceArgs> routine) {
@@ -230,7 +231,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder routine(@Nullable RoutineReferenceArgs routine) {
-            this.routine = Output.ofNullable(routine);
+            this.routine = Codegen.ofNullable(routine);
             return this;
         }
         public Builder specialGroup(@Nullable Output<String> specialGroup) {
@@ -238,7 +239,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder specialGroup(@Nullable String specialGroup) {
-            this.specialGroup = Output.ofNullable(specialGroup);
+            this.specialGroup = Codegen.ofNullable(specialGroup);
             return this;
         }
         public Builder userByEmail(@Nullable Output<String> userByEmail) {
@@ -246,7 +247,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userByEmail(@Nullable String userByEmail) {
-            this.userByEmail = Output.ofNullable(userByEmail);
+            this.userByEmail = Codegen.ofNullable(userByEmail);
             return this;
         }
         public Builder view(@Nullable Output<TableReferenceArgs> view) {
@@ -254,7 +255,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder view(@Nullable TableReferenceArgs view) {
-            this.view = Output.ofNullable(view);
+            this.view = Codegen.ofNullable(view);
             return this;
         }        public DatasetAccessItemArgs build() {
             return new DatasetAccessItemArgs(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);

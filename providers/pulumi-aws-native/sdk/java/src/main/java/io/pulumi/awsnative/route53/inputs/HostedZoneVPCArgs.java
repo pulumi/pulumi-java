@@ -5,6 +5,7 @@ package io.pulumi.awsnative.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vPCId", required=true)
       private final Output<String> vPCId;
 
-    public Output<String> getVPCId() {
+    public Output<String> vPCId() {
         return this.vPCId;
     }
 
@@ -35,7 +36,7 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vPCRegion", required=true)
       private final Output<String> vPCRegion;
 
-    public Output<String> getVPCRegion() {
+    public Output<String> vPCRegion() {
         return this.vPCRegion;
     }
 
@@ -47,8 +48,8 @@ public final class HostedZoneVPCArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostedZoneVPCArgs() {
-        this.vPCId = Output.empty();
-        this.vPCRegion = Output.empty();
+        this.vPCId = Codegen.empty();
+        this.vPCRegion = Codegen.empty();
     }
 
     public static Builder builder() {

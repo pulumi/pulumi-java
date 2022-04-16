@@ -17,6 +17,7 @@ import io.pulumi.awsnative.appflow.inputs.ConnectorProfileVeevaConnectorProfileP
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileZendeskConnectorProfilePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -32,85 +33,85 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="datadog")
       private final @Nullable Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog;
 
-    public Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> getDatadog() {
-        return this.datadog == null ? Output.empty() : this.datadog;
+    public Output<ConnectorProfileDatadogConnectorProfilePropertiesArgs> datadog() {
+        return this.datadog == null ? Codegen.empty() : this.datadog;
     }
 
     @Import(name="dynatrace")
       private final @Nullable Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace;
 
-    public Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> getDynatrace() {
-        return this.dynatrace == null ? Output.empty() : this.dynatrace;
+    public Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace() {
+        return this.dynatrace == null ? Codegen.empty() : this.dynatrace;
     }
 
     @Import(name="inforNexus")
       private final @Nullable Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus;
 
-    public Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> getInforNexus() {
-        return this.inforNexus == null ? Output.empty() : this.inforNexus;
+    public Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus() {
+        return this.inforNexus == null ? Codegen.empty() : this.inforNexus;
     }
 
     @Import(name="marketo")
       private final @Nullable Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo;
 
-    public Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> getMarketo() {
-        return this.marketo == null ? Output.empty() : this.marketo;
+    public Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo() {
+        return this.marketo == null ? Codegen.empty() : this.marketo;
     }
 
     @Import(name="redshift")
       private final @Nullable Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift;
 
-    public Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> getRedshift() {
-        return this.redshift == null ? Output.empty() : this.redshift;
+    public Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift() {
+        return this.redshift == null ? Codegen.empty() : this.redshift;
     }
 
     @Import(name="sAPOData")
       private final @Nullable Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData;
 
-    public Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> getSAPOData() {
-        return this.sAPOData == null ? Output.empty() : this.sAPOData;
+    public Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData() {
+        return this.sAPOData == null ? Codegen.empty() : this.sAPOData;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce;
 
-    public Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> getSalesforce() {
-        return this.salesforce == null ? Output.empty() : this.salesforce;
+    public Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce() {
+        return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="serviceNow")
       private final @Nullable Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow;
 
-    public Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> getServiceNow() {
-        return this.serviceNow == null ? Output.empty() : this.serviceNow;
+    public Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow() {
+        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     @Import(name="slack")
       private final @Nullable Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack;
 
-    public Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> getSlack() {
-        return this.slack == null ? Output.empty() : this.slack;
+    public Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack() {
+        return this.slack == null ? Codegen.empty() : this.slack;
     }
 
     @Import(name="snowflake")
       private final @Nullable Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake;
 
-    public Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> getSnowflake() {
-        return this.snowflake == null ? Output.empty() : this.snowflake;
+    public Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake() {
+        return this.snowflake == null ? Codegen.empty() : this.snowflake;
     }
 
     @Import(name="veeva")
       private final @Nullable Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva;
 
-    public Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> getVeeva() {
-        return this.veeva == null ? Output.empty() : this.veeva;
+    public Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva() {
+        return this.veeva == null ? Codegen.empty() : this.veeva;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk;
 
-    public Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> getZendesk() {
-        return this.zendesk == null ? Output.empty() : this.zendesk;
+    public Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk() {
+        return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 
     public ConnectorProfilePropertiesArgs(
@@ -141,18 +142,18 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
     }
 
     private ConnectorProfilePropertiesArgs() {
-        this.datadog = Output.empty();
-        this.dynatrace = Output.empty();
-        this.inforNexus = Output.empty();
-        this.marketo = Output.empty();
-        this.redshift = Output.empty();
-        this.sAPOData = Output.empty();
-        this.salesforce = Output.empty();
-        this.serviceNow = Output.empty();
-        this.slack = Output.empty();
-        this.snowflake = Output.empty();
-        this.veeva = Output.empty();
-        this.zendesk = Output.empty();
+        this.datadog = Codegen.empty();
+        this.dynatrace = Codegen.empty();
+        this.inforNexus = Codegen.empty();
+        this.marketo = Codegen.empty();
+        this.redshift = Codegen.empty();
+        this.sAPOData = Codegen.empty();
+        this.salesforce = Codegen.empty();
+        this.serviceNow = Codegen.empty();
+        this.slack = Codegen.empty();
+        this.snowflake = Codegen.empty();
+        this.veeva = Codegen.empty();
+        this.zendesk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -202,7 +203,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfilePropertiesArgs datadog) {
-            this.datadog = Output.ofNullable(datadog);
+            this.datadog = Codegen.ofNullable(datadog);
             return this;
         }
         public Builder dynatrace(@Nullable Output<ConnectorProfileDynatraceConnectorProfilePropertiesArgs> dynatrace) {
@@ -210,7 +211,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfilePropertiesArgs dynatrace) {
-            this.dynatrace = Output.ofNullable(dynatrace);
+            this.dynatrace = Codegen.ofNullable(dynatrace);
             return this;
         }
         public Builder inforNexus(@Nullable Output<ConnectorProfileInforNexusConnectorProfilePropertiesArgs> inforNexus) {
@@ -218,7 +219,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfilePropertiesArgs inforNexus) {
-            this.inforNexus = Output.ofNullable(inforNexus);
+            this.inforNexus = Codegen.ofNullable(inforNexus);
             return this;
         }
         public Builder marketo(@Nullable Output<ConnectorProfileMarketoConnectorProfilePropertiesArgs> marketo) {
@@ -226,7 +227,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfilePropertiesArgs marketo) {
-            this.marketo = Output.ofNullable(marketo);
+            this.marketo = Codegen.ofNullable(marketo);
             return this;
         }
         public Builder redshift(@Nullable Output<ConnectorProfileRedshiftConnectorProfilePropertiesArgs> redshift) {
@@ -234,7 +235,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfilePropertiesArgs redshift) {
-            this.redshift = Output.ofNullable(redshift);
+            this.redshift = Codegen.ofNullable(redshift);
             return this;
         }
         public Builder sAPOData(@Nullable Output<ConnectorProfileSAPODataConnectorProfilePropertiesArgs> sAPOData) {
@@ -242,7 +243,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfilePropertiesArgs sAPOData) {
-            this.sAPOData = Output.ofNullable(sAPOData);
+            this.sAPOData = Codegen.ofNullable(sAPOData);
             return this;
         }
         public Builder salesforce(@Nullable Output<ConnectorProfileSalesforceConnectorProfilePropertiesArgs> salesforce) {
@@ -250,7 +251,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfilePropertiesArgs salesforce) {
-            this.salesforce = Output.ofNullable(salesforce);
+            this.salesforce = Codegen.ofNullable(salesforce);
             return this;
         }
         public Builder serviceNow(@Nullable Output<ConnectorProfileServiceNowConnectorProfilePropertiesArgs> serviceNow) {
@@ -258,7 +259,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfilePropertiesArgs serviceNow) {
-            this.serviceNow = Output.ofNullable(serviceNow);
+            this.serviceNow = Codegen.ofNullable(serviceNow);
             return this;
         }
         public Builder slack(@Nullable Output<ConnectorProfileSlackConnectorProfilePropertiesArgs> slack) {
@@ -266,7 +267,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder slack(@Nullable ConnectorProfileSlackConnectorProfilePropertiesArgs slack) {
-            this.slack = Output.ofNullable(slack);
+            this.slack = Codegen.ofNullable(slack);
             return this;
         }
         public Builder snowflake(@Nullable Output<ConnectorProfileSnowflakeConnectorProfilePropertiesArgs> snowflake) {
@@ -274,7 +275,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfilePropertiesArgs snowflake) {
-            this.snowflake = Output.ofNullable(snowflake);
+            this.snowflake = Codegen.ofNullable(snowflake);
             return this;
         }
         public Builder veeva(@Nullable Output<ConnectorProfileVeevaConnectorProfilePropertiesArgs> veeva) {
@@ -282,7 +283,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfilePropertiesArgs veeva) {
-            this.veeva = Output.ofNullable(veeva);
+            this.veeva = Codegen.ofNullable(veeva);
             return this;
         }
         public Builder zendesk(@Nullable Output<ConnectorProfileZendeskConnectorProfilePropertiesArgs> zendesk) {
@@ -290,7 +291,7 @@ public final class ConnectorProfilePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfilePropertiesArgs zendesk) {
-            this.zendesk = Output.ofNullable(zendesk);
+            this.zendesk = Codegen.ofNullable(zendesk);
             return this;
         }        public ConnectorProfilePropertiesArgs build() {
             return new ConnectorProfilePropertiesArgs(datadog, dynatrace, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, slack, snowflake, veeva, zendesk);

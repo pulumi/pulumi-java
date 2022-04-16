@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
     @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
-    public Output<List<String>> getIdentities() {
-        return this.identities == null ? Output.empty() : this.identities;
+    public Output<List<String>> identities() {
+        return this.identities == null ? Codegen.empty() : this.identities;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
     @Import(name="identityType")
       private final @Nullable Output<String> identityType;
 
-    public Output<String> getIdentityType() {
-        return this.identityType == null ? Output.empty() : this.identityType;
+    public Output<String> identityType() {
+        return this.identityType == null ? Codegen.empty() : this.identityType;
     }
 
     public ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs(
@@ -50,8 +51,8 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
     }
 
     private ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs() {
-        this.identities = Output.empty();
-        this.identityType = Output.empty();
+        this.identities = Codegen.empty();
+        this.identityType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
             return this;
         }
         public Builder identities(@Nullable List<String> identities) {
-            this.identities = Output.ofNullable(identities);
+            this.identities = Codegen.ofNullable(identities);
             return this;
         }
         public Builder identities(String... identities) {
@@ -92,7 +93,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
             return this;
         }
         public Builder identityType(@Nullable String identityType) {
-            this.identityType = Output.ofNullable(identityType);
+            this.identityType = Codegen.ofNullable(identityType);
             return this;
         }        public ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs build() {
             return new ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs(identities, identityType);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -55,7 +56,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -66,8 +67,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="relayArmUri")
       private final @Nullable Output<String> relayArmUri;
 
-    public Output<String> getRelayArmUri() {
-        return this.relayArmUri == null ? Output.empty() : this.relayArmUri;
+    public Output<String> relayArmUri() {
+        return this.relayArmUri == null ? Codegen.empty() : this.relayArmUri;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="relayName")
       private final @Nullable Output<String> relayName;
 
-    public Output<String> getRelayName() {
-        return this.relayName == null ? Output.empty() : this.relayName;
+    public Output<String> relayName() {
+        return this.relayName == null ? Codegen.empty() : this.relayName;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,8 +111,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="sendKeyName")
       private final @Nullable Output<String> sendKeyName;
 
-    public Output<String> getSendKeyName() {
-        return this.sendKeyName == null ? Output.empty() : this.sendKeyName;
+    public Output<String> sendKeyName() {
+        return this.sendKeyName == null ? Codegen.empty() : this.sendKeyName;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="sendKeyValue")
       private final @Nullable Output<String> sendKeyValue;
 
-    public Output<String> getSendKeyValue() {
-        return this.sendKeyValue == null ? Output.empty() : this.sendKeyValue;
+    public Output<String> sendKeyValue() {
+        return this.sendKeyValue == null ? Codegen.empty() : this.sendKeyValue;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="serviceBusNamespace")
       private final @Nullable Output<String> serviceBusNamespace;
 
-    public Output<String> getServiceBusNamespace() {
-        return this.serviceBusNamespace == null ? Output.empty() : this.serviceBusNamespace;
+    public Output<String> serviceBusNamespace() {
+        return this.serviceBusNamespace == null ? Codegen.empty() : this.serviceBusNamespace;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="serviceBusSuffix")
       private final @Nullable Output<String> serviceBusSuffix;
 
-    public Output<String> getServiceBusSuffix() {
-        return this.serviceBusSuffix == null ? Output.empty() : this.serviceBusSuffix;
+    public Output<String> serviceBusSuffix() {
+        return this.serviceBusSuffix == null ? Codegen.empty() : this.serviceBusSuffix;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -189,19 +190,19 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
     }
 
     private WebAppHybridConnectionSlotArgs() {
-        this.hostname = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.namespaceName = Output.empty();
-        this.port = Output.empty();
-        this.relayArmUri = Output.empty();
-        this.relayName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sendKeyName = Output.empty();
-        this.sendKeyValue = Output.empty();
-        this.serviceBusNamespace = Output.empty();
-        this.serviceBusSuffix = Output.empty();
-        this.slot = Output.empty();
+        this.hostname = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.port = Codegen.empty();
+        this.relayArmUri = Codegen.empty();
+        this.relayName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sendKeyName = Codegen.empty();
+        this.sendKeyValue = Codegen.empty();
+        this.serviceBusNamespace = Codegen.empty();
+        this.serviceBusSuffix = Codegen.empty();
+        this.slot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -253,7 +254,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -261,7 +262,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -285,7 +286,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder relayArmUri(@Nullable Output<String> relayArmUri) {
@@ -293,7 +294,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder relayArmUri(@Nullable String relayArmUri) {
-            this.relayArmUri = Output.ofNullable(relayArmUri);
+            this.relayArmUri = Codegen.ofNullable(relayArmUri);
             return this;
         }
         public Builder relayName(@Nullable Output<String> relayName) {
@@ -301,7 +302,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder relayName(@Nullable String relayName) {
-            this.relayName = Output.ofNullable(relayName);
+            this.relayName = Codegen.ofNullable(relayName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -317,7 +318,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sendKeyName(@Nullable String sendKeyName) {
-            this.sendKeyName = Output.ofNullable(sendKeyName);
+            this.sendKeyName = Codegen.ofNullable(sendKeyName);
             return this;
         }
         public Builder sendKeyValue(@Nullable Output<String> sendKeyValue) {
@@ -325,7 +326,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sendKeyValue(@Nullable String sendKeyValue) {
-            this.sendKeyValue = Output.ofNullable(sendKeyValue);
+            this.sendKeyValue = Codegen.ofNullable(sendKeyValue);
             return this;
         }
         public Builder serviceBusNamespace(@Nullable Output<String> serviceBusNamespace) {
@@ -333,7 +334,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
-            this.serviceBusNamespace = Output.ofNullable(serviceBusNamespace);
+            this.serviceBusNamespace = Codegen.ofNullable(serviceBusNamespace);
             return this;
         }
         public Builder serviceBusSuffix(@Nullable Output<String> serviceBusSuffix) {
@@ -341,7 +342,7 @@ public final class WebAppHybridConnectionSlotArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder serviceBusSuffix(@Nullable String serviceBusSuffix) {
-            this.serviceBusSuffix = Output.ofNullable(serviceBusSuffix);
+            this.serviceBusSuffix = Codegen.ofNullable(serviceBusSuffix);
             return this;
         }
         public Builder slot(Output<String> slot) {

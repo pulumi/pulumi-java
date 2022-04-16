@@ -7,6 +7,7 @@ import io.pulumi.awsnative.apigateway.inputs.DeploymentCanarySettingsArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentStageDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deploymentCanarySettings")
       private final @Nullable Output<DeploymentCanarySettingsArgs> deploymentCanarySettings;
 
-    public Output<DeploymentCanarySettingsArgs> getDeploymentCanarySettings() {
-        return this.deploymentCanarySettings == null ? Output.empty() : this.deploymentCanarySettings;
+    public Output<DeploymentCanarySettingsArgs> deploymentCanarySettings() {
+        return this.deploymentCanarySettings == null ? Codegen.empty() : this.deploymentCanarySettings;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -56,8 +57,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageDescription")
       private final @Nullable Output<DeploymentStageDescriptionArgs> stageDescription;
 
-    public Output<DeploymentStageDescriptionArgs> getStageDescription() {
-        return this.stageDescription == null ? Output.empty() : this.stageDescription;
+    public Output<DeploymentStageDescriptionArgs> stageDescription() {
+        return this.stageDescription == null ? Codegen.empty() : this.stageDescription;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
-        return this.stageName == null ? Output.empty() : this.stageName;
+    public Output<String> stageName() {
+        return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
     public DeploymentArgs(
@@ -85,11 +86,11 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentArgs() {
-        this.deploymentCanarySettings = Output.empty();
-        this.description = Output.empty();
-        this.restApiId = Output.empty();
-        this.stageDescription = Output.empty();
-        this.stageName = Output.empty();
+        this.deploymentCanarySettings = Codegen.empty();
+        this.description = Codegen.empty();
+        this.restApiId = Codegen.empty();
+        this.stageDescription = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deploymentCanarySettings(@Nullable DeploymentCanarySettingsArgs deploymentCanarySettings) {
-            this.deploymentCanarySettings = Output.ofNullable(deploymentCanarySettings);
+            this.deploymentCanarySettings = Codegen.ofNullable(deploymentCanarySettings);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -133,7 +134,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder restApiId(Output<String> restApiId) {
@@ -149,7 +150,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageDescription(@Nullable DeploymentStageDescriptionArgs stageDescription) {
-            this.stageDescription = Output.ofNullable(stageDescription);
+            this.stageDescription = Codegen.ofNullable(stageDescription);
             return this;
         }
         public Builder stageName(@Nullable Output<String> stageName) {
@@ -157,7 +158,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Output.ofNullable(stageName);
+            this.stageName = Codegen.ofNullable(stageName);
             return this;
         }        public DeploymentArgs build() {
             return new DeploymentArgs(deploymentCanarySettings, description, restApiId, stageDescription, stageName);

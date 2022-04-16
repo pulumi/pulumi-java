@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     @Import(name="annotationSpecSet", required=true)
       private final Output<String> annotationSpecSet;
 
-    public Output<String> getAnnotationSpecSet() {
+    public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
     }
 
@@ -36,8 +37,8 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     @Import(name="instructionMessage")
       private final @Nullable Output<String> instructionMessage;
 
-    public Output<String> getInstructionMessage() {
-        return this.instructionMessage == null ? Output.empty() : this.instructionMessage;
+    public Output<String> instructionMessage() {
+        return this.instructionMessage == null ? Codegen.empty() : this.instructionMessage;
     }
 
     public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
     }
 
     private GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs() {
-        this.annotationSpecSet = Output.empty();
-        this.instructionMessage = Output.empty();
+        this.annotationSpecSet = Codegen.empty();
+        this.instructionMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
             return this;
         }
         public Builder instructionMessage(@Nullable String instructionMessage) {
-            this.instructionMessage = Output.ofNullable(instructionMessage);
+            this.instructionMessage = Codegen.ofNullable(instructionMessage);
             return this;
         }        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(annotationSpecSet, instructionMessage);

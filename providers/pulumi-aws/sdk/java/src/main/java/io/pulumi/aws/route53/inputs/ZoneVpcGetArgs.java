@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ZoneVpcGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -32,8 +33,8 @@ public final class ZoneVpcGetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcRegion")
       private final @Nullable Output<String> vpcRegion;
 
-    public Output<String> getVpcRegion() {
-        return this.vpcRegion == null ? Output.empty() : this.vpcRegion;
+    public Output<String> vpcRegion() {
+        return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
     }
 
     public ZoneVpcGetArgs(
@@ -44,8 +45,8 @@ public final class ZoneVpcGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ZoneVpcGetArgs() {
-        this.vpcId = Output.empty();
-        this.vpcRegion = Output.empty();
+        this.vpcId = Codegen.empty();
+        this.vpcRegion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ZoneVpcGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Output.ofNullable(vpcRegion);
+            this.vpcRegion = Codegen.ofNullable(vpcRegion);
             return this;
         }        public ZoneVpcGetArgs build() {
             return new ZoneVpcGetArgs(vpcId, vpcRegion);

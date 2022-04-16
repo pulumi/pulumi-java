@@ -5,6 +5,7 @@ package io.pulumi.aws.amp;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AlertManagerDefinitionArgs extends io.pulumi.resources.Resour
     @Import(name="definition", required=true)
       private final Output<String> definition;
 
-    public Output<String> getDefinition() {
+    public Output<String> definition() {
         return this.definition;
     }
 
@@ -31,7 +32,7 @@ public final class AlertManagerDefinitionArgs extends io.pulumi.resources.Resour
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -43,8 +44,8 @@ public final class AlertManagerDefinitionArgs extends io.pulumi.resources.Resour
     }
 
     private AlertManagerDefinitionArgs() {
-        this.definition = Output.empty();
-        this.workspaceId = Output.empty();
+        this.definition = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {

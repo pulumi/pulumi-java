@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -31,8 +32,8 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="blobPathBeginsWith")
       private final @Nullable Output<String> blobPathBeginsWith;
 
-    public Output<String> getBlobPathBeginsWith() {
-        return this.blobPathBeginsWith == null ? Output.empty() : this.blobPathBeginsWith;
+    public Output<String> blobPathBeginsWith() {
+        return this.blobPathBeginsWith == null ? Codegen.empty() : this.blobPathBeginsWith;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="blobPathEndsWith")
       private final @Nullable Output<String> blobPathEndsWith;
 
-    public Output<String> getBlobPathEndsWith() {
-        return this.blobPathEndsWith == null ? Output.empty() : this.blobPathEndsWith;
+    public Output<String> blobPathEndsWith() {
+        return this.blobPathEndsWith == null ? Codegen.empty() : this.blobPathEndsWith;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="events", required=true)
       private final Output<List<Either<String,BlobEventTypes>>> events;
 
-    public Output<List<Either<String,BlobEventTypes>>> getEvents() {
+    public Output<List<Either<String,BlobEventTypes>>> events() {
         return this.events;
     }
 
@@ -86,8 +87,8 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ignoreEmptyBlobs")
       private final @Nullable Output<Boolean> ignoreEmptyBlobs;
 
-    public Output<Boolean> getIgnoreEmptyBlobs() {
-        return this.ignoreEmptyBlobs == null ? Output.empty() : this.ignoreEmptyBlobs;
+    public Output<Boolean> ignoreEmptyBlobs() {
+        return this.ignoreEmptyBlobs == null ? Codegen.empty() : this.ignoreEmptyBlobs;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
-        return this.pipelines == null ? Output.empty() : this.pipelines;
+    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
+        return this.pipelines == null ? Codegen.empty() : this.pipelines;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -120,7 +121,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -146,15 +147,15 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BlobEventsTriggerArgs() {
-        this.annotations = Output.empty();
-        this.blobPathBeginsWith = Output.empty();
-        this.blobPathEndsWith = Output.empty();
-        this.description = Output.empty();
-        this.events = Output.empty();
-        this.ignoreEmptyBlobs = Output.empty();
-        this.pipelines = Output.empty();
-        this.scope = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.blobPathBeginsWith = Codegen.empty();
+        this.blobPathEndsWith = Codegen.empty();
+        this.description = Codegen.empty();
+        this.events = Codegen.empty();
+        this.ignoreEmptyBlobs = Codegen.empty();
+        this.pipelines = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -209,7 +210,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder blobPathBeginsWith(@Nullable String blobPathBeginsWith) {
-            this.blobPathBeginsWith = Output.ofNullable(blobPathBeginsWith);
+            this.blobPathBeginsWith = Codegen.ofNullable(blobPathBeginsWith);
             return this;
         }
         public Builder blobPathEndsWith(@Nullable Output<String> blobPathEndsWith) {
@@ -217,7 +218,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder blobPathEndsWith(@Nullable String blobPathEndsWith) {
-            this.blobPathEndsWith = Output.ofNullable(blobPathEndsWith);
+            this.blobPathEndsWith = Codegen.ofNullable(blobPathEndsWith);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -225,7 +226,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder events(Output<List<Either<String,BlobEventTypes>>> events) {
@@ -244,7 +245,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ignoreEmptyBlobs(@Nullable Boolean ignoreEmptyBlobs) {
-            this.ignoreEmptyBlobs = Output.ofNullable(ignoreEmptyBlobs);
+            this.ignoreEmptyBlobs = Codegen.ofNullable(ignoreEmptyBlobs);
             return this;
         }
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
@@ -252,7 +253,7 @@ public final class BlobEventsTriggerArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Output.ofNullable(pipelines);
+            this.pipelines = Codegen.ofNullable(pipelines);
             return this;
         }
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {

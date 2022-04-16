@@ -32,14 +32,14 @@ public final class DropInfoResponse {
      * Cause that the packet is dropped.
      * 
     */
-    public String getCause() {
+    public String cause() {
         return this.cause;
     }
     /**
      * URI of the resource that caused the drop.
      * 
     */
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
 

@@ -10,6 +10,7 @@ import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingFormatArgs;
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingStructureArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +33,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="availability", required=true)
       private final Output<ConnectorMappingAvailabilityArgs> availability;
 
-    public Output<ConnectorMappingAvailabilityArgs> getAvailability() {
+    public Output<ConnectorMappingAvailabilityArgs> availability() {
         return this.availability;
     }
 
@@ -43,7 +44,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="completeOperation", required=true)
       private final Output<ConnectorMappingCompleteOperationArgs> completeOperation;
 
-    public Output<ConnectorMappingCompleteOperationArgs> getCompleteOperation() {
+    public Output<ConnectorMappingCompleteOperationArgs> completeOperation() {
         return this.completeOperation;
     }
 
@@ -54,7 +55,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="errorManagement", required=true)
       private final Output<ConnectorMappingErrorManagementArgs> errorManagement;
 
-    public Output<ConnectorMappingErrorManagementArgs> getErrorManagement() {
+    public Output<ConnectorMappingErrorManagementArgs> errorManagement() {
         return this.errorManagement;
     }
 
@@ -65,8 +66,8 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="fileFilter")
       private final @Nullable Output<String> fileFilter;
 
-    public Output<String> getFileFilter() {
-        return this.fileFilter == null ? Output.empty() : this.fileFilter;
+    public Output<String> fileFilter() {
+        return this.fileFilter == null ? Codegen.empty() : this.fileFilter;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
 
-    public Output<String> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+    public Output<String> folderPath() {
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="format", required=true)
       private final Output<ConnectorMappingFormatArgs> format;
 
-    public Output<ConnectorMappingFormatArgs> getFormat() {
+    public Output<ConnectorMappingFormatArgs> format() {
         return this.format;
     }
 
@@ -98,8 +99,8 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="hasHeader")
       private final @Nullable Output<Boolean> hasHeader;
 
-    public Output<Boolean> getHasHeader() {
-        return this.hasHeader == null ? Output.empty() : this.hasHeader;
+    public Output<Boolean> hasHeader() {
+        return this.hasHeader == null ? Codegen.empty() : this.hasHeader;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="structure", required=true)
       private final Output<List<ConnectorMappingStructureArgs>> structure;
 
-    public Output<List<ConnectorMappingStructureArgs>> getStructure() {
+    public Output<List<ConnectorMappingStructureArgs>> structure() {
         return this.structure;
     }
 
@@ -133,14 +134,14 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private ConnectorMappingPropertiesArgs() {
-        this.availability = Output.empty();
-        this.completeOperation = Output.empty();
-        this.errorManagement = Output.empty();
-        this.fileFilter = Output.empty();
-        this.folderPath = Output.empty();
-        this.format = Output.empty();
-        this.hasHeader = Output.empty();
-        this.structure = Output.empty();
+        this.availability = Codegen.empty();
+        this.completeOperation = Codegen.empty();
+        this.errorManagement = Codegen.empty();
+        this.fileFilter = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.format = Codegen.empty();
+        this.hasHeader = Codegen.empty();
+        this.structure = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder fileFilter(@Nullable String fileFilter) {
-            this.fileFilter = Output.ofNullable(fileFilter);
+            this.fileFilter = Codegen.ofNullable(fileFilter);
             return this;
         }
         public Builder folderPath(@Nullable Output<String> folderPath) {
@@ -214,7 +215,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder folderPath(@Nullable String folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder format(Output<ConnectorMappingFormatArgs> format) {
@@ -230,7 +231,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder hasHeader(@Nullable Boolean hasHeader) {
-            this.hasHeader = Output.ofNullable(hasHeader);
+            this.hasHeader = Codegen.ofNullable(hasHeader);
             return this;
         }
         public Builder structure(Output<List<ConnectorMappingStructureArgs>> structure) {

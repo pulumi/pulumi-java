@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
-    public Output<Integer> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<Integer> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -48,8 +49,8 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public GoogleCloudRunOpV2VersionToPathArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
     }
 
     private GoogleCloudRunOpV2VersionToPathArgs() {
-        this.mode = Output.empty();
-        this.path = Output.empty();
-        this.version = Output.empty();
+        this.mode = Codegen.empty();
+        this.path = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
             return this;
         }
         public Builder mode(@Nullable Integer mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -112,7 +113,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends io.pulumi.resourc
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public GoogleCloudRunOpV2VersionToPathArgs build() {
             return new GoogleCloudRunOpV2VersionToPathArgs(mode, path, version);

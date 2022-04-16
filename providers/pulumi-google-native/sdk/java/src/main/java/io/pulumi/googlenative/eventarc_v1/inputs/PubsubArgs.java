@@ -5,6 +5,7 @@ package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class PubsubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+    public Output<String> topic() {
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public PubsubArgs(@Nullable Output<String> topic) {
@@ -34,7 +35,7 @@ public final class PubsubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PubsubArgs() {
-        this.topic = Output.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PubsubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public PubsubArgs build() {
             return new PubsubArgs(topic);

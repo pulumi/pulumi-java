@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionConfigurat
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="suiteDefinitionConfiguration", required=true)
       private final Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
 
-    public Output<SuiteDefinitionConfigurationPropertiesArgs> getSuiteDefinitionConfiguration() {
+    public Output<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration() {
         return this.suiteDefinitionConfiguration;
     }
 
@@ -30,8 +31,8 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<List<SuiteDefinitionTagArgs>> tags;
 
-    public Output<List<SuiteDefinitionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<SuiteDefinitionTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SuiteDefinitionArgs(
@@ -42,8 +43,8 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SuiteDefinitionArgs() {
-        this.suiteDefinitionConfiguration = Output.empty();
-        this.tags = Output.empty();
+        this.suiteDefinitionConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable List<SuiteDefinitionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(SuiteDefinitionTagArgs... tags) {

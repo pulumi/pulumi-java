@@ -15,7 +15,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceId", required=true)
       private final String deviceId;
 
-    public String getDeviceId() {
+    public String deviceId() {
         return this.deviceId;
     }
 

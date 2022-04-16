@@ -19,7 +19,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="parentResource", required=true)
       private final String parentResource;
 
-    public String getParentResource() {
+    public String parentResource() {
         return this.parentResource;
     }
 
@@ -30,7 +30,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="parentResourceType", required=true)
       private final String parentResourceType;
 
-    public String getParentResourceType() {
+    public String parentResourceType() {
         return this.parentResourceType;
     }
 
@@ -41,7 +41,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,7 +52,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceProviderNamespace", required=true)
       private final String resourceProviderNamespace;
 
-    public String getResourceProviderNamespace() {
+    public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
 
@@ -63,7 +63,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="serialPort", required=true)
       private final String serialPort;
 
-    public String getSerialPort() {
+    public String serialPort() {
         return this.serialPort;
     }
 

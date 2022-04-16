@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gameservices_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gameservices_v1beta.ConfigArgs;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.FleetConfigResponse;
@@ -32,7 +33,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -46,7 +47,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The description of the game server config.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return FleetConfig contains a list of Agones fleet specs. Only one FleetConfig is allowed.
      * 
      */
-    public Output<List<FleetConfigResponse>> getFleetConfigs() {
+    public Output<List<FleetConfigResponse>> fleetConfigs() {
         return this.fleetConfigs;
     }
     /**
@@ -74,7 +75,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The labels associated with this game server config. Each label is a key-value pair.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -88,7 +89,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The resource name of the game server config, in the following form: `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/configs/{config}`. For example, `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The autoscaling settings.
      * 
      */
-    public Output<List<ScalingConfigResponse>> getScalingConfigs() {
+    public Output<List<ScalingConfigResponse>> scalingConfigs() {
         return this.scalingConfigs;
     }
     /**
@@ -116,7 +117,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @return The last-modified time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -142,7 +143,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Config(String name, ConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gameservices/v1beta:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gameservices/v1beta:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Config(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

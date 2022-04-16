@@ -19,7 +19,7 @@ public final class GetBlobInventoryPolicyArgs extends io.pulumi.resources.Invoke
     @Import(name="accountName", required=true)
       private final String accountName;
 
-    public String getAccountName() {
+    public String accountName() {
         return this.accountName;
     }
 
@@ -30,7 +30,7 @@ public final class GetBlobInventoryPolicyArgs extends io.pulumi.resources.Invoke
     @Import(name="blobInventoryPolicyName", required=true)
       private final String blobInventoryPolicyName;
 
-    public String getBlobInventoryPolicyName() {
+    public String blobInventoryPolicyName() {
         return this.blobInventoryPolicyName;
     }
 
@@ -41,7 +41,7 @@ public final class GetBlobInventoryPolicyArgs extends io.pulumi.resources.Invoke
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
     @Import(name="certificates", required=true)
       private final Output<List<String>> certificates;
 
-    public Output<List<String>> getCertificates() {
+    public Output<List<String>> certificates() {
         return this.certificates;
     }
 
@@ -37,7 +38,7 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -49,8 +50,8 @@ public final class PemCertificateListArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PemCertificateListArgs() {
-        this.certificates = Output.empty();
-        this.type = Output.empty();
+        this.certificates = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

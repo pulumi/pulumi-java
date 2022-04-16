@@ -5,6 +5,7 @@ package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.spanner_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,14 +25,14 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="bindings")
       private final @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> getBindings() {
-        return this.bindings == null ? Output.empty() : this.bindings;
+    public Output<List<BindingArgs>> bindings() {
+        return this.bindings == null ? Codegen.empty() : this.bindings;
     }
 
     @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
@@ -42,22 +43,22 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public InstanceDatabaseIamPolicyArgs(
@@ -87,12 +88,12 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
     }
 
     private InstanceDatabaseIamPolicyArgs() {
-        this.bindings = Output.empty();
-        this.databaseId = Output.empty();
-        this.etag = Output.empty();
-        this.instanceId = Output.empty();
-        this.project = Output.empty();
-        this.version = Output.empty();
+        this.bindings = Codegen.empty();
+        this.databaseId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Output.ofNullable(bindings);
+            this.bindings = Codegen.ofNullable(bindings);
             return this;
         }
         public Builder bindings(BindingArgs... bindings) {
@@ -149,7 +150,7 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {
@@ -165,7 +166,7 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -173,7 +174,7 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public InstanceDatabaseIamPolicyArgs build() {
             return new InstanceDatabaseIamPolicyArgs(bindings, databaseId, etag, instanceId, project, version);

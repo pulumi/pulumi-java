@@ -25,7 +25,7 @@ public final class ManagedClusterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="clusterName", required=true)
       private final String clusterName;
 
-    public String getClusterName() {
+    public String clusterName() {
         return this.clusterName;
     }
 
@@ -36,7 +36,7 @@ public final class ManagedClusterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="config", required=true)
       private final ClusterConfigResponse config;
 
-    public ClusterConfigResponse getConfig() {
+    public ClusterConfigResponse config() {
         return this.config;
     }
 
@@ -47,7 +47,7 @@ public final class ManagedClusterResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
-    public Map<String,String> getLabels() {
+    public Map<String,String> labels() {
         return this.labels;
     }
 

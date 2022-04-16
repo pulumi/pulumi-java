@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
 
-    public Output<List<String>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<List<String>> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableRollback")
       private final @Nullable Output<Boolean> disableRollback;
 
-    public Output<Boolean> getDisableRollback() {
-        return this.disableRollback == null ? Output.empty() : this.disableRollback;
+    public Output<Boolean> disableRollback() {
+        return this.disableRollback == null ? Codegen.empty() : this.disableRollback;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
-    public Output<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
+    public Output<String> iamRoleArn() {
+        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
-    public Output<List<String>> getNotificationArns() {
-        return this.notificationArns == null ? Output.empty() : this.notificationArns;
+    public Output<List<String>> notificationArns() {
+        return this.notificationArns == null ? Codegen.empty() : this.notificationArns;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="onFailure")
       private final @Nullable Output<String> onFailure;
 
-    public Output<String> getOnFailure() {
-        return this.onFailure == null ? Output.empty() : this.onFailure;
+    public Output<String> onFailure() {
+        return this.onFailure == null ? Codegen.empty() : this.onFailure;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputs")
       private final @Nullable Output<Map<String,String>> outputs;
 
-    public Output<Map<String,String>> getOutputs() {
-        return this.outputs == null ? Output.empty() : this.outputs;
+    public Output<Map<String,String>> outputs() {
+        return this.outputs == null ? Codegen.empty() : this.outputs;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyBody")
       private final @Nullable Output<String> policyBody;
 
-    public Output<String> getPolicyBody() {
-        return this.policyBody == null ? Output.empty() : this.policyBody;
+    public Output<String> policyBody() {
+        return this.policyBody == null ? Codegen.empty() : this.policyBody;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyUrl")
       private final @Nullable Output<String> policyUrl;
 
-    public Output<String> getPolicyUrl() {
-        return this.policyUrl == null ? Output.empty() : this.policyUrl;
+    public Output<String> policyUrl() {
+        return this.policyUrl == null ? Codegen.empty() : this.policyUrl;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
-    public Output<String> getTemplateBody() {
-        return this.templateBody == null ? Output.empty() : this.templateBody;
+    public Output<String> templateBody() {
+        return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
-    public Output<String> getTemplateUrl() {
-        return this.templateUrl == null ? Output.empty() : this.templateUrl;
+    public Output<String> templateUrl() {
+        return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeoutInMinutes")
       private final @Nullable Output<Integer> timeoutInMinutes;
 
-    public Output<Integer> getTimeoutInMinutes() {
-        return this.timeoutInMinutes == null ? Output.empty() : this.timeoutInMinutes;
+    public Output<Integer> timeoutInMinutes() {
+        return this.timeoutInMinutes == null ? Codegen.empty() : this.timeoutInMinutes;
     }
 
     public StackState(
@@ -222,21 +223,21 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackState() {
-        this.capabilities = Output.empty();
-        this.disableRollback = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.name = Output.empty();
-        this.notificationArns = Output.empty();
-        this.onFailure = Output.empty();
-        this.outputs = Output.empty();
-        this.parameters = Output.empty();
-        this.policyBody = Output.empty();
-        this.policyUrl = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.templateBody = Output.empty();
-        this.templateUrl = Output.empty();
-        this.timeoutInMinutes = Output.empty();
+        this.capabilities = Codegen.empty();
+        this.disableRollback = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationArns = Codegen.empty();
+        this.onFailure = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.policyBody = Codegen.empty();
+        this.policyUrl = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.templateBody = Codegen.empty();
+        this.templateUrl = Codegen.empty();
+        this.timeoutInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -292,7 +293,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(String... capabilities) {
@@ -303,7 +304,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableRollback(@Nullable Boolean disableRollback) {
-            this.disableRollback = Output.ofNullable(disableRollback);
+            this.disableRollback = Codegen.ofNullable(disableRollback);
             return this;
         }
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
@@ -311,7 +312,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Output.ofNullable(iamRoleArn);
+            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -319,7 +320,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationArns(@Nullable Output<List<String>> notificationArns) {
@@ -327,7 +328,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationArns(@Nullable List<String> notificationArns) {
-            this.notificationArns = Output.ofNullable(notificationArns);
+            this.notificationArns = Codegen.ofNullable(notificationArns);
             return this;
         }
         public Builder notificationArns(String... notificationArns) {
@@ -338,7 +339,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onFailure(@Nullable String onFailure) {
-            this.onFailure = Output.ofNullable(onFailure);
+            this.onFailure = Codegen.ofNullable(onFailure);
             return this;
         }
         public Builder outputs(@Nullable Output<Map<String,String>> outputs) {
@@ -346,7 +347,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputs(@Nullable Map<String,String> outputs) {
-            this.outputs = Output.ofNullable(outputs);
+            this.outputs = Codegen.ofNullable(outputs);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -354,7 +355,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder policyBody(@Nullable Output<String> policyBody) {
@@ -362,7 +363,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyBody(@Nullable String policyBody) {
-            this.policyBody = Output.ofNullable(policyBody);
+            this.policyBody = Codegen.ofNullable(policyBody);
             return this;
         }
         public Builder policyUrl(@Nullable Output<String> policyUrl) {
@@ -370,7 +371,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyUrl(@Nullable String policyUrl) {
-            this.policyUrl = Output.ofNullable(policyUrl);
+            this.policyUrl = Codegen.ofNullable(policyUrl);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -378,7 +379,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -386,7 +387,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder templateBody(@Nullable Output<String> templateBody) {
@@ -394,7 +395,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Output.ofNullable(templateBody);
+            this.templateBody = Codegen.ofNullable(templateBody);
             return this;
         }
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
@@ -402,7 +403,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Output.ofNullable(templateUrl);
+            this.templateUrl = Codegen.ofNullable(templateUrl);
             return this;
         }
         public Builder timeoutInMinutes(@Nullable Output<Integer> timeoutInMinutes) {
@@ -410,7 +411,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeoutInMinutes(@Nullable Integer timeoutInMinutes) {
-            this.timeoutInMinutes = Output.ofNullable(timeoutInMinutes);
+            this.timeoutInMinutes = Codegen.ofNullable(timeoutInMinutes);
             return this;
         }        public StackState build() {
             return new StackState(capabilities, disableRollback, iamRoleArn, name, notificationArns, onFailure, outputs, parameters, policyBody, policyUrl, tags, tagsAll, templateBody, templateUrl, timeoutInMinutes);

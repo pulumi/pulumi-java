@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="artifactStorage")
       private final @Nullable Output<String> artifactStorage;
 
-    public Output<String> getArtifactStorage() {
-        return this.artifactStorage == null ? Output.empty() : this.artifactStorage;
+    public Output<String> artifactStorage() {
+        return this.artifactStorage == null ? Codegen.empty() : this.artifactStorage;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     public DefaultPoolArgs(
@@ -48,8 +49,8 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DefaultPoolArgs() {
-        this.artifactStorage = Output.empty();
-        this.serviceAccount = Output.empty();
+        this.artifactStorage = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifactStorage(@Nullable String artifactStorage) {
-            this.artifactStorage = Output.ofNullable(artifactStorage);
+            this.artifactStorage = Codegen.ofNullable(artifactStorage);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -87,7 +88,7 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }        public DefaultPoolArgs build() {
             return new DefaultPoolArgs(artifactStorage, serviceAccount);

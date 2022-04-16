@@ -52,34 +52,34 @@ public final class GetDnsNamespaceResult {
      * The Amazon Resource Name (ARN) of the namespace.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
      * A description of the namespace.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
      * 
     */
-    public String getHostedZone() {
+    public String hostedZone() {
         return this.hostedZone;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

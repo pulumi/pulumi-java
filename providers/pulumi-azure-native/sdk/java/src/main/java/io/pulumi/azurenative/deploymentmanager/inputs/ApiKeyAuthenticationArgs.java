@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.enums.RestAuthLocation;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
     @Import(name="in", required=true)
       private final Output<RestAuthLocation> in;
 
-    public Output<RestAuthLocation> getIn() {
+    public Output<RestAuthLocation> in() {
         return this.in;
     }
 
@@ -36,7 +37,7 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,7 +49,7 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -59,7 +60,7 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -75,10 +76,10 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
     }
 
     private ApiKeyAuthenticationArgs() {
-        this.in = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.in = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -8,6 +8,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefu
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
     @Import(name="rulesSourceList")
       private final @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList;
 
-    public Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> getRulesSourceList() {
-        return this.rulesSourceList == null ? Output.empty() : this.rulesSourceList;
+    public Output<RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs> rulesSourceList() {
+        return this.rulesSourceList == null ? Codegen.empty() : this.rulesSourceList;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
     @Import(name="rulesString")
       private final @Nullable Output<String> rulesString;
 
-    public Output<String> getRulesString() {
-        return this.rulesString == null ? Output.empty() : this.rulesString;
+    public Output<String> rulesString() {
+        return this.rulesString == null ? Codegen.empty() : this.rulesString;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
     @Import(name="statefulRules")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules;
 
-    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> getStatefulRules() {
-        return this.statefulRules == null ? Output.empty() : this.statefulRules;
+    public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules() {
+        return this.statefulRules == null ? Codegen.empty() : this.statefulRules;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
     @Import(name="statelessRulesAndCustomActions")
       private final @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions;
 
-    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> getStatelessRulesAndCustomActions() {
-        return this.statelessRulesAndCustomActions == null ? Output.empty() : this.statelessRulesAndCustomActions;
+    public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs> statelessRulesAndCustomActions() {
+        return this.statelessRulesAndCustomActions == null ? Codegen.empty() : this.statelessRulesAndCustomActions;
     }
 
     public RuleGroupRuleGroupRulesSourceGetArgs(
@@ -74,10 +75,10 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
     }
 
     private RuleGroupRuleGroupRulesSourceGetArgs() {
-        this.rulesSourceList = Output.empty();
-        this.rulesString = Output.empty();
-        this.statefulRules = Output.empty();
-        this.statelessRulesAndCustomActions = Output.empty();
+        this.rulesSourceList = Codegen.empty();
+        this.rulesString = Codegen.empty();
+        this.statefulRules = Codegen.empty();
+        this.statelessRulesAndCustomActions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder rulesSourceList(@Nullable RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs rulesSourceList) {
-            this.rulesSourceList = Output.ofNullable(rulesSourceList);
+            this.rulesSourceList = Codegen.ofNullable(rulesSourceList);
             return this;
         }
         public Builder rulesString(@Nullable Output<String> rulesString) {
@@ -119,7 +120,7 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder rulesString(@Nullable String rulesString) {
-            this.rulesString = Output.ofNullable(rulesString);
+            this.rulesString = Codegen.ofNullable(rulesString);
             return this;
         }
         public Builder statefulRules(@Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs>> statefulRules) {
@@ -127,7 +128,7 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder statefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs> statefulRules) {
-            this.statefulRules = Output.ofNullable(statefulRules);
+            this.statefulRules = Codegen.ofNullable(statefulRules);
             return this;
         }
         public Builder statefulRules(RuleGroupRuleGroupRulesSourceStatefulRuleGetArgs... statefulRules) {
@@ -138,7 +139,7 @@ public final class RuleGroupRuleGroupRulesSourceGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder statelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs statelessRulesAndCustomActions) {
-            this.statelessRulesAndCustomActions = Output.ofNullable(statelessRulesAndCustomActions);
+            this.statelessRulesAndCustomActions = Codegen.ofNullable(statelessRulesAndCustomActions);
             return this;
         }        public RuleGroupRuleGroupRulesSourceGetArgs build() {
             return new RuleGroupRuleGroupRulesSourceGetArgs(rulesSourceList, rulesString, statefulRules, statelessRulesAndCustomActions);

@@ -65,42 +65,42 @@ public final class GetTransitGatewayMulticastDomainResult {
      * The time the transit gateway multicast domain was created.
      * 
     */
-    public Optional<String> getCreationTime() {
+    public Optional<String> creationTime() {
         return Optional.ofNullable(this.creationTime);
     }
     /**
      * The options for the transit gateway multicast domain.
      * 
     */
-    public Optional<OptionsProperties> getOptions() {
+    public Optional<OptionsProperties> options() {
         return Optional.ofNullable(this.options);
     }
     /**
      * The state of the transit gateway multicast domain.
      * 
     */
-    public Optional<String> getState() {
+    public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
     /**
      * The tags for the transit gateway multicast domain.
      * 
     */
-    public List<TransitGatewayMulticastDomainTag> getTags() {
+    public List<TransitGatewayMulticastDomainTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
     /**
      * The Amazon Resource Name (ARN) of the transit gateway multicast domain.
      * 
     */
-    public Optional<String> getTransitGatewayMulticastDomainArn() {
+    public Optional<String> transitGatewayMulticastDomainArn() {
         return Optional.ofNullable(this.transitGatewayMulticastDomainArn);
     }
     /**
      * The ID of the transit gateway multicast domain.
      * 
     */
-    public Optional<String> getTransitGatewayMulticastDomainId() {
+    public Optional<String> transitGatewayMulticastDomainId() {
         return Optional.ofNullable(this.transitGatewayMulticastDomainId);
     }
 

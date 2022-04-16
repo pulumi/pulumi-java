@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,36 +19,36 @@ public final class ContainerVolumeArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
-    public Output<String> getContainerPath() {
-        return this.containerPath == null ? Output.empty() : this.containerPath;
+    public Output<String> containerPath() {
+        return this.containerPath == null ? Codegen.empty() : this.containerPath;
     }
 
     @Import(name="fromContainer")
       private final @Nullable Output<String> fromContainer;
 
-    public Output<String> getFromContainer() {
-        return this.fromContainer == null ? Output.empty() : this.fromContainer;
+    public Output<String> fromContainer() {
+        return this.fromContainer == null ? Codegen.empty() : this.fromContainer;
     }
 
     @Import(name="hostPath")
       private final @Nullable Output<String> hostPath;
 
-    public Output<String> getHostPath() {
-        return this.hostPath == null ? Output.empty() : this.hostPath;
+    public Output<String> hostPath() {
+        return this.hostPath == null ? Codegen.empty() : this.hostPath;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
-    public Output<String> getVolumeName() {
-        return this.volumeName == null ? Output.empty() : this.volumeName;
+    public Output<String> volumeName() {
+        return this.volumeName == null ? Codegen.empty() : this.volumeName;
     }
 
     public ContainerVolumeArgs(
@@ -64,11 +65,11 @@ public final class ContainerVolumeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContainerVolumeArgs() {
-        this.containerPath = Output.empty();
-        this.fromContainer = Output.empty();
-        this.hostPath = Output.empty();
-        this.readOnly = Output.empty();
-        this.volumeName = Output.empty();
+        this.containerPath = Codegen.empty();
+        this.fromContainer = Codegen.empty();
+        this.hostPath = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.volumeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class ContainerVolumeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Output.ofNullable(containerPath);
+            this.containerPath = Codegen.ofNullable(containerPath);
             return this;
         }
         public Builder fromContainer(@Nullable Output<String> fromContainer) {
@@ -112,7 +113,7 @@ public final class ContainerVolumeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fromContainer(@Nullable String fromContainer) {
-            this.fromContainer = Output.ofNullable(fromContainer);
+            this.fromContainer = Codegen.ofNullable(fromContainer);
             return this;
         }
         public Builder hostPath(@Nullable Output<String> hostPath) {
@@ -120,7 +121,7 @@ public final class ContainerVolumeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder hostPath(@Nullable String hostPath) {
-            this.hostPath = Output.ofNullable(hostPath);
+            this.hostPath = Codegen.ofNullable(hostPath);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -128,7 +129,7 @@ public final class ContainerVolumeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder volumeName(@Nullable Output<String> volumeName) {
@@ -136,7 +137,7 @@ public final class ContainerVolumeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder volumeName(@Nullable String volumeName) {
-            this.volumeName = Output.ofNullable(volumeName);
+            this.volumeName = Codegen.ofNullable(volumeName);
             return this;
         }        public ContainerVolumeArgs build() {
             return new ContainerVolumeArgs(containerPath, fromContainer, hostPath, readOnly, volumeName);

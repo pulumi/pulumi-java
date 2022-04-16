@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="backupIntervalInMinutes")
       private final @Nullable Output<Integer> backupIntervalInMinutes;
 
-    public Output<Integer> getBackupIntervalInMinutes() {
-        return this.backupIntervalInMinutes == null ? Output.empty() : this.backupIntervalInMinutes;
+    public Output<Integer> backupIntervalInMinutes() {
+        return this.backupIntervalInMinutes == null ? Codegen.empty() : this.backupIntervalInMinutes;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="backupRetentionIntervalInHours")
       private final @Nullable Output<Integer> backupRetentionIntervalInHours;
 
-    public Output<Integer> getBackupRetentionIntervalInHours() {
-        return this.backupRetentionIntervalInHours == null ? Output.empty() : this.backupRetentionIntervalInHours;
+    public Output<Integer> backupRetentionIntervalInHours() {
+        return this.backupRetentionIntervalInHours == null ? Codegen.empty() : this.backupRetentionIntervalInHours;
     }
 
     public PeriodicModePropertiesArgs(
@@ -48,8 +49,8 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private PeriodicModePropertiesArgs() {
-        this.backupIntervalInMinutes = Output.empty();
-        this.backupRetentionIntervalInHours = Output.empty();
+        this.backupIntervalInMinutes = Codegen.empty();
+        this.backupRetentionIntervalInHours = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder backupIntervalInMinutes(@Nullable Integer backupIntervalInMinutes) {
-            this.backupIntervalInMinutes = Output.ofNullable(backupIntervalInMinutes);
+            this.backupIntervalInMinutes = Codegen.ofNullable(backupIntervalInMinutes);
             return this;
         }
         public Builder backupRetentionIntervalInHours(@Nullable Output<Integer> backupRetentionIntervalInHours) {
@@ -87,7 +88,7 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder backupRetentionIntervalInHours(@Nullable Integer backupRetentionIntervalInHours) {
-            this.backupRetentionIntervalInHours = Output.ofNullable(backupRetentionIntervalInHours);
+            this.backupRetentionIntervalInHours = Codegen.ofNullable(backupRetentionIntervalInHours);
             return this;
         }        public PeriodicModePropertiesArgs build() {
             return new PeriodicModePropertiesArgs(backupIntervalInMinutes, backupRetentionIntervalInHours);

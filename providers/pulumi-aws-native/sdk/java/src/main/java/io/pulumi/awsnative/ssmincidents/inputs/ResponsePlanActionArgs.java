@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmAutomationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ssmAutomation")
       private final @Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation;
 
-    public Output<ResponsePlanSsmAutomationArgs> getSsmAutomation() {
-        return this.ssmAutomation == null ? Output.empty() : this.ssmAutomation;
+    public Output<ResponsePlanSsmAutomationArgs> ssmAutomation() {
+        return this.ssmAutomation == null ? Codegen.empty() : this.ssmAutomation;
     }
 
     public ResponsePlanActionArgs(@Nullable Output<ResponsePlanSsmAutomationArgs> ssmAutomation) {
@@ -30,7 +31,7 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResponsePlanActionArgs() {
-        this.ssmAutomation = Output.empty();
+        this.ssmAutomation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ResponsePlanActionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomationArgs ssmAutomation) {
-            this.ssmAutomation = Output.ofNullable(ssmAutomation);
+            this.ssmAutomation = Codegen.ofNullable(ssmAutomation);
             return this;
         }        public ResponsePlanActionArgs build() {
             return new ResponsePlanActionArgs(ssmAutomation);

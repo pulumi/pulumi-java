@@ -5,6 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
     @Import(name="allSupported")
       private final @Nullable Output<Boolean> allSupported;
 
-    public Output<Boolean> getAllSupported() {
-        return this.allSupported == null ? Output.empty() : this.allSupported;
+    public Output<Boolean> allSupported() {
+        return this.allSupported == null ? Codegen.empty() : this.allSupported;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
     @Import(name="includeGlobalResourceTypes")
       private final @Nullable Output<Boolean> includeGlobalResourceTypes;
 
-    public Output<Boolean> getIncludeGlobalResourceTypes() {
-        return this.includeGlobalResourceTypes == null ? Output.empty() : this.includeGlobalResourceTypes;
+    public Output<Boolean> includeGlobalResourceTypes() {
+        return this.includeGlobalResourceTypes == null ? Codegen.empty() : this.includeGlobalResourceTypes;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
     @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
+    public Output<List<String>> resourceTypes() {
+        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
     public RecorderRecordingGroupGetArgs(
@@ -59,9 +60,9 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
     }
 
     private RecorderRecordingGroupGetArgs() {
-        this.allSupported = Output.empty();
-        this.includeGlobalResourceTypes = Output.empty();
-        this.resourceTypes = Output.empty();
+        this.allSupported = Codegen.empty();
+        this.includeGlobalResourceTypes = Codegen.empty();
+        this.resourceTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder allSupported(@Nullable Boolean allSupported) {
-            this.allSupported = Output.ofNullable(allSupported);
+            this.allSupported = Codegen.ofNullable(allSupported);
             return this;
         }
         public Builder includeGlobalResourceTypes(@Nullable Output<Boolean> includeGlobalResourceTypes) {
@@ -101,7 +102,7 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder includeGlobalResourceTypes(@Nullable Boolean includeGlobalResourceTypes) {
-            this.includeGlobalResourceTypes = Output.ofNullable(includeGlobalResourceTypes);
+            this.includeGlobalResourceTypes = Codegen.ofNullable(includeGlobalResourceTypes);
             return this;
         }
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
@@ -109,7 +110,7 @@ public final class RecorderRecordingGroupGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Output.ofNullable(resourceTypes);
+            this.resourceTypes = Codegen.ofNullable(resourceTypes);
             return this;
         }
         public Builder resourceTypes(String... resourceTypes) {

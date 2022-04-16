@@ -5,6 +5,7 @@ package io.pulumi.aws.detective.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     @Import(name="graphArn")
       private final @Nullable Output<String> graphArn;
 
-    public Output<String> getGraphArn() {
-        return this.graphArn == null ? Output.empty() : this.graphArn;
+    public Output<String> graphArn() {
+        return this.graphArn == null ? Codegen.empty() : this.graphArn;
     }
 
     public InvitationAccepterState(@Nullable Output<String> graphArn) {
@@ -30,7 +31,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
     }
 
     private InvitationAccepterState() {
-        this.graphArn = Output.empty();
+        this.graphArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder graphArn(@Nullable String graphArn) {
-            this.graphArn = Output.ofNullable(graphArn);
+            this.graphArn = Codegen.ofNullable(graphArn);
             return this;
         }        public InvitationAccepterState build() {
             return new InvitationAccepterState(graphArn);

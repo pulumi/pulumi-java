@@ -28,7 +28,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
     @Import(name="bypass")
       private final @Nullable String bypass;
 
-    public Optional<String> getBypass() {
+    public Optional<String> bypass() {
         return this.bypass == null ? Optional.empty() : Optional.ofNullable(this.bypass);
     }
 
@@ -39,7 +39,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
     @Import(name="defaultAction")
       private final @Nullable String defaultAction;
 
-    public Optional<String> getDefaultAction() {
+    public Optional<String> defaultAction() {
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
     }
 
@@ -50,7 +50,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
     @Import(name="ipRules")
       private final @Nullable List<MHSMIPRuleResponse> ipRules;
 
-    public List<MHSMIPRuleResponse> getIpRules() {
+    public List<MHSMIPRuleResponse> ipRules() {
         return this.ipRules == null ? List.of() : this.ipRules;
     }
 
@@ -61,7 +61,7 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
     @Import(name="virtualNetworkRules")
       private final @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
 
-    public List<MHSMVirtualNetworkRuleResponse> getVirtualNetworkRules() {
+    public List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules() {
         return this.virtualNetworkRules == null ? List.of() : this.virtualNetworkRules;
     }
 

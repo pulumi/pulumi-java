@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs ex
     @Import(name="target", required=true)
       private final Output<Double> target;
 
-    public Output<Double> getTarget() {
+    public Output<Double> target() {
         return this.target;
     }
 
@@ -31,7 +32,7 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs ex
     }
 
     private AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs() {
-        this.target = Output.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

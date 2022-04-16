@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.BasicLevelArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.CustomLevelArgs;
 import java.lang.String;
@@ -19,7 +20,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicyId", required=true)
       private final Output<String> accessPolicyId;
 
-    public Output<String> getAccessPolicyId() {
+    public Output<String> accessPolicyId() {
         return this.accessPolicyId;
     }
 
@@ -30,8 +31,8 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="basic")
       private final @Nullable Output<BasicLevelArgs> basic;
 
-    public Output<BasicLevelArgs> getBasic() {
-        return this.basic == null ? Output.empty() : this.basic;
+    public Output<BasicLevelArgs> basic() {
+        return this.basic == null ? Codegen.empty() : this.basic;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="custom")
       private final @Nullable Output<CustomLevelArgs> custom;
 
-    public Output<CustomLevelArgs> getCustom() {
-        return this.custom == null ? Output.empty() : this.custom;
+    public Output<CustomLevelArgs> custom() {
+        return this.custom == null ? Codegen.empty() : this.custom;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public AccessLevelArgs(
@@ -94,12 +95,12 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessLevelArgs() {
-        this.accessPolicyId = Output.empty();
-        this.basic = Output.empty();
-        this.custom = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.title = Output.empty();
+        this.accessPolicyId = Codegen.empty();
+        this.basic = Codegen.empty();
+        this.custom = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder basic(@Nullable BasicLevelArgs basic) {
-            this.basic = Output.ofNullable(basic);
+            this.basic = Codegen.ofNullable(basic);
             return this;
         }
         public Builder custom(@Nullable Output<CustomLevelArgs> custom) {
@@ -153,7 +154,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder custom(@Nullable CustomLevelArgs custom) {
-            this.custom = Output.ofNullable(custom);
+            this.custom = Codegen.ofNullable(custom);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -161,7 +162,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -169,7 +170,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -177,7 +178,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public AccessLevelArgs build() {
             return new AccessLevelArgs(accessPolicyId, basic, custom, description, name, title);

@@ -24,7 +24,7 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="published", required=true)
       private final Boolean published;
 
-    public Boolean getPublished() {
+    public Boolean published() {
         return this.published;
     }
 
@@ -35,7 +35,7 @@ public final class ModelStateResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="validationError", required=true)
       private final StatusResponse validationError;
 
-    public StatusResponse getValidationError() {
+    public StatusResponse validationError() {
         return this.validationError;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsArgs extends io.pulumi.r
     @Import(name="ruleOrder", required=true)
       private final Output<String> ruleOrder;
 
-    public Output<String> getRuleOrder() {
+    public Output<String> ruleOrder() {
         return this.ruleOrder;
     }
 
@@ -29,7 +30,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptionsArgs extends io.pulumi.r
     }
 
     private RuleGroupRuleGroupStatefulRuleOptionsArgs() {
-        this.ruleOrder = Output.empty();
+        this.ruleOrder = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exten
     @Import(name="enforce")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs> enforce;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs> getEnforce() {
-        return this.enforce == null ? Output.empty() : this.enforce;
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs> enforce() {
+        return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exten
     @Import(name="validate", required=true)
       private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs> validate;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs> getValidate() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs> validate() {
         return this.validate;
     }
 
@@ -45,8 +46,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exten
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs() {
-        this.enforce = Output.empty();
-        this.validate = Output.empty();
+        this.enforce = Codegen.empty();
+        this.validate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exten
             return this;
         }
         public Builder enforce(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceArgs enforce) {
-            this.enforce = Output.ofNullable(enforce);
+            this.enforce = Codegen.ofNullable(enforce);
             return this;
         }
         public Builder validate(Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateArgs> validate) {

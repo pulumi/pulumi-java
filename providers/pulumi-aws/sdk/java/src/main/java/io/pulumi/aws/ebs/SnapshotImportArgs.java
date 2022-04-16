@@ -7,6 +7,7 @@ import io.pulumi.aws.ebs.inputs.SnapshotImportClientDataArgs;
 import io.pulumi.aws.ebs.inputs.SnapshotImportDiskContainerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clientData")
       private final @Nullable Output<SnapshotImportClientDataArgs> clientData;
 
-    public Output<SnapshotImportClientDataArgs> getClientData() {
-        return this.clientData == null ? Output.empty() : this.clientData;
+    public Output<SnapshotImportClientDataArgs> clientData() {
+        return this.clientData == null ? Codegen.empty() : this.clientData;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskContainer", required=true)
       private final Output<SnapshotImportDiskContainerArgs> diskContainer;
 
-    public Output<SnapshotImportDiskContainerArgs> getDiskContainer() {
+    public Output<SnapshotImportDiskContainerArgs> diskContainer() {
         return this.diskContainer;
     }
 
@@ -59,8 +60,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+    public Output<Boolean> encrypted() {
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permanentRestore")
       private final @Nullable Output<Boolean> permanentRestore;
 
-    public Output<Boolean> getPermanentRestore() {
-        return this.permanentRestore == null ? Output.empty() : this.permanentRestore;
+    public Output<Boolean> permanentRestore() {
+        return this.permanentRestore == null ? Codegen.empty() : this.permanentRestore;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
-    public Output<String> getRoleName() {
-        return this.roleName == null ? Output.empty() : this.roleName;
+    public Output<String> roleName() {
+        return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageTier")
       private final @Nullable Output<String> storageTier;
 
-    public Output<String> getStorageTier() {
-        return this.storageTier == null ? Output.empty() : this.storageTier;
+    public Output<String> storageTier() {
+        return this.storageTier == null ? Codegen.empty() : this.storageTier;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="temporaryRestoreDays")
       private final @Nullable Output<Integer> temporaryRestoreDays;
 
-    public Output<Integer> getTemporaryRestoreDays() {
-        return this.temporaryRestoreDays == null ? Output.empty() : this.temporaryRestoreDays;
+    public Output<Integer> temporaryRestoreDays() {
+        return this.temporaryRestoreDays == null ? Codegen.empty() : this.temporaryRestoreDays;
     }
 
     public SnapshotImportArgs(
@@ -153,16 +154,16 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SnapshotImportArgs() {
-        this.clientData = Output.empty();
-        this.description = Output.empty();
-        this.diskContainer = Output.empty();
-        this.encrypted = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.permanentRestore = Output.empty();
-        this.roleName = Output.empty();
-        this.storageTier = Output.empty();
-        this.tags = Output.empty();
-        this.temporaryRestoreDays = Output.empty();
+        this.clientData = Codegen.empty();
+        this.description = Codegen.empty();
+        this.diskContainer = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.permanentRestore = Codegen.empty();
+        this.roleName = Codegen.empty();
+        this.storageTier = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.temporaryRestoreDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientData(@Nullable SnapshotImportClientDataArgs clientData) {
-            this.clientData = Output.ofNullable(clientData);
+            this.clientData = Codegen.ofNullable(clientData);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -216,7 +217,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diskContainer(Output<SnapshotImportDiskContainerArgs> diskContainer) {
@@ -232,7 +233,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -240,7 +241,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder permanentRestore(@Nullable Output<Boolean> permanentRestore) {
@@ -248,7 +249,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permanentRestore(@Nullable Boolean permanentRestore) {
-            this.permanentRestore = Output.ofNullable(permanentRestore);
+            this.permanentRestore = Codegen.ofNullable(permanentRestore);
             return this;
         }
         public Builder roleName(@Nullable Output<String> roleName) {
@@ -256,7 +257,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Output.ofNullable(roleName);
+            this.roleName = Codegen.ofNullable(roleName);
             return this;
         }
         public Builder storageTier(@Nullable Output<String> storageTier) {
@@ -264,7 +265,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageTier(@Nullable String storageTier) {
-            this.storageTier = Output.ofNullable(storageTier);
+            this.storageTier = Codegen.ofNullable(storageTier);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -272,7 +273,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder temporaryRestoreDays(@Nullable Output<Integer> temporaryRestoreDays) {
@@ -280,7 +281,7 @@ public final class SnapshotImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder temporaryRestoreDays(@Nullable Integer temporaryRestoreDays) {
-            this.temporaryRestoreDays = Output.ofNullable(temporaryRestoreDays);
+            this.temporaryRestoreDays = Codegen.ofNullable(temporaryRestoreDays);
             return this;
         }        public SnapshotImportArgs build() {
             return new SnapshotImportArgs(clientData, description, diskContainer, encrypted, kmsKeyId, permanentRestore, roleName, storageTier, tags, temporaryRestoreDays);

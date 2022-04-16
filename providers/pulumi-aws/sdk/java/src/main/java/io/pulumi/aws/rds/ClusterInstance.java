@@ -9,6 +9,7 @@ import io.pulumi.aws.rds.inputs.ClusterInstanceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -57,7 +58,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * are applied immediately, or during the next maintenance window. Default is`false`.
      * 
      */
-    public Output<Boolean> getApplyImmediately() {
+    public Output<Boolean> applyImmediately() {
         return this.applyImmediately;
     }
     /**
@@ -71,7 +72,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of cluster instance
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -85,7 +86,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getAutoMinorVersionUpgrade() {
+    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade;
     }
     /**
@@ -99,7 +100,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -113,7 +114,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The identifier of the CA certificate for the DB instance.
      * 
      */
-    public Output<String> getCaCertIdentifier() {
+    public Output<String> caCertIdentifier() {
         return this.caCertIdentifier;
     }
     /**
@@ -127,7 +128,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The identifier of the `aws.rds.Cluster` in which to launch this instance.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -141,7 +142,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getCopyTagsToSnapshot() {
+    public Output</* @Nullable */ Boolean> copyTagsToSnapshot() {
         return this.copyTagsToSnapshot;
     }
     /**
@@ -155,7 +156,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The name of the DB parameter group to associate with this instance.
      * 
      */
-    public Output<String> getDbParameterGroupName() {
+    public Output<String> dbParameterGroupName() {
         return this.dbParameterGroupName;
     }
     /**
@@ -169,7 +170,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` of the attached `aws.rds.Cluster`.
      * 
      */
-    public Output<String> getDbSubnetGroupName() {
+    public Output<String> dbSubnetGroupName() {
         return this.dbSubnetGroupName;
     }
     /**
@@ -183,7 +184,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The region-unique, immutable identifier for the DB instance.
      * 
      */
-    public Output<String> getDbiResourceId() {
+    public Output<String> dbiResourceId() {
         return this.dbiResourceId;
     }
     /**
@@ -197,7 +198,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The DNS address for this instance. May not be writable
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -217,7 +218,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * in the Amazon RDS User Guide.
      * 
      */
-    public Output</* @Nullable */ String> getEngine() {
+    public Output</* @Nullable */ String> engine() {
         return this.engine;
     }
     /**
@@ -231,7 +232,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The database engine version.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -245,7 +246,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The database engine version
      * 
      */
-    public Output<String> getEngineVersionActual() {
+    public Output<String> engineVersionActual() {
         return this.engineVersionActual;
     }
     /**
@@ -259,7 +260,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The indentifier for the RDS instance, if omitted, this provider will assign a random, unique identifier.
      * 
      */
-    public Output<String> getIdentifier() {
+    public Output<String> identifier() {
         return this.identifier;
     }
     /**
@@ -273,7 +274,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    public Output<String> getIdentifierPrefix() {
+    public Output<String> identifierPrefix() {
         return this.identifierPrefix;
     }
     /**
@@ -289,7 +290,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * and memory, see [Scaling Aurora DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Managing.html). Aurora uses `db.*` instance classes/types. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) for currently available instance classes and complete details.
      * 
      */
-    public Output<String> getInstanceClass() {
+    public Output<String> instanceClass() {
         return this.instanceClass;
     }
     /**
@@ -303,7 +304,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The ARN for the KMS encryption key if one is set to the cluster.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -317,7 +318,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
      * 
      */
-    public Output</* @Nullable */ Integer> getMonitoringInterval() {
+    public Output</* @Nullable */ Integer> monitoringInterval() {
         return this.monitoringInterval;
     }
     /**
@@ -335,7 +336,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
      * 
      */
-    public Output<String> getMonitoringRoleArn() {
+    public Output<String> monitoringRoleArn() {
         return this.monitoringRoleArn;
     }
     /**
@@ -349,7 +350,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Specifies whether Performance Insights is enabled or not.
      * 
      */
-    public Output<Boolean> getPerformanceInsightsEnabled() {
+    public Output<Boolean> performanceInsightsEnabled() {
         return this.performanceInsightsEnabled;
     }
     /**
@@ -363,7 +364,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true.
      * 
      */
-    public Output<String> getPerformanceInsightsKmsKeyId() {
+    public Output<String> performanceInsightsKmsKeyId() {
         return this.performanceInsightsKmsKeyId;
     }
     /**
@@ -377,7 +378,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
      * 
      */
-    public Output<Integer> getPerformanceInsightsRetentionPeriod() {
+    public Output<Integer> performanceInsightsRetentionPeriod() {
         return this.performanceInsightsRetentionPeriod;
     }
     /**
@@ -391,7 +392,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return The database port
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     /**
@@ -407,7 +408,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Eg: "04:00-09:00"
      * 
      */
-    public Output<String> getPreferredBackupWindow() {
+    public Output<String> preferredBackupWindow() {
         return this.preferredBackupWindow;
     }
     /**
@@ -423,7 +424,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
      * 
      */
-    public Output<String> getPreferredMaintenanceWindow() {
+    public Output<String> preferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow;
     }
     /**
@@ -437,7 +438,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
      * 
      */
-    public Output</* @Nullable */ Integer> getPromotionTier() {
+    public Output</* @Nullable */ Integer> promotionTier() {
         return this.promotionTier;
     }
     /**
@@ -455,7 +456,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * details on controlling this property.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPubliclyAccessible() {
+    public Output</* @Nullable */ Boolean> publiclyAccessible() {
         return this.publiclyAccessible;
     }
     /**
@@ -469,7 +470,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the DB cluster is encrypted.
      * 
      */
-    public Output<Boolean> getStorageEncrypted() {
+    public Output<Boolean> storageEncrypted() {
         return this.storageEncrypted;
     }
     /**
@@ -483,7 +484,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the instance. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -497,7 +498,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -511,7 +512,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @return Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
      * 
      */
-    public Output<Boolean> getWriter() {
+    public Output<Boolean> writer() {
         return this.writer;
     }
 
@@ -537,7 +538,7 @@ public class ClusterInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterInstance(String name, ClusterInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/clusterInstance:ClusterInstance", name, args == null ? ClusterInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:rds/clusterInstance:ClusterInstance", name, args == null ? ClusterInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterInstance(String name, Output<String> id, @Nullable ClusterInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

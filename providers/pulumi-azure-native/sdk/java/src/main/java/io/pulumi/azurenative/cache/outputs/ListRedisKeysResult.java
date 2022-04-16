@@ -32,14 +32,14 @@ public final class ListRedisKeysResult {
      * The current primary key that clients can use to authenticate with Redis cache.
      * 
     */
-    public String getPrimaryKey() {
+    public String primaryKey() {
         return this.primaryKey;
     }
     /**
      * The current secondary key that clients can use to authenticate with Redis cache.
      * 
     */
-    public String getSecondaryKey() {
+    public String secondaryKey() {
         return this.secondaryKey;
     }
 

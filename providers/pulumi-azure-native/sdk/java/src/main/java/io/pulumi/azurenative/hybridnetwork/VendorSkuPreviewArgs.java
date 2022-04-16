@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hybridnetwork;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="previewSubscription")
       private final @Nullable Output<String> previewSubscription;
 
-    public Output<String> getPreviewSubscription() {
-        return this.previewSubscription == null ? Output.empty() : this.previewSubscription;
+    public Output<String> previewSubscription() {
+        return this.previewSubscription == null ? Codegen.empty() : this.previewSubscription;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="skuName", required=true)
       private final Output<String> skuName;
 
-    public Output<String> getSkuName() {
+    public Output<String> skuName() {
         return this.skuName;
     }
 
@@ -43,7 +44,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="vendorName", required=true)
       private final Output<String> vendorName;
 
-    public Output<String> getVendorName() {
+    public Output<String> vendorName() {
         return this.vendorName;
     }
 
@@ -57,9 +58,9 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VendorSkuPreviewArgs() {
-        this.previewSubscription = Output.empty();
-        this.skuName = Output.empty();
-        this.vendorName = Output.empty();
+        this.previewSubscription = Codegen.empty();
+        this.skuName = Codegen.empty();
+        this.vendorName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class VendorSkuPreviewArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder previewSubscription(@Nullable String previewSubscription) {
-            this.previewSubscription = Output.ofNullable(previewSubscription);
+            this.previewSubscription = Codegen.ofNullable(previewSubscription);
             return this;
         }
         public Builder skuName(Output<String> skuName) {

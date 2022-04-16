@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hdinsight.enums.ResourceIdentityType;
 import io.pulumi.azurenative.hdinsight.inputs.ClusterIdentityUserAssignedIdentitiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<ResourceIdentityType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities;
 
-    public Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
+    public Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities() {
+        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
     public ClusterIdentityArgs(
@@ -51,8 +52,8 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterIdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentities = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Output<Map<String,ClusterIdentityUserAssignedIdentitiesArgs>> userAssignedIdentities) {
@@ -90,7 +91,7 @@ public final class ClusterIdentityArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Map<String,ClusterIdentityUserAssignedIdentitiesArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
             return this;
         }        public ClusterIdentityArgs build() {
             return new ClusterIdentityArgs(type, userAssignedIdentities);

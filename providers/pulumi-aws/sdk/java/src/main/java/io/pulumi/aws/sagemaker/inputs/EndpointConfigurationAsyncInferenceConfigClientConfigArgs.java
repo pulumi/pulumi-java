@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigArgs ext
     @Import(name="maxConcurrentInvocationsPerInstance")
       private final @Nullable Output<Integer> maxConcurrentInvocationsPerInstance;
 
-    public Output<Integer> getMaxConcurrentInvocationsPerInstance() {
-        return this.maxConcurrentInvocationsPerInstance == null ? Output.empty() : this.maxConcurrentInvocationsPerInstance;
+    public Output<Integer> maxConcurrentInvocationsPerInstance() {
+        return this.maxConcurrentInvocationsPerInstance == null ? Codegen.empty() : this.maxConcurrentInvocationsPerInstance;
     }
 
     public EndpointConfigurationAsyncInferenceConfigClientConfigArgs(@Nullable Output<Integer> maxConcurrentInvocationsPerInstance) {
@@ -30,7 +31,7 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigArgs ext
     }
 
     private EndpointConfigurationAsyncInferenceConfigClientConfigArgs() {
-        this.maxConcurrentInvocationsPerInstance = Output.empty();
+        this.maxConcurrentInvocationsPerInstance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigArgs ext
             return this;
         }
         public Builder maxConcurrentInvocationsPerInstance(@Nullable Integer maxConcurrentInvocationsPerInstance) {
-            this.maxConcurrentInvocationsPerInstance = Output.ofNullable(maxConcurrentInvocationsPerInstance);
+            this.maxConcurrentInvocationsPerInstance = Codegen.ofNullable(maxConcurrentInvocationsPerInstance);
             return this;
         }        public EndpointConfigurationAsyncInferenceConfigClientConfigArgs build() {
             return new EndpointConfigurationAsyncInferenceConfigClientConfigArgs(maxConcurrentInvocationsPerInstance);

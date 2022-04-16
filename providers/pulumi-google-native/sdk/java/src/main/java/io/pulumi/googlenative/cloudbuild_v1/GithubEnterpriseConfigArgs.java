@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.GitHubEnterpriseSecretsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -33,15 +34,15 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="gheConfigId")
       private final @Nullable Output<String> gheConfigId;
 
-    public Output<String> getGheConfigId() {
-        return this.gheConfigId == null ? Output.empty() : this.gheConfigId;
+    public Output<String> gheConfigId() {
+        return this.gheConfigId == null ? Codegen.empty() : this.gheConfigId;
     }
 
     /**
@@ -51,15 +52,15 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="hostUrl")
       private final @Nullable Output<String> hostUrl;
 
-    public Output<String> getHostUrl() {
-        return this.hostUrl == null ? Output.empty() : this.hostUrl;
+    public Output<String> hostUrl() {
+        return this.hostUrl == null ? Codegen.empty() : this.hostUrl;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,22 +81,22 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="peeredNetwork")
       private final @Nullable Output<String> peeredNetwork;
 
-    public Output<String> getPeeredNetwork() {
-        return this.peeredNetwork == null ? Output.empty() : this.peeredNetwork;
+    public Output<String> peeredNetwork() {
+        return this.peeredNetwork == null ? Codegen.empty() : this.peeredNetwork;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+    public Output<String> projectId() {
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="secrets")
       private final @Nullable Output<GitHubEnterpriseSecretsArgs> secrets;
 
-    public Output<GitHubEnterpriseSecretsArgs> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+    public Output<GitHubEnterpriseSecretsArgs> secrets() {
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="sslCa")
       private final @Nullable Output<String> sslCa;
 
-    public Output<String> getSslCa() {
-        return this.sslCa == null ? Output.empty() : this.sslCa;
+    public Output<String> sslCa() {
+        return this.sslCa == null ? Codegen.empty() : this.sslCa;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     @Import(name="webhookKey")
       private final @Nullable Output<String> webhookKey;
 
-    public Output<String> getWebhookKey() {
-        return this.webhookKey == null ? Output.empty() : this.webhookKey;
+    public Output<String> webhookKey() {
+        return this.webhookKey == null ? Codegen.empty() : this.webhookKey;
     }
 
     public GithubEnterpriseConfigArgs(
@@ -159,18 +160,18 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
     }
 
     private GithubEnterpriseConfigArgs() {
-        this.appId = Output.empty();
-        this.displayName = Output.empty();
-        this.gheConfigId = Output.empty();
-        this.hostUrl = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.peeredNetwork = Output.empty();
-        this.project = Output.empty();
-        this.projectId = Output.empty();
-        this.secrets = Output.empty();
-        this.sslCa = Output.empty();
-        this.webhookKey = Output.empty();
+        this.appId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.gheConfigId = Codegen.empty();
+        this.hostUrl = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.peeredNetwork = Codegen.empty();
+        this.project = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.secrets = Codegen.empty();
+        this.sslCa = Codegen.empty();
+        this.webhookKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -228,7 +229,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder gheConfigId(@Nullable Output<String> gheConfigId) {
@@ -236,7 +237,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder gheConfigId(@Nullable String gheConfigId) {
-            this.gheConfigId = Output.ofNullable(gheConfigId);
+            this.gheConfigId = Codegen.ofNullable(gheConfigId);
             return this;
         }
         public Builder hostUrl(@Nullable Output<String> hostUrl) {
@@ -244,7 +245,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder hostUrl(@Nullable String hostUrl) {
-            this.hostUrl = Output.ofNullable(hostUrl);
+            this.hostUrl = Codegen.ofNullable(hostUrl);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -252,7 +253,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -260,7 +261,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder peeredNetwork(@Nullable Output<String> peeredNetwork) {
@@ -268,7 +269,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder peeredNetwork(@Nullable String peeredNetwork) {
-            this.peeredNetwork = Output.ofNullable(peeredNetwork);
+            this.peeredNetwork = Codegen.ofNullable(peeredNetwork);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -276,7 +277,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -284,7 +285,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }
         public Builder secrets(@Nullable Output<GitHubEnterpriseSecretsArgs> secrets) {
@@ -292,7 +293,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder secrets(@Nullable GitHubEnterpriseSecretsArgs secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }
         public Builder sslCa(@Nullable Output<String> sslCa) {
@@ -300,7 +301,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sslCa(@Nullable String sslCa) {
-            this.sslCa = Output.ofNullable(sslCa);
+            this.sslCa = Codegen.ofNullable(sslCa);
             return this;
         }
         public Builder webhookKey(@Nullable Output<String> webhookKey) {
@@ -308,7 +309,7 @@ public final class GithubEnterpriseConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder webhookKey(@Nullable String webhookKey) {
-            this.webhookKey = Output.ofNullable(webhookKey);
+            this.webhookKey = Codegen.ofNullable(webhookKey);
             return this;
         }        public GithubEnterpriseConfigArgs build() {
             return new GithubEnterpriseConfigArgs(appId, displayName, gheConfigId, hostUrl, location, name, peeredNetwork, project, projectId, secrets, sslCa, webhookKey);

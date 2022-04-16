@@ -19,14 +19,14 @@ public final class WebACLGeoMatchStatement extends io.pulumi.resources.InvokeArg
     @Import(name="countryCodes")
       private final @Nullable List<String> countryCodes;
 
-    public List<String> getCountryCodes() {
+    public List<String> countryCodes() {
         return this.countryCodes == null ? List.of() : this.countryCodes;
     }
 
     @Import(name="forwardedIPConfig")
       private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
 
-    public Optional<WebACLForwardedIPConfiguration> getForwardedIPConfig() {
+    public Optional<WebACLForwardedIPConfiguration> forwardedIPConfig() {
         return this.forwardedIPConfig == null ? Optional.empty() : Optional.ofNullable(this.forwardedIPConfig);
     }
 

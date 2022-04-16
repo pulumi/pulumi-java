@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.SkuCapabilityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<List<SkuCapabilityArgs>> capabilities;
 
-    public Output<List<SkuCapabilityArgs>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<List<SkuCapabilityArgs>> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     @Import(name="name")
       private final @Nullable Output<List<String>> name;
 
-    public Output<List<String>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<List<String>> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SkuZoneDetailArgs(
@@ -38,8 +39,8 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuZoneDetailArgs() {
-        this.capabilities = Output.empty();
-        this.name = Output.empty();
+        this.capabilities = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capabilities(@Nullable List<SkuCapabilityArgs> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(SkuCapabilityArgs... capabilities) {
@@ -80,7 +81,7 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable List<String> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder name(String... name) {

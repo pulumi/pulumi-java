@@ -9,6 +9,7 @@ import io.pulumi.aws.sagemaker.inputs.NotebookInstanceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAdditionalCodeRepositories() {
+    public Output</* @Nullable */ List<String>> additionalCodeRepositories() {
         return this.additionalCodeRepositories;
     }
     /**
@@ -58,7 +59,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -72,7 +73,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The Git repository associated with the notebook instance as its default code repository. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultCodeRepository() {
+    public Output</* @Nullable */ String> defaultCodeRepository() {
         return this.defaultCodeRepository;
     }
     /**
@@ -86,7 +87,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return Set to `Disabled` to disable internet access to notebook. Requires `security_groups` and `subnet_id` to be set. Supported values: `Enabled` (Default) or `Disabled`. If set to `Disabled`, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.
      * 
      */
-    public Output</* @Nullable */ String> getDirectInternetAccess() {
+    public Output</* @Nullable */ String> directInternetAccess() {
         return this.directInternetAccess;
     }
     /**
@@ -100,7 +101,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The name of ML compute instance type.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -114,7 +115,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -128,7 +129,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The name of a lifecycle configuration to associate with the notebook instance.
      * 
      */
-    public Output</* @Nullable */ String> getLifecycleConfigName() {
+    public Output</* @Nullable */ String> lifecycleConfigName() {
         return this.lifecycleConfigName;
     }
     /**
@@ -142,7 +143,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The name of the notebook instance (must be unique).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -156,7 +157,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting `subnet_id`.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -170,7 +171,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
      * 
      */
-    public Output<String> getPlatformIdentifier() {
+    public Output<String> platformIdentifier() {
         return this.platformIdentifier;
     }
     /**
@@ -184,7 +185,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -198,7 +199,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return Whether root access is `Enabled` or `Disabled` for users of the notebook instance. The default value is `Enabled`.
      * 
      */
-    public Output</* @Nullable */ String> getRootAccess() {
+    public Output</* @Nullable */ String> rootAccess() {
         return this.rootAccess;
     }
     /**
@@ -212,7 +213,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The associated security groups.
      * 
      */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -226,7 +227,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The VPC subnet ID.
      * 
      */
-    public Output</* @Nullable */ String> getSubnetId() {
+    public Output</* @Nullable */ String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -240,7 +241,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -254,7 +255,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -268,7 +269,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The URL that you use to connect to the Jupyter notebook that is running in your notebook instance.
      * 
      */
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
     /**
@@ -282,7 +283,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @return The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
      * 
      */
-    public Output</* @Nullable */ Integer> getVolumeSize() {
+    public Output</* @Nullable */ Integer> volumeSize() {
         return this.volumeSize;
     }
 
@@ -308,7 +309,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotebookInstance(String name, NotebookInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/notebookInstance:NotebookInstance", name, args == null ? NotebookInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/notebookInstance:NotebookInstance", name, args == null ? NotebookInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotebookInstance(String name, Output<String> id, @Nullable NotebookInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

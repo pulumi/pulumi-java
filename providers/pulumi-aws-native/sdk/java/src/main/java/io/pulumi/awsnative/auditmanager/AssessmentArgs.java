@@ -11,6 +11,7 @@ import io.pulumi.awsnative.auditmanager.inputs.AssessmentScopeArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,36 +25,36 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assessmentReportsDestination")
       private final @Nullable Output<AssessmentReportsDestinationArgs> assessmentReportsDestination;
 
-    public Output<AssessmentReportsDestinationArgs> getAssessmentReportsDestination() {
-        return this.assessmentReportsDestination == null ? Output.empty() : this.assessmentReportsDestination;
+    public Output<AssessmentReportsDestinationArgs> assessmentReportsDestination() {
+        return this.assessmentReportsDestination == null ? Codegen.empty() : this.assessmentReportsDestination;
     }
 
     @Import(name="awsAccount")
       private final @Nullable Output<AssessmentAWSAccountArgs> awsAccount;
 
-    public Output<AssessmentAWSAccountArgs> getAwsAccount() {
-        return this.awsAccount == null ? Output.empty() : this.awsAccount;
+    public Output<AssessmentAWSAccountArgs> awsAccount() {
+        return this.awsAccount == null ? Codegen.empty() : this.awsAccount;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="frameworkId")
       private final @Nullable Output<String> frameworkId;
 
-    public Output<String> getFrameworkId() {
-        return this.frameworkId == null ? Output.empty() : this.frameworkId;
+    public Output<String> frameworkId() {
+        return this.frameworkId == null ? Codegen.empty() : this.frameworkId;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -63,22 +64,22 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roles")
       private final @Nullable Output<List<AssessmentRoleArgs>> roles;
 
-    public Output<List<AssessmentRoleArgs>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+    public Output<List<AssessmentRoleArgs>> roles() {
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     @Import(name="scope")
       private final @Nullable Output<AssessmentScopeArgs> scope;
 
-    public Output<AssessmentScopeArgs> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<AssessmentScopeArgs> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     @Import(name="status")
       private final @Nullable Output<AssessmentStatus> status;
 
-    public Output<AssessmentStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<AssessmentStatus> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AssessmentTagArgs>> tags;
 
-    public Output<List<AssessmentTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<AssessmentTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AssessmentArgs(
@@ -114,15 +115,15 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssessmentArgs() {
-        this.assessmentReportsDestination = Output.empty();
-        this.awsAccount = Output.empty();
-        this.description = Output.empty();
-        this.frameworkId = Output.empty();
-        this.name = Output.empty();
-        this.roles = Output.empty();
-        this.scope = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
+        this.assessmentReportsDestination = Codegen.empty();
+        this.awsAccount = Codegen.empty();
+        this.description = Codegen.empty();
+        this.frameworkId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roles = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assessmentReportsDestination(@Nullable AssessmentReportsDestinationArgs assessmentReportsDestination) {
-            this.assessmentReportsDestination = Output.ofNullable(assessmentReportsDestination);
+            this.assessmentReportsDestination = Codegen.ofNullable(assessmentReportsDestination);
             return this;
         }
         public Builder awsAccount(@Nullable Output<AssessmentAWSAccountArgs> awsAccount) {
@@ -174,7 +175,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsAccount(@Nullable AssessmentAWSAccountArgs awsAccount) {
-            this.awsAccount = Output.ofNullable(awsAccount);
+            this.awsAccount = Codegen.ofNullable(awsAccount);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -182,7 +183,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder frameworkId(@Nullable Output<String> frameworkId) {
@@ -190,7 +191,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frameworkId(@Nullable String frameworkId) {
-            this.frameworkId = Output.ofNullable(frameworkId);
+            this.frameworkId = Codegen.ofNullable(frameworkId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -198,7 +199,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roles(@Nullable Output<List<AssessmentRoleArgs>> roles) {
@@ -206,7 +207,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roles(@Nullable List<AssessmentRoleArgs> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(AssessmentRoleArgs... roles) {
@@ -217,7 +218,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable AssessmentScopeArgs scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder status(@Nullable Output<AssessmentStatus> status) {
@@ -225,7 +226,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable AssessmentStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<List<AssessmentTagArgs>> tags) {
@@ -233,7 +234,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<AssessmentTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AssessmentTagArgs... tags) {

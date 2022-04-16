@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosAppInfoArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.IosRoboTestArgs;
@@ -29,8 +30,8 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosAppInfo")
       private final @Nullable Output<IosAppInfoArgs> iosAppInfo;
 
-    public Output<IosAppInfoArgs> getIosAppInfo() {
-        return this.iosAppInfo == null ? Output.empty() : this.iosAppInfo;
+    public Output<IosAppInfoArgs> iosAppInfo() {
+        return this.iosAppInfo == null ? Codegen.empty() : this.iosAppInfo;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosRoboTest")
       private final @Nullable Output<IosRoboTestArgs> iosRoboTest;
 
-    public Output<IosRoboTestArgs> getIosRoboTest() {
-        return this.iosRoboTest == null ? Output.empty() : this.iosRoboTest;
+    public Output<IosRoboTestArgs> iosRoboTest() {
+        return this.iosRoboTest == null ? Codegen.empty() : this.iosRoboTest;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosTestLoop")
       private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
-    public Output<IosTestLoopArgs> getIosTestLoop() {
-        return this.iosTestLoop == null ? Output.empty() : this.iosTestLoop;
+    public Output<IosTestLoopArgs> iosTestLoop() {
+        return this.iosTestLoop == null ? Codegen.empty() : this.iosTestLoop;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iosXcTest")
       private final @Nullable Output<IosXcTestArgs> iosXcTest;
 
-    public Output<IosXcTestArgs> getIosXcTest() {
-        return this.iosXcTest == null ? Output.empty() : this.iosXcTest;
+    public Output<IosXcTestArgs> iosXcTest() {
+        return this.iosXcTest == null ? Codegen.empty() : this.iosXcTest;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testTimeout")
       private final @Nullable Output<DurationArgs> testTimeout;
 
-    public Output<DurationArgs> getTestTimeout() {
-        return this.testTimeout == null ? Output.empty() : this.testTimeout;
+    public Output<DurationArgs> testTimeout() {
+        return this.testTimeout == null ? Codegen.empty() : this.testTimeout;
     }
 
     public IosTestArgs(
@@ -91,11 +92,11 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosTestArgs() {
-        this.iosAppInfo = Output.empty();
-        this.iosRoboTest = Output.empty();
-        this.iosTestLoop = Output.empty();
-        this.iosXcTest = Output.empty();
-        this.testTimeout = Output.empty();
+        this.iosAppInfo = Codegen.empty();
+        this.iosRoboTest = Codegen.empty();
+        this.iosTestLoop = Codegen.empty();
+        this.iosXcTest = Codegen.empty();
+        this.testTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iosAppInfo(@Nullable IosAppInfoArgs iosAppInfo) {
-            this.iosAppInfo = Output.ofNullable(iosAppInfo);
+            this.iosAppInfo = Codegen.ofNullable(iosAppInfo);
             return this;
         }
         public Builder iosRoboTest(@Nullable Output<IosRoboTestArgs> iosRoboTest) {
@@ -139,7 +140,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iosRoboTest(@Nullable IosRoboTestArgs iosRoboTest) {
-            this.iosRoboTest = Output.ofNullable(iosRoboTest);
+            this.iosRoboTest = Codegen.ofNullable(iosRoboTest);
             return this;
         }
         public Builder iosTestLoop(@Nullable Output<IosTestLoopArgs> iosTestLoop) {
@@ -147,7 +148,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
-            this.iosTestLoop = Output.ofNullable(iosTestLoop);
+            this.iosTestLoop = Codegen.ofNullable(iosTestLoop);
             return this;
         }
         public Builder iosXcTest(@Nullable Output<IosXcTestArgs> iosXcTest) {
@@ -155,7 +156,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iosXcTest(@Nullable IosXcTestArgs iosXcTest) {
-            this.iosXcTest = Output.ofNullable(iosXcTest);
+            this.iosXcTest = Codegen.ofNullable(iosXcTest);
             return this;
         }
         public Builder testTimeout(@Nullable Output<DurationArgs> testTimeout) {
@@ -163,7 +164,7 @@ public final class IosTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testTimeout(@Nullable DurationArgs testTimeout) {
-            this.testTimeout = Output.ofNullable(testTimeout);
+            this.testTimeout = Codegen.ofNullable(testTimeout);
             return this;
         }        public IosTestArgs build() {
             return new IosTestArgs(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);

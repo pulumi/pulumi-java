@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="expiryDate")
       private final @Nullable Output<String> expiryDate;
 
-    public Output<String> getExpiryDate() {
-        return this.expiryDate == null ? Output.empty() : this.expiryDate;
+    public Output<String> expiryDate() {
+        return this.expiryDate == null ? Codegen.empty() : this.expiryDate;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="parameterNameInStore")
       private final @Nullable Output<String> parameterNameInStore;
 
-    public Output<String> getParameterNameInStore() {
-        return this.parameterNameInStore == null ? Output.empty() : this.parameterNameInStore;
+    public Output<String> parameterNameInStore() {
+        return this.parameterNameInStore == null ? Codegen.empty() : this.parameterNameInStore;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     @Import(name="parameterStoreRegion")
       private final @Nullable Output<String> parameterStoreRegion;
 
-    public Output<String> getParameterStoreRegion() {
-        return this.parameterStoreRegion == null ? Output.empty() : this.parameterStoreRegion;
+    public Output<String> parameterStoreRegion() {
+        return this.parameterStoreRegion == null ? Codegen.empty() : this.parameterStoreRegion;
     }
 
     public DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs(
@@ -61,9 +62,9 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
     }
 
     private DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs() {
-        this.expiryDate = Output.empty();
-        this.parameterNameInStore = Output.empty();
-        this.parameterStoreRegion = Output.empty();
+        this.expiryDate = Codegen.empty();
+        this.parameterNameInStore = Codegen.empty();
+        this.parameterStoreRegion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
             return this;
         }
         public Builder expiryDate(@Nullable String expiryDate) {
-            this.expiryDate = Output.ofNullable(expiryDate);
+            this.expiryDate = Codegen.ofNullable(expiryDate);
             return this;
         }
         public Builder parameterNameInStore(@Nullable Output<String> parameterNameInStore) {
@@ -103,7 +104,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
             return this;
         }
         public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
-            this.parameterNameInStore = Output.ofNullable(parameterNameInStore);
+            this.parameterNameInStore = Codegen.ofNullable(parameterNameInStore);
             return this;
         }
         public Builder parameterStoreRegion(@Nullable Output<String> parameterStoreRegion) {
@@ -111,7 +112,7 @@ public final class DefenderForServersAwsOfferingServicePrincipalSecretMetadataAr
             return this;
         }
         public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
-            this.parameterStoreRegion = Output.ofNullable(parameterStoreRegion);
+            this.parameterStoreRegion = Codegen.ofNullable(parameterStoreRegion);
             return this;
         }        public DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs build() {
             return new DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs(expiryDate, parameterNameInStore, parameterStoreRegion);

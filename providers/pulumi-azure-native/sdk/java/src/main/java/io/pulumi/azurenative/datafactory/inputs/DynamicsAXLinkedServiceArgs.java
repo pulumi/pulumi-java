@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="aadResourceId", required=true)
       private final Output<Object> aadResourceId;
 
-    public Output<Object> getAadResourceId() {
+    public Output<Object> aadResourceId() {
         return this.aadResourceId;
     }
 
@@ -44,8 +45,8 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="servicePrincipalId", required=true)
       private final Output<Object> servicePrincipalId;
 
-    public Output<Object> getServicePrincipalId() {
+    public Output<Object> servicePrincipalId() {
         return this.servicePrincipalId;
     }
 
@@ -110,7 +111,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="servicePrincipalKey", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey() {
         return this.servicePrincipalKey;
     }
 
@@ -121,7 +122,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="tenant", required=true)
       private final Output<Object> tenant;
 
-    public Output<Object> getTenant() {
+    public Output<Object> tenant() {
         return this.tenant;
     }
 
@@ -133,7 +134,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -144,7 +145,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -174,17 +175,17 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     private DynamicsAXLinkedServiceArgs() {
-        this.aadResourceId = Output.empty();
-        this.annotations = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.servicePrincipalId = Output.empty();
-        this.servicePrincipalKey = Output.empty();
-        this.tenant = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
+        this.aadResourceId = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.servicePrincipalId = Codegen.empty();
+        this.servicePrincipalKey = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -240,7 +241,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -251,7 +252,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -259,7 +260,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -267,7 +268,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -275,7 +276,7 @@ public final class DynamicsAXLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder servicePrincipalId(Output<Object> servicePrincipalId) {

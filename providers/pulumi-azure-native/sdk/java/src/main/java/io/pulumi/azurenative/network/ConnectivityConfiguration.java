@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return Groups for configuration
      * 
      */
-    public Output</* @Nullable */ List<ConnectivityGroupItemResponse>> getAppliesToGroups() {
+    public Output</* @Nullable */ List<ConnectivityGroupItemResponse>> appliesToGroups() {
         return this.appliesToGroups;
     }
     /**
@@ -58,7 +59,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return Connectivity topology type.
      * 
      */
-    public Output<String> getConnectivityTopology() {
+    public Output<String> connectivityTopology() {
         return this.connectivityTopology;
     }
     /**
@@ -72,7 +73,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return Flag if need to remove current existing peerings.
      * 
      */
-    public Output</* @Nullable */ String> getDeleteExistingPeering() {
+    public Output</* @Nullable */ String> deleteExistingPeering() {
         return this.deleteExistingPeering;
     }
     /**
@@ -86,7 +87,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return A description of the connectivity configuration.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -100,7 +101,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return A friendly name for the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -114,7 +115,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -128,7 +129,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return List of hubItems
      * 
      */
-    public Output</* @Nullable */ List<HubResponse>> getHubs() {
+    public Output</* @Nullable */ List<HubResponse>> hubs() {
         return this.hubs;
     }
     /**
@@ -142,7 +143,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return Flag if global mesh is supported.
      * 
      */
-    public Output</* @Nullable */ String> getIsGlobal() {
+    public Output</* @Nullable */ String> isGlobal() {
         return this.isGlobal;
     }
     /**
@@ -156,7 +157,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -170,7 +171,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return The provisioning state of the connectivity configuration resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -184,7 +185,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return The system metadata related to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -198,7 +199,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -224,7 +225,7 @@ public class ConnectivityConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectivityConfiguration(String name, ConnectivityConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ConnectivityConfiguration", name, args == null ? ConnectivityConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:ConnectivityConfiguration", name, args == null ? ConnectivityConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectivityConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

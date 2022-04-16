@@ -55,35 +55,35 @@ public final class UserPropertiesResponse {
      * The preferred location of the cloud shell.
      * 
     */
-    public String getPreferredLocation() {
+    public String preferredLocation() {
         return this.preferredLocation;
     }
     /**
      * The operating system type of the cloud shell. Deprecated, use preferredShellType.
      * 
     */
-    public String getPreferredOsType() {
+    public String preferredOsType() {
         return this.preferredOsType;
     }
     /**
      * The shell type of the cloud shell.
      * 
     */
-    public String getPreferredShellType() {
+    public String preferredShellType() {
         return this.preferredShellType;
     }
     /**
      * The storage profile of the user settings.
      * 
     */
-    public StorageProfileResponse getStorageProfile() {
+    public StorageProfileResponse storageProfile() {
         return this.storageProfile;
     }
     /**
      * Settings for terminal appearance.
      * 
     */
-    public TerminalSettingsResponse getTerminalSettings() {
+    public TerminalSettingsResponse terminalSettings() {
         return this.terminalSettings;
     }
 

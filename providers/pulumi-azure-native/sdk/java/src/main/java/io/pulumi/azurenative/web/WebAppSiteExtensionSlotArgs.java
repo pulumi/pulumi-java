@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,7 +33,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,8 +44,8 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     @Import(name="siteExtensionId")
       private final @Nullable Output<String> siteExtensionId;
 
-    public Output<String> getSiteExtensionId() {
-        return this.siteExtensionId == null ? Output.empty() : this.siteExtensionId;
+    public Output<String> siteExtensionId() {
+        return this.siteExtensionId == null ? Codegen.empty() : this.siteExtensionId;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -70,10 +71,10 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     }
 
     private WebAppSiteExtensionSlotArgs() {
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.siteExtensionId = Output.empty();
-        this.slot = Output.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.siteExtensionId = Codegen.empty();
+        this.slot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder siteExtensionId(@Nullable String siteExtensionId) {
-            this.siteExtensionId = Output.ofNullable(siteExtensionId);
+            this.siteExtensionId = Codegen.ofNullable(siteExtensionId);
             return this;
         }
         public Builder slot(Output<String> slot) {

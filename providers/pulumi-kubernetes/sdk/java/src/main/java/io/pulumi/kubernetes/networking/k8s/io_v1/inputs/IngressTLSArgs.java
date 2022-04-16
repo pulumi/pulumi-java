@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hosts")
       private final @Nullable Output<List<String>> hosts;
 
-    public Output<List<String>> getHosts() {
-        return this.hosts == null ? Output.empty() : this.hosts;
+    public Output<List<String>> hosts() {
+        return this.hosts == null ? Codegen.empty() : this.hosts;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
-    public Output<String> getSecretName() {
-        return this.secretName == null ? Output.empty() : this.secretName;
+    public Output<String> secretName() {
+        return this.secretName == null ? Codegen.empty() : this.secretName;
     }
 
     public IngressTLSArgs(
@@ -49,8 +50,8 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressTLSArgs() {
-        this.hosts = Output.empty();
-        this.secretName = Output.empty();
+        this.hosts = Codegen.empty();
+        this.secretName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hosts(@Nullable List<String> hosts) {
-            this.hosts = Output.ofNullable(hosts);
+            this.hosts = Codegen.ofNullable(hosts);
             return this;
         }
         public Builder hosts(String... hosts) {
@@ -91,7 +92,7 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Output.ofNullable(secretName);
+            this.secretName = Codegen.ofNullable(secretName);
             return this;
         }        public IngressTLSArgs build() {
             return new IngressTLSArgs(hosts, secretName);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.run_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.run_v2.ServiceArgs;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2BinaryAuthorizationResponse;
@@ -36,7 +37,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run will populate some annotations using 'run.googleapis.com' or 'serving.knative.dev' namespaces. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: http://kubernetes.io/docs/user-guide/annotations
      * 
      */
-    public Output<Map<String,String>> getAnnotations() {
+    public Output<Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -50,7 +51,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Settings for the Binary Authorization feature.
      * 
      */
-    public Output<GoogleCloudRunOpV2BinaryAuthorizationResponse> getBinaryAuthorization() {
+    public Output<GoogleCloudRunOpV2BinaryAuthorizationResponse> binaryAuthorization() {
         return this.binaryAuthorization;
     }
     /**
@@ -64,7 +65,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Arbitrary identifier for the API client.
      * 
      */
-    public Output<String> getClient() {
+    public Output<String> client() {
         return this.client;
     }
     /**
@@ -78,7 +79,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Arbitrary version identifier for the API client.
      * 
      */
-    public Output<String> getClientVersion() {
+    public Output<String> clientVersion() {
         return this.clientVersion;
     }
     /**
@@ -92,7 +93,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The Conditions of all other associated sub-resources. They contain additional diagnostics information in case the Service does not reach its Serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<List<GoogleCloudRunOpV2ConditionResponse>> getConditions() {
+    public Output<List<GoogleCloudRunOpV2ConditionResponse>> conditions() {
         return this.conditions;
     }
     /**
@@ -106,7 +107,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The creation time.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -120,7 +121,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Email address of the authenticated creator.
      * 
      */
-    public Output<String> getCreator() {
+    public Output<String> creator() {
         return this.creator;
     }
     /**
@@ -134,7 +135,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The deletion time.
      * 
      */
-    public Output<String> getDeleteTime() {
+    public Output<String> deleteTime() {
         return this.deleteTime;
     }
     /**
@@ -148,7 +149,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return User-provided description of the Service.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -162,7 +163,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A system-generated fingerprint for this version of the resource. May be used to detect modification conflict during updates.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -176,7 +177,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return For a deleted resource, the time after which it will be permamently deleted.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -190,7 +191,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return A number that monotonically increases every time the user modifies the desired state.
      * 
      */
-    public Output<String> getGeneration() {
+    public Output<String> generation() {
         return this.generation;
     }
     /**
@@ -204,7 +205,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
      * 
      */
-    public Output<String> getIngress() {
+    public Output<String> ingress() {
         return this.ingress;
     }
     /**
@@ -218,7 +219,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run will populate some labels with 'run.googleapis.com' or 'serving.knative.dev' namespaces. Those labels are read-only, and user changes will not be preserved.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -232,7 +233,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Email address of the last authenticated modifier.
      * 
      */
-    public Output<String> getLastModifier() {
+    public Output<String> lastModifier() {
         return this.lastModifier;
     }
     /**
@@ -246,7 +247,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Name of the last created revision. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<String> getLatestCreatedRevision() {
+    public Output<String> latestCreatedRevision() {
         return this.latestCreatedRevision;
     }
     /**
@@ -260,7 +261,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Name of the latest revision that is serving traffic. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<String> getLatestReadyRevision() {
+    public Output<String> latestReadyRevision() {
         return this.latestReadyRevision;
     }
     /**
@@ -274,7 +275,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The launch stage as defined by [Google Cloud Platform Launch Stages](http://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
      * 
      */
-    public Output<String> getLaunchStage() {
+    public Output<String> launchStage() {
         return this.launchStage;
     }
     /**
@@ -288,7 +289,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format: projects/{project}/locations/{location}/services/{service_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -302,7 +303,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The generation of this Service currently serving traffic. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<String> getObservedGeneration() {
+    public Output<String> observedGeneration() {
         return this.observedGeneration;
     }
     /**
@@ -316,7 +317,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Returns true if the Service is currently being acted upon by the system to bring it into the desired state. When a new Service is created, or an existing one is updated, Cloud Run will asynchronously perform all necessary steps to bring the Service to the desired serving state. This process is called reconciliation. While reconciliation is in process, `observed_generation`, `latest_ready_revison`, `traffic_statuses`, and `uri` will have transient values that might mismatch the intended state: Once reconciliation is over (and this field is false), there are two possible outcomes: reconciliation succeeded and the serving state matches the Service, or there was an error, and reconciliation failed. This state can be found in `terminal_condition.state`. If reconciliation succeeded, the following fields will match: `traffic` and `traffic_statuses`, `observed_generation` and `generation`, `latest_ready_revision` and `latest_created_revision`. If reconciliation failed, `traffic_statuses`, `observed_generation`, and `latest_ready_revision` will have the state of the last serving revision, or empty for newly created Services. Additional information on the failure can be found in `terminal_condition` and `conditions`.
      * 
      */
-    public Output<Boolean> getReconciling() {
+    public Output<Boolean> reconciling() {
         return this.reconciling;
     }
     /**
@@ -330,7 +331,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The template used to create revisions for this Service.
      * 
      */
-    public Output<GoogleCloudRunOpV2RevisionTemplateResponse> getTemplate() {
+    public Output<GoogleCloudRunOpV2RevisionTemplateResponse> template() {
         return this.template;
     }
     /**
@@ -344,7 +345,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The Condition of this Service, containing its readiness status, and detailed error information in case it did not reach a serving state. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<GoogleCloudRunOpV2ConditionResponse> getTerminalCondition() {
+    public Output<GoogleCloudRunOpV2ConditionResponse> terminalCondition() {
         return this.terminalCondition;
     }
     /**
@@ -358,7 +359,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Specifies how to distribute traffic over a collection of Revisions belonging to the Service. If traffic is empty or not provided, defaults to 100% traffic to the latest `Ready` Revision.
      * 
      */
-    public Output<List<GoogleCloudRunOpV2TrafficTargetResponse>> getTraffic() {
+    public Output<List<GoogleCloudRunOpV2TrafficTargetResponse>> traffic() {
         return this.traffic;
     }
     /**
@@ -372,7 +373,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Detailed status information for corresponding traffic targets. See comments in `reconciling` for additional information on reconciliation process in Cloud Run.
      * 
      */
-    public Output<List<GoogleCloudRunOpV2TrafficTargetStatusResponse>> getTrafficStatuses() {
+    public Output<List<GoogleCloudRunOpV2TrafficTargetStatusResponse>> trafficStatuses() {
         return this.trafficStatuses;
     }
     /**
@@ -386,7 +387,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return Server assigned unique identifier for the trigger. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -400,7 +401,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The last-modified time.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -414,7 +415,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @return The main URI in which this Service is serving traffic.
      * 
      */
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -440,7 +441,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:run/v2:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:run/v2:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Service(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

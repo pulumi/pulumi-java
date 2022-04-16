@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,22 +22,22 @@ public final class JobOutputLocationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
     @Import(name="bucketOwner")
       private final @Nullable Output<String> bucketOwner;
 
-    public Output<String> getBucketOwner() {
-        return this.bucketOwner == null ? Output.empty() : this.bucketOwner;
+    public Output<String> bucketOwner() {
+        return this.bucketOwner == null ? Codegen.empty() : this.bucketOwner;
     }
 
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public JobOutputLocationArgs(
@@ -49,9 +50,9 @@ public final class JobOutputLocationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private JobOutputLocationArgs() {
-        this.bucket = Output.empty();
-        this.bucketOwner = Output.empty();
-        this.key = Output.empty();
+        this.bucket = Codegen.empty();
+        this.bucketOwner = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class JobOutputLocationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bucketOwner(@Nullable String bucketOwner) {
-            this.bucketOwner = Output.ofNullable(bucketOwner);
+            this.bucketOwner = Codegen.ofNullable(bucketOwner);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -99,7 +100,7 @@ public final class JobOutputLocationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public JobOutputLocationArgs build() {
             return new JobOutputLocationArgs(bucket, bucketOwner, key);

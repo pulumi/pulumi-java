@@ -107,6 +107,7 @@ import io.pulumi.azurenative.datafactory.inputs.XeroLinkedServiceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoLinkedServiceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -124,7 +125,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
-    public Output<String> getFactoryName() {
+    public Output<String> factoryName() {
         return this.factoryName;
     }
 
@@ -135,8 +136,8 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServiceName")
       private final @Nullable Output<String> linkedServiceName;
 
-    public Output<String> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+    public Output<String> linkedServiceName() {
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<Object> properties;
 
-    public Output<Object> getProperties() {
+    public Output<Object> properties() {
         return this.properties;
     }
 
@@ -157,7 +158,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -173,10 +174,10 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkedServiceArgs() {
-        this.factoryName = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.factoryName = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedServiceName(@Nullable String linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder properties(Output<Object> properties) {

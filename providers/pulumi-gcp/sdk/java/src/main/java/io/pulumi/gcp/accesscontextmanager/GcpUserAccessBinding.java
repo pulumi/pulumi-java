@@ -6,6 +6,7 @@ package io.pulumi.gcp.accesscontextmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.GcpUserAccessBindingArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.GcpUserAccessBindingState;
@@ -43,7 +44,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * @return Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
      * 
      */
-    public Output<String> getAccessLevels() {
+    public Output<String> accessLevels() {
         return this.accessLevels;
     }
     /**
@@ -57,7 +58,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * @return Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
      * 
      */
-    public Output<String> getGroupKey() {
+    public Output<String> groupKey() {
         return this.groupKey;
     }
     /**
@@ -75,7 +76,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +90,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * @return Required. ID of the parent organization.
      * 
      */
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -115,7 +116,7 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GcpUserAccessBinding(String name, GcpUserAccessBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding", name, args == null ? GcpUserAccessBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding", name, args == null ? GcpUserAccessBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GcpUserAccessBinding(String name, Output<String> id, @Nullable GcpUserAccessBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

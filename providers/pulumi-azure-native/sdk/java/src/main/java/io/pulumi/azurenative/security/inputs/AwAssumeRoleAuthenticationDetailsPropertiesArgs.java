@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -36,7 +37,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     @Import(name="awsAssumeRoleArn", required=true)
       private final Output<String> awsAssumeRoleArn;
 
-    public Output<String> getAwsAssumeRoleArn() {
+    public Output<String> awsAssumeRoleArn() {
         return this.awsAssumeRoleArn;
     }
 
@@ -47,7 +48,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     @Import(name="awsExternalId", required=true)
       private final Output<String> awsExternalId;
 
-    public Output<String> getAwsExternalId() {
+    public Output<String> awsExternalId() {
         return this.awsExternalId;
     }
 
@@ -61,9 +62,9 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
     }
 
     private AwAssumeRoleAuthenticationDetailsPropertiesArgs() {
-        this.authenticationType = Output.empty();
-        this.awsAssumeRoleArn = Output.empty();
-        this.awsExternalId = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.awsAssumeRoleArn = Codegen.empty();
+        this.awsExternalId = Codegen.empty();
     }
 
     public static Builder builder() {

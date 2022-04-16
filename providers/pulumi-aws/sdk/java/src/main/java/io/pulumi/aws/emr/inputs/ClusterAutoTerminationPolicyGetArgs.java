@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ClusterAutoTerminationPolicyGetArgs extends io.pulumi.resourc
     @Import(name="idleTimeout")
       private final @Nullable Output<Integer> idleTimeout;
 
-    public Output<Integer> getIdleTimeout() {
-        return this.idleTimeout == null ? Output.empty() : this.idleTimeout;
+    public Output<Integer> idleTimeout() {
+        return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 
     public ClusterAutoTerminationPolicyGetArgs(@Nullable Output<Integer> idleTimeout) {
@@ -30,7 +31,7 @@ public final class ClusterAutoTerminationPolicyGetArgs extends io.pulumi.resourc
     }
 
     private ClusterAutoTerminationPolicyGetArgs() {
-        this.idleTimeout = Output.empty();
+        this.idleTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ClusterAutoTerminationPolicyGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder idleTimeout(@Nullable Integer idleTimeout) {
-            this.idleTimeout = Output.ofNullable(idleTimeout);
+            this.idleTimeout = Codegen.ofNullable(idleTimeout);
             return this;
         }        public ClusterAutoTerminationPolicyGetArgs build() {
             return new ClusterAutoTerminationPolicyGetArgs(idleTimeout);

@@ -23,7 +23,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
     @Import(name="assetName", required=true)
       private final String assetName;
 
-    public String getAssetName() {
+    public String assetName() {
         return this.assetName;
     }
 
@@ -34,7 +34,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
     @Import(name="created", required=true)
       private final String created;
 
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
 
@@ -45,7 +45,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
     @Import(name="defaultContentKeyPolicyName", required=true)
       private final String defaultContentKeyPolicyName;
 
-    public String getDefaultContentKeyPolicyName() {
+    public String defaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
 
@@ -56,7 +56,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
     @Import(name="endTime", required=true)
       private final String endTime;
 
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
 
@@ -67,7 +67,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -78,7 +78,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -89,7 +89,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
     @Import(name="streamingLocatorId", required=true)
       private final String streamingLocatorId;
 
-    public String getStreamingLocatorId() {
+    public String streamingLocatorId() {
         return this.streamingLocatorId;
     }
 
@@ -100,7 +100,7 @@ public final class AssetStreamingLocatorResponse extends io.pulumi.resources.Inv
     @Import(name="streamingPolicyName", required=true)
       private final String streamingPolicyName;
 
-    public String getStreamingPolicyName() {
+    public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
 

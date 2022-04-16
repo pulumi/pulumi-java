@@ -5,6 +5,7 @@ package io.pulumi.azurenative.consumption.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
-    public Output<String> getEndDate() {
-        return this.endDate == null ? Output.empty() : this.endDate;
+    public Output<String> endDate() {
+        return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="startDate", required=true)
       private final Output<String> startDate;
 
-    public Output<String> getStartDate() {
+    public Output<String> startDate() {
         return this.startDate;
     }
 
@@ -48,8 +49,8 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BudgetTimePeriodArgs() {
-        this.endDate = Output.empty();
-        this.startDate = Output.empty();
+        this.endDate = Codegen.empty();
+        this.startDate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Output.ofNullable(endDate);
+            this.endDate = Codegen.ofNullable(endDate);
             return this;
         }
         public Builder startDate(Output<String> startDate) {

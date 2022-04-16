@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Administrator username for the server. Once created it cannot be changed.
      * 
      */
-    public Output</* @Nullable */ String> getAdministratorLogin() {
+    public Output</* @Nullable */ String> administratorLogin() {
         return this.administratorLogin;
     }
     /**
@@ -59,7 +60,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The Azure Active Directory identity of the server.
      * 
      */
-    public Output</* @Nullable */ ServerExternalAdministratorResponse> getAdministrators() {
+    public Output</* @Nullable */ ServerExternalAdministratorResponse> administrators() {
         return this.administrators;
     }
     /**
@@ -73,7 +74,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The fully qualified domain name of the server.
      * 
      */
-    public Output<String> getFullyQualifiedDomainName() {
+    public Output<String> fullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName;
     }
     /**
@@ -87,7 +88,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The Azure Active Directory identity of the server.
      * 
      */
-    public Output</* @Nullable */ ResourceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ResourceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -101,7 +102,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return A CMK URI of the key to use for encryption.
      * 
      */
-    public Output</* @Nullable */ String> getKeyId() {
+    public Output</* @Nullable */ String> keyId() {
         return this.keyId;
     }
     /**
@@ -115,7 +116,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Kind of sql server. This is metadata used for the Azure portal experience.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -129,7 +130,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -143,7 +144,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Minimal TLS version. Allowed values: '1.0', '1.1', '1.2'
      * 
      */
-    public Output</* @Nullable */ String> getMinimalTlsVersion() {
+    public Output</* @Nullable */ String> minimalTlsVersion() {
         return this.minimalTlsVersion;
     }
     /**
@@ -157,7 +158,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -171,7 +172,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The resource id of a user assigned identity to be used by default.
      * 
      */
-    public Output</* @Nullable */ String> getPrimaryUserAssignedIdentityId() {
+    public Output</* @Nullable */ String> primaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId;
     }
     /**
@@ -185,7 +186,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return List of private endpoint connections on a server
      * 
      */
-    public Output<List<ServerPrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<ServerPrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -199,7 +200,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Whether or not public endpoint access is allowed for this server.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -213,7 +214,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The state of the server.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -227,7 +228,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -241,7 +242,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -255,7 +256,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return The version of the server.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
     /**
@@ -269,7 +270,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @return Whether or not existing server has a workspace created and if it allows connection from workspace
      * 
      */
-    public Output<String> getWorkspaceFeature() {
+    public Output<String> workspaceFeature() {
         return this.workspaceFeature;
     }
 
@@ -295,7 +296,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Server(String name, ServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Server(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

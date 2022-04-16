@@ -9,6 +9,7 @@ import io.pulumi.aws.mediastore.inputs.ContainerPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ContainerPolicy extends io.pulumi.resources.CustomResource {
      * @return The name of the container.
      * 
      */
-    public Output<String> getContainerName() {
+    public Output<String> containerName() {
         return this.containerName;
     }
     /**
@@ -53,7 +54,7 @@ public class ContainerPolicy extends io.pulumi.resources.CustomResource {
      * @return The contents of the policy.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -79,7 +80,7 @@ public class ContainerPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ContainerPolicy(String name, ContainerPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mediastore/containerPolicy:ContainerPolicy", name, args == null ? ContainerPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mediastore/containerPolicy:ContainerPolicy", name, args == null ? ContainerPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ContainerPolicy(String name, Output<String> id, @Nullable ContainerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.inputs.ArtifactParameterPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="artifactId")
       private final @Nullable Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
-        return this.artifactId == null ? Output.empty() : this.artifactId;
+    public Output<String> artifactId() {
+        return this.artifactId == null ? Codegen.empty() : this.artifactId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="artifactTitle")
       private final @Nullable Output<String> artifactTitle;
 
-    public Output<String> getArtifactTitle() {
-        return this.artifactTitle == null ? Output.empty() : this.artifactTitle;
+    public Output<String> artifactTitle() {
+        return this.artifactTitle == null ? Codegen.empty() : this.artifactTitle;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="deploymentStatusMessage")
       private final @Nullable Output<String> deploymentStatusMessage;
 
-    public Output<String> getDeploymentStatusMessage() {
-        return this.deploymentStatusMessage == null ? Output.empty() : this.deploymentStatusMessage;
+    public Output<String> deploymentStatusMessage() {
+        return this.deploymentStatusMessage == null ? Codegen.empty() : this.deploymentStatusMessage;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="installTime")
       private final @Nullable Output<String> installTime;
 
-    public Output<String> getInstallTime() {
-        return this.installTime == null ? Output.empty() : this.installTime;
+    public Output<String> installTime() {
+        return this.installTime == null ? Codegen.empty() : this.installTime;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="parameters")
       private final @Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters;
 
-    public Output<List<ArtifactParameterPropertiesArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<ArtifactParameterPropertiesArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     @Import(name="vmExtensionStatusMessage")
       private final @Nullable Output<String> vmExtensionStatusMessage;
 
-    public Output<String> getVmExtensionStatusMessage() {
-        return this.vmExtensionStatusMessage == null ? Output.empty() : this.vmExtensionStatusMessage;
+    public Output<String> vmExtensionStatusMessage() {
+        return this.vmExtensionStatusMessage == null ? Codegen.empty() : this.vmExtensionStatusMessage;
     }
 
     public ArtifactInstallPropertiesArgs(
@@ -115,13 +116,13 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ArtifactInstallPropertiesArgs() {
-        this.artifactId = Output.empty();
-        this.artifactTitle = Output.empty();
-        this.deploymentStatusMessage = Output.empty();
-        this.installTime = Output.empty();
-        this.parameters = Output.empty();
-        this.status = Output.empty();
-        this.vmExtensionStatusMessage = Output.empty();
+        this.artifactId = Codegen.empty();
+        this.artifactTitle = Codegen.empty();
+        this.deploymentStatusMessage = Codegen.empty();
+        this.installTime = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.status = Codegen.empty();
+        this.vmExtensionStatusMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder artifactId(@Nullable String artifactId) {
-            this.artifactId = Output.ofNullable(artifactId);
+            this.artifactId = Codegen.ofNullable(artifactId);
             return this;
         }
         public Builder artifactTitle(@Nullable Output<String> artifactTitle) {
@@ -169,7 +170,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder artifactTitle(@Nullable String artifactTitle) {
-            this.artifactTitle = Output.ofNullable(artifactTitle);
+            this.artifactTitle = Codegen.ofNullable(artifactTitle);
             return this;
         }
         public Builder deploymentStatusMessage(@Nullable Output<String> deploymentStatusMessage) {
@@ -177,7 +178,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
-            this.deploymentStatusMessage = Output.ofNullable(deploymentStatusMessage);
+            this.deploymentStatusMessage = Codegen.ofNullable(deploymentStatusMessage);
             return this;
         }
         public Builder installTime(@Nullable Output<String> installTime) {
@@ -185,7 +186,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder installTime(@Nullable String installTime) {
-            this.installTime = Output.ofNullable(installTime);
+            this.installTime = Codegen.ofNullable(installTime);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ArtifactParameterPropertiesArgs>> parameters) {
@@ -193,7 +194,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder parameters(@Nullable List<ArtifactParameterPropertiesArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ArtifactParameterPropertiesArgs... parameters) {
@@ -204,7 +205,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder vmExtensionStatusMessage(@Nullable Output<String> vmExtensionStatusMessage) {
@@ -212,7 +213,7 @@ public final class ArtifactInstallPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
-            this.vmExtensionStatusMessage = Output.ofNullable(vmExtensionStatusMessage);
+            this.vmExtensionStatusMessage = Codegen.ofNullable(vmExtensionStatusMessage);
             return this;
         }        public ArtifactInstallPropertiesArgs build() {
             return new ArtifactInstallPropertiesArgs(artifactId, artifactTitle, deploymentStatusMessage, installTime, parameters, status, vmExtensionStatusMessage);

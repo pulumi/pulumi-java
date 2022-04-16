@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3outposts.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class BucketAbortIncompleteMultipartUploadArgs extends io.pulumi.re
     @Import(name="daysAfterInitiation", required=true)
       private final Output<Integer> daysAfterInitiation;
 
-    public Output<Integer> getDaysAfterInitiation() {
+    public Output<Integer> daysAfterInitiation() {
         return this.daysAfterInitiation;
     }
 
@@ -33,7 +34,7 @@ public final class BucketAbortIncompleteMultipartUploadArgs extends io.pulumi.re
     }
 
     private BucketAbortIncompleteMultipartUploadArgs() {
-        this.daysAfterInitiation = Output.empty();
+        this.daysAfterInitiation = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -18,6 +18,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -52,7 +53,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return The size of this Cache, in GB.
      * 
      */
-    public Output</* @Nullable */ Integer> getCacheSizeGB() {
+    public Output</* @Nullable */ Integer> cacheSizeGB() {
         return this.cacheSizeGB;
     }
     /**
@@ -66,7 +67,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Specifies Directory Services settings of the cache.
      * 
      */
-    public Output</* @Nullable */ CacheDirectorySettingsResponse> getDirectoryServicesSettings() {
+    public Output</* @Nullable */ CacheDirectorySettingsResponse> directoryServicesSettings() {
         return this.directoryServicesSettings;
     }
     /**
@@ -80,7 +81,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Specifies encryption settings of the cache.
      * 
      */
-    public Output</* @Nullable */ CacheEncryptionSettingsResponse> getEncryptionSettings() {
+    public Output</* @Nullable */ CacheEncryptionSettingsResponse> encryptionSettings() {
         return this.encryptionSettings;
     }
     /**
@@ -94,7 +95,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Health of the Cache.
      * 
      */
-    public Output<CacheHealthResponse> getHealth() {
+    public Output<CacheHealthResponse> health() {
         return this.health;
     }
     /**
@@ -108,7 +109,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return The identity of the cache, if configured.
      * 
      */
-    public Output</* @Nullable */ CacheIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ CacheIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -122,7 +123,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Region name string.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -136,7 +137,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Array of IP addresses that can be used by clients mounting this Cache.
      * 
      */
-    public Output<List<String>> getMountAddresses() {
+    public Output<List<String>> mountAddresses() {
         return this.mountAddresses;
     }
     /**
@@ -150,7 +151,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Name of Cache.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -164,7 +165,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Specifies network settings of the cache.
      * 
      */
-    public Output</* @Nullable */ CacheNetworkSettingsResponse> getNetworkSettings() {
+    public Output</* @Nullable */ CacheNetworkSettingsResponse> networkSettings() {
         return this.networkSettings;
     }
     /**
@@ -178,7 +179,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -192,7 +193,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Specifies security settings of the cache.
      * 
      */
-    public Output</* @Nullable */ CacheSecuritySettingsResponse> getSecuritySettings() {
+    public Output</* @Nullable */ CacheSecuritySettingsResponse> securitySettings() {
         return this.securitySettings;
     }
     /**
@@ -206,7 +207,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return SKU for the Cache.
      * 
      */
-    public Output</* @Nullable */ CacheResponseSku> getSku() {
+    public Output</* @Nullable */ CacheResponseSku> sku() {
         return this.sku;
     }
     /**
@@ -220,7 +221,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Subnet used for the Cache.
      * 
      */
-    public Output</* @Nullable */ String> getSubnet() {
+    public Output</* @Nullable */ String> subnet() {
         return this.subnet;
     }
     /**
@@ -234,7 +235,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -248,7 +249,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -262,7 +263,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Type of the Cache; Microsoft.StorageCache/Cache
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -276,7 +277,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Upgrade status of the Cache.
      * 
      */
-    public Output</* @Nullable */ CacheUpgradeStatusResponse> getUpgradeStatus() {
+    public Output</* @Nullable */ CacheUpgradeStatusResponse> upgradeStatus() {
         return this.upgradeStatus;
     }
 
@@ -302,7 +303,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cache(String name, CacheArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagecache:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storagecache:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cache(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

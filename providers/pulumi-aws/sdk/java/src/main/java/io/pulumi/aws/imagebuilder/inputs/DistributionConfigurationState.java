@@ -6,6 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
-    public Output<String> getDateCreated() {
-        return this.dateCreated == null ? Output.empty() : this.dateCreated;
+    public Output<String> dateCreated() {
+        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="dateUpdated")
       private final @Nullable Output<String> dateUpdated;
 
-    public Output<String> getDateUpdated() {
-        return this.dateUpdated == null ? Output.empty() : this.dateUpdated;
+    public Output<String> dateUpdated() {
+        return this.dateUpdated == null ? Codegen.empty() : this.dateUpdated;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="distributions")
       private final @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
 
-    public Output<List<DistributionConfigurationDistributionGetArgs>> getDistributions() {
-        return this.distributions == null ? Output.empty() : this.distributions;
+    public Output<List<DistributionConfigurationDistributionGetArgs>> distributions() {
+        return this.distributions == null ? Codegen.empty() : this.distributions;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public DistributionConfigurationState(
@@ -125,14 +126,14 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
     }
 
     private DistributionConfigurationState() {
-        this.arn = Output.empty();
-        this.dateCreated = Output.empty();
-        this.dateUpdated = Output.empty();
-        this.description = Output.empty();
-        this.distributions = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.dateCreated = Codegen.empty();
+        this.dateUpdated = Codegen.empty();
+        this.description = Codegen.empty();
+        this.distributions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
@@ -182,7 +183,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Output.ofNullable(dateCreated);
+            this.dateCreated = Codegen.ofNullable(dateCreated);
             return this;
         }
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
@@ -190,7 +191,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder dateUpdated(@Nullable String dateUpdated) {
-            this.dateUpdated = Output.ofNullable(dateUpdated);
+            this.dateUpdated = Codegen.ofNullable(dateUpdated);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -198,7 +199,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder distributions(@Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions) {
@@ -206,7 +207,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder distributions(@Nullable List<DistributionConfigurationDistributionGetArgs> distributions) {
-            this.distributions = Output.ofNullable(distributions);
+            this.distributions = Codegen.ofNullable(distributions);
             return this;
         }
         public Builder distributions(DistributionConfigurationDistributionGetArgs... distributions) {
@@ -217,7 +218,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -225,7 +226,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -233,7 +234,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public DistributionConfigurationState build() {
             return new DistributionConfigurationState(arn, dateCreated, dateUpdated, description, distributions, name, tags, tagsAll);

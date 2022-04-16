@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.enums.Transform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,8 +32,8 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
     @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
-    public Output<Boolean> getNegateCondition() {
-        return this.negateCondition == null ? Output.empty() : this.negateCondition;
+    public Output<Boolean> negateCondition() {
+        return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
     @Import(name="rulesEngineMatchValue", required=true)
       private final Output<List<String>> rulesEngineMatchValue;
 
-    public Output<List<String>> getRulesEngineMatchValue() {
+    public Output<List<String>> rulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
     }
 
@@ -53,7 +54,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
     @Import(name="rulesEngineMatchVariable", required=true)
       private final Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
 
-    public Output<Either<String,RulesEngineMatchVariable>> getRulesEngineMatchVariable() {
+    public Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
     }
 
@@ -64,7 +65,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
     @Import(name="rulesEngineOperator", required=true)
       private final Output<Either<String,RulesEngineOperator>> rulesEngineOperator;
 
-    public Output<Either<String,RulesEngineOperator>> getRulesEngineOperator() {
+    public Output<Either<String,RulesEngineOperator>> rulesEngineOperator() {
         return this.rulesEngineOperator;
     }
 
@@ -75,8 +76,8 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
     @Import(name="selector")
       private final @Nullable Output<String> selector;
 
-    public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+    public Output<String> selector() {
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
     @Import(name="transforms")
       private final @Nullable Output<List<Either<String,Transform>>> transforms;
 
-    public Output<List<Either<String,Transform>>> getTransforms() {
-        return this.transforms == null ? Output.empty() : this.transforms;
+    public Output<List<Either<String,Transform>>> transforms() {
+        return this.transforms == null ? Codegen.empty() : this.transforms;
     }
 
     public RulesEngineMatchConditionArgs(
@@ -106,12 +107,12 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
     }
 
     private RulesEngineMatchConditionArgs() {
-        this.negateCondition = Output.empty();
-        this.rulesEngineMatchValue = Output.empty();
-        this.rulesEngineMatchVariable = Output.empty();
-        this.rulesEngineOperator = Output.empty();
-        this.selector = Output.empty();
-        this.transforms = Output.empty();
+        this.negateCondition = Codegen.empty();
+        this.rulesEngineMatchValue = Codegen.empty();
+        this.rulesEngineMatchVariable = Codegen.empty();
+        this.rulesEngineOperator = Codegen.empty();
+        this.selector = Codegen.empty();
+        this.transforms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = Output.ofNullable(negateCondition);
+            this.negateCondition = Codegen.ofNullable(negateCondition);
             return this;
         }
         public Builder rulesEngineMatchValue(Output<List<String>> rulesEngineMatchValue) {
@@ -184,7 +185,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }
         public Builder transforms(@Nullable Output<List<Either<String,Transform>>> transforms) {
@@ -192,7 +193,7 @@ public final class RulesEngineMatchConditionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder transforms(@Nullable List<Either<String,Transform>> transforms) {
-            this.transforms = Output.ofNullable(transforms);
+            this.transforms = Codegen.ofNullable(transforms);
             return this;
         }
         public Builder transforms(Either<String,Transform>... transforms) {

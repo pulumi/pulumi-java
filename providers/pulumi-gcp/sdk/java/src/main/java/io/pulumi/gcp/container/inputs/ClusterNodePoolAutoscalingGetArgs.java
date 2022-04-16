@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class ClusterNodePoolAutoscalingGetArgs extends io.pulumi.resources
     @Import(name="maxNodeCount", required=true)
       private final Output<Integer> maxNodeCount;
 
-    public Output<Integer> getMaxNodeCount() {
+    public Output<Integer> maxNodeCount() {
         return this.maxNodeCount;
     }
 
     @Import(name="minNodeCount", required=true)
       private final Output<Integer> minNodeCount;
 
-    public Output<Integer> getMinNodeCount() {
+    public Output<Integer> minNodeCount() {
         return this.minNodeCount;
     }
 
@@ -35,8 +36,8 @@ public final class ClusterNodePoolAutoscalingGetArgs extends io.pulumi.resources
     }
 
     private ClusterNodePoolAutoscalingGetArgs() {
-        this.maxNodeCount = Output.empty();
-        this.minNodeCount = Output.empty();
+        this.maxNodeCount = Codegen.empty();
+        this.minNodeCount = Codegen.empty();
     }
 
     public static Builder builder() {

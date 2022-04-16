@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
 
@@ -35,8 +36,8 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
-    public Output<String> getAmazonAddress() {
-        return this.amazonAddress == null ? Output.empty() : this.amazonAddress;
+    public Output<String> amazonAddress() {
+        return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="bgpAsn", required=true)
       private final Output<Integer> bgpAsn;
 
-    public Output<Integer> getBgpAsn() {
+    public Output<Integer> bgpAsn() {
         return this.bgpAsn;
     }
 
@@ -57,8 +58,8 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> getBgpAuthKey() {
-        return this.bgpAuthKey == null ? Output.empty() : this.bgpAuthKey;
+    public Output<String> bgpAuthKey() {
+        return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -79,8 +80,8 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
-    public Output<String> getCustomerAddress() {
-        return this.customerAddress == null ? Output.empty() : this.customerAddress;
+    public Output<String> customerAddress() {
+        return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="dxGatewayId", required=true)
       private final Output<String> dxGatewayId;
 
-    public Output<String> getDxGatewayId() {
+    public Output<String> dxGatewayId() {
         return this.dxGatewayId;
     }
 
@@ -102,8 +103,8 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
-        return this.mtu == null ? Output.empty() : this.mtu;
+    public Output<Integer> mtu() {
+        return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
     /**
@@ -113,15 +114,15 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="sitelinkEnabled")
       private final @Nullable Output<Boolean> sitelinkEnabled;
 
-    public Output<Boolean> getSitelinkEnabled() {
-        return this.sitelinkEnabled == null ? Output.empty() : this.sitelinkEnabled;
+    public Output<Boolean> sitelinkEnabled() {
+        return this.sitelinkEnabled == null ? Codegen.empty() : this.sitelinkEnabled;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     @Import(name="vlan", required=true)
       private final Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan;
     }
 
@@ -174,18 +175,18 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
     }
 
     private TransitVirtualInterfaceArgs() {
-        this.addressFamily = Output.empty();
-        this.amazonAddress = Output.empty();
-        this.bgpAsn = Output.empty();
-        this.bgpAuthKey = Output.empty();
-        this.connectionId = Output.empty();
-        this.customerAddress = Output.empty();
-        this.dxGatewayId = Output.empty();
-        this.mtu = Output.empty();
-        this.name = Output.empty();
-        this.sitelinkEnabled = Output.empty();
-        this.tags = Output.empty();
-        this.vlan = Output.empty();
+        this.addressFamily = Codegen.empty();
+        this.amazonAddress = Codegen.empty();
+        this.bgpAsn = Codegen.empty();
+        this.bgpAuthKey = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.customerAddress = Codegen.empty();
+        this.dxGatewayId = Codegen.empty();
+        this.mtu = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sitelinkEnabled = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vlan = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder amazonAddress(@Nullable String amazonAddress) {
-            this.amazonAddress = Output.ofNullable(amazonAddress);
+            this.amazonAddress = Codegen.ofNullable(amazonAddress);
             return this;
         }
         public Builder bgpAsn(Output<Integer> bgpAsn) {
@@ -259,7 +260,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
-            this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
+            this.bgpAuthKey = Codegen.ofNullable(bgpAuthKey);
             return this;
         }
         public Builder connectionId(Output<String> connectionId) {
@@ -275,7 +276,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customerAddress(@Nullable String customerAddress) {
-            this.customerAddress = Output.ofNullable(customerAddress);
+            this.customerAddress = Codegen.ofNullable(customerAddress);
             return this;
         }
         public Builder dxGatewayId(Output<String> dxGatewayId) {
@@ -291,7 +292,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Output.ofNullable(mtu);
+            this.mtu = Codegen.ofNullable(mtu);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -299,7 +300,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sitelinkEnabled(@Nullable Output<Boolean> sitelinkEnabled) {
@@ -307,7 +308,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sitelinkEnabled(@Nullable Boolean sitelinkEnabled) {
-            this.sitelinkEnabled = Output.ofNullable(sitelinkEnabled);
+            this.sitelinkEnabled = Codegen.ofNullable(sitelinkEnabled);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -315,7 +316,7 @@ public final class TransitVirtualInterfaceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vlan(Output<Integer> vlan) {

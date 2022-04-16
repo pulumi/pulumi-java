@@ -10,6 +10,7 @@ import io.pulumi.aws.codestarnotifications.outputs.NotificationRuleTarget;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @return The codestar notification rule ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @return The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
      * 
      */
-    public Output<String> getDetailType() {
+    public Output<String> detailType() {
         return this.detailType;
     }
     /**
@@ -72,7 +73,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
      * 
      */
-    public Output<List<String>> getEventTypeIds() {
+    public Output<List<String>> eventTypeIds() {
         return this.eventTypeIds;
     }
     /**
@@ -86,7 +87,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @return The name of notification rule.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @return The ARN of the resource to associate with the notification rule.
      * 
      */
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
     /**
@@ -114,7 +115,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @return The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
     /**
@@ -128,7 +129,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -156,7 +157,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @return Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
      * 
      */
-    public Output</* @Nullable */ List<NotificationRuleTarget>> getTargets() {
+    public Output</* @Nullable */ List<NotificationRuleTarget>> targets() {
         return this.targets;
     }
 
@@ -182,7 +183,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationRule(String name, NotificationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codestarnotifications/notificationRule:NotificationRule", name, args == null ? NotificationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codestarnotifications/notificationRule:NotificationRule", name, args == null ? NotificationRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationRule(String name, Output<String> id, @Nullable NotificationRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.inputs.BucketRedirectRuleArgs;
 import io.pulumi.awsnative.s3.inputs.BucketRoutingRuleConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,15 +27,15 @@ public final class BucketRoutingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="redirectRule", required=true)
       private final Output<BucketRedirectRuleArgs> redirectRule;
 
-    public Output<BucketRedirectRuleArgs> getRedirectRule() {
+    public Output<BucketRedirectRuleArgs> redirectRule() {
         return this.redirectRule;
     }
 
     @Import(name="routingRuleCondition")
       private final @Nullable Output<BucketRoutingRuleConditionArgs> routingRuleCondition;
 
-    public Output<BucketRoutingRuleConditionArgs> getRoutingRuleCondition() {
-        return this.routingRuleCondition == null ? Output.empty() : this.routingRuleCondition;
+    public Output<BucketRoutingRuleConditionArgs> routingRuleCondition() {
+        return this.routingRuleCondition == null ? Codegen.empty() : this.routingRuleCondition;
     }
 
     public BucketRoutingRuleArgs(
@@ -45,8 +46,8 @@ public final class BucketRoutingRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BucketRoutingRuleArgs() {
-        this.redirectRule = Output.empty();
-        this.routingRuleCondition = Output.empty();
+        this.redirectRule = Codegen.empty();
+        this.routingRuleCondition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class BucketRoutingRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder routingRuleCondition(@Nullable BucketRoutingRuleConditionArgs routingRuleCondition) {
-            this.routingRuleCondition = Output.ofNullable(routingRuleCondition);
+            this.routingRuleCondition = Codegen.ofNullable(routingRuleCondition);
             return this;
         }        public BucketRoutingRuleArgs build() {
             return new BucketRoutingRuleArgs(redirectRule, routingRuleCondition);

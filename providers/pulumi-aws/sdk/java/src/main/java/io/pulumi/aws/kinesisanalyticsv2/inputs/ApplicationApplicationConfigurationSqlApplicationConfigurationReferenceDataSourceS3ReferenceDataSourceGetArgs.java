@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -31,7 +32,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="fileKey", required=true)
       private final Output<String> fileKey;
 
-    public Output<String> getFileKey() {
+    public Output<String> fileKey() {
         return this.fileKey;
     }
 
@@ -43,8 +44,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs() {
-        this.bucketArn = Output.empty();
-        this.fileKey = Output.empty();
+        this.bucketArn = Codegen.empty();
+        this.fileKey = Codegen.empty();
     }
 
     public static Builder builder() {

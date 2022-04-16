@@ -12,6 +12,7 @@ import io.pulumi.aws.budgets.outputs.BudgetActionSubscriber;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The ID of the target account for budget. Will use current user's account_id by default if omitted.
      * 
      */
-    public Output<String> getAccountId() {
+    public Output<String> accountId() {
         return this.accountId;
     }
     /**
@@ -57,7 +58,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The id of the budget action.
      * 
      */
-    public Output<String> getActionId() {
+    public Output<String> actionId() {
         return this.actionId;
     }
     /**
@@ -71,7 +72,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The trigger threshold of the action. See Action Threshold.
      * 
      */
-    public Output<BudgetActionActionThreshold> getActionThreshold() {
+    public Output<BudgetActionActionThreshold> actionThreshold() {
         return this.actionThreshold;
     }
     /**
@@ -85,7 +86,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The type of action. This defines the type of tasks that can be carried out by this action. This field also determines the format for definition. Valid values are `APPLY_IAM_POLICY`, `APPLY_SCP_POLICY`, and `RUN_SSM_DOCUMENTS`.
      * 
      */
-    public Output<String> getActionType() {
+    public Output<String> actionType() {
         return this.actionType;
     }
     /**
@@ -99,7 +100,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return This specifies if the action needs manual or automatic approval. Valid values are `AUTOMATIC` and `MANUAL`.
      * 
      */
-    public Output<String> getApprovalModel() {
+    public Output<String> approvalModel() {
         return this.approvalModel;
     }
     /**
@@ -113,7 +114,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The ARN of the budget action.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -127,7 +128,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The name of a budget.
      * 
      */
-    public Output<String> getBudgetName() {
+    public Output<String> budgetName() {
         return this.budgetName;
     }
     /**
@@ -141,7 +142,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return Specifies all of the type-specific parameters. See Definition.
      * 
      */
-    public Output<BudgetActionDefinition> getDefinition() {
+    public Output<BudgetActionDefinition> definition() {
         return this.definition;
     }
     /**
@@ -155,7 +156,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The role passed for action execution and reversion. Roles and actions must be in the same account.
      * 
      */
-    public Output<String> getExecutionRoleArn() {
+    public Output<String> executionRoleArn() {
         return this.executionRoleArn;
     }
     /**
@@ -169,7 +170,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The type of a notification. Valid values are `ACTUAL` or `FORECASTED`.
      * 
      */
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
     /**
@@ -183,7 +184,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return The status of the budget action.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -197,7 +198,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @return A list of subscribers. See Subscriber.
      * 
      */
-    public Output<List<BudgetActionSubscriber>> getSubscribers() {
+    public Output<List<BudgetActionSubscriber>> subscribers() {
         return this.subscribers;
     }
 
@@ -223,7 +224,7 @@ public class BudgetAction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BudgetAction(String name, BudgetActionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:budgets/budgetAction:BudgetAction", name, args == null ? BudgetActionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:budgets/budgetAction:BudgetAction", name, args == null ? BudgetActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BudgetAction(String name, Output<String> id, @Nullable BudgetActionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

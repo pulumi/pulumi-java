@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteTriggerFulfillmentMessageArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
     @Import(name="messages")
       private final @Nullable Output<List<CxFlowTransitionRouteTriggerFulfillmentMessageArgs>> messages;
 
-    public Output<List<CxFlowTransitionRouteTriggerFulfillmentMessageArgs>> getMessages() {
-        return this.messages == null ? Output.empty() : this.messages;
+    public Output<List<CxFlowTransitionRouteTriggerFulfillmentMessageArgs>> messages() {
+        return this.messages == null ? Codegen.empty() : this.messages;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
     @Import(name="returnPartialResponses")
       private final @Nullable Output<Boolean> returnPartialResponses;
 
-    public Output<Boolean> getReturnPartialResponses() {
-        return this.returnPartialResponses == null ? Output.empty() : this.returnPartialResponses;
+    public Output<Boolean> returnPartialResponses() {
+        return this.returnPartialResponses == null ? Codegen.empty() : this.returnPartialResponses;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
     @Import(name="tag")
       private final @Nullable Output<String> tag;
 
-    public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+    public Output<String> tag() {
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
     @Import(name="webhook")
       private final @Nullable Output<String> webhook;
 
-    public Output<String> getWebhook() {
-        return this.webhook == null ? Output.empty() : this.webhook;
+    public Output<String> webhook() {
+        return this.webhook == null ? Codegen.empty() : this.webhook;
     }
 
     public CxFlowTransitionRouteTriggerFulfillmentArgs(
@@ -74,10 +75,10 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
     }
 
     private CxFlowTransitionRouteTriggerFulfillmentArgs() {
-        this.messages = Output.empty();
-        this.returnPartialResponses = Output.empty();
-        this.tag = Output.empty();
-        this.webhook = Output.empty();
+        this.messages = Codegen.empty();
+        this.returnPartialResponses = Codegen.empty();
+        this.tag = Codegen.empty();
+        this.webhook = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
             return this;
         }
         public Builder messages(@Nullable List<CxFlowTransitionRouteTriggerFulfillmentMessageArgs> messages) {
-            this.messages = Output.ofNullable(messages);
+            this.messages = Codegen.ofNullable(messages);
             return this;
         }
         public Builder messages(CxFlowTransitionRouteTriggerFulfillmentMessageArgs... messages) {
@@ -122,7 +123,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
             return this;
         }
         public Builder returnPartialResponses(@Nullable Boolean returnPartialResponses) {
-            this.returnPartialResponses = Output.ofNullable(returnPartialResponses);
+            this.returnPartialResponses = Codegen.ofNullable(returnPartialResponses);
             return this;
         }
         public Builder tag(@Nullable Output<String> tag) {
@@ -130,7 +131,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }
         public Builder webhook(@Nullable Output<String> webhook) {
@@ -138,7 +139,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentArgs extends io.pulumi
             return this;
         }
         public Builder webhook(@Nullable String webhook) {
-            this.webhook = Output.ofNullable(webhook);
+            this.webhook = Codegen.ofNullable(webhook);
             return this;
         }        public CxFlowTransitionRouteTriggerFulfillmentArgs build() {
             return new CxFlowTransitionRouteTriggerFulfillmentArgs(messages, returnPartialResponses, tag, webhook);

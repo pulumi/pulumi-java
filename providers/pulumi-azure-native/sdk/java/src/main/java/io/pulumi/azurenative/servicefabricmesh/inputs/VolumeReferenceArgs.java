@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="destinationPath", required=true)
       private final Output<String> destinationPath;
 
-    public Output<String> getDestinationPath() {
+    public Output<String> destinationPath() {
         return this.destinationPath;
     }
 
@@ -37,7 +38,7 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,8 +49,8 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     public VolumeReferenceArgs(
@@ -62,9 +63,9 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private VolumeReferenceArgs() {
-        this.destinationPath = Output.empty();
-        this.name = Output.empty();
-        this.readOnly = Output.empty();
+        this.destinationPath = Codegen.empty();
+        this.name = Codegen.empty();
+        this.readOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class VolumeReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }        public VolumeReferenceArgs build() {
             return new VolumeReferenceArgs(destinationPath, name, readOnly);

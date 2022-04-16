@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
     @Import(name="height")
       private final @Nullable Output<Integer> height;
 
-    public Output<Integer> getHeight() {
-        return this.height == null ? Output.empty() : this.height;
+    public Output<Integer> height() {
+        return this.height == null ? Codegen.empty() : this.height;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -48,8 +49,8 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
     @Import(name="width")
       private final @Nullable Output<Integer> width;
 
-    public Output<Integer> getWidth() {
-        return this.width == null ? Output.empty() : this.width;
+    public Output<Integer> width() {
+        return this.width == null ? Codegen.empty() : this.width;
     }
 
     public GoogleCloudRetailV2alphaImageArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
     }
 
     private GoogleCloudRetailV2alphaImageArgs() {
-        this.height = Output.empty();
-        this.uri = Output.empty();
-        this.width = Output.empty();
+        this.height = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.width = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
             return this;
         }
         public Builder height(@Nullable Integer height) {
-            this.height = Output.ofNullable(height);
+            this.height = Codegen.ofNullable(height);
             return this;
         }
         public Builder uri(Output<String> uri) {
@@ -112,7 +113,7 @@ public final class GoogleCloudRetailV2alphaImageArgs extends io.pulumi.resources
             return this;
         }
         public Builder width(@Nullable Integer width) {
-            this.width = Output.ofNullable(width);
+            this.width = Codegen.ofNullable(width);
             return this;
         }        public GoogleCloudRetailV2alphaImageArgs build() {
             return new GoogleCloudRetailV2alphaImageArgs(height, uri, width);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="comments")
       private final @Nullable Output<String> comments;
 
-    public Output<String> getComments() {
-        return this.comments == null ? Output.empty() : this.comments;
+    public Output<String> comments() {
+        return this.comments == null ? Codegen.empty() : this.comments;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
-        return this.expression == null ? Output.empty() : this.expression;
+    public Output<String> expression() {
+        return this.expression == null ? Codegen.empty() : this.expression;
     }
 
     public LicenseArgs(
@@ -48,8 +49,8 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LicenseArgs() {
-        this.comments = Output.empty();
-        this.expression = Output.empty();
+        this.comments = Codegen.empty();
+        this.expression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comments(@Nullable String comments) {
-            this.comments = Output.ofNullable(comments);
+            this.comments = Codegen.ofNullable(comments);
             return this;
         }
         public Builder expression(@Nullable Output<String> expression) {
@@ -87,7 +88,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expression(@Nullable String expression) {
-            this.expression = Output.ofNullable(expression);
+            this.expression = Codegen.ofNullable(expression);
             return this;
         }        public LicenseArgs build() {
             return new LicenseArgs(comments, expression);

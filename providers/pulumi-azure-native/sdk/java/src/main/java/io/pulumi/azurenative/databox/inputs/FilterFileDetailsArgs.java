@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databox.enums.FilterFileType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="filterFilePath", required=true)
       private final Output<String> filterFilePath;
 
-    public Output<String> getFilterFilePath() {
+    public Output<String> filterFilePath() {
         return this.filterFilePath;
     }
 
@@ -37,7 +38,7 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="filterFileType", required=true)
       private final Output<Either<String,FilterFileType>> filterFileType;
 
-    public Output<Either<String,FilterFileType>> getFilterFileType() {
+    public Output<Either<String,FilterFileType>> filterFileType() {
         return this.filterFileType;
     }
 
@@ -49,8 +50,8 @@ public final class FilterFileDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FilterFileDetailsArgs() {
-        this.filterFilePath = Output.empty();
-        this.filterFileType = Output.empty();
+        this.filterFilePath = Codegen.empty();
+        this.filterFileType = Codegen.empty();
     }
 
     public static Builder builder() {

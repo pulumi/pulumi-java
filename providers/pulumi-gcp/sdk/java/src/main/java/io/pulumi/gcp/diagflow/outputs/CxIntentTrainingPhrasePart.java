@@ -34,14 +34,14 @@ public final class CxIntentTrainingPhrasePart {
      * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
      * 
     */
-    public Optional<String> getParameterId() {
+    public Optional<String> parameterId() {
         return Optional.ofNullable(this.parameterId);
     }
     /**
      * The text for this part.
      * 
     */
-    public String getText() {
+    public String text() {
         return this.text;
     }
 

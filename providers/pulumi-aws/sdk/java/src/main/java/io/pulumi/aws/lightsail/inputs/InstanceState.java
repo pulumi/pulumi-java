@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,8 +27,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="blueprintId")
       private final @Nullable Output<String> blueprintId;
 
-    public Output<String> getBlueprintId() {
-        return this.blueprintId == null ? Output.empty() : this.blueprintId;
+    public Output<String> blueprintId() {
+        return this.blueprintId == null ? Codegen.empty() : this.blueprintId;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
-    public Output<String> getBundleId() {
-        return this.bundleId == null ? Output.empty() : this.bundleId;
+    public Output<String> bundleId() {
+        return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpuCount")
       private final @Nullable Output<Integer> cpuCount;
 
-    public Output<Integer> getCpuCount() {
-        return this.cpuCount == null ? Output.empty() : this.cpuCount;
+    public Output<Integer> cpuCount() {
+        return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+    public Output<String> createdAt() {
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipv6Address;
 
     @Deprecated /* use `ipv6_addresses` attribute instead */
-    public Output<String> getIpv6Address() {
-        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
+    public Output<String> ipv6Address() {
+        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
+    public Output<List<String>> ipv6Addresses() {
+        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="isStaticIp")
       private final @Nullable Output<Boolean> isStaticIp;
 
-    public Output<Boolean> getIsStaticIp() {
-        return this.isStaticIp == null ? Output.empty() : this.isStaticIp;
+    public Output<Boolean> isStaticIp() {
+        return this.isStaticIp == null ? Codegen.empty() : this.isStaticIp;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyPairName")
       private final @Nullable Output<String> keyPairName;
 
-    public Output<String> getKeyPairName() {
-        return this.keyPairName == null ? Output.empty() : this.keyPairName;
+    public Output<String> keyPairName() {
+        return this.keyPairName == null ? Codegen.empty() : this.keyPairName;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
+    public Output<String> privateIpAddress() {
+        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
-    public Output<String> getPublicIpAddress() {
-        return this.publicIpAddress == null ? Output.empty() : this.publicIpAddress;
+    public Output<String> publicIpAddress() {
+        return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
     }
 
     /**
@@ -176,8 +177,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ramSize")
       private final @Nullable Output<Double> ramSize;
 
-    public Output<Double> getRamSize() {
-        return this.ramSize == null ? Output.empty() : this.ramSize;
+    public Output<Double> ramSize() {
+        return this.ramSize == null ? Codegen.empty() : this.ramSize;
     }
 
     /**
@@ -187,8 +188,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -198,8 +199,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -209,8 +210,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
-    public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+    public Output<String> userData() {
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     /**
@@ -220,8 +221,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public InstanceState(
@@ -264,24 +265,24 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.arn = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.blueprintId = Output.empty();
-        this.bundleId = Output.empty();
-        this.cpuCount = Output.empty();
-        this.createdAt = Output.empty();
-        this.ipv6Address = Output.empty();
-        this.ipv6Addresses = Output.empty();
-        this.isStaticIp = Output.empty();
-        this.keyPairName = Output.empty();
-        this.name = Output.empty();
-        this.privateIpAddress = Output.empty();
-        this.publicIpAddress = Output.empty();
-        this.ramSize = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userData = Output.empty();
-        this.username = Output.empty();
+        this.arn = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.blueprintId = Codegen.empty();
+        this.bundleId = Codegen.empty();
+        this.cpuCount = Codegen.empty();
+        this.createdAt = Codegen.empty();
+        this.ipv6Address = Codegen.empty();
+        this.ipv6Addresses = Codegen.empty();
+        this.isStaticIp = Codegen.empty();
+        this.keyPairName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateIpAddress = Codegen.empty();
+        this.publicIpAddress = Codegen.empty();
+        this.ramSize = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userData = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -343,7 +344,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -351,7 +352,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder blueprintId(@Nullable Output<String> blueprintId) {
@@ -359,7 +360,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blueprintId(@Nullable String blueprintId) {
-            this.blueprintId = Output.ofNullable(blueprintId);
+            this.blueprintId = Codegen.ofNullable(blueprintId);
             return this;
         }
         public Builder bundleId(@Nullable Output<String> bundleId) {
@@ -367,7 +368,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Output.ofNullable(bundleId);
+            this.bundleId = Codegen.ofNullable(bundleId);
             return this;
         }
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
@@ -375,7 +376,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = Output.ofNullable(cpuCount);
+            this.cpuCount = Codegen.ofNullable(cpuCount);
             return this;
         }
         public Builder createdAt(@Nullable Output<String> createdAt) {
@@ -383,7 +384,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
@@ -391,7 +392,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Output.ofNullable(ipv6Address);
+            this.ipv6Address = Codegen.ofNullable(ipv6Address);
             return this;
         }
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
@@ -399,7 +400,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
             return this;
         }
         public Builder ipv6Addresses(String... ipv6Addresses) {
@@ -410,7 +411,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isStaticIp(@Nullable Boolean isStaticIp) {
-            this.isStaticIp = Output.ofNullable(isStaticIp);
+            this.isStaticIp = Codegen.ofNullable(isStaticIp);
             return this;
         }
         public Builder keyPairName(@Nullable Output<String> keyPairName) {
@@ -418,7 +419,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyPairName(@Nullable String keyPairName) {
-            this.keyPairName = Output.ofNullable(keyPairName);
+            this.keyPairName = Codegen.ofNullable(keyPairName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -426,7 +427,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
@@ -434,7 +435,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Output.ofNullable(privateIpAddress);
+            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
             return this;
         }
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
@@ -442,7 +443,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Output.ofNullable(publicIpAddress);
+            this.publicIpAddress = Codegen.ofNullable(publicIpAddress);
             return this;
         }
         public Builder ramSize(@Nullable Output<Double> ramSize) {
@@ -450,7 +451,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ramSize(@Nullable Double ramSize) {
-            this.ramSize = Output.ofNullable(ramSize);
+            this.ramSize = Codegen.ofNullable(ramSize);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -458,7 +459,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -466,7 +467,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userData(@Nullable Output<String> userData) {
@@ -474,7 +475,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -482,7 +483,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public InstanceState build() {
             return new InstanceState(arn, availabilityZone, blueprintId, bundleId, cpuCount, createdAt, ipv6Address, ipv6Addresses, isStaticIp, keyPairName, name, privateIpAddress, publicIpAddress, ramSize, tags, tagsAll, userData, username);

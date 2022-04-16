@@ -5,6 +5,7 @@ package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -57,9 +58,9 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
     }
 
     private TriggerDestinationCloudRunServiceArgs() {
-        this.path = Output.empty();
-        this.region = Output.empty();
-        this.service = Output.empty();
+        this.path = Codegen.empty();
+        this.region = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -99,7 +100,7 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder service(Output<String> service) {

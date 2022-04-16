@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
     @Import(name="query")
       private final @Nullable Output<String> query;
 
-    public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+    public Output<String> query() {
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     public ActivityEntityQueriesPropertiesQueryDefinitionsArgs(@Nullable Output<String> query) {
@@ -34,7 +35,7 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
     }
 
     private ActivityEntityQueriesPropertiesQueryDefinitionsArgs() {
-        this.query = Output.empty();
+        this.query = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }        public ActivityEntityQueriesPropertiesQueryDefinitionsArgs build() {
             return new ActivityEntityQueriesPropertiesQueryDefinitionsArgs(query);

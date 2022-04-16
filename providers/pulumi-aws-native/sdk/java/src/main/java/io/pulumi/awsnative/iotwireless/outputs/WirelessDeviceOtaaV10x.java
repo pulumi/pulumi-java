@@ -20,10 +20,10 @@ public final class WirelessDeviceOtaaV10x {
         this.appKey = appKey;
     }
 
-    public String getAppEui() {
+    public String appEui() {
         return this.appEui;
     }
-    public String getAppKey() {
+    public String appKey() {
         return this.appKey;
     }
 

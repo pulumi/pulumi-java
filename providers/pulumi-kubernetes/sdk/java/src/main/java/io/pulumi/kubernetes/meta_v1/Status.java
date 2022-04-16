@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.meta_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.StatusArgs;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
@@ -31,7 +32,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -45,7 +46,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @return Suggested HTTP return code for this status, 0 if not set.
      * 
      */
-    public Output</* @Nullable */ Integer> getCode() {
+    public Output</* @Nullable */ Integer> code() {
         return this.code;
     }
     /**
@@ -59,7 +60,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @return Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
      * 
      */
-    public Output</* @Nullable */ StatusDetails> getDetails() {
+    public Output</* @Nullable */ StatusDetails> details() {
         return this.details;
     }
     /**
@@ -73,7 +74,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -87,7 +88,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @return A human-readable description of the status of this operation.
      * 
      */
-    public Output</* @Nullable */ String> getMessage() {
+    public Output</* @Nullable */ String> message() {
         return this.message;
     }
     /**
@@ -101,7 +102,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @return Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ ListMeta> getMetadata() {
+    public Output</* @Nullable */ ListMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -115,7 +116,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @return A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
      * 
      */
-    public Output</* @Nullable */ String> getReason() {
+    public Output</* @Nullable */ String> reason() {
         return this.reason;
     }
     /**
@@ -129,7 +130,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @return Status of the operation. One of: "Success" or "Failure". More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    public Output</* @Nullable */ String> getStatus() {
+    public Output</* @Nullable */ String> status() {
         return this.status;
     }
 
@@ -155,7 +156,7 @@ public class Status extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Status(String name, @Nullable StatusArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:meta/v1:Status", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:meta/v1:Status", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Status(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

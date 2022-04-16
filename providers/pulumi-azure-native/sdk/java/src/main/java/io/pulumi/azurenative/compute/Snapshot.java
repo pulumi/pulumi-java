@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -51,7 +52,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Disk source information. CreationData information cannot be changed after the disk has been created.
      * 
      */
-    public Output<CreationDataResponse> getCreationData() {
+    public Output<CreationDataResponse> creationData() {
         return this.creationData;
     }
     /**
@@ -65,7 +66,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return ARM id of the DiskAccess resource for using private endpoints on disks.
      * 
      */
-    public Output</* @Nullable */ String> getDiskAccessId() {
+    public Output</* @Nullable */ String> diskAccessId() {
         return this.diskAccessId;
     }
     /**
@@ -79,7 +80,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The size of the disk in bytes. This field is read only.
      * 
      */
-    public Output<Double> getDiskSizeBytes() {
+    public Output<Double> diskSizeBytes() {
         return this.diskSizeBytes;
     }
     /**
@@ -93,7 +94,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
      * 
      */
-    public Output</* @Nullable */ Integer> getDiskSizeGB() {
+    public Output</* @Nullable */ Integer> diskSizeGB() {
         return this.diskSizeGB;
     }
     /**
@@ -107,7 +108,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The state of the snapshot.
      * 
      */
-    public Output<String> getDiskState() {
+    public Output<String> diskState() {
         return this.diskState;
     }
     /**
@@ -121,7 +122,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
      * 
      */
-    public Output</* @Nullable */ EncryptionResponse> getEncryption() {
+    public Output</* @Nullable */ EncryptionResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -135,7 +136,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
      * 
      */
-    public Output</* @Nullable */ EncryptionSettingsCollectionResponse> getEncryptionSettingsCollection() {
+    public Output</* @Nullable */ EncryptionSettingsCollectionResponse> encryptionSettingsCollection() {
         return this.encryptionSettingsCollection;
     }
     /**
@@ -149,7 +150,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The extended location where the snapshot will be created. Extended location cannot be changed.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -163,7 +164,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
      */
-    public Output</* @Nullable */ String> getHyperVGeneration() {
+    public Output</* @Nullable */ String> hyperVGeneration() {
         return this.hyperVGeneration;
     }
     /**
@@ -177,7 +178,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIncremental() {
+    public Output</* @Nullable */ Boolean> incremental() {
         return this.incremental;
     }
     /**
@@ -191,7 +192,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -205,7 +206,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Unused. Always Null.
      * 
      */
-    public Output<String> getManagedBy() {
+    public Output<String> managedBy() {
         return this.managedBy;
     }
     /**
@@ -219,7 +220,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -233,7 +234,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Policy for accessing the disk via network.
      * 
      */
-    public Output</* @Nullable */ String> getNetworkAccessPolicy() {
+    public Output</* @Nullable */ String> networkAccessPolicy() {
         return this.networkAccessPolicy;
     }
     /**
@@ -247,7 +248,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The Operating System type.
      * 
      */
-    public Output</* @Nullable */ String> getOsType() {
+    public Output</* @Nullable */ String> osType() {
         return this.osType;
     }
     /**
@@ -261,7 +262,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The disk provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -275,7 +276,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Purchase plan information for the image from which the source disk for the snapshot was originally created.
      * 
      */
-    public Output</* @Nullable */ PurchasePlanResponse> getPurchasePlan() {
+    public Output</* @Nullable */ PurchasePlanResponse> purchasePlan() {
         return this.purchasePlan;
     }
     /**
@@ -289,7 +290,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
      * 
      */
-    public Output</* @Nullable */ SnapshotSkuResponse> getSku() {
+    public Output</* @Nullable */ SnapshotSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -303,7 +304,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Indicates the OS on a snapshot supports hibernation.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSupportsHibernation() {
+    public Output</* @Nullable */ Boolean> supportsHibernation() {
         return this.supportsHibernation;
     }
     /**
@@ -317,7 +318,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -331,7 +332,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The time when the snapshot was created.
      * 
      */
-    public Output<String> getTimeCreated() {
+    public Output<String> timeCreated() {
         return this.timeCreated;
     }
     /**
@@ -345,7 +346,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -359,7 +360,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Unique Guid identifying the resource.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 
@@ -385,7 +386,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Snapshot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

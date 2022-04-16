@@ -41,21 +41,21 @@ public final class HostingEnvironmentProfileResponse {
      * Resource ID of the App Service Environment.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * Name of the App Service Environment.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource type of the App Service Environment.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

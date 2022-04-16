@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.ManagedInstanceAdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,8 +20,8 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     @Import(name="administratorName")
       private final @Nullable Output<String> administratorName;
 
-    public Output<String> getAdministratorName() {
-        return this.administratorName == null ? Output.empty() : this.administratorName;
+    public Output<String> administratorName() {
+        return this.administratorName == null ? Codegen.empty() : this.administratorName;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     @Import(name="administratorType", required=true)
       private final Output<Either<String,ManagedInstanceAdministratorType>> administratorType;
 
-    public Output<Either<String,ManagedInstanceAdministratorType>> getAdministratorType() {
+    public Output<Either<String,ManagedInstanceAdministratorType>> administratorType() {
         return this.administratorType;
     }
 
@@ -41,7 +42,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     @Import(name="login", required=true)
       private final Output<String> login;
 
-    public Output<String> getLogin() {
+    public Output<String> login() {
         return this.login;
     }
 
@@ -52,7 +53,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -63,7 +64,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -74,7 +75,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     @Import(name="sid", required=true)
       private final Output<String> sid;
 
-    public Output<String> getSid() {
+    public Output<String> sid() {
         return this.sid;
     }
 
@@ -85,8 +86,8 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public ManagedInstanceAdministratorArgs(
@@ -107,13 +108,13 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
     }
 
     private ManagedInstanceAdministratorArgs() {
-        this.administratorName = Output.empty();
-        this.administratorType = Output.empty();
-        this.login = Output.empty();
-        this.managedInstanceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sid = Output.empty();
-        this.tenantId = Output.empty();
+        this.administratorName = Codegen.empty();
+        this.administratorType = Codegen.empty();
+        this.login = Codegen.empty();
+        this.managedInstanceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sid = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
             return this;
         }
         public Builder administratorName(@Nullable String administratorName) {
-            this.administratorName = Output.ofNullable(administratorName);
+            this.administratorName = Codegen.ofNullable(administratorName);
             return this;
         }
         public Builder administratorType(Output<Either<String,ManagedInstanceAdministratorType>> administratorType) {
@@ -201,7 +202,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public ManagedInstanceAdministratorArgs build() {
             return new ManagedInstanceAdministratorArgs(administratorName, administratorType, login, managedInstanceName, resourceGroupName, sid, tenantId);

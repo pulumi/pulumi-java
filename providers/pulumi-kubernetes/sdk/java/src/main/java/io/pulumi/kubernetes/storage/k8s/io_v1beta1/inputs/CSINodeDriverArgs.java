@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.VolumeNodeResourcesArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocatable")
       private final @Nullable Output<VolumeNodeResourcesArgs> allocatable;
 
-    public Output<VolumeNodeResourcesArgs> getAllocatable() {
-        return this.allocatable == null ? Output.empty() : this.allocatable;
+    public Output<VolumeNodeResourcesArgs> allocatable() {
+        return this.allocatable == null ? Codegen.empty() : this.allocatable;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,7 +50,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeID", required=true)
       private final Output<String> nodeID;
 
-    public Output<String> getNodeID() {
+    public Output<String> nodeID() {
         return this.nodeID;
     }
 
@@ -60,8 +61,8 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topologyKeys")
       private final @Nullable Output<List<String>> topologyKeys;
 
-    public Output<List<String>> getTopologyKeys() {
-        return this.topologyKeys == null ? Output.empty() : this.topologyKeys;
+    public Output<List<String>> topologyKeys() {
+        return this.topologyKeys == null ? Codegen.empty() : this.topologyKeys;
     }
 
     public CSINodeDriverArgs(
@@ -76,10 +77,10 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CSINodeDriverArgs() {
-        this.allocatable = Output.empty();
-        this.name = Output.empty();
-        this.nodeID = Output.empty();
-        this.topologyKeys = Output.empty();
+        this.allocatable = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nodeID = Codegen.empty();
+        this.topologyKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocatable(@Nullable VolumeNodeResourcesArgs allocatable) {
-            this.allocatable = Output.ofNullable(allocatable);
+            this.allocatable = Codegen.ofNullable(allocatable);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -137,7 +138,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topologyKeys(@Nullable List<String> topologyKeys) {
-            this.topologyKeys = Output.ofNullable(topologyKeys);
+            this.topologyKeys = Codegen.ofNullable(topologyKeys);
             return this;
         }
         public Builder topologyKeys(String... topologyKeys) {

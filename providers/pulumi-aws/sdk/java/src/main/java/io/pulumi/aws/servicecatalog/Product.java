@@ -10,6 +10,7 @@ import io.pulumi.aws.servicecatalog.outputs.ProductProvisioningArtifactParameter
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> getAcceptLanguage() {
+    public Output</* @Nullable */ String> acceptLanguage() {
         return this.acceptLanguage;
     }
     /**
@@ -60,7 +61,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return ARN of the product.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -74,7 +75,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Time when the product was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -88,7 +89,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -102,7 +103,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Distributor (i.e., vendor) of the product.
      * 
      */
-    public Output<String> getDistributor() {
+    public Output<String> distributor() {
         return this.distributor;
     }
     /**
@@ -116,7 +117,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Whether the product has a default path. If the product does not have a default path, call `ListLaunchPaths` to disambiguate between paths.  Otherwise, `ListLaunchPaths` is not required, and the output of ProductViewSummary can be used directly with `DescribeProvisioningParameters`.
      * 
      */
-    public Output<Boolean> getHasDefaultPath() {
+    public Output<Boolean> hasDefaultPath() {
         return this.hasDefaultPath;
     }
     /**
@@ -130,7 +131,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -144,7 +145,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Owner of the product.
      * 
      */
-    public Output<String> getOwner() {
+    public Output<String> owner() {
         return this.owner;
     }
     /**
@@ -158,7 +159,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
      * 
      */
-    public Output<ProductProvisioningArtifactParameters> getProvisioningArtifactParameters() {
+    public Output<ProductProvisioningArtifactParameters> provisioningArtifactParameters() {
         return this.provisioningArtifactParameters;
     }
     /**
@@ -172,7 +173,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Status of the product.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -186,7 +187,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Support information about the product.
      * 
      */
-    public Output<String> getSupportDescription() {
+    public Output<String> supportDescription() {
         return this.supportDescription;
     }
     /**
@@ -200,7 +201,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Contact email for product support.
      * 
      */
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail;
     }
     /**
@@ -214,7 +215,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Contact URL for product support.
      * 
      */
-    public Output<String> getSupportUrl() {
+    public Output<String> supportUrl() {
         return this.supportUrl;
     }
     /**
@@ -228,7 +229,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Tags to apply to the product. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -242,7 +243,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -256,7 +257,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @return Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -282,7 +283,7 @@ public class Product extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Product(String name, ProductArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/product:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/product:Product", name, args == null ? ProductArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Product(String name, Output<String> id, @Nullable ProductState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

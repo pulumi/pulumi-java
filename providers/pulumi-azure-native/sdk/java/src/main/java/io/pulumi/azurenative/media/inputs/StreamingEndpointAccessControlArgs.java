@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.inputs.AkamaiAccessControlArgs;
 import io.pulumi.azurenative.media.inputs.IPAccessControlArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
     @Import(name="akamai")
       private final @Nullable Output<AkamaiAccessControlArgs> akamai;
 
-    public Output<AkamaiAccessControlArgs> getAkamai() {
-        return this.akamai == null ? Output.empty() : this.akamai;
+    public Output<AkamaiAccessControlArgs> akamai() {
+        return this.akamai == null ? Codegen.empty() : this.akamai;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
     @Import(name="ip")
       private final @Nullable Output<IPAccessControlArgs> ip;
 
-    public Output<IPAccessControlArgs> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+    public Output<IPAccessControlArgs> ip() {
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     public StreamingEndpointAccessControlArgs(
@@ -49,8 +50,8 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
     }
 
     private StreamingEndpointAccessControlArgs() {
-        this.akamai = Output.empty();
-        this.ip = Output.empty();
+        this.akamai = Codegen.empty();
+        this.ip = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
             return this;
         }
         public Builder akamai(@Nullable AkamaiAccessControlArgs akamai) {
-            this.akamai = Output.ofNullable(akamai);
+            this.akamai = Codegen.ofNullable(akamai);
             return this;
         }
         public Builder ip(@Nullable Output<IPAccessControlArgs> ip) {
@@ -88,7 +89,7 @@ public final class StreamingEndpointAccessControlArgs extends io.pulumi.resource
             return this;
         }
         public Builder ip(@Nullable IPAccessControlArgs ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }        public StreamingEndpointAccessControlArgs build() {
             return new StreamingEndpointAccessControlArgs(akamai, ip);

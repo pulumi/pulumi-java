@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.ServiceMetadataArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTrafficArgs;
@@ -30,8 +31,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autogenerateRevisionName")
       private final @Nullable Output<Boolean> autogenerateRevisionName;
 
-    public Output<Boolean> getAutogenerateRevisionName() {
-        return this.autogenerateRevisionName == null ? Output.empty() : this.autogenerateRevisionName;
+    public Output<Boolean> autogenerateRevisionName() {
+        return this.autogenerateRevisionName == null ? Codegen.empty() : this.autogenerateRevisionName;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -54,8 +55,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ServiceMetadataArgs> metadata;
 
-    public Output<ServiceMetadataArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ServiceMetadataArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="template")
       private final @Nullable Output<ServiceTemplateArgs> template;
 
-    public Output<ServiceTemplateArgs> getTemplate() {
-        return this.template == null ? Output.empty() : this.template;
+    public Output<ServiceTemplateArgs> template() {
+        return this.template == null ? Codegen.empty() : this.template;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="traffics")
       private final @Nullable Output<List<ServiceTrafficArgs>> traffics;
 
-    public Output<List<ServiceTrafficArgs>> getTraffics() {
-        return this.traffics == null ? Output.empty() : this.traffics;
+    public Output<List<ServiceTrafficArgs>> traffics() {
+        return this.traffics == null ? Codegen.empty() : this.traffics;
     }
 
     public ServiceArgs(
@@ -132,13 +133,13 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.autogenerateRevisionName = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.template = Output.empty();
-        this.traffics = Output.empty();
+        this.autogenerateRevisionName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.template = Codegen.empty();
+        this.traffics = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autogenerateRevisionName(@Nullable Boolean autogenerateRevisionName) {
-            this.autogenerateRevisionName = Output.ofNullable(autogenerateRevisionName);
+            this.autogenerateRevisionName = Codegen.ofNullable(autogenerateRevisionName);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -194,7 +195,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ServiceMetadataArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -202,7 +203,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -210,7 +211,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder template(@Nullable Output<ServiceTemplateArgs> template) {
@@ -218,7 +219,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder template(@Nullable ServiceTemplateArgs template) {
-            this.template = Output.ofNullable(template);
+            this.template = Codegen.ofNullable(template);
             return this;
         }
         public Builder traffics(@Nullable Output<List<ServiceTrafficArgs>> traffics) {
@@ -226,7 +227,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder traffics(@Nullable List<ServiceTrafficArgs> traffics) {
-            this.traffics = Output.ofNullable(traffics);
+            this.traffics = Codegen.ofNullable(traffics);
             return this;
         }
         public Builder traffics(ServiceTrafficArgs... traffics) {

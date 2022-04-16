@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
-    public Output<String> getOdataType() {
+    public Output<String> odataType() {
         return this.odataType;
     }
 
@@ -36,7 +37,7 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="time", required=true)
       private final Output<String> time;
 
-    public Output<String> getTime() {
+    public Output<String> time() {
         return this.time;
     }
 
@@ -48,8 +49,8 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UtcClipTimeArgs() {
-        this.odataType = Output.empty();
-        this.time = Output.empty();
+        this.odataType = Codegen.empty();
+        this.time = Codegen.empty();
     }
 
     public static Builder builder() {

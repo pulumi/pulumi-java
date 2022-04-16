@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
     @Import(name="desiredState")
       private final @Nullable Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
-        return this.desiredState == null ? Output.empty() : this.desiredState;
+    public Output<String> desiredState() {
+        return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
     @Import(name="manager")
       private final @Nullable Output<String> manager;
 
-    public Output<String> getManager() {
-        return this.manager == null ? Output.empty() : this.manager;
+    public Output<String> manager() {
+        return this.manager == null ? Codegen.empty() : this.manager;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -72,9 +73,9 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
     }
 
     private GuestPoliciesPackageGetArgs() {
-        this.desiredState = Output.empty();
-        this.manager = Output.empty();
-        this.name = Output.empty();
+        this.desiredState = Codegen.empty();
+        this.manager = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder desiredState(@Nullable String desiredState) {
-            this.desiredState = Output.ofNullable(desiredState);
+            this.desiredState = Codegen.ofNullable(desiredState);
             return this;
         }
         public Builder manager(@Nullable Output<String> manager) {
@@ -114,7 +115,7 @@ public final class GuestPoliciesPackageGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder manager(@Nullable String manager) {
-            this.manager = Output.ofNullable(manager);
+            this.manager = Codegen.ofNullable(manager);
             return this;
         }
         public Builder name(Output<String> name) {

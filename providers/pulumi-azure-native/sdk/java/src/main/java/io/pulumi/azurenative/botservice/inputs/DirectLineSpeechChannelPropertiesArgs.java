@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
     @Import(name="cognitiveServiceRegion", required=true)
       private final Output<String> cognitiveServiceRegion;
 
-    public Output<String> getCognitiveServiceRegion() {
+    public Output<String> cognitiveServiceRegion() {
         return this.cognitiveServiceRegion;
     }
 
@@ -37,7 +38,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
     @Import(name="cognitiveServiceSubscriptionKey", required=true)
       private final Output<String> cognitiveServiceSubscriptionKey;
 
-    public Output<String> getCognitiveServiceSubscriptionKey() {
+    public Output<String> cognitiveServiceSubscriptionKey() {
         return this.cognitiveServiceSubscriptionKey;
     }
 
@@ -48,8 +49,8 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
     @Import(name="customSpeechModelId")
       private final @Nullable Output<String> customSpeechModelId;
 
-    public Output<String> getCustomSpeechModelId() {
-        return this.customSpeechModelId == null ? Output.empty() : this.customSpeechModelId;
+    public Output<String> customSpeechModelId() {
+        return this.customSpeechModelId == null ? Codegen.empty() : this.customSpeechModelId;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
     @Import(name="customVoiceDeploymentId")
       private final @Nullable Output<String> customVoiceDeploymentId;
 
-    public Output<String> getCustomVoiceDeploymentId() {
-        return this.customVoiceDeploymentId == null ? Output.empty() : this.customVoiceDeploymentId;
+    public Output<String> customVoiceDeploymentId() {
+        return this.customVoiceDeploymentId == null ? Codegen.empty() : this.customVoiceDeploymentId;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
     @Import(name="isDefaultBotForCogSvcAccount")
       private final @Nullable Output<Boolean> isDefaultBotForCogSvcAccount;
 
-    public Output<Boolean> getIsDefaultBotForCogSvcAccount() {
-        return this.isDefaultBotForCogSvcAccount == null ? Output.empty() : this.isDefaultBotForCogSvcAccount;
+    public Output<Boolean> isDefaultBotForCogSvcAccount() {
+        return this.isDefaultBotForCogSvcAccount == null ? Codegen.empty() : this.isDefaultBotForCogSvcAccount;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
     @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Output.empty() : this.isEnabled;
+    public Output<Boolean> isEnabled() {
+        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     public DirectLineSpeechChannelPropertiesArgs(
@@ -101,12 +102,12 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
     }
 
     private DirectLineSpeechChannelPropertiesArgs() {
-        this.cognitiveServiceRegion = Output.empty();
-        this.cognitiveServiceSubscriptionKey = Output.empty();
-        this.customSpeechModelId = Output.empty();
-        this.customVoiceDeploymentId = Output.empty();
-        this.isDefaultBotForCogSvcAccount = Output.empty();
-        this.isEnabled = Output.empty();
+        this.cognitiveServiceRegion = Codegen.empty();
+        this.cognitiveServiceSubscriptionKey = Codegen.empty();
+        this.customSpeechModelId = Codegen.empty();
+        this.customVoiceDeploymentId = Codegen.empty();
+        this.isDefaultBotForCogSvcAccount = Codegen.empty();
+        this.isEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder customSpeechModelId(@Nullable String customSpeechModelId) {
-            this.customSpeechModelId = Output.ofNullable(customSpeechModelId);
+            this.customSpeechModelId = Codegen.ofNullable(customSpeechModelId);
             return this;
         }
         public Builder customVoiceDeploymentId(@Nullable Output<String> customVoiceDeploymentId) {
@@ -168,7 +169,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder customVoiceDeploymentId(@Nullable String customVoiceDeploymentId) {
-            this.customVoiceDeploymentId = Output.ofNullable(customVoiceDeploymentId);
+            this.customVoiceDeploymentId = Codegen.ofNullable(customVoiceDeploymentId);
             return this;
         }
         public Builder isDefaultBotForCogSvcAccount(@Nullable Output<Boolean> isDefaultBotForCogSvcAccount) {
@@ -176,7 +177,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder isDefaultBotForCogSvcAccount(@Nullable Boolean isDefaultBotForCogSvcAccount) {
-            this.isDefaultBotForCogSvcAccount = Output.ofNullable(isDefaultBotForCogSvcAccount);
+            this.isDefaultBotForCogSvcAccount = Codegen.ofNullable(isDefaultBotForCogSvcAccount);
             return this;
         }
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
@@ -184,7 +185,7 @@ public final class DirectLineSpeechChannelPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Output.ofNullable(isEnabled);
+            this.isEnabled = Codegen.ofNullable(isEnabled);
             return this;
         }        public DirectLineSpeechChannelPropertiesArgs build() {
             return new DirectLineSpeechChannelPropertiesArgs(cognitiveServiceRegion, cognitiveServiceSubscriptionKey, customSpeechModelId, customVoiceDeploymentId, isDefaultBotForCogSvcAccount, isEnabled);

@@ -17,21 +17,21 @@ public final class GetServiceTraffic extends io.pulumi.resources.InvokeArgs {
     @Import(name="latestRevision", required=true)
       private final Boolean latestRevision;
 
-    public Boolean getLatestRevision() {
+    public Boolean latestRevision() {
         return this.latestRevision;
     }
 
     @Import(name="percent", required=true)
       private final Integer percent;
 
-    public Integer getPercent() {
+    public Integer percent() {
         return this.percent;
     }
 
     @Import(name="revisionName", required=true)
       private final String revisionName;
 
-    public String getRevisionName() {
+    public String revisionName() {
         return this.revisionName;
     }
 

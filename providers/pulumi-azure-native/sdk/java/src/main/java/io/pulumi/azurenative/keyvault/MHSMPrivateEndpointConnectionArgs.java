@@ -7,6 +7,7 @@ import io.pulumi.azurenative.keyvault.inputs.MHSMPrivateLinkServiceConnectionSta
 import io.pulumi.azurenative.keyvault.inputs.ManagedHsmSkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -46,8 +47,8 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
     @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
-    public Output<String> getPrivateEndpointConnectionName() {
-        return this.privateEndpointConnectionName == null ? Output.empty() : this.privateEndpointConnectionName;
+    public Output<String> privateEndpointConnectionName() {
+        return this.privateEndpointConnectionName == null ? Codegen.empty() : this.privateEndpointConnectionName;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
     @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Output<MHSMPrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
+    public Output<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Codegen.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,8 +80,8 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
     @Import(name="sku")
       private final @Nullable Output<ManagedHsmSkuArgs> sku;
 
-    public Output<ManagedHsmSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<ManagedHsmSkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MHSMPrivateEndpointConnectionArgs(
@@ -112,13 +113,13 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
     }
 
     private MHSMPrivateEndpointConnectionArgs() {
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.privateEndpointConnectionName = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateEndpointConnectionName = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -174,7 +175,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
             return this;
         }
         public Builder privateEndpointConnectionName(@Nullable String privateEndpointConnectionName) {
-            this.privateEndpointConnectionName = Output.ofNullable(privateEndpointConnectionName);
+            this.privateEndpointConnectionName = Codegen.ofNullable(privateEndpointConnectionName);
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable Output<MHSMPrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
@@ -182,7 +183,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
             return this;
         }
         public Builder privateLinkServiceConnectionState(@Nullable MHSMPrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Codegen.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -198,7 +199,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
             return this;
         }
         public Builder sku(@Nullable ManagedHsmSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -206,7 +207,7 @@ public final class MHSMPrivateEndpointConnectionArgs extends io.pulumi.resources
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public MHSMPrivateEndpointConnectionArgs build() {
             return new MHSMPrivateEndpointConnectionArgs(location, name, privateEndpointConnectionName, privateLinkServiceConnectionState, resourceGroupName, sku, tags);

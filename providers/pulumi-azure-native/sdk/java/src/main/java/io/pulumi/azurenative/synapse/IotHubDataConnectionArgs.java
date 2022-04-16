@@ -7,6 +7,7 @@ import io.pulumi.azurenative.synapse.enums.IotHubDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
 
-    public Output<String> getConsumerGroup() {
+    public Output<String> consumerGroup() {
         return this.consumerGroup;
     }
 
@@ -35,8 +36,8 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
-    public Output<String> getDataConnectionName() {
-        return this.dataConnectionName == null ? Output.empty() : this.dataConnectionName;
+    public Output<String> dataConnectionName() {
+        return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="dataFormat")
       private final @Nullable Output<Either<String,IotHubDataFormat>> dataFormat;
 
-    public Output<Either<String,IotHubDataFormat>> getDataFormat() {
-        return this.dataFormat == null ? Output.empty() : this.dataFormat;
+    public Output<Either<String,IotHubDataFormat>> dataFormat() {
+        return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -68,8 +69,8 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="eventSystemProperties")
       private final @Nullable Output<List<String>> eventSystemProperties;
 
-    public Output<List<String>> getEventSystemProperties() {
-        return this.eventSystemProperties == null ? Output.empty() : this.eventSystemProperties;
+    public Output<List<String>> eventSystemProperties() {
+        return this.eventSystemProperties == null ? Codegen.empty() : this.eventSystemProperties;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="iotHubResourceId", required=true)
       private final Output<String> iotHubResourceId;
 
-    public Output<String> getIotHubResourceId() {
+    public Output<String> iotHubResourceId() {
         return this.iotHubResourceId;
     }
 
@@ -91,7 +92,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -102,7 +103,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
-    public Output<String> getKustoPoolName() {
+    public Output<String> kustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -113,8 +114,8 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
 
-    public Output<String> getMappingRuleName() {
-        return this.mappingRuleName == null ? Output.empty() : this.mappingRuleName;
+    public Output<String> mappingRuleName() {
+        return this.mappingRuleName == null ? Codegen.empty() : this.mappingRuleName;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -146,7 +147,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="sharedAccessPolicyName", required=true)
       private final Output<String> sharedAccessPolicyName;
 
-    public Output<String> getSharedAccessPolicyName() {
+    public Output<String> sharedAccessPolicyName() {
         return this.sharedAccessPolicyName;
     }
 
@@ -157,8 +158,8 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+    public Output<String> tableName() {
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -204,20 +205,20 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
     }
 
     private IotHubDataConnectionArgs() {
-        this.consumerGroup = Output.empty();
-        this.dataConnectionName = Output.empty();
-        this.dataFormat = Output.empty();
-        this.databaseName = Output.empty();
-        this.eventSystemProperties = Output.empty();
-        this.iotHubResourceId = Output.empty();
-        this.kind = Output.empty();
-        this.kustoPoolName = Output.empty();
-        this.location = Output.empty();
-        this.mappingRuleName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sharedAccessPolicyName = Output.empty();
-        this.tableName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.consumerGroup = Codegen.empty();
+        this.dataConnectionName = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.eventSystemProperties = Codegen.empty();
+        this.iotHubResourceId = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.kustoPoolName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mappingRuleName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sharedAccessPolicyName = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -279,7 +280,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
-            this.dataConnectionName = Output.ofNullable(dataConnectionName);
+            this.dataConnectionName = Codegen.ofNullable(dataConnectionName);
             return this;
         }
         public Builder dataFormat(@Nullable Output<Either<String,IotHubDataFormat>> dataFormat) {
@@ -287,7 +288,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dataFormat(@Nullable Either<String,IotHubDataFormat> dataFormat) {
-            this.dataFormat = Output.ofNullable(dataFormat);
+            this.dataFormat = Codegen.ofNullable(dataFormat);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -303,7 +304,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder eventSystemProperties(@Nullable List<String> eventSystemProperties) {
-            this.eventSystemProperties = Output.ofNullable(eventSystemProperties);
+            this.eventSystemProperties = Codegen.ofNullable(eventSystemProperties);
             return this;
         }
         public Builder eventSystemProperties(String... eventSystemProperties) {
@@ -338,7 +339,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
@@ -346,7 +347,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
-            this.mappingRuleName = Output.ofNullable(mappingRuleName);
+            this.mappingRuleName = Codegen.ofNullable(mappingRuleName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -370,7 +371,7 @@ public final class IotHubDataConnectionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

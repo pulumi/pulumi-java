@@ -11,6 +11,7 @@ import io.pulumi.aws.ec2.outputs.VpnConnectionVgwTelemetry;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -49,7 +50,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the VPN Connection.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -63,7 +64,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The configuration information for the VPN connection's customer gateway (in the native XML format).
      * 
      */
-    public Output<String> getCustomerGatewayConfiguration() {
+    public Output<String> customerGatewayConfiguration() {
         return this.customerGatewayConfiguration;
     }
     /**
@@ -77,7 +78,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The ID of the customer gateway.
      * 
      */
-    public Output<String> getCustomerGatewayId() {
+    public Output<String> customerGatewayId() {
         return this.customerGatewayId;
     }
     /**
@@ -91,7 +92,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Indicate whether to enable acceleration for the VPN connection. Supports only EC2 Transit Gateway.
      * 
      */
-    public Output<Boolean> getEnableAcceleration() {
+    public Output<Boolean> enableAcceleration() {
         return this.enableAcceleration;
     }
     /**
@@ -105,7 +106,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
      * 
      */
-    public Output<String> getLocalIpv4NetworkCidr() {
+    public Output<String> localIpv4NetworkCidr() {
         return this.localIpv4NetworkCidr;
     }
     /**
@@ -119,7 +120,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
      * 
      */
-    public Output<String> getLocalIpv6NetworkCidr() {
+    public Output<String> localIpv6NetworkCidr() {
         return this.localIpv6NetworkCidr;
     }
     /**
@@ -133,7 +134,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The IPv4 CIDR on the AWS side of the VPN connection.
      * 
      */
-    public Output<String> getRemoteIpv4NetworkCidr() {
+    public Output<String> remoteIpv4NetworkCidr() {
         return this.remoteIpv4NetworkCidr;
     }
     /**
@@ -147,7 +148,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
      * 
      */
-    public Output<String> getRemoteIpv6NetworkCidr() {
+    public Output<String> remoteIpv6NetworkCidr() {
         return this.remoteIpv6NetworkCidr;
     }
     /**
@@ -161,7 +162,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The static routes associated with the VPN connection. Detailed below.
      * 
      */
-    public Output<List<VpnConnectionRoute>> getRoutes() {
+    public Output<List<VpnConnectionRoute>> routes() {
         return this.routes;
     }
     /**
@@ -175,7 +176,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Whether the VPN connection uses static routes exclusively. Static routes must be used for devices that don't support BGP.
      * 
      */
-    public Output<Boolean> getStaticRoutesOnly() {
+    public Output<Boolean> staticRoutesOnly() {
         return this.staticRoutesOnly;
     }
     /**
@@ -189,7 +190,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Tags to apply to the connection. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -203,7 +204,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -217,7 +218,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return When associated with an EC2 Transit Gateway (`transit_gateway_id` argument), the attachment ID. See also the `aws.ec2.Tag` for tagging the EC2 Transit Gateway VPN Attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -231,7 +232,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The ID of the EC2 Transit Gateway.
      * 
      */
-    public Output</* @Nullable */ String> getTransitGatewayId() {
+    public Output</* @Nullable */ String> transitGatewayId() {
         return this.transitGatewayId;
     }
     /**
@@ -245,7 +246,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The public IP address of the first VPN tunnel.
      * 
      */
-    public Output<String> getTunnel1Address() {
+    public Output<String> tunnel1Address() {
         return this.tunnel1Address;
     }
     /**
@@ -259,7 +260,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The bgp asn number of the first VPN tunnel.
      * 
      */
-    public Output<String> getTunnel1BgpAsn() {
+    public Output<String> tunnel1BgpAsn() {
         return this.tunnel1BgpAsn;
     }
     /**
@@ -273,7 +274,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The bgp holdtime of the first VPN tunnel.
      * 
      */
-    public Output<Integer> getTunnel1BgpHoldtime() {
+    public Output<Integer> tunnel1BgpHoldtime() {
         return this.tunnel1BgpHoldtime;
     }
     /**
@@ -287,7 +288,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The RFC 6890 link-local address of the first VPN tunnel (Customer Gateway Side).
      * 
      */
-    public Output<String> getTunnel1CgwInsideAddress() {
+    public Output<String> tunnel1CgwInsideAddress() {
         return this.tunnel1CgwInsideAddress;
     }
     /**
@@ -301,7 +302,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
      * 
      */
-    public Output</* @Nullable */ String> getTunnel1DpdTimeoutAction() {
+    public Output</* @Nullable */ String> tunnel1DpdTimeoutAction() {
         return this.tunnel1DpdTimeoutAction;
     }
     /**
@@ -315,7 +316,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel1DpdTimeoutSeconds() {
+    public Output</* @Nullable */ Integer> tunnel1DpdTimeoutSeconds() {
         return this.tunnel1DpdTimeoutSeconds;
     }
     /**
@@ -329,7 +330,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel1IkeVersions() {
+    public Output</* @Nullable */ List<String>> tunnel1IkeVersions() {
         return this.tunnel1IkeVersions;
     }
     /**
@@ -343,7 +344,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
      * 
      */
-    public Output<String> getTunnel1InsideCidr() {
+    public Output<String> tunnel1InsideCidr() {
         return this.tunnel1InsideCidr;
     }
     /**
@@ -357,7 +358,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The range of inside IPv6 addresses for the first VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
      * 
      */
-    public Output<String> getTunnel1InsideIpv6Cidr() {
+    public Output<String> tunnel1InsideIpv6Cidr() {
         return this.tunnel1InsideIpv6Cidr;
     }
     /**
@@ -371,7 +372,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> getTunnel1Phase1DhGroupNumbers() {
+    public Output</* @Nullable */ List<Integer>> tunnel1Phase1DhGroupNumbers() {
         return this.tunnel1Phase1DhGroupNumbers;
     }
     /**
@@ -385,7 +386,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel1Phase1EncryptionAlgorithms() {
+    public Output</* @Nullable */ List<String>> tunnel1Phase1EncryptionAlgorithms() {
         return this.tunnel1Phase1EncryptionAlgorithms;
     }
     /**
@@ -399,7 +400,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel1Phase1IntegrityAlgorithms() {
+    public Output</* @Nullable */ List<String>> tunnel1Phase1IntegrityAlgorithms() {
         return this.tunnel1Phase1IntegrityAlgorithms;
     }
     /**
@@ -413,7 +414,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel1Phase1LifetimeSeconds() {
+    public Output</* @Nullable */ Integer> tunnel1Phase1LifetimeSeconds() {
         return this.tunnel1Phase1LifetimeSeconds;
     }
     /**
@@ -427,7 +428,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> getTunnel1Phase2DhGroupNumbers() {
+    public Output</* @Nullable */ List<Integer>> tunnel1Phase2DhGroupNumbers() {
         return this.tunnel1Phase2DhGroupNumbers;
     }
     /**
@@ -441,7 +442,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel1Phase2EncryptionAlgorithms() {
+    public Output</* @Nullable */ List<String>> tunnel1Phase2EncryptionAlgorithms() {
         return this.tunnel1Phase2EncryptionAlgorithms;
     }
     /**
@@ -455,7 +456,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel1Phase2IntegrityAlgorithms() {
+    public Output</* @Nullable */ List<String>> tunnel1Phase2IntegrityAlgorithms() {
         return this.tunnel1Phase2IntegrityAlgorithms;
     }
     /**
@@ -469,7 +470,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel1Phase2LifetimeSeconds() {
+    public Output</* @Nullable */ Integer> tunnel1Phase2LifetimeSeconds() {
         return this.tunnel1Phase2LifetimeSeconds;
     }
     /**
@@ -483,7 +484,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
      * 
      */
-    public Output<String> getTunnel1PresharedKey() {
+    public Output<String> tunnel1PresharedKey() {
         return this.tunnel1PresharedKey;
     }
     /**
@@ -497,7 +498,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel1RekeyFuzzPercentage() {
+    public Output</* @Nullable */ Integer> tunnel1RekeyFuzzPercentage() {
         return this.tunnel1RekeyFuzzPercentage;
     }
     /**
@@ -511,7 +512,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel1RekeyMarginTimeSeconds() {
+    public Output</* @Nullable */ Integer> tunnel1RekeyMarginTimeSeconds() {
         return this.tunnel1RekeyMarginTimeSeconds;
     }
     /**
@@ -525,7 +526,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel1ReplayWindowSize() {
+    public Output</* @Nullable */ Integer> tunnel1ReplayWindowSize() {
         return this.tunnel1ReplayWindowSize;
     }
     /**
@@ -539,7 +540,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
      * 
      */
-    public Output</* @Nullable */ String> getTunnel1StartupAction() {
+    public Output</* @Nullable */ String> tunnel1StartupAction() {
         return this.tunnel1StartupAction;
     }
     /**
@@ -553,7 +554,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The RFC 6890 link-local address of the first VPN tunnel (VPN Gateway Side).
      * 
      */
-    public Output<String> getTunnel1VgwInsideAddress() {
+    public Output<String> tunnel1VgwInsideAddress() {
         return this.tunnel1VgwInsideAddress;
     }
     /**
@@ -567,7 +568,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The public IP address of the second VPN tunnel.
      * 
      */
-    public Output<String> getTunnel2Address() {
+    public Output<String> tunnel2Address() {
         return this.tunnel2Address;
     }
     /**
@@ -581,7 +582,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The bgp asn number of the second VPN tunnel.
      * 
      */
-    public Output<String> getTunnel2BgpAsn() {
+    public Output<String> tunnel2BgpAsn() {
         return this.tunnel2BgpAsn;
     }
     /**
@@ -595,7 +596,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The bgp holdtime of the second VPN tunnel.
      * 
      */
-    public Output<Integer> getTunnel2BgpHoldtime() {
+    public Output<Integer> tunnel2BgpHoldtime() {
         return this.tunnel2BgpHoldtime;
     }
     /**
@@ -609,7 +610,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The RFC 6890 link-local address of the second VPN tunnel (Customer Gateway Side).
      * 
      */
-    public Output<String> getTunnel2CgwInsideAddress() {
+    public Output<String> tunnel2CgwInsideAddress() {
         return this.tunnel2CgwInsideAddress;
     }
     /**
@@ -623,7 +624,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
      * 
      */
-    public Output</* @Nullable */ String> getTunnel2DpdTimeoutAction() {
+    public Output</* @Nullable */ String> tunnel2DpdTimeoutAction() {
         return this.tunnel2DpdTimeoutAction;
     }
     /**
@@ -637,7 +638,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel2DpdTimeoutSeconds() {
+    public Output</* @Nullable */ Integer> tunnel2DpdTimeoutSeconds() {
         return this.tunnel2DpdTimeoutSeconds;
     }
     /**
@@ -651,7 +652,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel2IkeVersions() {
+    public Output</* @Nullable */ List<String>> tunnel2IkeVersions() {
         return this.tunnel2IkeVersions;
     }
     /**
@@ -665,7 +666,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
      * 
      */
-    public Output<String> getTunnel2InsideCidr() {
+    public Output<String> tunnel2InsideCidr() {
         return this.tunnel2InsideCidr;
     }
     /**
@@ -679,7 +680,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The range of inside IPv6 addresses for the second VPN tunnel. Supports only EC2 Transit Gateway. Valid value is a size /126 CIDR block from the local fd00::/8 range.
      * 
      */
-    public Output<String> getTunnel2InsideIpv6Cidr() {
+    public Output<String> tunnel2InsideIpv6Cidr() {
         return this.tunnel2InsideIpv6Cidr;
     }
     /**
@@ -693,7 +694,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> getTunnel2Phase1DhGroupNumbers() {
+    public Output</* @Nullable */ List<Integer>> tunnel2Phase1DhGroupNumbers() {
         return this.tunnel2Phase1DhGroupNumbers;
     }
     /**
@@ -707,7 +708,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel2Phase1EncryptionAlgorithms() {
+    public Output</* @Nullable */ List<String>> tunnel2Phase1EncryptionAlgorithms() {
         return this.tunnel2Phase1EncryptionAlgorithms;
     }
     /**
@@ -721,7 +722,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel2Phase1IntegrityAlgorithms() {
+    public Output</* @Nullable */ List<String>> tunnel2Phase1IntegrityAlgorithms() {
         return this.tunnel2Phase1IntegrityAlgorithms;
     }
     /**
@@ -735,7 +736,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel2Phase1LifetimeSeconds() {
+    public Output</* @Nullable */ Integer> tunnel2Phase1LifetimeSeconds() {
         return this.tunnel2Phase1LifetimeSeconds;
     }
     /**
@@ -749,7 +750,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> getTunnel2Phase2DhGroupNumbers() {
+    public Output</* @Nullable */ List<Integer>> tunnel2Phase2DhGroupNumbers() {
         return this.tunnel2Phase2DhGroupNumbers;
     }
     /**
@@ -763,7 +764,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel2Phase2EncryptionAlgorithms() {
+    public Output</* @Nullable */ List<String>> tunnel2Phase2EncryptionAlgorithms() {
         return this.tunnel2Phase2EncryptionAlgorithms;
     }
     /**
@@ -777,7 +778,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTunnel2Phase2IntegrityAlgorithms() {
+    public Output</* @Nullable */ List<String>> tunnel2Phase2IntegrityAlgorithms() {
         return this.tunnel2Phase2IntegrityAlgorithms;
     }
     /**
@@ -791,7 +792,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel2Phase2LifetimeSeconds() {
+    public Output</* @Nullable */ Integer> tunnel2Phase2LifetimeSeconds() {
         return this.tunnel2Phase2LifetimeSeconds;
     }
     /**
@@ -805,7 +806,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
      * 
      */
-    public Output<String> getTunnel2PresharedKey() {
+    public Output<String> tunnel2PresharedKey() {
         return this.tunnel2PresharedKey;
     }
     /**
@@ -819,7 +820,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel2RekeyFuzzPercentage() {
+    public Output</* @Nullable */ Integer> tunnel2RekeyFuzzPercentage() {
         return this.tunnel2RekeyFuzzPercentage;
     }
     /**
@@ -833,7 +834,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel2RekeyMarginTimeSeconds() {
+    public Output</* @Nullable */ Integer> tunnel2RekeyMarginTimeSeconds() {
         return this.tunnel2RekeyMarginTimeSeconds;
     }
     /**
@@ -847,7 +848,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
      * 
      */
-    public Output</* @Nullable */ Integer> getTunnel2ReplayWindowSize() {
+    public Output</* @Nullable */ Integer> tunnel2ReplayWindowSize() {
         return this.tunnel2ReplayWindowSize;
     }
     /**
@@ -861,7 +862,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
      * 
      */
-    public Output</* @Nullable */ String> getTunnel2StartupAction() {
+    public Output</* @Nullable */ String> tunnel2StartupAction() {
         return this.tunnel2StartupAction;
     }
     /**
@@ -875,7 +876,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
      * 
      */
-    public Output<String> getTunnel2VgwInsideAddress() {
+    public Output<String> tunnel2VgwInsideAddress() {
         return this.tunnel2VgwInsideAddress;
     }
     /**
@@ -889,7 +890,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Indicate whether the VPN tunnels process IPv4 or IPv6 traffic. Valid values are `ipv4 | ipv6`. `ipv6` Supports only EC2 Transit Gateway.
      * 
      */
-    public Output<String> getTunnelInsideIpVersion() {
+    public Output<String> tunnelInsideIpVersion() {
         return this.tunnelInsideIpVersion;
     }
     /**
@@ -903,7 +904,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The type of VPN connection. The only type AWS supports at this time is "ipsec.1".
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -917,7 +918,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return Telemetry for the VPN tunnels. Detailed below.
      * 
      */
-    public Output<List<VpnConnectionVgwTelemetry>> getVgwTelemetries() {
+    public Output<List<VpnConnectionVgwTelemetry>> vgwTelemetries() {
         return this.vgwTelemetries;
     }
     /**
@@ -931,7 +932,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @return The ID of the Virtual Private Gateway.
      * 
      */
-    public Output</* @Nullable */ String> getVpnGatewayId() {
+    public Output</* @Nullable */ String> vpnGatewayId() {
         return this.vpnGatewayId;
     }
 
@@ -957,7 +958,7 @@ public class VpnConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpnConnection(String name, VpnConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpnConnection:VpnConnection", name, args == null ? VpnConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpnConnection:VpnConnection", name, args == null ? VpnConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpnConnection(String name, Output<String> id, @Nullable VpnConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

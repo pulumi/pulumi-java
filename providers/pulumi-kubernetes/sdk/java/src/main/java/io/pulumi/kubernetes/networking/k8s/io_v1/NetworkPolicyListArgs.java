@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="items", required=true)
       private final Output<List<NetworkPolicyArgs>> items;
 
-    public Output<List<NetworkPolicyArgs>> getItems() {
+    public Output<List<NetworkPolicyArgs>> items() {
         return this.items;
     }
 
@@ -46,8 +47,8 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;
 
-    public Output<ListMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ListMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public NetworkPolicyListArgs(
@@ -73,10 +74,10 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NetworkPolicyListArgs() {
-        this.apiVersion = Output.empty();
-        this.items = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.items = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder items(Output<List<NetworkPolicyArgs>> items) {
@@ -129,7 +130,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
@@ -137,7 +138,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder metadata(@Nullable ListMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public NetworkPolicyListArgs build() {
             return new NetworkPolicyListArgs(apiVersion, items, kind, metadata);

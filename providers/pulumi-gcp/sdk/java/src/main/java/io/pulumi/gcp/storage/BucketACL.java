@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketACLArgs;
 import io.pulumi.gcp.storage.inputs.BucketACLState;
@@ -45,7 +46,7 @@ public class BucketACL extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket it applies to.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -59,7 +60,7 @@ public class BucketACL extends io.pulumi.resources.CustomResource {
      * @return Configure this ACL to be the default ACL.
      * 
      */
-    public Output</* @Nullable */ String> getDefaultAcl() {
+    public Output</* @Nullable */ String> defaultAcl() {
         return this.defaultAcl;
     }
     /**
@@ -73,7 +74,7 @@ public class BucketACL extends io.pulumi.resources.CustomResource {
      * @return The [canned GCS ACL](https://cloud.google.com/storage/docs/access-control/lists#predefined-acl) to apply. Must be set if `role_entity` is not.
      * 
      */
-    public Output</* @Nullable */ String> getPredefinedAcl() {
+    public Output</* @Nullable */ String> predefinedAcl() {
         return this.predefinedAcl;
     }
     /**
@@ -87,7 +88,7 @@ public class BucketACL extends io.pulumi.resources.CustomResource {
      * @return List of role/entity pairs in the form `ROLE:entity`. See [GCS Bucket ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/bucketAccessControls)  for more details. Must be set if `predefined_acl` is not.
      * 
      */
-    public Output<List<String>> getRoleEntities() {
+    public Output<List<String>> roleEntities() {
         return this.roleEntities;
     }
 
@@ -113,7 +114,7 @@ public class BucketACL extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketACL(String name, BucketACLArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/bucketACL:BucketACL", name, args == null ? BucketACLArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/bucketACL:BucketACL", name, args == null ? BucketACLArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketACL(String name, Output<String> id, @Nullable BucketACLState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

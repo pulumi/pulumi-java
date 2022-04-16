@@ -13,6 +13,7 @@ import io.pulumi.awsnative.robomaker.outputs.SimulationApplicationTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -42,7 +43,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * @return The current revision id.
      * 
      */
-    public Output</* @Nullable */ String> getCurrentRevisionId() {
+    public Output</* @Nullable */ String> currentRevisionId() {
         return this.currentRevisionId;
     }
     /**
@@ -56,7 +57,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * @return The URI of the Docker image for the robot application.
      * 
      */
-    public Output</* @Nullable */ String> getEnvironment() {
+    public Output</* @Nullable */ String> environment() {
         return this.environment;
     }
     /**
@@ -70,7 +71,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * @return The name of the simulation application.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -84,7 +85,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * @return The rendering engine for the simulation application.
      * 
      */
-    public Output</* @Nullable */ SimulationApplicationRenderingEngine> getRenderingEngine() {
+    public Output</* @Nullable */ SimulationApplicationRenderingEngine> renderingEngine() {
         return this.renderingEngine;
     }
     /**
@@ -98,7 +99,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * @return The robot software suite used by the simulation application.
      * 
      */
-    public Output<SimulationApplicationRobotSoftwareSuite> getRobotSoftwareSuite() {
+    public Output<SimulationApplicationRobotSoftwareSuite> robotSoftwareSuite() {
         return this.robotSoftwareSuite;
     }
     /**
@@ -112,7 +113,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * @return The simulation software suite used by the simulation application.
      * 
      */
-    public Output<SimulationApplicationSimulationSoftwareSuite> getSimulationSoftwareSuite() {
+    public Output<SimulationApplicationSimulationSoftwareSuite> simulationSoftwareSuite() {
         return this.simulationSoftwareSuite;
     }
     /**
@@ -126,13 +127,13 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * @return The sources of the simulation application.
      * 
      */
-    public Output</* @Nullable */ List<SimulationApplicationSourceConfig>> getSources() {
+    public Output</* @Nullable */ List<SimulationApplicationSourceConfig>> sources() {
         return this.sources;
     }
     @Export(name="tags", type=SimulationApplicationTags.class, parameters={})
     private Output</* @Nullable */ SimulationApplicationTags> tags;
 
-    public Output</* @Nullable */ SimulationApplicationTags> getTags() {
+    public Output</* @Nullable */ SimulationApplicationTags> tags() {
         return this.tags;
     }
 
@@ -158,7 +159,7 @@ public class SimulationApplication extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SimulationApplication(String name, SimulationApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:robomaker:SimulationApplication", name, args == null ? SimulationApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:robomaker:SimulationApplication", name, args == null ? SimulationApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SimulationApplication(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

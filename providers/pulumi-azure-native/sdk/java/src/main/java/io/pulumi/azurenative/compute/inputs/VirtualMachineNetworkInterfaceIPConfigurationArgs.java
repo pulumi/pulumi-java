@@ -9,6 +9,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressConfigu
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,8 +32,8 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
 
-    public Output<List<SubResourceArgs>> getApplicationGatewayBackendAddressPools() {
-        return this.applicationGatewayBackendAddressPools == null ? Output.empty() : this.applicationGatewayBackendAddressPools;
+    public Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools() {
+        return this.applicationGatewayBackendAddressPools == null ? Codegen.empty() : this.applicationGatewayBackendAddressPools;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     @Import(name="applicationSecurityGroups")
       private final @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
 
-    public Output<List<SubResourceArgs>> getApplicationSecurityGroups() {
-        return this.applicationSecurityGroups == null ? Output.empty() : this.applicationSecurityGroups;
+    public Output<List<SubResourceArgs>> applicationSecurityGroups() {
+        return this.applicationSecurityGroups == null ? Codegen.empty() : this.applicationSecurityGroups;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
 
-    public Output<List<SubResourceArgs>> getLoadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? Output.empty() : this.loadBalancerBackendAddressPools;
+    public Output<List<SubResourceArgs>> loadBalancerBackendAddressPools() {
+        return this.loadBalancerBackendAddressPools == null ? Codegen.empty() : this.loadBalancerBackendAddressPools;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -75,8 +76,8 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
-    public Output<Boolean> getPrimary() {
-        return this.primary == null ? Output.empty() : this.primary;
+    public Output<Boolean> primary() {
+        return this.primary == null ? Codegen.empty() : this.primary;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     @Import(name="privateIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersions>> privateIPAddressVersion;
 
-    public Output<Either<String,IPVersions>> getPrivateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Output.empty() : this.privateIPAddressVersion;
+    public Output<Either<String,IPVersions>> privateIPAddressVersion() {
+        return this.privateIPAddressVersion == null ? Codegen.empty() : this.privateIPAddressVersion;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     @Import(name="publicIPAddressConfiguration")
       private final @Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
-    public Output<VirtualMachinePublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Output.empty() : this.publicIPAddressConfiguration;
+    public Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration() {
+        return this.publicIPAddressConfiguration == null ? Codegen.empty() : this.publicIPAddressConfiguration;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
-    public Output<SubResourceArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<SubResourceArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public VirtualMachineNetworkInterfaceIPConfigurationArgs(
@@ -132,14 +133,14 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
     }
 
     private VirtualMachineNetworkInterfaceIPConfigurationArgs() {
-        this.applicationGatewayBackendAddressPools = Output.empty();
-        this.applicationSecurityGroups = Output.empty();
-        this.loadBalancerBackendAddressPools = Output.empty();
-        this.name = Output.empty();
-        this.primary = Output.empty();
-        this.privateIPAddressVersion = Output.empty();
-        this.publicIPAddressConfiguration = Output.empty();
-        this.subnet = Output.empty();
+        this.applicationGatewayBackendAddressPools = Codegen.empty();
+        this.applicationSecurityGroups = Codegen.empty();
+        this.loadBalancerBackendAddressPools = Codegen.empty();
+        this.name = Codegen.empty();
+        this.primary = Codegen.empty();
+        this.privateIPAddressVersion = Codegen.empty();
+        this.publicIPAddressConfiguration = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
             return this;
         }
         public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = Output.ofNullable(applicationGatewayBackendAddressPools);
+            this.applicationGatewayBackendAddressPools = Codegen.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
         public Builder applicationGatewayBackendAddressPools(SubResourceArgs... applicationGatewayBackendAddressPools) {
@@ -192,7 +193,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
             return this;
         }
         public Builder applicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
-            this.applicationSecurityGroups = Output.ofNullable(applicationSecurityGroups);
+            this.applicationSecurityGroups = Codegen.ofNullable(applicationSecurityGroups);
             return this;
         }
         public Builder applicationSecurityGroups(SubResourceArgs... applicationSecurityGroups) {
@@ -203,7 +204,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
             return this;
         }
         public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = Output.ofNullable(loadBalancerBackendAddressPools);
+            this.loadBalancerBackendAddressPools = Codegen.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
         public Builder loadBalancerBackendAddressPools(SubResourceArgs... loadBalancerBackendAddressPools) {
@@ -222,7 +223,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
             return this;
         }
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Output.ofNullable(primary);
+            this.primary = Codegen.ofNullable(primary);
             return this;
         }
         public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersions>> privateIPAddressVersion) {
@@ -230,7 +231,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
             return this;
         }
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersions> privateIPAddressVersion) {
-            this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
+            this.privateIPAddressVersion = Codegen.ofNullable(privateIPAddressVersion);
             return this;
         }
         public Builder publicIPAddressConfiguration(@Nullable Output<VirtualMachinePublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
@@ -238,7 +239,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
             return this;
         }
         public Builder publicIPAddressConfiguration(@Nullable VirtualMachinePublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = Output.ofNullable(publicIPAddressConfiguration);
+            this.publicIPAddressConfiguration = Codegen.ofNullable(publicIPAddressConfiguration);
             return this;
         }
         public Builder subnet(@Nullable Output<SubResourceArgs> subnet) {
@@ -246,7 +247,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationArgs extends io.
             return this;
         }
         public Builder subnet(@Nullable SubResourceArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public VirtualMachineNetworkInterfaceIPConfigurationArgs build() {
             return new VirtualMachineNetworkInterfaceIPConfigurationArgs(applicationGatewayBackendAddressPools, applicationSecurityGroups, loadBalancerBackendAddressPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);

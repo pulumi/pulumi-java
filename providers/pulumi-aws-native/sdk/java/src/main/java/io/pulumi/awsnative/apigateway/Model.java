@@ -8,6 +8,7 @@ import io.pulumi.awsnative.apigateway.ModelArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The content type for the model.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -43,7 +44,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return A description that identifies this model.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The ID of a REST API with which to associate this model.
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
     /**
@@ -85,7 +86,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @return The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
      * 
      */
-    public Output</* @Nullable */ Object> getSchema() {
+    public Output</* @Nullable */ Object> schema() {
         return this.schema;
     }
 
@@ -111,7 +112,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Model(String name, ModelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:Model", name, args == null ? ModelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Model(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

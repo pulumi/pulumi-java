@@ -7,6 +7,7 @@ import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetResourceAr
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
-    public Output<String> getResourceSetName() {
-        return this.resourceSetName == null ? Output.empty() : this.resourceSetName;
+    public Output<String> resourceSetName() {
+        return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceSetType", required=true)
       private final Output<String> resourceSetType;
 
-    public Output<String> getResourceSetType() {
+    public Output<String> resourceSetType() {
         return this.resourceSetType;
     }
 
@@ -48,7 +49,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resources", required=true)
       private final Output<List<ResourceSetResourceArgs>> resources;
 
-    public Output<List<ResourceSetResourceArgs>> getResources() {
+    public Output<List<ResourceSetResourceArgs>> resources() {
         return this.resources;
     }
 
@@ -59,8 +60,8 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ResourceSetTagArgs>> tags;
 
-    public Output<List<ResourceSetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ResourceSetTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResourceSetArgs(
@@ -75,10 +76,10 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceSetArgs() {
-        this.resourceSetName = Output.empty();
-        this.resourceSetType = Output.empty();
-        this.resources = Output.empty();
-        this.tags = Output.empty();
+        this.resourceSetName = Codegen.empty();
+        this.resourceSetType = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSetName(@Nullable String resourceSetName) {
-            this.resourceSetName = Output.ofNullable(resourceSetName);
+            this.resourceSetName = Codegen.ofNullable(resourceSetName);
             return this;
         }
         public Builder resourceSetType(Output<String> resourceSetType) {
@@ -139,7 +140,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ResourceSetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ResourceSetTagArgs... tags) {

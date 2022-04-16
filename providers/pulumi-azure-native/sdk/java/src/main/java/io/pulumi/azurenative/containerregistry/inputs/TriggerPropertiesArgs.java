@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.SourceTriggerArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TimerTriggerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="baseImageTrigger")
       private final @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
 
-    public Output<BaseImageTriggerArgs> getBaseImageTrigger() {
-        return this.baseImageTrigger == null ? Output.empty() : this.baseImageTrigger;
+    public Output<BaseImageTriggerArgs> baseImageTrigger() {
+        return this.baseImageTrigger == null ? Codegen.empty() : this.baseImageTrigger;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sourceTriggers")
       private final @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
 
-    public Output<List<SourceTriggerArgs>> getSourceTriggers() {
-        return this.sourceTriggers == null ? Output.empty() : this.sourceTriggers;
+    public Output<List<SourceTriggerArgs>> sourceTriggers() {
+        return this.sourceTriggers == null ? Codegen.empty() : this.sourceTriggers;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="timerTriggers")
       private final @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
 
-    public Output<List<TimerTriggerArgs>> getTimerTriggers() {
-        return this.timerTriggers == null ? Output.empty() : this.timerTriggers;
+    public Output<List<TimerTriggerArgs>> timerTriggers() {
+        return this.timerTriggers == null ? Codegen.empty() : this.timerTriggers;
     }
 
     public TriggerPropertiesArgs(
@@ -64,9 +65,9 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TriggerPropertiesArgs() {
-        this.baseImageTrigger = Output.empty();
-        this.sourceTriggers = Output.empty();
-        this.timerTriggers = Output.empty();
+        this.baseImageTrigger = Codegen.empty();
+        this.sourceTriggers = Codegen.empty();
+        this.timerTriggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder baseImageTrigger(@Nullable BaseImageTriggerArgs baseImageTrigger) {
-            this.baseImageTrigger = Output.ofNullable(baseImageTrigger);
+            this.baseImageTrigger = Codegen.ofNullable(baseImageTrigger);
             return this;
         }
         public Builder sourceTriggers(@Nullable Output<List<SourceTriggerArgs>> sourceTriggers) {
@@ -106,7 +107,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sourceTriggers(@Nullable List<SourceTriggerArgs> sourceTriggers) {
-            this.sourceTriggers = Output.ofNullable(sourceTriggers);
+            this.sourceTriggers = Codegen.ofNullable(sourceTriggers);
             return this;
         }
         public Builder sourceTriggers(SourceTriggerArgs... sourceTriggers) {
@@ -117,7 +118,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder timerTriggers(@Nullable List<TimerTriggerArgs> timerTriggers) {
-            this.timerTriggers = Output.ofNullable(timerTriggers);
+            this.timerTriggers = Codegen.ofNullable(timerTriggers);
             return this;
         }
         public Builder timerTriggers(TimerTriggerArgs... timerTriggers) {

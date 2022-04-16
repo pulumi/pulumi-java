@@ -8,6 +8,7 @@ import io.pulumi.awsnative.appstream.inputs.AppBlockScriptDetailsArgs;
 import io.pulumi.awsnative.appstream.inputs.AppBlockTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,43 +22,43 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="setupScriptDetails", required=true)
       private final Output<AppBlockScriptDetailsArgs> setupScriptDetails;
 
-    public Output<AppBlockScriptDetailsArgs> getSetupScriptDetails() {
+    public Output<AppBlockScriptDetailsArgs> setupScriptDetails() {
         return this.setupScriptDetails;
     }
 
     @Import(name="sourceS3Location", required=true)
       private final Output<AppBlockS3LocationArgs> sourceS3Location;
 
-    public Output<AppBlockS3LocationArgs> getSourceS3Location() {
+    public Output<AppBlockS3LocationArgs> sourceS3Location() {
         return this.sourceS3Location;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<AppBlockTagArgs>> tags;
 
-    public Output<List<AppBlockTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<AppBlockTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AppBlockArgs(
@@ -76,12 +77,12 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppBlockArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.setupScriptDetails = Output.empty();
-        this.sourceS3Location = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.setupScriptDetails = Codegen.empty();
+        this.sourceS3Location = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -127,7 +128,7 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -135,7 +136,7 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder setupScriptDetails(Output<AppBlockScriptDetailsArgs> setupScriptDetails) {
@@ -159,7 +160,7 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<AppBlockTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AppBlockTagArgs... tags) {

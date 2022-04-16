@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
     @Import(name="gitProperty")
       private final @Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty;
 
-    public Output<ConfigurationServiceGitPropertyArgs> getGitProperty() {
-        return this.gitProperty == null ? Output.empty() : this.gitProperty;
+    public Output<ConfigurationServiceGitPropertyArgs> gitProperty() {
+        return this.gitProperty == null ? Codegen.empty() : this.gitProperty;
     }
 
     public ConfigurationServiceSettingsArgs(@Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty) {
@@ -34,7 +35,7 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
     }
 
     private ConfigurationServiceSettingsArgs() {
-        this.gitProperty = Output.empty();
+        this.gitProperty = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyArgs gitProperty) {
-            this.gitProperty = Output.ofNullable(gitProperty);
+            this.gitProperty = Codegen.ofNullable(gitProperty);
             return this;
         }        public ConfigurationServiceSettingsArgs build() {
             return new ConfigurationServiceSettingsArgs(gitProperty);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+    public Output<String> fsType() {
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -48,8 +49,8 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LocalVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.path = Output.empty();
+        this.fsType = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class LocalVolumeSourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder path(Output<String> path) {

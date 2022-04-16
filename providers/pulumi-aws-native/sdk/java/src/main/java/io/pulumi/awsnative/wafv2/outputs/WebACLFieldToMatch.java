@@ -71,48 +71,48 @@ public final class WebACLFieldToMatch {
      * All query arguments of a web request.
      * 
     */
-    public Optional<Object> getAllQueryArguments() {
+    public Optional<Object> allQueryArguments() {
         return Optional.ofNullable(this.allQueryArguments);
     }
     /**
      * The body of a web request. This immediately follows the request headers.
      * 
     */
-    public Optional<Object> getBody() {
+    public Optional<Object> body() {
         return Optional.ofNullable(this.body);
     }
-    public Optional<WebACLJsonBody> getJsonBody() {
+    public Optional<WebACLJsonBody> jsonBody() {
         return Optional.ofNullable(this.jsonBody);
     }
     /**
      * The HTTP method of a web request. The method indicates the type of operation that the request is asking the origin to perform.
      * 
     */
-    public Optional<Object> getMethod() {
+    public Optional<Object> method() {
         return Optional.ofNullable(this.method);
     }
     /**
      * The query string of a web request. This is the part of a URL that appears after a ? character, if any.
      * 
     */
-    public Optional<Object> getQueryString() {
+    public Optional<Object> queryString() {
         return Optional.ofNullable(this.queryString);
     }
-    public Optional<WebACLFieldToMatchSingleHeaderProperties> getSingleHeader() {
+    public Optional<WebACLFieldToMatchSingleHeaderProperties> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
     /**
      * One query argument in a web request, identified by name, for example UserName or SalesRegion. The name can be up to 30 characters long and isn't case sensitive.
      * 
     */
-    public Optional<WebACLFieldToMatchSingleQueryArgumentProperties> getSingleQueryArgument() {
+    public Optional<WebACLFieldToMatchSingleQueryArgumentProperties> singleQueryArgument() {
         return Optional.ofNullable(this.singleQueryArgument);
     }
     /**
      * The path component of the URI of a web request. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
      * 
     */
-    public Optional<Object> getUriPath() {
+    public Optional<Object> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
 

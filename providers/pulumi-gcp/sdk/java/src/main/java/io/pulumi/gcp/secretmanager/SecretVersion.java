@@ -6,6 +6,7 @@ package io.pulumi.gcp.secretmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretVersionArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretVersionState;
@@ -43,7 +44,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return The time at which the Secret was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -57,7 +58,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return The time at which the Secret was destroyed. Only present if state is DESTROYED.
      * 
      */
-    public Output<String> getDestroyTime() {
+    public Output<String> destroyTime() {
         return this.destroyTime;
     }
     /**
@@ -71,7 +72,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return The current state of the SecretVersion.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -85,7 +86,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @return Secret Manager secret resource
      * 
      */
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
     /**
@@ -115,7 +116,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    public Output<String> getSecretData() {
+    public Output<String> secretData() {
         return this.secretData;
     }
 
@@ -141,7 +142,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecretVersion(String name, SecretVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:secretmanager/secretVersion:SecretVersion", name, args == null ? SecretVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:secretmanager/secretVersion:SecretVersion", name, args == null ? SecretVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecretVersion(String name, Output<String> id, @Nullable SecretVersionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

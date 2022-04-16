@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
     @Import(name="allowedPersistenceRegions", required=true)
       private final Output<List<String>> allowedPersistenceRegions;
 
-    public Output<List<String>> getAllowedPersistenceRegions() {
+    public Output<List<String>> allowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
     }
 
@@ -35,7 +36,7 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
     }
 
     private TopicMessageStoragePolicyArgs() {
-        this.allowedPersistenceRegions = Output.empty();
+        this.allowedPersistenceRegions = Codegen.empty();
     }
 
     public static Builder builder() {

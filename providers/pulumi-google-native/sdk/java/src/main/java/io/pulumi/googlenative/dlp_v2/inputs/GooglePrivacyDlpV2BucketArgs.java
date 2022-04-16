@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
     @Import(name="max")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> max;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> getMax() {
-        return this.max == null ? Output.empty() : this.max;
+    public Output<GooglePrivacyDlpV2ValueArgs> max() {
+        return this.max == null ? Codegen.empty() : this.max;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
     @Import(name="min")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> min;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> getMin() {
-        return this.min == null ? Output.empty() : this.min;
+    public Output<GooglePrivacyDlpV2ValueArgs> min() {
+        return this.min == null ? Codegen.empty() : this.min;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
     @Import(name="replacementValue", required=true)
       private final Output<GooglePrivacyDlpV2ValueArgs> replacementValue;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> getReplacementValue() {
+    public Output<GooglePrivacyDlpV2ValueArgs> replacementValue() {
         return this.replacementValue;
     }
 
@@ -61,9 +62,9 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
     }
 
     private GooglePrivacyDlpV2BucketArgs() {
-        this.max = Output.empty();
-        this.min = Output.empty();
-        this.replacementValue = Output.empty();
+        this.max = Codegen.empty();
+        this.min = Codegen.empty();
+        this.replacementValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder max(@Nullable GooglePrivacyDlpV2ValueArgs max) {
-            this.max = Output.ofNullable(max);
+            this.max = Codegen.ofNullable(max);
             return this;
         }
         public Builder min(@Nullable Output<GooglePrivacyDlpV2ValueArgs> min) {
@@ -103,7 +104,7 @@ public final class GooglePrivacyDlpV2BucketArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder min(@Nullable GooglePrivacyDlpV2ValueArgs min) {
-            this.min = Output.ofNullable(min);
+            this.min = Codegen.ofNullable(min);
             return this;
         }
         public Builder replacementValue(Output<GooglePrivacyDlpV2ValueArgs> replacementValue) {

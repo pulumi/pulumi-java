@@ -11,6 +11,7 @@ import io.pulumi.awsnative.workspaces.outputs.ConnectionAliasTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -24,31 +25,31 @@ public class ConnectionAlias extends io.pulumi.resources.CustomResource {
     @Export(name="aliasId", type=String.class, parameters={})
     private Output<String> aliasId;
 
-    public Output<String> getAliasId() {
+    public Output<String> aliasId() {
         return this.aliasId;
     }
     @Export(name="associations", type=List.class, parameters={ConnectionAliasAssociation.class})
     private Output<List<ConnectionAliasAssociation>> associations;
 
-    public Output<List<ConnectionAliasAssociation>> getAssociations() {
+    public Output<List<ConnectionAliasAssociation>> associations() {
         return this.associations;
     }
     @Export(name="connectionAliasState", type=ConnectionAliasState.class, parameters={})
     private Output<ConnectionAliasState> connectionAliasState;
 
-    public Output<ConnectionAliasState> getConnectionAliasState() {
+    public Output<ConnectionAliasState> connectionAliasState() {
         return this.connectionAliasState;
     }
     @Export(name="connectionString", type=String.class, parameters={})
     private Output<String> connectionString;
 
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
     @Export(name="tags", type=List.class, parameters={ConnectionAliasTag.class})
     private Output</* @Nullable */ List<ConnectionAliasTag>> tags;
 
-    public Output</* @Nullable */ List<ConnectionAliasTag>> getTags() {
+    public Output</* @Nullable */ List<ConnectionAliasTag>> tags() {
         return this.tags;
     }
 
@@ -74,7 +75,7 @@ public class ConnectionAlias extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionAlias(String name, ConnectionAliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:workspaces:ConnectionAlias", name, args == null ? ConnectionAliasArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:workspaces:ConnectionAlias", name, args == null ? ConnectionAliasArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectionAlias(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

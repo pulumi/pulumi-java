@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentOptionsArgs
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
     @Import(name="options")
       private final @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options;
 
-    public Output<TransitGatewayPeeringAttachmentOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<TransitGatewayPeeringAttachmentOptionsArgs> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
     @Import(name="peerAccountId", required=true)
       private final Output<String> peerAccountId;
 
-    public Output<String> getPeerAccountId() {
+    public Output<String> peerAccountId() {
         return this.peerAccountId;
     }
 
@@ -46,7 +47,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
     @Import(name="peerRegion", required=true)
       private final Output<String> peerRegion;
 
-    public Output<String> getPeerRegion() {
+    public Output<String> peerRegion() {
         return this.peerRegion;
     }
 
@@ -57,7 +58,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
     @Import(name="peerTransitGatewayId", required=true)
       private final Output<String> peerTransitGatewayId;
 
-    public Output<String> getPeerTransitGatewayId() {
+    public Output<String> peerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
 
@@ -68,8 +69,8 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
     @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
 
-    public Output<List<TransitGatewayPeeringAttachmentTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
     @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 
@@ -99,12 +100,12 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
     }
 
     private TransitGatewayPeeringAttachmentArgs() {
-        this.options = Output.empty();
-        this.peerAccountId = Output.empty();
-        this.peerRegion = Output.empty();
-        this.peerTransitGatewayId = Output.empty();
-        this.tags = Output.empty();
-        this.transitGatewayId = Output.empty();
+        this.options = Codegen.empty();
+        this.peerAccountId = Codegen.empty();
+        this.peerRegion = Codegen.empty();
+        this.peerTransitGatewayId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transitGatewayId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder options(@Nullable TransitGatewayPeeringAttachmentOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder peerAccountId(Output<String> peerAccountId) {
@@ -174,7 +175,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tags(@Nullable List<TransitGatewayPeeringAttachmentTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TransitGatewayPeeringAttachmentTagArgs... tags) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigArgs;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicReservationConfigArgs;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicRetentionConfigArgs;
@@ -24,8 +25,8 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="partitionConfig")
       private final @Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig;
 
-    public Output<LiteTopicPartitionConfigArgs> getPartitionConfig() {
-        return this.partitionConfig == null ? Output.empty() : this.partitionConfig;
+    public Output<LiteTopicPartitionConfigArgs> partitionConfig() {
+        return this.partitionConfig == null ? Codegen.empty() : this.partitionConfig;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservationConfig")
       private final @Nullable Output<LiteTopicReservationConfigArgs> reservationConfig;
 
-    public Output<LiteTopicReservationConfigArgs> getReservationConfig() {
-        return this.reservationConfig == null ? Output.empty() : this.reservationConfig;
+    public Output<LiteTopicReservationConfigArgs> reservationConfig() {
+        return this.reservationConfig == null ? Codegen.empty() : this.reservationConfig;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionConfig")
       private final @Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig;
 
-    public Output<LiteTopicRetentionConfigArgs> getRetentionConfig() {
-        return this.retentionConfig == null ? Output.empty() : this.retentionConfig;
+    public Output<LiteTopicRetentionConfigArgs> retentionConfig() {
+        return this.retentionConfig == null ? Codegen.empty() : this.retentionConfig;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public LiteTopicArgs(
@@ -116,13 +117,13 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LiteTopicArgs() {
-        this.name = Output.empty();
-        this.partitionConfig = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.reservationConfig = Output.empty();
-        this.retentionConfig = Output.empty();
-        this.zone = Output.empty();
+        this.name = Codegen.empty();
+        this.partitionConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.reservationConfig = Codegen.empty();
+        this.retentionConfig = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder partitionConfig(@Nullable Output<LiteTopicPartitionConfigArgs> partitionConfig) {
@@ -170,7 +171,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionConfig(@Nullable LiteTopicPartitionConfigArgs partitionConfig) {
-            this.partitionConfig = Output.ofNullable(partitionConfig);
+            this.partitionConfig = Codegen.ofNullable(partitionConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -178,7 +179,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -186,7 +187,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder reservationConfig(@Nullable Output<LiteTopicReservationConfigArgs> reservationConfig) {
@@ -194,7 +195,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservationConfig(@Nullable LiteTopicReservationConfigArgs reservationConfig) {
-            this.reservationConfig = Output.ofNullable(reservationConfig);
+            this.reservationConfig = Codegen.ofNullable(reservationConfig);
             return this;
         }
         public Builder retentionConfig(@Nullable Output<LiteTopicRetentionConfigArgs> retentionConfig) {
@@ -202,7 +203,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionConfig(@Nullable LiteTopicRetentionConfigArgs retentionConfig) {
-            this.retentionConfig = Output.ofNullable(retentionConfig);
+            this.retentionConfig = Codegen.ofNullable(retentionConfig);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -210,7 +211,7 @@ public final class LiteTopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public LiteTopicArgs build() {
             return new LiteTopicArgs(name, partitionConfig, project, region, reservationConfig, retentionConfig, zone);

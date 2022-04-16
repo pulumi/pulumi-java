@@ -6,6 +6,7 @@ package io.pulumi.awsnative.resourcegroups.inputs;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupConfigurationParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,15 +20,15 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
     @Import(name="parameters")
       private final @Nullable Output<List<GroupConfigurationParameterArgs>> parameters;
 
-    public Output<List<GroupConfigurationParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<GroupConfigurationParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GroupConfigurationItemArgs(
@@ -38,8 +39,8 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
     }
 
     private GroupConfigurationItemArgs() {
-        this.parameters = Output.empty();
-        this.type = Output.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder parameters(@Nullable List<GroupConfigurationParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(GroupConfigurationParameterArgs... parameters) {
@@ -80,7 +81,7 @@ public final class GroupConfigurationItemArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GroupConfigurationItemArgs build() {
             return new GroupConfigurationItemArgs(parameters, type);

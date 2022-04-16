@@ -5,6 +5,7 @@ package io.pulumi.gcp.tags.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespacedName")
       private final @Nullable Output<String> namespacedName;
 
-    public Output<String> getNamespacedName() {
-        return this.namespacedName == null ? Output.empty() : this.namespacedName;
+    public Output<String> namespacedName() {
+        return this.namespacedName == null ? Codegen.empty() : this.namespacedName;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
-        return this.shortName == null ? Output.empty() : this.shortName;
+    public Output<String> shortName() {
+        return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public TagValueState(
@@ -112,13 +113,13 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagValueState() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.namespacedName = Output.empty();
-        this.parent = Output.empty();
-        this.shortName = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespacedName = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.shortName = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -166,7 +167,7 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -174,7 +175,7 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespacedName(@Nullable Output<String> namespacedName) {
@@ -182,7 +183,7 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespacedName(@Nullable String namespacedName) {
-            this.namespacedName = Output.ofNullable(namespacedName);
+            this.namespacedName = Codegen.ofNullable(namespacedName);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -190,7 +191,7 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder shortName(@Nullable Output<String> shortName) {
@@ -198,7 +199,7 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Output.ofNullable(shortName);
+            this.shortName = Codegen.ofNullable(shortName);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -206,7 +207,7 @@ public final class TagValueState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public TagValueState build() {
             return new TagValueState(createTime, description, name, namespacedName, parent, shortName, updateTime);

@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class FirewallSubnetMappingGetArgs extends io.pulumi.resources.Reso
     @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
 
@@ -29,7 +30,7 @@ public final class FirewallSubnetMappingGetArgs extends io.pulumi.resources.Reso
     }
 
     private FirewallSubnetMappingGetArgs() {
-        this.subnetId = Output.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {

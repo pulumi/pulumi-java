@@ -5,6 +5,7 @@ package io.pulumi.aws.codestarconnections.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -33,7 +34,7 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -44,8 +45,8 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
     @Import(name="tlsCertificate")
       private final @Nullable Output<String> tlsCertificate;
 
-    public Output<String> getTlsCertificate() {
-        return this.tlsCertificate == null ? Output.empty() : this.tlsCertificate;
+    public Output<String> tlsCertificate() {
+        return this.tlsCertificate == null ? Codegen.empty() : this.tlsCertificate;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -71,10 +72,10 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
     }
 
     private HostVpcConfigurationGetArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tlsCertificate = Output.empty();
-        this.vpcId = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tlsCertificate = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tlsCertificate(@Nullable String tlsCertificate) {
-            this.tlsCertificate = Output.ofNullable(tlsCertificate);
+            this.tlsCertificate = Codegen.ofNullable(tlsCertificate);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

@@ -63,39 +63,39 @@ public final class GetResourcePolicyResult {
      * Description of this Resource Policy.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
-    public List<GetResourcePolicyGroupPlacementPolicy> getGroupPlacementPolicies() {
+    public List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies() {
         return this.groupPlacementPolicies;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<GetResourcePolicyInstanceSchedulePolicy> getInstanceSchedulePolicies() {
+    public List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies() {
         return this.instanceSchedulePolicies;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
-    public Optional<String> getRegion() {
+    public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
     /**
      * The URI of the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
-    public List<GetResourcePolicySnapshotSchedulePolicy> getSnapshotSchedulePolicies() {
+    public List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies() {
         return this.snapshotSchedulePolicies;
     }
 

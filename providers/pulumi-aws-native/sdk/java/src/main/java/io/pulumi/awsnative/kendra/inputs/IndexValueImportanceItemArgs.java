@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="value")
       private final @Nullable Output<Integer> value;
 
-    public Output<Integer> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Integer> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public IndexValueImportanceItemArgs(
@@ -37,8 +38,8 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
     }
 
     private IndexValueImportanceItemArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder value(@Nullable Output<Integer> value) {
@@ -76,7 +77,7 @@ public final class IndexValueImportanceItemArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder value(@Nullable Integer value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public IndexValueImportanceItemArgs build() {
             return new IndexValueImportanceItemArgs(key, value);

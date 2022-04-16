@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AmiEphemeralBlockDeviceGetArgs extends io.pulumi.resources.Re
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -32,7 +33,7 @@ public final class AmiEphemeralBlockDeviceGetArgs extends io.pulumi.resources.Re
     @Import(name="virtualName", required=true)
       private final Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
+    public Output<String> virtualName() {
         return this.virtualName;
     }
 
@@ -44,8 +45,8 @@ public final class AmiEphemeralBlockDeviceGetArgs extends io.pulumi.resources.Re
     }
 
     private AmiEphemeralBlockDeviceGetArgs() {
-        this.deviceName = Output.empty();
-        this.virtualName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.virtualName = Codegen.empty();
     }
 
     public static Builder builder() {

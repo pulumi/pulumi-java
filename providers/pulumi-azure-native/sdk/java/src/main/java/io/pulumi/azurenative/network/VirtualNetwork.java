@@ -16,6 +16,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +51,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The AddressSpace that contains an array of IP address ranges that can be used by subnets.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> getAddressSpace() {
+    public Output</* @Nullable */ AddressSpaceResponse> addressSpace() {
         return this.addressSpace;
     }
     /**
@@ -64,7 +65,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> getBgpCommunities() {
+    public Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> bgpCommunities() {
         return this.bgpCommunities;
     }
     /**
@@ -78,7 +79,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The DDoS protection plan associated with the virtual network.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getDdosProtectionPlan() {
+    public Output</* @Nullable */ SubResourceResponse> ddosProtectionPlan() {
         return this.ddosProtectionPlan;
     }
     /**
@@ -92,7 +93,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
      * 
      */
-    public Output</* @Nullable */ DhcpOptionsResponse> getDhcpOptions() {
+    public Output</* @Nullable */ DhcpOptionsResponse> dhcpOptions() {
         return this.dhcpOptions;
     }
     /**
@@ -106,7 +107,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDdosProtection() {
+    public Output</* @Nullable */ Boolean> enableDdosProtection() {
         return this.enableDdosProtection;
     }
     /**
@@ -120,7 +121,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return Indicates if VM protection is enabled for all the subnets in the virtual network.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableVmProtection() {
+    public Output</* @Nullable */ Boolean> enableVmProtection() {
         return this.enableVmProtection;
     }
     /**
@@ -134,7 +135,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -148,7 +149,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The extended location of the virtual network.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -162,7 +163,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return Array of IpAllocation which reference this VNET.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> getIpAllocations() {
+    public Output</* @Nullable */ List<SubResourceResponse>> ipAllocations() {
         return this.ipAllocations;
     }
     /**
@@ -176,7 +177,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -190,7 +191,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -204,7 +205,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the virtual network resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -218,7 +219,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return The resourceGuid property of the Virtual Network resource.
      * 
      */
-    public Output<String> getResourceGuid() {
+    public Output<String> resourceGuid() {
         return this.resourceGuid;
     }
     /**
@@ -232,7 +233,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return A list of subnets in a Virtual Network.
      * 
      */
-    public Output</* @Nullable */ List<SubnetResponse>> getSubnets() {
+    public Output</* @Nullable */ List<SubnetResponse>> subnets() {
         return this.subnets;
     }
     /**
@@ -246,7 +247,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -260,7 +261,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -274,7 +275,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @return A list of peerings in a Virtual Network.
      * 
      */
-    public Output</* @Nullable */ List<VirtualNetworkPeeringResponse>> getVirtualNetworkPeerings() {
+    public Output</* @Nullable */ List<VirtualNetworkPeeringResponse>> virtualNetworkPeerings() {
         return this.virtualNetworkPeerings;
     }
 
@@ -300,7 +301,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualNetwork(String name, VirtualNetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualNetwork", name, args == null ? VirtualNetworkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:VirtualNetwork", name, args == null ? VirtualNetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualNetwork(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

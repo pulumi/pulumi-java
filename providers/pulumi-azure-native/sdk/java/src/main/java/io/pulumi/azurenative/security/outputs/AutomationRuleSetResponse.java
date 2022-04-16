@@ -18,7 +18,7 @@ public final class AutomationRuleSetResponse {
         this.rules = rules;
     }
 
-    public List<AutomationTriggeringRuleResponse> getRules() {
+    public List<AutomationTriggeringRuleResponse> rules() {
         return this.rules == null ? List.of() : this.rules;
     }
 

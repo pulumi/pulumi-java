@@ -23,7 +23,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
     @Import(name="discoveryStatus", required=true)
       private final String discoveryStatus;
 
-    public String getDiscoveryStatus() {
+    public String discoveryStatus() {
         return this.discoveryStatus;
     }
 
@@ -34,7 +34,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
     @Import(name="reason", required=true)
       private final String reason;
 
-    public String getReason() {
+    public String reason() {
         return this.reason;
     }
 
@@ -56,7 +56,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
     @Import(name="startTime", required=true)
       private final String startTime;
 
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
 
@@ -67,7 +67,7 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="canonicalScopes")
       private final @Nullable Output<String> canonicalScopes;
 
-    public Output<String> getCanonicalScopes() {
-        return this.canonicalScopes == null ? Output.empty() : this.canonicalScopes;
+    public Output<String> canonicalScopes() {
+        return this.canonicalScopes == null ? Codegen.empty() : this.canonicalScopes;
     }
 
     public OAuthRequirementsArgs(@Nullable Output<String> canonicalScopes) {
@@ -34,7 +35,7 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private OAuthRequirementsArgs() {
-        this.canonicalScopes = Output.empty();
+        this.canonicalScopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder canonicalScopes(@Nullable String canonicalScopes) {
-            this.canonicalScopes = Output.ofNullable(canonicalScopes);
+            this.canonicalScopes = Codegen.ofNullable(canonicalScopes);
             return this;
         }        public OAuthRequirementsArgs build() {
             return new OAuthRequirementsArgs(canonicalScopes);

@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -59,7 +60,7 @@ public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -73,7 +74,7 @@ public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
      * @return Dataset properties
      * 
      */
-    public Output<DatasetResponse> getProperties() {
+    public Output<DatasetResponse> properties() {
         return this.properties;
     }
     /**
@@ -101,7 +102,7 @@ public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
      * @return The sku of the workspace.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -115,7 +116,7 @@ public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +130,7 @@ public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -155,7 +156,7 @@ public class MachineLearningDataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MachineLearningDataset(String name, MachineLearningDatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:machinelearningservices:MachineLearningDataset", name, args == null ? MachineLearningDatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:machinelearningservices:MachineLearningDataset", name, args == null ? MachineLearningDatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MachineLearningDataset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

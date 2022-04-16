@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
     @Import(name="excludeMatchedPattern")
       private final @Nullable Output<Boolean> excludeMatchedPattern;
 
-    public Output<Boolean> getExcludeMatchedPattern() {
-        return this.excludeMatchedPattern == null ? Output.empty() : this.excludeMatchedPattern;
+    public Output<Boolean> excludeMatchedPattern() {
+        return this.excludeMatchedPattern == null ? Codegen.empty() : this.excludeMatchedPattern;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
     @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
-    public Output<String> getPattern() {
+    public Output<String> pattern() {
         return this.pattern;
     }
 
@@ -44,7 +45,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -58,9 +59,9 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
     }
 
     private WebhookFilterGroupFilterGetArgs() {
-        this.excludeMatchedPattern = Output.empty();
-        this.pattern = Output.empty();
-        this.type = Output.empty();
+        this.excludeMatchedPattern = Codegen.empty();
+        this.pattern = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class WebhookFilterGroupFilterGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder excludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
-            this.excludeMatchedPattern = Output.ofNullable(excludeMatchedPattern);
+            this.excludeMatchedPattern = Codegen.ofNullable(excludeMatchedPattern);
             return this;
         }
         public Builder pattern(Output<String> pattern) {

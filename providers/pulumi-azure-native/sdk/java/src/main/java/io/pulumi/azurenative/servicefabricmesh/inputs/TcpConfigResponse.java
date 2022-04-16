@@ -25,7 +25,7 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="destination", required=true)
       private final GatewayDestinationResponse destination;
 
-    public GatewayDestinationResponse getDestination() {
+    public GatewayDestinationResponse destination() {
         return this.destination;
     }
 
@@ -36,7 +36,7 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="port", required=true)
       private final Integer port;
 
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

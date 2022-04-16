@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicelinker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authType", required=true)
       private final Output<String> authType;
 
-    public Output<String> getAuthType() {
+    public Output<String> authType() {
         return this.authType;
     }
 
@@ -37,8 +38,8 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<String> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     public SecretAuthInfoArgs(
@@ -62,9 +63,9 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretAuthInfoArgs() {
-        this.authType = Output.empty();
-        this.name = Output.empty();
-        this.secret = Output.empty();
+        this.authType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder secret(@Nullable Output<String> secret) {
@@ -112,7 +113,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }        public SecretAuthInfoArgs build() {
             return new SecretAuthInfoArgs(authType, name, secret);

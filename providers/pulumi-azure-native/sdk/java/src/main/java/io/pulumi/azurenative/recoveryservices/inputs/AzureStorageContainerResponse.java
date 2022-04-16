@@ -26,7 +26,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
     }
 
@@ -41,7 +41,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="containerType", required=true)
       private final String containerType;
 
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
 
@@ -52,7 +52,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
-    public Optional<String> getFriendlyName() {
+    public Optional<String> friendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
     }
 
@@ -63,7 +63,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
-    public Optional<String> getHealthStatus() {
+    public Optional<String> healthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
     }
 
@@ -74,7 +74,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="protectedItemCount")
       private final @Nullable Double protectedItemCount;
 
-    public Optional<Double> getProtectedItemCount() {
+    public Optional<Double> protectedItemCount() {
         return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
     }
 
@@ -85,7 +85,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
-    public Optional<String> getRegistrationStatus() {
+    public Optional<String> registrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
     }
 
@@ -96,7 +96,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
-    public Optional<String> getResourceGroup() {
+    public Optional<String> resourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
     }
 
@@ -107,7 +107,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
     }
 
@@ -118,7 +118,7 @@ public final class AzureStorageContainerResponse extends io.pulumi.resources.Inv
     @Import(name="storageAccountVersion")
       private final @Nullable String storageAccountVersion;
 
-    public Optional<String> getStorageAccountVersion() {
+    public Optional<String> storageAccountVersion() {
         return this.storageAccountVersion == null ? Optional.empty() : Optional.ofNullable(this.storageAccountVersion);
     }
 

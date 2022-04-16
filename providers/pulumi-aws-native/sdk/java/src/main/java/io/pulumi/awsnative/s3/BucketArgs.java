@@ -23,6 +23,7 @@ import io.pulumi.awsnative.s3.inputs.BucketVersioningConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -41,8 +42,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accelerateConfiguration")
       private final @Nullable Output<BucketAccelerateConfigurationArgs> accelerateConfiguration;
 
-    public Output<BucketAccelerateConfigurationArgs> getAccelerateConfiguration() {
-        return this.accelerateConfiguration == null ? Output.empty() : this.accelerateConfiguration;
+    public Output<BucketAccelerateConfigurationArgs> accelerateConfiguration() {
+        return this.accelerateConfiguration == null ? Codegen.empty() : this.accelerateConfiguration;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessControl")
       private final @Nullable Output<BucketAccessControl> accessControl;
 
-    public Output<BucketAccessControl> getAccessControl() {
-        return this.accessControl == null ? Output.empty() : this.accessControl;
+    public Output<BucketAccessControl> accessControl() {
+        return this.accessControl == null ? Codegen.empty() : this.accessControl;
     }
 
     /**
@@ -63,15 +64,15 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyticsConfigurations")
       private final @Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations;
 
-    public Output<List<BucketAnalyticsConfigurationArgs>> getAnalyticsConfigurations() {
-        return this.analyticsConfigurations == null ? Output.empty() : this.analyticsConfigurations;
+    public Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations() {
+        return this.analyticsConfigurations == null ? Codegen.empty() : this.analyticsConfigurations;
     }
 
     @Import(name="bucketEncryption")
       private final @Nullable Output<BucketEncryptionArgs> bucketEncryption;
 
-    public Output<BucketEncryptionArgs> getBucketEncryption() {
-        return this.bucketEncryption == null ? Output.empty() : this.bucketEncryption;
+    public Output<BucketEncryptionArgs> bucketEncryption() {
+        return this.bucketEncryption == null ? Codegen.empty() : this.bucketEncryption;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+    public Output<String> bucketName() {
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="corsConfiguration")
       private final @Nullable Output<BucketCorsConfigurationArgs> corsConfiguration;
 
-    public Output<BucketCorsConfigurationArgs> getCorsConfiguration() {
-        return this.corsConfiguration == null ? Output.empty() : this.corsConfiguration;
+    public Output<BucketCorsConfigurationArgs> corsConfiguration() {
+        return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intelligentTieringConfigurations")
       private final @Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations;
 
-    public Output<List<BucketIntelligentTieringConfigurationArgs>> getIntelligentTieringConfigurations() {
-        return this.intelligentTieringConfigurations == null ? Output.empty() : this.intelligentTieringConfigurations;
+    public Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations() {
+        return this.intelligentTieringConfigurations == null ? Codegen.empty() : this.intelligentTieringConfigurations;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inventoryConfigurations")
       private final @Nullable Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations;
 
-    public Output<List<BucketInventoryConfigurationArgs>> getInventoryConfigurations() {
-        return this.inventoryConfigurations == null ? Output.empty() : this.inventoryConfigurations;
+    public Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations() {
+        return this.inventoryConfigurations == null ? Codegen.empty() : this.inventoryConfigurations;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleConfiguration")
       private final @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
-    public Output<BucketLifecycleConfigurationArgs> getLifecycleConfiguration() {
-        return this.lifecycleConfiguration == null ? Output.empty() : this.lifecycleConfiguration;
+    public Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration() {
+        return this.lifecycleConfiguration == null ? Codegen.empty() : this.lifecycleConfiguration;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="loggingConfiguration")
       private final @Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration;
 
-    public Output<BucketLoggingConfigurationArgs> getLoggingConfiguration() {
-        return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
+    public Output<BucketLoggingConfigurationArgs> loggingConfiguration() {
+        return this.loggingConfiguration == null ? Codegen.empty() : this.loggingConfiguration;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricsConfigurations")
       private final @Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations;
 
-    public Output<List<BucketMetricsConfigurationArgs>> getMetricsConfigurations() {
-        return this.metricsConfigurations == null ? Output.empty() : this.metricsConfigurations;
+    public Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations() {
+        return this.metricsConfigurations == null ? Codegen.empty() : this.metricsConfigurations;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfiguration")
       private final @Nullable Output<BucketNotificationConfigurationArgs> notificationConfiguration;
 
-    public Output<BucketNotificationConfigurationArgs> getNotificationConfiguration() {
-        return this.notificationConfiguration == null ? Output.empty() : this.notificationConfiguration;
+    public Output<BucketNotificationConfigurationArgs> notificationConfiguration() {
+        return this.notificationConfiguration == null ? Codegen.empty() : this.notificationConfiguration;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockConfiguration")
       private final @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration;
 
-    public Output<BucketObjectLockConfigurationArgs> getObjectLockConfiguration() {
-        return this.objectLockConfiguration == null ? Output.empty() : this.objectLockConfiguration;
+    public Output<BucketObjectLockConfigurationArgs> objectLockConfiguration() {
+        return this.objectLockConfiguration == null ? Codegen.empty() : this.objectLockConfiguration;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectLockEnabled")
       private final @Nullable Output<Boolean> objectLockEnabled;
 
-    public Output<Boolean> getObjectLockEnabled() {
-        return this.objectLockEnabled == null ? Output.empty() : this.objectLockEnabled;
+    public Output<Boolean> objectLockEnabled() {
+        return this.objectLockEnabled == null ? Codegen.empty() : this.objectLockEnabled;
     }
 
     /**
@@ -191,15 +192,15 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownershipControls")
       private final @Nullable Output<BucketOwnershipControlsArgs> ownershipControls;
 
-    public Output<BucketOwnershipControlsArgs> getOwnershipControls() {
-        return this.ownershipControls == null ? Output.empty() : this.ownershipControls;
+    public Output<BucketOwnershipControlsArgs> ownershipControls() {
+        return this.ownershipControls == null ? Codegen.empty() : this.ownershipControls;
     }
 
     @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
-    public Output<BucketPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration == null ? Output.empty() : this.publicAccessBlockConfiguration;
+    public Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration() {
+        return this.publicAccessBlockConfiguration == null ? Codegen.empty() : this.publicAccessBlockConfiguration;
     }
 
     /**
@@ -209,8 +210,8 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicationConfiguration")
       private final @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration;
 
-    public Output<BucketReplicationConfigurationArgs> getReplicationConfiguration() {
-        return this.replicationConfiguration == null ? Output.empty() : this.replicationConfiguration;
+    public Output<BucketReplicationConfigurationArgs> replicationConfiguration() {
+        return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
     }
 
     /**
@@ -220,22 +221,22 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<BucketTagArgs>> tags;
 
-    public Output<List<BucketTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<BucketTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="versioningConfiguration")
       private final @Nullable Output<BucketVersioningConfigurationArgs> versioningConfiguration;
 
-    public Output<BucketVersioningConfigurationArgs> getVersioningConfiguration() {
-        return this.versioningConfiguration == null ? Output.empty() : this.versioningConfiguration;
+    public Output<BucketVersioningConfigurationArgs> versioningConfiguration() {
+        return this.versioningConfiguration == null ? Codegen.empty() : this.versioningConfiguration;
     }
 
     @Import(name="websiteConfiguration")
       private final @Nullable Output<BucketWebsiteConfigurationArgs> websiteConfiguration;
 
-    public Output<BucketWebsiteConfigurationArgs> getWebsiteConfiguration() {
-        return this.websiteConfiguration == null ? Output.empty() : this.websiteConfiguration;
+    public Output<BucketWebsiteConfigurationArgs> websiteConfiguration() {
+        return this.websiteConfiguration == null ? Codegen.empty() : this.websiteConfiguration;
     }
 
     public BucketArgs(
@@ -282,26 +283,26 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketArgs() {
-        this.accelerateConfiguration = Output.empty();
-        this.accessControl = Output.empty();
-        this.analyticsConfigurations = Output.empty();
-        this.bucketEncryption = Output.empty();
-        this.bucketName = Output.empty();
-        this.corsConfiguration = Output.empty();
-        this.intelligentTieringConfigurations = Output.empty();
-        this.inventoryConfigurations = Output.empty();
-        this.lifecycleConfiguration = Output.empty();
-        this.loggingConfiguration = Output.empty();
-        this.metricsConfigurations = Output.empty();
-        this.notificationConfiguration = Output.empty();
-        this.objectLockConfiguration = Output.empty();
-        this.objectLockEnabled = Output.empty();
-        this.ownershipControls = Output.empty();
-        this.publicAccessBlockConfiguration = Output.empty();
-        this.replicationConfiguration = Output.empty();
-        this.tags = Output.empty();
-        this.versioningConfiguration = Output.empty();
-        this.websiteConfiguration = Output.empty();
+        this.accelerateConfiguration = Codegen.empty();
+        this.accessControl = Codegen.empty();
+        this.analyticsConfigurations = Codegen.empty();
+        this.bucketEncryption = Codegen.empty();
+        this.bucketName = Codegen.empty();
+        this.corsConfiguration = Codegen.empty();
+        this.intelligentTieringConfigurations = Codegen.empty();
+        this.inventoryConfigurations = Codegen.empty();
+        this.lifecycleConfiguration = Codegen.empty();
+        this.loggingConfiguration = Codegen.empty();
+        this.metricsConfigurations = Codegen.empty();
+        this.notificationConfiguration = Codegen.empty();
+        this.objectLockConfiguration = Codegen.empty();
+        this.objectLockEnabled = Codegen.empty();
+        this.ownershipControls = Codegen.empty();
+        this.publicAccessBlockConfiguration = Codegen.empty();
+        this.replicationConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.versioningConfiguration = Codegen.empty();
+        this.websiteConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -367,7 +368,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accelerateConfiguration(@Nullable BucketAccelerateConfigurationArgs accelerateConfiguration) {
-            this.accelerateConfiguration = Output.ofNullable(accelerateConfiguration);
+            this.accelerateConfiguration = Codegen.ofNullable(accelerateConfiguration);
             return this;
         }
         public Builder accessControl(@Nullable Output<BucketAccessControl> accessControl) {
@@ -375,7 +376,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessControl(@Nullable BucketAccessControl accessControl) {
-            this.accessControl = Output.ofNullable(accessControl);
+            this.accessControl = Codegen.ofNullable(accessControl);
             return this;
         }
         public Builder analyticsConfigurations(@Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations) {
@@ -383,7 +384,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder analyticsConfigurations(@Nullable List<BucketAnalyticsConfigurationArgs> analyticsConfigurations) {
-            this.analyticsConfigurations = Output.ofNullable(analyticsConfigurations);
+            this.analyticsConfigurations = Codegen.ofNullable(analyticsConfigurations);
             return this;
         }
         public Builder analyticsConfigurations(BucketAnalyticsConfigurationArgs... analyticsConfigurations) {
@@ -394,7 +395,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketEncryption(@Nullable BucketEncryptionArgs bucketEncryption) {
-            this.bucketEncryption = Output.ofNullable(bucketEncryption);
+            this.bucketEncryption = Codegen.ofNullable(bucketEncryption);
             return this;
         }
         public Builder bucketName(@Nullable Output<String> bucketName) {
@@ -402,7 +403,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder corsConfiguration(@Nullable Output<BucketCorsConfigurationArgs> corsConfiguration) {
@@ -410,7 +411,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder corsConfiguration(@Nullable BucketCorsConfigurationArgs corsConfiguration) {
-            this.corsConfiguration = Output.ofNullable(corsConfiguration);
+            this.corsConfiguration = Codegen.ofNullable(corsConfiguration);
             return this;
         }
         public Builder intelligentTieringConfigurations(@Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations) {
@@ -418,7 +419,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intelligentTieringConfigurations(@Nullable List<BucketIntelligentTieringConfigurationArgs> intelligentTieringConfigurations) {
-            this.intelligentTieringConfigurations = Output.ofNullable(intelligentTieringConfigurations);
+            this.intelligentTieringConfigurations = Codegen.ofNullable(intelligentTieringConfigurations);
             return this;
         }
         public Builder intelligentTieringConfigurations(BucketIntelligentTieringConfigurationArgs... intelligentTieringConfigurations) {
@@ -429,7 +430,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inventoryConfigurations(@Nullable List<BucketInventoryConfigurationArgs> inventoryConfigurations) {
-            this.inventoryConfigurations = Output.ofNullable(inventoryConfigurations);
+            this.inventoryConfigurations = Codegen.ofNullable(inventoryConfigurations);
             return this;
         }
         public Builder inventoryConfigurations(BucketInventoryConfigurationArgs... inventoryConfigurations) {
@@ -440,7 +441,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
-            this.lifecycleConfiguration = Output.ofNullable(lifecycleConfiguration);
+            this.lifecycleConfiguration = Codegen.ofNullable(lifecycleConfiguration);
             return this;
         }
         public Builder loggingConfiguration(@Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration) {
@@ -448,7 +449,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggingConfiguration(@Nullable BucketLoggingConfigurationArgs loggingConfiguration) {
-            this.loggingConfiguration = Output.ofNullable(loggingConfiguration);
+            this.loggingConfiguration = Codegen.ofNullable(loggingConfiguration);
             return this;
         }
         public Builder metricsConfigurations(@Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations) {
@@ -456,7 +457,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricsConfigurations(@Nullable List<BucketMetricsConfigurationArgs> metricsConfigurations) {
-            this.metricsConfigurations = Output.ofNullable(metricsConfigurations);
+            this.metricsConfigurations = Codegen.ofNullable(metricsConfigurations);
             return this;
         }
         public Builder metricsConfigurations(BucketMetricsConfigurationArgs... metricsConfigurations) {
@@ -467,7 +468,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfiguration(@Nullable BucketNotificationConfigurationArgs notificationConfiguration) {
-            this.notificationConfiguration = Output.ofNullable(notificationConfiguration);
+            this.notificationConfiguration = Codegen.ofNullable(notificationConfiguration);
             return this;
         }
         public Builder objectLockConfiguration(@Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration) {
@@ -475,7 +476,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectLockConfiguration(@Nullable BucketObjectLockConfigurationArgs objectLockConfiguration) {
-            this.objectLockConfiguration = Output.ofNullable(objectLockConfiguration);
+            this.objectLockConfiguration = Codegen.ofNullable(objectLockConfiguration);
             return this;
         }
         public Builder objectLockEnabled(@Nullable Output<Boolean> objectLockEnabled) {
@@ -483,7 +484,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectLockEnabled(@Nullable Boolean objectLockEnabled) {
-            this.objectLockEnabled = Output.ofNullable(objectLockEnabled);
+            this.objectLockEnabled = Codegen.ofNullable(objectLockEnabled);
             return this;
         }
         public Builder ownershipControls(@Nullable Output<BucketOwnershipControlsArgs> ownershipControls) {
@@ -491,7 +492,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownershipControls(@Nullable BucketOwnershipControlsArgs ownershipControls) {
-            this.ownershipControls = Output.ofNullable(ownershipControls);
+            this.ownershipControls = Codegen.ofNullable(ownershipControls);
             return this;
         }
         public Builder publicAccessBlockConfiguration(@Nullable Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
@@ -499,7 +500,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicAccessBlockConfiguration(@Nullable BucketPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
-            this.publicAccessBlockConfiguration = Output.ofNullable(publicAccessBlockConfiguration);
+            this.publicAccessBlockConfiguration = Codegen.ofNullable(publicAccessBlockConfiguration);
             return this;
         }
         public Builder replicationConfiguration(@Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration) {
@@ -507,7 +508,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicationConfiguration(@Nullable BucketReplicationConfigurationArgs replicationConfiguration) {
-            this.replicationConfiguration = Output.ofNullable(replicationConfiguration);
+            this.replicationConfiguration = Codegen.ofNullable(replicationConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<List<BucketTagArgs>> tags) {
@@ -515,7 +516,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<BucketTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(BucketTagArgs... tags) {
@@ -526,7 +527,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versioningConfiguration(@Nullable BucketVersioningConfigurationArgs versioningConfiguration) {
-            this.versioningConfiguration = Output.ofNullable(versioningConfiguration);
+            this.versioningConfiguration = Codegen.ofNullable(versioningConfiguration);
             return this;
         }
         public Builder websiteConfiguration(@Nullable Output<BucketWebsiteConfigurationArgs> websiteConfiguration) {
@@ -534,7 +535,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder websiteConfiguration(@Nullable BucketWebsiteConfigurationArgs websiteConfiguration) {
-            this.websiteConfiguration = Output.ofNullable(websiteConfiguration);
+            this.websiteConfiguration = Codegen.ofNullable(websiteConfiguration);
             return this;
         }        public BucketArgs build() {
             return new BucketArgs(accelerateConfiguration, accessControl, analyticsConfigurations, bucketEncryption, bucketName, corsConfiguration, intelligentTieringConfigurations, inventoryConfigurations, lifecycleConfiguration, loggingConfiguration, metricsConfigurations, notificationConfiguration, objectLockConfiguration, objectLockEnabled, ownershipControls, publicAccessBlockConfiguration, replicationConfiguration, tags, versioningConfiguration, websiteConfiguration);

@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryMetricGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
-        return this.expression == null ? Output.empty() : this.expression;
+    public Output<String> expression() {
+        return this.expression == null ? Codegen.empty() : this.expression;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -56,8 +57,8 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
     @Import(name="metric")
       private final @Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric;
 
-    public Output<MetricAlarmMetricQueryMetricGetArgs> getMetric() {
-        return this.metric == null ? Output.empty() : this.metric;
+    public Output<MetricAlarmMetricQueryMetricGetArgs> metric() {
+        return this.metric == null ? Codegen.empty() : this.metric;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
     @Import(name="returnData")
       private final @Nullable Output<Boolean> returnData;
 
-    public Output<Boolean> getReturnData() {
-        return this.returnData == null ? Output.empty() : this.returnData;
+    public Output<Boolean> returnData() {
+        return this.returnData == null ? Codegen.empty() : this.returnData;
     }
 
     public MetricAlarmMetricQueryGetArgs(
@@ -98,12 +99,12 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
     }
 
     private MetricAlarmMetricQueryGetArgs() {
-        this.accountId = Output.empty();
-        this.expression = Output.empty();
-        this.id = Output.empty();
-        this.label = Output.empty();
-        this.metric = Output.empty();
-        this.returnData = Output.empty();
+        this.accountId = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.id = Codegen.empty();
+        this.label = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.returnData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder expression(@Nullable Output<String> expression) {
@@ -149,7 +150,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder expression(@Nullable String expression) {
-            this.expression = Output.ofNullable(expression);
+            this.expression = Codegen.ofNullable(expression);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -165,7 +166,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder metric(@Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric) {
@@ -173,7 +174,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder metric(@Nullable MetricAlarmMetricQueryMetricGetArgs metric) {
-            this.metric = Output.ofNullable(metric);
+            this.metric = Codegen.ofNullable(metric);
             return this;
         }
         public Builder returnData(@Nullable Output<Boolean> returnData) {
@@ -181,7 +182,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder returnData(@Nullable Boolean returnData) {
-            this.returnData = Output.ofNullable(returnData);
+            this.returnData = Codegen.ofNullable(returnData);
             return this;
         }        public MetricAlarmMetricQueryGetArgs build() {
             return new MetricAlarmMetricQueryGetArgs(accountId, expression, id, label, metric, returnData);

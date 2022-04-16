@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatastoreIotSiteWiseMultiLayerSto
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreServiceManagedS3Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,22 +20,22 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="customerManagedS3")
       private final @Nullable Output<DatastoreCustomerManagedS3Args> customerManagedS3;
 
-    public Output<DatastoreCustomerManagedS3Args> getCustomerManagedS3() {
-        return this.customerManagedS3 == null ? Output.empty() : this.customerManagedS3;
+    public Output<DatastoreCustomerManagedS3Args> customerManagedS3() {
+        return this.customerManagedS3 == null ? Codegen.empty() : this.customerManagedS3;
     }
 
     @Import(name="iotSiteWiseMultiLayerStorage")
       private final @Nullable Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage;
 
-    public Output<DatastoreIotSiteWiseMultiLayerStorageArgs> getIotSiteWiseMultiLayerStorage() {
-        return this.iotSiteWiseMultiLayerStorage == null ? Output.empty() : this.iotSiteWiseMultiLayerStorage;
+    public Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage() {
+        return this.iotSiteWiseMultiLayerStorage == null ? Codegen.empty() : this.iotSiteWiseMultiLayerStorage;
     }
 
     @Import(name="serviceManagedS3")
       private final @Nullable Output<DatastoreServiceManagedS3Args> serviceManagedS3;
 
-    public Output<DatastoreServiceManagedS3Args> getServiceManagedS3() {
-        return this.serviceManagedS3 == null ? Output.empty() : this.serviceManagedS3;
+    public Output<DatastoreServiceManagedS3Args> serviceManagedS3() {
+        return this.serviceManagedS3 == null ? Codegen.empty() : this.serviceManagedS3;
     }
 
     public DatastoreStorageArgs(
@@ -47,9 +48,9 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DatastoreStorageArgs() {
-        this.customerManagedS3 = Output.empty();
-        this.iotSiteWiseMultiLayerStorage = Output.empty();
-        this.serviceManagedS3 = Output.empty();
+        this.customerManagedS3 = Codegen.empty();
+        this.iotSiteWiseMultiLayerStorage = Codegen.empty();
+        this.serviceManagedS3 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder customerManagedS3(@Nullable DatastoreCustomerManagedS3Args customerManagedS3) {
-            this.customerManagedS3 = Output.ofNullable(customerManagedS3);
+            this.customerManagedS3 = Codegen.ofNullable(customerManagedS3);
             return this;
         }
         public Builder iotSiteWiseMultiLayerStorage(@Nullable Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage) {
@@ -89,7 +90,7 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder iotSiteWiseMultiLayerStorage(@Nullable DatastoreIotSiteWiseMultiLayerStorageArgs iotSiteWiseMultiLayerStorage) {
-            this.iotSiteWiseMultiLayerStorage = Output.ofNullable(iotSiteWiseMultiLayerStorage);
+            this.iotSiteWiseMultiLayerStorage = Codegen.ofNullable(iotSiteWiseMultiLayerStorage);
             return this;
         }
         public Builder serviceManagedS3(@Nullable Output<DatastoreServiceManagedS3Args> serviceManagedS3) {
@@ -97,7 +98,7 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serviceManagedS3(@Nullable DatastoreServiceManagedS3Args serviceManagedS3) {
-            this.serviceManagedS3 = Output.ofNullable(serviceManagedS3);
+            this.serviceManagedS3 = Codegen.ofNullable(serviceManagedS3);
             return this;
         }        public DatastoreStorageArgs build() {
             return new DatastoreStorageArgs(customerManagedS3, iotSiteWiseMultiLayerStorage, serviceManagedS3);

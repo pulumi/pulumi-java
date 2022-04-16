@@ -5,6 +5,7 @@ package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="configurationProfileId")
       private final @Nullable Output<String> configurationProfileId;
 
-    public Output<String> getConfigurationProfileId() {
-        return this.configurationProfileId == null ? Output.empty() : this.configurationProfileId;
+    public Output<String> configurationProfileId() {
+        return this.configurationProfileId == null ? Codegen.empty() : this.configurationProfileId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
-    public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<String> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     @Import(name="versionNumber")
       private final @Nullable Output<Integer> versionNumber;
 
-    public Output<Integer> getVersionNumber() {
-        return this.versionNumber == null ? Output.empty() : this.versionNumber;
+    public Output<Integer> versionNumber() {
+        return this.versionNumber == null ? Codegen.empty() : this.versionNumber;
     }
 
     public HostedConfigurationVersionState(
@@ -110,13 +111,13 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
     }
 
     private HostedConfigurationVersionState() {
-        this.applicationId = Output.empty();
-        this.arn = Output.empty();
-        this.configurationProfileId = Output.empty();
-        this.content = Output.empty();
-        this.contentType = Output.empty();
-        this.description = Output.empty();
-        this.versionNumber = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.configurationProfileId = Codegen.empty();
+        this.content = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.versionNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -164,7 +165,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder configurationProfileId(@Nullable Output<String> configurationProfileId) {
@@ -172,7 +173,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
             return this;
         }
         public Builder configurationProfileId(@Nullable String configurationProfileId) {
-            this.configurationProfileId = Output.ofNullable(configurationProfileId);
+            this.configurationProfileId = Codegen.ofNullable(configurationProfileId);
             return this;
         }
         public Builder content(@Nullable Output<String> content) {
@@ -180,7 +181,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -188,7 +189,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -196,7 +197,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder versionNumber(@Nullable Output<Integer> versionNumber) {
@@ -204,7 +205,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
             return this;
         }
         public Builder versionNumber(@Nullable Integer versionNumber) {
-            this.versionNumber = Output.ofNullable(versionNumber);
+            this.versionNumber = Codegen.ofNullable(versionNumber);
             return this;
         }        public HostedConfigurationVersionState build() {
             return new HostedConfigurationVersionState(applicationId, arn, configurationProfileId, content, contentType, description, versionNumber);

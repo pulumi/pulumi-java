@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseImage")
       private final @Nullable Output<String> baseImage;
 
-    public Output<String> getBaseImage() {
-        return this.baseImage == null ? Output.empty() : this.baseImage;
+    public Output<String> baseImage() {
+        return this.baseImage == null ? Codegen.empty() : this.baseImage;
     }
 
     /**
@@ -45,15 +46,15 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
 
-    public Output<String> getContainerImage() {
-        return this.containerImage == null ? Output.empty() : this.containerImage;
+    public Output<String> containerImage() {
+        return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
     @Import(name="imageArn")
       private final @Nullable Output<String> imageArn;
 
-    public Output<String> getImageArn() {
-        return this.imageArn == null ? Output.empty() : this.imageArn;
+    public Output<String> imageArn() {
+        return this.imageArn == null ? Codegen.empty() : this.imageArn;
     }
 
     /**
@@ -63,15 +64,15 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
-    public Output<String> getImageName() {
-        return this.imageName == null ? Output.empty() : this.imageName;
+    public Output<String> imageName() {
+        return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     @Import(name="version")
       private final @Nullable Output<Integer> version;
 
-    public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<Integer> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ImageVersionState(
@@ -90,12 +91,12 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageVersionState() {
-        this.arn = Output.empty();
-        this.baseImage = Output.empty();
-        this.containerImage = Output.empty();
-        this.imageArn = Output.empty();
-        this.imageName = Output.empty();
-        this.version = Output.empty();
+        this.arn = Codegen.empty();
+        this.baseImage = Codegen.empty();
+        this.containerImage = Codegen.empty();
+        this.imageArn = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder baseImage(@Nullable Output<String> baseImage) {
@@ -141,7 +142,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baseImage(@Nullable String baseImage) {
-            this.baseImage = Output.ofNullable(baseImage);
+            this.baseImage = Codegen.ofNullable(baseImage);
             return this;
         }
         public Builder containerImage(@Nullable Output<String> containerImage) {
@@ -149,7 +150,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Output.ofNullable(containerImage);
+            this.containerImage = Codegen.ofNullable(containerImage);
             return this;
         }
         public Builder imageArn(@Nullable Output<String> imageArn) {
@@ -157,7 +158,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageArn(@Nullable String imageArn) {
-            this.imageArn = Output.ofNullable(imageArn);
+            this.imageArn = Codegen.ofNullable(imageArn);
             return this;
         }
         public Builder imageName(@Nullable Output<String> imageName) {
@@ -165,7 +166,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Output.ofNullable(imageName);
+            this.imageName = Codegen.ofNullable(imageName);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -173,7 +174,7 @@ public final class ImageVersionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ImageVersionState build() {
             return new ImageVersionState(arn, baseImage, containerImage, imageArn, imageName, version);

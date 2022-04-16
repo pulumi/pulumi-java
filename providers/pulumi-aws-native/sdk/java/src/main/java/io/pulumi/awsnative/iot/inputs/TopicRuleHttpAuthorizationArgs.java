@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleSigV4AuthorizationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class TopicRuleHttpAuthorizationArgs extends io.pulumi.resources.Re
     @Import(name="sigv4")
       private final @Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4;
 
-    public Output<TopicRuleSigV4AuthorizationArgs> getSigv4() {
-        return this.sigv4 == null ? Output.empty() : this.sigv4;
+    public Output<TopicRuleSigV4AuthorizationArgs> sigv4() {
+        return this.sigv4 == null ? Codegen.empty() : this.sigv4;
     }
 
     public TopicRuleHttpAuthorizationArgs(@Nullable Output<TopicRuleSigV4AuthorizationArgs> sigv4) {
@@ -26,7 +27,7 @@ public final class TopicRuleHttpAuthorizationArgs extends io.pulumi.resources.Re
     }
 
     private TopicRuleHttpAuthorizationArgs() {
-        this.sigv4 = Output.empty();
+        this.sigv4 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class TopicRuleHttpAuthorizationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sigv4(@Nullable TopicRuleSigV4AuthorizationArgs sigv4) {
-            this.sigv4 = Output.ofNullable(sigv4);
+            this.sigv4 = Codegen.ofNullable(sigv4);
             return this;
         }        public TopicRuleHttpAuthorizationArgs build() {
             return new TopicRuleHttpAuthorizationArgs(sigv4);

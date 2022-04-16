@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCapt
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCaptureOptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
     @Import(name="captureContentTypeHeader")
       private final @Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs> captureContentTypeHeader;
 
-    public Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs> getCaptureContentTypeHeader() {
-        return this.captureContentTypeHeader == null ? Output.empty() : this.captureContentTypeHeader;
+    public Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs> captureContentTypeHeader() {
+        return this.captureContentTypeHeader == null ? Codegen.empty() : this.captureContentTypeHeader;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
     @Import(name="captureOptions", required=true)
       private final Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionArgs>> captureOptions;
 
-    public Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionArgs>> getCaptureOptions() {
+    public Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionArgs>> captureOptions() {
         return this.captureOptions;
     }
 
@@ -48,7 +49,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
     @Import(name="destinationS3Uri", required=true)
       private final Output<String> destinationS3Uri;
 
-    public Output<String> getDestinationS3Uri() {
+    public Output<String> destinationS3Uri() {
         return this.destinationS3Uri;
     }
 
@@ -59,8 +60,8 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
     @Import(name="enableCapture")
       private final @Nullable Output<Boolean> enableCapture;
 
-    public Output<Boolean> getEnableCapture() {
-        return this.enableCapture == null ? Output.empty() : this.enableCapture;
+    public Output<Boolean> enableCapture() {
+        return this.enableCapture == null ? Codegen.empty() : this.enableCapture;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
     @Import(name="initialSamplingPercentage", required=true)
       private final Output<Integer> initialSamplingPercentage;
 
-    public Output<Integer> getInitialSamplingPercentage() {
+    public Output<Integer> initialSamplingPercentage() {
         return this.initialSamplingPercentage;
     }
 
@@ -81,8 +82,8 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     public EndpointConfigurationDataCaptureConfigArgs(
@@ -101,12 +102,12 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
     }
 
     private EndpointConfigurationDataCaptureConfigArgs() {
-        this.captureContentTypeHeader = Output.empty();
-        this.captureOptions = Output.empty();
-        this.destinationS3Uri = Output.empty();
-        this.enableCapture = Output.empty();
-        this.initialSamplingPercentage = Output.empty();
-        this.kmsKeyId = Output.empty();
+        this.captureContentTypeHeader = Codegen.empty();
+        this.captureOptions = Codegen.empty();
+        this.destinationS3Uri = Codegen.empty();
+        this.enableCapture = Codegen.empty();
+        this.initialSamplingPercentage = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
             return this;
         }
         public Builder captureContentTypeHeader(@Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderArgs captureContentTypeHeader) {
-            this.captureContentTypeHeader = Output.ofNullable(captureContentTypeHeader);
+            this.captureContentTypeHeader = Codegen.ofNullable(captureContentTypeHeader);
             return this;
         }
         public Builder captureOptions(Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionArgs>> captureOptions) {
@@ -171,7 +172,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
             return this;
         }
         public Builder enableCapture(@Nullable Boolean enableCapture) {
-            this.enableCapture = Output.ofNullable(enableCapture);
+            this.enableCapture = Codegen.ofNullable(enableCapture);
             return this;
         }
         public Builder initialSamplingPercentage(Output<Integer> initialSamplingPercentage) {
@@ -187,7 +188,7 @@ public final class EndpointConfigurationDataCaptureConfigArgs extends io.pulumi.
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }        public EndpointConfigurationDataCaptureConfigArgs build() {
             return new EndpointConfigurationDataCaptureConfigArgs(captureContentTypeHeader, captureOptions, destinationS3Uri, enableCapture, initialSamplingPercentage, kmsKeyId);

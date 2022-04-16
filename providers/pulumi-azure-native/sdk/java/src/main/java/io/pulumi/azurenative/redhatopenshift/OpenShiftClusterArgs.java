@@ -13,6 +13,7 @@ import io.pulumi.azurenative.redhatopenshift.inputs.ServicePrincipalProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.WorkerProfileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,8 +32,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="apiserverProfile")
       private final @Nullable Output<APIServerProfileArgs> apiserverProfile;
 
-    public Output<APIServerProfileArgs> getApiserverProfile() {
-        return this.apiserverProfile == null ? Output.empty() : this.apiserverProfile;
+    public Output<APIServerProfileArgs> apiserverProfile() {
+        return this.apiserverProfile == null ? Codegen.empty() : this.apiserverProfile;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterProfile")
       private final @Nullable Output<ClusterProfileArgs> clusterProfile;
 
-    public Output<ClusterProfileArgs> getClusterProfile() {
-        return this.clusterProfile == null ? Output.empty() : this.clusterProfile;
+    public Output<ClusterProfileArgs> clusterProfile() {
+        return this.clusterProfile == null ? Codegen.empty() : this.clusterProfile;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="consoleProfile")
       private final @Nullable Output<ConsoleProfileArgs> consoleProfile;
 
-    public Output<ConsoleProfileArgs> getConsoleProfile() {
-        return this.consoleProfile == null ? Output.empty() : this.consoleProfile;
+    public Output<ConsoleProfileArgs> consoleProfile() {
+        return this.consoleProfile == null ? Codegen.empty() : this.consoleProfile;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ingressProfiles")
       private final @Nullable Output<List<IngressProfileArgs>> ingressProfiles;
 
-    public Output<List<IngressProfileArgs>> getIngressProfiles() {
-        return this.ingressProfiles == null ? Output.empty() : this.ingressProfiles;
+    public Output<List<IngressProfileArgs>> ingressProfiles() {
+        return this.ingressProfiles == null ? Codegen.empty() : this.ingressProfiles;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="masterProfile")
       private final @Nullable Output<MasterProfileArgs> masterProfile;
 
-    public Output<MasterProfileArgs> getMasterProfile() {
-        return this.masterProfile == null ? Output.empty() : this.masterProfile;
+    public Output<MasterProfileArgs> masterProfile() {
+        return this.masterProfile == null ? Codegen.empty() : this.masterProfile;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Output.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> networkProfile() {
+        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
-    public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<String> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -130,8 +131,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="servicePrincipalProfile")
       private final @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile;
 
-    public Output<ServicePrincipalProfileArgs> getServicePrincipalProfile() {
-        return this.servicePrincipalProfile == null ? Output.empty() : this.servicePrincipalProfile;
+    public Output<ServicePrincipalProfileArgs> servicePrincipalProfile() {
+        return this.servicePrincipalProfile == null ? Codegen.empty() : this.servicePrincipalProfile;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="workerProfiles")
       private final @Nullable Output<List<WorkerProfileArgs>> workerProfiles;
 
-    public Output<List<WorkerProfileArgs>> getWorkerProfiles() {
-        return this.workerProfiles == null ? Output.empty() : this.workerProfiles;
+    public Output<List<WorkerProfileArgs>> workerProfiles() {
+        return this.workerProfiles == null ? Codegen.empty() : this.workerProfiles;
     }
 
     public OpenShiftClusterArgs(
@@ -197,19 +198,19 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OpenShiftClusterArgs() {
-        this.apiserverProfile = Output.empty();
-        this.clusterProfile = Output.empty();
-        this.consoleProfile = Output.empty();
-        this.ingressProfiles = Output.empty();
-        this.location = Output.empty();
-        this.masterProfile = Output.empty();
-        this.networkProfile = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.servicePrincipalProfile = Output.empty();
-        this.tags = Output.empty();
-        this.workerProfiles = Output.empty();
+        this.apiserverProfile = Codegen.empty();
+        this.clusterProfile = Codegen.empty();
+        this.consoleProfile = Codegen.empty();
+        this.ingressProfiles = Codegen.empty();
+        this.location = Codegen.empty();
+        this.masterProfile = Codegen.empty();
+        this.networkProfile = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.servicePrincipalProfile = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workerProfiles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -261,7 +262,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder apiserverProfile(@Nullable APIServerProfileArgs apiserverProfile) {
-            this.apiserverProfile = Output.ofNullable(apiserverProfile);
+            this.apiserverProfile = Codegen.ofNullable(apiserverProfile);
             return this;
         }
         public Builder clusterProfile(@Nullable Output<ClusterProfileArgs> clusterProfile) {
@@ -269,7 +270,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clusterProfile(@Nullable ClusterProfileArgs clusterProfile) {
-            this.clusterProfile = Output.ofNullable(clusterProfile);
+            this.clusterProfile = Codegen.ofNullable(clusterProfile);
             return this;
         }
         public Builder consoleProfile(@Nullable Output<ConsoleProfileArgs> consoleProfile) {
@@ -277,7 +278,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder consoleProfile(@Nullable ConsoleProfileArgs consoleProfile) {
-            this.consoleProfile = Output.ofNullable(consoleProfile);
+            this.consoleProfile = Codegen.ofNullable(consoleProfile);
             return this;
         }
         public Builder ingressProfiles(@Nullable Output<List<IngressProfileArgs>> ingressProfiles) {
@@ -285,7 +286,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ingressProfiles(@Nullable List<IngressProfileArgs> ingressProfiles) {
-            this.ingressProfiles = Output.ofNullable(ingressProfiles);
+            this.ingressProfiles = Codegen.ofNullable(ingressProfiles);
             return this;
         }
         public Builder ingressProfiles(IngressProfileArgs... ingressProfiles) {
@@ -296,7 +297,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder masterProfile(@Nullable Output<MasterProfileArgs> masterProfile) {
@@ -304,7 +305,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder masterProfile(@Nullable MasterProfileArgs masterProfile) {
-            this.masterProfile = Output.ofNullable(masterProfile);
+            this.masterProfile = Codegen.ofNullable(masterProfile);
             return this;
         }
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
@@ -312,7 +313,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Output.ofNullable(networkProfile);
+            this.networkProfile = Codegen.ofNullable(networkProfile);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -320,7 +321,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -336,7 +337,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder servicePrincipalProfile(@Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile) {
@@ -344,7 +345,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder servicePrincipalProfile(@Nullable ServicePrincipalProfileArgs servicePrincipalProfile) {
-            this.servicePrincipalProfile = Output.ofNullable(servicePrincipalProfile);
+            this.servicePrincipalProfile = Codegen.ofNullable(servicePrincipalProfile);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -352,7 +353,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workerProfiles(@Nullable Output<List<WorkerProfileArgs>> workerProfiles) {
@@ -360,7 +361,7 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder workerProfiles(@Nullable List<WorkerProfileArgs> workerProfiles) {
-            this.workerProfiles = Output.ofNullable(workerProfiles);
+            this.workerProfiles = Codegen.ofNullable(workerProfiles);
             return this;
         }
         public Builder workerProfiles(WorkerProfileArgs... workerProfiles) {

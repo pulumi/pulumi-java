@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterRoleSelectors")
       private final @Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors;
 
-    public Output<List<LabelSelectorArgs>> getClusterRoleSelectors() {
-        return this.clusterRoleSelectors == null ? Output.empty() : this.clusterRoleSelectors;
+    public Output<List<LabelSelectorArgs>> clusterRoleSelectors() {
+        return this.clusterRoleSelectors == null ? Codegen.empty() : this.clusterRoleSelectors;
     }
 
     public AggregationRuleArgs(@Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors) {
@@ -35,7 +36,7 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AggregationRuleArgs() {
-        this.clusterRoleSelectors = Output.empty();
+        this.clusterRoleSelectors = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clusterRoleSelectors(@Nullable List<LabelSelectorArgs> clusterRoleSelectors) {
-            this.clusterRoleSelectors = Output.ofNullable(clusterRoleSelectors);
+            this.clusterRoleSelectors = Codegen.ofNullable(clusterRoleSelectors);
             return this;
         }
         public Builder clusterRoleSelectors(LabelSelectorArgs... clusterRoleSelectors) {

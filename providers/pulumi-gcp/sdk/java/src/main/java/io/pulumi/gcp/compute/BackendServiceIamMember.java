@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendServiceIamMemberArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceIamMemberState;
@@ -18,37 +19,37 @@ public class BackendServiceIamMember extends io.pulumi.resources.CustomResource 
     @Export(name="condition", type=BackendServiceIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ BackendServiceIamMemberCondition> condition;
 
-    public Output</* @Nullable */ BackendServiceIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ BackendServiceIamMemberCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -74,7 +75,7 @@ public class BackendServiceIamMember extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendServiceIamMember(String name, BackendServiceIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/backendServiceIamMember:BackendServiceIamMember", name, args == null ? BackendServiceIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/backendServiceIamMember:BackendServiceIamMember", name, args == null ? BackendServiceIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendServiceIamMember(String name, Output<String> id, @Nullable BackendServiceIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

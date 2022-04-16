@@ -9,6 +9,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginShieldArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionS3OriginConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,64 +24,64 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
     @Import(name="connectionAttempts")
       private final @Nullable Output<Integer> connectionAttempts;
 
-    public Output<Integer> getConnectionAttempts() {
-        return this.connectionAttempts == null ? Output.empty() : this.connectionAttempts;
+    public Output<Integer> connectionAttempts() {
+        return this.connectionAttempts == null ? Codegen.empty() : this.connectionAttempts;
     }
 
     @Import(name="connectionTimeout")
       private final @Nullable Output<Integer> connectionTimeout;
 
-    public Output<Integer> getConnectionTimeout() {
-        return this.connectionTimeout == null ? Output.empty() : this.connectionTimeout;
+    public Output<Integer> connectionTimeout() {
+        return this.connectionTimeout == null ? Codegen.empty() : this.connectionTimeout;
     }
 
     @Import(name="customOriginConfig")
       private final @Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig;
 
-    public Output<DistributionCustomOriginConfigArgs> getCustomOriginConfig() {
-        return this.customOriginConfig == null ? Output.empty() : this.customOriginConfig;
+    public Output<DistributionCustomOriginConfigArgs> customOriginConfig() {
+        return this.customOriginConfig == null ? Codegen.empty() : this.customOriginConfig;
     }
 
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
     @Import(name="originCustomHeaders")
       private final @Nullable Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders;
 
-    public Output<List<DistributionOriginCustomHeaderArgs>> getOriginCustomHeaders() {
-        return this.originCustomHeaders == null ? Output.empty() : this.originCustomHeaders;
+    public Output<List<DistributionOriginCustomHeaderArgs>> originCustomHeaders() {
+        return this.originCustomHeaders == null ? Codegen.empty() : this.originCustomHeaders;
     }
 
     @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
-    public Output<String> getOriginPath() {
-        return this.originPath == null ? Output.empty() : this.originPath;
+    public Output<String> originPath() {
+        return this.originPath == null ? Codegen.empty() : this.originPath;
     }
 
     @Import(name="originShield")
       private final @Nullable Output<DistributionOriginShieldArgs> originShield;
 
-    public Output<DistributionOriginShieldArgs> getOriginShield() {
-        return this.originShield == null ? Output.empty() : this.originShield;
+    public Output<DistributionOriginShieldArgs> originShield() {
+        return this.originShield == null ? Codegen.empty() : this.originShield;
     }
 
     @Import(name="s3OriginConfig")
       private final @Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig;
 
-    public Output<DistributionS3OriginConfigArgs> getS3OriginConfig() {
-        return this.s3OriginConfig == null ? Output.empty() : this.s3OriginConfig;
+    public Output<DistributionS3OriginConfigArgs> s3OriginConfig() {
+        return this.s3OriginConfig == null ? Codegen.empty() : this.s3OriginConfig;
     }
 
     public DistributionOriginArgs(
@@ -105,15 +106,15 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DistributionOriginArgs() {
-        this.connectionAttempts = Output.empty();
-        this.connectionTimeout = Output.empty();
-        this.customOriginConfig = Output.empty();
-        this.domainName = Output.empty();
-        this.id = Output.empty();
-        this.originCustomHeaders = Output.empty();
-        this.originPath = Output.empty();
-        this.originShield = Output.empty();
-        this.s3OriginConfig = Output.empty();
+        this.connectionAttempts = Codegen.empty();
+        this.connectionTimeout = Codegen.empty();
+        this.customOriginConfig = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.originCustomHeaders = Codegen.empty();
+        this.originPath = Codegen.empty();
+        this.originShield = Codegen.empty();
+        this.s3OriginConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder connectionAttempts(@Nullable Integer connectionAttempts) {
-            this.connectionAttempts = Output.ofNullable(connectionAttempts);
+            this.connectionAttempts = Codegen.ofNullable(connectionAttempts);
             return this;
         }
         public Builder connectionTimeout(@Nullable Output<Integer> connectionTimeout) {
@@ -165,7 +166,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder connectionTimeout(@Nullable Integer connectionTimeout) {
-            this.connectionTimeout = Output.ofNullable(connectionTimeout);
+            this.connectionTimeout = Codegen.ofNullable(connectionTimeout);
             return this;
         }
         public Builder customOriginConfig(@Nullable Output<DistributionCustomOriginConfigArgs> customOriginConfig) {
@@ -173,7 +174,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder customOriginConfig(@Nullable DistributionCustomOriginConfigArgs customOriginConfig) {
-            this.customOriginConfig = Output.ofNullable(customOriginConfig);
+            this.customOriginConfig = Codegen.ofNullable(customOriginConfig);
             return this;
         }
         public Builder domainName(Output<String> domainName) {
@@ -197,7 +198,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder originCustomHeaders(@Nullable List<DistributionOriginCustomHeaderArgs> originCustomHeaders) {
-            this.originCustomHeaders = Output.ofNullable(originCustomHeaders);
+            this.originCustomHeaders = Codegen.ofNullable(originCustomHeaders);
             return this;
         }
         public Builder originCustomHeaders(DistributionOriginCustomHeaderArgs... originCustomHeaders) {
@@ -208,7 +209,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder originPath(@Nullable String originPath) {
-            this.originPath = Output.ofNullable(originPath);
+            this.originPath = Codegen.ofNullable(originPath);
             return this;
         }
         public Builder originShield(@Nullable Output<DistributionOriginShieldArgs> originShield) {
@@ -216,7 +217,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder originShield(@Nullable DistributionOriginShieldArgs originShield) {
-            this.originShield = Output.ofNullable(originShield);
+            this.originShield = Codegen.ofNullable(originShield);
             return this;
         }
         public Builder s3OriginConfig(@Nullable Output<DistributionS3OriginConfigArgs> s3OriginConfig) {
@@ -224,7 +225,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder s3OriginConfig(@Nullable DistributionS3OriginConfigArgs s3OriginConfig) {
-            this.s3OriginConfig = Output.ofNullable(s3OriginConfig);
+            this.s3OriginConfig = Codegen.ofNullable(s3OriginConfig);
             return this;
         }        public DistributionOriginArgs build() {
             return new DistributionOriginArgs(connectionAttempts, connectionTimeout, customOriginConfig, domainName, id, originCustomHeaders, originPath, originShield, s3OriginConfig);

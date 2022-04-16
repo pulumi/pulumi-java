@@ -6,6 +6,7 @@ package io.pulumi.gcp.certificateauthority;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CaPoolIamMemberArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberState;
@@ -68,13 +69,13 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getCaPool() {
+    public Output<String> caPool() {
         return this.caPool;
     }
     @Export(name="condition", type=CaPoolIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ CaPoolIamMemberCondition> condition;
 
-    public Output</* @Nullable */ CaPoolIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ CaPoolIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -88,7 +89,7 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -106,13 +107,13 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -128,7 +129,7 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -146,7 +147,7 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -172,7 +173,7 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CaPoolIamMember(String name, CaPoolIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:certificateauthority/caPoolIamMember:CaPoolIamMember", name, args == null ? CaPoolIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:certificateauthority/caPoolIamMember:CaPoolIamMember", name, args == null ? CaPoolIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CaPoolIamMember(String name, Output<String> id, @Nullable CaPoolIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

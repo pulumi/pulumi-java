@@ -7,6 +7,7 @@ import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointInterclusterGetArgs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointManagementGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class OntapFileSystemEndpointGetArgs extends io.pulumi.resources.Re
     @Import(name="interclusters")
       private final @Nullable Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters;
 
-    public Output<List<OntapFileSystemEndpointInterclusterGetArgs>> getInterclusters() {
-        return this.interclusters == null ? Output.empty() : this.interclusters;
+    public Output<List<OntapFileSystemEndpointInterclusterGetArgs>> interclusters() {
+        return this.interclusters == null ? Codegen.empty() : this.interclusters;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class OntapFileSystemEndpointGetArgs extends io.pulumi.resources.Re
     @Import(name="managements")
       private final @Nullable Output<List<OntapFileSystemEndpointManagementGetArgs>> managements;
 
-    public Output<List<OntapFileSystemEndpointManagementGetArgs>> getManagements() {
-        return this.managements == null ? Output.empty() : this.managements;
+    public Output<List<OntapFileSystemEndpointManagementGetArgs>> managements() {
+        return this.managements == null ? Codegen.empty() : this.managements;
     }
 
     public OntapFileSystemEndpointGetArgs(
@@ -46,8 +47,8 @@ public final class OntapFileSystemEndpointGetArgs extends io.pulumi.resources.Re
     }
 
     private OntapFileSystemEndpointGetArgs() {
-        this.interclusters = Output.empty();
-        this.managements = Output.empty();
+        this.interclusters = Codegen.empty();
+        this.managements = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class OntapFileSystemEndpointGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder interclusters(@Nullable List<OntapFileSystemEndpointInterclusterGetArgs> interclusters) {
-            this.interclusters = Output.ofNullable(interclusters);
+            this.interclusters = Codegen.ofNullable(interclusters);
             return this;
         }
         public Builder interclusters(OntapFileSystemEndpointInterclusterGetArgs... interclusters) {
@@ -88,7 +89,7 @@ public final class OntapFileSystemEndpointGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder managements(@Nullable List<OntapFileSystemEndpointManagementGetArgs> managements) {
-            this.managements = Output.ofNullable(managements);
+            this.managements = Codegen.ofNullable(managements);
             return this;
         }
         public Builder managements(OntapFileSystemEndpointManagementGetArgs... managements) {

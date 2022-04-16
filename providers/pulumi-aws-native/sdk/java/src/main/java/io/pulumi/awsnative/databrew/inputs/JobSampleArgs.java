@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.enums.JobSampleMode;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,15 +23,15 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<JobSampleMode> mode;
 
-    public Output<JobSampleMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<JobSampleMode> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<Integer> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     public JobSampleArgs(
@@ -41,8 +42,8 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobSampleArgs() {
-        this.mode = Output.empty();
-        this.size = Output.empty();
+        this.mode = Codegen.empty();
+        this.size = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable JobSampleMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder size(@Nullable Output<Integer> size) {
@@ -80,7 +81,7 @@ public final class JobSampleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable Integer size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }        public JobSampleArgs build() {
             return new JobSampleArgs(mode, size);

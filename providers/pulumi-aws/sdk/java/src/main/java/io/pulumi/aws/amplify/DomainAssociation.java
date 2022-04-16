@@ -10,6 +10,7 @@ import io.pulumi.aws.amplify.outputs.DomainAssociationSubDomain;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The unique ID for an Amplify app.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -56,7 +57,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the domain association.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +71,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The DNS record for certificate verification.
      * 
      */
-    public Output<String> getCertificateVerificationDnsRecord() {
+    public Output<String> certificateVerificationDnsRecord() {
         return this.certificateVerificationDnsRecord;
     }
     /**
@@ -84,7 +85,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The domain name for the domain association.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -98,7 +99,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return The setting for the subdomain. Documented below.
      * 
      */
-    public Output<List<DomainAssociationSubDomain>> getSubDomains() {
+    public Output<List<DomainAssociationSubDomain>> subDomains() {
         return this.subDomains;
     }
     /**
@@ -112,7 +113,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @return If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getWaitForVerification() {
+    public Output</* @Nullable */ Boolean> waitForVerification() {
         return this.waitForVerification;
     }
 
@@ -138,7 +139,7 @@ public class DomainAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainAssociation(String name, DomainAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amplify/domainAssociation:DomainAssociation", name, args == null ? DomainAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:amplify/domainAssociation:DomainAssociation", name, args == null ? DomainAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainAssociation(String name, Output<String> id, @Nullable DomainAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbPassword", required=true)
       private final Output<String> dbPassword;
 
-    public Output<String> getDbPassword() {
+    public Output<String> dbPassword() {
         return this.dbPassword;
     }
 
@@ -31,7 +32,7 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dbUser", required=true)
       private final Output<String> dbUser;
 
-    public Output<String> getDbUser() {
+    public Output<String> dbUser() {
         return this.dbUser;
     }
 
@@ -42,7 +43,7 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rdsDbInstanceArn", required=true)
       private final Output<String> rdsDbInstanceArn;
 
-    public Output<String> getRdsDbInstanceArn() {
+    public Output<String> rdsDbInstanceArn() {
         return this.rdsDbInstanceArn;
     }
 
@@ -53,7 +54,7 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="stackId", required=true)
       private final Output<String> stackId;
 
-    public Output<String> getStackId() {
+    public Output<String> stackId() {
         return this.stackId;
     }
 
@@ -69,10 +70,10 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RdsDbInstanceArgs() {
-        this.dbPassword = Output.empty();
-        this.dbUser = Output.empty();
-        this.rdsDbInstanceArn = Output.empty();
-        this.stackId = Output.empty();
+        this.dbPassword = Codegen.empty();
+        this.dbUser = Codegen.empty();
+        this.rdsDbInstanceArn = Codegen.empty();
+        this.stackId = Codegen.empty();
     }
 
     public static Builder builder() {

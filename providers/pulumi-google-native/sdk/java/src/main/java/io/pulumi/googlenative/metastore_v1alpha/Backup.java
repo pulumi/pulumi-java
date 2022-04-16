@@ -6,6 +6,7 @@ package io.pulumi.googlenative.metastore_v1alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1alpha.BackupArgs;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.ServiceResponse;
@@ -30,7 +31,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The time when the backup was started.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -44,7 +45,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The description of the backup.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The time when the backup finished creating.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -72,7 +73,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Immutable. The relative resource name of the backup, in the following form:projects/{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return Services that are restoring from the backup.
      * 
      */
-    public Output<List<String>> getRestoringServices() {
+    public Output<List<String>> restoringServices() {
         return this.restoringServices;
     }
     /**
@@ -100,7 +101,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The revision of the service at the time of backup.
      * 
      */
-    public Output<ServiceResponse> getServiceRevision() {
+    public Output<ServiceResponse> serviceRevision() {
         return this.serviceRevision;
     }
     /**
@@ -114,7 +115,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @return The current state of the backup.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -140,7 +141,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Backup(String name, BackupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:metastore/v1alpha:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:metastore/v1alpha:Backup", name, args == null ? BackupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Backup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

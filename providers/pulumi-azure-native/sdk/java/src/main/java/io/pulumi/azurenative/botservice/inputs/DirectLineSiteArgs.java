@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isBlockUserUploadEnabled")
       private final @Nullable Output<Boolean> isBlockUserUploadEnabled;
 
-    public Output<Boolean> getIsBlockUserUploadEnabled() {
-        return this.isBlockUserUploadEnabled == null ? Output.empty() : this.isBlockUserUploadEnabled;
+    public Output<Boolean> isBlockUserUploadEnabled() {
+        return this.isBlockUserUploadEnabled == null ? Codegen.empty() : this.isBlockUserUploadEnabled;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -49,8 +50,8 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isSecureSiteEnabled")
       private final @Nullable Output<Boolean> isSecureSiteEnabled;
 
-    public Output<Boolean> getIsSecureSiteEnabled() {
-        return this.isSecureSiteEnabled == null ? Output.empty() : this.isSecureSiteEnabled;
+    public Output<Boolean> isSecureSiteEnabled() {
+        return this.isSecureSiteEnabled == null ? Codegen.empty() : this.isSecureSiteEnabled;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isV1Enabled", required=true)
       private final Output<Boolean> isV1Enabled;
 
-    public Output<Boolean> getIsV1Enabled() {
+    public Output<Boolean> isV1Enabled() {
         return this.isV1Enabled;
     }
 
@@ -71,7 +72,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isV3Enabled", required=true)
       private final Output<Boolean> isV3Enabled;
 
-    public Output<Boolean> getIsV3Enabled() {
+    public Output<Boolean> isV3Enabled() {
         return this.isV3Enabled;
     }
 
@@ -82,7 +83,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteName", required=true)
       private final Output<String> siteName;
 
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 
@@ -93,8 +94,8 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustedOrigins")
       private final @Nullable Output<List<String>> trustedOrigins;
 
-    public Output<List<String>> getTrustedOrigins() {
-        return this.trustedOrigins == null ? Output.empty() : this.trustedOrigins;
+    public Output<List<String>> trustedOrigins() {
+        return this.trustedOrigins == null ? Codegen.empty() : this.trustedOrigins;
     }
 
     public DirectLineSiteArgs(
@@ -115,13 +116,13 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DirectLineSiteArgs() {
-        this.isBlockUserUploadEnabled = Output.empty();
-        this.isEnabled = Output.empty();
-        this.isSecureSiteEnabled = Output.empty();
-        this.isV1Enabled = Output.empty();
-        this.isV3Enabled = Output.empty();
-        this.siteName = Output.empty();
-        this.trustedOrigins = Output.empty();
+        this.isBlockUserUploadEnabled = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.isSecureSiteEnabled = Codegen.empty();
+        this.isV1Enabled = Codegen.empty();
+        this.isV3Enabled = Codegen.empty();
+        this.siteName = Codegen.empty();
+        this.trustedOrigins = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
-            this.isBlockUserUploadEnabled = Output.ofNullable(isBlockUserUploadEnabled);
+            this.isBlockUserUploadEnabled = Codegen.ofNullable(isBlockUserUploadEnabled);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {
@@ -177,7 +178,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
-            this.isSecureSiteEnabled = Output.ofNullable(isSecureSiteEnabled);
+            this.isSecureSiteEnabled = Codegen.ofNullable(isSecureSiteEnabled);
             return this;
         }
         public Builder isV1Enabled(Output<Boolean> isV1Enabled) {
@@ -209,7 +210,7 @@ public final class DirectLineSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
-            this.trustedOrigins = Output.ofNullable(trustedOrigins);
+            this.trustedOrigins = Codegen.ofNullable(trustedOrigins);
             return this;
         }
         public Builder trustedOrigins(String... trustedOrigins) {

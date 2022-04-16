@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigtableadmin_v2.enums.ClusterDefaultStorageType;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterConfigArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.EncryptionConfigArgs;
@@ -25,14 +26,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterConfig")
       private final @Nullable Output<ClusterConfigArgs> clusterConfig;
 
-    public Output<ClusterConfigArgs> getClusterConfig() {
-        return this.clusterConfig == null ? Output.empty() : this.clusterConfig;
+    public Output<ClusterConfigArgs> clusterConfig() {
+        return this.clusterConfig == null ? Codegen.empty() : this.clusterConfig;
     }
 
     @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
-    public Output<String> getClusterId() {
+    public Output<String> clusterId() {
         return this.clusterId;
     }
 
@@ -43,8 +44,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultStorageType")
       private final @Nullable Output<ClusterDefaultStorageType> defaultStorageType;
 
-    public Output<ClusterDefaultStorageType> getDefaultStorageType() {
-        return this.defaultStorageType == null ? Output.empty() : this.defaultStorageType;
+    public Output<ClusterDefaultStorageType> defaultStorageType() {
+        return this.defaultStorageType == null ? Codegen.empty() : this.defaultStorageType;
     }
 
     /**
@@ -54,14 +55,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> encryptionConfig() {
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -72,8 +73,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -83,15 +84,15 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serveNodes")
       private final @Nullable Output<Integer> serveNodes;
 
-    public Output<Integer> getServeNodes() {
-        return this.serveNodes == null ? Output.empty() : this.serveNodes;
+    public Output<Integer> serveNodes() {
+        return this.serveNodes == null ? Codegen.empty() : this.serveNodes;
     }
 
     public ClusterArgs(
@@ -127,15 +128,15 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.clusterConfig = Output.empty();
-        this.clusterId = Output.empty();
-        this.defaultStorageType = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.instanceId = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.serveNodes = Output.empty();
+        this.clusterConfig = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.defaultStorageType = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serveNodes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterConfig(@Nullable ClusterConfigArgs clusterConfig) {
-            this.clusterConfig = Output.ofNullable(clusterConfig);
+            this.clusterConfig = Codegen.ofNullable(clusterConfig);
             return this;
         }
         public Builder clusterId(Output<String> clusterId) {
@@ -195,7 +196,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultStorageType(@Nullable ClusterDefaultStorageType defaultStorageType) {
-            this.defaultStorageType = Output.ofNullable(defaultStorageType);
+            this.defaultStorageType = Codegen.ofNullable(defaultStorageType);
             return this;
         }
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
@@ -203,7 +204,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {
@@ -219,7 +220,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -227,7 +228,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -235,7 +236,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serveNodes(@Nullable Output<Integer> serveNodes) {
@@ -243,7 +244,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serveNodes(@Nullable Integer serveNodes) {
-            this.serveNodes = Output.ofNullable(serveNodes);
+            this.serveNodes = Codegen.ofNullable(serveNodes);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(clusterConfig, clusterId, defaultStorageType, encryptionConfig, instanceId, location, name, project, serveNodes);

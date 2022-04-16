@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
     @Import(name="mapping")
       private final @Nullable Output<String> mapping;
 
-    public Output<String> getMapping() {
-        return this.mapping == null ? Output.empty() : this.mapping;
+    public Output<String> mapping() {
+        return this.mapping == null ? Codegen.empty() : this.mapping;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -43,7 +44,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
     @Import(name="sqlType", required=true)
       private final Output<String> sqlType;
 
-    public Output<String> getSqlType() {
+    public Output<String> sqlType() {
         return this.sqlType;
     }
 
@@ -57,9 +58,9 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
     }
 
     private AnalyticsApplicationInputsSchemaRecordColumnArgs() {
-        this.mapping = Output.empty();
-        this.name = Output.empty();
-        this.sqlType = Output.empty();
+        this.mapping = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sqlType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class AnalyticsApplicationInputsSchemaRecordColumnArgs extends io.p
             return this;
         }
         public Builder mapping(@Nullable String mapping) {
-            this.mapping = Output.ofNullable(mapping);
+            this.mapping = Codegen.ofNullable(mapping);
             return this;
         }
         public Builder name(Output<String> name) {

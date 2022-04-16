@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dataflow_v1b3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataflow_v1b3.TemplateArgs;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.RuntimeMetadataResponse;
@@ -34,7 +35,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return The template metadata describing the template name, available parameters, etc.
      * 
      */
-    public Output<TemplateMetadataResponse> getMetadata() {
+    public Output<TemplateMetadataResponse> metadata() {
         return this.metadata;
     }
     /**
@@ -48,7 +49,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return Describes the runtime metadata with SDKInfo and available parameters.
      * 
      */
-    public Output<RuntimeMetadataResponse> getRuntimeMetadata() {
+    public Output<RuntimeMetadataResponse> runtimeMetadata() {
         return this.runtimeMetadata;
     }
     /**
@@ -62,7 +63,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return The status of the get template request. Any problems with the request will be indicated in the error_details.
      * 
      */
-    public Output<StatusResponse> getStatus() {
+    public Output<StatusResponse> status() {
         return this.status;
     }
     /**
@@ -76,7 +77,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @return Template Type.
      * 
      */
-    public Output<String> getTemplateType() {
+    public Output<String> templateType() {
         return this.templateType;
     }
 
@@ -102,7 +103,7 @@ public class Template extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Template(String name, TemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dataflow/v1b3:Template", name, args == null ? TemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dataflow/v1b3:Template", name, args == null ? TemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Template(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

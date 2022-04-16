@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,16 +26,16 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
     @Import(name="isEncryptionInTransitEnabled")
       private final @Nullable Output<Boolean> isEncryptionInTransitEnabled;
 
-    public Output<Boolean> getIsEncryptionInTransitEnabled() {
-        return this.isEncryptionInTransitEnabled == null ? Output.empty() : this.isEncryptionInTransitEnabled;
+    public Output<Boolean> isEncryptionInTransitEnabled() {
+        return this.isEncryptionInTransitEnabled == null ? Codegen.empty() : this.isEncryptionInTransitEnabled;
     }
 
     public EncryptionInTransitPropertiesArgs(@Nullable Output<Boolean> isEncryptionInTransitEnabled) {
-        this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled == null ? Output.ofNullable(false) : isEncryptionInTransitEnabled;
+        this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled == null ? Codegen.ofNullable(false) : isEncryptionInTransitEnabled;
     }
 
     private EncryptionInTransitPropertiesArgs() {
-        this.isEncryptionInTransitEnabled = Output.empty();
+        this.isEncryptionInTransitEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder isEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
-            this.isEncryptionInTransitEnabled = Output.ofNullable(isEncryptionInTransitEnabled);
+            this.isEncryptionInTransitEnabled = Codegen.ofNullable(isEncryptionInTransitEnabled);
             return this;
         }        public EncryptionInTransitPropertiesArgs build() {
             return new EncryptionInTransitPropertiesArgs(isEncryptionInTransitEnabled);

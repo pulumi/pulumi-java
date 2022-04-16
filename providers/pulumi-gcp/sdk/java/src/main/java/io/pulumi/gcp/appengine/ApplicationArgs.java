@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationIapArgs;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authDomain")
       private final @Nullable Output<String> authDomain;
 
-    public Output<String> getAuthDomain() {
-        return this.authDomain == null ? Output.empty() : this.authDomain;
+    public Output<String> authDomain() {
+        return this.authDomain == null ? Codegen.empty() : this.authDomain;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
       private final @Nullable Output<String> databaseType;
 
-    public Output<String> getDatabaseType() {
-        return this.databaseType == null ? Output.empty() : this.databaseType;
+    public Output<String> databaseType() {
+        return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="featureSettings")
       private final @Nullable Output<ApplicationFeatureSettingsArgs> featureSettings;
 
-    public Output<ApplicationFeatureSettingsArgs> getFeatureSettings() {
-        return this.featureSettings == null ? Output.empty() : this.featureSettings;
+    public Output<ApplicationFeatureSettingsArgs> featureSettings() {
+        return this.featureSettings == null ? Codegen.empty() : this.featureSettings;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iap")
       private final @Nullable Output<ApplicationIapArgs> iap;
 
-    public Output<ApplicationIapArgs> getIap() {
-        return this.iap == null ? Output.empty() : this.iap;
+    public Output<ApplicationIapArgs> iap() {
+        return this.iap == null ? Codegen.empty() : this.iap;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="locationId", required=true)
       private final Output<String> locationId;
 
-    public Output<String> getLocationId() {
+    public Output<String> locationId() {
         return this.locationId;
     }
 
@@ -84,8 +85,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="servingStatus")
       private final @Nullable Output<String> servingStatus;
 
-    public Output<String> getServingStatus() {
-        return this.servingStatus == null ? Output.empty() : this.servingStatus;
+    public Output<String> servingStatus() {
+        return this.servingStatus == null ? Codegen.empty() : this.servingStatus;
     }
 
     public ApplicationArgs(
@@ -117,13 +118,13 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.authDomain = Output.empty();
-        this.databaseType = Output.empty();
-        this.featureSettings = Output.empty();
-        this.iap = Output.empty();
-        this.locationId = Output.empty();
-        this.project = Output.empty();
-        this.servingStatus = Output.empty();
+        this.authDomain = Codegen.empty();
+        this.databaseType = Codegen.empty();
+        this.featureSettings = Codegen.empty();
+        this.iap = Codegen.empty();
+        this.locationId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.servingStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authDomain(@Nullable String authDomain) {
-            this.authDomain = Output.ofNullable(authDomain);
+            this.authDomain = Codegen.ofNullable(authDomain);
             return this;
         }
         public Builder databaseType(@Nullable Output<String> databaseType) {
@@ -171,7 +172,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseType(@Nullable String databaseType) {
-            this.databaseType = Output.ofNullable(databaseType);
+            this.databaseType = Codegen.ofNullable(databaseType);
             return this;
         }
         public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsArgs> featureSettings) {
@@ -179,7 +180,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featureSettings(@Nullable ApplicationFeatureSettingsArgs featureSettings) {
-            this.featureSettings = Output.ofNullable(featureSettings);
+            this.featureSettings = Codegen.ofNullable(featureSettings);
             return this;
         }
         public Builder iap(@Nullable Output<ApplicationIapArgs> iap) {
@@ -187,7 +188,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iap(@Nullable ApplicationIapArgs iap) {
-            this.iap = Output.ofNullable(iap);
+            this.iap = Codegen.ofNullable(iap);
             return this;
         }
         public Builder locationId(Output<String> locationId) {
@@ -203,7 +204,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
@@ -211,7 +212,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder servingStatus(@Nullable String servingStatus) {
-            this.servingStatus = Output.ofNullable(servingStatus);
+            this.servingStatus = Codegen.ofNullable(servingStatus);
             return this;
         }        public ApplicationArgs build() {
             return new ApplicationArgs(authDomain, databaseType, featureSettings, iap, locationId, project, servingStatus);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ssoadmin;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
 
@@ -31,7 +32,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     @Import(name="managedPolicyArn", required=true)
       private final Output<String> managedPolicyArn;
 
-    public Output<String> getManagedPolicyArn() {
+    public Output<String> managedPolicyArn() {
         return this.managedPolicyArn;
     }
 
@@ -42,7 +43,7 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     @Import(name="permissionSetArn", required=true)
       private final Output<String> permissionSetArn;
 
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -56,9 +57,9 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     }
 
     private ManagedPolicyAttachmentArgs() {
-        this.instanceArn = Output.empty();
-        this.managedPolicyArn = Output.empty();
-        this.permissionSetArn = Output.empty();
+        this.instanceArn = Codegen.empty();
+        this.managedPolicyArn = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudfront.outputs.RealtimeLogConfigEndpoint;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @return The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @return The Amazon Kinesis data streams where real-time log data is sent.
      * 
      */
-    public Output<RealtimeLogConfigEndpoint> getEndpoint() {
+    public Output<RealtimeLogConfigEndpoint> endpoint() {
         return this.endpoint;
     }
     /**
@@ -70,7 +71,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @return The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
      * 
      */
-    public Output<List<String>> getFields() {
+    public Output<List<String>> fields() {
         return this.fields;
     }
     /**
@@ -84,7 +85,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @return The unique name to identify this real-time log configuration.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -98,7 +99,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @return The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
      * 
      */
-    public Output<Integer> getSamplingRate() {
+    public Output<Integer> samplingRate() {
         return this.samplingRate;
     }
 
@@ -124,7 +125,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RealtimeLogConfig(String name, RealtimeLogConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/realtimeLogConfig:RealtimeLogConfig", name, args == null ? RealtimeLogConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudfront/realtimeLogConfig:RealtimeLogConfig", name, args == null ? RealtimeLogConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RealtimeLogConfig(String name, Output<String> id, @Nullable RealtimeLogConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.operationalinsights.enums.ClusterSkuNameEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Double> capacity;
 
-    public Output<Double> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+    public Output<Double> capacity() {
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,ClusterSkuNameEnum>> name;
 
-    public Output<Either<String,ClusterSkuNameEnum>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<Either<String,ClusterSkuNameEnum>> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ClusterSkuArgs(
@@ -51,8 +52,8 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterSkuArgs() {
-        this.capacity = Output.empty();
-        this.name = Output.empty();
+        this.capacity = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Double capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder name(@Nullable Output<Either<String,ClusterSkuNameEnum>> name) {
@@ -90,7 +91,7 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable Either<String,ClusterSkuNameEnum> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ClusterSkuArgs build() {
             return new ClusterSkuArgs(capacity, name);

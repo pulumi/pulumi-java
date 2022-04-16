@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningcompute.enums.SystemServiceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemServiceType", required=true)
       private final Output<Either<String,SystemServiceType>> systemServiceType;
 
-    public Output<Either<String,SystemServiceType>> getSystemServiceType() {
+    public Output<Either<String,SystemServiceType>> systemServiceType() {
         return this.systemServiceType;
     }
 
@@ -35,7 +36,7 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SystemServiceArgs() {
-        this.systemServiceType = Output.empty();
+        this.systemServiceType = Codegen.empty();
     }
 
     public static Builder builder() {

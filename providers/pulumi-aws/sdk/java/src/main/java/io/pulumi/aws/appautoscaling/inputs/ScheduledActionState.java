@@ -6,6 +6,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 import io.pulumi.aws.appautoscaling.inputs.ScheduledActionScalableTargetActionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
-    public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+    public Output<String> endTime() {
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="scalableDimension")
       private final @Nullable Output<String> scalableDimension;
 
-    public Output<String> getScalableDimension() {
-        return this.scalableDimension == null ? Output.empty() : this.scalableDimension;
+    public Output<String> scalableDimension() {
+        return this.scalableDimension == null ? Codegen.empty() : this.scalableDimension;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="scalableTargetAction")
       private final @Nullable Output<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction;
 
-    public Output<ScheduledActionScalableTargetActionGetArgs> getScalableTargetAction() {
-        return this.scalableTargetAction == null ? Output.empty() : this.scalableTargetAction;
+    public Output<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction() {
+        return this.scalableTargetAction == null ? Codegen.empty() : this.scalableTargetAction;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
-    public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<String> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceNamespace")
       private final @Nullable Output<String> serviceNamespace;
 
-    public Output<String> getServiceNamespace() {
-        return this.serviceNamespace == null ? Output.empty() : this.serviceNamespace;
+    public Output<String> serviceNamespace() {
+        return this.serviceNamespace == null ? Codegen.empty() : this.serviceNamespace;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     @Import(name="timezone")
       private final @Nullable Output<String> timezone;
 
-    public Output<String> getTimezone() {
-        return this.timezone == null ? Output.empty() : this.timezone;
+    public Output<String> timezone() {
+        return this.timezone == null ? Codegen.empty() : this.timezone;
     }
 
     public ScheduledActionState(
@@ -149,16 +150,16 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     }
 
     private ScheduledActionState() {
-        this.arn = Output.empty();
-        this.endTime = Output.empty();
-        this.name = Output.empty();
-        this.resourceId = Output.empty();
-        this.scalableDimension = Output.empty();
-        this.scalableTargetAction = Output.empty();
-        this.schedule = Output.empty();
-        this.serviceNamespace = Output.empty();
-        this.startTime = Output.empty();
-        this.timezone = Output.empty();
+        this.arn = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.scalableDimension = Codegen.empty();
+        this.scalableTargetAction = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.serviceNamespace = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.timezone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -204,7 +205,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -212,7 +213,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -220,7 +221,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -228,7 +229,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder scalableDimension(@Nullable Output<String> scalableDimension) {
@@ -236,7 +237,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scalableDimension(@Nullable String scalableDimension) {
-            this.scalableDimension = Output.ofNullable(scalableDimension);
+            this.scalableDimension = Codegen.ofNullable(scalableDimension);
             return this;
         }
         public Builder scalableTargetAction(@Nullable Output<ScheduledActionScalableTargetActionGetArgs> scalableTargetAction) {
@@ -244,7 +245,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scalableTargetAction(@Nullable ScheduledActionScalableTargetActionGetArgs scalableTargetAction) {
-            this.scalableTargetAction = Output.ofNullable(scalableTargetAction);
+            this.scalableTargetAction = Codegen.ofNullable(scalableTargetAction);
             return this;
         }
         public Builder schedule(@Nullable Output<String> schedule) {
@@ -252,7 +253,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
@@ -260,7 +261,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
-            this.serviceNamespace = Output.ofNullable(serviceNamespace);
+            this.serviceNamespace = Codegen.ofNullable(serviceNamespace);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -268,7 +269,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder timezone(@Nullable Output<String> timezone) {
@@ -276,7 +277,7 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder timezone(@Nullable String timezone) {
-            this.timezone = Output.ofNullable(timezone);
+            this.timezone = Codegen.ofNullable(timezone);
             return this;
         }        public ScheduledActionState build() {
             return new ScheduledActionState(arn, endTime, name, resourceId, scalableDimension, scalableTargetAction, schedule, serviceNamespace, startTime, timezone);

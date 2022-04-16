@@ -26,14 +26,14 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
     @Import(name="destination", required=true)
       private final String destination;
 
-    public String getDestination() {
+    public String destination() {
         return this.destination;
     }
 
     @Import(name="odataType", required=true)
       private final String odataType;
 
-    public String getOdataType() {
+    public String odataType() {
         return this.odataType;
     }
 
@@ -44,7 +44,7 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
     @Import(name="preserveUnmatchedPath")
       private final @Nullable Boolean preserveUnmatchedPath;
 
-    public Optional<Boolean> getPreserveUnmatchedPath() {
+    public Optional<Boolean> preserveUnmatchedPath() {
         return this.preserveUnmatchedPath == null ? Optional.empty() : Optional.ofNullable(this.preserveUnmatchedPath);
     }
 
@@ -55,7 +55,7 @@ public final class UrlRewriteActionParametersResponse extends io.pulumi.resource
     @Import(name="sourcePattern", required=true)
       private final String sourcePattern;
 
-    public String getSourcePattern() {
+    public String sourcePattern() {
         return this.sourcePattern;
     }
 

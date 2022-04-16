@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.lightsail.inputs.CertificateTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
-        return this.certificateName == null ? Output.empty() : this.certificateName;
+    public Output<String> certificateName() {
+        return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -45,8 +46,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Output<List<String>> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
+    public Output<List<String>> subjectAlternativeNames() {
+        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<CertificateTagArgs>> tags;
 
-    public Output<List<CertificateTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<CertificateTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CertificateArgs(
@@ -72,10 +73,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateName = Output.empty();
-        this.domainName = Output.empty();
-        this.subjectAlternativeNames = Output.empty();
-        this.tags = Output.empty();
+        this.certificateName = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.subjectAlternativeNames = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Output.ofNullable(certificateName);
+            this.certificateName = Codegen.ofNullable(certificateName);
             return this;
         }
         public Builder domainName(Output<String> domainName) {
@@ -125,7 +126,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
             return this;
         }
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
@@ -136,7 +137,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<CertificateTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(CertificateTagArgs... tags) {

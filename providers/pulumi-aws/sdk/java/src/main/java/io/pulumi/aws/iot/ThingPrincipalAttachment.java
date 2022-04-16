@@ -9,6 +9,7 @@ import io.pulumi.aws.iot.inputs.ThingPrincipalAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class ThingPrincipalAttachment extends io.pulumi.resources.CustomResource
      * @return The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
      * 
      */
-    public Output<String> getPrincipal() {
+    public Output<String> principal() {
         return this.principal;
     }
     /**
@@ -45,7 +46,7 @@ public class ThingPrincipalAttachment extends io.pulumi.resources.CustomResource
      * @return The name of the thing.
      * 
      */
-    public Output<String> getThing() {
+    public Output<String> thing() {
         return this.thing;
     }
 
@@ -71,7 +72,7 @@ public class ThingPrincipalAttachment extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ThingPrincipalAttachment(String name, ThingPrincipalAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iot/thingPrincipalAttachment:ThingPrincipalAttachment", name, args == null ? ThingPrincipalAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iot/thingPrincipalAttachment:ThingPrincipalAttachment", name, args == null ? ThingPrincipalAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ThingPrincipalAttachment(String name, Output<String> id, @Nullable ThingPrincipalAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

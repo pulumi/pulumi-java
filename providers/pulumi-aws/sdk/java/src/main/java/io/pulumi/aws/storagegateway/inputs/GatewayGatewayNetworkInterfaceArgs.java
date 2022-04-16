@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GatewayGatewayNetworkInterfaceArgs extends io.pulumi.resource
     @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
-    public Output<String> getIpv4Address() {
-        return this.ipv4Address == null ? Output.empty() : this.ipv4Address;
+    public Output<String> ipv4Address() {
+        return this.ipv4Address == null ? Codegen.empty() : this.ipv4Address;
     }
 
     public GatewayGatewayNetworkInterfaceArgs(@Nullable Output<String> ipv4Address) {
@@ -30,7 +31,7 @@ public final class GatewayGatewayNetworkInterfaceArgs extends io.pulumi.resource
     }
 
     private GatewayGatewayNetworkInterfaceArgs() {
-        this.ipv4Address = Output.empty();
+        this.ipv4Address = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class GatewayGatewayNetworkInterfaceArgs extends io.pulumi.resource
             return this;
         }
         public Builder ipv4Address(@Nullable String ipv4Address) {
-            this.ipv4Address = Output.ofNullable(ipv4Address);
+            this.ipv4Address = Codegen.ofNullable(ipv4Address);
             return this;
         }        public GatewayGatewayNetworkInterfaceArgs build() {
             return new GatewayGatewayNetworkInterfaceArgs(ipv4Address);

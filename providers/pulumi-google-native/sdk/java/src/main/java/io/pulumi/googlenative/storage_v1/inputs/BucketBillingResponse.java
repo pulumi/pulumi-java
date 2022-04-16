@@ -23,7 +23,7 @@ public final class BucketBillingResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="requesterPays", required=true)
       private final Boolean requesterPays;
 
-    public Boolean getRequesterPays() {
+    public Boolean requesterPays() {
         return this.requesterPays;
     }
 

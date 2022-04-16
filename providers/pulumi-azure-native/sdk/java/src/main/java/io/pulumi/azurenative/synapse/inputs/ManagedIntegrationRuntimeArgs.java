@@ -7,6 +7,7 @@ import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeComputePropertiesA
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeSsisPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="computeProperties")
       private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
-    public Output<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
-        return this.computeProperties == null ? Output.empty() : this.computeProperties;
+    public Output<IntegrationRuntimeComputePropertiesArgs> computeProperties() {
+        return this.computeProperties == null ? Codegen.empty() : this.computeProperties;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="ssisProperties")
       private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
-    public Output<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
-        return this.ssisProperties == null ? Output.empty() : this.ssisProperties;
+    public Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties() {
+        return this.ssisProperties == null ? Codegen.empty() : this.ssisProperties;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -77,10 +78,10 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     }
 
     private ManagedIntegrationRuntimeArgs() {
-        this.computeProperties = Output.empty();
-        this.description = Output.empty();
-        this.ssisProperties = Output.empty();
-        this.type = Output.empty();
+        this.computeProperties = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ssisProperties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesArgs computeProperties) {
-            this.computeProperties = Output.ofNullable(computeProperties);
+            this.computeProperties = Codegen.ofNullable(computeProperties);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -122,7 +123,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ssisProperties(@Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
@@ -130,7 +131,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
-            this.ssisProperties = Output.ofNullable(ssisProperties);
+            this.ssisProperties = Codegen.ofNullable(ssisProperties);
             return this;
         }
         public Builder type(Output<String> type) {

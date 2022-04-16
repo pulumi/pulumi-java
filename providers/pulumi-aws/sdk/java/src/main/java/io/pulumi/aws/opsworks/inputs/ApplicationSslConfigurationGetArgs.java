@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
 
@@ -32,8 +33,8 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     @Import(name="chain")
       private final @Nullable Output<String> chain;
 
-    public Output<String> getChain() {
-        return this.chain == null ? Output.empty() : this.chain;
+    public Output<String> chain() {
+        return this.chain == null ? Codegen.empty() : this.chain;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
 
@@ -57,9 +58,9 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
     }
 
     private ApplicationSslConfigurationGetArgs() {
-        this.certificate = Output.empty();
-        this.chain = Output.empty();
-        this.privateKey = Output.empty();
+        this.certificate = Codegen.empty();
+        this.chain = Codegen.empty();
+        this.privateKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ApplicationSslConfigurationGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder chain(@Nullable String chain) {
-            this.chain = Output.ofNullable(chain);
+            this.chain = Codegen.ofNullable(chain);
             return this;
         }
         public Builder privateKey(Output<String> privateKey) {

@@ -5,6 +5,7 @@ package io.pulumi.example.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,14 +19,14 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
     @Import(name="bar")
       private final @Nullable Output<Integer> bar;
 
-    public Output<Integer> getBar() {
-        return this.bar == null ? Output.empty() : this.bar;
+    public Output<Integer> bar() {
+        return this.bar == null ? Codegen.empty() : this.bar;
     }
 
     @Import(name="foo", required=true)
       private final Output<String> foo;
 
-    public Output<String> getFoo() {
+    public Output<String> foo() {
         return this.foo;
     }
 
@@ -37,8 +38,8 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
     }
 
     private ObjectWithNodeOptionalInputsArgs() {
-        this.bar = Output.empty();
-        this.foo = Output.empty();
+        this.bar = Codegen.empty();
+        this.foo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ObjectWithNodeOptionalInputsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder bar(@Nullable Integer bar) {
-            this.bar = Output.ofNullable(bar);
+            this.bar = Codegen.ofNullable(bar);
             return this;
         }
         public Builder foo(Output<String> foo) {

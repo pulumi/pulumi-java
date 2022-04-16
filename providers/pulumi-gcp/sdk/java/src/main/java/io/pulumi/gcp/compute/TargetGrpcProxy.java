@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetGrpcProxyArgs;
 import io.pulumi.gcp.compute.inputs.TargetGrpcProxyState;
@@ -57,7 +58,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -71,7 +72,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -91,7 +92,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * fingerprint, make a get() request to retrieve the TargetGrpcProxy. A base64-encoded string.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -117,7 +118,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -133,7 +134,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -147,7 +148,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -161,7 +162,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL with id for the resource.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -179,7 +180,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * must be set to GRPC.
      * 
      */
-    public Output</* @Nullable */ String> getUrlMap() {
+    public Output</* @Nullable */ String> urlMap() {
         return this.urlMap;
     }
     /**
@@ -211,7 +212,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * it is connecting to
      * 
      */
-    public Output</* @Nullable */ Boolean> getValidateForProxyless() {
+    public Output</* @Nullable */ Boolean> validateForProxyless() {
         return this.validateForProxyless;
     }
 
@@ -237,7 +238,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetGrpcProxy(String name, @Nullable TargetGrpcProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/targetGrpcProxy:TargetGrpcProxy", name, args == null ? TargetGrpcProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/targetGrpcProxy:TargetGrpcProxy", name, args == null ? TargetGrpcProxyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetGrpcProxy(String name, Output<String> id, @Nullable TargetGrpcProxyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     @Import(name="featurestore", required=true)
       private final Output<String> featurestore;
 
-    public Output<String> getFeaturestore() {
+    public Output<String> featurestore() {
         return this.featurestore;
     }
 
@@ -34,8 +35,8 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     @Import(name="monitoringConfig")
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
 
-    public Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> getMonitoringConfig() {
-        return this.monitoringConfig == null ? Output.empty() : this.monitoringConfig;
+    public Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig() {
+        return this.monitoringConfig == null ? Codegen.empty() : this.monitoringConfig;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public AiFeatureStoreEntityTypeArgs(
@@ -74,10 +75,10 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     }
 
     private AiFeatureStoreEntityTypeArgs() {
-        this.featurestore = Output.empty();
-        this.labels = Output.empty();
-        this.monitoringConfig = Output.empty();
-        this.name = Output.empty();
+        this.featurestore = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.monitoringConfig = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
@@ -127,7 +128,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
-            this.monitoringConfig = Output.ofNullable(monitoringConfig);
+            this.monitoringConfig = Codegen.ofNullable(monitoringConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -135,7 +136,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public AiFeatureStoreEntityTypeArgs build() {
             return new AiFeatureStoreEntityTypeArgs(featurestore, labels, monitoringConfig, name);

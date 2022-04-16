@@ -5,6 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,28 +18,28 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="feature", required=true)
       private final Output<String> feature;
 
-    public Output<String> getFeature() {
+    public Output<String> feature() {
         return this.feature;
     }
 
     @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
 
     @Import(name="variation", required=true)
       private final Output<String> variation;
 
-    public Output<String> getVariation() {
+    public Output<String> variation() {
         return this.variation;
     }
 
@@ -54,10 +55,10 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LaunchGroupObjectArgs() {
-        this.description = Output.empty();
-        this.feature = Output.empty();
-        this.groupName = Output.empty();
-        this.variation = Output.empty();
+        this.description = Codegen.empty();
+        this.feature = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.variation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder feature(Output<String> feature) {

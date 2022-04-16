@@ -28,7 +28,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
     @Import(name="availablePatchSummary")
       private final @Nullable AvailablePatchSummaryResponse availablePatchSummary;
 
-    public Optional<AvailablePatchSummaryResponse> getAvailablePatchSummary() {
+    public Optional<AvailablePatchSummaryResponse> availablePatchSummary() {
         return this.availablePatchSummary == null ? Optional.empty() : Optional.ofNullable(this.availablePatchSummary);
     }
 
@@ -39,7 +39,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
     @Import(name="configurationStatuses", required=true)
       private final List<InstanceViewStatusResponse> configurationStatuses;
 
-    public List<InstanceViewStatusResponse> getConfigurationStatuses() {
+    public List<InstanceViewStatusResponse> configurationStatuses() {
         return this.configurationStatuses;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
     @Import(name="lastPatchInstallationSummary")
       private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
-    public Optional<LastPatchInstallationSummaryResponse> getLastPatchInstallationSummary() {
+    public Optional<LastPatchInstallationSummaryResponse> lastPatchInstallationSummary() {
         return this.lastPatchInstallationSummary == null ? Optional.empty() : Optional.ofNullable(this.lastPatchInstallationSummary);
     }
 

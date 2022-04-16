@@ -11,6 +11,7 @@ import io.pulumi.awsnative.efs.outputs.FileSystemLifecyclePolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -27,19 +28,19 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="availabilityZoneName", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZoneName;
 
-    public Output</* @Nullable */ String> getAvailabilityZoneName() {
+    public Output</* @Nullable */ String> availabilityZoneName() {
         return this.availabilityZoneName;
     }
     @Export(name="backupPolicy", type=FileSystemBackupPolicy.class, parameters={})
     private Output</* @Nullable */ FileSystemBackupPolicy> backupPolicy;
 
-    public Output</* @Nullable */ FileSystemBackupPolicy> getBackupPolicy() {
+    public Output</* @Nullable */ FileSystemBackupPolicy> backupPolicy() {
         return this.backupPolicy;
     }
     /**
@@ -53,61 +54,61 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
      * @return Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
      * 
      */
-    public Output</* @Nullable */ Boolean> getBypassPolicyLockoutSafetyCheck() {
+    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
         return this.bypassPolicyLockoutSafetyCheck;
     }
     @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> encrypted;
 
-    public Output</* @Nullable */ Boolean> getEncrypted() {
+    public Output</* @Nullable */ Boolean> encrypted() {
         return this.encrypted;
     }
     @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
+    public Output<String> fileSystemId() {
         return this.fileSystemId;
     }
     @Export(name="fileSystemPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> fileSystemPolicy;
 
-    public Output</* @Nullable */ Object> getFileSystemPolicy() {
+    public Output</* @Nullable */ Object> fileSystemPolicy() {
         return this.fileSystemPolicy;
     }
     @Export(name="fileSystemTags", type=List.class, parameters={FileSystemElasticFileSystemTag.class})
     private Output</* @Nullable */ List<FileSystemElasticFileSystemTag>> fileSystemTags;
 
-    public Output</* @Nullable */ List<FileSystemElasticFileSystemTag>> getFileSystemTags() {
+    public Output</* @Nullable */ List<FileSystemElasticFileSystemTag>> fileSystemTags() {
         return this.fileSystemTags;
     }
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     @Export(name="lifecyclePolicies", type=List.class, parameters={FileSystemLifecyclePolicy.class})
     private Output</* @Nullable */ List<FileSystemLifecyclePolicy>> lifecyclePolicies;
 
-    public Output</* @Nullable */ List<FileSystemLifecyclePolicy>> getLifecyclePolicies() {
+    public Output</* @Nullable */ List<FileSystemLifecyclePolicy>> lifecyclePolicies() {
         return this.lifecyclePolicies;
     }
     @Export(name="performanceMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> performanceMode;
 
-    public Output</* @Nullable */ String> getPerformanceMode() {
+    public Output</* @Nullable */ String> performanceMode() {
         return this.performanceMode;
     }
     @Export(name="provisionedThroughputInMibps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> provisionedThroughputInMibps;
 
-    public Output</* @Nullable */ Double> getProvisionedThroughputInMibps() {
+    public Output</* @Nullable */ Double> provisionedThroughputInMibps() {
         return this.provisionedThroughputInMibps;
     }
     @Export(name="throughputMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> throughputMode;
 
-    public Output</* @Nullable */ String> getThroughputMode() {
+    public Output</* @Nullable */ String> throughputMode() {
         return this.throughputMode;
     }
 
@@ -133,7 +134,7 @@ public class FileSystem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileSystem(String name, @Nullable FileSystemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:efs:FileSystem", name, args == null ? FileSystemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:efs:FileSystem", name, args == null ? FileSystemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FileSystem(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

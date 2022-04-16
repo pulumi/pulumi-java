@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
-        return this.certificateName == null ? Output.empty() : this.certificateName;
+    public Output<String> certificateName() {
+        return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
     @Import(name="domainNames")
       private final @Nullable Output<List<String>> domainNames;
 
-    public Output<List<String>> getDomainNames() {
-        return this.domainNames == null ? Output.empty() : this.domainNames;
+    public Output<List<String>> domainNames() {
+        return this.domainNames == null ? Codegen.empty() : this.domainNames;
     }
 
     public ContainerPublicDomainNameArgs(
@@ -45,8 +46,8 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
     }
 
     private ContainerPublicDomainNameArgs() {
-        this.certificateName = Output.empty();
-        this.domainNames = Output.empty();
+        this.certificateName = Codegen.empty();
+        this.domainNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Output.ofNullable(certificateName);
+            this.certificateName = Codegen.ofNullable(certificateName);
             return this;
         }
         public Builder domainNames(@Nullable Output<List<String>> domainNames) {
@@ -84,7 +85,7 @@ public final class ContainerPublicDomainNameArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder domainNames(@Nullable List<String> domainNames) {
-            this.domainNames = Output.ofNullable(domainNames);
+            this.domainNames = Codegen.ofNullable(domainNames);
             return this;
         }
         public Builder domainNames(String... domainNames) {

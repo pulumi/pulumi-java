@@ -10,6 +10,7 @@ import io.pulumi.aws.lb.inputs.ListenerDefaultActionForwardGetArgs;
 import io.pulumi.aws.lb.inputs.ListenerDefaultActionRedirectGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="authenticateCognito")
       private final @Nullable Output<ListenerDefaultActionAuthenticateCognitoGetArgs> authenticateCognito;
 
-    public Output<ListenerDefaultActionAuthenticateCognitoGetArgs> getAuthenticateCognito() {
-        return this.authenticateCognito == null ? Output.empty() : this.authenticateCognito;
+    public Output<ListenerDefaultActionAuthenticateCognitoGetArgs> authenticateCognito() {
+        return this.authenticateCognito == null ? Codegen.empty() : this.authenticateCognito;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="authenticateOidc")
       private final @Nullable Output<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc;
 
-    public Output<ListenerDefaultActionAuthenticateOidcGetArgs> getAuthenticateOidc() {
-        return this.authenticateOidc == null ? Output.empty() : this.authenticateOidc;
+    public Output<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc() {
+        return this.authenticateOidc == null ? Codegen.empty() : this.authenticateOidc;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="fixedResponse")
       private final @Nullable Output<ListenerDefaultActionFixedResponseGetArgs> fixedResponse;
 
-    public Output<ListenerDefaultActionFixedResponseGetArgs> getFixedResponse() {
-        return this.fixedResponse == null ? Output.empty() : this.fixedResponse;
+    public Output<ListenerDefaultActionFixedResponseGetArgs> fixedResponse() {
+        return this.fixedResponse == null ? Codegen.empty() : this.fixedResponse;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="forward")
       private final @Nullable Output<ListenerDefaultActionForwardGetArgs> forward;
 
-    public Output<ListenerDefaultActionForwardGetArgs> getForward() {
-        return this.forward == null ? Output.empty() : this.forward;
+    public Output<ListenerDefaultActionForwardGetArgs> forward() {
+        return this.forward == null ? Codegen.empty() : this.forward;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+    public Output<Integer> order() {
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="redirect")
       private final @Nullable Output<ListenerDefaultActionRedirectGetArgs> redirect;
 
-    public Output<ListenerDefaultActionRedirectGetArgs> getRedirect() {
-        return this.redirect == null ? Output.empty() : this.redirect;
+    public Output<ListenerDefaultActionRedirectGetArgs> redirect() {
+        return this.redirect == null ? Codegen.empty() : this.redirect;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
+    public Output<String> targetGroupArn() {
+        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -128,14 +129,14 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
     }
 
     private ListenerDefaultActionGetArgs() {
-        this.authenticateCognito = Output.empty();
-        this.authenticateOidc = Output.empty();
-        this.fixedResponse = Output.empty();
-        this.forward = Output.empty();
-        this.order = Output.empty();
-        this.redirect = Output.empty();
-        this.targetGroupArn = Output.empty();
-        this.type = Output.empty();
+        this.authenticateCognito = Codegen.empty();
+        this.authenticateOidc = Codegen.empty();
+        this.fixedResponse = Codegen.empty();
+        this.forward = Codegen.empty();
+        this.order = Codegen.empty();
+        this.redirect = Codegen.empty();
+        this.targetGroupArn = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder authenticateCognito(@Nullable ListenerDefaultActionAuthenticateCognitoGetArgs authenticateCognito) {
-            this.authenticateCognito = Output.ofNullable(authenticateCognito);
+            this.authenticateCognito = Codegen.ofNullable(authenticateCognito);
             return this;
         }
         public Builder authenticateOidc(@Nullable Output<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc) {
@@ -185,7 +186,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder authenticateOidc(@Nullable ListenerDefaultActionAuthenticateOidcGetArgs authenticateOidc) {
-            this.authenticateOidc = Output.ofNullable(authenticateOidc);
+            this.authenticateOidc = Codegen.ofNullable(authenticateOidc);
             return this;
         }
         public Builder fixedResponse(@Nullable Output<ListenerDefaultActionFixedResponseGetArgs> fixedResponse) {
@@ -193,7 +194,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder fixedResponse(@Nullable ListenerDefaultActionFixedResponseGetArgs fixedResponse) {
-            this.fixedResponse = Output.ofNullable(fixedResponse);
+            this.fixedResponse = Codegen.ofNullable(fixedResponse);
             return this;
         }
         public Builder forward(@Nullable Output<ListenerDefaultActionForwardGetArgs> forward) {
@@ -201,7 +202,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder forward(@Nullable ListenerDefaultActionForwardGetArgs forward) {
-            this.forward = Output.ofNullable(forward);
+            this.forward = Codegen.ofNullable(forward);
             return this;
         }
         public Builder order(@Nullable Output<Integer> order) {
@@ -209,7 +210,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder order(@Nullable Integer order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder redirect(@Nullable Output<ListenerDefaultActionRedirectGetArgs> redirect) {
@@ -217,7 +218,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder redirect(@Nullable ListenerDefaultActionRedirectGetArgs redirect) {
-            this.redirect = Output.ofNullable(redirect);
+            this.redirect = Codegen.ofNullable(redirect);
             return this;
         }
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
@@ -225,7 +226,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Output.ofNullable(targetGroupArn);
+            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
             return this;
         }
         public Builder type(Output<String> type) {

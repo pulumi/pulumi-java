@@ -35,14 +35,14 @@ public final class DataSourceHttpConfig {
      * The authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.
      * 
     */
-    public Optional<DataSourceHttpConfigAuthorizationConfig> getAuthorizationConfig() {
+    public Optional<DataSourceHttpConfigAuthorizationConfig> authorizationConfig() {
         return Optional.ofNullable(this.authorizationConfig);
     }
     /**
      * HTTP URL.
      * 
     */
-    public String getEndpoint() {
+    public String endpoint() {
         return this.endpoint;
     }
 

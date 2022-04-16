@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQueryTimestreamConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resou
     @Import(name="timestreamConfiguration", required=true)
       private final Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration;
 
-    public Output<ScheduledQueryTimestreamConfigurationArgs> getTimestreamConfiguration() {
+    public Output<ScheduledQueryTimestreamConfigurationArgs> timestreamConfiguration() {
         return this.timestreamConfiguration;
     }
 
@@ -29,7 +30,7 @@ public final class ScheduledQueryTargetConfigurationArgs extends io.pulumi.resou
     }
 
     private ScheduledQueryTargetConfigurationArgs() {
-        this.timestreamConfiguration = Output.empty();
+        this.timestreamConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {

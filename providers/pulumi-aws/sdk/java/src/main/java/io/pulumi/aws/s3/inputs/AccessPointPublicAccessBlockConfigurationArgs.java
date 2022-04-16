@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
     @Import(name="blockPublicAcls")
       private final @Nullable Output<Boolean> blockPublicAcls;
 
-    public Output<Boolean> getBlockPublicAcls() {
-        return this.blockPublicAcls == null ? Output.empty() : this.blockPublicAcls;
+    public Output<Boolean> blockPublicAcls() {
+        return this.blockPublicAcls == null ? Codegen.empty() : this.blockPublicAcls;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
     @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
-    public Output<Boolean> getBlockPublicPolicy() {
-        return this.blockPublicPolicy == null ? Output.empty() : this.blockPublicPolicy;
+    public Output<Boolean> blockPublicPolicy() {
+        return this.blockPublicPolicy == null ? Codegen.empty() : this.blockPublicPolicy;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
     @Import(name="ignorePublicAcls")
       private final @Nullable Output<Boolean> ignorePublicAcls;
 
-    public Output<Boolean> getIgnorePublicAcls() {
-        return this.ignorePublicAcls == null ? Output.empty() : this.ignorePublicAcls;
+    public Output<Boolean> ignorePublicAcls() {
+        return this.ignorePublicAcls == null ? Codegen.empty() : this.ignorePublicAcls;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
     @Import(name="restrictPublicBuckets")
       private final @Nullable Output<Boolean> restrictPublicBuckets;
 
-    public Output<Boolean> getRestrictPublicBuckets() {
-        return this.restrictPublicBuckets == null ? Output.empty() : this.restrictPublicBuckets;
+    public Output<Boolean> restrictPublicBuckets() {
+        return this.restrictPublicBuckets == null ? Codegen.empty() : this.restrictPublicBuckets;
     }
 
     public AccessPointPublicAccessBlockConfigurationArgs(
@@ -76,10 +77,10 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
     }
 
     private AccessPointPublicAccessBlockConfigurationArgs() {
-        this.blockPublicAcls = Output.empty();
-        this.blockPublicPolicy = Output.empty();
-        this.ignorePublicAcls = Output.empty();
-        this.restrictPublicBuckets = Output.empty();
+        this.blockPublicAcls = Codegen.empty();
+        this.blockPublicPolicy = Codegen.empty();
+        this.ignorePublicAcls = Codegen.empty();
+        this.restrictPublicBuckets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
             return this;
         }
         public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
-            this.blockPublicAcls = Output.ofNullable(blockPublicAcls);
+            this.blockPublicAcls = Codegen.ofNullable(blockPublicAcls);
             return this;
         }
         public Builder blockPublicPolicy(@Nullable Output<Boolean> blockPublicPolicy) {
@@ -121,7 +122,7 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
             return this;
         }
         public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
-            this.blockPublicPolicy = Output.ofNullable(blockPublicPolicy);
+            this.blockPublicPolicy = Codegen.ofNullable(blockPublicPolicy);
             return this;
         }
         public Builder ignorePublicAcls(@Nullable Output<Boolean> ignorePublicAcls) {
@@ -129,7 +130,7 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
             return this;
         }
         public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
-            this.ignorePublicAcls = Output.ofNullable(ignorePublicAcls);
+            this.ignorePublicAcls = Codegen.ofNullable(ignorePublicAcls);
             return this;
         }
         public Builder restrictPublicBuckets(@Nullable Output<Boolean> restrictPublicBuckets) {
@@ -137,7 +138,7 @@ public final class AccessPointPublicAccessBlockConfigurationArgs extends io.pulu
             return this;
         }
         public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
-            this.restrictPublicBuckets = Output.ofNullable(restrictPublicBuckets);
+            this.restrictPublicBuckets = Codegen.ofNullable(restrictPublicBuckets);
             return this;
         }        public AccessPointPublicAccessBlockConfigurationArgs build() {
             return new AccessPointPublicAccessBlockConfigurationArgs(blockPublicAcls, blockPublicPolicy, ignorePublicAcls, restrictPublicBuckets);

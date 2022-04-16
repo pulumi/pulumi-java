@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__BuiltInAlgorithmOutputArgs;
 import java.lang.Boolean;
@@ -30,8 +31,8 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     @Import(name="allMetrics")
       private final @Nullable Output<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics;
 
-    public Output<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> getAllMetrics() {
-        return this.allMetrics == null ? Output.empty() : this.allMetrics;
+    public Output<List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs>> allMetrics() {
+        return this.allMetrics == null ? Codegen.empty() : this.allMetrics;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     @Import(name="builtInAlgorithmOutput")
       private final @Nullable Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput;
 
-    public Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> getBuiltInAlgorithmOutput() {
-        return this.builtInAlgorithmOutput == null ? Output.empty() : this.builtInAlgorithmOutput;
+    public Output<GoogleCloudMlV1__BuiltInAlgorithmOutputArgs> builtInAlgorithmOutput() {
+        return this.builtInAlgorithmOutput == null ? Codegen.empty() : this.builtInAlgorithmOutput;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     @Import(name="finalMetric")
       private final @Nullable Output<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric;
 
-    public Output<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> getFinalMetric() {
-        return this.finalMetric == null ? Output.empty() : this.finalMetric;
+    public Output<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric() {
+        return this.finalMetric == null ? Codegen.empty() : this.finalMetric;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     @Import(name="hyperparameters")
       private final @Nullable Output<Map<String,String>> hyperparameters;
 
-    public Output<Map<String,String>> getHyperparameters() {
-        return this.hyperparameters == null ? Output.empty() : this.hyperparameters;
+    public Output<Map<String,String>> hyperparameters() {
+        return this.hyperparameters == null ? Codegen.empty() : this.hyperparameters;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     @Import(name="isTrialStoppedEarly")
       private final @Nullable Output<Boolean> isTrialStoppedEarly;
 
-    public Output<Boolean> getIsTrialStoppedEarly() {
-        return this.isTrialStoppedEarly == null ? Output.empty() : this.isTrialStoppedEarly;
+    public Output<Boolean> isTrialStoppedEarly() {
+        return this.isTrialStoppedEarly == null ? Codegen.empty() : this.isTrialStoppedEarly;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     @Import(name="trialId")
       private final @Nullable Output<String> trialId;
 
-    public Output<String> getTrialId() {
-        return this.trialId == null ? Output.empty() : this.trialId;
+    public Output<String> trialId() {
+        return this.trialId == null ? Codegen.empty() : this.trialId;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     @Import(name="webAccessUris")
       private final @Nullable Output<Map<String,String>> webAccessUris;
 
-    public Output<Map<String,String>> getWebAccessUris() {
-        return this.webAccessUris == null ? Output.empty() : this.webAccessUris;
+    public Output<Map<String,String>> webAccessUris() {
+        return this.webAccessUris == null ? Codegen.empty() : this.webAccessUris;
     }
 
     public GoogleCloudMlV1__HyperparameterOutputArgs(
@@ -118,13 +119,13 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
     }
 
     private GoogleCloudMlV1__HyperparameterOutputArgs() {
-        this.allMetrics = Output.empty();
-        this.builtInAlgorithmOutput = Output.empty();
-        this.finalMetric = Output.empty();
-        this.hyperparameters = Output.empty();
-        this.isTrialStoppedEarly = Output.empty();
-        this.trialId = Output.empty();
-        this.webAccessUris = Output.empty();
+        this.allMetrics = Codegen.empty();
+        this.builtInAlgorithmOutput = Codegen.empty();
+        this.finalMetric = Codegen.empty();
+        this.hyperparameters = Codegen.empty();
+        this.isTrialStoppedEarly = Codegen.empty();
+        this.trialId = Codegen.empty();
+        this.webAccessUris = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             return this;
         }
         public Builder allMetrics(@Nullable List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> allMetrics) {
-            this.allMetrics = Output.ofNullable(allMetrics);
+            this.allMetrics = Codegen.ofNullable(allMetrics);
             return this;
         }
         public Builder allMetrics(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs... allMetrics) {
@@ -175,7 +176,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             return this;
         }
         public Builder builtInAlgorithmOutput(@Nullable GoogleCloudMlV1__BuiltInAlgorithmOutputArgs builtInAlgorithmOutput) {
-            this.builtInAlgorithmOutput = Output.ofNullable(builtInAlgorithmOutput);
+            this.builtInAlgorithmOutput = Codegen.ofNullable(builtInAlgorithmOutput);
             return this;
         }
         public Builder finalMetric(@Nullable Output<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs> finalMetric) {
@@ -183,7 +184,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             return this;
         }
         public Builder finalMetric(@Nullable GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs finalMetric) {
-            this.finalMetric = Output.ofNullable(finalMetric);
+            this.finalMetric = Codegen.ofNullable(finalMetric);
             return this;
         }
         public Builder hyperparameters(@Nullable Output<Map<String,String>> hyperparameters) {
@@ -191,7 +192,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             return this;
         }
         public Builder hyperparameters(@Nullable Map<String,String> hyperparameters) {
-            this.hyperparameters = Output.ofNullable(hyperparameters);
+            this.hyperparameters = Codegen.ofNullable(hyperparameters);
             return this;
         }
         public Builder isTrialStoppedEarly(@Nullable Output<Boolean> isTrialStoppedEarly) {
@@ -199,7 +200,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             return this;
         }
         public Builder isTrialStoppedEarly(@Nullable Boolean isTrialStoppedEarly) {
-            this.isTrialStoppedEarly = Output.ofNullable(isTrialStoppedEarly);
+            this.isTrialStoppedEarly = Codegen.ofNullable(isTrialStoppedEarly);
             return this;
         }
         public Builder trialId(@Nullable Output<String> trialId) {
@@ -207,7 +208,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             return this;
         }
         public Builder trialId(@Nullable String trialId) {
-            this.trialId = Output.ofNullable(trialId);
+            this.trialId = Codegen.ofNullable(trialId);
             return this;
         }
         public Builder webAccessUris(@Nullable Output<Map<String,String>> webAccessUris) {
@@ -215,7 +216,7 @@ public final class GoogleCloudMlV1__HyperparameterOutputArgs extends io.pulumi.r
             return this;
         }
         public Builder webAccessUris(@Nullable Map<String,String> webAccessUris) {
-            this.webAccessUris = Output.ofNullable(webAccessUris);
+            this.webAccessUris = Codegen.ofNullable(webAccessUris);
             return this;
         }        public GoogleCloudMlV1__HyperparameterOutputArgs build() {
             return new GoogleCloudMlV1__HyperparameterOutputArgs(allMetrics, builtInAlgorithmOutput, finalMetric, hyperparameters, isTrialStoppedEarly, trialId, webAccessUris);

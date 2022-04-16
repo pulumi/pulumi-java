@@ -33,7 +33,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -44,7 +44,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="authenticationType")
       private final @Nullable Object authenticationType;
 
-    public Optional<Object> getAuthenticationType() {
+    public Optional<Object> authenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
@@ -55,7 +55,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
-    public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
+    public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
     }
 
@@ -66,7 +66,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="connectionString", required=true)
       private final Object connectionString;
 
-    public Object getConnectionString() {
+    public Object connectionString() {
         return this.connectionString;
     }
 
@@ -77,7 +77,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="credential")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getCredential() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> credential() {
         return this.credential == null ? null : this.credential;
     }
 
@@ -88,7 +88,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -99,7 +99,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
-    public Optional<Object> getEncryptedCredential() {
+    public Optional<Object> encryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
     }
 
@@ -110,7 +110,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> getParameters() {
+    public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
 
@@ -121,7 +121,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
+    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password == null ? null : this.password;
     }
 
@@ -133,7 +133,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 
@@ -144,7 +144,7 @@ public final class MicrosoftAccessLinkedServiceResponse extends io.pulumi.resour
     @Import(name="userName")
       private final @Nullable Object userName;
 
-    public Optional<Object> getUserName() {
+    public Optional<Object> userName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
     }
 

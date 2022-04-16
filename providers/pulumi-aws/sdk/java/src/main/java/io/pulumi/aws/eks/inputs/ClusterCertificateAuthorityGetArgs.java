@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ClusterCertificateAuthorityGetArgs extends io.pulumi.resource
     @Import(name="data")
       private final @Nullable Output<String> data;
 
-    public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+    public Output<String> data() {
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     public ClusterCertificateAuthorityGetArgs(@Nullable Output<String> data) {
@@ -30,7 +31,7 @@ public final class ClusterCertificateAuthorityGetArgs extends io.pulumi.resource
     }
 
     private ClusterCertificateAuthorityGetArgs() {
-        this.data = Output.empty();
+        this.data = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ClusterCertificateAuthorityGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }        public ClusterCertificateAuthorityGetArgs build() {
             return new ClusterCertificateAuthorityGetArgs(data);

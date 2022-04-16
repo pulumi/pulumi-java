@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorCsvFormatDescriptorFileCompression;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,43 +21,43 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
     @Import(name="charset")
       private final @Nullable Output<String> charset;
 
-    public Output<String> getCharset() {
-        return this.charset == null ? Output.empty() : this.charset;
+    public Output<String> charset() {
+        return this.charset == null ? Codegen.empty() : this.charset;
     }
 
     @Import(name="containsHeader")
       private final @Nullable Output<Boolean> containsHeader;
 
-    public Output<Boolean> getContainsHeader() {
-        return this.containsHeader == null ? Output.empty() : this.containsHeader;
+    public Output<Boolean> containsHeader() {
+        return this.containsHeader == null ? Codegen.empty() : this.containsHeader;
     }
 
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
-        return this.delimiter == null ? Output.empty() : this.delimiter;
+    public Output<String> delimiter() {
+        return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
     @Import(name="fileCompression")
       private final @Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression;
 
-    public Output<AnomalyDetectorCsvFormatDescriptorFileCompression> getFileCompression() {
-        return this.fileCompression == null ? Output.empty() : this.fileCompression;
+    public Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression() {
+        return this.fileCompression == null ? Codegen.empty() : this.fileCompression;
     }
 
     @Import(name="headerList")
       private final @Nullable Output<List<String>> headerList;
 
-    public Output<List<String>> getHeaderList() {
-        return this.headerList == null ? Output.empty() : this.headerList;
+    public Output<List<String>> headerList() {
+        return this.headerList == null ? Codegen.empty() : this.headerList;
     }
 
     @Import(name="quoteSymbol")
       private final @Nullable Output<String> quoteSymbol;
 
-    public Output<String> getQuoteSymbol() {
-        return this.quoteSymbol == null ? Output.empty() : this.quoteSymbol;
+    public Output<String> quoteSymbol() {
+        return this.quoteSymbol == null ? Codegen.empty() : this.quoteSymbol;
     }
 
     public AnomalyDetectorCsvFormatDescriptorArgs(
@@ -75,12 +76,12 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
     }
 
     private AnomalyDetectorCsvFormatDescriptorArgs() {
-        this.charset = Output.empty();
-        this.containsHeader = Output.empty();
-        this.delimiter = Output.empty();
-        this.fileCompression = Output.empty();
-        this.headerList = Output.empty();
-        this.quoteSymbol = Output.empty();
+        this.charset = Codegen.empty();
+        this.containsHeader = Codegen.empty();
+        this.delimiter = Codegen.empty();
+        this.fileCompression = Codegen.empty();
+        this.headerList = Codegen.empty();
+        this.quoteSymbol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
             return this;
         }
         public Builder charset(@Nullable String charset) {
-            this.charset = Output.ofNullable(charset);
+            this.charset = Codegen.ofNullable(charset);
             return this;
         }
         public Builder containsHeader(@Nullable Output<Boolean> containsHeader) {
@@ -126,7 +127,7 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
             return this;
         }
         public Builder containsHeader(@Nullable Boolean containsHeader) {
-            this.containsHeader = Output.ofNullable(containsHeader);
+            this.containsHeader = Codegen.ofNullable(containsHeader);
             return this;
         }
         public Builder delimiter(@Nullable Output<String> delimiter) {
@@ -134,7 +135,7 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
             return this;
         }
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Output.ofNullable(delimiter);
+            this.delimiter = Codegen.ofNullable(delimiter);
             return this;
         }
         public Builder fileCompression(@Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression) {
@@ -142,7 +143,7 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
             return this;
         }
         public Builder fileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
-            this.fileCompression = Output.ofNullable(fileCompression);
+            this.fileCompression = Codegen.ofNullable(fileCompression);
             return this;
         }
         public Builder headerList(@Nullable Output<List<String>> headerList) {
@@ -150,7 +151,7 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
             return this;
         }
         public Builder headerList(@Nullable List<String> headerList) {
-            this.headerList = Output.ofNullable(headerList);
+            this.headerList = Codegen.ofNullable(headerList);
             return this;
         }
         public Builder headerList(String... headerList) {
@@ -161,7 +162,7 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
             return this;
         }
         public Builder quoteSymbol(@Nullable String quoteSymbol) {
-            this.quoteSymbol = Output.ofNullable(quoteSymbol);
+            this.quoteSymbol = Codegen.ofNullable(quoteSymbol);
             return this;
         }        public AnomalyDetectorCsvFormatDescriptorArgs build() {
             return new AnomalyDetectorCsvFormatDescriptorArgs(charset, containsHeader, delimiter, fileCompression, headerList, quoteSymbol);

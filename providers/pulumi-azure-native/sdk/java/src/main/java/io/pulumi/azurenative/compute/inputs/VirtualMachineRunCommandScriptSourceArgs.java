@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     @Import(name="commandId")
       private final @Nullable Output<String> commandId;
 
-    public Output<String> getCommandId() {
-        return this.commandId == null ? Output.empty() : this.commandId;
+    public Output<String> commandId() {
+        return this.commandId == null ? Codegen.empty() : this.commandId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+    public Output<String> script() {
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     @Import(name="scriptUri")
       private final @Nullable Output<String> scriptUri;
 
-    public Output<String> getScriptUri() {
-        return this.scriptUri == null ? Output.empty() : this.scriptUri;
+    public Output<String> scriptUri() {
+        return this.scriptUri == null ? Codegen.empty() : this.scriptUri;
     }
 
     public VirtualMachineRunCommandScriptSourceArgs(
@@ -61,9 +62,9 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
     }
 
     private VirtualMachineRunCommandScriptSourceArgs() {
-        this.commandId = Output.empty();
-        this.script = Output.empty();
-        this.scriptUri = Output.empty();
+        this.commandId = Codegen.empty();
+        this.script = Codegen.empty();
+        this.scriptUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
             return this;
         }
         public Builder commandId(@Nullable String commandId) {
-            this.commandId = Output.ofNullable(commandId);
+            this.commandId = Codegen.ofNullable(commandId);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -103,7 +104,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }
         public Builder scriptUri(@Nullable Output<String> scriptUri) {
@@ -111,7 +112,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
             return this;
         }
         public Builder scriptUri(@Nullable String scriptUri) {
-            this.scriptUri = Output.ofNullable(scriptUri);
+            this.scriptUri = Codegen.ofNullable(scriptUri);
             return this;
         }        public VirtualMachineRunCommandScriptSourceArgs build() {
             return new VirtualMachineRunCommandScriptSourceArgs(commandId, script, scriptUri);

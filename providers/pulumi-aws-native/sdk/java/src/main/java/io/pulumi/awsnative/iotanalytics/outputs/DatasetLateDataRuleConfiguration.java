@@ -18,7 +18,7 @@ public final class DatasetLateDataRuleConfiguration {
         this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
     }
 
-    public Optional<DatasetDeltaTimeSessionWindowConfiguration> getDeltaTimeSessionWindowConfiguration() {
+    public Optional<DatasetDeltaTimeSessionWindowConfiguration> deltaTimeSessionWindowConfiguration() {
         return Optional.ofNullable(this.deltaTimeSessionWindowConfiguration);
     }
 

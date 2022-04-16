@@ -11,6 +11,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.ChannelTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -26,25 +27,25 @@ public class Channel extends io.pulumi.resources.CustomResource {
     @Export(name="channelName", type=String.class, parameters={})
     private Output</* @Nullable */ String> channelName;
 
-    public Output</* @Nullable */ String> getChannelName() {
+    public Output</* @Nullable */ String> channelName() {
         return this.channelName;
     }
     @Export(name="channelStorage", type=ChannelStorage.class, parameters={})
     private Output</* @Nullable */ ChannelStorage> channelStorage;
 
-    public Output</* @Nullable */ ChannelStorage> getChannelStorage() {
+    public Output</* @Nullable */ ChannelStorage> channelStorage() {
         return this.channelStorage;
     }
     @Export(name="retentionPeriod", type=ChannelRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ ChannelRetentionPeriod> retentionPeriod;
 
-    public Output</* @Nullable */ ChannelRetentionPeriod> getRetentionPeriod() {
+    public Output</* @Nullable */ ChannelRetentionPeriod> retentionPeriod() {
         return this.retentionPeriod;
     }
     @Export(name="tags", type=List.class, parameters={ChannelTag.class})
     private Output</* @Nullable */ List<ChannelTag>> tags;
 
-    public Output</* @Nullable */ List<ChannelTag>> getTags() {
+    public Output</* @Nullable */ List<ChannelTag>> tags() {
         return this.tags;
     }
 
@@ -70,7 +71,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Channel(String name, @Nullable ChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iotanalytics:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iotanalytics:Channel", name, args == null ? ChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Channel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

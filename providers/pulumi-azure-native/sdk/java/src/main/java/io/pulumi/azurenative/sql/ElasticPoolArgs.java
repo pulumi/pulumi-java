@@ -9,6 +9,7 @@ import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="elasticPoolName")
       private final @Nullable Output<String> elasticPoolName;
 
-    public Output<String> getElasticPoolName() {
-        return this.elasticPoolName == null ? Output.empty() : this.elasticPoolName;
+    public Output<String> elasticPoolName() {
+        return this.elasticPoolName == null ? Codegen.empty() : this.elasticPoolName;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="licenseType")
       private final @Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType;
 
-    public Output<Either<String,ElasticPoolLicenseType>> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+    public Output<Either<String,ElasticPoolLicenseType>> licenseType() {
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
 
-    public Output<String> getMaintenanceConfigurationId() {
-        return this.maintenanceConfigurationId == null ? Output.empty() : this.maintenanceConfigurationId;
+    public Output<String> maintenanceConfigurationId() {
+        return this.maintenanceConfigurationId == null ? Codegen.empty() : this.maintenanceConfigurationId;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxSizeBytes")
       private final @Nullable Output<Double> maxSizeBytes;
 
-    public Output<Double> getMaxSizeBytes() {
-        return this.maxSizeBytes == null ? Output.empty() : this.maxSizeBytes;
+    public Output<Double> maxSizeBytes() {
+        return this.maxSizeBytes == null ? Codegen.empty() : this.maxSizeBytes;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="perDatabaseSettings")
       private final @Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings;
 
-    public Output<ElasticPoolPerDatabaseSettingsArgs> getPerDatabaseSettings() {
-        return this.perDatabaseSettings == null ? Output.empty() : this.perDatabaseSettings;
+    public Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings() {
+        return this.perDatabaseSettings == null ? Codegen.empty() : this.perDatabaseSettings;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,7 +106,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -118,8 +119,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;
 
-    public Output<Boolean> getZoneRedundant() {
-        return this.zoneRedundant == null ? Output.empty() : this.zoneRedundant;
+    public Output<Boolean> zoneRedundant() {
+        return this.zoneRedundant == null ? Codegen.empty() : this.zoneRedundant;
     }
 
     public ElasticPoolArgs(
@@ -170,17 +171,17 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ElasticPoolArgs() {
-        this.elasticPoolName = Output.empty();
-        this.licenseType = Output.empty();
-        this.location = Output.empty();
-        this.maintenanceConfigurationId = Output.empty();
-        this.maxSizeBytes = Output.empty();
-        this.perDatabaseSettings = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.zoneRedundant = Output.empty();
+        this.elasticPoolName = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maintenanceConfigurationId = Codegen.empty();
+        this.maxSizeBytes = Codegen.empty();
+        this.perDatabaseSettings = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zoneRedundant = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -228,7 +229,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
-            this.elasticPoolName = Output.ofNullable(elasticPoolName);
+            this.elasticPoolName = Codegen.ofNullable(elasticPoolName);
             return this;
         }
         public Builder licenseType(@Nullable Output<Either<String,ElasticPoolLicenseType>> licenseType) {
@@ -236,7 +237,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenseType(@Nullable Either<String,ElasticPoolLicenseType> licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -244,7 +245,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maintenanceConfigurationId(@Nullable Output<String> maintenanceConfigurationId) {
@@ -252,7 +253,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
-            this.maintenanceConfigurationId = Output.ofNullable(maintenanceConfigurationId);
+            this.maintenanceConfigurationId = Codegen.ofNullable(maintenanceConfigurationId);
             return this;
         }
         public Builder maxSizeBytes(@Nullable Output<Double> maxSizeBytes) {
@@ -260,7 +261,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
-            this.maxSizeBytes = Output.ofNullable(maxSizeBytes);
+            this.maxSizeBytes = Codegen.ofNullable(maxSizeBytes);
             return this;
         }
         public Builder perDatabaseSettings(@Nullable Output<ElasticPoolPerDatabaseSettingsArgs> perDatabaseSettings) {
@@ -268,7 +269,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder perDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsArgs perDatabaseSettings) {
-            this.perDatabaseSettings = Output.ofNullable(perDatabaseSettings);
+            this.perDatabaseSettings = Codegen.ofNullable(perDatabaseSettings);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -292,7 +293,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -300,7 +301,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder zoneRedundant(@Nullable Output<Boolean> zoneRedundant) {
@@ -308,7 +309,7 @@ public final class ElasticPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
-            this.zoneRedundant = Output.ofNullable(zoneRedundant);
+            this.zoneRedundant = Codegen.ofNullable(zoneRedundant);
             return this;
         }        public ElasticPoolArgs build() {
             return new ElasticPoolArgs(elasticPoolName, licenseType, location, maintenanceConfigurationId, maxSizeBytes, perDatabaseSettings, resourceGroupName, serverName, sku, tags, zoneRedundant);

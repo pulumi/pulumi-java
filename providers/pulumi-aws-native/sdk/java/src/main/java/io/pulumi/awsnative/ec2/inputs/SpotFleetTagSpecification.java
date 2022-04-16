@@ -19,14 +19,14 @@ public final class SpotFleetTagSpecification extends io.pulumi.resources.InvokeA
     @Import(name="resourceType")
       private final @Nullable SpotFleetTagSpecificationResourceType resourceType;
 
-    public Optional<SpotFleetTagSpecificationResourceType> getPropResourceType() {
+    public Optional<SpotFleetTagSpecificationResourceType> resourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
     @Import(name="tags")
       private final @Nullable List<SpotFleetTag> tags;
 
-    public List<SpotFleetTag> getTags() {
+    public List<SpotFleetTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

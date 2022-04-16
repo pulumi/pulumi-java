@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class AccessLevelsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessLevels")
       private final @Nullable Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels;
 
-    public Output<List<AccessLevelsAccessLevelGetArgs>> getAccessLevels() {
-        return this.accessLevels == null ? Output.empty() : this.accessLevels;
+    public Output<List<AccessLevelsAccessLevelGetArgs>> accessLevels() {
+        return this.accessLevels == null ? Codegen.empty() : this.accessLevels;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AccessLevelsState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     public AccessLevelsState(
@@ -48,8 +49,8 @@ public final class AccessLevelsState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessLevelsState() {
-        this.accessLevels = Output.empty();
-        this.parent = Output.empty();
+        this.accessLevels = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AccessLevelsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessLevels(@Nullable List<AccessLevelsAccessLevelGetArgs> accessLevels) {
-            this.accessLevels = Output.ofNullable(accessLevels);
+            this.accessLevels = Codegen.ofNullable(accessLevels);
             return this;
         }
         public Builder accessLevels(AccessLevelsAccessLevelGetArgs... accessLevels) {
@@ -90,7 +91,7 @@ public final class AccessLevelsState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }        public AccessLevelsState build() {
             return new AccessLevelsState(accessLevels, parent);

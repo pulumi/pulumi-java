@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="marketplaceOffer")
       private final @Nullable Output<String> marketplaceOffer;
 
-    public Output<String> getMarketplaceOffer() {
-        return this.marketplaceOffer == null ? Output.empty() : this.marketplaceOffer;
+    public Output<String> marketplaceOffer() {
+        return this.marketplaceOffer == null ? Codegen.empty() : this.marketplaceOffer;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="marketplacePublisher")
       private final @Nullable Output<String> marketplacePublisher;
 
-    public Output<String> getMarketplacePublisher() {
-        return this.marketplacePublisher == null ? Output.empty() : this.marketplacePublisher;
+    public Output<String> marketplacePublisher() {
+        return this.marketplacePublisher == null ? Codegen.empty() : this.marketplacePublisher;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -77,8 +78,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="premierAddOnName")
       private final @Nullable Output<String> premierAddOnName;
 
-    public Output<String> getPremierAddOnName() {
-        return this.premierAddOnName == null ? Output.empty() : this.premierAddOnName;
+    public Output<String> premierAddOnName() {
+        return this.premierAddOnName == null ? Codegen.empty() : this.premierAddOnName;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="product")
       private final @Nullable Output<String> product;
 
-    public Output<String> getProduct() {
-        return this.product == null ? Output.empty() : this.product;
+    public Output<String> product() {
+        return this.product == null ? Codegen.empty() : this.product;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,8 +111,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<String> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="slot", required=true)
       private final Output<String> slot;
 
-    public Output<String> getSlot() {
+    public Output<String> slot() {
         return this.slot;
     }
 
@@ -132,8 +133,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
-    public Output<String> getVendor() {
-        return this.vendor == null ? Output.empty() : this.vendor;
+    public Output<String> vendor() {
+        return this.vendor == null ? Codegen.empty() : this.vendor;
     }
 
     public WebAppPremierAddOnSlotArgs(
@@ -175,18 +176,18 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
     }
 
     private WebAppPremierAddOnSlotArgs() {
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.marketplaceOffer = Output.empty();
-        this.marketplacePublisher = Output.empty();
-        this.name = Output.empty();
-        this.premierAddOnName = Output.empty();
-        this.product = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.slot = Output.empty();
-        this.tags = Output.empty();
-        this.vendor = Output.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.marketplaceOffer = Codegen.empty();
+        this.marketplacePublisher = Codegen.empty();
+        this.name = Codegen.empty();
+        this.premierAddOnName = Codegen.empty();
+        this.product = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.slot = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vendor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -236,7 +237,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -244,7 +245,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder marketplaceOffer(@Nullable Output<String> marketplaceOffer) {
@@ -252,7 +253,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder marketplaceOffer(@Nullable String marketplaceOffer) {
-            this.marketplaceOffer = Output.ofNullable(marketplaceOffer);
+            this.marketplaceOffer = Codegen.ofNullable(marketplaceOffer);
             return this;
         }
         public Builder marketplacePublisher(@Nullable Output<String> marketplacePublisher) {
@@ -260,7 +261,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder marketplacePublisher(@Nullable String marketplacePublisher) {
-            this.marketplacePublisher = Output.ofNullable(marketplacePublisher);
+            this.marketplacePublisher = Codegen.ofNullable(marketplacePublisher);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -276,7 +277,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder premierAddOnName(@Nullable String premierAddOnName) {
-            this.premierAddOnName = Output.ofNullable(premierAddOnName);
+            this.premierAddOnName = Codegen.ofNullable(premierAddOnName);
             return this;
         }
         public Builder product(@Nullable Output<String> product) {
@@ -284,7 +285,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder product(@Nullable String product) {
-            this.product = Output.ofNullable(product);
+            this.product = Codegen.ofNullable(product);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -300,7 +301,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sku(@Nullable String sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder slot(Output<String> slot) {
@@ -316,7 +317,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vendor(@Nullable Output<String> vendor) {
@@ -324,7 +325,7 @@ public final class WebAppPremierAddOnSlotArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Output.ofNullable(vendor);
+            this.vendor = Codegen.ofNullable(vendor);
             return this;
         }        public WebAppPremierAddOnSlotArgs build() {
             return new WebAppPremierAddOnSlotArgs(kind, location, marketplaceOffer, marketplacePublisher, name, premierAddOnName, product, resourceGroupName, sku, slot, tags, vendor);

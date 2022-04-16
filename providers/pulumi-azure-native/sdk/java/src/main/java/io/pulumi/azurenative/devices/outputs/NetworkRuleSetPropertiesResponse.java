@@ -44,21 +44,21 @@ public final class NetworkRuleSetPropertiesResponse {
      * If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
      * 
     */
-    public Boolean getApplyToBuiltInEventHubEndpoint() {
+    public Boolean applyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
     }
     /**
      * Default Action for Network Rule Set
      * 
     */
-    public Optional<String> getDefaultAction() {
+    public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
     /**
      * List of IP Rules
      * 
     */
-    public List<NetworkRuleSetIpRuleResponse> getIpRules() {
+    public List<NetworkRuleSetIpRuleResponse> ipRules() {
         return this.ipRules;
     }
 

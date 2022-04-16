@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.CryptoKeyIAMBindingArgs;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMBindingState;
@@ -73,7 +74,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CryptoKeyIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ CryptoKeyIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -93,7 +94,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * the provider's project setting will be used as a fallback.
      * 
      */
-    public Output<String> getCryptoKeyId() {
+    public Output<String> cryptoKeyId() {
         return this.cryptoKeyId;
     }
     /**
@@ -107,13 +108,13 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the project's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -129,7 +130,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -155,7 +156,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CryptoKeyIAMBinding(String name, CryptoKeyIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/cryptoKeyIAMBinding:CryptoKeyIAMBinding", name, args == null ? CryptoKeyIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/cryptoKeyIAMBinding:CryptoKeyIAMBinding", name, args == null ? CryptoKeyIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CryptoKeyIAMBinding(String name, Output<String> id, @Nullable CryptoKeyIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsKernelGatewayAppS
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
     @Import(name="customImages")
       private final @Nullable Output<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages;
 
-    public Output<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> getCustomImages() {
-        return this.customImages == null ? Output.empty() : this.customImages;
+    public Output<List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages() {
+        return this.customImages == null ? Codegen.empty() : this.customImages;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
-    public Output<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
+    public Output<DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
     @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
-    public Output<List<String>> getLifecycleConfigArns() {
-        return this.lifecycleConfigArns == null ? Output.empty() : this.lifecycleConfigArns;
+    public Output<List<String>> lifecycleConfigArns() {
+        return this.lifecycleConfigArns == null ? Codegen.empty() : this.lifecycleConfigArns;
     }
 
     public DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs(
@@ -60,9 +61,9 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
     }
 
     private DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs() {
-        this.customImages = Output.empty();
-        this.defaultResourceSpec = Output.empty();
-        this.lifecycleConfigArns = Output.empty();
+        this.customImages = Codegen.empty();
+        this.defaultResourceSpec = Codegen.empty();
+        this.lifecycleConfigArns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
             return this;
         }
         public Builder customImages(@Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs> customImages) {
-            this.customImages = Output.ofNullable(customImages);
+            this.customImages = Codegen.ofNullable(customImages);
             return this;
         }
         public Builder customImages(DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageGetArgs... customImages) {
@@ -105,7 +106,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
             return this;
         }
         public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
             return this;
         }
         public Builder lifecycleConfigArns(@Nullable Output<List<String>> lifecycleConfigArns) {
@@ -113,7 +114,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsGetArgs exte
             return this;
         }
         public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
-            this.lifecycleConfigArns = Output.ofNullable(lifecycleConfigArns);
+            this.lifecycleConfigArns = Codegen.ofNullable(lifecycleConfigArns);
             return this;
         }
         public Builder lifecycleConfigArns(String... lifecycleConfigArns) {

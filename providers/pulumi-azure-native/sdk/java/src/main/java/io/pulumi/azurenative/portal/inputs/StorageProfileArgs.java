@@ -5,6 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeInGB")
       private final @Nullable Output<Integer> diskSizeInGB;
 
-    public Output<Integer> getDiskSizeInGB() {
-        return this.diskSizeInGB == null ? Output.empty() : this.diskSizeInGB;
+    public Output<Integer> diskSizeInGB() {
+        return this.diskSizeInGB == null ? Codegen.empty() : this.diskSizeInGB;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileShareName")
       private final @Nullable Output<String> fileShareName;
 
-    public Output<String> getFileShareName() {
-        return this.fileShareName == null ? Output.empty() : this.fileShareName;
+    public Output<String> fileShareName() {
+        return this.fileShareName == null ? Codegen.empty() : this.fileShareName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccountResourceId")
       private final @Nullable Output<String> storageAccountResourceId;
 
-    public Output<String> getStorageAccountResourceId() {
-        return this.storageAccountResourceId == null ? Output.empty() : this.storageAccountResourceId;
+    public Output<String> storageAccountResourceId() {
+        return this.storageAccountResourceId == null ? Codegen.empty() : this.storageAccountResourceId;
     }
 
     public StorageProfileArgs(
@@ -62,9 +63,9 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageProfileArgs() {
-        this.diskSizeInGB = Output.empty();
-        this.fileShareName = Output.empty();
-        this.storageAccountResourceId = Output.empty();
+        this.diskSizeInGB = Codegen.empty();
+        this.fileShareName = Codegen.empty();
+        this.storageAccountResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeInGB(@Nullable Integer diskSizeInGB) {
-            this.diskSizeInGB = Output.ofNullable(diskSizeInGB);
+            this.diskSizeInGB = Codegen.ofNullable(diskSizeInGB);
             return this;
         }
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
@@ -104,7 +105,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = Output.ofNullable(fileShareName);
+            this.fileShareName = Codegen.ofNullable(fileShareName);
             return this;
         }
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
@@ -112,7 +113,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
-            this.storageAccountResourceId = Output.ofNullable(storageAccountResourceId);
+            this.storageAccountResourceId = Codegen.ofNullable(storageAccountResourceId);
             return this;
         }        public StorageProfileArgs build() {
             return new StorageProfileArgs(diskSizeInGB, fileShareName, storageAccountResourceId);

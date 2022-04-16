@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.FixedOrPercentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
     @Import(name="disruptionBudget", required=true)
       private final Output<FixedOrPercentArgs> disruptionBudget;
 
-    public Output<FixedOrPercentArgs> getDisruptionBudget() {
+    public Output<FixedOrPercentArgs> disruptionBudget() {
         return this.disruptionBudget;
     }
 
@@ -36,7 +37,7 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
     @Import(name="minWaitDuration", required=true)
       private final Output<String> minWaitDuration;
 
-    public Output<String> getMinWaitDuration() {
+    public Output<String> minWaitDuration() {
         return this.minWaitDuration;
     }
 
@@ -48,8 +49,8 @@ public final class OSPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
     }
 
     private OSPolicyAssignmentRolloutArgs() {
-        this.disruptionBudget = Output.empty();
-        this.minWaitDuration = Output.empty();
+        this.disruptionBudget = Codegen.empty();
+        this.minWaitDuration = Codegen.empty();
     }
 
     public static Builder builder() {

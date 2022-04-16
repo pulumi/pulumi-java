@@ -36,14 +36,14 @@ public final class HttpScaleRuleResponse {
      * Authentication secrets for the custom scale rule.
      * 
     */
-    public List<ScaleRuleAuthResponse> getAuth() {
+    public List<ScaleRuleAuthResponse> auth() {
         return this.auth == null ? List.of() : this.auth;
     }
     /**
      * Metadata properties to describe http scale rule.
      * 
     */
-    public Map<String,String> getMetadata() {
+    public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelBasicArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelCustomArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
     @Import(name="basic")
       private final @Nullable Output<AccessLevelsAccessLevelBasicArgs> basic;
 
-    public Output<AccessLevelsAccessLevelBasicArgs> getBasic() {
-        return this.basic == null ? Output.empty() : this.basic;
+    public Output<AccessLevelsAccessLevelBasicArgs> basic() {
+        return this.basic == null ? Codegen.empty() : this.basic;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
     @Import(name="custom")
       private final @Nullable Output<AccessLevelsAccessLevelCustomArgs> custom;
 
-    public Output<AccessLevelsAccessLevelCustomArgs> getCustom() {
-        return this.custom == null ? Output.empty() : this.custom;
+    public Output<AccessLevelsAccessLevelCustomArgs> custom() {
+        return this.custom == null ? Codegen.empty() : this.custom;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -72,7 +73,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -90,11 +91,11 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
     }
 
     private AccessLevelsAccessLevelArgs() {
-        this.basic = Output.empty();
-        this.custom = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.title = Output.empty();
+        this.basic = Codegen.empty();
+        this.custom = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder basic(@Nullable AccessLevelsAccessLevelBasicArgs basic) {
-            this.basic = Output.ofNullable(basic);
+            this.basic = Codegen.ofNullable(basic);
             return this;
         }
         public Builder custom(@Nullable Output<AccessLevelsAccessLevelCustomArgs> custom) {
@@ -138,7 +139,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder custom(@Nullable AccessLevelsAccessLevelCustomArgs custom) {
-            this.custom = Output.ofNullable(custom);
+            this.custom = Codegen.ofNullable(custom);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -146,7 +147,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {

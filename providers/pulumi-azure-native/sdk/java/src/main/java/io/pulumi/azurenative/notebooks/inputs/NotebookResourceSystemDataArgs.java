@@ -5,6 +5,7 @@ package io.pulumi.azurenative.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,43 +22,43 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+    public Output<String> createdAt() {
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+    public Output<String> createdBy() {
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     @Import(name="createdByType")
       private final @Nullable Output<String> createdByType;
 
-    public Output<String> getCreatedByType() {
-        return this.createdByType == null ? Output.empty() : this.createdByType;
+    public Output<String> createdByType() {
+        return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
+    public Output<String> lastModifiedAt() {
+        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
+    public Output<String> lastModifiedBy() {
+        return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
     @Import(name="lastModifiedByType")
       private final @Nullable Output<String> lastModifiedByType;
 
-    public Output<String> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
+    public Output<String> lastModifiedByType() {
+        return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 
     public NotebookResourceSystemDataArgs(
@@ -76,12 +77,12 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
     }
 
     private NotebookResourceSystemDataArgs() {
-        this.createdAt = Output.empty();
-        this.createdBy = Output.empty();
-        this.createdByType = Output.empty();
-        this.lastModifiedAt = Output.empty();
-        this.lastModifiedBy = Output.empty();
-        this.lastModifiedByType = Output.empty();
+        this.createdAt = Codegen.empty();
+        this.createdBy = Codegen.empty();
+        this.createdByType = Codegen.empty();
+        this.lastModifiedAt = Codegen.empty();
+        this.lastModifiedBy = Codegen.empty();
+        this.lastModifiedByType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder createdBy(@Nullable Output<String> createdBy) {
@@ -127,7 +128,7 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder createdByType(@Nullable Output<String> createdByType) {
@@ -135,7 +136,7 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder createdByType(@Nullable String createdByType) {
-            this.createdByType = Output.ofNullable(createdByType);
+            this.createdByType = Codegen.ofNullable(createdByType);
             return this;
         }
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
@@ -143,7 +144,7 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
             return this;
         }
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
@@ -151,7 +152,7 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Codegen.ofNullable(lastModifiedBy);
             return this;
         }
         public Builder lastModifiedByType(@Nullable Output<String> lastModifiedByType) {
@@ -159,7 +160,7 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
-            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Codegen.ofNullable(lastModifiedByType);
             return this;
         }        public NotebookResourceSystemDataArgs build() {
             return new NotebookResourceSystemDataArgs(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
      * 
      */
-    public Output</* @Nullable */ String> getEndIpAddress() {
+    public Output</* @Nullable */ String> endIpAddress() {
         return this.endIpAddress;
     }
     /**
@@ -55,7 +56,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return Resource provisioning state
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -83,7 +84,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return The start IP address of the firewall rule. Must be IPv4 format
      * 
      */
-    public Output</* @Nullable */ String> getStartIpAddress() {
+    public Output</* @Nullable */ String> startIpAddress() {
         return this.startIpAddress;
     }
     /**
@@ -97,7 +98,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -123,7 +124,7 @@ public class IpFirewallRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IpFirewallRule(String name, IpFirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:IpFirewallRule", name, args == null ? IpFirewallRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:synapse:IpFirewallRule", name, args == null ? IpFirewallRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IpFirewallRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

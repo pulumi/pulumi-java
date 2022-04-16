@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+    public Output<String> createdDate() {
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
-    public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+    public Output<String> expirationDate() {
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="pemEncodedCertificate")
       private final @Nullable Output<String> pemEncodedCertificate;
 
-    public Output<String> getPemEncodedCertificate() {
-        return this.pemEncodedCertificate == null ? Output.empty() : this.pemEncodedCertificate;
+    public Output<String> pemEncodedCertificate() {
+        return this.pemEncodedCertificate == null ? Codegen.empty() : this.pemEncodedCertificate;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ClientCertificateState(
@@ -110,13 +111,13 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
     }
 
     private ClientCertificateState() {
-        this.arn = Output.empty();
-        this.createdDate = Output.empty();
-        this.description = Output.empty();
-        this.expirationDate = Output.empty();
-        this.pemEncodedCertificate = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.createdDate = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.pemEncodedCertificate = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createdDate(@Nullable Output<String> createdDate) {
@@ -164,7 +165,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -172,7 +173,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
@@ -180,7 +181,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder pemEncodedCertificate(@Nullable Output<String> pemEncodedCertificate) {
@@ -188,7 +189,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder pemEncodedCertificate(@Nullable String pemEncodedCertificate) {
-            this.pemEncodedCertificate = Output.ofNullable(pemEncodedCertificate);
+            this.pemEncodedCertificate = Codegen.ofNullable(pemEncodedCertificate);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -196,7 +197,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -204,7 +205,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ClientCertificateState build() {
             return new ClientCertificateState(arn, createdDate, description, expirationDate, pemEncodedCertificate, tags, tagsAll);

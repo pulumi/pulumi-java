@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetState;
@@ -51,7 +52,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<DatasetAccess>> getAccesses() {
+    public Output<List<DatasetAccess>> accesses() {
         return this.accesses;
     }
     /**
@@ -65,7 +66,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The time when this dataset was created, in milliseconds since the epoch.
      * 
      */
-    public Output<Integer> getCreationTime() {
+    public Output<Integer> creationTime() {
         return this.creationTime;
     }
     /**
@@ -79,7 +80,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The ID of the dataset containing this table.
      * 
      */
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -99,7 +100,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DatasetDefaultEncryptionConfiguration> getDefaultEncryptionConfiguration() {
+    public Output</* @Nullable */ DatasetDefaultEncryptionConfiguration> defaultEncryptionConfiguration() {
         return this.defaultEncryptionConfiguration;
     }
     /**
@@ -115,7 +116,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * the dataset, in milliseconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getDefaultPartitionExpirationMs() {
+    public Output</* @Nullable */ Integer> defaultPartitionExpirationMs() {
         return this.defaultPartitionExpirationMs;
     }
     /**
@@ -131,7 +132,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The minimum value is 3600000 milliseconds (one hour).
      * 
      */
-    public Output</* @Nullable */ Integer> getDefaultTableExpirationMs() {
+    public Output</* @Nullable */ Integer> defaultTableExpirationMs() {
         return this.defaultTableExpirationMs;
     }
     /**
@@ -149,7 +150,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * destroying the resource will fail if tables are present.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeleteContentsOnDestroy() {
+    public Output</* @Nullable */ Boolean> deleteContentsOnDestroy() {
         return this.deleteContentsOnDestroy;
     }
     /**
@@ -163,7 +164,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return A user-friendly description of the dataset
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -177,7 +178,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return A hash of the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -191,7 +192,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return A descriptive name for the dataset
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -207,7 +208,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * organize and group your datasets
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -221,7 +222,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
      * 
      */
-    public Output<Integer> getLastModifiedTime() {
+    public Output<Integer> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -237,7 +238,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -253,7 +254,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -267,7 +268,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -293,7 +294,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dataset(String name, DatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/dataset:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/dataset:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dataset(String name, Output<String> id, @Nullable DatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ivs.outputs.PlaybackKeyPairTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return Key-pair identifier.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return Key-pair identifier.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -60,7 +61,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -74,7 +75,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return The public portion of a customer-generated key pair.
      * 
      */
-    public Output<String> getPublicKeyMaterial() {
+    public Output<String> publicKeyMaterial() {
         return this.publicKeyMaterial;
     }
     /**
@@ -88,7 +89,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<PlaybackKeyPairTag>> getTags() {
+    public Output</* @Nullable */ List<PlaybackKeyPairTag>> tags() {
         return this.tags;
     }
 
@@ -114,7 +115,7 @@ public class PlaybackKeyPair extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PlaybackKeyPair(String name, PlaybackKeyPairArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ivs:PlaybackKeyPair", name, args == null ? PlaybackKeyPairArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ivs:PlaybackKeyPair", name, args == null ? PlaybackKeyPairArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PlaybackKeyPair(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

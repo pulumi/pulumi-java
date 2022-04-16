@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,8 +27,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="balancingMode")
       private final @Nullable Output<String> balancingMode;
 
-    public Output<String> getBalancingMode() {
-        return this.balancingMode == null ? Output.empty() : this.balancingMode;
+    public Output<String> balancingMode() {
+        return this.balancingMode == null ? Codegen.empty() : this.balancingMode;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="capacityScaler")
       private final @Nullable Output<Double> capacityScaler;
 
-    public Output<Double> getCapacityScaler() {
-        return this.capacityScaler == null ? Output.empty() : this.capacityScaler;
+    public Output<Double> capacityScaler() {
+        return this.capacityScaler == null ? Codegen.empty() : this.capacityScaler;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="failover")
       private final @Nullable Output<Boolean> failover;
 
-    public Output<Boolean> getFailover() {
-        return this.failover == null ? Output.empty() : this.failover;
+    public Output<Boolean> failover() {
+        return this.failover == null ? Codegen.empty() : this.failover;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="group", required=true)
       private final Output<String> group;
 
-    public Output<String> getGroup() {
+    public Output<String> group() {
         return this.group;
     }
 
@@ -106,8 +107,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="maxConnections")
       private final @Nullable Output<Integer> maxConnections;
 
-    public Output<Integer> getMaxConnections() {
-        return this.maxConnections == null ? Output.empty() : this.maxConnections;
+    public Output<Integer> maxConnections() {
+        return this.maxConnections == null ? Codegen.empty() : this.maxConnections;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="maxConnectionsPerEndpoint")
       private final @Nullable Output<Integer> maxConnectionsPerEndpoint;
 
-    public Output<Integer> getMaxConnectionsPerEndpoint() {
-        return this.maxConnectionsPerEndpoint == null ? Output.empty() : this.maxConnectionsPerEndpoint;
+    public Output<Integer> maxConnectionsPerEndpoint() {
+        return this.maxConnectionsPerEndpoint == null ? Codegen.empty() : this.maxConnectionsPerEndpoint;
     }
 
     /**
@@ -140,8 +141,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="maxConnectionsPerInstance")
       private final @Nullable Output<Integer> maxConnectionsPerInstance;
 
-    public Output<Integer> getMaxConnectionsPerInstance() {
-        return this.maxConnectionsPerInstance == null ? Output.empty() : this.maxConnectionsPerInstance;
+    public Output<Integer> maxConnectionsPerInstance() {
+        return this.maxConnectionsPerInstance == null ? Codegen.empty() : this.maxConnectionsPerInstance;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="maxRate")
       private final @Nullable Output<Integer> maxRate;
 
-    public Output<Integer> getMaxRate() {
-        return this.maxRate == null ? Output.empty() : this.maxRate;
+    public Output<Integer> maxRate() {
+        return this.maxRate == null ? Codegen.empty() : this.maxRate;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="maxRatePerEndpoint")
       private final @Nullable Output<Double> maxRatePerEndpoint;
 
-    public Output<Double> getMaxRatePerEndpoint() {
-        return this.maxRatePerEndpoint == null ? Output.empty() : this.maxRatePerEndpoint;
+    public Output<Double> maxRatePerEndpoint() {
+        return this.maxRatePerEndpoint == null ? Codegen.empty() : this.maxRatePerEndpoint;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="maxRatePerInstance")
       private final @Nullable Output<Double> maxRatePerInstance;
 
-    public Output<Double> getMaxRatePerInstance() {
-        return this.maxRatePerInstance == null ? Output.empty() : this.maxRatePerInstance;
+    public Output<Double> maxRatePerInstance() {
+        return this.maxRatePerInstance == null ? Codegen.empty() : this.maxRatePerInstance;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     @Import(name="maxUtilization")
       private final @Nullable Output<Double> maxUtilization;
 
-    public Output<Double> getMaxUtilization() {
-        return this.maxUtilization == null ? Output.empty() : this.maxUtilization;
+    public Output<Double> maxUtilization() {
+        return this.maxUtilization == null ? Codegen.empty() : this.maxUtilization;
     }
 
     public RegionBackendServiceBackendArgs(
@@ -231,18 +232,18 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
     }
 
     private RegionBackendServiceBackendArgs() {
-        this.balancingMode = Output.empty();
-        this.capacityScaler = Output.empty();
-        this.description = Output.empty();
-        this.failover = Output.empty();
-        this.group = Output.empty();
-        this.maxConnections = Output.empty();
-        this.maxConnectionsPerEndpoint = Output.empty();
-        this.maxConnectionsPerInstance = Output.empty();
-        this.maxRate = Output.empty();
-        this.maxRatePerEndpoint = Output.empty();
-        this.maxRatePerInstance = Output.empty();
-        this.maxUtilization = Output.empty();
+        this.balancingMode = Codegen.empty();
+        this.capacityScaler = Codegen.empty();
+        this.description = Codegen.empty();
+        this.failover = Codegen.empty();
+        this.group = Codegen.empty();
+        this.maxConnections = Codegen.empty();
+        this.maxConnectionsPerEndpoint = Codegen.empty();
+        this.maxConnectionsPerInstance = Codegen.empty();
+        this.maxRate = Codegen.empty();
+        this.maxRatePerEndpoint = Codegen.empty();
+        this.maxRatePerInstance = Codegen.empty();
+        this.maxUtilization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -292,7 +293,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder balancingMode(@Nullable String balancingMode) {
-            this.balancingMode = Output.ofNullable(balancingMode);
+            this.balancingMode = Codegen.ofNullable(balancingMode);
             return this;
         }
         public Builder capacityScaler(@Nullable Output<Double> capacityScaler) {
@@ -300,7 +301,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder capacityScaler(@Nullable Double capacityScaler) {
-            this.capacityScaler = Output.ofNullable(capacityScaler);
+            this.capacityScaler = Codegen.ofNullable(capacityScaler);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -308,7 +309,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder failover(@Nullable Output<Boolean> failover) {
@@ -316,7 +317,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder failover(@Nullable Boolean failover) {
-            this.failover = Output.ofNullable(failover);
+            this.failover = Codegen.ofNullable(failover);
             return this;
         }
         public Builder group(Output<String> group) {
@@ -332,7 +333,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder maxConnections(@Nullable Integer maxConnections) {
-            this.maxConnections = Output.ofNullable(maxConnections);
+            this.maxConnections = Codegen.ofNullable(maxConnections);
             return this;
         }
         public Builder maxConnectionsPerEndpoint(@Nullable Output<Integer> maxConnectionsPerEndpoint) {
@@ -340,7 +341,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder maxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
-            this.maxConnectionsPerEndpoint = Output.ofNullable(maxConnectionsPerEndpoint);
+            this.maxConnectionsPerEndpoint = Codegen.ofNullable(maxConnectionsPerEndpoint);
             return this;
         }
         public Builder maxConnectionsPerInstance(@Nullable Output<Integer> maxConnectionsPerInstance) {
@@ -348,7 +349,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder maxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
-            this.maxConnectionsPerInstance = Output.ofNullable(maxConnectionsPerInstance);
+            this.maxConnectionsPerInstance = Codegen.ofNullable(maxConnectionsPerInstance);
             return this;
         }
         public Builder maxRate(@Nullable Output<Integer> maxRate) {
@@ -356,7 +357,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder maxRate(@Nullable Integer maxRate) {
-            this.maxRate = Output.ofNullable(maxRate);
+            this.maxRate = Codegen.ofNullable(maxRate);
             return this;
         }
         public Builder maxRatePerEndpoint(@Nullable Output<Double> maxRatePerEndpoint) {
@@ -364,7 +365,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder maxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
-            this.maxRatePerEndpoint = Output.ofNullable(maxRatePerEndpoint);
+            this.maxRatePerEndpoint = Codegen.ofNullable(maxRatePerEndpoint);
             return this;
         }
         public Builder maxRatePerInstance(@Nullable Output<Double> maxRatePerInstance) {
@@ -372,7 +373,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder maxRatePerInstance(@Nullable Double maxRatePerInstance) {
-            this.maxRatePerInstance = Output.ofNullable(maxRatePerInstance);
+            this.maxRatePerInstance = Codegen.ofNullable(maxRatePerInstance);
             return this;
         }
         public Builder maxUtilization(@Nullable Output<Double> maxUtilization) {
@@ -380,7 +381,7 @@ public final class RegionBackendServiceBackendArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder maxUtilization(@Nullable Double maxUtilization) {
-            this.maxUtilization = Output.ofNullable(maxUtilization);
+            this.maxUtilization = Codegen.ofNullable(maxUtilization);
             return this;
         }        public RegionBackendServiceBackendArgs build() {
             return new RegionBackendServiceBackendArgs(balancingMode, capacityScaler, description, failover, group, maxConnections, maxConnectionsPerEndpoint, maxConnectionsPerInstance, maxRate, maxRatePerEndpoint, maxRatePerInstance, maxUtilization);

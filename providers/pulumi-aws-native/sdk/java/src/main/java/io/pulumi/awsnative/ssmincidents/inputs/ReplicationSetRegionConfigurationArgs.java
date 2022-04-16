@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
     @Import(name="sseKmsKeyId", required=true)
       private final Output<String> sseKmsKeyId;
 
-    public Output<String> getSseKmsKeyId() {
+    public Output<String> sseKmsKeyId() {
         return this.sseKmsKeyId;
     }
 
@@ -29,7 +30,7 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
     }
 
     private ReplicationSetRegionConfigurationArgs() {
-        this.sseKmsKeyId = Output.empty();
+        this.sseKmsKeyId = Codegen.empty();
     }
 
     public static Builder builder() {

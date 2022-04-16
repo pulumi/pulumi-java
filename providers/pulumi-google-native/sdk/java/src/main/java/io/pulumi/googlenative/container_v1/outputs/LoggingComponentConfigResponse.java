@@ -25,7 +25,7 @@ public final class LoggingComponentConfigResponse {
      * Select components to collect logs. An empty set would disable all logging.
      * 
     */
-    public List<String> getEnableComponents() {
+    public List<String> enableComponents() {
         return this.enableComponents;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class AccessPointRootDirectoryCreationInfoGetArgs extends io.pulumi
     @Import(name="ownerGid", required=true)
       private final Output<Integer> ownerGid;
 
-    public Output<Integer> getOwnerGid() {
+    public Output<Integer> ownerGid() {
         return this.ownerGid;
     }
 
@@ -32,7 +33,7 @@ public final class AccessPointRootDirectoryCreationInfoGetArgs extends io.pulumi
     @Import(name="ownerUid", required=true)
       private final Output<Integer> ownerUid;
 
-    public Output<Integer> getOwnerUid() {
+    public Output<Integer> ownerUid() {
         return this.ownerUid;
     }
 
@@ -43,7 +44,7 @@ public final class AccessPointRootDirectoryCreationInfoGetArgs extends io.pulumi
     @Import(name="permissions", required=true)
       private final Output<String> permissions;
 
-    public Output<String> getPermissions() {
+    public Output<String> permissions() {
         return this.permissions;
     }
 
@@ -57,9 +58,9 @@ public final class AccessPointRootDirectoryCreationInfoGetArgs extends io.pulumi
     }
 
     private AccessPointRootDirectoryCreationInfoGetArgs() {
-        this.ownerGid = Output.empty();
-        this.ownerUid = Output.empty();
-        this.permissions = Output.empty();
+        this.ownerGid = Codegen.empty();
+        this.ownerUid = Codegen.empty();
+        this.permissions = Codegen.empty();
     }
 
     public static Builder builder() {

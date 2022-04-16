@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsGetArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="appNetworkAccessType")
       private final @Nullable Output<String> appNetworkAccessType;
 
-    public Output<String> getAppNetworkAccessType() {
-        return this.appNetworkAccessType == null ? Output.empty() : this.appNetworkAccessType;
+    public Output<String> appNetworkAccessType() {
+        return this.appNetworkAccessType == null ? Codegen.empty() : this.appNetworkAccessType;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authMode")
       private final @Nullable Output<String> authMode;
 
-    public Output<String> getAuthMode() {
-        return this.authMode == null ? Output.empty() : this.authMode;
+    public Output<String> authMode() {
+        return this.authMode == null ? Codegen.empty() : this.authMode;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultUserSettings")
       private final @Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings;
 
-    public Output<DomainDefaultUserSettingsGetArgs> getDefaultUserSettings() {
-        return this.defaultUserSettings == null ? Output.empty() : this.defaultUserSettings;
+    public Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings() {
+        return this.defaultUserSettings == null ? Codegen.empty() : this.defaultUserSettings;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="homeEfsFileSystemId")
       private final @Nullable Output<String> homeEfsFileSystemId;
 
-    public Output<String> getHomeEfsFileSystemId() {
-        return this.homeEfsFileSystemId == null ? Output.empty() : this.homeEfsFileSystemId;
+    public Output<String> homeEfsFileSystemId() {
+        return this.homeEfsFileSystemId == null ? Codegen.empty() : this.homeEfsFileSystemId;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="retentionPolicy")
       private final @Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy;
 
-    public Output<DomainRetentionPolicyGetArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+    public Output<DomainRetentionPolicyGetArgs> retentionPolicy() {
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="singleSignOnManagedApplicationInstanceId")
       private final @Nullable Output<String> singleSignOnManagedApplicationInstanceId;
 
-    public Output<String> getSingleSignOnManagedApplicationInstanceId() {
-        return this.singleSignOnManagedApplicationInstanceId == null ? Output.empty() : this.singleSignOnManagedApplicationInstanceId;
+    public Output<String> singleSignOnManagedApplicationInstanceId() {
+        return this.singleSignOnManagedApplicationInstanceId == null ? Codegen.empty() : this.singleSignOnManagedApplicationInstanceId;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+    public Output<List<String>> subnetIds() {
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public DomainState(
@@ -204,20 +205,20 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainState() {
-        this.appNetworkAccessType = Output.empty();
-        this.arn = Output.empty();
-        this.authMode = Output.empty();
-        this.defaultUserSettings = Output.empty();
-        this.domainName = Output.empty();
-        this.homeEfsFileSystemId = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.singleSignOnManagedApplicationInstanceId = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.url = Output.empty();
-        this.vpcId = Output.empty();
+        this.appNetworkAccessType = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.authMode = Codegen.empty();
+        this.defaultUserSettings = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.homeEfsFileSystemId = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.singleSignOnManagedApplicationInstanceId = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.url = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -271,7 +272,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appNetworkAccessType(@Nullable String appNetworkAccessType) {
-            this.appNetworkAccessType = Output.ofNullable(appNetworkAccessType);
+            this.appNetworkAccessType = Codegen.ofNullable(appNetworkAccessType);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -279,7 +280,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authMode(@Nullable Output<String> authMode) {
@@ -287,7 +288,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authMode(@Nullable String authMode) {
-            this.authMode = Output.ofNullable(authMode);
+            this.authMode = Codegen.ofNullable(authMode);
             return this;
         }
         public Builder defaultUserSettings(@Nullable Output<DomainDefaultUserSettingsGetArgs> defaultUserSettings) {
@@ -295,7 +296,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultUserSettings(@Nullable DomainDefaultUserSettingsGetArgs defaultUserSettings) {
-            this.defaultUserSettings = Output.ofNullable(defaultUserSettings);
+            this.defaultUserSettings = Codegen.ofNullable(defaultUserSettings);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -303,7 +304,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder homeEfsFileSystemId(@Nullable Output<String> homeEfsFileSystemId) {
@@ -311,7 +312,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder homeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
-            this.homeEfsFileSystemId = Output.ofNullable(homeEfsFileSystemId);
+            this.homeEfsFileSystemId = Codegen.ofNullable(homeEfsFileSystemId);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -319,7 +320,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<DomainRetentionPolicyGetArgs> retentionPolicy) {
@@ -327,7 +328,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPolicy(@Nullable DomainRetentionPolicyGetArgs retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder singleSignOnManagedApplicationInstanceId(@Nullable Output<String> singleSignOnManagedApplicationInstanceId) {
@@ -335,7 +336,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder singleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
-            this.singleSignOnManagedApplicationInstanceId = Output.ofNullable(singleSignOnManagedApplicationInstanceId);
+            this.singleSignOnManagedApplicationInstanceId = Codegen.ofNullable(singleSignOnManagedApplicationInstanceId);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -343,7 +344,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -354,7 +355,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -362,7 +363,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -370,7 +371,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -378,7 +379,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public DomainState build() {
             return new DomainState(appNetworkAccessType, arn, authMode, defaultUserSettings, domainName, homeEfsFileSystemId, kmsKeyId, retentionPolicy, singleSignOnManagedApplicationInstanceId, subnetIds, tags, tagsAll, url, vpcId);

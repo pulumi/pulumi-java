@@ -9,6 +9,7 @@ import io.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerBackendServerPolicy
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @return The instance port to apply the policy to.
      * 
      */
-    public Output<Integer> getInstancePort() {
+    public Output<Integer> instancePort() {
         return this.instancePort;
     }
     /**
@@ -51,7 +52,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @return The load balancer to attach the policy to.
      * 
      */
-    public Output<String> getLoadBalancerName() {
+    public Output<String> loadBalancerName() {
         return this.loadBalancerName;
     }
     /**
@@ -65,7 +66,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @return List of Policy Names to apply to the backend server.
      * 
      */
-    public Output</* @Nullable */ List<String>> getPolicyNames() {
+    public Output</* @Nullable */ List<String>> policyNames() {
         return this.policyNames;
     }
 
@@ -91,7 +92,7 @@ public class LoadBalancerBackendServerPolicy extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public LoadBalancerBackendServerPolicy(String name, LoadBalancerBackendServerPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticloadbalancing/loadBalancerBackendServerPolicy:LoadBalancerBackendServerPolicy", name, args == null ? LoadBalancerBackendServerPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticloadbalancing/loadBalancerBackendServerPolicy:LoadBalancerBackendServerPolicy", name, args == null ? LoadBalancerBackendServerPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LoadBalancerBackendServerPolicy(String name, Output<String> id, @Nullable LoadBalancerBackendServerPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

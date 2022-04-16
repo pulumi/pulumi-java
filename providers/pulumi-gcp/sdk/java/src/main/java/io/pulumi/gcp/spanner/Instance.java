@@ -6,6 +6,7 @@ package io.pulumi.gcp.spanner;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.InstanceArgs;
 import io.pulumi.gcp.spanner.inputs.InstanceState;
@@ -67,7 +68,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
      * 
      */
-    public Output<String> getConfig() {
+    public Output<String> config() {
         return this.config;
     }
     /**
@@ -83,7 +84,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * unique per project and between 4 and 30 characters in length.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -99,7 +100,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * This must be set to true if you created a backup manually in the console.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDestroy() {
+    public Output</* @Nullable */ Boolean> forceDestroy() {
         return this.forceDestroy;
     }
     /**
@@ -115,7 +116,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -133,7 +134,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -149,7 +150,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * terraform.
      * 
      */
-    public Output<Integer> getNumNodes() {
+    public Output<Integer> numNodes() {
         return this.numNodes;
     }
     /**
@@ -165,7 +166,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in terraform.
      * 
      */
-    public Output<Integer> getProcessingUnits() {
+    public Output<Integer> processingUnits() {
         return this.processingUnits;
     }
     /**
@@ -181,7 +182,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -195,7 +196,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Instance status: 'CREATING' or 'READY'.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -221,7 +222,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:spanner/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:spanner/instance:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instance(String name, Output<String> id, @Nullable InstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

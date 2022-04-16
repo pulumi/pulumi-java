@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
     @Import(name="immunityTime", required=true)
       private final Output<Integer> immunityTime;
 
-    public Output<Integer> getImmunityTime() {
+    public Output<Integer> immunityTime() {
         return this.immunityTime;
     }
 
@@ -25,7 +26,7 @@ public final class WebACLImmunityTimePropertyArgs extends io.pulumi.resources.Re
     }
 
     private WebACLImmunityTimePropertyArgs() {
-        this.immunityTime = Output.empty();
+        this.immunityTime = Codegen.empty();
     }
 
     public static Builder builder() {

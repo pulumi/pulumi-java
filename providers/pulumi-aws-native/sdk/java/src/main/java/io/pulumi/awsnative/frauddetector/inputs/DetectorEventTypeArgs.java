@@ -9,6 +9,7 @@ import io.pulumi.awsnative.frauddetector.inputs.DetectorLabelArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+    public Output<String> createdTime() {
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -49,36 +50,36 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="entityTypes")
       private final @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes;
 
-    public Output<List<DetectorEntityTypeArgs>> getEntityTypes() {
-        return this.entityTypes == null ? Output.empty() : this.entityTypes;
+    public Output<List<DetectorEntityTypeArgs>> entityTypes() {
+        return this.entityTypes == null ? Codegen.empty() : this.entityTypes;
     }
 
     @Import(name="eventVariables")
       private final @Nullable Output<List<DetectorEventVariableArgs>> eventVariables;
 
-    public Output<List<DetectorEventVariableArgs>> getEventVariables() {
-        return this.eventVariables == null ? Output.empty() : this.eventVariables;
+    public Output<List<DetectorEventVariableArgs>> eventVariables() {
+        return this.eventVariables == null ? Codegen.empty() : this.eventVariables;
     }
 
     @Import(name="inline")
       private final @Nullable Output<Boolean> inline;
 
-    public Output<Boolean> getInline() {
-        return this.inline == null ? Output.empty() : this.inline;
+    public Output<Boolean> inline() {
+        return this.inline == null ? Codegen.empty() : this.inline;
     }
 
     @Import(name="labels")
       private final @Nullable Output<List<DetectorLabelArgs>> labels;
 
-    public Output<List<DetectorLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<DetectorLabelArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
+    public Output<String> lastUpdatedTime() {
+        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Output<List<DetectorTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DetectorTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DetectorEventTypeArgs(
@@ -138,16 +139,16 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DetectorEventTypeArgs() {
-        this.arn = Output.empty();
-        this.createdTime = Output.empty();
-        this.description = Output.empty();
-        this.entityTypes = Output.empty();
-        this.eventVariables = Output.empty();
-        this.inline = Output.empty();
-        this.labels = Output.empty();
-        this.lastUpdatedTime = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.arn = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.entityTypes = Codegen.empty();
+        this.eventVariables = Codegen.empty();
+        this.inline = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.lastUpdatedTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -201,7 +202,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -209,7 +210,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder entityTypes(@Nullable Output<List<DetectorEntityTypeArgs>> entityTypes) {
@@ -217,7 +218,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder entityTypes(@Nullable List<DetectorEntityTypeArgs> entityTypes) {
-            this.entityTypes = Output.ofNullable(entityTypes);
+            this.entityTypes = Codegen.ofNullable(entityTypes);
             return this;
         }
         public Builder entityTypes(DetectorEntityTypeArgs... entityTypes) {
@@ -228,7 +229,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder eventVariables(@Nullable List<DetectorEventVariableArgs> eventVariables) {
-            this.eventVariables = Output.ofNullable(eventVariables);
+            this.eventVariables = Codegen.ofNullable(eventVariables);
             return this;
         }
         public Builder eventVariables(DetectorEventVariableArgs... eventVariables) {
@@ -239,7 +240,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder inline(@Nullable Boolean inline) {
-            this.inline = Output.ofNullable(inline);
+            this.inline = Codegen.ofNullable(inline);
             return this;
         }
         public Builder labels(@Nullable Output<List<DetectorLabelArgs>> labels) {
@@ -247,7 +248,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder labels(@Nullable List<DetectorLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(DetectorLabelArgs... labels) {
@@ -258,7 +259,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -266,7 +267,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
@@ -274,7 +275,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DetectorTagArgs... tags) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudkms_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.EkmConnectionArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ServiceResolverResponse;
@@ -33,7 +34,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * @return The time at which the EkmConnection was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -47,7 +48,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * @return This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -61,7 +62,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * @return The resource name for the EkmConnection in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -75,7 +76,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * @return A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
      * 
      */
-    public Output<List<ServiceResolverResponse>> getServiceResolvers() {
+    public Output<List<ServiceResolverResponse>> serviceResolvers() {
         return this.serviceResolvers;
     }
 
@@ -101,7 +102,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EkmConnection(String name, EkmConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudkms/v1:EkmConnection", name, args == null ? EkmConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudkms/v1:EkmConnection", name, args == null ? EkmConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EkmConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

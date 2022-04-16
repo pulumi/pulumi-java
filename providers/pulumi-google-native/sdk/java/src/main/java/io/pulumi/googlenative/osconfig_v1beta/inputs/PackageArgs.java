@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.enums.PackageDesiredState;
 import io.pulumi.googlenative.osconfig_v1beta.enums.PackageManager;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredState")
       private final @Nullable Output<PackageDesiredState> desiredState;
 
-    public Output<PackageDesiredState> getDesiredState() {
-        return this.desiredState == null ? Output.empty() : this.desiredState;
+    public Output<PackageDesiredState> desiredState() {
+        return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="manager")
       private final @Nullable Output<PackageManager> manager;
 
-    public Output<PackageManager> getManager() {
-        return this.manager == null ? Output.empty() : this.manager;
+    public Output<PackageManager> manager() {
+        return this.manager == null ? Codegen.empty() : this.manager;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -63,9 +64,9 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageArgs() {
-        this.desiredState = Output.empty();
-        this.manager = Output.empty();
-        this.name = Output.empty();
+        this.desiredState = Codegen.empty();
+        this.manager = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder desiredState(@Nullable PackageDesiredState desiredState) {
-            this.desiredState = Output.ofNullable(desiredState);
+            this.desiredState = Codegen.ofNullable(desiredState);
             return this;
         }
         public Builder manager(@Nullable Output<PackageManager> manager) {
@@ -105,7 +106,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manager(@Nullable PackageManager manager) {
-            this.manager = Output.ofNullable(manager);
+            this.manager = Codegen.ofNullable(manager);
             return this;
         }
         public Builder name(Output<String> name) {

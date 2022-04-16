@@ -6,6 +6,7 @@ package io.pulumi.gcp.accesscontextmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelState;
@@ -56,7 +57,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AccessLevelBasic> getBasic() {
+    public Output</* @Nullable */ AccessLevelBasic> basic() {
         return this.basic;
     }
     /**
@@ -74,7 +75,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AccessLevelCustom> getCustom() {
+    public Output</* @Nullable */ AccessLevelCustom> custom() {
         return this.custom;
     }
     /**
@@ -88,7 +89,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return Description of the expression
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -106,7 +107,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -122,7 +123,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -136,7 +137,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @return Title for the expression, i.e. a short string describing its purpose.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -162,7 +163,7 @@ public class AccessLevel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessLevel(String name, AccessLevelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/accessLevel:AccessLevel", name, args == null ? AccessLevelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:accesscontextmanager/accessLevel:AccessLevel", name, args == null ? AccessLevelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessLevel(String name, Output<String> id, @Nullable AccessLevelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

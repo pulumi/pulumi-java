@@ -34,14 +34,14 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse {
      * Determines whether CPU should be throttled or not outside of requests.
      * 
     */
-    public Boolean getCpuIdle() {
+    public Boolean cpuIdle() {
         return this.cpuIdle;
     }
     /**
      * Only memory and CPU are supported. Note: The only supported values for CPU are '1', '2', and '4'. Setting 4 CPU requires at least 2Gi of memory. The values of the map is string form of the 'quantity' k8s type: https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go
      * 
     */
-    public Map<String,String> getLimits() {
+    public Map<String,String> limits() {
         return this.limits;
     }
 

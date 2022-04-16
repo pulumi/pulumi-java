@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="auditIntervalSeconds")
       private final @Nullable Output<String> auditIntervalSeconds;
 
-    public Output<String> getAuditIntervalSeconds() {
-        return this.auditIntervalSeconds == null ? Output.empty() : this.auditIntervalSeconds;
+    public Output<String> auditIntervalSeconds() {
+        return this.auditIntervalSeconds == null ? Codegen.empty() : this.auditIntervalSeconds;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="exemptableNamespaces")
       private final @Nullable Output<List<String>> exemptableNamespaces;
 
-    public Output<List<String>> getExemptableNamespaces() {
-        return this.exemptableNamespaces == null ? Output.empty() : this.exemptableNamespaces;
+    public Output<List<String>> exemptableNamespaces() {
+        return this.exemptableNamespaces == null ? Codegen.empty() : this.exemptableNamespaces;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="logDeniesEnabled")
       private final @Nullable Output<Boolean> logDeniesEnabled;
 
-    public Output<Boolean> getLogDeniesEnabled() {
-        return this.logDeniesEnabled == null ? Output.empty() : this.logDeniesEnabled;
+    public Output<Boolean> logDeniesEnabled() {
+        return this.logDeniesEnabled == null ? Codegen.empty() : this.logDeniesEnabled;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="referentialRulesEnabled")
       private final @Nullable Output<Boolean> referentialRulesEnabled;
 
-    public Output<Boolean> getReferentialRulesEnabled() {
-        return this.referentialRulesEnabled == null ? Output.empty() : this.referentialRulesEnabled;
+    public Output<Boolean> referentialRulesEnabled() {
+        return this.referentialRulesEnabled == null ? Codegen.empty() : this.referentialRulesEnabled;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     @Import(name="templateLibraryInstalled")
       private final @Nullable Output<Boolean> templateLibraryInstalled;
 
-    public Output<Boolean> getTemplateLibraryInstalled() {
-        return this.templateLibraryInstalled == null ? Output.empty() : this.templateLibraryInstalled;
+    public Output<Boolean> templateLibraryInstalled() {
+        return this.templateLibraryInstalled == null ? Codegen.empty() : this.templateLibraryInstalled;
     }
 
     public FeatureMembershipConfigmanagementPolicyControllerArgs(
@@ -98,12 +99,12 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
     }
 
     private FeatureMembershipConfigmanagementPolicyControllerArgs() {
-        this.auditIntervalSeconds = Output.empty();
-        this.enabled = Output.empty();
-        this.exemptableNamespaces = Output.empty();
-        this.logDeniesEnabled = Output.empty();
-        this.referentialRulesEnabled = Output.empty();
-        this.templateLibraryInstalled = Output.empty();
+        this.auditIntervalSeconds = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.exemptableNamespaces = Codegen.empty();
+        this.logDeniesEnabled = Codegen.empty();
+        this.referentialRulesEnabled = Codegen.empty();
+        this.templateLibraryInstalled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             return this;
         }
         public Builder auditIntervalSeconds(@Nullable String auditIntervalSeconds) {
-            this.auditIntervalSeconds = Output.ofNullable(auditIntervalSeconds);
+            this.auditIntervalSeconds = Codegen.ofNullable(auditIntervalSeconds);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -149,7 +150,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder exemptableNamespaces(@Nullable Output<List<String>> exemptableNamespaces) {
@@ -157,7 +158,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             return this;
         }
         public Builder exemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
-            this.exemptableNamespaces = Output.ofNullable(exemptableNamespaces);
+            this.exemptableNamespaces = Codegen.ofNullable(exemptableNamespaces);
             return this;
         }
         public Builder exemptableNamespaces(String... exemptableNamespaces) {
@@ -168,7 +169,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             return this;
         }
         public Builder logDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
-            this.logDeniesEnabled = Output.ofNullable(logDeniesEnabled);
+            this.logDeniesEnabled = Codegen.ofNullable(logDeniesEnabled);
             return this;
         }
         public Builder referentialRulesEnabled(@Nullable Output<Boolean> referentialRulesEnabled) {
@@ -176,7 +177,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             return this;
         }
         public Builder referentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
-            this.referentialRulesEnabled = Output.ofNullable(referentialRulesEnabled);
+            this.referentialRulesEnabled = Codegen.ofNullable(referentialRulesEnabled);
             return this;
         }
         public Builder templateLibraryInstalled(@Nullable Output<Boolean> templateLibraryInstalled) {
@@ -184,7 +185,7 @@ public final class FeatureMembershipConfigmanagementPolicyControllerArgs extends
             return this;
         }
         public Builder templateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
-            this.templateLibraryInstalled = Output.ofNullable(templateLibraryInstalled);
+            this.templateLibraryInstalled = Codegen.ofNullable(templateLibraryInstalled);
             return this;
         }        public FeatureMembershipConfigmanagementPolicyControllerArgs build() {
             return new FeatureMembershipConfigmanagementPolicyControllerArgs(auditIntervalSeconds, enabled, exemptableNamespaces, logDeniesEnabled, referentialRulesEnabled, templateLibraryInstalled);

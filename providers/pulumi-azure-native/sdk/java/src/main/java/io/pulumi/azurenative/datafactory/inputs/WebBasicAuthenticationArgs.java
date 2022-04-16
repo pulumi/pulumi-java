@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class WebBasicAuthenticationArgs extends io.pulumi.resources.Resour
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -40,7 +41,7 @@ public final class WebBasicAuthenticationArgs extends io.pulumi.resources.Resour
     @Import(name="password", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
         return this.password;
     }
 
@@ -51,7 +52,7 @@ public final class WebBasicAuthenticationArgs extends io.pulumi.resources.Resour
     @Import(name="url", required=true)
       private final Output<Object> url;
 
-    public Output<Object> getUrl() {
+    public Output<Object> url() {
         return this.url;
     }
 
@@ -62,7 +63,7 @@ public final class WebBasicAuthenticationArgs extends io.pulumi.resources.Resour
     @Import(name="username", required=true)
       private final Output<Object> username;
 
-    public Output<Object> getUsername() {
+    public Output<Object> username() {
         return this.username;
     }
 
@@ -78,10 +79,10 @@ public final class WebBasicAuthenticationArgs extends io.pulumi.resources.Resour
     }
 
     private WebBasicAuthenticationArgs() {
-        this.authenticationType = Output.empty();
-        this.password = Output.empty();
-        this.url = Output.empty();
-        this.username = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.password = Codegen.empty();
+        this.url = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

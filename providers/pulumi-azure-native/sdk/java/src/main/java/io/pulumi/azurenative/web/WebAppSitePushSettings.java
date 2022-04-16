@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public class WebAppSitePushSettings extends io.pulumi.resources.CustomResource {
      * @return Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getDynamicTagsJson() {
+    public Output</* @Nullable */ String> dynamicTagsJson() {
         return this.dynamicTagsJson;
     }
     /**
@@ -53,7 +54,7 @@ public class WebAppSitePushSettings extends io.pulumi.resources.CustomResource {
      * @return Gets or sets a flag indicating whether the Push endpoint is enabled.
      * 
      */
-    public Output<Boolean> getIsPushEnabled() {
+    public Output<Boolean> isPushEnabled() {
         return this.isPushEnabled;
     }
     /**
@@ -67,7 +68,7 @@ public class WebAppSitePushSettings extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -81,7 +82,7 @@ public class WebAppSitePushSettings extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -95,7 +96,7 @@ public class WebAppSitePushSettings extends io.pulumi.resources.CustomResource {
      * @return Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
      */
-    public Output</* @Nullable */ String> getTagWhitelistJson() {
+    public Output</* @Nullable */ String> tagWhitelistJson() {
         return this.tagWhitelistJson;
     }
     /**
@@ -115,7 +116,7 @@ public class WebAppSitePushSettings extends io.pulumi.resources.CustomResource {
      * Validation should be performed at the PushRequestHandler.
      * 
      */
-    public Output</* @Nullable */ String> getTagsRequiringAuth() {
+    public Output</* @Nullable */ String> tagsRequiringAuth() {
         return this.tagsRequiringAuth;
     }
     /**
@@ -129,7 +130,7 @@ public class WebAppSitePushSettings extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -155,7 +156,7 @@ public class WebAppSitePushSettings extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppSitePushSettings(String name, WebAppSitePushSettingsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppSitePushSettings", name, args == null ? WebAppSitePushSettingsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppSitePushSettings", name, args == null ? WebAppSitePushSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppSitePushSettings(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

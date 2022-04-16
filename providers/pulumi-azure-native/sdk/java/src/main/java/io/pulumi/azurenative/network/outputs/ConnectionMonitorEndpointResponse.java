@@ -71,49 +71,49 @@ public final class ConnectionMonitorEndpointResponse {
      * Address of the connection monitor endpoint (IP or domain name).
      * 
     */
-    public Optional<String> getAddress() {
+    public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
     /**
      * Test coverage for the endpoint.
      * 
     */
-    public Optional<String> getCoverageLevel() {
+    public Optional<String> coverageLevel() {
         return Optional.ofNullable(this.coverageLevel);
     }
     /**
      * Filter for sub-items within the endpoint.
      * 
     */
-    public Optional<ConnectionMonitorEndpointFilterResponse> getFilter() {
+    public Optional<ConnectionMonitorEndpointFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
      * The name of the connection monitor endpoint.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Resource ID of the connection monitor endpoint.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Endpoint scope.
      * 
     */
-    public Optional<ConnectionMonitorEndpointScopeResponse> getScope() {
+    public Optional<ConnectionMonitorEndpointScopeResponse> scope() {
         return Optional.ofNullable(this.scope);
     }
     /**
      * The endpoint type.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

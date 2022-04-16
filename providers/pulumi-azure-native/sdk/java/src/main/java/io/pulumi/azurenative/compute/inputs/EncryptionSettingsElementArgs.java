@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.KeyVaultAndKeyReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.KeyVaultAndSecretReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,8 +27,8 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
 
-    public Output<KeyVaultAndSecretReferenceArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
+    public Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
     @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
 
-    public Output<KeyVaultAndKeyReferenceArgs> getKeyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Output.empty() : this.keyEncryptionKey;
+    public Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey() {
+        return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
     }
 
     public EncryptionSettingsElementArgs(
@@ -49,8 +50,8 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
     }
 
     private EncryptionSettingsElementArgs() {
-        this.diskEncryptionKey = Output.empty();
-        this.keyEncryptionKey = Output.empty();
+        this.diskEncryptionKey = Codegen.empty();
+        this.keyEncryptionKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder diskEncryptionKey(@Nullable KeyVaultAndSecretReferenceArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
             return this;
         }
         public Builder keyEncryptionKey(@Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
@@ -88,7 +89,7 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder keyEncryptionKey(@Nullable KeyVaultAndKeyReferenceArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
+            this.keyEncryptionKey = Codegen.ofNullable(keyEncryptionKey);
             return this;
         }        public EncryptionSettingsElementArgs build() {
             return new EncryptionSettingsElementArgs(diskEncryptionKey, keyEncryptionKey);

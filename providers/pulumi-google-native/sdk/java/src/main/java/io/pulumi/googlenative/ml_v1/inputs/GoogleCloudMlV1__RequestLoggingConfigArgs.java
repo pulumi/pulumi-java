@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
     @Import(name="bigqueryTableName", required=true)
       private final Output<String> bigqueryTableName;
 
-    public Output<String> getBigqueryTableName() {
+    public Output<String> bigqueryTableName() {
         return this.bigqueryTableName;
     }
 
@@ -37,8 +38,8 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
     @Import(name="samplingPercentage")
       private final @Nullable Output<Double> samplingPercentage;
 
-    public Output<Double> getSamplingPercentage() {
-        return this.samplingPercentage == null ? Output.empty() : this.samplingPercentage;
+    public Output<Double> samplingPercentage() {
+        return this.samplingPercentage == null ? Codegen.empty() : this.samplingPercentage;
     }
 
     public GoogleCloudMlV1__RequestLoggingConfigArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
     }
 
     private GoogleCloudMlV1__RequestLoggingConfigArgs() {
-        this.bigqueryTableName = Output.empty();
-        this.samplingPercentage = Output.empty();
+        this.bigqueryTableName = Codegen.empty();
+        this.samplingPercentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder samplingPercentage(@Nullable Double samplingPercentage) {
-            this.samplingPercentage = Output.ofNullable(samplingPercentage);
+            this.samplingPercentage = Codegen.ofNullable(samplingPercentage);
             return this;
         }        public GoogleCloudMlV1__RequestLoggingConfigArgs build() {
             return new GoogleCloudMlV1__RequestLoggingConfigArgs(bigqueryTableName, samplingPercentage);

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.devicefarm.outputs.TestGridProjectVpcConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,31 +24,31 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={TestGridProjectTag.class})
     private Output</* @Nullable */ List<TestGridProjectTag>> tags;
 
-    public Output</* @Nullable */ List<TestGridProjectTag>> getTags() {
+    public Output</* @Nullable */ List<TestGridProjectTag>> tags() {
         return this.tags;
     }
     @Export(name="vpcConfig", type=TestGridProjectVpcConfig.class, parameters={})
     private Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig;
 
-    public Output</* @Nullable */ TestGridProjectVpcConfig> getVpcConfig() {
+    public Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig() {
         return this.vpcConfig;
     }
 
@@ -73,7 +74,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TestGridProject(String name, @Nullable TestGridProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:devicefarm:TestGridProject", name, args == null ? TestGridProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:devicefarm:TestGridProject", name, args == null ? TestGridProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TestGridProject(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

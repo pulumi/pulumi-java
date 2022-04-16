@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     @Import(name="assumeRole")
       private final @Nullable Output<String> assumeRole;
 
-    public Output<String> getAssumeRole() {
-        return this.assumeRole == null ? Output.empty() : this.assumeRole;
+    public Output<String> assumeRole() {
+        return this.assumeRole == null ? Codegen.empty() : this.assumeRole;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -43,8 +44,8 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
-    public Output<String> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<String> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -83,11 +84,11 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
     }
 
     private ServiceActionDefinitionGetArgs() {
-        this.assumeRole = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
+        this.assumeRole = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder assumeRole(@Nullable String assumeRole) {
-            this.assumeRole = Output.ofNullable(assumeRole);
+            this.assumeRole = Codegen.ofNullable(assumeRole);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -139,7 +140,7 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -147,7 +148,7 @@ public final class ServiceActionDefinitionGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder version(Output<String> version) {

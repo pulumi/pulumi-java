@@ -5,6 +5,7 @@ package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.plant.tree_v1.enums.RubberTreeVariety;
 import io.pulumi.plant.tree_v1.enums.TreeSize;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sizes")
       private final @Nullable Output<Map<String,TreeSize>> sizes;
 
-    public Output<Map<String,TreeSize>> getSizes() {
-        return this.sizes == null ? Output.empty() : this.sizes;
+    public Output<Map<String,TreeSize>> sizes() {
+        return this.sizes == null ? Codegen.empty() : this.sizes;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="varieties", required=true)
       private final Output<List<RubberTreeVariety>> varieties;
 
-    public Output<List<RubberTreeVariety>> getVarieties() {
+    public Output<List<RubberTreeVariety>> varieties() {
         return this.varieties;
     }
 
@@ -48,8 +49,8 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NurseryArgs() {
-        this.sizes = Output.empty();
-        this.varieties = Output.empty();
+        this.sizes = Codegen.empty();
+        this.varieties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class NurseryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sizes(@Nullable Map<String,TreeSize> sizes) {
-            this.sizes = Output.ofNullable(sizes);
+            this.sizes = Codegen.ofNullable(sizes);
             return this;
         }
         public Builder varieties(Output<List<RubberTreeVariety>> varieties) {

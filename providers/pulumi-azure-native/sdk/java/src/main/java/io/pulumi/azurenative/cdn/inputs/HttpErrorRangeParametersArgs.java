@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
     @Import(name="begin")
       private final @Nullable Output<Integer> begin;
 
-    public Output<Integer> getBegin() {
-        return this.begin == null ? Output.empty() : this.begin;
+    public Output<Integer> begin() {
+        return this.begin == null ? Codegen.empty() : this.begin;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
     @Import(name="end")
       private final @Nullable Output<Integer> end;
 
-    public Output<Integer> getEnd() {
-        return this.end == null ? Output.empty() : this.end;
+    public Output<Integer> end() {
+        return this.end == null ? Codegen.empty() : this.end;
     }
 
     public HttpErrorRangeParametersArgs(
@@ -48,8 +49,8 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
     }
 
     private HttpErrorRangeParametersArgs() {
-        this.begin = Output.empty();
-        this.end = Output.empty();
+        this.begin = Codegen.empty();
+        this.end = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder begin(@Nullable Integer begin) {
-            this.begin = Output.ofNullable(begin);
+            this.begin = Codegen.ofNullable(begin);
             return this;
         }
         public Builder end(@Nullable Output<Integer> end) {
@@ -87,7 +88,7 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder end(@Nullable Integer end) {
-            this.end = Output.ofNullable(end);
+            this.end = Codegen.ofNullable(end);
             return this;
         }        public HttpErrorRangeParametersArgs build() {
             return new HttpErrorRangeParametersArgs(begin, end);

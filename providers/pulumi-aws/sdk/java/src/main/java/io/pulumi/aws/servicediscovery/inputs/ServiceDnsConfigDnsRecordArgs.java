@@ -5,6 +5,7 @@ package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ServiceDnsConfigDnsRecordArgs extends io.pulumi.resources.Res
     @Import(name="ttl", required=true)
       private final Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
+    public Output<Integer> ttl() {
         return this.ttl;
     }
 
@@ -32,7 +33,7 @@ public final class ServiceDnsConfigDnsRecordArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -44,8 +45,8 @@ public final class ServiceDnsConfigDnsRecordArgs extends io.pulumi.resources.Res
     }
 
     private ServiceDnsConfigDnsRecordArgs() {
-        this.ttl = Output.empty();
-        this.type = Output.empty();
+        this.ttl = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

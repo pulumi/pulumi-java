@@ -5,6 +5,7 @@ package io.pulumi.foobar.deeply_nested_module;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baz")
       private final @Nullable Output<String> baz;
 
-    public Output<String> getBaz() {
-        return this.baz == null ? Output.empty() : this.baz;
+    public Output<String> baz() {
+        return this.baz == null ? Codegen.empty() : this.baz;
     }
 
     public ResourceArgs(@Nullable Output<String> baz) {
@@ -26,7 +27,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceArgs() {
-        this.baz = Output.empty();
+        this.baz = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -50,11 +51,11 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
         }
 
         public Builder baz(@Nullable Output<String> baz) {
-            this.baz = Output.ofNullable(baz).asSecret();
+            this.baz = Codegen.secret(baz);
             return this;
         }
         public Builder baz(@Nullable String baz) {
-            this.baz = Output.ofNullable(baz).asSecret();
+            this.baz = Codegen.secret(baz);
             return this;
         }        public ResourceArgs build() {
             return new ResourceArgs(baz);

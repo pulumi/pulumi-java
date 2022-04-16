@@ -29,133 +29,133 @@ public final class DistributionConfig extends io.pulumi.resources.InvokeArgs {
     @Import(name="aliases")
       private final @Nullable List<String> aliases;
 
-    public List<String> getAliases() {
+    public List<String> aliases() {
         return this.aliases == null ? List.of() : this.aliases;
     }
 
     @Import(name="cNAMEs")
       private final @Nullable List<String> cNAMEs;
 
-    public List<String> getCNAMEs() {
+    public List<String> cNAMEs() {
         return this.cNAMEs == null ? List.of() : this.cNAMEs;
     }
 
     @Import(name="cacheBehaviors")
       private final @Nullable List<DistributionCacheBehavior> cacheBehaviors;
 
-    public List<DistributionCacheBehavior> getCacheBehaviors() {
+    public List<DistributionCacheBehavior> cacheBehaviors() {
         return this.cacheBehaviors == null ? List.of() : this.cacheBehaviors;
     }
 
     @Import(name="comment")
       private final @Nullable String comment;
 
-    public Optional<String> getComment() {
+    public Optional<String> comment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @Import(name="customErrorResponses")
       private final @Nullable List<DistributionCustomErrorResponse> customErrorResponses;
 
-    public List<DistributionCustomErrorResponse> getCustomErrorResponses() {
+    public List<DistributionCustomErrorResponse> customErrorResponses() {
         return this.customErrorResponses == null ? List.of() : this.customErrorResponses;
     }
 
     @Import(name="customOrigin")
       private final @Nullable DistributionLegacyCustomOrigin customOrigin;
 
-    public Optional<DistributionLegacyCustomOrigin> getCustomOrigin() {
+    public Optional<DistributionLegacyCustomOrigin> customOrigin() {
         return this.customOrigin == null ? Optional.empty() : Optional.ofNullable(this.customOrigin);
     }
 
     @Import(name="defaultCacheBehavior")
       private final @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior;
 
-    public Optional<DistributionDefaultCacheBehavior> getDefaultCacheBehavior() {
+    public Optional<DistributionDefaultCacheBehavior> defaultCacheBehavior() {
         return this.defaultCacheBehavior == null ? Optional.empty() : Optional.ofNullable(this.defaultCacheBehavior);
     }
 
     @Import(name="defaultRootObject")
       private final @Nullable String defaultRootObject;
 
-    public Optional<String> getDefaultRootObject() {
+    public Optional<String> defaultRootObject() {
         return this.defaultRootObject == null ? Optional.empty() : Optional.ofNullable(this.defaultRootObject);
     }
 
     @Import(name="enabled", required=true)
       private final Boolean enabled;
 
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 
     @Import(name="httpVersion")
       private final @Nullable String httpVersion;
 
-    public Optional<String> getHttpVersion() {
+    public Optional<String> httpVersion() {
         return this.httpVersion == null ? Optional.empty() : Optional.ofNullable(this.httpVersion);
     }
 
     @Import(name="iPV6Enabled")
       private final @Nullable Boolean iPV6Enabled;
 
-    public Optional<Boolean> getIPV6Enabled() {
+    public Optional<Boolean> iPV6Enabled() {
         return this.iPV6Enabled == null ? Optional.empty() : Optional.ofNullable(this.iPV6Enabled);
     }
 
     @Import(name="logging")
       private final @Nullable DistributionLogging logging;
 
-    public Optional<DistributionLogging> getLogging() {
+    public Optional<DistributionLogging> logging() {
         return this.logging == null ? Optional.empty() : Optional.ofNullable(this.logging);
     }
 
     @Import(name="originGroups")
       private final @Nullable DistributionOriginGroups originGroups;
 
-    public Optional<DistributionOriginGroups> getOriginGroups() {
+    public Optional<DistributionOriginGroups> originGroups() {
         return this.originGroups == null ? Optional.empty() : Optional.ofNullable(this.originGroups);
     }
 
     @Import(name="origins")
       private final @Nullable List<DistributionOrigin> origins;
 
-    public List<DistributionOrigin> getOrigins() {
+    public List<DistributionOrigin> origins() {
         return this.origins == null ? List.of() : this.origins;
     }
 
     @Import(name="priceClass")
       private final @Nullable String priceClass;
 
-    public Optional<String> getPriceClass() {
+    public Optional<String> priceClass() {
         return this.priceClass == null ? Optional.empty() : Optional.ofNullable(this.priceClass);
     }
 
     @Import(name="restrictions")
       private final @Nullable DistributionRestrictions restrictions;
 
-    public Optional<DistributionRestrictions> getRestrictions() {
+    public Optional<DistributionRestrictions> restrictions() {
         return this.restrictions == null ? Optional.empty() : Optional.ofNullable(this.restrictions);
     }
 
     @Import(name="s3Origin")
       private final @Nullable DistributionLegacyS3Origin s3Origin;
 
-    public Optional<DistributionLegacyS3Origin> getS3Origin() {
+    public Optional<DistributionLegacyS3Origin> s3Origin() {
         return this.s3Origin == null ? Optional.empty() : Optional.ofNullable(this.s3Origin);
     }
 
     @Import(name="viewerCertificate")
       private final @Nullable DistributionViewerCertificate viewerCertificate;
 
-    public Optional<DistributionViewerCertificate> getViewerCertificate() {
+    public Optional<DistributionViewerCertificate> viewerCertificate() {
         return this.viewerCertificate == null ? Optional.empty() : Optional.ofNullable(this.viewerCertificate);
     }
 
     @Import(name="webACLId")
       private final @Nullable String webACLId;
 
-    public Optional<String> getWebACLId() {
+    public Optional<String> webACLId() {
         return this.webACLId == null ? Optional.empty() : Optional.ofNullable(this.webACLId);
     }
 

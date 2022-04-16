@@ -9,6 +9,7 @@ import io.pulumi.aws.ssoadmin.inputs.ManagedPolicyAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ManagedPolicyAttachment extends io.pulumi.resources.CustomResource 
      * @return The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -53,7 +54,7 @@ public class ManagedPolicyAttachment extends io.pulumi.resources.CustomResource 
      * @return The IAM managed policy Amazon Resource Name (ARN) to be attached to the Permission Set.
      * 
      */
-    public Output<String> getManagedPolicyArn() {
+    public Output<String> managedPolicyArn() {
         return this.managedPolicyArn;
     }
     /**
@@ -67,7 +68,7 @@ public class ManagedPolicyAttachment extends io.pulumi.resources.CustomResource 
      * @return The name of the IAM Managed Policy.
      * 
      */
-    public Output<String> getManagedPolicyName() {
+    public Output<String> managedPolicyName() {
         return this.managedPolicyName;
     }
     /**
@@ -81,7 +82,7 @@ public class ManagedPolicyAttachment extends io.pulumi.resources.CustomResource 
      * @return The Amazon Resource Name (ARN) of the Permission Set.
      * 
      */
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
 
@@ -107,7 +108,7 @@ public class ManagedPolicyAttachment extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedPolicyAttachment(String name, ManagedPolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ssoadmin/managedPolicyAttachment:ManagedPolicyAttachment", name, args == null ? ManagedPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ssoadmin/managedPolicyAttachment:ManagedPolicyAttachment", name, args == null ? ManagedPolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedPolicyAttachment(String name, Output<String> id, @Nullable ManagedPolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

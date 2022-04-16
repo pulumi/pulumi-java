@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * @return Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIgnoreMissingVnetServiceEndpoint() {
+    public Output</* @Nullable */ Boolean> ignoreMissingVnetServiceEndpoint() {
         return this.ignoreMissingVnetServiceEndpoint;
     }
     /**
@@ -56,7 +57,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * @return Virtual Network Rule State
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -84,7 +85,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -98,7 +99,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * @return The ARM resource id of the virtual network subnet.
      * 
      */
-    public Output<String> getVirtualNetworkSubnetId() {
+    public Output<String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 
@@ -124,7 +125,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualNetworkRule(String name, VirtualNetworkRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dbformariadb:VirtualNetworkRule", name, args == null ? VirtualNetworkRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:dbformariadb:VirtualNetworkRule", name, args == null ? VirtualNetworkRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualNetworkRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

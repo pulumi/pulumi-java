@@ -51,30 +51,30 @@ public final class GetAuthorizationTokenResult {
      * Temporary authorization token.
      * 
     */
-    public String getAuthorizationToken() {
+    public String authorizationToken() {
         return this.authorizationToken;
     }
-    public String getDomain() {
+    public String domain() {
         return this.domain;
     }
-    public String getDomainOwner() {
+    public String domainOwner() {
         return this.domainOwner;
     }
-    public Optional<Integer> getDurationSeconds() {
+    public Optional<Integer> durationSeconds() {
         return Optional.ofNullable(this.durationSeconds);
     }
     /**
      * The time in UTC RFC3339 format when the authorization token expires.
      * 
     */
-    public String getExpiration() {
+    public String expiration() {
         return this.expiration;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
 

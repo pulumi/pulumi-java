@@ -19,7 +19,7 @@ public final class GetLinkAssociationArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="deviceId", required=true)
       private final String deviceId;
 
-    public String getDeviceId() {
+    public String deviceId() {
         return this.deviceId;
     }
 
@@ -30,7 +30,7 @@ public final class GetLinkAssociationArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="globalNetworkId", required=true)
       private final String globalNetworkId;
 
-    public String getGlobalNetworkId() {
+    public String globalNetworkId() {
         return this.globalNetworkId;
     }
 
@@ -41,7 +41,7 @@ public final class GetLinkAssociationArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="linkId", required=true)
       private final String linkId;
 
-    public String getLinkId() {
+    public String linkId() {
         return this.linkId;
     }
 

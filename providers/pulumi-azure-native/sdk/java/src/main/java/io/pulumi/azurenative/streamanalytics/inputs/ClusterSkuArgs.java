@@ -7,6 +7,7 @@ import io.pulumi.azurenative.streamanalytics.enums.ClusterSkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
-    public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+    public Output<Integer> capacity() {
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,ClusterSkuName>> name;
 
-    public Output<Either<String,ClusterSkuName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<Either<String,ClusterSkuName>> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ClusterSkuArgs(
@@ -51,8 +52,8 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterSkuArgs() {
-        this.capacity = Output.empty();
-        this.name = Output.empty();
+        this.capacity = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder name(@Nullable Output<Either<String,ClusterSkuName>> name) {
@@ -90,7 +91,7 @@ public final class ClusterSkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable Either<String,ClusterSkuName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ClusterSkuArgs build() {
             return new ClusterSkuArgs(capacity, name);

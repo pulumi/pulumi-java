@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return true if the group is one of the three system groups (Administrators, Developers, or Guests); otherwise false.
      * 
      */
-    public Output<Boolean> getBuiltIn() {
+    public Output<Boolean> builtIn() {
         return this.builtIn;
     }
     /**
@@ -56,7 +57,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Group description. Can contain HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -70,7 +71,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Group name.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -84,7 +85,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return For external groups, this property contains the id of the group from the external identity provider, e.g. for Azure Active Directory `aad://<tenant>.onmicrosoft.com/groups/<group object id>`; otherwise the value is null.
      * 
      */
-    public Output</* @Nullable */ String> getExternalId() {
+    public Output</* @Nullable */ String> externalId() {
         return this.externalId;
     }
     /**
@@ -98,7 +99,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -138,7 +139,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

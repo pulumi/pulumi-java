@@ -5,6 +5,7 @@ package io.pulumi.awsnative.logs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="logGroupNames")
       private final @Nullable Output<List<String>> logGroupNames;
 
-    public Output<List<String>> getLogGroupNames() {
-        return this.logGroupNames == null ? Output.empty() : this.logGroupNames;
+    public Output<List<String>> logGroupNames() {
+        return this.logGroupNames == null ? Codegen.empty() : this.logGroupNames;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="queryString", required=true)
       private final Output<String> queryString;
 
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
 
@@ -58,9 +59,9 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private QueryDefinitionArgs() {
-        this.logGroupNames = Output.empty();
-        this.name = Output.empty();
-        this.queryString = Output.empty();
+        this.logGroupNames = Codegen.empty();
+        this.name = Codegen.empty();
+        this.queryString = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder logGroupNames(@Nullable List<String> logGroupNames) {
-            this.logGroupNames = Output.ofNullable(logGroupNames);
+            this.logGroupNames = Codegen.ofNullable(logGroupNames);
             return this;
         }
         public Builder logGroupNames(String... logGroupNames) {
@@ -103,7 +104,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder queryString(Output<String> queryString) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersionId")
       private final @Nullable Output<String> defaultVersionId;
 
-    public Output<String> getDefaultVersionId() {
-        return this.defaultVersionId == null ? Output.empty() : this.defaultVersionId;
+    public Output<String> defaultVersionId() {
+        return this.defaultVersionId == null ? Codegen.empty() : this.defaultVersionId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public PolicyState(
@@ -70,10 +71,10 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyState() {
-        this.arn = Output.empty();
-        this.defaultVersionId = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
+        this.arn = Codegen.empty();
+        this.defaultVersionId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder defaultVersionId(@Nullable Output<String> defaultVersionId) {
@@ -115,7 +116,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultVersionId(@Nullable String defaultVersionId) {
-            this.defaultVersionId = Output.ofNullable(defaultVersionId);
+            this.defaultVersionId = Codegen.ofNullable(defaultVersionId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -123,7 +124,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -131,7 +132,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public PolicyState build() {
             return new PolicyState(arn, defaultVersionId, name, policy);

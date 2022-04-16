@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
     @Import(name="productArn", required=true)
       private final Output<String> productArn;
 
-    public Output<String> getProductArn() {
+    public Output<String> productArn() {
         return this.productArn;
     }
 
@@ -29,7 +30,7 @@ public final class ProductSubscriptionArgs extends io.pulumi.resources.ResourceA
     }
 
     private ProductSubscriptionArgs() {
-        this.productArn = Output.empty();
+        this.productArn = Codegen.empty();
     }
 
     public static Builder builder() {

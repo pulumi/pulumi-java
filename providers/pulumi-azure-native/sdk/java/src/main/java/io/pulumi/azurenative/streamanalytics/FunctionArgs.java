@@ -6,6 +6,7 @@ package io.pulumi.azurenative.streamanalytics;
 import io.pulumi.azurenative.streamanalytics.inputs.ScalarFunctionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
-        return this.functionName == null ? Output.empty() : this.functionName;
+    public Output<String> functionName() {
+        return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
-    public Output<String> getJobName() {
+    public Output<String> jobName() {
         return this.jobName;
     }
 
@@ -44,8 +45,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<ScalarFunctionPropertiesArgs> properties;
 
-    public Output<ScalarFunctionPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ScalarFunctionPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -84,11 +85,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionArgs() {
-        this.functionName = Output.empty();
-        this.jobName = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.functionName = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Output.ofNullable(functionName);
+            this.functionName = Codegen.ofNullable(functionName);
             return this;
         }
         public Builder jobName(Output<String> jobName) {
@@ -140,7 +141,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<ScalarFunctionPropertiesArgs> properties) {
@@ -148,7 +149,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ScalarFunctionPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

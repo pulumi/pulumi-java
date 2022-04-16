@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyInstanceSchedulePolicyScheduleArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
     @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
-    public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+    public Output<String> expirationTime() {
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
     @Import(name="vmStartSchedule")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStartSchedule;
 
-    public Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> getVmStartSchedule() {
-        return this.vmStartSchedule == null ? Output.empty() : this.vmStartSchedule;
+    public Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStartSchedule() {
+        return this.vmStartSchedule == null ? Codegen.empty() : this.vmStartSchedule;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
     @Import(name="vmStopSchedule")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStopSchedule;
 
-    public Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> getVmStopSchedule() {
-        return this.vmStopSchedule == null ? Output.empty() : this.vmStopSchedule;
+    public Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStopSchedule() {
+        return this.vmStopSchedule == null ? Codegen.empty() : this.vmStopSchedule;
     }
 
     public ResourcePolicyInstanceSchedulePolicyArgs(
@@ -88,11 +89,11 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
     }
 
     private ResourcePolicyInstanceSchedulePolicyArgs() {
-        this.expirationTime = Output.empty();
-        this.startTime = Output.empty();
-        this.timeZone = Output.empty();
-        this.vmStartSchedule = Output.empty();
-        this.vmStopSchedule = Output.empty();
+        this.expirationTime = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.timeZone = Codegen.empty();
+        this.vmStartSchedule = Codegen.empty();
+        this.vmStopSchedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -136,7 +137,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -144,7 +145,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }
         public Builder vmStartSchedule(@Nullable Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStartSchedule) {
@@ -152,7 +153,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder vmStartSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyScheduleArgs vmStartSchedule) {
-            this.vmStartSchedule = Output.ofNullable(vmStartSchedule);
+            this.vmStartSchedule = Codegen.ofNullable(vmStartSchedule);
             return this;
         }
         public Builder vmStopSchedule(@Nullable Output<ResourcePolicyInstanceSchedulePolicyScheduleArgs> vmStopSchedule) {
@@ -160,7 +161,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder vmStopSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyScheduleArgs vmStopSchedule) {
-            this.vmStopSchedule = Output.ofNullable(vmStopSchedule);
+            this.vmStopSchedule = Codegen.ofNullable(vmStopSchedule);
             return this;
         }        public ResourcePolicyInstanceSchedulePolicyArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyArgs(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);

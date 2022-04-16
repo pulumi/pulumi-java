@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
     @Import(name="functionAppResourceId", required=true)
       private final Output<String> functionAppResourceId;
 
-    public Output<String> getFunctionAppResourceId() {
+    public Output<String> functionAppResourceId() {
         return this.functionAppResourceId;
     }
 
@@ -37,7 +38,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
     @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
-    public Output<String> getFunctionName() {
+    public Output<String> functionName() {
         return this.functionName;
     }
 
@@ -48,7 +49,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
     @Import(name="httpTriggerUrl", required=true)
       private final Output<String> httpTriggerUrl;
 
-    public Output<String> getHttpTriggerUrl() {
+    public Output<String> httpTriggerUrl() {
         return this.httpTriggerUrl;
     }
 
@@ -59,7 +60,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -70,8 +71,8 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
     @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Output<Boolean> getUseCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Output.empty() : this.useCommonAlertSchema;
+    public Output<Boolean> useCommonAlertSchema() {
+        return this.useCommonAlertSchema == null ? Codegen.empty() : this.useCommonAlertSchema;
     }
 
     public AzureFunctionReceiverArgs(
@@ -84,15 +85,15 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
         this.functionName = Objects.requireNonNull(functionName, "expected parameter 'functionName' to be non-null");
         this.httpTriggerUrl = Objects.requireNonNull(httpTriggerUrl, "expected parameter 'httpTriggerUrl' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Output.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = useCommonAlertSchema == null ? Codegen.ofNullable(false) : useCommonAlertSchema;
     }
 
     private AzureFunctionReceiverArgs() {
-        this.functionAppResourceId = Output.empty();
-        this.functionName = Output.empty();
-        this.httpTriggerUrl = Output.empty();
-        this.name = Output.empty();
-        this.useCommonAlertSchema = Output.empty();
+        this.functionAppResourceId = Codegen.empty();
+        this.functionName = Codegen.empty();
+        this.httpTriggerUrl = Codegen.empty();
+        this.name = Codegen.empty();
+        this.useCommonAlertSchema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class AzureFunctionReceiverArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
+            this.useCommonAlertSchema = Codegen.ofNullable(useCommonAlertSchema);
             return this;
         }        public AzureFunctionReceiverArgs build() {
             return new AzureFunctionReceiverArgs(functionAppResourceId, functionName, httpTriggerUrl, name, useCommonAlertSchema);

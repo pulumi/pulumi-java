@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="limitMbps")
       private final @Nullable Output<String> limitMbps;
 
-    public Output<String> getLimitMbps() {
-        return this.limitMbps == null ? Output.empty() : this.limitMbps;
+    public Output<String> limitMbps() {
+        return this.limitMbps == null ? Codegen.empty() : this.limitMbps;
     }
 
     public BandwidthLimitArgs(@Nullable Output<String> limitMbps) {
@@ -34,7 +35,7 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BandwidthLimitArgs() {
-        this.limitMbps = Output.empty();
+        this.limitMbps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BandwidthLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder limitMbps(@Nullable String limitMbps) {
-            this.limitMbps = Output.ofNullable(limitMbps);
+            this.limitMbps = Codegen.ofNullable(limitMbps);
             return this;
         }        public BandwidthLimitArgs build() {
             return new BandwidthLimitArgs(limitMbps);

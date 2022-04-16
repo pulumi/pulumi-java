@@ -26,7 +26,7 @@ public final class DataFlowResponseFolder {
      * The name of the folder that this data flow is in.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

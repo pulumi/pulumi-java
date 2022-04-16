@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return Azure file share name
      * 
      */
-    public Output</* @Nullable */ String> getAzureFileShareName() {
+    public Output</* @Nullable */ String> azureFileShareName() {
         return this.azureFileShareName;
     }
     /**
@@ -55,7 +56,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return Backup Enabled
      * 
      */
-    public Output<String> getBackupEnabled() {
+    public Output<String> backupEnabled() {
         return this.backupEnabled;
     }
     /**
@@ -69,7 +70,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return Friendly Name
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -83,7 +84,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return Resource Last Operation Name
      * 
      */
-    public Output</* @Nullable */ String> getLastOperationName() {
+    public Output</* @Nullable */ String> lastOperationName() {
         return this.lastOperationName;
     }
     /**
@@ -97,7 +98,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return CloudEndpoint lastWorkflowId
      * 
      */
-    public Output</* @Nullable */ String> getLastWorkflowId() {
+    public Output</* @Nullable */ String> lastWorkflowId() {
         return this.lastWorkflowId;
     }
     /**
@@ -111,7 +112,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -125,7 +126,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return Partnership Id
      * 
      */
-    public Output</* @Nullable */ String> getPartnershipId() {
+    public Output</* @Nullable */ String> partnershipId() {
         return this.partnershipId;
     }
     /**
@@ -139,7 +140,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return CloudEndpoint Provisioning State
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -153,7 +154,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return Storage Account Resource Id
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountResourceId() {
+    public Output</* @Nullable */ String> storageAccountResourceId() {
         return this.storageAccountResourceId;
     }
     /**
@@ -167,7 +168,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return Storage Account Tenant Id
      * 
      */
-    public Output</* @Nullable */ String> getStorageAccountTenantId() {
+    public Output</* @Nullable */ String> storageAccountTenantId() {
         return this.storageAccountTenantId;
     }
     /**
@@ -181,7 +182,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -207,7 +208,7 @@ public class CloudEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudEndpoint(String name, CloudEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagesync:CloudEndpoint", name, args == null ? CloudEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storagesync:CloudEndpoint", name, args == null ? CloudEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CloudEndpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

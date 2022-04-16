@@ -10,6 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.SharedPrivateLinkRes
 import io.pulumi.azurenative.machinelearningservices.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowPublicAccessWhenBehindVnet")
       private final @Nullable Output<Boolean> allowPublicAccessWhenBehindVnet;
 
-    public Output<Boolean> getAllowPublicAccessWhenBehindVnet() {
-        return this.allowPublicAccessWhenBehindVnet == null ? Output.empty() : this.allowPublicAccessWhenBehindVnet;
+    public Output<Boolean> allowPublicAccessWhenBehindVnet() {
+        return this.allowPublicAccessWhenBehindVnet == null ? Codegen.empty() : this.allowPublicAccessWhenBehindVnet;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationInsights")
       private final @Nullable Output<String> applicationInsights;
 
-    public Output<String> getApplicationInsights() {
-        return this.applicationInsights == null ? Output.empty() : this.applicationInsights;
+    public Output<String> applicationInsights() {
+        return this.applicationInsights == null ? Codegen.empty() : this.applicationInsights;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerRegistry")
       private final @Nullable Output<String> containerRegistry;
 
-    public Output<String> getContainerRegistry() {
-        return this.containerRegistry == null ? Output.empty() : this.containerRegistry;
+    public Output<String> containerRegistry() {
+        return this.containerRegistry == null ? Codegen.empty() : this.containerRegistry;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="discoveryUrl")
       private final @Nullable Output<String> discoveryUrl;
 
-    public Output<String> getDiscoveryUrl() {
-        return this.discoveryUrl == null ? Output.empty() : this.discoveryUrl;
+    public Output<String> discoveryUrl() {
+        return this.discoveryUrl == null ? Codegen.empty() : this.discoveryUrl;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertyArgs> encryption;
 
-    public Output<EncryptionPropertyArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<EncryptionPropertyArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+    public Output<String> friendlyName() {
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hbiWorkspace")
       private final @Nullable Output<Boolean> hbiWorkspace;
 
-    public Output<Boolean> getHbiWorkspace() {
-        return this.hbiWorkspace == null ? Output.empty() : this.hbiWorkspace;
+    public Output<Boolean> hbiWorkspace() {
+        return this.hbiWorkspace == null ? Codegen.empty() : this.hbiWorkspace;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
-    public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<IdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageBuildCompute")
       private final @Nullable Output<String> imageBuildCompute;
 
-    public Output<String> getImageBuildCompute() {
-        return this.imageBuildCompute == null ? Output.empty() : this.imageBuildCompute;
+    public Output<String> imageBuildCompute() {
+        return this.imageBuildCompute == null ? Codegen.empty() : this.imageBuildCompute;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyVault")
       private final @Nullable Output<String> keyVault;
 
-    public Output<String> getKeyVault() {
-        return this.keyVault == null ? Output.empty() : this.keyVault;
+    public Output<String> keyVault() {
+        return this.keyVault == null ? Codegen.empty() : this.keyVault;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="primaryUserAssignedIdentity")
       private final @Nullable Output<String> primaryUserAssignedIdentity;
 
-    public Output<String> getPrimaryUserAssignedIdentity() {
-        return this.primaryUserAssignedIdentity == null ? Output.empty() : this.primaryUserAssignedIdentity;
+    public Output<String> primaryUserAssignedIdentity() {
+        return this.primaryUserAssignedIdentity == null ? Codegen.empty() : this.primaryUserAssignedIdentity;
     }
 
     /**
@@ -172,7 +173,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -183,8 +184,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceManagedResourcesSettings")
       private final @Nullable Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
 
-    public Output<ServiceManagedResourcesSettingsArgs> getServiceManagedResourcesSettings() {
-        return this.serviceManagedResourcesSettings == null ? Output.empty() : this.serviceManagedResourcesSettings;
+    public Output<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings() {
+        return this.serviceManagedResourcesSettings == null ? Codegen.empty() : this.serviceManagedResourcesSettings;
     }
 
     /**
@@ -194,8 +195,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sharedPrivateLinkResources")
       private final @Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
 
-    public Output<List<SharedPrivateLinkResourceArgs>> getSharedPrivateLinkResources() {
-        return this.sharedPrivateLinkResources == null ? Output.empty() : this.sharedPrivateLinkResources;
+    public Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources() {
+        return this.sharedPrivateLinkResources == null ? Codegen.empty() : this.sharedPrivateLinkResources;
     }
 
     /**
@@ -205,8 +206,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -216,8 +217,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageAccount")
       private final @Nullable Output<String> storageAccount;
 
-    public Output<String> getStorageAccount() {
-        return this.storageAccount == null ? Output.empty() : this.storageAccount;
+    public Output<String> storageAccount() {
+        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 
     /**
@@ -227,8 +228,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -238,8 +239,8 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
-        return this.workspaceName == null ? Output.empty() : this.workspaceName;
+    public Output<String> workspaceName() {
+        return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
     }
 
     public WorkspaceArgs(
@@ -263,14 +264,14 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<String> storageAccount,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<String> workspaceName) {
-        this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet == null ? Output.ofNullable(false) : allowPublicAccessWhenBehindVnet;
+        this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet == null ? Codegen.ofNullable(false) : allowPublicAccessWhenBehindVnet;
         this.applicationInsights = applicationInsights;
         this.containerRegistry = containerRegistry;
         this.description = description;
         this.discoveryUrl = discoveryUrl;
         this.encryption = encryption;
         this.friendlyName = friendlyName;
-        this.hbiWorkspace = hbiWorkspace == null ? Output.ofNullable(false) : hbiWorkspace;
+        this.hbiWorkspace = hbiWorkspace == null ? Codegen.ofNullable(false) : hbiWorkspace;
         this.identity = identity;
         this.imageBuildCompute = imageBuildCompute;
         this.keyVault = keyVault;
@@ -286,26 +287,26 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.allowPublicAccessWhenBehindVnet = Output.empty();
-        this.applicationInsights = Output.empty();
-        this.containerRegistry = Output.empty();
-        this.description = Output.empty();
-        this.discoveryUrl = Output.empty();
-        this.encryption = Output.empty();
-        this.friendlyName = Output.empty();
-        this.hbiWorkspace = Output.empty();
-        this.identity = Output.empty();
-        this.imageBuildCompute = Output.empty();
-        this.keyVault = Output.empty();
-        this.location = Output.empty();
-        this.primaryUserAssignedIdentity = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceManagedResourcesSettings = Output.empty();
-        this.sharedPrivateLinkResources = Output.empty();
-        this.sku = Output.empty();
-        this.storageAccount = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.allowPublicAccessWhenBehindVnet = Codegen.empty();
+        this.applicationInsights = Codegen.empty();
+        this.containerRegistry = Codegen.empty();
+        this.description = Codegen.empty();
+        this.discoveryUrl = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.hbiWorkspace = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.imageBuildCompute = Codegen.empty();
+        this.keyVault = Codegen.empty();
+        this.location = Codegen.empty();
+        this.primaryUserAssignedIdentity = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceManagedResourcesSettings = Codegen.empty();
+        this.sharedPrivateLinkResources = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.storageAccount = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -371,7 +372,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
-            this.allowPublicAccessWhenBehindVnet = Output.ofNullable(allowPublicAccessWhenBehindVnet);
+            this.allowPublicAccessWhenBehindVnet = Codegen.ofNullable(allowPublicAccessWhenBehindVnet);
             return this;
         }
         public Builder applicationInsights(@Nullable Output<String> applicationInsights) {
@@ -379,7 +380,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationInsights(@Nullable String applicationInsights) {
-            this.applicationInsights = Output.ofNullable(applicationInsights);
+            this.applicationInsights = Codegen.ofNullable(applicationInsights);
             return this;
         }
         public Builder containerRegistry(@Nullable Output<String> containerRegistry) {
@@ -387,7 +388,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerRegistry(@Nullable String containerRegistry) {
-            this.containerRegistry = Output.ofNullable(containerRegistry);
+            this.containerRegistry = Codegen.ofNullable(containerRegistry);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -395,7 +396,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder discoveryUrl(@Nullable Output<String> discoveryUrl) {
@@ -403,7 +404,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder discoveryUrl(@Nullable String discoveryUrl) {
-            this.discoveryUrl = Output.ofNullable(discoveryUrl);
+            this.discoveryUrl = Codegen.ofNullable(discoveryUrl);
             return this;
         }
         public Builder encryption(@Nullable Output<EncryptionPropertyArgs> encryption) {
@@ -411,7 +412,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable EncryptionPropertyArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -419,7 +420,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder hbiWorkspace(@Nullable Output<Boolean> hbiWorkspace) {
@@ -427,7 +428,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hbiWorkspace(@Nullable Boolean hbiWorkspace) {
-            this.hbiWorkspace = Output.ofNullable(hbiWorkspace);
+            this.hbiWorkspace = Codegen.ofNullable(hbiWorkspace);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -435,7 +436,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder imageBuildCompute(@Nullable Output<String> imageBuildCompute) {
@@ -443,7 +444,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageBuildCompute(@Nullable String imageBuildCompute) {
-            this.imageBuildCompute = Output.ofNullable(imageBuildCompute);
+            this.imageBuildCompute = Codegen.ofNullable(imageBuildCompute);
             return this;
         }
         public Builder keyVault(@Nullable Output<String> keyVault) {
@@ -451,7 +452,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVault(@Nullable String keyVault) {
-            this.keyVault = Output.ofNullable(keyVault);
+            this.keyVault = Codegen.ofNullable(keyVault);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -459,7 +460,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder primaryUserAssignedIdentity(@Nullable Output<String> primaryUserAssignedIdentity) {
@@ -467,7 +468,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
-            this.primaryUserAssignedIdentity = Output.ofNullable(primaryUserAssignedIdentity);
+            this.primaryUserAssignedIdentity = Codegen.ofNullable(primaryUserAssignedIdentity);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -483,7 +484,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsArgs serviceManagedResourcesSettings) {
-            this.serviceManagedResourcesSettings = Output.ofNullable(serviceManagedResourcesSettings);
+            this.serviceManagedResourcesSettings = Codegen.ofNullable(serviceManagedResourcesSettings);
             return this;
         }
         public Builder sharedPrivateLinkResources(@Nullable Output<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources) {
@@ -491,7 +492,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceArgs> sharedPrivateLinkResources) {
-            this.sharedPrivateLinkResources = Output.ofNullable(sharedPrivateLinkResources);
+            this.sharedPrivateLinkResources = Codegen.ofNullable(sharedPrivateLinkResources);
             return this;
         }
         public Builder sharedPrivateLinkResources(SharedPrivateLinkResourceArgs... sharedPrivateLinkResources) {
@@ -502,7 +503,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder storageAccount(@Nullable Output<String> storageAccount) {
@@ -510,7 +511,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccount(@Nullable String storageAccount) {
-            this.storageAccount = Output.ofNullable(storageAccount);
+            this.storageAccount = Codegen.ofNullable(storageAccount);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -518,7 +519,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
@@ -526,7 +527,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Output.ofNullable(workspaceName);
+            this.workspaceName = Codegen.ofNullable(workspaceName);
             return this;
         }        public WorkspaceArgs build() {
             return new WorkspaceArgs(allowPublicAccessWhenBehindVnet, applicationInsights, containerRegistry, description, discoveryUrl, encryption, friendlyName, hbiWorkspace, identity, imageBuildCompute, keyVault, location, primaryUserAssignedIdentity, resourceGroupName, serviceManagedResourcesSettings, sharedPrivateLinkResources, sku, storageAccount, tags, workspaceName);

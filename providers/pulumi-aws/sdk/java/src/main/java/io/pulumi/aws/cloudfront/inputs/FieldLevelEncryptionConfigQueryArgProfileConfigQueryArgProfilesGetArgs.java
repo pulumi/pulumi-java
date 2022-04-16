@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     @Import(name="items")
       private final @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items;
 
-    public Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+    public Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items() {
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs(@Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs>> items) {
@@ -27,7 +28,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     }
 
     private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesGetArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
             return this;
         }
         public Builder items(@Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemGetArgs... items) {

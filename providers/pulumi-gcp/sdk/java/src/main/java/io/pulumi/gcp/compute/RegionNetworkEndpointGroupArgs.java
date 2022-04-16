@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunArgs;
@@ -26,8 +27,8 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     @Import(name="appEngine")
       private final @Nullable Output<RegionNetworkEndpointGroupAppEngineArgs> appEngine;
 
-    public Output<RegionNetworkEndpointGroupAppEngineArgs> getAppEngine() {
-        return this.appEngine == null ? Output.empty() : this.appEngine;
+    public Output<RegionNetworkEndpointGroupAppEngineArgs> appEngine() {
+        return this.appEngine == null ? Codegen.empty() : this.appEngine;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     @Import(name="cloudFunction")
       private final @Nullable Output<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction;
 
-    public Output<RegionNetworkEndpointGroupCloudFunctionArgs> getCloudFunction() {
-        return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
+    public Output<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction() {
+        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     @Import(name="cloudRun")
       private final @Nullable Output<RegionNetworkEndpointGroupCloudRunArgs> cloudRun;
 
-    public Output<RegionNetworkEndpointGroupCloudRunArgs> getCloudRun() {
-        return this.cloudRun == null ? Output.empty() : this.cloudRun;
+    public Output<RegionNetworkEndpointGroupCloudRunArgs> cloudRun() {
+        return this.cloudRun == null ? Codegen.empty() : this.cloudRun;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     @Import(name="networkEndpointType")
       private final @Nullable Output<String> networkEndpointType;
 
-    public Output<String> getNetworkEndpointType() {
-        return this.networkEndpointType == null ? Output.empty() : this.networkEndpointType;
+    public Output<String> networkEndpointType() {
+        return this.networkEndpointType == null ? Codegen.empty() : this.networkEndpointType;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
@@ -141,14 +142,14 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     }
 
     private RegionNetworkEndpointGroupArgs() {
-        this.appEngine = Output.empty();
-        this.cloudFunction = Output.empty();
-        this.cloudRun = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.networkEndpointType = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.appEngine = Codegen.empty();
+        this.cloudFunction = Codegen.empty();
+        this.cloudRun = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkEndpointType = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder appEngine(@Nullable RegionNetworkEndpointGroupAppEngineArgs appEngine) {
-            this.appEngine = Output.ofNullable(appEngine);
+            this.appEngine = Codegen.ofNullable(appEngine);
             return this;
         }
         public Builder cloudFunction(@Nullable Output<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
@@ -198,7 +199,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cloudFunction(@Nullable RegionNetworkEndpointGroupCloudFunctionArgs cloudFunction) {
-            this.cloudFunction = Output.ofNullable(cloudFunction);
+            this.cloudFunction = Codegen.ofNullable(cloudFunction);
             return this;
         }
         public Builder cloudRun(@Nullable Output<RegionNetworkEndpointGroupCloudRunArgs> cloudRun) {
@@ -206,7 +207,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cloudRun(@Nullable RegionNetworkEndpointGroupCloudRunArgs cloudRun) {
-            this.cloudRun = Output.ofNullable(cloudRun);
+            this.cloudRun = Codegen.ofNullable(cloudRun);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -214,7 +215,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -222,7 +223,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkEndpointType(@Nullable Output<String> networkEndpointType) {
@@ -230,7 +231,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder networkEndpointType(@Nullable String networkEndpointType) {
-            this.networkEndpointType = Output.ofNullable(networkEndpointType);
+            this.networkEndpointType = Codegen.ofNullable(networkEndpointType);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -238,7 +239,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {

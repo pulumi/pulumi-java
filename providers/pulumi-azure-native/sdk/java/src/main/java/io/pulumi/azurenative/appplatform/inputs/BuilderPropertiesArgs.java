@@ -7,6 +7,7 @@ import io.pulumi.azurenative.appplatform.inputs.BuildpacksGroupPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.StackPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="buildpackGroups")
       private final @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
 
-    public Output<List<BuildpacksGroupPropertiesArgs>> getBuildpackGroups() {
-        return this.buildpackGroups == null ? Output.empty() : this.buildpackGroups;
+    public Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups() {
+        return this.buildpackGroups == null ? Codegen.empty() : this.buildpackGroups;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="stack")
       private final @Nullable Output<StackPropertiesArgs> stack;
 
-    public Output<StackPropertiesArgs> getStack() {
-        return this.stack == null ? Output.empty() : this.stack;
+    public Output<StackPropertiesArgs> stack() {
+        return this.stack == null ? Codegen.empty() : this.stack;
     }
 
     public BuilderPropertiesArgs(
@@ -50,8 +51,8 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BuilderPropertiesArgs() {
-        this.buildpackGroups = Output.empty();
-        this.stack = Output.empty();
+        this.buildpackGroups = Codegen.empty();
+        this.stack = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder buildpackGroups(@Nullable List<BuildpacksGroupPropertiesArgs> buildpackGroups) {
-            this.buildpackGroups = Output.ofNullable(buildpackGroups);
+            this.buildpackGroups = Codegen.ofNullable(buildpackGroups);
             return this;
         }
         public Builder buildpackGroups(BuildpacksGroupPropertiesArgs... buildpackGroups) {
@@ -92,7 +93,7 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder stack(@Nullable StackPropertiesArgs stack) {
-            this.stack = Output.ofNullable(stack);
+            this.stack = Codegen.ofNullable(stack);
             return this;
         }        public BuilderPropertiesArgs build() {
             return new BuilderPropertiesArgs(buildpackGroups, stack);

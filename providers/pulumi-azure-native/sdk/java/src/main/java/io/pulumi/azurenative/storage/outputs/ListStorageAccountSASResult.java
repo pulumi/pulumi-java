@@ -24,7 +24,7 @@ public final class ListStorageAccountSASResult {
      * List SAS credentials of storage account.
      * 
     */
-    public String getAccountSasToken() {
+    public String accountSasToken() {
         return this.accountSasToken;
     }
 

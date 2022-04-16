@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.composer_v1.inputs.AllowedIpRangeArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
     @Import(name="allowedIpRanges")
       private final @Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges;
 
-    public Output<List<AllowedIpRangeArgs>> getAllowedIpRanges() {
-        return this.allowedIpRanges == null ? Output.empty() : this.allowedIpRanges;
+    public Output<List<AllowedIpRangeArgs>> allowedIpRanges() {
+        return this.allowedIpRanges == null ? Codegen.empty() : this.allowedIpRanges;
     }
 
     public WebServerNetworkAccessControlArgs(@Nullable Output<List<AllowedIpRangeArgs>> allowedIpRanges) {
@@ -35,7 +36,7 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
     }
 
     private WebServerNetworkAccessControlArgs() {
-        this.allowedIpRanges = Output.empty();
+        this.allowedIpRanges = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class WebServerNetworkAccessControlArgs extends io.pulumi.resources
             return this;
         }
         public Builder allowedIpRanges(@Nullable List<AllowedIpRangeArgs> allowedIpRanges) {
-            this.allowedIpRanges = Output.ofNullable(allowedIpRanges);
+            this.allowedIpRanges = Codegen.ofNullable(allowedIpRanges);
             return this;
         }
         public Builder allowedIpRanges(AllowedIpRangeArgs... allowedIpRanges) {

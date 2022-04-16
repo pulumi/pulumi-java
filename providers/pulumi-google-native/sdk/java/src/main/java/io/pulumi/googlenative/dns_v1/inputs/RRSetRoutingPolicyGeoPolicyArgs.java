@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,15 +28,15 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
     @Import(name="items")
       private final @Nullable Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items;
 
-    public Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+    public Output<List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs>> items() {
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     public RRSetRoutingPolicyGeoPolicyArgs(
@@ -46,8 +47,8 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
     }
 
     private RRSetRoutingPolicyGeoPolicyArgs() {
-        this.items = Output.empty();
-        this.kind = Output.empty();
+        this.items = Codegen.empty();
+        this.kind = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder items(@Nullable List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs... items) {
@@ -88,7 +89,7 @@ public final class RRSetRoutingPolicyGeoPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }        public RRSetRoutingPolicyGeoPolicyArgs build() {
             return new RRSetRoutingPolicyGeoPolicyArgs(items, kind);

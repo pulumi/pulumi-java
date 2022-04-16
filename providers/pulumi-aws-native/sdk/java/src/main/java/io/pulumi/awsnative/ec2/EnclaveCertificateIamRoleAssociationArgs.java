@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
     @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
-    public Output<String> getCertificateArn() {
+    public Output<String> certificateArn() {
         return this.certificateArn;
     }
 
@@ -31,7 +32,7 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -43,8 +44,8 @@ public final class EnclaveCertificateIamRoleAssociationArgs extends io.pulumi.re
     }
 
     private EnclaveCertificateIamRoleAssociationArgs() {
-        this.certificateArn = Output.empty();
-        this.roleArn = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {

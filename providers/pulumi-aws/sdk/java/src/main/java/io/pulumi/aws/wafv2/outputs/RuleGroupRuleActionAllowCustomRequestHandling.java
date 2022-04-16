@@ -25,7 +25,7 @@ public final class RuleGroupRuleActionAllowCustomRequestHandling {
      * The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
      * 
     */
-    public List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader> getInsertHeaders() {
+    public List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader> insertHeaders() {
         return this.insertHeaders;
     }
 

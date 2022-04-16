@@ -10,6 +10,7 @@ import io.pulumi.aws.ec2.outputs.VpcIpamPoolCidrCidrAuthorizationContext;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -45,7 +46,7 @@ public class VpcIpamPoolCidr extends io.pulumi.resources.CustomResource {
      * @return The CIDR you want to assign to the pool.
      * 
      */
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
     /**
@@ -59,7 +60,7 @@ public class VpcIpamPoolCidr extends io.pulumi.resources.CustomResource {
      * @return A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. This is not stored in the state file. See cidr_authorization_context for more information.
      * 
      */
-    public Output</* @Nullable */ VpcIpamPoolCidrCidrAuthorizationContext> getCidrAuthorizationContext() {
+    public Output</* @Nullable */ VpcIpamPoolCidrCidrAuthorizationContext> cidrAuthorizationContext() {
         return this.cidrAuthorizationContext;
     }
     /**
@@ -73,7 +74,7 @@ public class VpcIpamPoolCidr extends io.pulumi.resources.CustomResource {
      * @return The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -99,7 +100,7 @@ public class VpcIpamPoolCidr extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcIpamPoolCidr(String name, VpcIpamPoolCidrArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcIpamPoolCidr:VpcIpamPoolCidr", name, args == null ? VpcIpamPoolCidrArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcIpamPoolCidr:VpcIpamPoolCidr", name, args == null ? VpcIpamPoolCidrArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcIpamPoolCidr(String name, Output<String> id, @Nullable VpcIpamPoolCidrState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

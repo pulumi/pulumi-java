@@ -25,7 +25,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
     @Import(name="bigqueryDestination", required=true)
       private final BigQueryDestinationResponse bigqueryDestination;
 
-    public BigQueryDestinationResponse getBigqueryDestination() {
+    public BigQueryDestinationResponse bigqueryDestination() {
         return this.bigqueryDestination;
     }
 
@@ -36,7 +36,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
     @Import(name="consumptionMeteringConfig", required=true)
       private final ConsumptionMeteringConfigResponse consumptionMeteringConfig;
 
-    public ConsumptionMeteringConfigResponse getConsumptionMeteringConfig() {
+    public ConsumptionMeteringConfigResponse consumptionMeteringConfig() {
         return this.consumptionMeteringConfig;
     }
 
@@ -47,7 +47,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
     @Import(name="enableNetworkEgressMetering", required=true)
       private final Boolean enableNetworkEgressMetering;
 
-    public Boolean getEnableNetworkEgressMetering() {
+    public Boolean enableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }
 

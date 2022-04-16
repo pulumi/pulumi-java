@@ -9,6 +9,7 @@ import io.pulumi.aws.dms.inputs.ReplicationSubnetGroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +34,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
     @Export(name="replicationSubnetGroupArn", type=String.class, parameters={})
     private Output<String> replicationSubnetGroupArn;
 
-    public Output<String> getReplicationSubnetGroupArn() {
+    public Output<String> replicationSubnetGroupArn() {
         return this.replicationSubnetGroupArn;
     }
     /**
@@ -47,7 +48,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @return The description for the subnet group.
      * 
      */
-    public Output<String> getReplicationSubnetGroupDescription() {
+    public Output<String> replicationSubnetGroupDescription() {
         return this.replicationSubnetGroupDescription;
     }
     /**
@@ -61,7 +62,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @return The name for the replication subnet group. This value is stored as a lowercase string.
      * 
      */
-    public Output<String> getReplicationSubnetGroupId() {
+    public Output<String> replicationSubnetGroupId() {
         return this.replicationSubnetGroupId;
     }
     /**
@@ -75,7 +76,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @return A list of the EC2 subnet IDs for the subnet group.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -89,7 +90,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -103,7 +104,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -117,7 +118,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @return The ID of the VPC the subnet group is in.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -143,7 +144,7 @@ public class ReplicationSubnetGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationSubnetGroup(String name, ReplicationSubnetGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:dms/replicationSubnetGroup:ReplicationSubnetGroup", name, args == null ? ReplicationSubnetGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:dms/replicationSubnetGroup:ReplicationSubnetGroup", name, args == null ? ReplicationSubnetGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationSubnetGroup(String name, Output<String> id, @Nullable ReplicationSubnetGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

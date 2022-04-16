@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
     @Import(name="disableWWWAuthenticate")
       private final @Nullable Output<Boolean> disableWWWAuthenticate;
 
-    public Output<Boolean> getDisableWWWAuthenticate() {
-        return this.disableWWWAuthenticate == null ? Output.empty() : this.disableWWWAuthenticate;
+    public Output<Boolean> disableWWWAuthenticate() {
+        return this.disableWWWAuthenticate == null ? Codegen.empty() : this.disableWWWAuthenticate;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
     @Import(name="loginParameters")
       private final @Nullable Output<List<String>> loginParameters;
 
-    public Output<List<String>> getLoginParameters() {
-        return this.loginParameters == null ? Output.empty() : this.loginParameters;
+    public Output<List<String>> loginParameters() {
+        return this.loginParameters == null ? Codegen.empty() : this.loginParameters;
     }
 
     public AzureActiveDirectoryLoginArgs(
@@ -51,8 +52,8 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
     }
 
     private AzureActiveDirectoryLoginArgs() {
-        this.disableWWWAuthenticate = Output.empty();
-        this.loginParameters = Output.empty();
+        this.disableWWWAuthenticate = Codegen.empty();
+        this.loginParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder disableWWWAuthenticate(@Nullable Boolean disableWWWAuthenticate) {
-            this.disableWWWAuthenticate = Output.ofNullable(disableWWWAuthenticate);
+            this.disableWWWAuthenticate = Codegen.ofNullable(disableWWWAuthenticate);
             return this;
         }
         public Builder loginParameters(@Nullable Output<List<String>> loginParameters) {
@@ -90,7 +91,7 @@ public final class AzureActiveDirectoryLoginArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder loginParameters(@Nullable List<String> loginParameters) {
-            this.loginParameters = Output.ofNullable(loginParameters);
+            this.loginParameters = Codegen.ofNullable(loginParameters);
             return this;
         }
         public Builder loginParameters(String... loginParameters) {

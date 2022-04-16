@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigBackendConfigArgs;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ApiConfigGatewayConfigArgs extends io.pulumi.resources.Resour
     @Import(name="backendConfig", required=true)
       private final Output<ApiConfigGatewayConfigBackendConfigArgs> backendConfig;
 
-    public Output<ApiConfigGatewayConfigBackendConfigArgs> getBackendConfig() {
+    public Output<ApiConfigGatewayConfigBackendConfigArgs> backendConfig() {
         return this.backendConfig;
     }
 
@@ -30,7 +31,7 @@ public final class ApiConfigGatewayConfigArgs extends io.pulumi.resources.Resour
     }
 
     private ApiConfigGatewayConfigArgs() {
-        this.backendConfig = Output.empty();
+        this.backendConfig = Codegen.empty();
     }
 
     public static Builder builder() {

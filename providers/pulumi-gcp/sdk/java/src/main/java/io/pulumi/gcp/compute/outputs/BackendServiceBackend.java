@@ -150,7 +150,7 @@ public final class BackendServiceBackend {
      * Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
      * 
     */
-    public Optional<String> getBalancingMode() {
+    public Optional<String> balancingMode() {
         return Optional.ofNullable(this.balancingMode);
     }
     /**
@@ -162,7 +162,7 @@ public final class BackendServiceBackend {
      * 0% of its available Capacity. Valid range is [0.0,1.0].
      * 
     */
-    public Optional<Double> getCapacityScaler() {
+    public Optional<Double> capacityScaler() {
         return Optional.ofNullable(this.capacityScaler);
     }
     /**
@@ -170,7 +170,7 @@ public final class BackendServiceBackend {
      * Provide this property when you create the resource.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -190,7 +190,7 @@ public final class BackendServiceBackend {
      * partial URL.
      * 
     */
-    public String getGroup() {
+    public String group() {
         return this.group;
     }
     /**
@@ -198,7 +198,7 @@ public final class BackendServiceBackend {
      * Defaults to 1024.
      * 
     */
-    public Optional<Integer> getMaxConnections() {
+    public Optional<Integer> maxConnections() {
         return Optional.ofNullable(this.maxConnections);
     }
     /**
@@ -210,7 +210,7 @@ public final class BackendServiceBackend {
      * maxConnections or maxConnectionsPerEndpoint must be set.
      * 
     */
-    public Optional<Integer> getMaxConnectionsPerEndpoint() {
+    public Optional<Integer> maxConnectionsPerEndpoint() {
         return Optional.ofNullable(this.maxConnectionsPerEndpoint);
     }
     /**
@@ -222,7 +222,7 @@ public final class BackendServiceBackend {
      * maxConnectionsPerInstance must be set.
      * 
     */
-    public Optional<Integer> getMaxConnectionsPerInstance() {
+    public Optional<Integer> maxConnectionsPerInstance() {
         return Optional.ofNullable(this.maxConnectionsPerInstance);
     }
     /**
@@ -233,7 +233,7 @@ public final class BackendServiceBackend {
      * group type, must be set.
      * 
     */
-    public Optional<Integer> getMaxRate() {
+    public Optional<Integer> maxRate() {
         return Optional.ofNullable(this.maxRate);
     }
     /**
@@ -243,7 +243,7 @@ public final class BackendServiceBackend {
      * either maxRate or maxRatePerEndpoint must be set.
      * 
     */
-    public Optional<Double> getMaxRatePerEndpoint() {
+    public Optional<Double> maxRatePerEndpoint() {
         return Optional.ofNullable(this.maxRatePerEndpoint);
     }
     /**
@@ -253,7 +253,7 @@ public final class BackendServiceBackend {
      * either maxRate or maxRatePerInstance must be set.
      * 
     */
-    public Optional<Double> getMaxRatePerInstance() {
+    public Optional<Double> maxRatePerInstance() {
         return Optional.ofNullable(this.maxRatePerInstance);
     }
     /**
@@ -261,7 +261,7 @@ public final class BackendServiceBackend {
      * CPU utilization target for the group. Valid range is [0.0, 1.0].
      * 
     */
-    public Optional<Double> getMaxUtilization() {
+    public Optional<Double> maxUtilization() {
         return Optional.ofNullable(this.maxUtilization);
     }
 

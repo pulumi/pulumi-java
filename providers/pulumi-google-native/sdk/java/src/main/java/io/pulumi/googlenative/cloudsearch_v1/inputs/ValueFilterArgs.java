@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.ValueArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatorName")
       private final @Nullable Output<String> operatorName;
 
-    public Output<String> getOperatorName() {
-        return this.operatorName == null ? Output.empty() : this.operatorName;
+    public Output<String> operatorName() {
+        return this.operatorName == null ? Codegen.empty() : this.operatorName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<ValueArgs> value;
 
-    public Output<ValueArgs> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<ValueArgs> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ValueFilterArgs(
@@ -45,8 +46,8 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ValueFilterArgs() {
-        this.operatorName = Output.empty();
-        this.value = Output.empty();
+        this.operatorName = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Output.ofNullable(operatorName);
+            this.operatorName = Codegen.ofNullable(operatorName);
             return this;
         }
         public Builder value(@Nullable Output<ValueArgs> value) {
@@ -84,7 +85,7 @@ public final class ValueFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable ValueArgs value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ValueFilterArgs build() {
             return new ValueFilterArgs(operatorName, value);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
@@ -32,8 +33,8 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public TransferJobTransferSpecGcsDataSinkArgs(
@@ -44,8 +45,8 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
     }
 
     private TransferJobTransferSpecGcsDataSinkArgs() {
-        this.bucketName = Output.empty();
-        this.path = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class TransferJobTransferSpecGcsDataSinkArgs extends io.pulumi.reso
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public TransferJobTransferSpecGcsDataSinkArgs build() {
             return new TransferJobTransferSpecGcsDataSinkArgs(bucketName, path);

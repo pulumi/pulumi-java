@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets the name of the corresponding resource in Kubernetes.
      * 
      */
-    public Output<String> getCustomResourceName() {
+    public Output<String> customResourceName() {
         return this.customResourceName;
     }
     /**
@@ -59,7 +60,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the datastore ARM ids.
      * 
      */
-    public Output<List<String>> getDatastoreIds() {
+    public Output<List<String>> datastoreIds() {
         return this.datastoreIds;
     }
     /**
@@ -73,7 +74,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the extended location.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> getExtendedLocation() {
+    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
         return this.extendedLocation;
     }
     /**
@@ -87,7 +88,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the inventory Item ID for the cluster.
      * 
      */
-    public Output</* @Nullable */ String> getInventoryItemId() {
+    public Output</* @Nullable */ String> inventoryItemId() {
         return this.inventoryItemId;
     }
     /**
@@ -101,7 +102,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -115,7 +116,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -129,7 +130,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the vCenter Managed Object name for the cluster.
      * 
      */
-    public Output<String> getMoName() {
+    public Output<String> moName() {
         return this.moName;
     }
     /**
@@ -143,7 +144,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the cluster.
      * 
      */
-    public Output</* @Nullable */ String> getMoRefId() {
+    public Output</* @Nullable */ String> moRefId() {
         return this.moRefId;
     }
     /**
@@ -157,7 +158,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -171,7 +172,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the network ARM ids.
      * 
      */
-    public Output<List<String>> getNetworkIds() {
+    public Output<List<String>> networkIds() {
         return this.networkIds;
     }
     /**
@@ -185,7 +186,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -199,7 +200,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The resource status information.
      * 
      */
-    public Output<List<ResourceStatusResponse>> getStatuses() {
+    public Output<List<ResourceStatusResponse>> statuses() {
         return this.statuses;
     }
     /**
@@ -213,7 +214,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The system data.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -227,7 +228,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -241,7 +242,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -255,7 +256,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets a unique identifier for this resource.
      * 
      */
-    public Output<String> getUuid() {
+    public Output<String> uuid() {
         return this.uuid;
     }
     /**
@@ -269,7 +270,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the ARM Id of the vCenter resource in which this cluster resides.
      * 
      */
-    public Output</* @Nullable */ String> getVCenterId() {
+    public Output</* @Nullable */ String> vCenterId() {
         return this.vCenterId;
     }
 
@@ -295,7 +296,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:connectedvmwarevsphere:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:connectedvmwarevsphere:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

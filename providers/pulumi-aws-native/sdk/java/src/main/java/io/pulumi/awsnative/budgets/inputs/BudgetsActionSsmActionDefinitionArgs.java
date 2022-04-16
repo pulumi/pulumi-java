@@ -6,6 +6,7 @@ package io.pulumi.awsnative.budgets.inputs;
 import io.pulumi.awsnative.budgets.enums.BudgetsActionSsmActionDefinitionSubtype;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,21 +19,21 @@ public final class BudgetsActionSsmActionDefinitionArgs extends io.pulumi.resour
     @Import(name="instanceIds", required=true)
       private final Output<List<String>> instanceIds;
 
-    public Output<List<String>> getInstanceIds() {
+    public Output<List<String>> instanceIds() {
         return this.instanceIds;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="subtype", required=true)
       private final Output<BudgetsActionSsmActionDefinitionSubtype> subtype;
 
-    public Output<BudgetsActionSsmActionDefinitionSubtype> getSubtype() {
+    public Output<BudgetsActionSsmActionDefinitionSubtype> subtype() {
         return this.subtype;
     }
 
@@ -46,9 +47,9 @@ public final class BudgetsActionSsmActionDefinitionArgs extends io.pulumi.resour
     }
 
     private BudgetsActionSsmActionDefinitionArgs() {
-        this.instanceIds = Output.empty();
-        this.region = Output.empty();
-        this.subtype = Output.empty();
+        this.instanceIds = Codegen.empty();
+        this.region = Codegen.empty();
+        this.subtype = Codegen.empty();
     }
 
     public static Builder builder() {

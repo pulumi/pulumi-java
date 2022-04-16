@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.inputs.BodyDiagnosticSettingsArgs;
 import io.pulumi.azurenative.apimanagement.inputs.DataMaskingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     @Import(name="body")
       private final @Nullable Output<BodyDiagnosticSettingsArgs> body;
 
-    public Output<BodyDiagnosticSettingsArgs> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<BodyDiagnosticSettingsArgs> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     @Import(name="dataMasking")
       private final @Nullable Output<DataMaskingArgs> dataMasking;
 
-    public Output<DataMaskingArgs> getDataMasking() {
-        return this.dataMasking == null ? Output.empty() : this.dataMasking;
+    public Output<DataMaskingArgs> dataMasking() {
+        return this.dataMasking == null ? Codegen.empty() : this.dataMasking;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<String>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     public HttpMessageDiagnosticArgs(
@@ -64,9 +65,9 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
     }
 
     private HttpMessageDiagnosticArgs() {
-        this.body = Output.empty();
-        this.dataMasking = Output.empty();
-        this.headers = Output.empty();
+        this.body = Codegen.empty();
+        this.dataMasking = Codegen.empty();
+        this.headers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder body(@Nullable BodyDiagnosticSettingsArgs body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder dataMasking(@Nullable Output<DataMaskingArgs> dataMasking) {
@@ -106,7 +107,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dataMasking(@Nullable DataMaskingArgs dataMasking) {
-            this.dataMasking = Output.ofNullable(dataMasking);
+            this.dataMasking = Codegen.ofNullable(dataMasking);
             return this;
         }
         public Builder headers(@Nullable Output<List<String>> headers) {
@@ -114,7 +115,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(String... headers) {

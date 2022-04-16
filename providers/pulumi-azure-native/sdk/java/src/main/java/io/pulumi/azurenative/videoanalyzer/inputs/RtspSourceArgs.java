@@ -9,6 +9,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.UnsecuredEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoint", required=true)
       private final Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
 
-    public Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> getEndpoint() {
+    public Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint() {
         return this.endpoint;
     }
 
@@ -40,7 +41,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -51,8 +52,8 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transport")
       private final @Nullable Output<Either<String,RtspTransport>> transport;
 
-    public Output<Either<String,RtspTransport>> getTransport() {
-        return this.transport == null ? Output.empty() : this.transport;
+    public Output<Either<String,RtspTransport>> transport() {
+        return this.transport == null ? Codegen.empty() : this.transport;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -79,10 +80,10 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RtspSourceArgs() {
-        this.endpoint = Output.empty();
-        this.name = Output.empty();
-        this.transport = Output.empty();
-        this.type = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.transport = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transport(@Nullable Either<String,RtspTransport> transport) {
-            this.transport = Output.ofNullable(transport);
+            this.transport = Codegen.ofNullable(transport);
             return this;
         }
         public Builder type(Output<String> type) {

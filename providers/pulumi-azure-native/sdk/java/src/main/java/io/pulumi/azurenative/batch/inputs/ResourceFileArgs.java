@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoStorageContainerName")
       private final @Nullable Output<String> autoStorageContainerName;
 
-    public Output<String> getAutoStorageContainerName() {
-        return this.autoStorageContainerName == null ? Output.empty() : this.autoStorageContainerName;
+    public Output<String> autoStorageContainerName() {
+        return this.autoStorageContainerName == null ? Codegen.empty() : this.autoStorageContainerName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="blobPrefix")
       private final @Nullable Output<String> blobPrefix;
 
-    public Output<String> getBlobPrefix() {
-        return this.blobPrefix == null ? Output.empty() : this.blobPrefix;
+    public Output<String> blobPrefix() {
+        return this.blobPrefix == null ? Codegen.empty() : this.blobPrefix;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileMode")
       private final @Nullable Output<String> fileMode;
 
-    public Output<String> getFileMode() {
-        return this.fileMode == null ? Output.empty() : this.fileMode;
+    public Output<String> fileMode() {
+        return this.fileMode == null ? Codegen.empty() : this.fileMode;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
-    public Output<String> getFilePath() {
-        return this.filePath == null ? Output.empty() : this.filePath;
+    public Output<String> filePath() {
+        return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpUrl")
       private final @Nullable Output<String> httpUrl;
 
-    public Output<String> getHttpUrl() {
-        return this.httpUrl == null ? Output.empty() : this.httpUrl;
+    public Output<String> httpUrl() {
+        return this.httpUrl == null ? Codegen.empty() : this.httpUrl;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageContainerUrl")
       private final @Nullable Output<String> storageContainerUrl;
 
-    public Output<String> getStorageContainerUrl() {
-        return this.storageContainerUrl == null ? Output.empty() : this.storageContainerUrl;
+    public Output<String> storageContainerUrl() {
+        return this.storageContainerUrl == null ? Codegen.empty() : this.storageContainerUrl;
     }
 
     public ResourceFileArgs(
@@ -96,12 +97,12 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceFileArgs() {
-        this.autoStorageContainerName = Output.empty();
-        this.blobPrefix = Output.empty();
-        this.fileMode = Output.empty();
-        this.filePath = Output.empty();
-        this.httpUrl = Output.empty();
-        this.storageContainerUrl = Output.empty();
+        this.autoStorageContainerName = Codegen.empty();
+        this.blobPrefix = Codegen.empty();
+        this.fileMode = Codegen.empty();
+        this.filePath = Codegen.empty();
+        this.httpUrl = Codegen.empty();
+        this.storageContainerUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoStorageContainerName(@Nullable String autoStorageContainerName) {
-            this.autoStorageContainerName = Output.ofNullable(autoStorageContainerName);
+            this.autoStorageContainerName = Codegen.ofNullable(autoStorageContainerName);
             return this;
         }
         public Builder blobPrefix(@Nullable Output<String> blobPrefix) {
@@ -147,7 +148,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobPrefix(@Nullable String blobPrefix) {
-            this.blobPrefix = Output.ofNullable(blobPrefix);
+            this.blobPrefix = Codegen.ofNullable(blobPrefix);
             return this;
         }
         public Builder fileMode(@Nullable Output<String> fileMode) {
@@ -155,7 +156,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileMode(@Nullable String fileMode) {
-            this.fileMode = Output.ofNullable(fileMode);
+            this.fileMode = Codegen.ofNullable(fileMode);
             return this;
         }
         public Builder filePath(@Nullable Output<String> filePath) {
@@ -163,7 +164,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Output.ofNullable(filePath);
+            this.filePath = Codegen.ofNullable(filePath);
             return this;
         }
         public Builder httpUrl(@Nullable Output<String> httpUrl) {
@@ -171,7 +172,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpUrl(@Nullable String httpUrl) {
-            this.httpUrl = Output.ofNullable(httpUrl);
+            this.httpUrl = Codegen.ofNullable(httpUrl);
             return this;
         }
         public Builder storageContainerUrl(@Nullable Output<String> storageContainerUrl) {
@@ -179,7 +180,7 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
-            this.storageContainerUrl = Output.ofNullable(storageContainerUrl);
+            this.storageContainerUrl = Codegen.ofNullable(storageContainerUrl);
             return this;
         }        public ResourceFileArgs build() {
             return new ResourceFileArgs(autoStorageContainerName, blobPrefix, fileMode, filePath, httpUrl, storageContainerUrl);

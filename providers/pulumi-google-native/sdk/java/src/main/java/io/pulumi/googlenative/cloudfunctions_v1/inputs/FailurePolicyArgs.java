@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.RetryArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="retry")
       private final @Nullable Output<RetryArgs> retry;
 
-    public Output<RetryArgs> getRetry() {
-        return this.retry == null ? Output.empty() : this.retry;
+    public Output<RetryArgs> retry() {
+        return this.retry == null ? Codegen.empty() : this.retry;
     }
 
     public FailurePolicyArgs(@Nullable Output<RetryArgs> retry) {
@@ -34,7 +35,7 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FailurePolicyArgs() {
-        this.retry = Output.empty();
+        this.retry = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retry(@Nullable RetryArgs retry) {
-            this.retry = Output.ofNullable(retry);
+            this.retry = Codegen.ofNullable(retry);
             return this;
         }        public FailurePolicyArgs build() {
             return new FailurePolicyArgs(retry);

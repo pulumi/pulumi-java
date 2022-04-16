@@ -5,6 +5,7 @@ package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+    public Output<String> certificate() {
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
     @Import(name="certificateAuthorityArn")
       private final @Nullable Output<String> certificateAuthorityArn;
 
-    public Output<String> getCertificateAuthorityArn() {
-        return this.certificateAuthorityArn == null ? Output.empty() : this.certificateAuthorityArn;
+    public Output<String> certificateAuthorityArn() {
+        return this.certificateAuthorityArn == null ? Codegen.empty() : this.certificateAuthorityArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
     @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
-    public Output<String> getCertificateChain() {
-        return this.certificateChain == null ? Output.empty() : this.certificateChain;
+    public Output<String> certificateChain() {
+        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
     public CertificateAuthorityCertificateState(
@@ -57,9 +58,9 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
     }
 
     private CertificateAuthorityCertificateState() {
-        this.certificate = Output.empty();
-        this.certificateAuthorityArn = Output.empty();
-        this.certificateChain = Output.empty();
+        this.certificate = Codegen.empty();
+        this.certificateAuthorityArn = Codegen.empty();
+        this.certificateChain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder certificateAuthorityArn(@Nullable Output<String> certificateAuthorityArn) {
@@ -99,7 +100,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
             return this;
         }
         public Builder certificateAuthorityArn(@Nullable String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Output.ofNullable(certificateAuthorityArn);
+            this.certificateAuthorityArn = Codegen.ofNullable(certificateAuthorityArn);
             return this;
         }
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
@@ -107,7 +108,7 @@ public final class CertificateAuthorityCertificateState extends io.pulumi.resour
             return this;
         }
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Output.ofNullable(certificateChain);
+            this.certificateChain = Codegen.ofNullable(certificateChain);
             return this;
         }        public CertificateAuthorityCertificateState build() {
             return new CertificateAuthorityCertificateState(certificate, certificateAuthorityArn, certificateChain);

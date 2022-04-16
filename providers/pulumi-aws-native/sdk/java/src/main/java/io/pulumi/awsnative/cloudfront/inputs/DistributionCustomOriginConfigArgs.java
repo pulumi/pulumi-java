@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,43 +20,43 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
     @Import(name="hTTPPort")
       private final @Nullable Output<Integer> hTTPPort;
 
-    public Output<Integer> getHTTPPort() {
-        return this.hTTPPort == null ? Output.empty() : this.hTTPPort;
+    public Output<Integer> hTTPPort() {
+        return this.hTTPPort == null ? Codegen.empty() : this.hTTPPort;
     }
 
     @Import(name="hTTPSPort")
       private final @Nullable Output<Integer> hTTPSPort;
 
-    public Output<Integer> getHTTPSPort() {
-        return this.hTTPSPort == null ? Output.empty() : this.hTTPSPort;
+    public Output<Integer> hTTPSPort() {
+        return this.hTTPSPort == null ? Codegen.empty() : this.hTTPSPort;
     }
 
     @Import(name="originKeepaliveTimeout")
       private final @Nullable Output<Integer> originKeepaliveTimeout;
 
-    public Output<Integer> getOriginKeepaliveTimeout() {
-        return this.originKeepaliveTimeout == null ? Output.empty() : this.originKeepaliveTimeout;
+    public Output<Integer> originKeepaliveTimeout() {
+        return this.originKeepaliveTimeout == null ? Codegen.empty() : this.originKeepaliveTimeout;
     }
 
     @Import(name="originProtocolPolicy", required=true)
       private final Output<String> originProtocolPolicy;
 
-    public Output<String> getOriginProtocolPolicy() {
+    public Output<String> originProtocolPolicy() {
         return this.originProtocolPolicy;
     }
 
     @Import(name="originReadTimeout")
       private final @Nullable Output<Integer> originReadTimeout;
 
-    public Output<Integer> getOriginReadTimeout() {
-        return this.originReadTimeout == null ? Output.empty() : this.originReadTimeout;
+    public Output<Integer> originReadTimeout() {
+        return this.originReadTimeout == null ? Codegen.empty() : this.originReadTimeout;
     }
 
     @Import(name="originSSLProtocols")
       private final @Nullable Output<List<String>> originSSLProtocols;
 
-    public Output<List<String>> getOriginSSLProtocols() {
-        return this.originSSLProtocols == null ? Output.empty() : this.originSSLProtocols;
+    public Output<List<String>> originSSLProtocols() {
+        return this.originSSLProtocols == null ? Codegen.empty() : this.originSSLProtocols;
     }
 
     public DistributionCustomOriginConfigArgs(
@@ -74,12 +75,12 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
     }
 
     private DistributionCustomOriginConfigArgs() {
-        this.hTTPPort = Output.empty();
-        this.hTTPSPort = Output.empty();
-        this.originKeepaliveTimeout = Output.empty();
-        this.originProtocolPolicy = Output.empty();
-        this.originReadTimeout = Output.empty();
-        this.originSSLProtocols = Output.empty();
+        this.hTTPPort = Codegen.empty();
+        this.hTTPSPort = Codegen.empty();
+        this.originKeepaliveTimeout = Codegen.empty();
+        this.originProtocolPolicy = Codegen.empty();
+        this.originReadTimeout = Codegen.empty();
+        this.originSSLProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder hTTPPort(@Nullable Integer hTTPPort) {
-            this.hTTPPort = Output.ofNullable(hTTPPort);
+            this.hTTPPort = Codegen.ofNullable(hTTPPort);
             return this;
         }
         public Builder hTTPSPort(@Nullable Output<Integer> hTTPSPort) {
@@ -125,7 +126,7 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
-            this.hTTPSPort = Output.ofNullable(hTTPSPort);
+            this.hTTPSPort = Codegen.ofNullable(hTTPSPort);
             return this;
         }
         public Builder originKeepaliveTimeout(@Nullable Output<Integer> originKeepaliveTimeout) {
@@ -133,7 +134,7 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
-            this.originKeepaliveTimeout = Output.ofNullable(originKeepaliveTimeout);
+            this.originKeepaliveTimeout = Codegen.ofNullable(originKeepaliveTimeout);
             return this;
         }
         public Builder originProtocolPolicy(Output<String> originProtocolPolicy) {
@@ -149,7 +150,7 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
-            this.originReadTimeout = Output.ofNullable(originReadTimeout);
+            this.originReadTimeout = Codegen.ofNullable(originReadTimeout);
             return this;
         }
         public Builder originSSLProtocols(@Nullable Output<List<String>> originSSLProtocols) {
@@ -157,7 +158,7 @@ public final class DistributionCustomOriginConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder originSSLProtocols(@Nullable List<String> originSSLProtocols) {
-            this.originSSLProtocols = Output.ofNullable(originSSLProtocols);
+            this.originSSLProtocols = Codegen.ofNullable(originSSLProtocols);
             return this;
         }
         public Builder originSSLProtocols(String... originSSLProtocols) {

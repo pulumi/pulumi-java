@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firebase_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebase_v1beta1.WebAppArgs;
 import java.lang.String;
@@ -31,7 +32,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
      * 
      */
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     /**
@@ -45,7 +46,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @return The URLs where the `WebApp` is hosted.
      * 
      */
-    public Output<List<String>> getAppUrls() {
+    public Output<List<String>> appUrls() {
         return this.appUrls;
     }
     /**
@@ -59,7 +60,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @return The user-assigned display name for the `WebApp`.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -73,7 +74,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @return The resource name of the WebApp, in the format: projects/PROJECT_IDENTIFIER /webApps/APP_ID * PROJECT_IDENTIFIER: the parent Project's [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number) ***(recommended)*** or its [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510). Note that the value for PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID: the globally unique, Firebase-assigned identifier for the App (see [`appId`](../projects.webApps#WebApp.FIELDS.app_id)).
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -87,7 +88,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. A user-assigned unique identifier of the parent FirebaseProject for the `WebApp`.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -101,7 +102,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @return Immutable. A unique, Firebase-assigned identifier for the `WebApp`. This identifier is only used to populate the `namespace` value for the `WebApp`. For most use cases, use `appId` to identify or reference the App. The `webId` value is only unique within a `FirebaseProject` and its associated Apps.
      * 
      */
-    public Output<String> getWebId() {
+    public Output<String> webId() {
         return this.webId;
     }
 
@@ -127,7 +128,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebApp(String name, @Nullable WebAppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firebase/v1beta1:WebApp", name, args == null ? WebAppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firebase/v1beta1:WebApp", name, args == null ? WebAppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebApp(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.keyvault.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,8 +35,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="accessPolicies")
       private final @Nullable Output<List<AccessPolicyEntryArgs>> accessPolicies;
 
-    public Output<List<AccessPolicyEntryArgs>> getAccessPolicies() {
-        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
+    public Output<List<AccessPolicyEntryArgs>> accessPolicies() {
+        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="createMode")
       private final @Nullable Output<CreateMode> createMode;
 
-    public Output<CreateMode> getCreateMode() {
-        return this.createMode == null ? Output.empty() : this.createMode;
+    public Output<CreateMode> createMode() {
+        return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enablePurgeProtection")
       private final @Nullable Output<Boolean> enablePurgeProtection;
 
-    public Output<Boolean> getEnablePurgeProtection() {
-        return this.enablePurgeProtection == null ? Output.empty() : this.enablePurgeProtection;
+    public Output<Boolean> enablePurgeProtection() {
+        return this.enablePurgeProtection == null ? Codegen.empty() : this.enablePurgeProtection;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enableRbacAuthorization")
       private final @Nullable Output<Boolean> enableRbacAuthorization;
 
-    public Output<Boolean> getEnableRbacAuthorization() {
-        return this.enableRbacAuthorization == null ? Output.empty() : this.enableRbacAuthorization;
+    public Output<Boolean> enableRbacAuthorization() {
+        return this.enableRbacAuthorization == null ? Codegen.empty() : this.enableRbacAuthorization;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enableSoftDelete")
       private final @Nullable Output<Boolean> enableSoftDelete;
 
-    public Output<Boolean> getEnableSoftDelete() {
-        return this.enableSoftDelete == null ? Output.empty() : this.enableSoftDelete;
+    public Output<Boolean> enableSoftDelete() {
+        return this.enableSoftDelete == null ? Codegen.empty() : this.enableSoftDelete;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabledForDeployment")
       private final @Nullable Output<Boolean> enabledForDeployment;
 
-    public Output<Boolean> getEnabledForDeployment() {
-        return this.enabledForDeployment == null ? Output.empty() : this.enabledForDeployment;
+    public Output<Boolean> enabledForDeployment() {
+        return this.enabledForDeployment == null ? Codegen.empty() : this.enabledForDeployment;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabledForDiskEncryption")
       private final @Nullable Output<Boolean> enabledForDiskEncryption;
 
-    public Output<Boolean> getEnabledForDiskEncryption() {
-        return this.enabledForDiskEncryption == null ? Output.empty() : this.enabledForDiskEncryption;
+    public Output<Boolean> enabledForDiskEncryption() {
+        return this.enabledForDiskEncryption == null ? Codegen.empty() : this.enabledForDiskEncryption;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="enabledForTemplateDeployment")
       private final @Nullable Output<Boolean> enabledForTemplateDeployment;
 
-    public Output<Boolean> getEnabledForTemplateDeployment() {
-        return this.enabledForTemplateDeployment == null ? Output.empty() : this.enabledForTemplateDeployment;
+    public Output<Boolean> enabledForTemplateDeployment() {
+        return this.enabledForTemplateDeployment == null ? Codegen.empty() : this.enabledForTemplateDeployment;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="networkAcls")
       private final @Nullable Output<NetworkRuleSetArgs> networkAcls;
 
-    public Output<NetworkRuleSetArgs> getNetworkAcls() {
-        return this.networkAcls == null ? Output.empty() : this.networkAcls;
+    public Output<NetworkRuleSetArgs> networkAcls() {
+        return this.networkAcls == null ? Codegen.empty() : this.networkAcls;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="provisioningState")
       private final @Nullable Output<Either<String,VaultProvisioningState>> provisioningState;
 
-    public Output<Either<String,VaultProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+    public Output<Either<String,VaultProvisioningState>> provisioningState() {
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
+    public Output<SkuArgs> sku() {
         return this.sku;
     }
 
@@ -155,8 +156,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="softDeleteRetentionInDays")
       private final @Nullable Output<Integer> softDeleteRetentionInDays;
 
-    public Output<Integer> getSoftDeleteRetentionInDays() {
-        return this.softDeleteRetentionInDays == null ? Output.empty() : this.softDeleteRetentionInDays;
+    public Output<Integer> softDeleteRetentionInDays() {
+        return this.softDeleteRetentionInDays == null ? Codegen.empty() : this.softDeleteRetentionInDays;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -177,8 +178,8 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="vaultUri")
       private final @Nullable Output<String> vaultUri;
 
-    public Output<String> getVaultUri() {
-        return this.vaultUri == null ? Output.empty() : this.vaultUri;
+    public Output<String> vaultUri() {
+        return this.vaultUri == null ? Codegen.empty() : this.vaultUri;
     }
 
     public VaultPropertiesArgs(
@@ -199,34 +200,34 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
         this.accessPolicies = accessPolicies;
         this.createMode = createMode;
         this.enablePurgeProtection = enablePurgeProtection;
-        this.enableRbacAuthorization = enableRbacAuthorization == null ? Output.ofNullable(false) : enableRbacAuthorization;
-        this.enableSoftDelete = enableSoftDelete == null ? Output.ofNullable(true) : enableSoftDelete;
+        this.enableRbacAuthorization = enableRbacAuthorization == null ? Codegen.ofNullable(false) : enableRbacAuthorization;
+        this.enableSoftDelete = enableSoftDelete == null ? Codegen.ofNullable(true) : enableSoftDelete;
         this.enabledForDeployment = enabledForDeployment;
         this.enabledForDiskEncryption = enabledForDiskEncryption;
         this.enabledForTemplateDeployment = enabledForTemplateDeployment;
         this.networkAcls = networkAcls;
         this.provisioningState = provisioningState;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? Output.ofNullable(90) : softDeleteRetentionInDays;
+        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? Codegen.ofNullable(90) : softDeleteRetentionInDays;
         this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
         this.vaultUri = vaultUri;
     }
 
     private VaultPropertiesArgs() {
-        this.accessPolicies = Output.empty();
-        this.createMode = Output.empty();
-        this.enablePurgeProtection = Output.empty();
-        this.enableRbacAuthorization = Output.empty();
-        this.enableSoftDelete = Output.empty();
-        this.enabledForDeployment = Output.empty();
-        this.enabledForDiskEncryption = Output.empty();
-        this.enabledForTemplateDeployment = Output.empty();
-        this.networkAcls = Output.empty();
-        this.provisioningState = Output.empty();
-        this.sku = Output.empty();
-        this.softDeleteRetentionInDays = Output.empty();
-        this.tenantId = Output.empty();
-        this.vaultUri = Output.empty();
+        this.accessPolicies = Codegen.empty();
+        this.createMode = Codegen.empty();
+        this.enablePurgeProtection = Codegen.empty();
+        this.enableRbacAuthorization = Codegen.empty();
+        this.enableSoftDelete = Codegen.empty();
+        this.enabledForDeployment = Codegen.empty();
+        this.enabledForDiskEncryption = Codegen.empty();
+        this.enabledForTemplateDeployment = Codegen.empty();
+        this.networkAcls = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.softDeleteRetentionInDays = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.vaultUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -280,7 +281,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder accessPolicies(@Nullable List<AccessPolicyEntryArgs> accessPolicies) {
-            this.accessPolicies = Output.ofNullable(accessPolicies);
+            this.accessPolicies = Codegen.ofNullable(accessPolicies);
             return this;
         }
         public Builder accessPolicies(AccessPolicyEntryArgs... accessPolicies) {
@@ -291,7 +292,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder createMode(@Nullable CreateMode createMode) {
-            this.createMode = Output.ofNullable(createMode);
+            this.createMode = Codegen.ofNullable(createMode);
             return this;
         }
         public Builder enablePurgeProtection(@Nullable Output<Boolean> enablePurgeProtection) {
@@ -299,7 +300,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
-            this.enablePurgeProtection = Output.ofNullable(enablePurgeProtection);
+            this.enablePurgeProtection = Codegen.ofNullable(enablePurgeProtection);
             return this;
         }
         public Builder enableRbacAuthorization(@Nullable Output<Boolean> enableRbacAuthorization) {
@@ -307,7 +308,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
-            this.enableRbacAuthorization = Output.ofNullable(enableRbacAuthorization);
+            this.enableRbacAuthorization = Codegen.ofNullable(enableRbacAuthorization);
             return this;
         }
         public Builder enableSoftDelete(@Nullable Output<Boolean> enableSoftDelete) {
@@ -315,7 +316,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
-            this.enableSoftDelete = Output.ofNullable(enableSoftDelete);
+            this.enableSoftDelete = Codegen.ofNullable(enableSoftDelete);
             return this;
         }
         public Builder enabledForDeployment(@Nullable Output<Boolean> enabledForDeployment) {
@@ -323,7 +324,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enabledForDeployment(@Nullable Boolean enabledForDeployment) {
-            this.enabledForDeployment = Output.ofNullable(enabledForDeployment);
+            this.enabledForDeployment = Codegen.ofNullable(enabledForDeployment);
             return this;
         }
         public Builder enabledForDiskEncryption(@Nullable Output<Boolean> enabledForDiskEncryption) {
@@ -331,7 +332,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
-            this.enabledForDiskEncryption = Output.ofNullable(enabledForDiskEncryption);
+            this.enabledForDiskEncryption = Codegen.ofNullable(enabledForDiskEncryption);
             return this;
         }
         public Builder enabledForTemplateDeployment(@Nullable Output<Boolean> enabledForTemplateDeployment) {
@@ -339,7 +340,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
-            this.enabledForTemplateDeployment = Output.ofNullable(enabledForTemplateDeployment);
+            this.enabledForTemplateDeployment = Codegen.ofNullable(enabledForTemplateDeployment);
             return this;
         }
         public Builder networkAcls(@Nullable Output<NetworkRuleSetArgs> networkAcls) {
@@ -347,7 +348,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder networkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
-            this.networkAcls = Output.ofNullable(networkAcls);
+            this.networkAcls = Codegen.ofNullable(networkAcls);
             return this;
         }
         public Builder provisioningState(@Nullable Output<Either<String,VaultProvisioningState>> provisioningState) {
@@ -355,7 +356,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder provisioningState(@Nullable Either<String,VaultProvisioningState> provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder sku(Output<SkuArgs> sku) {
@@ -371,7 +372,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
-            this.softDeleteRetentionInDays = Output.ofNullable(softDeleteRetentionInDays);
+            this.softDeleteRetentionInDays = Codegen.ofNullable(softDeleteRetentionInDays);
             return this;
         }
         public Builder tenantId(Output<String> tenantId) {
@@ -387,7 +388,7 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder vaultUri(@Nullable String vaultUri) {
-            this.vaultUri = Output.ofNullable(vaultUri);
+            this.vaultUri = Codegen.ofNullable(vaultUri);
             return this;
         }        public VaultPropertiesArgs build() {
             return new VaultPropertiesArgs(accessPolicies, createMode, enablePurgeProtection, enableRbacAuthorization, enableSoftDelete, enabledForDeployment, enabledForDiskEncryption, enabledForTemplateDeployment, networkAcls, provisioningState, sku, softDeleteRetentionInDays, tenantId, vaultUri);

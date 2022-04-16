@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
     @Import(name="authCodeUrl")
       private final @Nullable Output<String> authCodeUrl;
 
-    public Output<String> getAuthCodeUrl() {
-        return this.authCodeUrl == null ? Output.empty() : this.authCodeUrl;
+    public Output<String> authCodeUrl() {
+        return this.authCodeUrl == null ? Codegen.empty() : this.authCodeUrl;
     }
 
     @Import(name="oAuthScopes")
       private final @Nullable Output<List<String>> oAuthScopes;
 
-    public Output<List<String>> getOAuthScopes() {
-        return this.oAuthScopes == null ? Output.empty() : this.oAuthScopes;
+    public Output<List<String>> oAuthScopes() {
+        return this.oAuthScopes == null ? Codegen.empty() : this.oAuthScopes;
     }
 
     @Import(name="tokenUrl")
       private final @Nullable Output<String> tokenUrl;
 
-    public Output<String> getTokenUrl() {
-        return this.tokenUrl == null ? Output.empty() : this.tokenUrl;
+    public Output<String> tokenUrl() {
+        return this.tokenUrl == null ? Codegen.empty() : this.tokenUrl;
     }
 
     public ConnectorProfileOAuthPropertiesArgs(
@@ -46,9 +47,9 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
     }
 
     private ConnectorProfileOAuthPropertiesArgs() {
-        this.authCodeUrl = Output.empty();
-        this.oAuthScopes = Output.empty();
-        this.tokenUrl = Output.empty();
+        this.authCodeUrl = Codegen.empty();
+        this.oAuthScopes = Codegen.empty();
+        this.tokenUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder authCodeUrl(@Nullable String authCodeUrl) {
-            this.authCodeUrl = Output.ofNullable(authCodeUrl);
+            this.authCodeUrl = Codegen.ofNullable(authCodeUrl);
             return this;
         }
         public Builder oAuthScopes(@Nullable Output<List<String>> oAuthScopes) {
@@ -88,7 +89,7 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder oAuthScopes(@Nullable List<String> oAuthScopes) {
-            this.oAuthScopes = Output.ofNullable(oAuthScopes);
+            this.oAuthScopes = Codegen.ofNullable(oAuthScopes);
             return this;
         }
         public Builder oAuthScopes(String... oAuthScopes) {
@@ -99,7 +100,7 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tokenUrl(@Nullable String tokenUrl) {
-            this.tokenUrl = Output.ofNullable(tokenUrl);
+            this.tokenUrl = Codegen.ofNullable(tokenUrl);
             return this;
         }        public ConnectorProfileOAuthPropertiesArgs build() {
             return new ConnectorProfileOAuthPropertiesArgs(authCodeUrl, oAuthScopes, tokenUrl);

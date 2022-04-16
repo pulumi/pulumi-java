@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskTypes")
       private final @Nullable Output<List<String>> diskTypes;
 
-    public Output<List<String>> getDiskTypes() {
-        return this.diskTypes == null ? Output.empty() : this.diskTypes;
+    public Output<List<String>> diskTypes() {
+        return this.diskTypes == null ? Codegen.empty() : this.diskTypes;
     }
 
     public DisallowedArgs(@Nullable Output<List<String>> diskTypes) {
@@ -35,7 +36,7 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DisallowedArgs() {
-        this.diskTypes = Output.empty();
+        this.diskTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskTypes(@Nullable List<String> diskTypes) {
-            this.diskTypes = Output.ofNullable(diskTypes);
+            this.diskTypes = Codegen.ofNullable(diskTypes);
             return this;
         }
         public Builder diskTypes(String... diskTypes) {

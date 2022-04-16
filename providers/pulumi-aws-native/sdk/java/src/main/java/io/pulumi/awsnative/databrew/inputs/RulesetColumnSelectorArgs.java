@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
     @Import(name="regex")
       private final @Nullable Output<String> regex;
 
-    public Output<String> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+    public Output<String> regex() {
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     public RulesetColumnSelectorArgs(
@@ -48,8 +49,8 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
     }
 
     private RulesetColumnSelectorArgs() {
-        this.name = Output.empty();
-        this.regex = Output.empty();
+        this.name = Codegen.empty();
+        this.regex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder regex(@Nullable Output<String> regex) {
@@ -87,7 +88,7 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder regex(@Nullable String regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }        public RulesetColumnSelectorArgs build() {
             return new RulesetColumnSelectorArgs(name, regex);

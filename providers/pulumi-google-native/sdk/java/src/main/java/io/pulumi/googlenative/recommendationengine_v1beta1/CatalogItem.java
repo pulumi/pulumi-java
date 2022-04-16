@@ -6,6 +6,7 @@ package io.pulumi.googlenative.recommendationengine_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.recommendationengine_v1beta1.CatalogItemArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse;
@@ -33,7 +34,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @return Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
      * 
      */
-    public Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse>> getCategoryHierarchies() {
+    public Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse>> categoryHierarchies() {
         return this.categoryHierarchies;
     }
     /**
@@ -47,7 +48,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @return Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -61,7 +62,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @return Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
      * 
      */
-    public Output<GoogleCloudRecommendationengineV1beta1FeatureMapResponse> getItemAttributes() {
+    public Output<GoogleCloudRecommendationengineV1beta1FeatureMapResponse> itemAttributes() {
         return this.itemAttributes;
     }
     /**
@@ -75,7 +76,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @return Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
      * 
      */
-    public Output<String> getItemGroupId() {
+    public Output<String> itemGroupId() {
         return this.itemGroupId;
     }
     /**
@@ -89,7 +90,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @return Optional. Metadata specific to retail products.
      * 
      */
-    public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse> getProductMetadata() {
+    public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse> productMetadata() {
         return this.productMetadata;
     }
     /**
@@ -103,7 +104,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @return Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
      * 
      */
-    public Output<List<String>> getTags() {
+    public Output<List<String>> tags() {
         return this.tags;
     }
     /**
@@ -117,7 +118,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @return Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
      * 
      */
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -143,7 +144,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CatalogItem(String name, CatalogItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:recommendationengine/v1beta1:CatalogItem", name, args == null ? CatalogItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:recommendationengine/v1beta1:CatalogItem", name, args == null ? CatalogItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CatalogItem(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

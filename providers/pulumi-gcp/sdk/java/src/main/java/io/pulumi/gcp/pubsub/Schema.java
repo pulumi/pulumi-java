@@ -6,6 +6,7 @@ package io.pulumi.gcp.pubsub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SchemaArgs;
 import io.pulumi.gcp.pubsub.inputs.SchemaState;
@@ -58,7 +59,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * that is a valid schema definition of the type specified in type.
      * 
      */
-    public Output</* @Nullable */ String> getDefinition() {
+    public Output</* @Nullable */ String> definition() {
         return this.definition;
     }
     /**
@@ -72,7 +73,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The ID to use for the schema, which will become the final component of the schema's resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -88,7 +89,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -106,7 +107,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Possible values are `TYPE_UNSPECIFIED`, `PROTOCOL_BUFFER`, and `AVRO`.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 
@@ -132,7 +133,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Schema(String name, @Nullable SchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/schema:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:pubsub/schema:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Schema(String name, Output<String> id, @Nullable SchemaState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

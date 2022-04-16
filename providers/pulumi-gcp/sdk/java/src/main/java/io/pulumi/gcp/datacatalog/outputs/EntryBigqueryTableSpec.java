@@ -28,13 +28,13 @@ public final class EntryBigqueryTableSpec {
         this.viewSpecs = viewSpecs;
     }
 
-    public Optional<String> getTableSourceType() {
+    public Optional<String> tableSourceType() {
         return Optional.ofNullable(this.tableSourceType);
     }
-    public List<EntryBigqueryTableSpecTableSpec> getTableSpecs() {
+    public List<EntryBigqueryTableSpecTableSpec> tableSpecs() {
         return this.tableSpecs == null ? List.of() : this.tableSpecs;
     }
-    public List<EntryBigqueryTableSpecViewSpec> getViewSpecs() {
+    public List<EntryBigqueryTableSpecViewSpec> viewSpecs() {
         return this.viewSpecs == null ? List.of() : this.viewSpecs;
     }
 

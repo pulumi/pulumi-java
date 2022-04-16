@@ -27,16 +27,16 @@ public final class GetDelegationSetResult {
         this.nameServers = nameServers;
     }
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
-    public String getCallerReference() {
+    public String callerReference() {
         return this.callerReference;
     }
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public List<String> getNameServers() {
+    public List<String> nameServers() {
         return this.nameServers;
     }
 

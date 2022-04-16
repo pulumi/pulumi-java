@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
     @Import(name="humanReadableName")
       private final @Nullable Output<String> humanReadableName;
 
-    public Output<String> getHumanReadableName() {
-        return this.humanReadableName == null ? Output.empty() : this.humanReadableName;
+    public Output<String> humanReadableName() {
+        return this.humanReadableName == null ? Codegen.empty() : this.humanReadableName;
     }
 
     public AttestationAuthorityHintArgs(@Nullable Output<String> humanReadableName) {
@@ -34,7 +35,7 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
     }
 
     private AttestationAuthorityHintArgs() {
-        this.humanReadableName = Output.empty();
+        this.humanReadableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder humanReadableName(@Nullable String humanReadableName) {
-            this.humanReadableName = Output.ofNullable(humanReadableName);
+            this.humanReadableName = Codegen.ofNullable(humanReadableName);
             return this;
         }        public AttestationAuthorityHintArgs build() {
             return new AttestationAuthorityHintArgs(humanReadableName);

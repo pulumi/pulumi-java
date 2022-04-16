@@ -11,6 +11,7 @@ import io.pulumi.awsnative.mwaa.outputs.EnvironmentNetworkConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -49,109 +50,109 @@ public class Environment extends io.pulumi.resources.CustomResource {
      *     "core.dags_folder": "{AIRFLOW_HOME}/dags"
      * 
      */
-    public Output</* @Nullable */ Object> getAirflowConfigurationOptions() {
+    public Output</* @Nullable */ Object> airflowConfigurationOptions() {
         return this.airflowConfigurationOptions;
     }
     @Export(name="airflowVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> airflowVersion;
 
-    public Output</* @Nullable */ String> getAirflowVersion() {
+    public Output</* @Nullable */ String> airflowVersion() {
         return this.airflowVersion;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="dagS3Path", type=String.class, parameters={})
     private Output</* @Nullable */ String> dagS3Path;
 
-    public Output</* @Nullable */ String> getDagS3Path() {
+    public Output</* @Nullable */ String> dagS3Path() {
         return this.dagS3Path;
     }
     @Export(name="environmentClass", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentClass;
 
-    public Output</* @Nullable */ String> getEnvironmentClass() {
+    public Output</* @Nullable */ String> environmentClass() {
         return this.environmentClass;
     }
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
-    public Output</* @Nullable */ String> getExecutionRoleArn() {
+    public Output</* @Nullable */ String> executionRoleArn() {
         return this.executionRoleArn;
     }
     @Export(name="kmsKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKey;
 
-    public Output</* @Nullable */ String> getKmsKey() {
+    public Output</* @Nullable */ String> kmsKey() {
         return this.kmsKey;
     }
     @Export(name="loggingConfiguration", type=EnvironmentLoggingConfiguration.class, parameters={})
     private Output</* @Nullable */ EnvironmentLoggingConfiguration> loggingConfiguration;
 
-    public Output</* @Nullable */ EnvironmentLoggingConfiguration> getLoggingConfiguration() {
+    public Output</* @Nullable */ EnvironmentLoggingConfiguration> loggingConfiguration() {
         return this.loggingConfiguration;
     }
     @Export(name="maxWorkers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxWorkers;
 
-    public Output</* @Nullable */ Integer> getMaxWorkers() {
+    public Output</* @Nullable */ Integer> maxWorkers() {
         return this.maxWorkers;
     }
     @Export(name="minWorkers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minWorkers;
 
-    public Output</* @Nullable */ Integer> getMinWorkers() {
+    public Output</* @Nullable */ Integer> minWorkers() {
         return this.minWorkers;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="networkConfiguration", type=EnvironmentNetworkConfiguration.class, parameters={})
     private Output</* @Nullable */ EnvironmentNetworkConfiguration> networkConfiguration;
 
-    public Output</* @Nullable */ EnvironmentNetworkConfiguration> getNetworkConfiguration() {
+    public Output</* @Nullable */ EnvironmentNetworkConfiguration> networkConfiguration() {
         return this.networkConfiguration;
     }
     @Export(name="pluginsS3ObjectVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> pluginsS3ObjectVersion;
 
-    public Output</* @Nullable */ String> getPluginsS3ObjectVersion() {
+    public Output</* @Nullable */ String> pluginsS3ObjectVersion() {
         return this.pluginsS3ObjectVersion;
     }
     @Export(name="pluginsS3Path", type=String.class, parameters={})
     private Output</* @Nullable */ String> pluginsS3Path;
 
-    public Output</* @Nullable */ String> getPluginsS3Path() {
+    public Output</* @Nullable */ String> pluginsS3Path() {
         return this.pluginsS3Path;
     }
     @Export(name="requirementsS3ObjectVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> requirementsS3ObjectVersion;
 
-    public Output</* @Nullable */ String> getRequirementsS3ObjectVersion() {
+    public Output</* @Nullable */ String> requirementsS3ObjectVersion() {
         return this.requirementsS3ObjectVersion;
     }
     @Export(name="requirementsS3Path", type=String.class, parameters={})
     private Output</* @Nullable */ String> requirementsS3Path;
 
-    public Output</* @Nullable */ String> getRequirementsS3Path() {
+    public Output</* @Nullable */ String> requirementsS3Path() {
         return this.requirementsS3Path;
     }
     @Export(name="schedulers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> schedulers;
 
-    public Output</* @Nullable */ Integer> getSchedulers() {
+    public Output</* @Nullable */ Integer> schedulers() {
         return this.schedulers;
     }
     @Export(name="sourceBucketArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceBucketArn;
 
-    public Output</* @Nullable */ String> getSourceBucketArn() {
+    public Output</* @Nullable */ String> sourceBucketArn() {
         return this.sourceBucketArn;
     }
     /**
@@ -165,25 +166,25 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return A map of tags for the environment.
      * 
      */
-    public Output</* @Nullable */ Object> getTags() {
+    public Output</* @Nullable */ Object> tags() {
         return this.tags;
     }
     @Export(name="webserverAccessMode", type=EnvironmentWebserverAccessMode.class, parameters={})
     private Output</* @Nullable */ EnvironmentWebserverAccessMode> webserverAccessMode;
 
-    public Output</* @Nullable */ EnvironmentWebserverAccessMode> getWebserverAccessMode() {
+    public Output</* @Nullable */ EnvironmentWebserverAccessMode> webserverAccessMode() {
         return this.webserverAccessMode;
     }
     @Export(name="webserverUrl", type=String.class, parameters={})
     private Output<String> webserverUrl;
 
-    public Output<String> getWebserverUrl() {
+    public Output<String> webserverUrl() {
         return this.webserverUrl;
     }
     @Export(name="weeklyMaintenanceWindowStart", type=String.class, parameters={})
     private Output</* @Nullable */ String> weeklyMaintenanceWindowStart;
 
-    public Output</* @Nullable */ String> getWeeklyMaintenanceWindowStart() {
+    public Output</* @Nullable */ String> weeklyMaintenanceWindowStart() {
         return this.weeklyMaintenanceWindowStart;
     }
 
@@ -209,7 +210,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Environment(String name, @Nullable EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mwaa:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mwaa:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Environment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

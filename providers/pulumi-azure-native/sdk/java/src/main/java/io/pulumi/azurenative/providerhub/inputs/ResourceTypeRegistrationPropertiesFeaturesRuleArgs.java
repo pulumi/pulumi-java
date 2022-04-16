@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.FeaturesPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +19,7 @@ public final class ResourceTypeRegistrationPropertiesFeaturesRuleArgs extends io
     @Import(name="requiredFeaturesPolicy", required=true)
       private final Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
-    public Output<Either<String,FeaturesPolicy>> getRequiredFeaturesPolicy() {
+    public Output<Either<String,FeaturesPolicy>> requiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
     }
 
@@ -27,7 +28,7 @@ public final class ResourceTypeRegistrationPropertiesFeaturesRuleArgs extends io
     }
 
     private ResourceTypeRegistrationPropertiesFeaturesRuleArgs() {
-        this.requiredFeaturesPolicy = Output.empty();
+        this.requiredFeaturesPolicy = Codegen.empty();
     }
 
     public static Builder builder() {

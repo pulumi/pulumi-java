@@ -8,6 +8,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
      * 
      */
-    public Output</* @Nullable */ String> getAccessKey() {
+    public Output</* @Nullable */ String> accessKey() {
         return this.accessKey;
     }
     /**
@@ -47,7 +48,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * `HTTPS_PROXY` environment variables.
      * 
      */
-    public Output</* @Nullable */ String> getHttpProxy() {
+    public Output</* @Nullable */ String> httpProxy() {
         return this.httpProxy;
     }
     /**
@@ -61,7 +62,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The profile for API operations. If not set, the default profile created with `aws configure` will be used.
      * 
      */
-    public Output</* @Nullable */ String> getProfile() {
+    public Output</* @Nullable */ String> profile() {
         return this.profile;
     }
     /**
@@ -75,7 +76,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
      * 
      */
-    public Output</* @Nullable */ String> getRegion() {
+    public Output</* @Nullable */ String> region() {
         return this.region;
     }
     /**
@@ -89,7 +90,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
      * 
      */
-    public Output</* @Nullable */ String> getSecretKey() {
+    public Output</* @Nullable */ String> secretKey() {
         return this.secretKey;
     }
     /**
@@ -103,7 +104,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
      * 
      */
-    public Output</* @Nullable */ String> getSharedCredentialsFile() {
+    public Output</* @Nullable */ String> sharedCredentialsFile() {
         return this.sharedCredentialsFile;
     }
     /**
@@ -117,7 +118,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @return session token. A session token is only required if you are using temporary security credentials.
      * 
      */
-    public Output</* @Nullable */ String> getToken() {
+    public Output</* @Nullable */ String> token() {
         return this.token;
     }
 
@@ -143,7 +144,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Provider(String name, @Nullable ProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

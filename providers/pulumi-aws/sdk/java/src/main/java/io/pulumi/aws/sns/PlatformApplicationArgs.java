@@ -5,6 +5,7 @@ package io.pulumi.aws.sns;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="eventDeliveryFailureTopicArn")
       private final @Nullable Output<String> eventDeliveryFailureTopicArn;
 
-    public Output<String> getEventDeliveryFailureTopicArn() {
-        return this.eventDeliveryFailureTopicArn == null ? Output.empty() : this.eventDeliveryFailureTopicArn;
+    public Output<String> eventDeliveryFailureTopicArn() {
+        return this.eventDeliveryFailureTopicArn == null ? Codegen.empty() : this.eventDeliveryFailureTopicArn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="eventEndpointCreatedTopicArn")
       private final @Nullable Output<String> eventEndpointCreatedTopicArn;
 
-    public Output<String> getEventEndpointCreatedTopicArn() {
-        return this.eventEndpointCreatedTopicArn == null ? Output.empty() : this.eventEndpointCreatedTopicArn;
+    public Output<String> eventEndpointCreatedTopicArn() {
+        return this.eventEndpointCreatedTopicArn == null ? Codegen.empty() : this.eventEndpointCreatedTopicArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="eventEndpointDeletedTopicArn")
       private final @Nullable Output<String> eventEndpointDeletedTopicArn;
 
-    public Output<String> getEventEndpointDeletedTopicArn() {
-        return this.eventEndpointDeletedTopicArn == null ? Output.empty() : this.eventEndpointDeletedTopicArn;
+    public Output<String> eventEndpointDeletedTopicArn() {
+        return this.eventEndpointDeletedTopicArn == null ? Codegen.empty() : this.eventEndpointDeletedTopicArn;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="eventEndpointUpdatedTopicArn")
       private final @Nullable Output<String> eventEndpointUpdatedTopicArn;
 
-    public Output<String> getEventEndpointUpdatedTopicArn() {
-        return this.eventEndpointUpdatedTopicArn == null ? Output.empty() : this.eventEndpointUpdatedTopicArn;
+    public Output<String> eventEndpointUpdatedTopicArn() {
+        return this.eventEndpointUpdatedTopicArn == null ? Codegen.empty() : this.eventEndpointUpdatedTopicArn;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="failureFeedbackRoleArn")
       private final @Nullable Output<String> failureFeedbackRoleArn;
 
-    public Output<String> getFailureFeedbackRoleArn() {
-        return this.failureFeedbackRoleArn == null ? Output.empty() : this.failureFeedbackRoleArn;
+    public Output<String> failureFeedbackRoleArn() {
+        return this.failureFeedbackRoleArn == null ? Codegen.empty() : this.failureFeedbackRoleArn;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="platform", required=true)
       private final Output<String> platform;
 
-    public Output<String> getPlatform() {
+    public Output<String> platform() {
         return this.platform;
     }
 
@@ -98,7 +99,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="platformCredential", required=true)
       private final Output<String> platformCredential;
 
-    public Output<String> getPlatformCredential() {
+    public Output<String> platformCredential() {
         return this.platformCredential;
     }
 
@@ -109,8 +110,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="platformPrincipal")
       private final @Nullable Output<String> platformPrincipal;
 
-    public Output<String> getPlatformPrincipal() {
-        return this.platformPrincipal == null ? Output.empty() : this.platformPrincipal;
+    public Output<String> platformPrincipal() {
+        return this.platformPrincipal == null ? Codegen.empty() : this.platformPrincipal;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="successFeedbackRoleArn")
       private final @Nullable Output<String> successFeedbackRoleArn;
 
-    public Output<String> getSuccessFeedbackRoleArn() {
-        return this.successFeedbackRoleArn == null ? Output.empty() : this.successFeedbackRoleArn;
+    public Output<String> successFeedbackRoleArn() {
+        return this.successFeedbackRoleArn == null ? Codegen.empty() : this.successFeedbackRoleArn;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     @Import(name="successFeedbackSampleRate")
       private final @Nullable Output<String> successFeedbackSampleRate;
 
-    public Output<String> getSuccessFeedbackSampleRate() {
-        return this.successFeedbackSampleRate == null ? Output.empty() : this.successFeedbackSampleRate;
+    public Output<String> successFeedbackSampleRate() {
+        return this.successFeedbackSampleRate == null ? Codegen.empty() : this.successFeedbackSampleRate;
     }
 
     public PlatformApplicationArgs(
@@ -161,17 +162,17 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
     }
 
     private PlatformApplicationArgs() {
-        this.eventDeliveryFailureTopicArn = Output.empty();
-        this.eventEndpointCreatedTopicArn = Output.empty();
-        this.eventEndpointDeletedTopicArn = Output.empty();
-        this.eventEndpointUpdatedTopicArn = Output.empty();
-        this.failureFeedbackRoleArn = Output.empty();
-        this.name = Output.empty();
-        this.platform = Output.empty();
-        this.platformCredential = Output.empty();
-        this.platformPrincipal = Output.empty();
-        this.successFeedbackRoleArn = Output.empty();
-        this.successFeedbackSampleRate = Output.empty();
+        this.eventDeliveryFailureTopicArn = Codegen.empty();
+        this.eventEndpointCreatedTopicArn = Codegen.empty();
+        this.eventEndpointDeletedTopicArn = Codegen.empty();
+        this.eventEndpointUpdatedTopicArn = Codegen.empty();
+        this.failureFeedbackRoleArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.platformCredential = Codegen.empty();
+        this.platformPrincipal = Codegen.empty();
+        this.successFeedbackRoleArn = Codegen.empty();
+        this.successFeedbackSampleRate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder eventDeliveryFailureTopicArn(@Nullable String eventDeliveryFailureTopicArn) {
-            this.eventDeliveryFailureTopicArn = Output.ofNullable(eventDeliveryFailureTopicArn);
+            this.eventDeliveryFailureTopicArn = Codegen.ofNullable(eventDeliveryFailureTopicArn);
             return this;
         }
         public Builder eventEndpointCreatedTopicArn(@Nullable Output<String> eventEndpointCreatedTopicArn) {
@@ -227,7 +228,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder eventEndpointCreatedTopicArn(@Nullable String eventEndpointCreatedTopicArn) {
-            this.eventEndpointCreatedTopicArn = Output.ofNullable(eventEndpointCreatedTopicArn);
+            this.eventEndpointCreatedTopicArn = Codegen.ofNullable(eventEndpointCreatedTopicArn);
             return this;
         }
         public Builder eventEndpointDeletedTopicArn(@Nullable Output<String> eventEndpointDeletedTopicArn) {
@@ -235,7 +236,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder eventEndpointDeletedTopicArn(@Nullable String eventEndpointDeletedTopicArn) {
-            this.eventEndpointDeletedTopicArn = Output.ofNullable(eventEndpointDeletedTopicArn);
+            this.eventEndpointDeletedTopicArn = Codegen.ofNullable(eventEndpointDeletedTopicArn);
             return this;
         }
         public Builder eventEndpointUpdatedTopicArn(@Nullable Output<String> eventEndpointUpdatedTopicArn) {
@@ -243,7 +244,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder eventEndpointUpdatedTopicArn(@Nullable String eventEndpointUpdatedTopicArn) {
-            this.eventEndpointUpdatedTopicArn = Output.ofNullable(eventEndpointUpdatedTopicArn);
+            this.eventEndpointUpdatedTopicArn = Codegen.ofNullable(eventEndpointUpdatedTopicArn);
             return this;
         }
         public Builder failureFeedbackRoleArn(@Nullable Output<String> failureFeedbackRoleArn) {
@@ -251,7 +252,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder failureFeedbackRoleArn(@Nullable String failureFeedbackRoleArn) {
-            this.failureFeedbackRoleArn = Output.ofNullable(failureFeedbackRoleArn);
+            this.failureFeedbackRoleArn = Codegen.ofNullable(failureFeedbackRoleArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -259,7 +260,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder platform(Output<String> platform) {
@@ -283,7 +284,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder platformPrincipal(@Nullable String platformPrincipal) {
-            this.platformPrincipal = Output.ofNullable(platformPrincipal);
+            this.platformPrincipal = Codegen.ofNullable(platformPrincipal);
             return this;
         }
         public Builder successFeedbackRoleArn(@Nullable Output<String> successFeedbackRoleArn) {
@@ -291,7 +292,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder successFeedbackRoleArn(@Nullable String successFeedbackRoleArn) {
-            this.successFeedbackRoleArn = Output.ofNullable(successFeedbackRoleArn);
+            this.successFeedbackRoleArn = Codegen.ofNullable(successFeedbackRoleArn);
             return this;
         }
         public Builder successFeedbackSampleRate(@Nullable Output<String> successFeedbackSampleRate) {
@@ -299,7 +300,7 @@ public final class PlatformApplicationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder successFeedbackSampleRate(@Nullable String successFeedbackSampleRate) {
-            this.successFeedbackSampleRate = Output.ofNullable(successFeedbackSampleRate);
+            this.successFeedbackSampleRate = Codegen.ofNullable(successFeedbackSampleRate);
             return this;
         }        public PlatformApplicationArgs build() {
             return new PlatformApplicationArgs(eventDeliveryFailureTopicArn, eventEndpointCreatedTopicArn, eventEndpointDeletedTopicArn, eventEndpointUpdatedTopicArn, failureFeedbackRoleArn, name, platform, platformCredential, platformPrincipal, successFeedbackRoleArn, successFeedbackSampleRate);

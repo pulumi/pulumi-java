@@ -26,7 +26,7 @@ public final class ComputeProfileResponse {
      * The list of roles in the cluster.
      * 
     */
-    public List<RoleResponse> getRoles() {
+    public List<RoleResponse> roles() {
         return this.roles == null ? List.of() : this.roles;
     }
 

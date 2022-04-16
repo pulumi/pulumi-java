@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,22 +22,22 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
-    public Output<String> getCommonName() {
-        return this.commonName == null ? Output.empty() : this.commonName;
+    public Output<String> commonName() {
+        return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
     @Import(name="instance", required=true)
       private final Output<String> instance;
 
-    public Output<String> getInstance() {
+    public Output<String> instance() {
         return this.instance;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public SslCertArgs(
@@ -49,9 +50,9 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SslCertArgs() {
-        this.commonName = Output.empty();
-        this.instance = Output.empty();
-        this.project = Output.empty();
+        this.commonName = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Output.ofNullable(commonName);
+            this.commonName = Codegen.ofNullable(commonName);
             return this;
         }
         public Builder instance(Output<String> instance) {
@@ -99,7 +100,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public SslCertArgs build() {
             return new SslCertArgs(commonName, instance, project);

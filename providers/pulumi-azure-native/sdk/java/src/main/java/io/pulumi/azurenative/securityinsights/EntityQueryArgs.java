@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.CustomEntityQueryKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="entityQueryId")
       private final @Nullable Output<String> entityQueryId;
 
-    public Output<String> getEntityQueryId() {
-        return this.entityQueryId == null ? Output.empty() : this.entityQueryId;
+    public Output<String> entityQueryId() {
+        return this.entityQueryId == null ? Codegen.empty() : this.entityQueryId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,CustomEntityQueryKind>> kind;
 
-    public Output<Either<String,CustomEntityQueryKind>> getKind() {
+    public Output<Either<String,CustomEntityQueryKind>> kind() {
         return this.kind;
     }
 
@@ -45,7 +46,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
-    public Output<String> getOperationalInsightsResourceProvider() {
+    public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -56,7 +57,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,7 +68,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -85,11 +86,11 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntityQueryArgs() {
-        this.entityQueryId = Output.empty();
-        this.kind = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.entityQueryId = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entityQueryId(@Nullable String entityQueryId) {
-            this.entityQueryId = Output.ofNullable(entityQueryId);
+            this.entityQueryId = Codegen.ofNullable(entityQueryId);
             return this;
         }
         public Builder kind(Output<Either<String,CustomEntityQueryKind>> kind) {

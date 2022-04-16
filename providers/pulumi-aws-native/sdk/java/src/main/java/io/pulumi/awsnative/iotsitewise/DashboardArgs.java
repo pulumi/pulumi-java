@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.iotsitewise.inputs.DashboardTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardDefinition", required=true)
       private final Output<String> dashboardDefinition;
 
-    public Output<String> getDashboardDefinition() {
+    public Output<String> dashboardDefinition() {
         return this.dashboardDefinition;
     }
 
@@ -34,7 +35,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardDescription", required=true)
       private final Output<String> dashboardDescription;
 
-    public Output<String> getDashboardDescription() {
+    public Output<String> dashboardDescription() {
         return this.dashboardDescription;
     }
 
@@ -45,8 +46,8 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dashboardName")
       private final @Nullable Output<String> dashboardName;
 
-    public Output<String> getDashboardName() {
-        return this.dashboardName == null ? Output.empty() : this.dashboardName;
+    public Output<String> dashboardName() {
+        return this.dashboardName == null ? Codegen.empty() : this.dashboardName;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+    public Output<String> projectId() {
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DashboardTagArgs>> tags;
 
-    public Output<List<DashboardTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DashboardTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DashboardArgs(
@@ -85,11 +86,11 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.dashboardDefinition = Output.empty();
-        this.dashboardDescription = Output.empty();
-        this.dashboardName = Output.empty();
-        this.projectId = Output.empty();
-        this.tags = Output.empty();
+        this.dashboardDefinition = Codegen.empty();
+        this.dashboardDescription = Codegen.empty();
+        this.dashboardName = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dashboardName(@Nullable String dashboardName) {
-            this.dashboardName = Output.ofNullable(dashboardName);
+            this.dashboardName = Codegen.ofNullable(dashboardName);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -149,7 +150,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }
         public Builder tags(@Nullable Output<List<DashboardTagArgs>> tags) {
@@ -157,7 +158,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DashboardTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DashboardTagArgs... tags) {

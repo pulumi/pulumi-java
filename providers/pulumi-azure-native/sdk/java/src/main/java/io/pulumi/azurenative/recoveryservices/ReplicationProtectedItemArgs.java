@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.EnableProtectionInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -33,8 +34,8 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="properties")
       private final @Nullable Output<EnableProtectionInputPropertiesArgs> properties;
 
-    public Output<EnableProtectionInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<EnableProtectionInputPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="protectionContainerName", required=true)
       private final Output<String> protectionContainerName;
 
-    public Output<String> getProtectionContainerName() {
+    public Output<String> protectionContainerName() {
         return this.protectionContainerName;
     }
 
@@ -55,8 +56,8 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="replicatedProtectedItemName")
       private final @Nullable Output<String> replicatedProtectedItemName;
 
-    public Output<String> getReplicatedProtectedItemName() {
-        return this.replicatedProtectedItemName == null ? Output.empty() : this.replicatedProtectedItemName;
+    public Output<String> replicatedProtectedItemName() {
+        return this.replicatedProtectedItemName == null ? Codegen.empty() : this.replicatedProtectedItemName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -97,12 +98,12 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
     }
 
     private ReplicationProtectedItemArgs() {
-        this.fabricName = Output.empty();
-        this.properties = Output.empty();
-        this.protectionContainerName = Output.empty();
-        this.replicatedProtectedItemName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.fabricName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.protectionContainerName = Codegen.empty();
+        this.replicatedProtectedItemName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder properties(@Nullable EnableProtectionInputPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder protectionContainerName(Output<String> protectionContainerName) {
@@ -164,7 +165,7 @@ public final class ReplicationProtectedItemArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder replicatedProtectedItemName(@Nullable String replicatedProtectedItemName) {
-            this.replicatedProtectedItemName = Output.ofNullable(replicatedProtectedItemName);
+            this.replicatedProtectedItemName = Codegen.ofNullable(replicatedProtectedItemName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

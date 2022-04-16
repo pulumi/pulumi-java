@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
-    public Output<String> getAddressFamily() {
+    public Output<String> addressFamily() {
         return this.addressFamily;
     }
 
@@ -33,8 +34,8 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
-    public Output<String> getAmazonAddress() {
-        return this.amazonAddress == null ? Output.empty() : this.amazonAddress;
+    public Output<String> amazonAddress() {
+        return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="bgpAsn", required=true)
       private final Output<Integer> bgpAsn;
 
-    public Output<Integer> getBgpAsn() {
+    public Output<Integer> bgpAsn() {
         return this.bgpAsn;
     }
 
@@ -55,8 +56,8 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
-    public Output<String> getBgpAuthKey() {
-        return this.bgpAuthKey == null ? Output.empty() : this.bgpAuthKey;
+    public Output<String> bgpAuthKey() {
+        return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
 
@@ -77,8 +78,8 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
-    public Output<String> getCustomerAddress() {
-        return this.customerAddress == null ? Output.empty() : this.customerAddress;
+    public Output<String> customerAddress() {
+        return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
-        return this.mtu == null ? Output.empty() : this.mtu;
+    public Output<Integer> mtu() {
+        return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="ownerAccountId", required=true)
       private final Output<String> ownerAccountId;
 
-    public Output<String> getOwnerAccountId() {
+    public Output<String> ownerAccountId() {
         return this.ownerAccountId;
     }
 
@@ -121,7 +122,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     @Import(name="vlan", required=true)
       private final Output<Integer> vlan;
 
-    public Output<Integer> getVlan() {
+    public Output<Integer> vlan() {
         return this.vlan;
     }
 
@@ -149,16 +150,16 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
     }
 
     private HostedPrivateVirtualInterfaceArgs() {
-        this.addressFamily = Output.empty();
-        this.amazonAddress = Output.empty();
-        this.bgpAsn = Output.empty();
-        this.bgpAuthKey = Output.empty();
-        this.connectionId = Output.empty();
-        this.customerAddress = Output.empty();
-        this.mtu = Output.empty();
-        this.name = Output.empty();
-        this.ownerAccountId = Output.empty();
-        this.vlan = Output.empty();
+        this.addressFamily = Codegen.empty();
+        this.amazonAddress = Codegen.empty();
+        this.bgpAsn = Codegen.empty();
+        this.bgpAuthKey = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.customerAddress = Codegen.empty();
+        this.mtu = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerAccountId = Codegen.empty();
+        this.vlan = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -212,7 +213,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
             return this;
         }
         public Builder amazonAddress(@Nullable String amazonAddress) {
-            this.amazonAddress = Output.ofNullable(amazonAddress);
+            this.amazonAddress = Codegen.ofNullable(amazonAddress);
             return this;
         }
         public Builder bgpAsn(Output<Integer> bgpAsn) {
@@ -228,7 +229,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
             return this;
         }
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
-            this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
+            this.bgpAuthKey = Codegen.ofNullable(bgpAuthKey);
             return this;
         }
         public Builder connectionId(Output<String> connectionId) {
@@ -244,7 +245,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
             return this;
         }
         public Builder customerAddress(@Nullable String customerAddress) {
-            this.customerAddress = Output.ofNullable(customerAddress);
+            this.customerAddress = Codegen.ofNullable(customerAddress);
             return this;
         }
         public Builder mtu(@Nullable Output<Integer> mtu) {
@@ -252,7 +253,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
             return this;
         }
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Output.ofNullable(mtu);
+            this.mtu = Codegen.ofNullable(mtu);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -260,7 +261,7 @@ public final class HostedPrivateVirtualInterfaceArgs extends io.pulumi.resources
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerAccountId(Output<String> ownerAccountId) {

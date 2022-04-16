@@ -5,6 +5,7 @@ package io.pulumi.gcp.orgpolicy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.orgpolicy.inputs.PolicySpecGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<PolicySpecGetArgs> spec;
 
-    public Output<PolicySpecGetArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<PolicySpecGetArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     public PolicyState(
@@ -58,9 +59,9 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyState() {
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.spec = Output.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -100,7 +101,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder spec(@Nullable Output<PolicySpecGetArgs> spec) {
@@ -108,7 +109,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spec(@Nullable PolicySpecGetArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }        public PolicyState build() {
             return new PolicyState(name, parent, spec);

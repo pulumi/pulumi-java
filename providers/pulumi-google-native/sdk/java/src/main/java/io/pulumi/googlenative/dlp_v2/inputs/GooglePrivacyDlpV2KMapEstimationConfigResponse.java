@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
     @Import(name="auxiliaryTables", required=true)
       private final List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables;
 
-    public List<GooglePrivacyDlpV2AuxiliaryTableResponse> getAuxiliaryTables() {
+    public List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables() {
         return this.auxiliaryTables;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
     @Import(name="quasiIds", required=true)
       private final List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds;
 
-    public List<GooglePrivacyDlpV2TaggedFieldResponse> getQuasiIds() {
+    public List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds() {
         return this.quasiIds;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
     @Import(name="regionCode", required=true)
       private final String regionCode;
 
-    public String getRegionCode() {
+    public String regionCode() {
         return this.regionCode;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.directoryservice;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="directoryId", required=true)
       private final Output<String> directoryId;
 
-    public Output<String> getDirectoryId() {
+    public Output<String> directoryId() {
         return this.directoryId;
     }
 
@@ -31,7 +32,7 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
+    public Output<String> logGroupName() {
         return this.logGroupName;
     }
 
@@ -43,8 +44,8 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogServiceArgs() {
-        this.directoryId = Output.empty();
-        this.logGroupName = Output.empty();
+        this.directoryId = Codegen.empty();
+        this.logGroupName = Codegen.empty();
     }
 
     public static Builder builder() {

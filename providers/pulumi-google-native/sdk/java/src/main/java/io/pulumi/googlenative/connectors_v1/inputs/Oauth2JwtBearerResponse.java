@@ -24,7 +24,7 @@ public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="clientKey", required=true)
       private final SecretResponse clientKey;
 
-    public SecretResponse getClientKey() {
+    public SecretResponse clientKey() {
         return this.clientKey;
     }
 
@@ -35,7 +35,7 @@ public final class Oauth2JwtBearerResponse extends io.pulumi.resources.InvokeArg
     @Import(name="jwtClaims", required=true)
       private final JwtClaimsResponse jwtClaims;
 
-    public JwtClaimsResponse getJwtClaims() {
+    public JwtClaimsResponse jwtClaims() {
         return this.jwtClaims;
     }
 

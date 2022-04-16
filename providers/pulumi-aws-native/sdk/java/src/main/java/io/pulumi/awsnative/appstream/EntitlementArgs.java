@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appstream;
 import io.pulumi.awsnative.appstream.inputs.EntitlementAttributeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,35 +20,35 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appVisibility", required=true)
       private final Output<String> appVisibility;
 
-    public Output<String> getAppVisibility() {
+    public Output<String> appVisibility() {
         return this.appVisibility;
     }
 
     @Import(name="attributes", required=true)
       private final Output<List<EntitlementAttributeArgs>> attributes;
 
-    public Output<List<EntitlementAttributeArgs>> getAttributes() {
+    public Output<List<EntitlementAttributeArgs>> attributes() {
         return this.attributes;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -65,11 +66,11 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntitlementArgs() {
-        this.appVisibility = Output.empty();
-        this.attributes = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.stackName = Output.empty();
+        this.appVisibility = Codegen.empty();
+        this.attributes = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.stackName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -132,7 +133,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder stackName(Output<String> stackName) {

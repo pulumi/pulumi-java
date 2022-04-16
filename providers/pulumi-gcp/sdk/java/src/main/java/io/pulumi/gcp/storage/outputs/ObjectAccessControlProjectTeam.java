@@ -22,10 +22,10 @@ public final class ObjectAccessControlProjectTeam {
         this.team = team;
     }
 
-    public Optional<String> getProjectNumber() {
+    public Optional<String> projectNumber() {
         return Optional.ofNullable(this.projectNumber);
     }
-    public Optional<String> getTeam() {
+    public Optional<String> team() {
         return Optional.ofNullable(this.team);
     }
 

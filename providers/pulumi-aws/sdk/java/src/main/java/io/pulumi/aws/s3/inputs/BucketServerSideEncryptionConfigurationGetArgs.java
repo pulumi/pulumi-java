@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class BucketServerSideEncryptionConfigurationGetArgs extends io.pul
     @Import(name="rule", required=true)
       private final Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule;
 
-    public Output<BucketServerSideEncryptionConfigurationRuleGetArgs> getRule() {
+    public Output<BucketServerSideEncryptionConfigurationRuleGetArgs> rule() {
         return this.rule;
     }
 
@@ -29,7 +30,7 @@ public final class BucketServerSideEncryptionConfigurationGetArgs extends io.pul
     }
 
     private BucketServerSideEncryptionConfigurationGetArgs() {
-        this.rule = Output.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {

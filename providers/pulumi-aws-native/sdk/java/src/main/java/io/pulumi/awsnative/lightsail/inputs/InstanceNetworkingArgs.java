@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lightsail.inputs.InstanceMonthlyTransferArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstancePortArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monthlyTransfer")
       private final @Nullable Output<InstanceMonthlyTransferArgs> monthlyTransfer;
 
-    public Output<InstanceMonthlyTransferArgs> getMonthlyTransfer() {
-        return this.monthlyTransfer == null ? Output.empty() : this.monthlyTransfer;
+    public Output<InstanceMonthlyTransferArgs> monthlyTransfer() {
+        return this.monthlyTransfer == null ? Codegen.empty() : this.monthlyTransfer;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ports", required=true)
       private final Output<List<InstancePortArgs>> ports;
 
-    public Output<List<InstancePortArgs>> getPorts() {
+    public Output<List<InstancePortArgs>> ports() {
         return this.ports;
     }
 
@@ -46,8 +47,8 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceNetworkingArgs() {
-        this.monthlyTransfer = Output.empty();
-        this.ports = Output.empty();
+        this.monthlyTransfer = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class InstanceNetworkingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder monthlyTransfer(@Nullable InstanceMonthlyTransferArgs monthlyTransfer) {
-            this.monthlyTransfer = Output.ofNullable(monthlyTransfer);
+            this.monthlyTransfer = Codegen.ofNullable(monthlyTransfer);
             return this;
         }
         public Builder ports(Output<List<InstancePortArgs>> ports) {

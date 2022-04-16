@@ -6,6 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.inputs.ThreatIntelligenceParsedPatternTypeValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
     @Import(name="patternTypeKey")
       private final @Nullable Output<String> patternTypeKey;
 
-    public Output<String> getPatternTypeKey() {
-        return this.patternTypeKey == null ? Output.empty() : this.patternTypeKey;
+    public Output<String> patternTypeKey() {
+        return this.patternTypeKey == null ? Codegen.empty() : this.patternTypeKey;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
     @Import(name="patternTypeValues")
       private final @Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues;
 
-    public Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> getPatternTypeValues() {
-        return this.patternTypeValues == null ? Output.empty() : this.patternTypeValues;
+    public Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues() {
+        return this.patternTypeValues == null ? Codegen.empty() : this.patternTypeValues;
     }
 
     public ThreatIntelligenceParsedPatternArgs(
@@ -50,8 +51,8 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
     }
 
     private ThreatIntelligenceParsedPatternArgs() {
-        this.patternTypeKey = Output.empty();
-        this.patternTypeValues = Output.empty();
+        this.patternTypeKey = Codegen.empty();
+        this.patternTypeValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
             return this;
         }
         public Builder patternTypeKey(@Nullable String patternTypeKey) {
-            this.patternTypeKey = Output.ofNullable(patternTypeKey);
+            this.patternTypeKey = Codegen.ofNullable(patternTypeKey);
             return this;
         }
         public Builder patternTypeValues(@Nullable Output<List<ThreatIntelligenceParsedPatternTypeValueArgs>> patternTypeValues) {
@@ -89,7 +90,7 @@ public final class ThreatIntelligenceParsedPatternArgs extends io.pulumi.resourc
             return this;
         }
         public Builder patternTypeValues(@Nullable List<ThreatIntelligenceParsedPatternTypeValueArgs> patternTypeValues) {
-            this.patternTypeValues = Output.ofNullable(patternTypeValues);
+            this.patternTypeValues = Codegen.ofNullable(patternTypeValues);
             return this;
         }
         public Builder patternTypeValues(ThreatIntelligenceParsedPatternTypeValueArgs... patternTypeValues) {

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionKernelCapabilitiesArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionTmpfsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -22,50 +23,50 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
     @Import(name="capabilities")
       private final @Nullable Output<TaskDefinitionKernelCapabilitiesArgs> capabilities;
 
-    public Output<TaskDefinitionKernelCapabilitiesArgs> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<TaskDefinitionKernelCapabilitiesArgs> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     @Import(name="devices")
       private final @Nullable Output<List<TaskDefinitionDeviceArgs>> devices;
 
-    public Output<List<TaskDefinitionDeviceArgs>> getDevices() {
-        return this.devices == null ? Output.empty() : this.devices;
+    public Output<List<TaskDefinitionDeviceArgs>> devices() {
+        return this.devices == null ? Codegen.empty() : this.devices;
     }
 
     @Import(name="initProcessEnabled")
       private final @Nullable Output<Boolean> initProcessEnabled;
 
-    public Output<Boolean> getInitProcessEnabled() {
-        return this.initProcessEnabled == null ? Output.empty() : this.initProcessEnabled;
+    public Output<Boolean> initProcessEnabled() {
+        return this.initProcessEnabled == null ? Codegen.empty() : this.initProcessEnabled;
     }
 
     @Import(name="maxSwap")
       private final @Nullable Output<Integer> maxSwap;
 
-    public Output<Integer> getMaxSwap() {
-        return this.maxSwap == null ? Output.empty() : this.maxSwap;
+    public Output<Integer> maxSwap() {
+        return this.maxSwap == null ? Codegen.empty() : this.maxSwap;
     }
 
     @Import(name="sharedMemorySize")
       private final @Nullable Output<Integer> sharedMemorySize;
 
-    public Output<Integer> getSharedMemorySize() {
-        return this.sharedMemorySize == null ? Output.empty() : this.sharedMemorySize;
+    public Output<Integer> sharedMemorySize() {
+        return this.sharedMemorySize == null ? Codegen.empty() : this.sharedMemorySize;
     }
 
     @Import(name="swappiness")
       private final @Nullable Output<Integer> swappiness;
 
-    public Output<Integer> getSwappiness() {
-        return this.swappiness == null ? Output.empty() : this.swappiness;
+    public Output<Integer> swappiness() {
+        return this.swappiness == null ? Codegen.empty() : this.swappiness;
     }
 
     @Import(name="tmpfs")
       private final @Nullable Output<List<TaskDefinitionTmpfsArgs>> tmpfs;
 
-    public Output<List<TaskDefinitionTmpfsArgs>> getTmpfs() {
-        return this.tmpfs == null ? Output.empty() : this.tmpfs;
+    public Output<List<TaskDefinitionTmpfsArgs>> tmpfs() {
+        return this.tmpfs == null ? Codegen.empty() : this.tmpfs;
     }
 
     public TaskDefinitionLinuxParametersArgs(
@@ -86,13 +87,13 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
     }
 
     private TaskDefinitionLinuxParametersArgs() {
-        this.capabilities = Output.empty();
-        this.devices = Output.empty();
-        this.initProcessEnabled = Output.empty();
-        this.maxSwap = Output.empty();
-        this.sharedMemorySize = Output.empty();
-        this.swappiness = Output.empty();
-        this.tmpfs = Output.empty();
+        this.capabilities = Codegen.empty();
+        this.devices = Codegen.empty();
+        this.initProcessEnabled = Codegen.empty();
+        this.maxSwap = Codegen.empty();
+        this.sharedMemorySize = Codegen.empty();
+        this.swappiness = Codegen.empty();
+        this.tmpfs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder capabilities(@Nullable TaskDefinitionKernelCapabilitiesArgs capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder devices(@Nullable Output<List<TaskDefinitionDeviceArgs>> devices) {
@@ -140,7 +141,7 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder devices(@Nullable List<TaskDefinitionDeviceArgs> devices) {
-            this.devices = Output.ofNullable(devices);
+            this.devices = Codegen.ofNullable(devices);
             return this;
         }
         public Builder devices(TaskDefinitionDeviceArgs... devices) {
@@ -151,7 +152,7 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder initProcessEnabled(@Nullable Boolean initProcessEnabled) {
-            this.initProcessEnabled = Output.ofNullable(initProcessEnabled);
+            this.initProcessEnabled = Codegen.ofNullable(initProcessEnabled);
             return this;
         }
         public Builder maxSwap(@Nullable Output<Integer> maxSwap) {
@@ -159,7 +160,7 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder maxSwap(@Nullable Integer maxSwap) {
-            this.maxSwap = Output.ofNullable(maxSwap);
+            this.maxSwap = Codegen.ofNullable(maxSwap);
             return this;
         }
         public Builder sharedMemorySize(@Nullable Output<Integer> sharedMemorySize) {
@@ -167,7 +168,7 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder sharedMemorySize(@Nullable Integer sharedMemorySize) {
-            this.sharedMemorySize = Output.ofNullable(sharedMemorySize);
+            this.sharedMemorySize = Codegen.ofNullable(sharedMemorySize);
             return this;
         }
         public Builder swappiness(@Nullable Output<Integer> swappiness) {
@@ -175,7 +176,7 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder swappiness(@Nullable Integer swappiness) {
-            this.swappiness = Output.ofNullable(swappiness);
+            this.swappiness = Codegen.ofNullable(swappiness);
             return this;
         }
         public Builder tmpfs(@Nullable Output<List<TaskDefinitionTmpfsArgs>> tmpfs) {
@@ -183,7 +184,7 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder tmpfs(@Nullable List<TaskDefinitionTmpfsArgs> tmpfs) {
-            this.tmpfs = Output.ofNullable(tmpfs);
+            this.tmpfs = Codegen.ofNullable(tmpfs);
             return this;
         }
         public Builder tmpfs(TaskDefinitionTmpfsArgs... tmpfs) {

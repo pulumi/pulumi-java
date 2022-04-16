@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlDatabaseArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mysqlDatabases")
       private final @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
 
-    public Output<List<MysqlDatabaseArgs>> getMysqlDatabases() {
-        return this.mysqlDatabases == null ? Output.empty() : this.mysqlDatabases;
+    public Output<List<MysqlDatabaseArgs>> mysqlDatabases() {
+        return this.mysqlDatabases == null ? Codegen.empty() : this.mysqlDatabases;
     }
 
     public MysqlRdbmsArgs(@Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases) {
@@ -35,7 +36,7 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MysqlRdbmsArgs() {
-        this.mysqlDatabases = Output.empty();
+        this.mysqlDatabases = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class MysqlRdbmsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mysqlDatabases(@Nullable List<MysqlDatabaseArgs> mysqlDatabases) {
-            this.mysqlDatabases = Output.ofNullable(mysqlDatabases);
+            this.mysqlDatabases = Codegen.ofNullable(mysqlDatabases);
             return this;
         }
         public Builder mysqlDatabases(MysqlDatabaseArgs... mysqlDatabases) {

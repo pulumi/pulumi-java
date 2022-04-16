@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
     @Import(name="limits")
       private final @Nullable Output<Map<String,String>> limits;
 
-    public Output<Map<String,String>> getLimits() {
-        return this.limits == null ? Output.empty() : this.limits;
+    public Output<Map<String,String>> limits() {
+        return this.limits == null ? Codegen.empty() : this.limits;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
     @Import(name="requests")
       private final @Nullable Output<Map<String,String>> requests;
 
-    public Output<Map<String,String>> getRequests() {
-        return this.requests == null ? Output.empty() : this.requests;
+    public Output<Map<String,String>> requests() {
+        return this.requests == null ? Codegen.empty() : this.requests;
     }
 
     public ServiceTemplateSpecContainerResourcesGetArgs(
@@ -51,8 +52,8 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
     }
 
     private ServiceTemplateSpecContainerResourcesGetArgs() {
-        this.limits = Output.empty();
-        this.requests = Output.empty();
+        this.limits = Codegen.empty();
+        this.requests = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
             return this;
         }
         public Builder limits(@Nullable Map<String,String> limits) {
-            this.limits = Output.ofNullable(limits);
+            this.limits = Codegen.ofNullable(limits);
             return this;
         }
         public Builder requests(@Nullable Output<Map<String,String>> requests) {
@@ -90,7 +91,7 @@ public final class ServiceTemplateSpecContainerResourcesGetArgs extends io.pulum
             return this;
         }
         public Builder requests(@Nullable Map<String,String> requests) {
-            this.requests = Output.ofNullable(requests);
+            this.requests = Codegen.ofNullable(requests);
             return this;
         }        public ServiceTemplateSpecContainerResourcesGetArgs build() {
             return new ServiceTemplateSpecContainerResourcesGetArgs(limits, requests);

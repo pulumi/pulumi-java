@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="deleteFilesAfterCompletion")
       private final @Nullable Output<Object> deleteFilesAfterCompletion;
 
-    public Output<Object> getDeleteFilesAfterCompletion() {
-        return this.deleteFilesAfterCompletion == null ? Output.empty() : this.deleteFilesAfterCompletion;
+    public Output<Object> deleteFilesAfterCompletion() {
+        return this.deleteFilesAfterCompletion == null ? Codegen.empty() : this.deleteFilesAfterCompletion;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+    public Output<Object> disableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="enablePartitionDiscovery")
       private final @Nullable Output<Boolean> enablePartitionDiscovery;
 
-    public Output<Boolean> getEnablePartitionDiscovery() {
-        return this.enablePartitionDiscovery == null ? Output.empty() : this.enablePartitionDiscovery;
+    public Output<Boolean> enablePartitionDiscovery() {
+        return this.enablePartitionDiscovery == null ? Codegen.empty() : this.enablePartitionDiscovery;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="fileFilter")
       private final @Nullable Output<Object> fileFilter;
 
-    public Output<Object> getFileFilter() {
-        return this.fileFilter == null ? Output.empty() : this.fileFilter;
+    public Output<Object> fileFilter() {
+        return this.fileFilter == null ? Codegen.empty() : this.fileFilter;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="fileListPath")
       private final @Nullable Output<Object> fileListPath;
 
-    public Output<Object> getFileListPath() {
-        return this.fileListPath == null ? Output.empty() : this.fileListPath;
+    public Output<Object> fileListPath() {
+        return this.fileListPath == null ? Codegen.empty() : this.fileListPath;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+    public Output<Object> maxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="modifiedDatetimeEnd")
       private final @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Output<Object> getModifiedDatetimeEnd() {
-        return this.modifiedDatetimeEnd == null ? Output.empty() : this.modifiedDatetimeEnd;
+    public Output<Object> modifiedDatetimeEnd() {
+        return this.modifiedDatetimeEnd == null ? Codegen.empty() : this.modifiedDatetimeEnd;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="modifiedDatetimeStart")
       private final @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Output<Object> getModifiedDatetimeStart() {
-        return this.modifiedDatetimeStart == null ? Output.empty() : this.modifiedDatetimeStart;
+    public Output<Object> modifiedDatetimeStart() {
+        return this.modifiedDatetimeStart == null ? Codegen.empty() : this.modifiedDatetimeStart;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="partitionRootPath")
       private final @Nullable Output<Object> partitionRootPath;
 
-    public Output<Object> getPartitionRootPath() {
-        return this.partitionRootPath == null ? Output.empty() : this.partitionRootPath;
+    public Output<Object> partitionRootPath() {
+        return this.partitionRootPath == null ? Codegen.empty() : this.partitionRootPath;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="recursive")
       private final @Nullable Output<Object> recursive;
 
-    public Output<Object> getRecursive() {
-        return this.recursive == null ? Output.empty() : this.recursive;
+    public Output<Object> recursive() {
+        return this.recursive == null ? Codegen.empty() : this.recursive;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -149,8 +150,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="wildcardFileName")
       private final @Nullable Output<Object> wildcardFileName;
 
-    public Output<Object> getWildcardFileName() {
-        return this.wildcardFileName == null ? Output.empty() : this.wildcardFileName;
+    public Output<Object> wildcardFileName() {
+        return this.wildcardFileName == null ? Codegen.empty() : this.wildcardFileName;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="wildcardFolderPath")
       private final @Nullable Output<Object> wildcardFolderPath;
 
-    public Output<Object> getWildcardFolderPath() {
-        return this.wildcardFolderPath == null ? Output.empty() : this.wildcardFolderPath;
+    public Output<Object> wildcardFolderPath() {
+        return this.wildcardFolderPath == null ? Codegen.empty() : this.wildcardFolderPath;
     }
 
     public FileServerReadSettingsArgs(
@@ -194,19 +195,19 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private FileServerReadSettingsArgs() {
-        this.deleteFilesAfterCompletion = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.enablePartitionDiscovery = Output.empty();
-        this.fileFilter = Output.empty();
-        this.fileListPath = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.modifiedDatetimeEnd = Output.empty();
-        this.modifiedDatetimeStart = Output.empty();
-        this.partitionRootPath = Output.empty();
-        this.recursive = Output.empty();
-        this.type = Output.empty();
-        this.wildcardFileName = Output.empty();
-        this.wildcardFolderPath = Output.empty();
+        this.deleteFilesAfterCompletion = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.enablePartitionDiscovery = Codegen.empty();
+        this.fileFilter = Codegen.empty();
+        this.fileListPath = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.modifiedDatetimeEnd = Codegen.empty();
+        this.modifiedDatetimeStart = Codegen.empty();
+        this.partitionRootPath = Codegen.empty();
+        this.recursive = Codegen.empty();
+        this.type = Codegen.empty();
+        this.wildcardFileName = Codegen.empty();
+        this.wildcardFolderPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -258,7 +259,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
-            this.deleteFilesAfterCompletion = Output.ofNullable(deleteFilesAfterCompletion);
+            this.deleteFilesAfterCompletion = Codegen.ofNullable(deleteFilesAfterCompletion);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -266,7 +267,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder enablePartitionDiscovery(@Nullable Output<Boolean> enablePartitionDiscovery) {
@@ -274,7 +275,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
-            this.enablePartitionDiscovery = Output.ofNullable(enablePartitionDiscovery);
+            this.enablePartitionDiscovery = Codegen.ofNullable(enablePartitionDiscovery);
             return this;
         }
         public Builder fileFilter(@Nullable Output<Object> fileFilter) {
@@ -282,7 +283,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder fileFilter(@Nullable Object fileFilter) {
-            this.fileFilter = Output.ofNullable(fileFilter);
+            this.fileFilter = Codegen.ofNullable(fileFilter);
             return this;
         }
         public Builder fileListPath(@Nullable Output<Object> fileListPath) {
@@ -290,7 +291,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder fileListPath(@Nullable Object fileListPath) {
-            this.fileListPath = Output.ofNullable(fileListPath);
+            this.fileListPath = Codegen.ofNullable(fileListPath);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -298,7 +299,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder modifiedDatetimeEnd(@Nullable Output<Object> modifiedDatetimeEnd) {
@@ -306,7 +307,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = Output.ofNullable(modifiedDatetimeEnd);
+            this.modifiedDatetimeEnd = Codegen.ofNullable(modifiedDatetimeEnd);
             return this;
         }
         public Builder modifiedDatetimeStart(@Nullable Output<Object> modifiedDatetimeStart) {
@@ -314,7 +315,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = Output.ofNullable(modifiedDatetimeStart);
+            this.modifiedDatetimeStart = Codegen.ofNullable(modifiedDatetimeStart);
             return this;
         }
         public Builder partitionRootPath(@Nullable Output<Object> partitionRootPath) {
@@ -322,7 +323,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder partitionRootPath(@Nullable Object partitionRootPath) {
-            this.partitionRootPath = Output.ofNullable(partitionRootPath);
+            this.partitionRootPath = Codegen.ofNullable(partitionRootPath);
             return this;
         }
         public Builder recursive(@Nullable Output<Object> recursive) {
@@ -330,7 +331,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Output.ofNullable(recursive);
+            this.recursive = Codegen.ofNullable(recursive);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -346,7 +347,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder wildcardFileName(@Nullable Object wildcardFileName) {
-            this.wildcardFileName = Output.ofNullable(wildcardFileName);
+            this.wildcardFileName = Codegen.ofNullable(wildcardFileName);
             return this;
         }
         public Builder wildcardFolderPath(@Nullable Output<Object> wildcardFolderPath) {
@@ -354,7 +355,7 @@ public final class FileServerReadSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
-            this.wildcardFolderPath = Output.ofNullable(wildcardFolderPath);
+            this.wildcardFolderPath = Codegen.ofNullable(wildcardFolderPath);
             return this;
         }        public FileServerReadSettingsArgs build() {
             return new FileServerReadSettingsArgs(deleteFilesAfterCompletion, disableMetricsCollection, enablePartitionDiscovery, fileFilter, fileListPath, maxConcurrentConnections, modifiedDatetimeEnd, modifiedDatetimeStart, partitionRootPath, recursive, type, wildcardFileName, wildcardFolderPath);

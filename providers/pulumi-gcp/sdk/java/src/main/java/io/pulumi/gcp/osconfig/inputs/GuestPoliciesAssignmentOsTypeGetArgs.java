@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
     @Import(name="osArchitecture")
       private final @Nullable Output<String> osArchitecture;
 
-    public Output<String> getOsArchitecture() {
-        return this.osArchitecture == null ? Output.empty() : this.osArchitecture;
+    public Output<String> osArchitecture() {
+        return this.osArchitecture == null ? Codegen.empty() : this.osArchitecture;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
     @Import(name="osShortName")
       private final @Nullable Output<String> osShortName;
 
-    public Output<String> getOsShortName() {
-        return this.osShortName == null ? Output.empty() : this.osShortName;
+    public Output<String> osShortName() {
+        return this.osShortName == null ? Codegen.empty() : this.osShortName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
     @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
-    public Output<String> getOsVersion() {
-        return this.osVersion == null ? Output.empty() : this.osVersion;
+    public Output<String> osVersion() {
+        return this.osVersion == null ? Codegen.empty() : this.osVersion;
     }
 
     public GuestPoliciesAssignmentOsTypeGetArgs(
@@ -57,9 +58,9 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
     }
 
     private GuestPoliciesAssignmentOsTypeGetArgs() {
-        this.osArchitecture = Output.empty();
-        this.osShortName = Output.empty();
-        this.osVersion = Output.empty();
+        this.osArchitecture = Codegen.empty();
+        this.osShortName = Codegen.empty();
+        this.osVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder osArchitecture(@Nullable String osArchitecture) {
-            this.osArchitecture = Output.ofNullable(osArchitecture);
+            this.osArchitecture = Codegen.ofNullable(osArchitecture);
             return this;
         }
         public Builder osShortName(@Nullable Output<String> osShortName) {
@@ -99,7 +100,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder osShortName(@Nullable String osShortName) {
-            this.osShortName = Output.ofNullable(osShortName);
+            this.osShortName = Codegen.ofNullable(osShortName);
             return this;
         }
         public Builder osVersion(@Nullable Output<String> osVersion) {
@@ -107,7 +108,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder osVersion(@Nullable String osVersion) {
-            this.osVersion = Output.ofNullable(osVersion);
+            this.osVersion = Codegen.ofNullable(osVersion);
             return this;
         }        public GuestPoliciesAssignmentOsTypeGetArgs build() {
             return new GuestPoliciesAssignmentOsTypeGetArgs(osArchitecture, osShortName, osVersion);

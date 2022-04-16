@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticache;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessString", required=true)
       private final Output<String> accessString;
 
-    public Output<String> getAccessString() {
+    public Output<String> accessString() {
         return this.accessString;
     }
 
@@ -35,8 +36,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engine", required=true)
       private final Output<String> engine;
 
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
 
@@ -57,8 +58,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="noPasswordRequired")
       private final @Nullable Output<Boolean> noPasswordRequired;
 
-    public Output<Boolean> getNoPasswordRequired() {
-        return this.noPasswordRequired == null ? Output.empty() : this.noPasswordRequired;
+    public Output<Boolean> noPasswordRequired() {
+        return this.noPasswordRequired == null ? Codegen.empty() : this.noPasswordRequired;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
 
-    public Output<List<String>> getPasswords() {
-        return this.passwords == null ? Output.empty() : this.passwords;
+    public Output<List<String>> passwords() {
+        return this.passwords == null ? Codegen.empty() : this.passwords;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userId", required=true)
       private final Output<String> userId;
 
-    public Output<String> getUserId() {
+    public Output<String> userId() {
         return this.userId;
     }
 
@@ -101,7 +102,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -125,14 +126,14 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.accessString = Output.empty();
-        this.arn = Output.empty();
-        this.engine = Output.empty();
-        this.noPasswordRequired = Output.empty();
-        this.passwords = Output.empty();
-        this.tags = Output.empty();
-        this.userId = Output.empty();
-        this.userName = Output.empty();
+        this.accessString = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.engine = Codegen.empty();
+        this.noPasswordRequired = Codegen.empty();
+        this.passwords = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userId = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder engine(Output<String> engine) {
@@ -198,7 +199,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noPasswordRequired(@Nullable Boolean noPasswordRequired) {
-            this.noPasswordRequired = Output.ofNullable(noPasswordRequired);
+            this.noPasswordRequired = Codegen.ofNullable(noPasswordRequired);
             return this;
         }
         public Builder passwords(@Nullable Output<List<String>> passwords) {
@@ -206,7 +207,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder passwords(@Nullable List<String> passwords) {
-            this.passwords = Output.ofNullable(passwords);
+            this.passwords = Codegen.ofNullable(passwords);
             return this;
         }
         public Builder passwords(String... passwords) {
@@ -217,7 +218,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userId(Output<String> userId) {

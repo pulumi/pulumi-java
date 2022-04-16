@@ -25,7 +25,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
     @Import(name="accessResourcePath")
       private final @Nullable String accessResourcePath;
 
-    public Optional<String> getAccessResourcePath() {
+    public Optional<String> accessResourcePath() {
         return this.accessResourcePath == null ? Optional.empty() : Optional.ofNullable(this.accessResourcePath);
     }
 
@@ -36,7 +36,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
     @Import(name="expireTime")
       private final @Nullable String expireTime;
 
-    public Optional<String> getExpireTime() {
+    public Optional<String> expireTime() {
         return this.expireTime == null ? Optional.empty() : Optional.ofNullable(this.expireTime);
     }
 
@@ -47,7 +47,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
     @Import(name="permissions")
       private final @Nullable String permissions;
 
-    public Optional<String> getPermissions() {
+    public Optional<String> permissions() {
         return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
     }
 
@@ -58,7 +58,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
     @Import(name="profileName")
       private final @Nullable String profileName;
 
-    public Optional<String> getProfileName() {
+    public Optional<String> profileName() {
         return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
     }
 
@@ -69,7 +69,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
     @Import(name="startTime")
       private final @Nullable String startTime;
 
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 

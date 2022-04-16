@@ -28,7 +28,7 @@ public final class CertificateCertificateDescriptionConfigValue {
      * Structure is documented below.
      * 
     */
-    public List<CertificateCertificateDescriptionConfigValueKeyUsage> getKeyUsages() {
+    public List<CertificateCertificateDescriptionConfigValueKeyUsage> keyUsages() {
         return this.keyUsages == null ? List.of() : this.keyUsages;
     }
 

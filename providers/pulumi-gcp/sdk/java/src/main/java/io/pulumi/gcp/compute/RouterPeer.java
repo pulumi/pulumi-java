@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterPeerArgs;
 import io.pulumi.gcp.compute.inputs.RouterPeerState;
@@ -71,7 +72,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * Possible values are `DEFAULT` and `CUSTOM`.
      * 
      */
-    public Output</* @Nullable */ String> getAdvertiseMode() {
+    public Output</* @Nullable */ String> advertiseMode() {
         return this.advertiseMode;
     }
     /**
@@ -93,7 +94,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAdvertisedGroups() {
+    public Output</* @Nullable */ List<String>> advertisedGroups() {
         return this.advertisedGroups;
     }
     /**
@@ -117,7 +118,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<RouterPeerAdvertisedIpRange>> getAdvertisedIpRanges() {
+    public Output</* @Nullable */ List<RouterPeerAdvertisedIpRange>> advertisedIpRanges() {
         return this.advertisedIpRanges;
     }
     /**
@@ -135,7 +136,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * length, the routes with the lowest priority value win.
      * 
      */
-    public Output</* @Nullable */ Integer> getAdvertisedRoutePriority() {
+    public Output</* @Nullable */ Integer> advertisedRoutePriority() {
         return this.advertisedRoutePriority;
     }
     /**
@@ -151,7 +152,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<RouterPeerBfd> getBfd() {
+    public Output<RouterPeerBfd> bfd() {
         return this.bfd;
     }
     /**
@@ -171,7 +172,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * The default is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnable() {
+    public Output</* @Nullable */ Boolean> enable() {
         return this.enable;
     }
     /**
@@ -185,7 +186,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * @return Name of the interface the BGP peer is associated with.
      * 
      */
-    public Output<String> getInterface_() {
+    public Output<String> interface_() {
         return this.interface_;
     }
     /**
@@ -201,7 +202,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * Only IPv4 is supported.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -221,7 +222,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
      * 
      */
-    public Output<String> getManagementType() {
+    public Output<String> managementType() {
         return this.managementType;
     }
     /**
@@ -245,7 +246,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -261,7 +262,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * Each BGP interface may use a different value.
      * 
      */
-    public Output<Integer> getPeerAsn() {
+    public Output<Integer> peerAsn() {
         return this.peerAsn;
     }
     /**
@@ -277,7 +278,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * Only IPv4 is supported.
      * 
      */
-    public Output<String> getPeerIpAddress() {
+    public Output<String> peerIpAddress() {
         return this.peerIpAddress;
     }
     /**
@@ -293,7 +294,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -309,7 +310,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -323,7 +324,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * @return The name of the Cloud Router in which this BgpPeer will be configured.
      * 
      */
-    public Output<String> getRouter() {
+    public Output<String> router() {
         return this.router;
     }
 
@@ -349,7 +350,7 @@ public class RouterPeer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouterPeer(String name, RouterPeerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/routerPeer:RouterPeer", name, args == null ? RouterPeerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/routerPeer:RouterPeer", name, args == null ? RouterPeerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RouterPeer(String name, Output<String> id, @Nullable RouterPeerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

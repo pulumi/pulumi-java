@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
 
-    public Output<String> getAutoPlacement() {
-        return this.autoPlacement == null ? Output.empty() : this.autoPlacement;
+    public Output<String> autoPlacement() {
+        return this.autoPlacement == null ? Codegen.empty() : this.autoPlacement;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
 
@@ -43,8 +44,8 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
 
-    public Output<String> getHostRecovery() {
-        return this.hostRecovery == null ? Output.empty() : this.hostRecovery;
+    public Output<String> hostRecovery() {
+        return this.hostRecovery == null ? Codegen.empty() : this.hostRecovery;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -70,10 +71,10 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostArgs() {
-        this.autoPlacement = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.hostRecovery = Output.empty();
-        this.instanceType = Output.empty();
+        this.autoPlacement = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.hostRecovery = Codegen.empty();
+        this.instanceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoPlacement(@Nullable String autoPlacement) {
-            this.autoPlacement = Output.ofNullable(autoPlacement);
+            this.autoPlacement = Codegen.ofNullable(autoPlacement);
             return this;
         }
         public Builder availabilityZone(Output<String> availabilityZone) {
@@ -123,7 +124,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostRecovery(@Nullable String hostRecovery) {
-            this.hostRecovery = Output.ofNullable(hostRecovery);
+            this.hostRecovery = Codegen.ofNullable(hostRecovery);
             return this;
         }
         public Builder instanceType(Output<String> instanceType) {

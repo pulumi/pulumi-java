@@ -6,6 +6,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 import io.pulumi.azurenative.virtualmachineimages.inputs.PlatformImagePurchasePlanArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     @Import(name="offer")
       private final @Nullable Output<String> offer;
 
-    public Output<String> getOffer() {
-        return this.offer == null ? Output.empty() : this.offer;
+    public Output<String> offer() {
+        return this.offer == null ? Codegen.empty() : this.offer;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     @Import(name="planInfo")
       private final @Nullable Output<PlatformImagePurchasePlanArgs> planInfo;
 
-    public Output<PlatformImagePurchasePlanArgs> getPlanInfo() {
-        return this.planInfo == null ? Output.empty() : this.planInfo;
+    public Output<PlatformImagePurchasePlanArgs> planInfo() {
+        return this.planInfo == null ? Codegen.empty() : this.planInfo;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
-        return this.publisher == null ? Output.empty() : this.publisher;
+    public Output<String> publisher() {
+        return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     @Import(name="sku")
       private final @Nullable Output<String> sku;
 
-    public Output<String> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<String> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -82,8 +83,8 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ImageTemplatePlatformImageSourceArgs(
@@ -102,12 +103,12 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
     }
 
     private ImageTemplatePlatformImageSourceArgs() {
-        this.offer = Output.empty();
-        this.planInfo = Output.empty();
-        this.publisher = Output.empty();
-        this.sku = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
+        this.offer = Codegen.empty();
+        this.planInfo = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder offer(@Nullable String offer) {
-            this.offer = Output.ofNullable(offer);
+            this.offer = Codegen.ofNullable(offer);
             return this;
         }
         public Builder planInfo(@Nullable Output<PlatformImagePurchasePlanArgs> planInfo) {
@@ -153,7 +154,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder planInfo(@Nullable PlatformImagePurchasePlanArgs planInfo) {
-            this.planInfo = Output.ofNullable(planInfo);
+            this.planInfo = Codegen.ofNullable(planInfo);
             return this;
         }
         public Builder publisher(@Nullable Output<String> publisher) {
@@ -161,7 +162,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Output.ofNullable(publisher);
+            this.publisher = Codegen.ofNullable(publisher);
             return this;
         }
         public Builder sku(@Nullable Output<String> sku) {
@@ -169,7 +170,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder sku(@Nullable String sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -185,7 +186,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ImageTemplatePlatformImageSourceArgs build() {
             return new ImageTemplatePlatformImageSourceArgs(offer, planInfo, publisher, sku, type, version);

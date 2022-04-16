@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.GallerySharingPermissionTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
 
-    public Output<Either<String,GallerySharingPermissionTypes>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<Either<String,GallerySharingPermissionTypes>> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     public SharingProfileArgs(@Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions) {
@@ -36,7 +37,7 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SharingProfileArgs() {
-        this.permissions = Output.empty();
+        this.permissions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable Either<String,GallerySharingPermissionTypes> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }        public SharingProfileArgs build() {
             return new SharingProfileArgs(permissions);

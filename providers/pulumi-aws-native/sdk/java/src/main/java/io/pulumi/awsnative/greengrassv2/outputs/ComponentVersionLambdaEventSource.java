@@ -23,10 +23,10 @@ public final class ComponentVersionLambdaEventSource {
         this.type = type;
     }
 
-    public Optional<String> getTopic() {
+    public Optional<String> topic() {
         return Optional.ofNullable(this.topic);
     }
-    public Optional<ComponentVersionLambdaEventSourceType> getType() {
+    public Optional<ComponentVersionLambdaEventSourceType> type() {
         return Optional.ofNullable(this.type);
     }
 

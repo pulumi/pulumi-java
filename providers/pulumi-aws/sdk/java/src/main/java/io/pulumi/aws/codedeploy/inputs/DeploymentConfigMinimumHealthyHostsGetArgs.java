@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends io.pulumi.
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends io.pulumi.
     @Import(name="value")
       private final @Nullable Output<Integer> value;
 
-    public Output<Integer> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Integer> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public DeploymentConfigMinimumHealthyHostsGetArgs(
@@ -48,8 +49,8 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends io.pulumi.
     }
 
     private DeploymentConfigMinimumHealthyHostsGetArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends io.pulumi.
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<Integer> value) {
@@ -87,7 +88,7 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends io.pulumi.
             return this;
         }
         public Builder value(@Nullable Integer value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public DeploymentConfigMinimumHealthyHostsGetArgs build() {
             return new DeploymentConfigMinimumHealthyHostsGetArgs(type, value);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
     @Import(name="nameClaimType")
       private final @Nullable Output<String> nameClaimType;
 
-    public Output<String> getNameClaimType() {
-        return this.nameClaimType == null ? Output.empty() : this.nameClaimType;
+    public Output<String> nameClaimType() {
+        return this.nameClaimType == null ? Codegen.empty() : this.nameClaimType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+    public Output<List<String>> scopes() {
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     public OpenIdConnectLoginArgs(
@@ -49,8 +50,8 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
     }
 
     private OpenIdConnectLoginArgs() {
-        this.nameClaimType = Output.empty();
-        this.scopes = Output.empty();
+        this.nameClaimType = Codegen.empty();
+        this.scopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder nameClaimType(@Nullable String nameClaimType) {
-            this.nameClaimType = Output.ofNullable(nameClaimType);
+            this.nameClaimType = Codegen.ofNullable(nameClaimType);
             return this;
         }
         public Builder scopes(@Nullable Output<List<String>> scopes) {
@@ -88,7 +89,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(String... scopes) {

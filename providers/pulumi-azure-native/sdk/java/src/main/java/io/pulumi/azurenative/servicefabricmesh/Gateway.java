@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return User readable description of the gateway.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -59,7 +60,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Network that the Application is using.
      * 
      */
-    public Output<NetworkRefResponse> getDestinationNetwork() {
+    public Output<NetworkRefResponse> destinationNetwork() {
         return this.destinationNetwork;
     }
     /**
@@ -73,7 +74,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Configuration for http connectivity for this gateway.
      * 
      */
-    public Output</* @Nullable */ List<HttpConfigResponse>> getHttp() {
+    public Output</* @Nullable */ List<HttpConfigResponse>> http() {
         return this.http;
     }
     /**
@@ -87,7 +88,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return IP address of the gateway. This is populated in the response and is ignored for incoming requests.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -101,7 +102,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -115,7 +116,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +130,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return State of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -143,7 +144,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Network the gateway should listen on for requests.
      * 
      */
-    public Output<NetworkRefResponse> getSourceNetwork() {
+    public Output<NetworkRefResponse> sourceNetwork() {
         return this.sourceNetwork;
     }
     /**
@@ -157,7 +158,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Status of the resource.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -171,7 +172,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Gives additional information about the current status of the gateway.
      * 
      */
-    public Output<String> getStatusDetails() {
+    public Output<String> statusDetails() {
         return this.statusDetails;
     }
     /**
@@ -185,7 +186,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -199,7 +200,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return Configuration for tcp connectivity for this gateway.
      * 
      */
-    public Output</* @Nullable */ List<TcpConfigResponse>> getTcp() {
+    public Output</* @Nullable */ List<TcpConfigResponse>> tcp() {
         return this.tcp;
     }
     /**
@@ -213,7 +214,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -239,7 +240,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Gateway(String name, GatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicefabricmesh:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:servicefabricmesh:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Gateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class GlobalTableReplicaGetArgs extends io.pulumi.resources.Resourc
     @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
-    public Output<String> getRegionName() {
+    public Output<String> regionName() {
         return this.regionName;
     }
 
@@ -29,7 +30,7 @@ public final class GlobalTableReplicaGetArgs extends io.pulumi.resources.Resourc
     }
 
     private GlobalTableReplicaGetArgs() {
-        this.regionName = Output.empty();
+        this.regionName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2transitgateway.inputs.VpcAttachmentAccepterState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Whether Appliance Mode support is enabled. Valid values: `disable`, `enable`.
      * 
      */
-    public Output<String> getApplianceModeSupport() {
+    public Output<String> applianceModeSupport() {
         return this.applianceModeSupport;
     }
     /**
@@ -62,7 +63,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Whether DNS support is enabled. Valid values: `disable`, `enable`.
      * 
      */
-    public Output<String> getDnsSupport() {
+    public Output<String> dnsSupport() {
         return this.dnsSupport;
     }
     /**
@@ -76,7 +77,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Whether IPv6 support is enabled. Valid values: `disable`, `enable`.
      * 
      */
-    public Output<String> getIpv6Support() {
+    public Output<String> ipv6Support() {
         return this.ipv6Support;
     }
     /**
@@ -90,7 +91,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Identifiers of EC2 Subnets.
      * 
      */
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -104,7 +105,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Key-value tags for the EC2 Transit Gateway VPC Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -118,7 +119,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -132,7 +133,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return The ID of the EC2 Transit Gateway Attachment to manage.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -146,7 +147,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTransitGatewayDefaultRouteTableAssociation() {
+    public Output</* @Nullable */ Boolean> transitGatewayDefaultRouteTableAssociation() {
         return this.transitGatewayDefaultRouteTableAssociation;
     }
     /**
@@ -160,7 +161,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getTransitGatewayDefaultRouteTablePropagation() {
+    public Output</* @Nullable */ Boolean> transitGatewayDefaultRouteTablePropagation() {
         return this.transitGatewayDefaultRouteTablePropagation;
     }
     /**
@@ -174,7 +175,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway.
      * 
      */
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
     /**
@@ -188,7 +189,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 VPC.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -202,7 +203,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @return Identifier of the AWS account that owns the EC2 VPC.
      * 
      */
-    public Output<String> getVpcOwnerId() {
+    public Output<String> vpcOwnerId() {
         return this.vpcOwnerId;
     }
 
@@ -228,7 +229,7 @@ public class VpcAttachmentAccepter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcAttachmentAccepter(String name, VpcAttachmentAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, args == null ? VpcAttachmentAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2transitgateway/vpcAttachmentAccepter:VpcAttachmentAccepter", name, args == null ? VpcAttachmentAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcAttachmentAccepter(String name, Output<String> id, @Nullable VpcAttachmentAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

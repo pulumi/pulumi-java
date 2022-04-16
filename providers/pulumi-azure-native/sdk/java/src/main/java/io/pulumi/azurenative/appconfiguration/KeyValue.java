@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -45,7 +46,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * Providing a proper content-type can enable transformations of values when they are retrieved by applications.
      * 
      */
-    public Output</* @Nullable */ String> getContentType() {
+    public Output</* @Nullable */ String> contentType() {
         return this.contentType;
     }
     /**
@@ -59,7 +60,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * @return An ETag indicating the state of a key-value within a configuration store.
      * 
      */
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag;
     }
     /**
@@ -75,7 +76,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * The key is used in unison with the label to uniquely identify a key-value.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -91,7 +92,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * The label is used in unison with the key to uniquely identify a key-value.
      * 
      */
-    public Output<String> getLabel() {
+    public Output<String> label() {
         return this.label;
     }
     /**
@@ -105,7 +106,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * @return The last time a modifying operation was performed on the given key-value.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -121,7 +122,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * A locked key-value may not be modified until it is unlocked.
      * 
      */
-    public Output<Boolean> getLocked() {
+    public Output<Boolean> locked() {
         return this.locked;
     }
     /**
@@ -135,7 +136,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -149,7 +150,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * @return A dictionary of tags that can help identify what a key-value may be applicable for.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -163,7 +164,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -177,7 +178,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * @return The value of the key-value.
      * 
      */
-    public Output</* @Nullable */ String> getValue() {
+    public Output</* @Nullable */ String> value() {
         return this.value;
     }
 
@@ -203,7 +204,7 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyValue(String name, KeyValueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:appconfiguration:KeyValue", name, args == null ? KeyValueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:appconfiguration:KeyValue", name, args == null ? KeyValueArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyValue(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

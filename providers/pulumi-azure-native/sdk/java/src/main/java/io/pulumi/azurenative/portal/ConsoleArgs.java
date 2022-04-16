@@ -6,6 +6,7 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.portal.inputs.ConsoleCreatePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consoleName")
       private final @Nullable Output<String> consoleName;
 
-    public Output<String> getConsoleName() {
-        return this.consoleName == null ? Output.empty() : this.consoleName;
+    public Output<String> consoleName() {
+        return this.consoleName == null ? Codegen.empty() : this.consoleName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
       private final Output<ConsoleCreatePropertiesArgs> properties;
 
-    public Output<ConsoleCreatePropertiesArgs> getProperties() {
+    public Output<ConsoleCreatePropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -45,8 +46,8 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConsoleArgs() {
-        this.consoleName = Output.empty();
-        this.properties = Output.empty();
+        this.consoleName = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder consoleName(@Nullable String consoleName) {
-            this.consoleName = Output.ofNullable(consoleName);
+            this.consoleName = Codegen.ofNullable(consoleName);
             return this;
         }
         public Builder properties(Output<ConsoleCreatePropertiesArgs> properties) {

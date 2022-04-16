@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -39,7 +40,7 @@ public class WebAppMetadataSlot extends io.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -53,7 +54,7 @@ public class WebAppMetadataSlot extends io.pulumi.resources.CustomResource {
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -67,7 +68,7 @@ public class WebAppMetadataSlot extends io.pulumi.resources.CustomResource {
      * @return Settings.
      * 
      */
-    public Output<Map<String,String>> getProperties() {
+    public Output<Map<String,String>> properties() {
         return this.properties;
     }
     /**
@@ -81,7 +82,7 @@ public class WebAppMetadataSlot extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -107,7 +108,7 @@ public class WebAppMetadataSlot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppMetadataSlot(String name, WebAppMetadataSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppMetadataSlot", name, args == null ? WebAppMetadataSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppMetadataSlot", name, args == null ? WebAppMetadataSlotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppMetadataSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

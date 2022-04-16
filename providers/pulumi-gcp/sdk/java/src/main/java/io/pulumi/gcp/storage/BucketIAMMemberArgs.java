@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.BucketIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -34,14 +35,14 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="condition")
       private final @Nullable Output<BucketIAMMemberConditionArgs> condition;
 
-    public Output<BucketIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<BucketIAMMemberConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -54,7 +55,7 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -70,10 +71,10 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private BucketIAMMemberArgs() {
-        this.bucket = Output.empty();
-        this.condition = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.bucket = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class BucketIAMMemberArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder condition(@Nullable BucketIAMMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder member(Output<String> member) {

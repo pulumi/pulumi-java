@@ -45,7 +45,7 @@ public final class PatchDeploymentPatchConfigApt {
      * List of KBs to exclude from update.
      * 
     */
-    public List<String> getExcludes() {
+    public List<String> excludes() {
         return this.excludes == null ? List.of() : this.excludes;
     }
     /**
@@ -54,7 +54,7 @@ public final class PatchDeploymentPatchConfigApt {
      * any other patch configuration fields.
      * 
     */
-    public List<String> getExclusivePackages() {
+    public List<String> exclusivePackages() {
         return this.exclusivePackages == null ? List.of() : this.exclusivePackages;
     }
     /**
@@ -62,7 +62,7 @@ public final class PatchDeploymentPatchConfigApt {
      * Possible values are `DIST` and `UPGRADE`.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
 

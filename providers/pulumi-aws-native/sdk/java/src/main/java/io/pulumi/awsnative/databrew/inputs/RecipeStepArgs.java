@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.RecipeActionArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeConditionExpressionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<RecipeActionArgs> action;
 
-    public Output<RecipeActionArgs> getAction() {
+    public Output<RecipeActionArgs> action() {
         return this.action;
     }
 
@@ -30,8 +31,8 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditionExpressions")
       private final @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
 
-    public Output<List<RecipeConditionExpressionArgs>> getConditionExpressions() {
-        return this.conditionExpressions == null ? Output.empty() : this.conditionExpressions;
+    public Output<List<RecipeConditionExpressionArgs>> conditionExpressions() {
+        return this.conditionExpressions == null ? Codegen.empty() : this.conditionExpressions;
     }
 
     public RecipeStepArgs(
@@ -42,8 +43,8 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecipeStepArgs() {
-        this.action = Output.empty();
-        this.conditionExpressions = Output.empty();
+        this.action = Codegen.empty();
+        this.conditionExpressions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditionExpressions(@Nullable List<RecipeConditionExpressionArgs> conditionExpressions) {
-            this.conditionExpressions = Output.ofNullable(conditionExpressions);
+            this.conditionExpressions = Codegen.ofNullable(conditionExpressions);
             return this;
         }
         public Builder conditionExpressions(RecipeConditionExpressionArgs... conditionExpressions) {

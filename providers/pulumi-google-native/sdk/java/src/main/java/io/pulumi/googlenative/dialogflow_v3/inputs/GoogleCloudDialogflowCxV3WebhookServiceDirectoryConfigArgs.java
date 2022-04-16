@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
     @Import(name="genericWebService")
       private final @Nullable Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
 
-    public Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> getGenericWebService() {
-        return this.genericWebService == null ? Output.empty() : this.genericWebService;
+    public Output<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService() {
+        return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
     }
 
     private GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs() {
-        this.genericWebService = Output.empty();
-        this.service = Output.empty();
+        this.genericWebService = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
             return this;
         }
         public Builder genericWebService(@Nullable GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs genericWebService) {
-            this.genericWebService = Output.ofNullable(genericWebService);
+            this.genericWebService = Codegen.ofNullable(genericWebService);
             return this;
         }
         public Builder service(Output<String> service) {

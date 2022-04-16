@@ -6,6 +6,7 @@ package io.pulumi.aws.ecr.inputs;
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleRepositoryFilterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class RegistryScanningConfigurationRuleGetArgs extends io.pulumi.re
     @Import(name="repositoryFilters", required=true)
       private final Output<List<RegistryScanningConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters;
 
-    public Output<List<RegistryScanningConfigurationRuleRepositoryFilterGetArgs>> getRepositoryFilters() {
+    public Output<List<RegistryScanningConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters() {
         return this.repositoryFilters;
     }
 
@@ -33,7 +34,7 @@ public final class RegistryScanningConfigurationRuleGetArgs extends io.pulumi.re
     @Import(name="scanFrequency", required=true)
       private final Output<String> scanFrequency;
 
-    public Output<String> getScanFrequency() {
+    public Output<String> scanFrequency() {
         return this.scanFrequency;
     }
 
@@ -45,8 +46,8 @@ public final class RegistryScanningConfigurationRuleGetArgs extends io.pulumi.re
     }
 
     private RegistryScanningConfigurationRuleGetArgs() {
-        this.repositoryFilters = Output.empty();
-        this.scanFrequency = Output.empty();
+        this.repositoryFilters = Codegen.empty();
+        this.scanFrequency = Codegen.empty();
     }
 
     public static Builder builder() {

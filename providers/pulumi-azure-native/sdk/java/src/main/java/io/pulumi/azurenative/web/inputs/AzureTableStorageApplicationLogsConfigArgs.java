@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.LogLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
     @Import(name="level")
       private final @Nullable Output<LogLevel> level;
 
-    public Output<LogLevel> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+    public Output<LogLevel> level() {
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
     @Import(name="sasUrl", required=true)
       private final Output<String> sasUrl;
 
-    public Output<String> getSasUrl() {
+    public Output<String> sasUrl() {
         return this.sasUrl;
     }
 
@@ -49,8 +50,8 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
     }
 
     private AzureTableStorageApplicationLogsConfigArgs() {
-        this.level = Output.empty();
-        this.sasUrl = Output.empty();
+        this.level = Codegen.empty();
+        this.sasUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
             return this;
         }
         public Builder level(@Nullable LogLevel level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }
         public Builder sasUrl(Output<String> sasUrl) {

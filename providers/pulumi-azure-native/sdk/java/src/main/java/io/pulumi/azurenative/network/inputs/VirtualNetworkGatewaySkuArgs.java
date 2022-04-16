@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.VirtualNetworkGatewaySkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name;
 
-    public Output<Either<String,VirtualNetworkGatewaySkuName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<Either<String,VirtualNetworkGatewaySkuName>> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
     @Import(name="tier")
       private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier;
 
-    public Output<Either<String,VirtualNetworkGatewaySkuTier>> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<Either<String,VirtualNetworkGatewaySkuTier>> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public VirtualNetworkGatewaySkuArgs(
@@ -51,8 +52,8 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
     }
 
     private VirtualNetworkGatewaySkuArgs() {
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable Either<String,VirtualNetworkGatewaySkuName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tier(@Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier) {
@@ -90,7 +91,7 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tier(@Nullable Either<String,VirtualNetworkGatewaySkuTier> tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public VirtualNetworkGatewaySkuArgs build() {
             return new VirtualNetworkGatewaySkuArgs(name, tier);

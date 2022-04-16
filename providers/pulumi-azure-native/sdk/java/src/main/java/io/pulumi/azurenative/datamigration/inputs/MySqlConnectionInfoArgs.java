@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -48,7 +49,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -60,7 +61,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -71,8 +72,8 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public MySqlConnectionInfoArgs(
@@ -89,11 +90,11 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
     }
 
     private MySqlConnectionInfoArgs() {
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.serverName = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder port(Output<Integer> port) {
@@ -161,7 +162,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public MySqlConnectionInfoArgs build() {
             return new MySqlConnectionInfoArgs(password, port, serverName, type, userName);

@@ -33,14 +33,14 @@ public final class BudgetActionActionThreshold {
      * The type of threshold for a notification. Valid values are `PERCENTAGE` or `ABSOLUTE_VALUE`.
      * 
     */
-    public String getActionThresholdType() {
+    public String actionThresholdType() {
         return this.actionThresholdType;
     }
     /**
      * The threshold of a notification.
      * 
     */
-    public Double getActionThresholdValue() {
+    public Double actionThresholdValue() {
         return this.actionThresholdValue;
     }
 

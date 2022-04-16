@@ -25,7 +25,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="diskEncryptionSetId")
       private final @Nullable String diskEncryptionSetId;
 
-    public Optional<String> getDiskEncryptionSetId() {
+    public Optional<String> diskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
     }
 
@@ -36,7 +36,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="diskId")
       private final @Nullable String diskId;
 
-    public Optional<String> getDiskId() {
+    public Optional<String> diskId() {
         return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
     }
 
@@ -47,7 +47,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="lunId")
       private final @Nullable String lunId;
 
-    public Optional<String> getLunId() {
+    public Optional<String> lunId() {
         return this.lunId == null ? Optional.empty() : Optional.ofNullable(this.lunId);
     }
 
@@ -58,7 +58,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="maxSizeMB")
       private final @Nullable String maxSizeMB;
 
-    public Optional<String> getMaxSizeMB() {
+    public Optional<String> maxSizeMB() {
         return this.maxSizeMB == null ? Optional.empty() : Optional.ofNullable(this.maxSizeMB);
     }
 
@@ -69,7 +69,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="targetDiskLocation")
       private final @Nullable String targetDiskLocation;
 
-    public Optional<String> getTargetDiskLocation() {
+    public Optional<String> targetDiskLocation() {
         return this.targetDiskLocation == null ? Optional.empty() : Optional.ofNullable(this.targetDiskLocation);
     }
 
@@ -80,7 +80,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="targetDiskName")
       private final @Nullable String targetDiskName;
 
-    public Optional<String> getTargetDiskName() {
+    public Optional<String> targetDiskName() {
         return this.targetDiskName == null ? Optional.empty() : Optional.ofNullable(this.targetDiskName);
     }
 
@@ -91,7 +91,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="vhdId")
       private final @Nullable String vhdId;
 
-    public Optional<String> getVhdId() {
+    public Optional<String> vhdId() {
         return this.vhdId == null ? Optional.empty() : Optional.ofNullable(this.vhdId);
     }
 
@@ -102,7 +102,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="vhdName")
       private final @Nullable String vhdName;
 
-    public Optional<String> getVhdName() {
+    public Optional<String> vhdName() {
         return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
     }
 
@@ -113,7 +113,7 @@ public final class AzureVmDiskDetailsResponse extends io.pulumi.resources.Invoke
     @Import(name="vhdType")
       private final @Nullable String vhdType;
 
-    public Optional<String> getVhdType() {
+    public Optional<String> vhdType() {
         return this.vhdType == null ? Optional.empty() : Optional.ofNullable(this.vhdType);
     }
 

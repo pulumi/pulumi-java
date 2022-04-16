@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firestore_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.firestore_v1beta1.enums.IndexState;
 import io.pulumi.googlenative.firestore_v1beta1.inputs.GoogleFirestoreAdminV1beta1IndexFieldArgs;
 import java.lang.String;
@@ -24,14 +25,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="collectionId")
       private final @Nullable Output<String> collectionId;
 
-    public Output<String> getCollectionId() {
-        return this.collectionId == null ? Output.empty() : this.collectionId;
+    public Output<String> collectionId() {
+        return this.collectionId == null ? Codegen.empty() : this.collectionId;
     }
 
     @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
-    public Output<String> getDatabaseId() {
+    public Output<String> databaseId() {
         return this.databaseId;
     }
 
@@ -42,8 +43,8 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fields")
       private final @Nullable Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields;
 
-    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+    public Output<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields() {
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     /**
@@ -53,15 +54,15 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<IndexState> state;
 
-    public Output<IndexState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<IndexState> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public IndexArgs(
@@ -91,12 +92,12 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexArgs() {
-        this.collectionId = Output.empty();
-        this.databaseId = Output.empty();
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
+        this.collectionId = Codegen.empty();
+        this.databaseId = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder collectionId(@Nullable String collectionId) {
-            this.collectionId = Output.ofNullable(collectionId);
+            this.collectionId = Codegen.ofNullable(collectionId);
             return this;
         }
         public Builder databaseId(Output<String> databaseId) {
@@ -150,7 +151,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable List<GoogleFirestoreAdminV1beta1IndexFieldArgs> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(GoogleFirestoreAdminV1beta1IndexFieldArgs... fields) {
@@ -161,7 +162,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -169,7 +170,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<IndexState> state) {
@@ -177,7 +178,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable IndexState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public IndexArgs build() {
             return new IndexArgs(collectionId, databaseId, fields, name, project, state);

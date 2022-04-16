@@ -8,6 +8,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowAggregationConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowPrefixConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,22 +20,22 @@ public final class FlowS3OutputFormatConfigArgs extends io.pulumi.resources.Reso
     @Import(name="aggregationConfig")
       private final @Nullable Output<FlowAggregationConfigArgs> aggregationConfig;
 
-    public Output<FlowAggregationConfigArgs> getAggregationConfig() {
-        return this.aggregationConfig == null ? Output.empty() : this.aggregationConfig;
+    public Output<FlowAggregationConfigArgs> aggregationConfig() {
+        return this.aggregationConfig == null ? Codegen.empty() : this.aggregationConfig;
     }
 
     @Import(name="fileType")
       private final @Nullable Output<FlowFileType> fileType;
 
-    public Output<FlowFileType> getFileType() {
-        return this.fileType == null ? Output.empty() : this.fileType;
+    public Output<FlowFileType> fileType() {
+        return this.fileType == null ? Codegen.empty() : this.fileType;
     }
 
     @Import(name="prefixConfig")
       private final @Nullable Output<FlowPrefixConfigArgs> prefixConfig;
 
-    public Output<FlowPrefixConfigArgs> getPrefixConfig() {
-        return this.prefixConfig == null ? Output.empty() : this.prefixConfig;
+    public Output<FlowPrefixConfigArgs> prefixConfig() {
+        return this.prefixConfig == null ? Codegen.empty() : this.prefixConfig;
     }
 
     public FlowS3OutputFormatConfigArgs(
@@ -47,9 +48,9 @@ public final class FlowS3OutputFormatConfigArgs extends io.pulumi.resources.Reso
     }
 
     private FlowS3OutputFormatConfigArgs() {
-        this.aggregationConfig = Output.empty();
-        this.fileType = Output.empty();
-        this.prefixConfig = Output.empty();
+        this.aggregationConfig = Codegen.empty();
+        this.fileType = Codegen.empty();
+        this.prefixConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class FlowS3OutputFormatConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder aggregationConfig(@Nullable FlowAggregationConfigArgs aggregationConfig) {
-            this.aggregationConfig = Output.ofNullable(aggregationConfig);
+            this.aggregationConfig = Codegen.ofNullable(aggregationConfig);
             return this;
         }
         public Builder fileType(@Nullable Output<FlowFileType> fileType) {
@@ -89,7 +90,7 @@ public final class FlowS3OutputFormatConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder fileType(@Nullable FlowFileType fileType) {
-            this.fileType = Output.ofNullable(fileType);
+            this.fileType = Codegen.ofNullable(fileType);
             return this;
         }
         public Builder prefixConfig(@Nullable Output<FlowPrefixConfigArgs> prefixConfig) {
@@ -97,7 +98,7 @@ public final class FlowS3OutputFormatConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder prefixConfig(@Nullable FlowPrefixConfigArgs prefixConfig) {
-            this.prefixConfig = Output.ofNullable(prefixConfig);
+            this.prefixConfig = Codegen.ofNullable(prefixConfig);
             return this;
         }        public FlowS3OutputFormatConfigArgs build() {
             return new FlowS3OutputFormatConfigArgs(aggregationConfig, fileType, prefixConfig);

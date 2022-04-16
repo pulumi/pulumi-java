@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
     @Import(name="deleteRule")
       private final @Nullable Output<String> deleteRule;
 
-    public Output<String> getDeleteRule() {
-        return this.deleteRule == null ? Output.empty() : this.deleteRule;
+    public Output<String> deleteRule() {
+        return this.deleteRule == null ? Codegen.empty() : this.deleteRule;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -51,8 +52,8 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<String> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -79,10 +80,10 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
     }
 
     private PerInstanceConfigPreservedStateDiskArgs() {
-        this.deleteRule = Output.empty();
-        this.deviceName = Output.empty();
-        this.mode = Output.empty();
-        this.source = Output.empty();
+        this.deleteRule = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
             return this;
         }
         public Builder deleteRule(@Nullable String deleteRule) {
-            this.deleteRule = Output.ofNullable(deleteRule);
+            this.deleteRule = Codegen.ofNullable(deleteRule);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -132,7 +133,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder source(Output<String> source) {

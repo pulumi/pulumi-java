@@ -1,17 +1,15 @@
 package io.pulumi.deployment.internal;
 
 import com.google.common.annotations.VisibleForTesting;
-import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.deployment.Deployment;
-import io.pulumi.deployment.DeploymentInstance;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
 import io.pulumi.resources.ResourceOptions;
+import io.pulumi.resources.Stack;
 
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -19,6 +17,8 @@ import java.util.function.Supplier;
 
 @InternalUse
 public interface DeploymentInternal extends Deployment {
+
+    DeploymentImpl.Config getConfig();
 
     Optional<String> getConfig(String fullKey);
 
@@ -31,34 +31,20 @@ public interface DeploymentInternal extends Deployment {
     Runner getRunner();
 
     void readOrRegisterResource(Resource resource, boolean remote, Function<String, Resource> newDependency,
-                                ResourceArgs args, ResourceOptions opts);
+                                ResourceArgs args, ResourceOptions opts, Resource.LazyFields lazy);
 
     void registerResourceOutputs(Resource resource, Output<Map<String, Output<?>>> outputs);
 
     @InternalUse
     static DeploymentInternal getInstance() {
-        return DeploymentInternal.cast(Deployment.getInstance()).getInternal();
+        return DeploymentInstanceInternal.cast(Deployment.getInstance()).getInternal();
     }
 
     @InternalUse
     static Optional<DeploymentInternal> getInstanceOptional() {
         return DeploymentInstanceHolder.getInstanceOptional()
-                .map(DeploymentInternal::cast)
+                .map(DeploymentInstanceInternal::cast)
                 .map(DeploymentInstanceInternal::getInternal);
-    }
-
-    @InternalUse
-    private static DeploymentInstanceInternal cast(DeploymentInstance instance) {
-        Objects.requireNonNull(instance);
-        if (instance instanceof DeploymentInstanceInternal) {
-            return (DeploymentInstanceInternal) instance;
-        } else {
-            throw new IllegalArgumentException(
-                    String.format(
-                            "Expected a 'DeploymentInstanceInternal' instance, got: %s",
-                            instance.getClass().getSimpleName())
-            );
-        }
     }
 
     @InternalUse

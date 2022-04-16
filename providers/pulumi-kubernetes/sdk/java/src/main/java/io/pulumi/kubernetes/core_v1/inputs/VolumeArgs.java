@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.AWSElasticBlockStoreVolumeSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.AzureDiskVolumeSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.AzureFileVolumeSourceArgs;
@@ -54,8 +55,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsElasticBlockStore")
       private final @Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore;
 
-    public Output<AWSElasticBlockStoreVolumeSourceArgs> getAwsElasticBlockStore() {
-        return this.awsElasticBlockStore == null ? Output.empty() : this.awsElasticBlockStore;
+    public Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore() {
+        return this.awsElasticBlockStore == null ? Codegen.empty() : this.awsElasticBlockStore;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureDisk")
       private final @Nullable Output<AzureDiskVolumeSourceArgs> azureDisk;
 
-    public Output<AzureDiskVolumeSourceArgs> getAzureDisk() {
-        return this.azureDisk == null ? Output.empty() : this.azureDisk;
+    public Output<AzureDiskVolumeSourceArgs> azureDisk() {
+        return this.azureDisk == null ? Codegen.empty() : this.azureDisk;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="azureFile")
       private final @Nullable Output<AzureFileVolumeSourceArgs> azureFile;
 
-    public Output<AzureFileVolumeSourceArgs> getAzureFile() {
-        return this.azureFile == null ? Output.empty() : this.azureFile;
+    public Output<AzureFileVolumeSourceArgs> azureFile() {
+        return this.azureFile == null ? Codegen.empty() : this.azureFile;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cephfs")
       private final @Nullable Output<CephFSVolumeSourceArgs> cephfs;
 
-    public Output<CephFSVolumeSourceArgs> getCephfs() {
-        return this.cephfs == null ? Output.empty() : this.cephfs;
+    public Output<CephFSVolumeSourceArgs> cephfs() {
+        return this.cephfs == null ? Codegen.empty() : this.cephfs;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cinder")
       private final @Nullable Output<CinderVolumeSourceArgs> cinder;
 
-    public Output<CinderVolumeSourceArgs> getCinder() {
-        return this.cinder == null ? Output.empty() : this.cinder;
+    public Output<CinderVolumeSourceArgs> cinder() {
+        return this.cinder == null ? Codegen.empty() : this.cinder;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configMap")
       private final @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
 
-    public Output<ConfigMapVolumeSourceArgs> getConfigMap() {
-        return this.configMap == null ? Output.empty() : this.configMap;
+    public Output<ConfigMapVolumeSourceArgs> configMap() {
+        return this.configMap == null ? Codegen.empty() : this.configMap;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="csi")
       private final @Nullable Output<CSIVolumeSourceArgs> csi;
 
-    public Output<CSIVolumeSourceArgs> getCsi() {
-        return this.csi == null ? Output.empty() : this.csi;
+    public Output<CSIVolumeSourceArgs> csi() {
+        return this.csi == null ? Codegen.empty() : this.csi;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="downwardAPI")
       private final @Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI;
 
-    public Output<DownwardAPIVolumeSourceArgs> getDownwardAPI() {
-        return this.downwardAPI == null ? Output.empty() : this.downwardAPI;
+    public Output<DownwardAPIVolumeSourceArgs> downwardAPI() {
+        return this.downwardAPI == null ? Codegen.empty() : this.downwardAPI;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="emptyDir")
       private final @Nullable Output<EmptyDirVolumeSourceArgs> emptyDir;
 
-    public Output<EmptyDirVolumeSourceArgs> getEmptyDir() {
-        return this.emptyDir == null ? Output.empty() : this.emptyDir;
+    public Output<EmptyDirVolumeSourceArgs> emptyDir() {
+        return this.emptyDir == null ? Codegen.empty() : this.emptyDir;
     }
 
     /**
@@ -166,8 +167,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ephemeral")
       private final @Nullable Output<EphemeralVolumeSourceArgs> ephemeral;
 
-    public Output<EphemeralVolumeSourceArgs> getEphemeral() {
-        return this.ephemeral == null ? Output.empty() : this.ephemeral;
+    public Output<EphemeralVolumeSourceArgs> ephemeral() {
+        return this.ephemeral == null ? Codegen.empty() : this.ephemeral;
     }
 
     /**
@@ -177,8 +178,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fc")
       private final @Nullable Output<FCVolumeSourceArgs> fc;
 
-    public Output<FCVolumeSourceArgs> getFc() {
-        return this.fc == null ? Output.empty() : this.fc;
+    public Output<FCVolumeSourceArgs> fc() {
+        return this.fc == null ? Codegen.empty() : this.fc;
     }
 
     /**
@@ -188,8 +189,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flexVolume")
       private final @Nullable Output<FlexVolumeSourceArgs> flexVolume;
 
-    public Output<FlexVolumeSourceArgs> getFlexVolume() {
-        return this.flexVolume == null ? Output.empty() : this.flexVolume;
+    public Output<FlexVolumeSourceArgs> flexVolume() {
+        return this.flexVolume == null ? Codegen.empty() : this.flexVolume;
     }
 
     /**
@@ -199,8 +200,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="flocker")
       private final @Nullable Output<FlockerVolumeSourceArgs> flocker;
 
-    public Output<FlockerVolumeSourceArgs> getFlocker() {
-        return this.flocker == null ? Output.empty() : this.flocker;
+    public Output<FlockerVolumeSourceArgs> flocker() {
+        return this.flocker == null ? Codegen.empty() : this.flocker;
     }
 
     /**
@@ -210,8 +211,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcePersistentDisk")
       private final @Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk;
 
-    public Output<GCEPersistentDiskVolumeSourceArgs> getGcePersistentDisk() {
-        return this.gcePersistentDisk == null ? Output.empty() : this.gcePersistentDisk;
+    public Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk() {
+        return this.gcePersistentDisk == null ? Codegen.empty() : this.gcePersistentDisk;
     }
 
     /**
@@ -221,8 +222,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gitRepo")
       private final @Nullable Output<GitRepoVolumeSourceArgs> gitRepo;
 
-    public Output<GitRepoVolumeSourceArgs> getGitRepo() {
-        return this.gitRepo == null ? Output.empty() : this.gitRepo;
+    public Output<GitRepoVolumeSourceArgs> gitRepo() {
+        return this.gitRepo == null ? Codegen.empty() : this.gitRepo;
     }
 
     /**
@@ -232,8 +233,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="glusterfs")
       private final @Nullable Output<GlusterfsVolumeSourceArgs> glusterfs;
 
-    public Output<GlusterfsVolumeSourceArgs> getGlusterfs() {
-        return this.glusterfs == null ? Output.empty() : this.glusterfs;
+    public Output<GlusterfsVolumeSourceArgs> glusterfs() {
+        return this.glusterfs == null ? Codegen.empty() : this.glusterfs;
     }
 
     /**
@@ -243,8 +244,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPath")
       private final @Nullable Output<HostPathVolumeSourceArgs> hostPath;
 
-    public Output<HostPathVolumeSourceArgs> getHostPath() {
-        return this.hostPath == null ? Output.empty() : this.hostPath;
+    public Output<HostPathVolumeSourceArgs> hostPath() {
+        return this.hostPath == null ? Codegen.empty() : this.hostPath;
     }
 
     /**
@@ -254,8 +255,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iscsi")
       private final @Nullable Output<ISCSIVolumeSourceArgs> iscsi;
 
-    public Output<ISCSIVolumeSourceArgs> getIscsi() {
-        return this.iscsi == null ? Output.empty() : this.iscsi;
+    public Output<ISCSIVolumeSourceArgs> iscsi() {
+        return this.iscsi == null ? Codegen.empty() : this.iscsi;
     }
 
     /**
@@ -265,7 +266,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -276,8 +277,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nfs")
       private final @Nullable Output<NFSVolumeSourceArgs> nfs;
 
-    public Output<NFSVolumeSourceArgs> getNfs() {
-        return this.nfs == null ? Output.empty() : this.nfs;
+    public Output<NFSVolumeSourceArgs> nfs() {
+        return this.nfs == null ? Codegen.empty() : this.nfs;
     }
 
     /**
@@ -287,8 +288,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="persistentVolumeClaim")
       private final @Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim;
 
-    public Output<PersistentVolumeClaimVolumeSourceArgs> getPersistentVolumeClaim() {
-        return this.persistentVolumeClaim == null ? Output.empty() : this.persistentVolumeClaim;
+    public Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim() {
+        return this.persistentVolumeClaim == null ? Codegen.empty() : this.persistentVolumeClaim;
     }
 
     /**
@@ -298,8 +299,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="photonPersistentDisk")
       private final @Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk;
 
-    public Output<PhotonPersistentDiskVolumeSourceArgs> getPhotonPersistentDisk() {
-        return this.photonPersistentDisk == null ? Output.empty() : this.photonPersistentDisk;
+    public Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk() {
+        return this.photonPersistentDisk == null ? Codegen.empty() : this.photonPersistentDisk;
     }
 
     /**
@@ -309,8 +310,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="portworxVolume")
       private final @Nullable Output<PortworxVolumeSourceArgs> portworxVolume;
 
-    public Output<PortworxVolumeSourceArgs> getPortworxVolume() {
-        return this.portworxVolume == null ? Output.empty() : this.portworxVolume;
+    public Output<PortworxVolumeSourceArgs> portworxVolume() {
+        return this.portworxVolume == null ? Codegen.empty() : this.portworxVolume;
     }
 
     /**
@@ -320,8 +321,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projected")
       private final @Nullable Output<ProjectedVolumeSourceArgs> projected;
 
-    public Output<ProjectedVolumeSourceArgs> getProjected() {
-        return this.projected == null ? Output.empty() : this.projected;
+    public Output<ProjectedVolumeSourceArgs> projected() {
+        return this.projected == null ? Codegen.empty() : this.projected;
     }
 
     /**
@@ -331,8 +332,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quobyte")
       private final @Nullable Output<QuobyteVolumeSourceArgs> quobyte;
 
-    public Output<QuobyteVolumeSourceArgs> getQuobyte() {
-        return this.quobyte == null ? Output.empty() : this.quobyte;
+    public Output<QuobyteVolumeSourceArgs> quobyte() {
+        return this.quobyte == null ? Codegen.empty() : this.quobyte;
     }
 
     /**
@@ -342,8 +343,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rbd")
       private final @Nullable Output<RBDVolumeSourceArgs> rbd;
 
-    public Output<RBDVolumeSourceArgs> getRbd() {
-        return this.rbd == null ? Output.empty() : this.rbd;
+    public Output<RBDVolumeSourceArgs> rbd() {
+        return this.rbd == null ? Codegen.empty() : this.rbd;
     }
 
     /**
@@ -353,8 +354,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scaleIO")
       private final @Nullable Output<ScaleIOVolumeSourceArgs> scaleIO;
 
-    public Output<ScaleIOVolumeSourceArgs> getScaleIO() {
-        return this.scaleIO == null ? Output.empty() : this.scaleIO;
+    public Output<ScaleIOVolumeSourceArgs> scaleIO() {
+        return this.scaleIO == null ? Codegen.empty() : this.scaleIO;
     }
 
     /**
@@ -364,8 +365,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<SecretVolumeSourceArgs> secret;
 
-    public Output<SecretVolumeSourceArgs> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<SecretVolumeSourceArgs> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -375,8 +376,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageos")
       private final @Nullable Output<StorageOSVolumeSourceArgs> storageos;
 
-    public Output<StorageOSVolumeSourceArgs> getStorageos() {
-        return this.storageos == null ? Output.empty() : this.storageos;
+    public Output<StorageOSVolumeSourceArgs> storageos() {
+        return this.storageos == null ? Codegen.empty() : this.storageos;
     }
 
     /**
@@ -386,8 +387,8 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vsphereVolume")
       private final @Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume;
 
-    public Output<VsphereVirtualDiskVolumeSourceArgs> getVsphereVolume() {
-        return this.vsphereVolume == null ? Output.empty() : this.vsphereVolume;
+    public Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume() {
+        return this.vsphereVolume == null ? Codegen.empty() : this.vsphereVolume;
     }
 
     public VolumeArgs(
@@ -454,36 +455,36 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.awsElasticBlockStore = Output.empty();
-        this.azureDisk = Output.empty();
-        this.azureFile = Output.empty();
-        this.cephfs = Output.empty();
-        this.cinder = Output.empty();
-        this.configMap = Output.empty();
-        this.csi = Output.empty();
-        this.downwardAPI = Output.empty();
-        this.emptyDir = Output.empty();
-        this.ephemeral = Output.empty();
-        this.fc = Output.empty();
-        this.flexVolume = Output.empty();
-        this.flocker = Output.empty();
-        this.gcePersistentDisk = Output.empty();
-        this.gitRepo = Output.empty();
-        this.glusterfs = Output.empty();
-        this.hostPath = Output.empty();
-        this.iscsi = Output.empty();
-        this.name = Output.empty();
-        this.nfs = Output.empty();
-        this.persistentVolumeClaim = Output.empty();
-        this.photonPersistentDisk = Output.empty();
-        this.portworxVolume = Output.empty();
-        this.projected = Output.empty();
-        this.quobyte = Output.empty();
-        this.rbd = Output.empty();
-        this.scaleIO = Output.empty();
-        this.secret = Output.empty();
-        this.storageos = Output.empty();
-        this.vsphereVolume = Output.empty();
+        this.awsElasticBlockStore = Codegen.empty();
+        this.azureDisk = Codegen.empty();
+        this.azureFile = Codegen.empty();
+        this.cephfs = Codegen.empty();
+        this.cinder = Codegen.empty();
+        this.configMap = Codegen.empty();
+        this.csi = Codegen.empty();
+        this.downwardAPI = Codegen.empty();
+        this.emptyDir = Codegen.empty();
+        this.ephemeral = Codegen.empty();
+        this.fc = Codegen.empty();
+        this.flexVolume = Codegen.empty();
+        this.flocker = Codegen.empty();
+        this.gcePersistentDisk = Codegen.empty();
+        this.gitRepo = Codegen.empty();
+        this.glusterfs = Codegen.empty();
+        this.hostPath = Codegen.empty();
+        this.iscsi = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nfs = Codegen.empty();
+        this.persistentVolumeClaim = Codegen.empty();
+        this.photonPersistentDisk = Codegen.empty();
+        this.portworxVolume = Codegen.empty();
+        this.projected = Codegen.empty();
+        this.quobyte = Codegen.empty();
+        this.rbd = Codegen.empty();
+        this.scaleIO = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.storageos = Codegen.empty();
+        this.vsphereVolume = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -569,7 +570,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSourceArgs awsElasticBlockStore) {
-            this.awsElasticBlockStore = Output.ofNullable(awsElasticBlockStore);
+            this.awsElasticBlockStore = Codegen.ofNullable(awsElasticBlockStore);
             return this;
         }
         public Builder azureDisk(@Nullable Output<AzureDiskVolumeSourceArgs> azureDisk) {
@@ -577,7 +578,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureDisk(@Nullable AzureDiskVolumeSourceArgs azureDisk) {
-            this.azureDisk = Output.ofNullable(azureDisk);
+            this.azureDisk = Codegen.ofNullable(azureDisk);
             return this;
         }
         public Builder azureFile(@Nullable Output<AzureFileVolumeSourceArgs> azureFile) {
@@ -585,7 +586,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureFile(@Nullable AzureFileVolumeSourceArgs azureFile) {
-            this.azureFile = Output.ofNullable(azureFile);
+            this.azureFile = Codegen.ofNullable(azureFile);
             return this;
         }
         public Builder cephfs(@Nullable Output<CephFSVolumeSourceArgs> cephfs) {
@@ -593,7 +594,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cephfs(@Nullable CephFSVolumeSourceArgs cephfs) {
-            this.cephfs = Output.ofNullable(cephfs);
+            this.cephfs = Codegen.ofNullable(cephfs);
             return this;
         }
         public Builder cinder(@Nullable Output<CinderVolumeSourceArgs> cinder) {
@@ -601,7 +602,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cinder(@Nullable CinderVolumeSourceArgs cinder) {
-            this.cinder = Output.ofNullable(cinder);
+            this.cinder = Codegen.ofNullable(cinder);
             return this;
         }
         public Builder configMap(@Nullable Output<ConfigMapVolumeSourceArgs> configMap) {
@@ -609,7 +610,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
-            this.configMap = Output.ofNullable(configMap);
+            this.configMap = Codegen.ofNullable(configMap);
             return this;
         }
         public Builder csi(@Nullable Output<CSIVolumeSourceArgs> csi) {
@@ -617,7 +618,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder csi(@Nullable CSIVolumeSourceArgs csi) {
-            this.csi = Output.ofNullable(csi);
+            this.csi = Codegen.ofNullable(csi);
             return this;
         }
         public Builder downwardAPI(@Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI) {
@@ -625,7 +626,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder downwardAPI(@Nullable DownwardAPIVolumeSourceArgs downwardAPI) {
-            this.downwardAPI = Output.ofNullable(downwardAPI);
+            this.downwardAPI = Codegen.ofNullable(downwardAPI);
             return this;
         }
         public Builder emptyDir(@Nullable Output<EmptyDirVolumeSourceArgs> emptyDir) {
@@ -633,7 +634,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder emptyDir(@Nullable EmptyDirVolumeSourceArgs emptyDir) {
-            this.emptyDir = Output.ofNullable(emptyDir);
+            this.emptyDir = Codegen.ofNullable(emptyDir);
             return this;
         }
         public Builder ephemeral(@Nullable Output<EphemeralVolumeSourceArgs> ephemeral) {
@@ -641,7 +642,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ephemeral(@Nullable EphemeralVolumeSourceArgs ephemeral) {
-            this.ephemeral = Output.ofNullable(ephemeral);
+            this.ephemeral = Codegen.ofNullable(ephemeral);
             return this;
         }
         public Builder fc(@Nullable Output<FCVolumeSourceArgs> fc) {
@@ -649,7 +650,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fc(@Nullable FCVolumeSourceArgs fc) {
-            this.fc = Output.ofNullable(fc);
+            this.fc = Codegen.ofNullable(fc);
             return this;
         }
         public Builder flexVolume(@Nullable Output<FlexVolumeSourceArgs> flexVolume) {
@@ -657,7 +658,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flexVolume(@Nullable FlexVolumeSourceArgs flexVolume) {
-            this.flexVolume = Output.ofNullable(flexVolume);
+            this.flexVolume = Codegen.ofNullable(flexVolume);
             return this;
         }
         public Builder flocker(@Nullable Output<FlockerVolumeSourceArgs> flocker) {
@@ -665,7 +666,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flocker(@Nullable FlockerVolumeSourceArgs flocker) {
-            this.flocker = Output.ofNullable(flocker);
+            this.flocker = Codegen.ofNullable(flocker);
             return this;
         }
         public Builder gcePersistentDisk(@Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk) {
@@ -673,7 +674,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcePersistentDisk(@Nullable GCEPersistentDiskVolumeSourceArgs gcePersistentDisk) {
-            this.gcePersistentDisk = Output.ofNullable(gcePersistentDisk);
+            this.gcePersistentDisk = Codegen.ofNullable(gcePersistentDisk);
             return this;
         }
         public Builder gitRepo(@Nullable Output<GitRepoVolumeSourceArgs> gitRepo) {
@@ -681,7 +682,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gitRepo(@Nullable GitRepoVolumeSourceArgs gitRepo) {
-            this.gitRepo = Output.ofNullable(gitRepo);
+            this.gitRepo = Codegen.ofNullable(gitRepo);
             return this;
         }
         public Builder glusterfs(@Nullable Output<GlusterfsVolumeSourceArgs> glusterfs) {
@@ -689,7 +690,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder glusterfs(@Nullable GlusterfsVolumeSourceArgs glusterfs) {
-            this.glusterfs = Output.ofNullable(glusterfs);
+            this.glusterfs = Codegen.ofNullable(glusterfs);
             return this;
         }
         public Builder hostPath(@Nullable Output<HostPathVolumeSourceArgs> hostPath) {
@@ -697,7 +698,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostPath(@Nullable HostPathVolumeSourceArgs hostPath) {
-            this.hostPath = Output.ofNullable(hostPath);
+            this.hostPath = Codegen.ofNullable(hostPath);
             return this;
         }
         public Builder iscsi(@Nullable Output<ISCSIVolumeSourceArgs> iscsi) {
@@ -705,7 +706,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iscsi(@Nullable ISCSIVolumeSourceArgs iscsi) {
-            this.iscsi = Output.ofNullable(iscsi);
+            this.iscsi = Codegen.ofNullable(iscsi);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -721,7 +722,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nfs(@Nullable NFSVolumeSourceArgs nfs) {
-            this.nfs = Output.ofNullable(nfs);
+            this.nfs = Codegen.ofNullable(nfs);
             return this;
         }
         public Builder persistentVolumeClaim(@Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim) {
@@ -729,7 +730,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder persistentVolumeClaim(@Nullable PersistentVolumeClaimVolumeSourceArgs persistentVolumeClaim) {
-            this.persistentVolumeClaim = Output.ofNullable(persistentVolumeClaim);
+            this.persistentVolumeClaim = Codegen.ofNullable(persistentVolumeClaim);
             return this;
         }
         public Builder photonPersistentDisk(@Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk) {
@@ -737,7 +738,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder photonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSourceArgs photonPersistentDisk) {
-            this.photonPersistentDisk = Output.ofNullable(photonPersistentDisk);
+            this.photonPersistentDisk = Codegen.ofNullable(photonPersistentDisk);
             return this;
         }
         public Builder portworxVolume(@Nullable Output<PortworxVolumeSourceArgs> portworxVolume) {
@@ -745,7 +746,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder portworxVolume(@Nullable PortworxVolumeSourceArgs portworxVolume) {
-            this.portworxVolume = Output.ofNullable(portworxVolume);
+            this.portworxVolume = Codegen.ofNullable(portworxVolume);
             return this;
         }
         public Builder projected(@Nullable Output<ProjectedVolumeSourceArgs> projected) {
@@ -753,7 +754,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projected(@Nullable ProjectedVolumeSourceArgs projected) {
-            this.projected = Output.ofNullable(projected);
+            this.projected = Codegen.ofNullable(projected);
             return this;
         }
         public Builder quobyte(@Nullable Output<QuobyteVolumeSourceArgs> quobyte) {
@@ -761,7 +762,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quobyte(@Nullable QuobyteVolumeSourceArgs quobyte) {
-            this.quobyte = Output.ofNullable(quobyte);
+            this.quobyte = Codegen.ofNullable(quobyte);
             return this;
         }
         public Builder rbd(@Nullable Output<RBDVolumeSourceArgs> rbd) {
@@ -769,7 +770,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rbd(@Nullable RBDVolumeSourceArgs rbd) {
-            this.rbd = Output.ofNullable(rbd);
+            this.rbd = Codegen.ofNullable(rbd);
             return this;
         }
         public Builder scaleIO(@Nullable Output<ScaleIOVolumeSourceArgs> scaleIO) {
@@ -777,7 +778,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scaleIO(@Nullable ScaleIOVolumeSourceArgs scaleIO) {
-            this.scaleIO = Output.ofNullable(scaleIO);
+            this.scaleIO = Codegen.ofNullable(scaleIO);
             return this;
         }
         public Builder secret(@Nullable Output<SecretVolumeSourceArgs> secret) {
@@ -785,7 +786,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable SecretVolumeSourceArgs secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder storageos(@Nullable Output<StorageOSVolumeSourceArgs> storageos) {
@@ -793,7 +794,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageos(@Nullable StorageOSVolumeSourceArgs storageos) {
-            this.storageos = Output.ofNullable(storageos);
+            this.storageos = Codegen.ofNullable(storageos);
             return this;
         }
         public Builder vsphereVolume(@Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume) {
@@ -801,7 +802,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vsphereVolume(@Nullable VsphereVirtualDiskVolumeSourceArgs vsphereVolume) {
-            this.vsphereVolume = Output.ofNullable(vsphereVolume);
+            this.vsphereVolume = Codegen.ofNullable(vsphereVolume);
             return this;
         }        public VolumeArgs build() {
             return new VolumeArgs(awsElasticBlockStore, azureDisk, azureFile, cephfs, cinder, configMap, csi, downwardAPI, emptyDir, ephemeral, fc, flexVolume, flocker, gcePersistentDisk, gitRepo, glusterfs, hostPath, iscsi, name, nfs, persistentVolumeClaim, photonPersistentDisk, portworxVolume, projected, quobyte, rbd, scaleIO, secret, storageos, vsphereVolume);

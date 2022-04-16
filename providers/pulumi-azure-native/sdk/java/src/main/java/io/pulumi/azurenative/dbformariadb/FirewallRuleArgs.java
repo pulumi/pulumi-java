@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dbformariadb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endIpAddress", required=true)
       private final Output<String> endIpAddress;
 
-    public Output<String> getEndIpAddress() {
+    public Output<String> endIpAddress() {
         return this.endIpAddress;
     }
 
@@ -32,8 +33,8 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
-    public Output<String> getFirewallRuleName() {
-        return this.firewallRuleName == null ? Output.empty() : this.firewallRuleName;
+    public Output<String> firewallRuleName() {
+        return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +55,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -65,7 +66,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startIpAddress", required=true)
       private final Output<String> startIpAddress;
 
-    public Output<String> getStartIpAddress() {
+    public Output<String> startIpAddress() {
         return this.startIpAddress;
     }
 
@@ -83,11 +84,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallRuleArgs() {
-        this.endIpAddress = Output.empty();
-        this.firewallRuleName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.startIpAddress = Output.empty();
+        this.endIpAddress = Codegen.empty();
+        this.firewallRuleName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.startIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = Output.ofNullable(firewallRuleName);
+            this.firewallRuleName = Codegen.ofNullable(firewallRuleName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

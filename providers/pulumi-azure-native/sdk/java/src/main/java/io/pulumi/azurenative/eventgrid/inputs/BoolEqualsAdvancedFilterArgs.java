@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
     @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
 
-    public Output<String> getOperatorType() {
+    public Output<String> operatorType() {
         return this.operatorType;
     }
 
@@ -49,8 +50,8 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
     @Import(name="value")
       private final @Nullable Output<Boolean> value;
 
-    public Output<Boolean> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<Boolean> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public BoolEqualsAdvancedFilterArgs(
@@ -63,9 +64,9 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
     }
 
     private BoolEqualsAdvancedFilterArgs() {
-        this.key = Output.empty();
-        this.operatorType = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.operatorType = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder operatorType(Output<String> operatorType) {
@@ -113,7 +114,7 @@ public final class BoolEqualsAdvancedFilterArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder value(@Nullable Boolean value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public BoolEqualsAdvancedFilterArgs build() {
             return new BoolEqualsAdvancedFilterArgs(key, operatorType, value);

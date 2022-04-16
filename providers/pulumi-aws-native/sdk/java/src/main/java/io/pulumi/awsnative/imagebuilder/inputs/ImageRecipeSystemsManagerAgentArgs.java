@@ -5,6 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
     @Import(name="uninstallAfterBuild")
       private final @Nullable Output<Boolean> uninstallAfterBuild;
 
-    public Output<Boolean> getUninstallAfterBuild() {
-        return this.uninstallAfterBuild == null ? Output.empty() : this.uninstallAfterBuild;
+    public Output<Boolean> uninstallAfterBuild() {
+        return this.uninstallAfterBuild == null ? Codegen.empty() : this.uninstallAfterBuild;
     }
 
     public ImageRecipeSystemsManagerAgentArgs(@Nullable Output<Boolean> uninstallAfterBuild) {
@@ -34,7 +35,7 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
     }
 
     private ImageRecipeSystemsManagerAgentArgs() {
-        this.uninstallAfterBuild = Output.empty();
+        this.uninstallAfterBuild = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
             return this;
         }
         public Builder uninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
-            this.uninstallAfterBuild = Output.ofNullable(uninstallAfterBuild);
+            this.uninstallAfterBuild = Codegen.ofNullable(uninstallAfterBuild);
             return this;
         }        public ImageRecipeSystemsManagerAgentArgs build() {
             return new ImageRecipeSystemsManagerAgentArgs(uninstallAfterBuild);

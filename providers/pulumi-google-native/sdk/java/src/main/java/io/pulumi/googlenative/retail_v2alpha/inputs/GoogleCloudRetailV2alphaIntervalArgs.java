@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
     @Import(name="exclusiveMaximum")
       private final @Nullable Output<Double> exclusiveMaximum;
 
-    public Output<Double> getExclusiveMaximum() {
-        return this.exclusiveMaximum == null ? Output.empty() : this.exclusiveMaximum;
+    public Output<Double> exclusiveMaximum() {
+        return this.exclusiveMaximum == null ? Codegen.empty() : this.exclusiveMaximum;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
     @Import(name="exclusiveMinimum")
       private final @Nullable Output<Double> exclusiveMinimum;
 
-    public Output<Double> getExclusiveMinimum() {
-        return this.exclusiveMinimum == null ? Output.empty() : this.exclusiveMinimum;
+    public Output<Double> exclusiveMinimum() {
+        return this.exclusiveMinimum == null ? Codegen.empty() : this.exclusiveMinimum;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
     @Import(name="maximum")
       private final @Nullable Output<Double> maximum;
 
-    public Output<Double> getMaximum() {
-        return this.maximum == null ? Output.empty() : this.maximum;
+    public Output<Double> maximum() {
+        return this.maximum == null ? Codegen.empty() : this.maximum;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
     @Import(name="minimum")
       private final @Nullable Output<Double> minimum;
 
-    public Output<Double> getMinimum() {
-        return this.minimum == null ? Output.empty() : this.minimum;
+    public Output<Double> minimum() {
+        return this.minimum == null ? Codegen.empty() : this.minimum;
     }
 
     public GoogleCloudRetailV2alphaIntervalArgs(
@@ -74,10 +75,10 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
     }
 
     private GoogleCloudRetailV2alphaIntervalArgs() {
-        this.exclusiveMaximum = Output.empty();
-        this.exclusiveMinimum = Output.empty();
-        this.maximum = Output.empty();
-        this.minimum = Output.empty();
+        this.exclusiveMaximum = Codegen.empty();
+        this.exclusiveMinimum = Codegen.empty();
+        this.maximum = Codegen.empty();
+        this.minimum = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
             return this;
         }
         public Builder exclusiveMaximum(@Nullable Double exclusiveMaximum) {
-            this.exclusiveMaximum = Output.ofNullable(exclusiveMaximum);
+            this.exclusiveMaximum = Codegen.ofNullable(exclusiveMaximum);
             return this;
         }
         public Builder exclusiveMinimum(@Nullable Output<Double> exclusiveMinimum) {
@@ -119,7 +120,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
             return this;
         }
         public Builder exclusiveMinimum(@Nullable Double exclusiveMinimum) {
-            this.exclusiveMinimum = Output.ofNullable(exclusiveMinimum);
+            this.exclusiveMinimum = Codegen.ofNullable(exclusiveMinimum);
             return this;
         }
         public Builder maximum(@Nullable Output<Double> maximum) {
@@ -127,7 +128,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
             return this;
         }
         public Builder maximum(@Nullable Double maximum) {
-            this.maximum = Output.ofNullable(maximum);
+            this.maximum = Codegen.ofNullable(maximum);
             return this;
         }
         public Builder minimum(@Nullable Output<Double> minimum) {
@@ -135,7 +136,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
             return this;
         }
         public Builder minimum(@Nullable Double minimum) {
-            this.minimum = Output.ofNullable(minimum);
+            this.minimum = Codegen.ofNullable(minimum);
             return this;
         }        public GoogleCloudRetailV2alphaIntervalArgs build() {
             return new GoogleCloudRetailV2alphaIntervalArgs(exclusiveMaximum, exclusiveMinimum, maximum, minimum);

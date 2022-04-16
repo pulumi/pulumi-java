@@ -33,13 +33,13 @@ public final class LoggingConfigurationLogDestinationConfig {
      * A key-value pair to configure the logDestinations.
      * 
     */
-    public Object getLogDestination() {
+    public Object logDestination() {
         return this.logDestination;
     }
-    public LoggingConfigurationLogDestinationConfigLogDestinationType getLogDestinationType() {
+    public LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType() {
         return this.logDestinationType;
     }
-    public LoggingConfigurationLogDestinationConfigLogType getLogType() {
+    public LoggingConfigurationLogDestinationConfigLogType logType() {
         return this.logType;
     }
 

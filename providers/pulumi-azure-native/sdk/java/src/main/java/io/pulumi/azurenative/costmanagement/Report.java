@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +36,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Has definition for the report.
      * 
      */
-    public Output<ReportDefinitionResponse> getDefinition() {
+    public Output<ReportDefinitionResponse> definition() {
         return this.definition;
     }
     /**
@@ -49,7 +50,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Has delivery information for the report.
      * 
      */
-    public Output<ReportDeliveryInfoResponse> getDeliveryInfo() {
+    public Output<ReportDeliveryInfoResponse> deliveryInfo() {
         return this.deliveryInfo;
     }
     /**
@@ -63,7 +64,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return The format of the report being delivered.
      * 
      */
-    public Output</* @Nullable */ String> getFormat() {
+    public Output</* @Nullable */ String> format() {
         return this.format;
     }
     /**
@@ -77,7 +78,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -91,7 +92,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Has schedule information for the report.
      * 
      */
-    public Output</* @Nullable */ ReportScheduleResponse> getSchedule() {
+    public Output</* @Nullable */ ReportScheduleResponse> schedule() {
         return this.schedule;
     }
     /**
@@ -105,7 +106,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output<Map<String,String>> getTags() {
+    public Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -119,7 +120,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -145,7 +146,7 @@ public class Report extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Report(String name, ReportArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:costmanagement:Report", name, args == null ? ReportArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:costmanagement:Report", name, args == null ? ReportArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Report(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

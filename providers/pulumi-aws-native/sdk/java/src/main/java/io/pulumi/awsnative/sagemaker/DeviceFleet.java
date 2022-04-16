@@ -10,6 +10,7 @@ import io.pulumi.awsnative.sagemaker.outputs.DeviceFleetTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * @return Description for the edge device fleet
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -45,7 +46,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * @return The name of the edge device fleet
      * 
      */
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
     /**
@@ -59,7 +60,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * @return S3 bucket and an ecryption key id (if available) to store outputs for the fleet
      * 
      */
-    public Output<DeviceFleetEdgeOutputConfig> getOutputConfig() {
+    public Output<DeviceFleetEdgeOutputConfig> outputConfig() {
         return this.outputConfig;
     }
     /**
@@ -73,7 +74,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * @return Role associated with the device fleet
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -87,7 +88,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * @return Associate tags with the resource
      * 
      */
-    public Output</* @Nullable */ List<DeviceFleetTag>> getTags() {
+    public Output</* @Nullable */ List<DeviceFleetTag>> tags() {
         return this.tags;
     }
 
@@ -113,7 +114,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeviceFleet(String name, DeviceFleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:DeviceFleet", name, args == null ? DeviceFleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:DeviceFleet", name, args == null ? DeviceFleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeviceFleet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

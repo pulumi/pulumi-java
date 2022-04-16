@@ -5,6 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="metadataName")
       private final @Nullable Output<String> metadataName;
 
-    public Output<String> getMetadataName() {
-        return this.metadataName == null ? Output.empty() : this.metadataName;
+    public Output<String> metadataName() {
+        return this.metadataName == null ? Codegen.empty() : this.metadataName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
-        return this.publicKey == null ? Output.empty() : this.publicKey;
+    public Output<String> publicKey() {
+        return this.publicKey == null ? Codegen.empty() : this.publicKey;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +55,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="virtualMachineName", required=true)
       private final Output<String> virtualMachineName;
 
-    public Output<String> getVirtualMachineName() {
+    public Output<String> virtualMachineName() {
         return this.virtualMachineName;
     }
 
@@ -65,8 +66,8 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     @Import(name="vmId")
       private final @Nullable Output<String> vmId;
 
-    public Output<String> getVmId() {
-        return this.vmId == null ? Output.empty() : this.vmId;
+    public Output<String> vmId() {
+        return this.vmId == null ? Codegen.empty() : this.vmId;
     }
 
     public HybridIdentityMetadatumArgs(
@@ -83,11 +84,11 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
     }
 
     private HybridIdentityMetadatumArgs() {
-        this.metadataName = Output.empty();
-        this.publicKey = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.virtualMachineName = Output.empty();
-        this.vmId = Output.empty();
+        this.metadataName = Codegen.empty();
+        this.publicKey = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.virtualMachineName = Codegen.empty();
+        this.vmId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder metadataName(@Nullable String metadataName) {
-            this.metadataName = Output.ofNullable(metadataName);
+            this.metadataName = Codegen.ofNullable(metadataName);
             return this;
         }
         public Builder publicKey(@Nullable Output<String> publicKey) {
@@ -131,7 +132,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder publicKey(@Nullable String publicKey) {
-            this.publicKey = Output.ofNullable(publicKey);
+            this.publicKey = Codegen.ofNullable(publicKey);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -155,7 +156,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = Output.ofNullable(vmId);
+            this.vmId = Codegen.ofNullable(vmId);
             return this;
         }        public HybridIdentityMetadatumArgs build() {
             return new HybridIdentityMetadatumArgs(metadataName, publicKey, resourceGroupName, virtualMachineName, vmId);

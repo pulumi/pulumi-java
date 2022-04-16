@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcEndpointSubnetAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -45,7 +46,7 @@ public class VpcEndpointSubnetAssociation extends io.pulumi.resources.CustomReso
      * @return The ID of the subnet to be associated with the VPC endpoint.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -59,7 +60,7 @@ public class VpcEndpointSubnetAssociation extends io.pulumi.resources.CustomReso
      * @return The ID of the VPC endpoint with which the subnet will be associated.
      * 
      */
-    public Output<String> getVpcEndpointId() {
+    public Output<String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
 
@@ -85,7 +86,7 @@ public class VpcEndpointSubnetAssociation extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcEndpointSubnetAssociation(String name, VpcEndpointSubnetAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcEndpointSubnetAssociation:VpcEndpointSubnetAssociation", name, args == null ? VpcEndpointSubnetAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcEndpointSubnetAssociation:VpcEndpointSubnetAssociation", name, args == null ? VpcEndpointSubnetAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcEndpointSubnetAssociation(String name, Output<String> id, @Nullable VpcEndpointSubnetAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs extends 
     @Import(name="agent", required=true)
       private final Output<String> agent;
 
-    public Output<String> getAgent() {
+    public Output<String> agent() {
         return this.agent;
     }
 
@@ -33,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs extends 
     }
 
     private GoogleCloudDialogflowV2beta1AutomatedAgentConfigArgs() {
-        this.agent = Output.empty();
+        this.agent = Codegen.empty();
     }
 
     public static Builder builder() {

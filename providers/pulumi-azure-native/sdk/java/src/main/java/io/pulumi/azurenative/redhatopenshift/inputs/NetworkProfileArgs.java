@@ -5,6 +5,7 @@ package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="podCidr")
       private final @Nullable Output<String> podCidr;
 
-    public Output<String> getPodCidr() {
-        return this.podCidr == null ? Output.empty() : this.podCidr;
+    public Output<String> podCidr() {
+        return this.podCidr == null ? Codegen.empty() : this.podCidr;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;
 
-    public Output<String> getServiceCidr() {
-        return this.serviceCidr == null ? Output.empty() : this.serviceCidr;
+    public Output<String> serviceCidr() {
+        return this.serviceCidr == null ? Codegen.empty() : this.serviceCidr;
     }
 
     public NetworkProfileArgs(
@@ -48,8 +49,8 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkProfileArgs() {
-        this.podCidr = Output.empty();
-        this.serviceCidr = Output.empty();
+        this.podCidr = Codegen.empty();
+        this.serviceCidr = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder podCidr(@Nullable String podCidr) {
-            this.podCidr = Output.ofNullable(podCidr);
+            this.podCidr = Codegen.ofNullable(podCidr);
             return this;
         }
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
@@ -87,7 +88,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = Output.ofNullable(serviceCidr);
+            this.serviceCidr = Codegen.ofNullable(serviceCidr);
             return this;
         }        public NetworkProfileArgs build() {
             return new NetworkProfileArgs(podCidr, serviceCidr);

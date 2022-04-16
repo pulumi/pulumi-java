@@ -6,6 +6,7 @@ package io.pulumi.azurenative.notificationhubs;
 import io.pulumi.azurenative.notificationhubs.inputs.SharedAccessAuthorizationRulePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     @Import(name="authorizationRuleName")
       private final @Nullable Output<String> authorizationRuleName;
 
-    public Output<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
+    public Output<String> authorizationRuleName() {
+        return this.authorizationRuleName == null ? Codegen.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -44,7 +45,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     @Import(name="notificationHubName", required=true)
       private final Output<String> notificationHubName;
 
-    public Output<String> getNotificationHubName() {
+    public Output<String> notificationHubName() {
         return this.notificationHubName;
     }
 
@@ -55,7 +56,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     @Import(name="properties", required=true)
       private final Output<SharedAccessAuthorizationRulePropertiesArgs> properties;
 
-    public Output<SharedAccessAuthorizationRulePropertiesArgs> getProperties() {
+    public Output<SharedAccessAuthorizationRulePropertiesArgs> properties() {
         return this.properties;
     }
 
@@ -66,7 +67,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -84,11 +85,11 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
     }
 
     private NotificationHubAuthorizationRuleArgs() {
-        this.authorizationRuleName = Output.empty();
-        this.namespaceName = Output.empty();
-        this.notificationHubName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.authorizationRuleName = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.notificationHubName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class NotificationHubAuthorizationRuleArgs extends io.pulumi.resour
             return this;
         }
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Codegen.ofNullable(authorizationRuleName);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {

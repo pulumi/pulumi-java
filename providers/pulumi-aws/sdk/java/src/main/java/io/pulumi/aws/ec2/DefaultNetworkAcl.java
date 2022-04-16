@@ -11,6 +11,7 @@ import io.pulumi.aws.ec2.outputs.DefaultNetworkAclIngress;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -54,7 +55,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return ARN of the Default Network ACL
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -68,7 +69,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return Network ACL ID to manage. This attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
      * 
      */
-    public Output<String> getDefaultNetworkAclId() {
+    public Output<String> defaultNetworkAclId() {
         return this.defaultNetworkAclId;
     }
     /**
@@ -82,7 +83,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return Configuration block for an egress rule. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<DefaultNetworkAclEgress>> getEgress() {
+    public Output</* @Nullable */ List<DefaultNetworkAclEgress>> egress() {
         return this.egress;
     }
     /**
@@ -96,7 +97,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return Configuration block for an ingress rule. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<DefaultNetworkAclIngress>> getIngress() {
+    public Output</* @Nullable */ List<DefaultNetworkAclIngress>> ingress() {
         return this.ingress;
     }
     /**
@@ -110,7 +111,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return ID of the AWS account that owns the Default Network ACL
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -124,7 +125,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return List of Subnet IDs to apply the ACL to. See the notes below on managing Subnets in the Default Network ACL
      * 
      */
-    public Output</* @Nullable */ List<String>> getSubnetIds() {
+    public Output</* @Nullable */ List<String>> subnetIds() {
         return this.subnetIds;
     }
     /**
@@ -138,7 +139,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -152,7 +153,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -166,7 +167,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @return ID of the associated VPC
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -192,7 +193,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultNetworkAcl(String name, DefaultNetworkAclArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/defaultNetworkAcl:DefaultNetworkAcl", name, args == null ? DefaultNetworkAclArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/defaultNetworkAcl:DefaultNetworkAcl", name, args == null ? DefaultNetworkAclArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DefaultNetworkAcl(String name, Output<String> id, @Nullable DefaultNetworkAclState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

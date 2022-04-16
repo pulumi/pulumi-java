@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2VpcAccessEgress;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
     @Import(name="connector")
       private final @Nullable Output<String> connector;
 
-    public Output<String> getConnector() {
-        return this.connector == null ? Output.empty() : this.connector;
+    public Output<String> connector() {
+        return this.connector == null ? Codegen.empty() : this.connector;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
     @Import(name="egress")
       private final @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress;
 
-    public Output<GoogleCloudRunOpV2VpcAccessEgress> getEgress() {
-        return this.egress == null ? Output.empty() : this.egress;
+    public Output<GoogleCloudRunOpV2VpcAccessEgress> egress() {
+        return this.egress == null ? Codegen.empty() : this.egress;
     }
 
     public GoogleCloudRunOpV2VpcAccessArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
     }
 
     private GoogleCloudRunOpV2VpcAccessArgs() {
-        this.connector = Output.empty();
-        this.egress = Output.empty();
+        this.connector = Codegen.empty();
+        this.egress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder connector(@Nullable String connector) {
-            this.connector = Output.ofNullable(connector);
+            this.connector = Codegen.ofNullable(connector);
             return this;
         }
         public Builder egress(@Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress) {
@@ -88,7 +89,7 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder egress(@Nullable GoogleCloudRunOpV2VpcAccessEgress egress) {
-            this.egress = Output.ofNullable(egress);
+            this.egress = Codegen.ofNullable(egress);
             return this;
         }        public GoogleCloudRunOpV2VpcAccessArgs build() {
             return new GoogleCloudRunOpV2VpcAccessArgs(connector, egress);

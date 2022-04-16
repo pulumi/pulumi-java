@@ -5,6 +5,7 @@ package io.pulumi.aws.devicefarm;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultJobTimeoutMinutes")
       private final @Nullable Output<Integer> defaultJobTimeoutMinutes;
 
-    public Output<Integer> getDefaultJobTimeoutMinutes() {
-        return this.defaultJobTimeoutMinutes == null ? Output.empty() : this.defaultJobTimeoutMinutes;
+    public Output<Integer> defaultJobTimeoutMinutes() {
+        return this.defaultJobTimeoutMinutes == null ? Codegen.empty() : this.defaultJobTimeoutMinutes;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ProjectArgs(
@@ -59,9 +60,9 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.defaultJobTimeoutMinutes = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.defaultJobTimeoutMinutes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
-            this.defaultJobTimeoutMinutes = Output.ofNullable(defaultJobTimeoutMinutes);
+            this.defaultJobTimeoutMinutes = Codegen.ofNullable(defaultJobTimeoutMinutes);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -101,7 +102,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -109,7 +110,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ProjectArgs build() {
             return new ProjectArgs(defaultJobTimeoutMinutes, name, tags);

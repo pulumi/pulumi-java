@@ -5,6 +5,7 @@ package io.pulumi.aws.servicediscovery;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes", required=true)
       private final Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> getAttributes() {
+    public Output<Map<String,String>> attributes() {
         return this.attributes;
     }
 
@@ -32,7 +33,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
+    public Output<String> instanceId() {
         return this.instanceId;
     }
 
@@ -43,7 +44,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -57,9 +58,9 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.attributes = Output.empty();
-        this.instanceId = Output.empty();
-        this.serviceId = Output.empty();
+        this.attributes = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.serviceId = Codegen.empty();
     }
 
     public static Builder builder() {

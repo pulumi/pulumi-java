@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -44,8 +45,8 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="encryption")
       private final @Nullable Output<InventoryDestinationBucketEncryptionArgs> encryption;
 
-    public Output<InventoryDestinationBucketEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<InventoryDestinationBucketEncryptionArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="format", required=true)
       private final Output<String> format;
 
-    public Output<String> getFormat() {
+    public Output<String> format() {
         return this.format;
     }
 
@@ -66,8 +67,8 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public InventoryDestinationBucketArgs(
@@ -84,11 +85,11 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
     }
 
     private InventoryDestinationBucketArgs() {
-        this.accountId = Output.empty();
-        this.bucketArn = Output.empty();
-        this.encryption = Output.empty();
-        this.format = Output.empty();
-        this.prefix = Output.empty();
+        this.accountId = Codegen.empty();
+        this.bucketArn = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.format = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder bucketArn(Output<String> bucketArn) {
@@ -140,7 +141,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder encryption(@Nullable InventoryDestinationBucketEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder format(Output<String> format) {
@@ -156,7 +157,7 @@ public final class InventoryDestinationBucketArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public InventoryDestinationBucketArgs build() {
             return new InventoryDestinationBucketArgs(accountId, bucketArn, encryption, format, prefix);

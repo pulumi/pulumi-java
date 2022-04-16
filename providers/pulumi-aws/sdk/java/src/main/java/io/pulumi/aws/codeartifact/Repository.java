@@ -11,6 +11,7 @@ import io.pulumi.aws.codeartifact.outputs.RepositoryUpstream;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The account number of the AWS account that manages the repository.
      * 
      */
-    public Output<String> getAdministratorAccount() {
+    public Output<String> administratorAccount() {
         return this.administratorAccount;
     }
     /**
@@ -57,7 +58,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The ARN of the repository.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +72,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The description of the repository.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -85,7 +86,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The domain that contains the created repository.
      * 
      */
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
     /**
@@ -99,7 +100,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The account number of the AWS account that owns the domain.
      * 
      */
-    public Output<String> getDomainOwner() {
+    public Output<String> domainOwner() {
         return this.domainOwner;
     }
     /**
@@ -113,7 +114,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
      * 
      */
-    public Output</* @Nullable */ RepositoryExternalConnections> getExternalConnections() {
+    public Output</* @Nullable */ RepositoryExternalConnections> externalConnections() {
         return this.externalConnections;
     }
     /**
@@ -127,7 +128,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return The name of the repository to create.
      * 
      */
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
     /**
@@ -141,7 +142,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -155,7 +156,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -169,7 +170,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @return A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
      * 
      */
-    public Output</* @Nullable */ List<RepositoryUpstream>> getUpstreams() {
+    public Output</* @Nullable */ List<RepositoryUpstream>> upstreams() {
         return this.upstreams;
     }
 
@@ -195,7 +196,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Repository(String name, RepositoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codeartifact/repository:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codeartifact/repository:Repository", name, args == null ? RepositoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Repository(String name, Output<String> id, @Nullable RepositoryState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

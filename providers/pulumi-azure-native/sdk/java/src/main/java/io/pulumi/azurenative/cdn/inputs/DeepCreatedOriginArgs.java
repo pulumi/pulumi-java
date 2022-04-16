@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
 
@@ -49,8 +50,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="httpPort")
       private final @Nullable Output<Integer> httpPort;
 
-    public Output<Integer> getHttpPort() {
-        return this.httpPort == null ? Output.empty() : this.httpPort;
+    public Output<Integer> httpPort() {
+        return this.httpPort == null ? Codegen.empty() : this.httpPort;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="httpsPort")
       private final @Nullable Output<Integer> httpsPort;
 
-    public Output<Integer> getHttpsPort() {
-        return this.httpsPort == null ? Output.empty() : this.httpsPort;
+    public Output<Integer> httpsPort() {
+        return this.httpsPort == null ? Codegen.empty() : this.httpsPort;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -82,8 +83,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
-    public Output<String> getOriginHostHeader() {
-        return this.originHostHeader == null ? Output.empty() : this.originHostHeader;
+    public Output<String> originHostHeader() {
+        return this.originHostHeader == null ? Codegen.empty() : this.originHostHeader;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateLinkAlias")
       private final @Nullable Output<String> privateLinkAlias;
 
-    public Output<String> getPrivateLinkAlias() {
-        return this.privateLinkAlias == null ? Output.empty() : this.privateLinkAlias;
+    public Output<String> privateLinkAlias() {
+        return this.privateLinkAlias == null ? Codegen.empty() : this.privateLinkAlias;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateLinkApprovalMessage")
       private final @Nullable Output<String> privateLinkApprovalMessage;
 
-    public Output<String> getPrivateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage == null ? Output.empty() : this.privateLinkApprovalMessage;
+    public Output<String> privateLinkApprovalMessage() {
+        return this.privateLinkApprovalMessage == null ? Codegen.empty() : this.privateLinkApprovalMessage;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateLinkLocation")
       private final @Nullable Output<String> privateLinkLocation;
 
-    public Output<String> getPrivateLinkLocation() {
-        return this.privateLinkLocation == null ? Output.empty() : this.privateLinkLocation;
+    public Output<String> privateLinkLocation() {
+        return this.privateLinkLocation == null ? Codegen.empty() : this.privateLinkLocation;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
-    public Output<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
+    public Output<String> privateLinkResourceId() {
+        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+    public Output<Integer> weight() {
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public DeepCreatedOriginArgs(
@@ -180,18 +181,18 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DeepCreatedOriginArgs() {
-        this.enabled = Output.empty();
-        this.hostName = Output.empty();
-        this.httpPort = Output.empty();
-        this.httpsPort = Output.empty();
-        this.name = Output.empty();
-        this.originHostHeader = Output.empty();
-        this.priority = Output.empty();
-        this.privateLinkAlias = Output.empty();
-        this.privateLinkApprovalMessage = Output.empty();
-        this.privateLinkLocation = Output.empty();
-        this.privateLinkResourceId = Output.empty();
-        this.weight = Output.empty();
+        this.enabled = Codegen.empty();
+        this.hostName = Codegen.empty();
+        this.httpPort = Codegen.empty();
+        this.httpsPort = Codegen.empty();
+        this.name = Codegen.empty();
+        this.originHostHeader = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.privateLinkAlias = Codegen.empty();
+        this.privateLinkApprovalMessage = Codegen.empty();
+        this.privateLinkLocation = Codegen.empty();
+        this.privateLinkResourceId = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder hostName(Output<String> hostName) {
@@ -257,7 +258,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = Output.ofNullable(httpPort);
+            this.httpPort = Codegen.ofNullable(httpPort);
             return this;
         }
         public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
@@ -265,7 +266,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = Output.ofNullable(httpsPort);
+            this.httpsPort = Codegen.ofNullable(httpsPort);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -281,7 +282,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder originHostHeader(@Nullable String originHostHeader) {
-            this.originHostHeader = Output.ofNullable(originHostHeader);
+            this.originHostHeader = Codegen.ofNullable(originHostHeader);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -289,7 +290,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
@@ -297,7 +298,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
-            this.privateLinkAlias = Output.ofNullable(privateLinkAlias);
+            this.privateLinkAlias = Codegen.ofNullable(privateLinkAlias);
             return this;
         }
         public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
@@ -305,7 +306,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = Output.ofNullable(privateLinkApprovalMessage);
+            this.privateLinkApprovalMessage = Codegen.ofNullable(privateLinkApprovalMessage);
             return this;
         }
         public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
@@ -313,7 +314,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = Output.ofNullable(privateLinkLocation);
+            this.privateLinkLocation = Codegen.ofNullable(privateLinkLocation);
             return this;
         }
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
@@ -321,7 +322,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
             return this;
         }
         public Builder weight(@Nullable Output<Integer> weight) {
@@ -329,7 +330,7 @@ public final class DeepCreatedOriginArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public DeepCreatedOriginArgs build() {
             return new DeepCreatedOriginArgs(enabled, hostName, httpPort, httpsPort, name, originHostHeader, priority, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);

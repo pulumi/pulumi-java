@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
     @Import(name="lun")
       private final @Nullable Output<String> lun;
 
-    public Output<String> getLun() {
-        return this.lun == null ? Output.empty() : this.lun;
+    public Output<String> lun() {
+        return this.lun == null ? Codegen.empty() : this.lun;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
     @Import(name="storageType")
       private final @Nullable Output<Either<String,StorageType>> storageType;
 
-    public Output<Either<String,StorageType>> getStorageType() {
-        return this.storageType == null ? Output.empty() : this.storageType;
+    public Output<Either<String,StorageType>> storageType() {
+        return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
     public DataDiskStorageTypeInfoArgs(
@@ -50,8 +51,8 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
     }
 
     private DataDiskStorageTypeInfoArgs() {
-        this.lun = Output.empty();
-        this.storageType = Output.empty();
+        this.lun = Codegen.empty();
+        this.storageType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder lun(@Nullable String lun) {
-            this.lun = Output.ofNullable(lun);
+            this.lun = Codegen.ofNullable(lun);
             return this;
         }
         public Builder storageType(@Nullable Output<Either<String,StorageType>> storageType) {
@@ -89,7 +90,7 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder storageType(@Nullable Either<String,StorageType> storageType) {
-            this.storageType = Output.ofNullable(storageType);
+            this.storageType = Codegen.ofNullable(storageType);
             return this;
         }        public DataDiskStorageTypeInfoArgs build() {
             return new DataDiskStorageTypeInfoArgs(lun, storageType);

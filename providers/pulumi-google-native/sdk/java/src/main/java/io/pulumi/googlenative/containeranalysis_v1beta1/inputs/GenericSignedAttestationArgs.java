@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.GenericSignedAttestationContentType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SignatureArgs;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
     @Import(name="contentType")
       private final @Nullable Output<GenericSignedAttestationContentType> contentType;
 
-    public Output<GenericSignedAttestationContentType> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+    public Output<GenericSignedAttestationContentType> contentType() {
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
     @Import(name="serializedPayload")
       private final @Nullable Output<String> serializedPayload;
 
-    public Output<String> getSerializedPayload() {
-        return this.serializedPayload == null ? Output.empty() : this.serializedPayload;
+    public Output<String> serializedPayload() {
+        return this.serializedPayload == null ? Codegen.empty() : this.serializedPayload;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
     @Import(name="signatures")
       private final @Nullable Output<List<SignatureArgs>> signatures;
 
-    public Output<List<SignatureArgs>> getSignatures() {
-        return this.signatures == null ? Output.empty() : this.signatures;
+    public Output<List<SignatureArgs>> signatures() {
+        return this.signatures == null ? Codegen.empty() : this.signatures;
     }
 
     public GenericSignedAttestationArgs(
@@ -64,9 +65,9 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
     }
 
     private GenericSignedAttestationArgs() {
-        this.contentType = Output.empty();
-        this.serializedPayload = Output.empty();
-        this.signatures = Output.empty();
+        this.contentType = Codegen.empty();
+        this.serializedPayload = Codegen.empty();
+        this.signatures = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder contentType(@Nullable GenericSignedAttestationContentType contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder serializedPayload(@Nullable Output<String> serializedPayload) {
@@ -106,7 +107,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder serializedPayload(@Nullable String serializedPayload) {
-            this.serializedPayload = Output.ofNullable(serializedPayload);
+            this.serializedPayload = Codegen.ofNullable(serializedPayload);
             return this;
         }
         public Builder signatures(@Nullable Output<List<SignatureArgs>> signatures) {
@@ -114,7 +115,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder signatures(@Nullable List<SignatureArgs> signatures) {
-            this.signatures = Output.ofNullable(signatures);
+            this.signatures = Codegen.ofNullable(signatures);
             return this;
         }
         public Builder signatures(SignatureArgs... signatures) {

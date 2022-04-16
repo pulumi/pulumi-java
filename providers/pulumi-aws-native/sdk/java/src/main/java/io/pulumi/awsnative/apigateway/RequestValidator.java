@@ -8,6 +8,7 @@ import io.pulumi.awsnative.apigateway.RequestValidatorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * @return Name of the request validator.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -43,7 +44,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * @return ID of the request validator.
      * 
      */
-    public Output<String> getRequestValidatorId() {
+    public Output<String> requestValidatorId() {
         return this.requestValidatorId;
     }
     /**
@@ -57,7 +58,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * @return The identifier of the targeted API entity.
      * 
      */
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
     /**
@@ -71,7 +72,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to validate the request body according to the configured schema for the targeted API and method.
      * 
      */
-    public Output</* @Nullable */ Boolean> getValidateRequestBody() {
+    public Output</* @Nullable */ Boolean> validateRequestBody() {
         return this.validateRequestBody;
     }
     /**
@@ -85,7 +86,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to validate request parameters.
      * 
      */
-    public Output</* @Nullable */ Boolean> getValidateRequestParameters() {
+    public Output</* @Nullable */ Boolean> validateRequestParameters() {
         return this.validateRequestParameters;
     }
 
@@ -111,7 +112,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RequestValidator(String name, RequestValidatorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:RequestValidator", name, args == null ? RequestValidatorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:RequestValidator", name, args == null ? RequestValidatorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RequestValidator(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

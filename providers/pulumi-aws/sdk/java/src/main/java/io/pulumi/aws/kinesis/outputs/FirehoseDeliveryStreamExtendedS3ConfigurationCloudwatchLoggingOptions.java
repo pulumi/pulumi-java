@@ -42,21 +42,21 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggin
      * Enables or disables the logging. Defaults to `false`.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * The CloudWatch group name for logging. This value is required if `enabled` is true.
      * 
     */
-    public Optional<String> getLogGroupName() {
+    public Optional<String> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
     /**
      * The CloudWatch log stream name for logging. This value is required if `enabled` is true.
      * 
     */
-    public Optional<String> getLogStreamName() {
+    public Optional<String> logStreamName() {
         return Optional.ofNullable(this.logStreamName);
     }
 

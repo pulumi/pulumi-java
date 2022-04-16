@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class WirelessGatewayLoRaWANGatewayArgs extends io.pulumi.resources
     @Import(name="gatewayEui", required=true)
       private final Output<String> gatewayEui;
 
-    public Output<String> getGatewayEui() {
+    public Output<String> gatewayEui() {
         return this.gatewayEui;
     }
 
     @Import(name="rfRegion", required=true)
       private final Output<String> rfRegion;
 
-    public Output<String> getRfRegion() {
+    public Output<String> rfRegion() {
         return this.rfRegion;
     }
 
@@ -35,8 +36,8 @@ public final class WirelessGatewayLoRaWANGatewayArgs extends io.pulumi.resources
     }
 
     private WirelessGatewayLoRaWANGatewayArgs() {
-        this.gatewayEui = Output.empty();
-        this.rfRegion = Output.empty();
+        this.gatewayEui = Codegen.empty();
+        this.rfRegion = Codegen.empty();
     }
 
     public static Builder builder() {

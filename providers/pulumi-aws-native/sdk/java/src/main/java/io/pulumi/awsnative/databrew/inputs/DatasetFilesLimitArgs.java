@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrder;
 import io.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrderedBy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxFiles", required=true)
       private final Output<Integer> maxFiles;
 
-    public Output<Integer> getMaxFiles() {
+    public Output<Integer> maxFiles() {
         return this.maxFiles;
     }
 
@@ -34,8 +35,8 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
     @Import(name="order")
       private final @Nullable Output<DatasetFilesLimitOrder> order;
 
-    public Output<DatasetFilesLimitOrder> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+    public Output<DatasetFilesLimitOrder> order() {
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
     @Import(name="orderedBy")
       private final @Nullable Output<DatasetFilesLimitOrderedBy> orderedBy;
 
-    public Output<DatasetFilesLimitOrderedBy> getOrderedBy() {
-        return this.orderedBy == null ? Output.empty() : this.orderedBy;
+    public Output<DatasetFilesLimitOrderedBy> orderedBy() {
+        return this.orderedBy == null ? Codegen.empty() : this.orderedBy;
     }
 
     public DatasetFilesLimitArgs(
@@ -59,9 +60,9 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetFilesLimitArgs() {
-        this.maxFiles = Output.empty();
-        this.order = Output.empty();
-        this.orderedBy = Output.empty();
+        this.maxFiles = Codegen.empty();
+        this.order = Codegen.empty();
+        this.orderedBy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder order(@Nullable DatasetFilesLimitOrder order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder orderedBy(@Nullable Output<DatasetFilesLimitOrderedBy> orderedBy) {
@@ -109,7 +110,7 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder orderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
-            this.orderedBy = Output.ofNullable(orderedBy);
+            this.orderedBy = Codegen.ofNullable(orderedBy);
             return this;
         }        public DatasetFilesLimitArgs build() {
             return new DatasetFilesLimitArgs(maxFiles, order, orderedBy);

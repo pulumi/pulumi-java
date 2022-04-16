@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketServerSideEncryptionByDefaultArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,15 +27,15 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
     @Import(name="bucketKeyEnabled")
       private final @Nullable Output<Boolean> bucketKeyEnabled;
 
-    public Output<Boolean> getBucketKeyEnabled() {
-        return this.bucketKeyEnabled == null ? Output.empty() : this.bucketKeyEnabled;
+    public Output<Boolean> bucketKeyEnabled() {
+        return this.bucketKeyEnabled == null ? Codegen.empty() : this.bucketKeyEnabled;
     }
 
     @Import(name="serverSideEncryptionByDefault")
       private final @Nullable Output<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
 
-    public Output<BucketServerSideEncryptionByDefaultArgs> getServerSideEncryptionByDefault() {
-        return this.serverSideEncryptionByDefault == null ? Output.empty() : this.serverSideEncryptionByDefault;
+    public Output<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault() {
+        return this.serverSideEncryptionByDefault == null ? Codegen.empty() : this.serverSideEncryptionByDefault;
     }
 
     public BucketServerSideEncryptionRuleArgs(
@@ -45,8 +46,8 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
     }
 
     private BucketServerSideEncryptionRuleArgs() {
-        this.bucketKeyEnabled = Output.empty();
-        this.serverSideEncryptionByDefault = Output.empty();
+        this.bucketKeyEnabled = Codegen.empty();
+        this.serverSideEncryptionByDefault = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
             return this;
         }
         public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
-            this.bucketKeyEnabled = Output.ofNullable(bucketKeyEnabled);
+            this.bucketKeyEnabled = Codegen.ofNullable(bucketKeyEnabled);
             return this;
         }
         public Builder serverSideEncryptionByDefault(@Nullable Output<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault) {
@@ -84,7 +85,7 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
             return this;
         }
         public Builder serverSideEncryptionByDefault(@Nullable BucketServerSideEncryptionByDefaultArgs serverSideEncryptionByDefault) {
-            this.serverSideEncryptionByDefault = Output.ofNullable(serverSideEncryptionByDefault);
+            this.serverSideEncryptionByDefault = Codegen.ofNullable(serverSideEncryptionByDefault);
             return this;
         }        public BucketServerSideEncryptionRuleArgs build() {
             return new BucketServerSideEncryptionRuleArgs(bucketKeyEnabled, serverSideEncryptionByDefault);

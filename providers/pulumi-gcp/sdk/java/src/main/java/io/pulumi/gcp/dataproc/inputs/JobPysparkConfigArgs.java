@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.JobPysparkConfigLoggingConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> getArchiveUris() {
-        return this.archiveUris == null ? Output.empty() : this.archiveUris;
+    public Output<List<String>> archiveUris() {
+        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> getFileUris() {
-        return this.fileUris == null ? Output.empty() : this.fileUris;
+    public Output<List<String>> fileUris() {
+        return this.fileUris == null ? Codegen.empty() : this.fileUris;
     }
 
     /**
@@ -57,15 +58,15 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
+    public Output<List<String>> jarFileUris() {
+        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
     @Import(name="loggingConfig")
       private final @Nullable Output<JobPysparkConfigLoggingConfigArgs> loggingConfig;
 
-    public Output<JobPysparkConfigLoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
+    public Output<JobPysparkConfigLoggingConfigArgs> loggingConfig() {
+        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mainPythonFileUri", required=true)
       private final Output<String> mainPythonFileUri;
 
-    public Output<String> getMainPythonFileUri() {
+    public Output<String> mainPythonFileUri() {
         return this.mainPythonFileUri;
     }
 
@@ -86,8 +87,8 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pythonFileUris")
       private final @Nullable Output<List<String>> pythonFileUris;
 
-    public Output<List<String>> getPythonFileUris() {
-        return this.pythonFileUris == null ? Output.empty() : this.pythonFileUris;
+    public Output<List<String>> pythonFileUris() {
+        return this.pythonFileUris == null ? Codegen.empty() : this.pythonFileUris;
     }
 
     public JobPysparkConfigArgs(
@@ -121,14 +122,14 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private JobPysparkConfigArgs() {
-        this.archiveUris = Output.empty();
-        this.args = Output.empty();
-        this.fileUris = Output.empty();
-        this.jarFileUris = Output.empty();
-        this.loggingConfig = Output.empty();
-        this.mainPythonFileUri = Output.empty();
-        this.properties = Output.empty();
-        this.pythonFileUris = Output.empty();
+        this.archiveUris = Codegen.empty();
+        this.args = Codegen.empty();
+        this.fileUris = Codegen.empty();
+        this.jarFileUris = Codegen.empty();
+        this.loggingConfig = Codegen.empty();
+        this.mainPythonFileUri = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.pythonFileUris = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Output.ofNullable(archiveUris);
+            this.archiveUris = Codegen.ofNullable(archiveUris);
             return this;
         }
         public Builder archiveUris(String... archiveUris) {
@@ -181,7 +182,7 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -192,7 +193,7 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Output.ofNullable(fileUris);
+            this.fileUris = Codegen.ofNullable(fileUris);
             return this;
         }
         public Builder fileUris(String... fileUris) {
@@ -203,7 +204,7 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Output.ofNullable(jarFileUris);
+            this.jarFileUris = Codegen.ofNullable(jarFileUris);
             return this;
         }
         public Builder jarFileUris(String... jarFileUris) {
@@ -214,7 +215,7 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder loggingConfig(@Nullable JobPysparkConfigLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Output.ofNullable(loggingConfig);
+            this.loggingConfig = Codegen.ofNullable(loggingConfig);
             return this;
         }
         public Builder mainPythonFileUri(Output<String> mainPythonFileUri) {
@@ -230,7 +231,7 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder pythonFileUris(@Nullable Output<List<String>> pythonFileUris) {
@@ -238,7 +239,7 @@ public final class JobPysparkConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pythonFileUris(@Nullable List<String> pythonFileUris) {
-            this.pythonFileUris = Output.ofNullable(pythonFileUris);
+            this.pythonFileUris = Codegen.ofNullable(pythonFileUris);
             return this;
         }
         public Builder pythonFileUris(String... pythonFileUris) {

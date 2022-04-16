@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingAccessLogArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class VirtualGatewaySpecLoggingArgs extends io.pulumi.resources.Res
     @Import(name="accessLog")
       private final @Nullable Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog;
 
-    public Output<VirtualGatewaySpecLoggingAccessLogArgs> getAccessLog() {
-        return this.accessLog == null ? Output.empty() : this.accessLog;
+    public Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog() {
+        return this.accessLog == null ? Codegen.empty() : this.accessLog;
     }
 
     public VirtualGatewaySpecLoggingArgs(@Nullable Output<VirtualGatewaySpecLoggingAccessLogArgs> accessLog) {
@@ -30,7 +31,7 @@ public final class VirtualGatewaySpecLoggingArgs extends io.pulumi.resources.Res
     }
 
     private VirtualGatewaySpecLoggingArgs() {
-        this.accessLog = Output.empty();
+        this.accessLog = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class VirtualGatewaySpecLoggingArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder accessLog(@Nullable VirtualGatewaySpecLoggingAccessLogArgs accessLog) {
-            this.accessLog = Output.ofNullable(accessLog);
+            this.accessLog = Codegen.ofNullable(accessLog);
             return this;
         }        public VirtualGatewaySpecLoggingArgs build() {
             return new VirtualGatewaySpecLoggingArgs(accessLog);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -21,22 +22,22 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
     @Import(name="details")
       private final @Nullable Output<List<Map<String,Object>>> details;
 
-    public Output<List<Map<String,Object>>> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+    public Output<List<Map<String,Object>>> details() {
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="number")
       private final @Nullable Output<Integer> number;
 
-    public Output<Integer> getNumber() {
-        return this.number == null ? Output.empty() : this.number;
+    public Output<Integer> number() {
+        return this.number == null ? Codegen.empty() : this.number;
     }
 
     public DeviceLastErrorStatusGetArgs(
@@ -49,9 +50,9 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
     }
 
     private DeviceLastErrorStatusGetArgs() {
-        this.details = Output.empty();
-        this.message = Output.empty();
-        this.number = Output.empty();
+        this.details = Codegen.empty();
+        this.message = Codegen.empty();
+        this.number = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder details(@Nullable List<Map<String,Object>> details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -91,7 +92,7 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder number(@Nullable Output<Integer> number) {
@@ -99,7 +100,7 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder number(@Nullable Integer number) {
-            this.number = Output.ofNullable(number);
+            this.number = Codegen.ofNullable(number);
             return this;
         }        public DeviceLastErrorStatusGetArgs build() {
             return new DeviceLastErrorStatusGetArgs(details, message, number);

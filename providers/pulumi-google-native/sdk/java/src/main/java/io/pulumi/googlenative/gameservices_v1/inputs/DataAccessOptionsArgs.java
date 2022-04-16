@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gameservices_v1.enums.DataAccessOptionsLogMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class DataAccessOptionsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logMode")
       private final @Nullable Output<DataAccessOptionsLogMode> logMode;
 
-    public Output<DataAccessOptionsLogMode> getLogMode() {
-        return this.logMode == null ? Output.empty() : this.logMode;
+    public Output<DataAccessOptionsLogMode> logMode() {
+        return this.logMode == null ? Codegen.empty() : this.logMode;
     }
 
     public DataAccessOptionsArgs(@Nullable Output<DataAccessOptionsLogMode> logMode) {
@@ -30,7 +31,7 @@ public final class DataAccessOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataAccessOptionsArgs() {
-        this.logMode = Output.empty();
+        this.logMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DataAccessOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder logMode(@Nullable DataAccessOptionsLogMode logMode) {
-            this.logMode = Output.ofNullable(logMode);
+            this.logMode = Codegen.ofNullable(logMode);
             return this;
         }        public DataAccessOptionsArgs build() {
             return new DataAccessOptionsArgs(logMode);

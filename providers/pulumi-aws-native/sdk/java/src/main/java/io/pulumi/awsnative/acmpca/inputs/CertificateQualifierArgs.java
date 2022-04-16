@@ -5,6 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class CertificateQualifierArgs extends io.pulumi.resources.Resource
     @Import(name="cpsUri", required=true)
       private final Output<String> cpsUri;
 
-    public Output<String> getCpsUri() {
+    public Output<String> cpsUri() {
         return this.cpsUri;
     }
 
@@ -29,7 +30,7 @@ public final class CertificateQualifierArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateQualifierArgs() {
-        this.cpsUri = Output.empty();
+        this.cpsUri = Codegen.empty();
     }
 
     public static Builder builder() {

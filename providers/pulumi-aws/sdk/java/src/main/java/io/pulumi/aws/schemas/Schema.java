@@ -9,6 +9,7 @@ import io.pulumi.aws.schemas.inputs.SchemaState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the discoverer.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The schema specification. Must be a valid Open API 3.0 spec.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -70,7 +71,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The description of the schema. Maximum of 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -84,7 +85,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The last modified date of the schema.
      * 
      */
-    public Output<String> getLastModified() {
+    public Output<String> lastModified() {
         return this.lastModified;
     }
     /**
@@ -98,7 +99,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The name of the schema. Maximum of 385 characters consisting of lower case letters, upper case letters, ., -, _, @.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -112,7 +113,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The name of the registry in which this schema belongs.
      * 
      */
-    public Output<String> getRegistryName() {
+    public Output<String> registryName() {
         return this.registryName;
     }
     /**
@@ -126,7 +127,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -140,7 +141,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -154,7 +155,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The type of the schema. Valid values: `OpenApi3`.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -168,7 +169,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The version of the schema.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
     /**
@@ -182,7 +183,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return The created date of the version of the schema.
      * 
      */
-    public Output<String> getVersionCreatedDate() {
+    public Output<String> versionCreatedDate() {
         return this.versionCreatedDate;
     }
 
@@ -208,7 +209,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Schema(String name, SchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:schemas/schema:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:schemas/schema:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Schema(String name, Output<String> id, @Nullable SchemaState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

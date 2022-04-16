@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class DeploymentGroupAlarmConfigurationArgs extends io.pulumi.resou
     @Import(name="alarms")
       private final @Nullable Output<List<String>> alarms;
 
-    public Output<List<String>> getAlarms() {
-        return this.alarms == null ? Output.empty() : this.alarms;
+    public Output<List<String>> alarms() {
+        return this.alarms == null ? Codegen.empty() : this.alarms;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DeploymentGroupAlarmConfigurationArgs extends io.pulumi.resou
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DeploymentGroupAlarmConfigurationArgs extends io.pulumi.resou
     @Import(name="ignorePollAlarmFailure")
       private final @Nullable Output<Boolean> ignorePollAlarmFailure;
 
-    public Output<Boolean> getIgnorePollAlarmFailure() {
-        return this.ignorePollAlarmFailure == null ? Output.empty() : this.ignorePollAlarmFailure;
+    public Output<Boolean> ignorePollAlarmFailure() {
+        return this.ignorePollAlarmFailure == null ? Codegen.empty() : this.ignorePollAlarmFailure;
     }
 
     public DeploymentGroupAlarmConfigurationArgs(
@@ -61,9 +62,9 @@ public final class DeploymentGroupAlarmConfigurationArgs extends io.pulumi.resou
     }
 
     private DeploymentGroupAlarmConfigurationArgs() {
-        this.alarms = Output.empty();
-        this.enabled = Output.empty();
-        this.ignorePollAlarmFailure = Output.empty();
+        this.alarms = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.ignorePollAlarmFailure = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DeploymentGroupAlarmConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder alarms(@Nullable List<String> alarms) {
-            this.alarms = Output.ofNullable(alarms);
+            this.alarms = Codegen.ofNullable(alarms);
             return this;
         }
         public Builder alarms(String... alarms) {
@@ -106,7 +107,7 @@ public final class DeploymentGroupAlarmConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder ignorePollAlarmFailure(@Nullable Output<Boolean> ignorePollAlarmFailure) {
@@ -114,7 +115,7 @@ public final class DeploymentGroupAlarmConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder ignorePollAlarmFailure(@Nullable Boolean ignorePollAlarmFailure) {
-            this.ignorePollAlarmFailure = Output.ofNullable(ignorePollAlarmFailure);
+            this.ignorePollAlarmFailure = Codegen.ofNullable(ignorePollAlarmFailure);
             return this;
         }        public DeploymentGroupAlarmConfigurationArgs build() {
             return new DeploymentGroupAlarmConfigurationArgs(alarms, enabled, ignorePollAlarmFailure);

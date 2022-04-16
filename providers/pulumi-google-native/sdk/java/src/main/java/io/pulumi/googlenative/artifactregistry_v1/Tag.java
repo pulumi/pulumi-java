@@ -6,6 +6,7 @@ package io.pulumi.googlenative.artifactregistry_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.artifactregistry_v1.TagArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return The name of the tag, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/tags/tag1". If the package part contains slashes, the slashes are escaped. The tag part can only have characters in [a-zA-Z0-9\-._~:@], anything else must be URL encoded.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -42,7 +43,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return The name of the version the tag refers to, for example: "projects/p1/locations/us-central1/repositories/repo1/packages/pkg1/versions/sha256:5243811" If the package or version ID parts contain slashes, the slashes are escaped.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -68,7 +69,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Tag(String name, TagArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:artifactregistry/v1:Tag", name, args == null ? TagArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:artifactregistry/v1:Tag", name, args == null ? TagArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Tag(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

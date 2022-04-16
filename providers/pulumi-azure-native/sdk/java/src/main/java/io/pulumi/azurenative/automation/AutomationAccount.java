@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return URL of automation hybrid service which is used for hybrid worker on-boarding.
      * 
      */
-    public Output</* @Nullable */ String> getAutomationHybridServiceUrl() {
+    public Output</* @Nullable */ String> automationHybridServiceUrl() {
         return this.automationHybridServiceUrl;
     }
     /**
@@ -62,7 +63,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Gets the creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -76,7 +77,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -90,7 +91,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Indicates whether requests using non-AAD authentication are blocked
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableLocalAuth() {
+    public Output</* @Nullable */ Boolean> disableLocalAuth() {
         return this.disableLocalAuth;
     }
     /**
@@ -104,7 +105,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Encryption properties for the automation account
      * 
      */
-    public Output</* @Nullable */ EncryptionPropertiesResponse> getEncryption() {
+    public Output</* @Nullable */ EncryptionPropertiesResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -118,7 +119,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -132,7 +133,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Identity for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> getIdentity() {
+    public Output</* @Nullable */ IdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -146,7 +147,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified by.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedBy() {
+    public Output</* @Nullable */ String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -160,7 +161,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Gets the last modified time.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -174,7 +175,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -188,7 +189,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -202,7 +203,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return List of Automation operations supported by the Automation resource provider.
      * 
      */
-    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -216,7 +217,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
      * 
      */
-    public Output</* @Nullable */ Boolean> getPublicNetworkAccess() {
+    public Output</* @Nullable */ Boolean> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -230,7 +231,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the SKU of account.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -244,7 +245,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Gets status of account.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -258,7 +259,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Resource system metadata.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -272,7 +273,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -286,7 +287,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -312,7 +313,7 @@ public class AutomationAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AutomationAccount(String name, AutomationAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:AutomationAccount", name, args == null ? AutomationAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:automation:AutomationAccount", name, args == null ? AutomationAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AutomationAccount(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.domainregistration;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -32,8 +33,8 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="ownershipId")
       private final @Nullable Output<String> ownershipId;
 
-    public Output<String> getOwnershipId() {
-        return this.ownershipId == null ? Output.empty() : this.ownershipId;
+    public Output<String> ownershipId() {
+        return this.ownershipId == null ? Codegen.empty() : this.ownershipId;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -83,11 +84,11 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
     }
 
     private DomainOwnershipIdentifierArgs() {
-        this.domainName = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.ownershipId = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.domainName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownershipId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -139,7 +140,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownershipId(@Nullable Output<String> ownershipId) {
@@ -147,7 +148,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ownershipId(@Nullable String ownershipId) {
-            this.ownershipId = Output.ofNullable(ownershipId);
+            this.ownershipId = Codegen.ofNullable(ownershipId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

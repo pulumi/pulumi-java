@@ -9,6 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ResourceIdentityArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
-    public Output<String> getDeploymentName() {
-        return this.deploymentName == null ? Output.empty() : this.deploymentName;
+    public Output<String> deploymentName() {
+        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
+    public Output<String> endpointName() {
         return this.endpointName;
     }
 
@@ -48,8 +49,8 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Output<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<ResourceIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="properties", required=true)
       private final Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties;
 
-    public Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> getProperties() {
+    public Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties() {
         return this.properties;
     }
 
@@ -92,7 +93,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -103,8 +104,8 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -140,15 +141,15 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OnlineDeploymentArgs() {
-        this.deploymentName = Output.empty();
-        this.endpointName = Output.empty();
-        this.identity = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.deploymentName = Codegen.empty();
+        this.endpointName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Output.ofNullable(deploymentName);
+            this.deploymentName = Codegen.ofNullable(deploymentName);
             return this;
         }
         public Builder endpointName(Output<String> endpointName) {
@@ -208,7 +209,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -216,7 +217,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -224,7 +225,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<Either<K8sOnlineDeploymentArgs,ManagedOnlineDeploymentArgs>> properties) {
@@ -248,7 +249,7 @@ public final class OnlineDeploymentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

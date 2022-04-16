@@ -6,6 +6,7 @@ package io.pulumi.gcp.resourcemanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.resourcemanager.LienArgs;
 import io.pulumi.gcp.resourcemanager.inputs.LienState;
@@ -40,7 +41,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * @return Time of creation
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -54,7 +55,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * @return A system-generated unique identifier for this Lien.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * 200 characters.
      * 
      */
-    public Output<String> getOrigin() {
+    public Output<String> origin() {
         return this.origin;
     }
     /**
@@ -92,7 +93,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * prefix (e.g. "projects/my-project-name").
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
     /**
@@ -108,7 +109,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * on a resource. Maximum length of 200 characters.
      * 
      */
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
     /**
@@ -130,7 +131,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * e.g. ['resourcemanager.projects.delete']
      * 
      */
-    public Output<List<String>> getRestrictions() {
+    public Output<List<String>> restrictions() {
         return this.restrictions;
     }
 
@@ -156,7 +157,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Lien(String name, LienArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:resourcemanager/lien:Lien", name, args == null ? LienArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:resourcemanager/lien:Lien", name, args == null ? LienArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Lien(String name, Output<String> id, @Nullable LienState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

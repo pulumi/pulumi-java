@@ -6,6 +6,7 @@ package io.pulumi.gcp.gkehub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gkehub.MembershipArgs;
 import io.pulumi.gcp.gkehub.inputs.MembershipState;
@@ -54,7 +55,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MembershipAuthority> getAuthority() {
+    public Output</* @Nullable */ MembershipAuthority> authority() {
         return this.authority;
     }
     /**
@@ -72,7 +73,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -88,7 +89,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ MembershipEndpoint> getEndpoint() {
+    public Output</* @Nullable */ MembershipEndpoint> endpoint() {
         return this.endpoint;
     }
     /**
@@ -102,7 +103,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this membership.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -116,7 +117,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The client-provided identifier of the membership.
      * 
      */
-    public Output<String> getMembershipId() {
+    public Output<String> membershipId() {
         return this.membershipId;
     }
     /**
@@ -130,7 +131,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the membership.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +147,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -172,7 +173,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Membership(String name, MembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gkehub/membership:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:gkehub/membership:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Membership(String name, Output<String> id, @Nullable MembershipState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

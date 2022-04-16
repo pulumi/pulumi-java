@@ -6,6 +6,7 @@ package io.pulumi.gcp.firebase;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firebase.ProjectArgs;
 import io.pulumi.gcp.firebase.inputs.ProjectState;
@@ -53,7 +54,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The GCP project display name
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -69,7 +70,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -83,7 +84,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @return The number of the google project that firebase is enabled on.
      * 
      */
-    public Output<String> getProjectNumber() {
+    public Output<String> projectNumber() {
         return this.projectNumber;
     }
 
@@ -109,7 +110,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Project(String name, @Nullable ProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:firebase/project:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:firebase/project:Project", name, args == null ? ProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Project(String name, Output<String> id, @Nullable ProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

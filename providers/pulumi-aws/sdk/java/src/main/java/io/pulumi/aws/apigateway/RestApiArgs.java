@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway;
 import io.pulumi.aws.apigateway.inputs.RestApiEndpointConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiKeySource")
       private final @Nullable Output<String> apiKeySource;
 
-    public Output<String> getApiKeySource() {
-        return this.apiKeySource == null ? Output.empty() : this.apiKeySource;
+    public Output<String> apiKeySource() {
+        return this.apiKeySource == null ? Codegen.empty() : this.apiKeySource;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryMediaTypes")
       private final @Nullable Output<List<String>> binaryMediaTypes;
 
-    public Output<List<String>> getBinaryMediaTypes() {
-        return this.binaryMediaTypes == null ? Output.empty() : this.binaryMediaTypes;
+    public Output<List<String>> binaryMediaTypes() {
+        return this.binaryMediaTypes == null ? Codegen.empty() : this.binaryMediaTypes;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="body")
       private final @Nullable Output<String> body;
 
-    public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<String> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableExecuteApiEndpoint")
       private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
-    public Output<Boolean> getDisableExecuteApiEndpoint() {
-        return this.disableExecuteApiEndpoint == null ? Output.empty() : this.disableExecuteApiEndpoint;
+    public Output<Boolean> disableExecuteApiEndpoint() {
+        return this.disableExecuteApiEndpoint == null ? Codegen.empty() : this.disableExecuteApiEndpoint;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpointConfiguration")
       private final @Nullable Output<RestApiEndpointConfigurationArgs> endpointConfiguration;
 
-    public Output<RestApiEndpointConfigurationArgs> getEndpointConfiguration() {
-        return this.endpointConfiguration == null ? Output.empty() : this.endpointConfiguration;
+    public Output<RestApiEndpointConfigurationArgs> endpointConfiguration() {
+        return this.endpointConfiguration == null ? Codegen.empty() : this.endpointConfiguration;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minimumCompressionSize")
       private final @Nullable Output<Integer> minimumCompressionSize;
 
-    public Output<Integer> getMinimumCompressionSize() {
-        return this.minimumCompressionSize == null ? Output.empty() : this.minimumCompressionSize;
+    public Output<Integer> minimumCompressionSize() {
+        return this.minimumCompressionSize == null ? Codegen.empty() : this.minimumCompressionSize;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,String>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RestApiArgs(
@@ -166,17 +167,17 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestApiArgs() {
-        this.apiKeySource = Output.empty();
-        this.binaryMediaTypes = Output.empty();
-        this.body = Output.empty();
-        this.description = Output.empty();
-        this.disableExecuteApiEndpoint = Output.empty();
-        this.endpointConfiguration = Output.empty();
-        this.minimumCompressionSize = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.policy = Output.empty();
-        this.tags = Output.empty();
+        this.apiKeySource = Codegen.empty();
+        this.binaryMediaTypes = Codegen.empty();
+        this.body = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disableExecuteApiEndpoint = Codegen.empty();
+        this.endpointConfiguration = Codegen.empty();
+        this.minimumCompressionSize = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiKeySource(@Nullable String apiKeySource) {
-            this.apiKeySource = Output.ofNullable(apiKeySource);
+            this.apiKeySource = Codegen.ofNullable(apiKeySource);
             return this;
         }
         public Builder binaryMediaTypes(@Nullable Output<List<String>> binaryMediaTypes) {
@@ -232,7 +233,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder binaryMediaTypes(@Nullable List<String> binaryMediaTypes) {
-            this.binaryMediaTypes = Output.ofNullable(binaryMediaTypes);
+            this.binaryMediaTypes = Codegen.ofNullable(binaryMediaTypes);
             return this;
         }
         public Builder binaryMediaTypes(String... binaryMediaTypes) {
@@ -243,7 +244,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -251,7 +252,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disableExecuteApiEndpoint(@Nullable Output<Boolean> disableExecuteApiEndpoint) {
@@ -259,7 +260,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableExecuteApiEndpoint(@Nullable Boolean disableExecuteApiEndpoint) {
-            this.disableExecuteApiEndpoint = Output.ofNullable(disableExecuteApiEndpoint);
+            this.disableExecuteApiEndpoint = Codegen.ofNullable(disableExecuteApiEndpoint);
             return this;
         }
         public Builder endpointConfiguration(@Nullable Output<RestApiEndpointConfigurationArgs> endpointConfiguration) {
@@ -267,7 +268,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointConfiguration(@Nullable RestApiEndpointConfigurationArgs endpointConfiguration) {
-            this.endpointConfiguration = Output.ofNullable(endpointConfiguration);
+            this.endpointConfiguration = Codegen.ofNullable(endpointConfiguration);
             return this;
         }
         public Builder minimumCompressionSize(@Nullable Output<Integer> minimumCompressionSize) {
@@ -275,7 +276,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumCompressionSize(@Nullable Integer minimumCompressionSize) {
-            this.minimumCompressionSize = Output.ofNullable(minimumCompressionSize);
+            this.minimumCompressionSize = Codegen.ofNullable(minimumCompressionSize);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -283,7 +284,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -291,7 +292,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -299,7 +300,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -307,7 +308,7 @@ public final class RestApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RestApiArgs build() {
             return new RestApiArgs(apiKeySource, binaryMediaTypes, body, description, disableExecuteApiEndpoint, endpointConfiguration, minimumCompressionSize, name, parameters, policy, tags);

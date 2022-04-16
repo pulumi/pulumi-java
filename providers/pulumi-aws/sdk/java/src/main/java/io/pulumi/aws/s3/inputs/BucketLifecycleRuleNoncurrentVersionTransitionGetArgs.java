@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
-        return this.days == null ? Output.empty() : this.days;
+    public Output<Integer> days() {
+        return this.days == null ? Codegen.empty() : this.days;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     @Import(name="storageClass", required=true)
       private final Output<String> storageClass;
 
-    public Output<String> getStorageClass() {
+    public Output<String> storageClass() {
         return this.storageClass;
     }
 
@@ -45,8 +46,8 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
     }
 
     private BucketLifecycleRuleNoncurrentVersionTransitionGetArgs() {
-        this.days = Output.empty();
-        this.storageClass = Output.empty();
+        this.days = Codegen.empty();
+        this.storageClass = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketLifecycleRuleNoncurrentVersionTransitionGetArgs extends
             return this;
         }
         public Builder days(@Nullable Integer days) {
-            this.days = Output.ofNullable(days);
+            this.days = Codegen.ofNullable(days);
             return this;
         }
         public Builder storageClass(Output<String> storageClass) {

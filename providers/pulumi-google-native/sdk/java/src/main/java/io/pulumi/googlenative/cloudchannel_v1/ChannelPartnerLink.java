@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudchannel_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudchannel_v1.ChannelPartnerLinkArgs;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
@@ -32,7 +33,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @return Cloud Identity info of the channel partner (IR).
      * 
      */
-    public Output<GoogleCloudChannelV1CloudIdentityInfoResponse> getChannelPartnerCloudIdentityInfo() {
+    public Output<GoogleCloudChannelV1CloudIdentityInfoResponse> channelPartnerCloudIdentityInfo() {
         return this.channelPartnerCloudIdentityInfo;
     }
     /**
@@ -46,7 +47,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @return Timestamp of when the channel partner link is created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -60,7 +61,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @return URI of the web page where partner accepts the link invitation.
      * 
      */
-    public Output<String> getInviteLinkUri() {
+    public Output<String> inviteLinkUri() {
         return this.inviteLinkUri;
     }
     /**
@@ -74,7 +75,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @return State of the channel partner link.
      * 
      */
-    public Output<String> getLinkState() {
+    public Output<String> linkState() {
         return this.linkState;
     }
     /**
@@ -88,7 +89,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @return Resource name for the channel partner link, in the format accounts/{account_id}/channelPartnerLinks/{id}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @return Public identifier that a customer must use to generate a transfer token to move to this distributor-reseller combination.
      * 
      */
-    public Output<String> getPublicId() {
+    public Output<String> publicId() {
         return this.publicId;
     }
     /**
@@ -116,7 +117,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @return Cloud Identity ID of the linked reseller.
      * 
      */
-    public Output<String> getResellerCloudIdentityId() {
+    public Output<String> resellerCloudIdentityId() {
         return this.resellerCloudIdentityId;
     }
     /**
@@ -130,7 +131,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @return Timestamp of when the channel partner link is updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -156,7 +157,7 @@ public class ChannelPartnerLink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ChannelPartnerLink(String name, ChannelPartnerLinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudchannel/v1:ChannelPartnerLink", name, args == null ? ChannelPartnerLinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudchannel/v1:ChannelPartnerLink", name, args == null ? ChannelPartnerLinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ChannelPartnerLink(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

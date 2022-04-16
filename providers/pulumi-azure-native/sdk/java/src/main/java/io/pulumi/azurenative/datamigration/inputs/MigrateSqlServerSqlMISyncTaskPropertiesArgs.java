@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMISyncTaskInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends io.pulumi
     @Import(name="input")
       private final @Nullable Output<MigrateSqlServerSqlMISyncTaskInputArgs> input;
 
-    public Output<MigrateSqlServerSqlMISyncTaskInputArgs> getInput() {
-        return this.input == null ? Output.empty() : this.input;
+    public Output<MigrateSqlServerSqlMISyncTaskInputArgs> input() {
+        return this.input == null ? Codegen.empty() : this.input;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends io.pulumi
     @Import(name="taskType", required=true)
       private final Output<String> taskType;
 
-    public Output<String> getTaskType() {
+    public Output<String> taskType() {
         return this.taskType;
     }
 
@@ -50,8 +51,8 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends io.pulumi
     }
 
     private MigrateSqlServerSqlMISyncTaskPropertiesArgs() {
-        this.input = Output.empty();
-        this.taskType = Output.empty();
+        this.input = Codegen.empty();
+        this.taskType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class MigrateSqlServerSqlMISyncTaskPropertiesArgs extends io.pulumi
             return this;
         }
         public Builder input(@Nullable MigrateSqlServerSqlMISyncTaskInputArgs input) {
-            this.input = Output.ofNullable(input);
+            this.input = Codegen.ofNullable(input);
             return this;
         }
         public Builder taskType(Output<String> taskType) {

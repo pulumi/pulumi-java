@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ThingTypePropertiesGetArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ThingTypePropertiesGetArgs extends io.pulumi.resources.Resour
     @Import(name="searchableAttributes")
       private final @Nullable Output<List<String>> searchableAttributes;
 
-    public Output<List<String>> getSearchableAttributes() {
-        return this.searchableAttributes == null ? Output.empty() : this.searchableAttributes;
+    public Output<List<String>> searchableAttributes() {
+        return this.searchableAttributes == null ? Codegen.empty() : this.searchableAttributes;
     }
 
     public ThingTypePropertiesGetArgs(
@@ -45,8 +46,8 @@ public final class ThingTypePropertiesGetArgs extends io.pulumi.resources.Resour
     }
 
     private ThingTypePropertiesGetArgs() {
-        this.description = Output.empty();
-        this.searchableAttributes = Output.empty();
+        this.description = Codegen.empty();
+        this.searchableAttributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ThingTypePropertiesGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder searchableAttributes(@Nullable Output<List<String>> searchableAttributes) {
@@ -84,7 +85,7 @@ public final class ThingTypePropertiesGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder searchableAttributes(@Nullable List<String> searchableAttributes) {
-            this.searchableAttributes = Output.ofNullable(searchableAttributes);
+            this.searchableAttributes = Codegen.ofNullable(searchableAttributes);
             return this;
         }
         public Builder searchableAttributes(String... searchableAttributes) {

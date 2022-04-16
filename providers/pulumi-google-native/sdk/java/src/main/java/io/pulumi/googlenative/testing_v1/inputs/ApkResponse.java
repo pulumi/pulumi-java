@@ -24,7 +24,7 @@ public final class ApkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
       private final FileReferenceResponse location;
 
-    public FileReferenceResponse getLocation() {
+    public FileReferenceResponse location() {
         return this.location;
     }
 
@@ -35,7 +35,7 @@ public final class ApkResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="packageName", required=true)
       private final String packageName;
 
-    public String getPackageName() {
+    public String packageName() {
         return this.packageName;
     }
 

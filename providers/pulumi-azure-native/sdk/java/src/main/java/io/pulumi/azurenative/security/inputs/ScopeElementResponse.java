@@ -25,7 +25,7 @@ public final class ScopeElementResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="field")
       private final @Nullable String field;
 
-    public Optional<String> getField() {
+    public Optional<String> field() {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
     }
 

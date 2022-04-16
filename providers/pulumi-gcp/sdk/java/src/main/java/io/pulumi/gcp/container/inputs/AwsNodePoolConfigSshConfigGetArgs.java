@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AwsNodePoolConfigSshConfigGetArgs extends io.pulumi.resources
     @Import(name="ec2KeyPair", required=true)
       private final Output<String> ec2KeyPair;
 
-    public Output<String> getEc2KeyPair() {
+    public Output<String> ec2KeyPair() {
         return this.ec2KeyPair;
     }
 
@@ -29,7 +30,7 @@ public final class AwsNodePoolConfigSshConfigGetArgs extends io.pulumi.resources
     }
 
     private AwsNodePoolConfigSshConfigGetArgs() {
-        this.ec2KeyPair = Output.empty();
+        this.ec2KeyPair = Codegen.empty();
     }
 
     public static Builder builder() {

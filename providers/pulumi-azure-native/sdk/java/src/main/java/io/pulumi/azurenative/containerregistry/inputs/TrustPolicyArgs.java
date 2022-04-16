@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerregistry.enums.TrustPolicyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,PolicyStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,TrustPolicyType>> type;
 
-    public Output<Either<String,TrustPolicyType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,TrustPolicyType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public TrustPolicyArgs(
@@ -51,8 +52,8 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrustPolicyArgs() {
-        this.status = Output.empty();
-        this.type = Output.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,TrustPolicyType>> type) {
@@ -90,7 +91,7 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,TrustPolicyType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public TrustPolicyArgs build() {
             return new TrustPolicyArgs(status, type);

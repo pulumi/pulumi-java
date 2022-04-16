@@ -6,6 +6,7 @@ package io.pulumi.aws.gamelift;
 import io.pulumi.aws.gamelift.inputs.BuildStorageLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatingSystem", required=true)
       private final Output<String> operatingSystem;
 
-    public Output<String> getOperatingSystem() {
+    public Output<String> operatingSystem() {
         return this.operatingSystem;
     }
 
@@ -45,7 +46,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageLocation", required=true)
       private final Output<BuildStorageLocationArgs> storageLocation;
 
-    public Output<BuildStorageLocationArgs> getStorageLocation() {
+    public Output<BuildStorageLocationArgs> storageLocation() {
         return this.storageLocation;
     }
 
@@ -56,8 +57,8 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public BuildArgs(
@@ -85,11 +86,11 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildArgs() {
-        this.name = Output.empty();
-        this.operatingSystem = Output.empty();
-        this.storageLocation = Output.empty();
-        this.tags = Output.empty();
-        this.version = Output.empty();
+        this.name = Codegen.empty();
+        this.operatingSystem = Codegen.empty();
+        this.storageLocation = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder operatingSystem(Output<String> operatingSystem) {
@@ -149,7 +150,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -157,7 +158,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public BuildArgs build() {
             return new BuildArgs(name, operatingSystem, storageLocation, tags, version);

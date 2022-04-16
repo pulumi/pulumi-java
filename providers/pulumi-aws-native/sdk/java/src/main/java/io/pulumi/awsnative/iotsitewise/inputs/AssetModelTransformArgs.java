@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelExpressionVariableArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
     @Import(name="expression", required=true)
       private final Output<String> expression;
 
-    public Output<String> getExpression() {
+    public Output<String> expression() {
         return this.expression;
     }
 
@@ -33,7 +34,7 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
     @Import(name="variables", required=true)
       private final Output<List<AssetModelExpressionVariableArgs>> variables;
 
-    public Output<List<AssetModelExpressionVariableArgs>> getVariables() {
+    public Output<List<AssetModelExpressionVariableArgs>> variables() {
         return this.variables;
     }
 
@@ -45,8 +46,8 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
     }
 
     private AssetModelTransformArgs() {
-        this.expression = Output.empty();
-        this.variables = Output.empty();
+        this.expression = Codegen.empty();
+        this.variables = Codegen.empty();
     }
 
     public static Builder builder() {

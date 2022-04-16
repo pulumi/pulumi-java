@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentGroupLabelGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentOsTypeGetArgs;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="groupLabels")
       private final @Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels;
 
-    public Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> getGroupLabels() {
-        return this.groupLabels == null ? Output.empty() : this.groupLabels;
+    public Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels() {
+        return this.groupLabels == null ? Codegen.empty() : this.groupLabels;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="instanceNamePrefixes")
       private final @Nullable Output<List<String>> instanceNamePrefixes;
 
-    public Output<List<String>> getInstanceNamePrefixes() {
-        return this.instanceNamePrefixes == null ? Output.empty() : this.instanceNamePrefixes;
+    public Output<List<String>> instanceNamePrefixes() {
+        return this.instanceNamePrefixes == null ? Codegen.empty() : this.instanceNamePrefixes;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+    public Output<List<String>> instances() {
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="osTypes")
       private final @Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes;
 
-    public Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> getOsTypes() {
-        return this.osTypes == null ? Output.empty() : this.osTypes;
+    public Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes() {
+        return this.osTypes == null ? Codegen.empty() : this.osTypes;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+    public Output<List<String>> zones() {
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public GuestPoliciesAssignmentGetArgs(
@@ -98,11 +99,11 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
     }
 
     private GuestPoliciesAssignmentGetArgs() {
-        this.groupLabels = Output.empty();
-        this.instanceNamePrefixes = Output.empty();
-        this.instances = Output.empty();
-        this.osTypes = Output.empty();
-        this.zones = Output.empty();
+        this.groupLabels = Codegen.empty();
+        this.instanceNamePrefixes = Codegen.empty();
+        this.instances = Codegen.empty();
+        this.osTypes = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder groupLabels(@Nullable List<GuestPoliciesAssignmentGroupLabelGetArgs> groupLabels) {
-            this.groupLabels = Output.ofNullable(groupLabels);
+            this.groupLabels = Codegen.ofNullable(groupLabels);
             return this;
         }
         public Builder groupLabels(GuestPoliciesAssignmentGroupLabelGetArgs... groupLabels) {
@@ -149,7 +150,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
-            this.instanceNamePrefixes = Output.ofNullable(instanceNamePrefixes);
+            this.instanceNamePrefixes = Codegen.ofNullable(instanceNamePrefixes);
             return this;
         }
         public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
@@ -160,7 +161,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(String... instances) {
@@ -171,7 +172,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder osTypes(@Nullable List<GuestPoliciesAssignmentOsTypeGetArgs> osTypes) {
-            this.osTypes = Output.ofNullable(osTypes);
+            this.osTypes = Codegen.ofNullable(osTypes);
             return this;
         }
         public Builder osTypes(GuestPoliciesAssignmentOsTypeGetArgs... osTypes) {
@@ -182,7 +183,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

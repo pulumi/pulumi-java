@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.enums.PublicAccess;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,8 +36,8 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
-    public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+    public Output<String> containerName() {
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultEncryptionScope")
       private final @Nullable Output<String> defaultEncryptionScope;
 
-    public Output<String> getDefaultEncryptionScope() {
-        return this.defaultEncryptionScope == null ? Output.empty() : this.defaultEncryptionScope;
+    public Output<String> defaultEncryptionScope() {
+        return this.defaultEncryptionScope == null ? Codegen.empty() : this.defaultEncryptionScope;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="denyEncryptionScopeOverride")
       private final @Nullable Output<Boolean> denyEncryptionScopeOverride;
 
-    public Output<Boolean> getDenyEncryptionScopeOverride() {
-        return this.denyEncryptionScopeOverride == null ? Output.empty() : this.denyEncryptionScopeOverride;
+    public Output<Boolean> denyEncryptionScopeOverride() {
+        return this.denyEncryptionScopeOverride == null ? Codegen.empty() : this.denyEncryptionScopeOverride;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicAccess")
       private final @Nullable Output<PublicAccess> publicAccess;
 
-    public Output<PublicAccess> getPublicAccess() {
-        return this.publicAccess == null ? Output.empty() : this.publicAccess;
+    public Output<PublicAccess> publicAccess() {
+        return this.publicAccess == null ? Codegen.empty() : this.publicAccess;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -112,13 +113,13 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BlobContainerArgs() {
-        this.accountName = Output.empty();
-        this.containerName = Output.empty();
-        this.defaultEncryptionScope = Output.empty();
-        this.denyEncryptionScopeOverride = Output.empty();
-        this.metadata = Output.empty();
-        this.publicAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.defaultEncryptionScope = Codegen.empty();
+        this.denyEncryptionScopeOverride = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.publicAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder defaultEncryptionScope(@Nullable Output<String> defaultEncryptionScope) {
@@ -174,7 +175,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultEncryptionScope(@Nullable String defaultEncryptionScope) {
-            this.defaultEncryptionScope = Output.ofNullable(defaultEncryptionScope);
+            this.defaultEncryptionScope = Codegen.ofNullable(defaultEncryptionScope);
             return this;
         }
         public Builder denyEncryptionScopeOverride(@Nullable Output<Boolean> denyEncryptionScopeOverride) {
@@ -182,7 +183,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder denyEncryptionScopeOverride(@Nullable Boolean denyEncryptionScopeOverride) {
-            this.denyEncryptionScopeOverride = Output.ofNullable(denyEncryptionScopeOverride);
+            this.denyEncryptionScopeOverride = Codegen.ofNullable(denyEncryptionScopeOverride);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -190,7 +191,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder publicAccess(@Nullable Output<PublicAccess> publicAccess) {
@@ -198,7 +199,7 @@ public final class BlobContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicAccess(@Nullable PublicAccess publicAccess) {
-            this.publicAccess = Output.ofNullable(publicAccess);
+            this.publicAccess = Codegen.ofNullable(publicAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

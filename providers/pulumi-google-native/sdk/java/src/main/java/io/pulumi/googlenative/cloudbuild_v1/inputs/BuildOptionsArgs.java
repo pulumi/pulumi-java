@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsLogStreamingOption;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsLogging;
 import io.pulumi.googlenative.cloudbuild_v1.enums.BuildOptionsMachineType;
@@ -35,8 +36,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGb")
       private final @Nullable Output<String> diskSizeGb;
 
-    public Output<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+    public Output<String> diskSizeGb() {
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dynamicSubstitutions")
       private final @Nullable Output<Boolean> dynamicSubstitutions;
 
-    public Output<Boolean> getDynamicSubstitutions() {
-        return this.dynamicSubstitutions == null ? Output.empty() : this.dynamicSubstitutions;
+    public Output<Boolean> dynamicSubstitutions() {
+        return this.dynamicSubstitutions == null ? Codegen.empty() : this.dynamicSubstitutions;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="env")
       private final @Nullable Output<List<String>> env;
 
-    public Output<List<String>> getEnv() {
-        return this.env == null ? Output.empty() : this.env;
+    public Output<List<String>> env() {
+        return this.env == null ? Codegen.empty() : this.env;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logStreamingOption")
       private final @Nullable Output<BuildOptionsLogStreamingOption> logStreamingOption;
 
-    public Output<BuildOptionsLogStreamingOption> getLogStreamingOption() {
-        return this.logStreamingOption == null ? Output.empty() : this.logStreamingOption;
+    public Output<BuildOptionsLogStreamingOption> logStreamingOption() {
+        return this.logStreamingOption == null ? Codegen.empty() : this.logStreamingOption;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logging")
       private final @Nullable Output<BuildOptionsLogging> logging;
 
-    public Output<BuildOptionsLogging> getLogging() {
-        return this.logging == null ? Output.empty() : this.logging;
+    public Output<BuildOptionsLogging> logging() {
+        return this.logging == null ? Codegen.empty() : this.logging;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<BuildOptionsMachineType> machineType;
 
-    public Output<BuildOptionsMachineType> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+    public Output<BuildOptionsMachineType> machineType() {
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pool")
       private final @Nullable Output<PoolOptionArgs> pool;
 
-    public Output<PoolOptionArgs> getPool() {
-        return this.pool == null ? Output.empty() : this.pool;
+    public Output<PoolOptionArgs> pool() {
+        return this.pool == null ? Codegen.empty() : this.pool;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestedVerifyOption")
       private final @Nullable Output<BuildOptionsRequestedVerifyOption> requestedVerifyOption;
 
-    public Output<BuildOptionsRequestedVerifyOption> getRequestedVerifyOption() {
-        return this.requestedVerifyOption == null ? Output.empty() : this.requestedVerifyOption;
+    public Output<BuildOptionsRequestedVerifyOption> requestedVerifyOption() {
+        return this.requestedVerifyOption == null ? Codegen.empty() : this.requestedVerifyOption;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretEnv")
       private final @Nullable Output<List<String>> secretEnv;
 
-    public Output<List<String>> getSecretEnv() {
-        return this.secretEnv == null ? Output.empty() : this.secretEnv;
+    public Output<List<String>> secretEnv() {
+        return this.secretEnv == null ? Codegen.empty() : this.secretEnv;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceProvenanceHash")
       private final @Nullable Output<List<BuildOptionsSourceProvenanceHashItem>> sourceProvenanceHash;
 
-    public Output<List<BuildOptionsSourceProvenanceHashItem>> getSourceProvenanceHash() {
-        return this.sourceProvenanceHash == null ? Output.empty() : this.sourceProvenanceHash;
+    public Output<List<BuildOptionsSourceProvenanceHashItem>> sourceProvenanceHash() {
+        return this.sourceProvenanceHash == null ? Codegen.empty() : this.sourceProvenanceHash;
     }
 
     /**
@@ -145,8 +146,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="substitutionOption")
       private final @Nullable Output<BuildOptionsSubstitutionOption> substitutionOption;
 
-    public Output<BuildOptionsSubstitutionOption> getSubstitutionOption() {
-        return this.substitutionOption == null ? Output.empty() : this.substitutionOption;
+    public Output<BuildOptionsSubstitutionOption> substitutionOption() {
+        return this.substitutionOption == null ? Codegen.empty() : this.substitutionOption;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+    public Output<List<VolumeArgs>> volumes() {
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     /**
@@ -167,8 +168,8 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workerPool")
       private final @Nullable Output<String> workerPool;
 
-    public Output<String> getWorkerPool() {
-        return this.workerPool == null ? Output.empty() : this.workerPool;
+    public Output<String> workerPool() {
+        return this.workerPool == null ? Codegen.empty() : this.workerPool;
     }
 
     public BuildOptionsArgs(
@@ -201,19 +202,19 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BuildOptionsArgs() {
-        this.diskSizeGb = Output.empty();
-        this.dynamicSubstitutions = Output.empty();
-        this.env = Output.empty();
-        this.logStreamingOption = Output.empty();
-        this.logging = Output.empty();
-        this.machineType = Output.empty();
-        this.pool = Output.empty();
-        this.requestedVerifyOption = Output.empty();
-        this.secretEnv = Output.empty();
-        this.sourceProvenanceHash = Output.empty();
-        this.substitutionOption = Output.empty();
-        this.volumes = Output.empty();
-        this.workerPool = Output.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.dynamicSubstitutions = Codegen.empty();
+        this.env = Codegen.empty();
+        this.logStreamingOption = Codegen.empty();
+        this.logging = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.pool = Codegen.empty();
+        this.requestedVerifyOption = Codegen.empty();
+        this.secretEnv = Codegen.empty();
+        this.sourceProvenanceHash = Codegen.empty();
+        this.substitutionOption = Codegen.empty();
+        this.volumes = Codegen.empty();
+        this.workerPool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -265,7 +266,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder dynamicSubstitutions(@Nullable Output<Boolean> dynamicSubstitutions) {
@@ -273,7 +274,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dynamicSubstitutions(@Nullable Boolean dynamicSubstitutions) {
-            this.dynamicSubstitutions = Output.ofNullable(dynamicSubstitutions);
+            this.dynamicSubstitutions = Codegen.ofNullable(dynamicSubstitutions);
             return this;
         }
         public Builder env(@Nullable Output<List<String>> env) {
@@ -281,7 +282,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder env(@Nullable List<String> env) {
-            this.env = Output.ofNullable(env);
+            this.env = Codegen.ofNullable(env);
             return this;
         }
         public Builder env(String... env) {
@@ -292,7 +293,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logStreamingOption(@Nullable BuildOptionsLogStreamingOption logStreamingOption) {
-            this.logStreamingOption = Output.ofNullable(logStreamingOption);
+            this.logStreamingOption = Codegen.ofNullable(logStreamingOption);
             return this;
         }
         public Builder logging(@Nullable Output<BuildOptionsLogging> logging) {
@@ -300,7 +301,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logging(@Nullable BuildOptionsLogging logging) {
-            this.logging = Output.ofNullable(logging);
+            this.logging = Codegen.ofNullable(logging);
             return this;
         }
         public Builder machineType(@Nullable Output<BuildOptionsMachineType> machineType) {
@@ -308,7 +309,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machineType(@Nullable BuildOptionsMachineType machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder pool(@Nullable Output<PoolOptionArgs> pool) {
@@ -316,7 +317,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pool(@Nullable PoolOptionArgs pool) {
-            this.pool = Output.ofNullable(pool);
+            this.pool = Codegen.ofNullable(pool);
             return this;
         }
         public Builder requestedVerifyOption(@Nullable Output<BuildOptionsRequestedVerifyOption> requestedVerifyOption) {
@@ -324,7 +325,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestedVerifyOption(@Nullable BuildOptionsRequestedVerifyOption requestedVerifyOption) {
-            this.requestedVerifyOption = Output.ofNullable(requestedVerifyOption);
+            this.requestedVerifyOption = Codegen.ofNullable(requestedVerifyOption);
             return this;
         }
         public Builder secretEnv(@Nullable Output<List<String>> secretEnv) {
@@ -332,7 +333,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretEnv(@Nullable List<String> secretEnv) {
-            this.secretEnv = Output.ofNullable(secretEnv);
+            this.secretEnv = Codegen.ofNullable(secretEnv);
             return this;
         }
         public Builder secretEnv(String... secretEnv) {
@@ -343,7 +344,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceProvenanceHash(@Nullable List<BuildOptionsSourceProvenanceHashItem> sourceProvenanceHash) {
-            this.sourceProvenanceHash = Output.ofNullable(sourceProvenanceHash);
+            this.sourceProvenanceHash = Codegen.ofNullable(sourceProvenanceHash);
             return this;
         }
         public Builder sourceProvenanceHash(BuildOptionsSourceProvenanceHashItem... sourceProvenanceHash) {
@@ -354,7 +355,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder substitutionOption(@Nullable BuildOptionsSubstitutionOption substitutionOption) {
-            this.substitutionOption = Output.ofNullable(substitutionOption);
+            this.substitutionOption = Codegen.ofNullable(substitutionOption);
             return this;
         }
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
@@ -362,7 +363,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(VolumeArgs... volumes) {
@@ -373,7 +374,7 @@ public final class BuildOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerPool(@Nullable String workerPool) {
-            this.workerPool = Output.ofNullable(workerPool);
+            this.workerPool = Codegen.ofNullable(workerPool);
             return this;
         }        public BuildOptionsArgs build() {
             return new BuildOptionsArgs(diskSizeGb, dynamicSubstitutions, env, logStreamingOption, logging, machineType, pool, requestedVerifyOption, secretEnv, sourceProvenanceHash, substitutionOption, volumes, workerPool);

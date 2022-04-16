@@ -33,14 +33,14 @@ public final class SubjectConfigResponse {
      * Contains distinguished name fields such as the common name, location and organization.
      * 
     */
-    public SubjectResponse getSubject() {
+    public SubjectResponse subject() {
         return this.subject;
     }
     /**
      * Optional. The subject alternative name fields.
      * 
     */
-    public SubjectAltNamesResponse getSubjectAltName() {
+    public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
 

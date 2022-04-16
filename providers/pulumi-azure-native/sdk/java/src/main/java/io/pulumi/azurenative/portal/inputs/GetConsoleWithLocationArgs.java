@@ -19,7 +19,7 @@ public final class GetConsoleWithLocationArgs extends io.pulumi.resources.Invoke
     @Import(name="consoleName", required=true)
       private final String consoleName;
 
-    public String getConsoleName() {
+    public String consoleName() {
         return this.consoleName;
     }
 
@@ -30,7 +30,7 @@ public final class GetConsoleWithLocationArgs extends io.pulumi.resources.Invoke
     @Import(name="location", required=true)
       private final String location;
 
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
 

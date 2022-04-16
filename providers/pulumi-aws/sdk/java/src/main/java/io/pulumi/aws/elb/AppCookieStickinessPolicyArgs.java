@@ -5,6 +5,7 @@ package io.pulumi.aws.elb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class AppCookieStickinessPolicyArgs extends io.pulumi.resources.Res
     @Import(name="cookieName", required=true)
       private final Output<String> cookieName;
 
-    public Output<String> getCookieName() {
+    public Output<String> cookieName() {
         return this.cookieName;
     }
 
@@ -35,7 +36,7 @@ public final class AppCookieStickinessPolicyArgs extends io.pulumi.resources.Res
     @Import(name="lbPort", required=true)
       private final Output<Integer> lbPort;
 
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort;
     }
 
@@ -47,7 +48,7 @@ public final class AppCookieStickinessPolicyArgs extends io.pulumi.resources.Res
     @Import(name="loadBalancer", required=true)
       private final Output<String> loadBalancer;
 
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
 
@@ -58,8 +59,8 @@ public final class AppCookieStickinessPolicyArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public AppCookieStickinessPolicyArgs(
@@ -74,10 +75,10 @@ public final class AppCookieStickinessPolicyArgs extends io.pulumi.resources.Res
     }
 
     private AppCookieStickinessPolicyArgs() {
-        this.cookieName = Output.empty();
-        this.lbPort = Output.empty();
-        this.loadBalancer = Output.empty();
-        this.name = Output.empty();
+        this.cookieName = Codegen.empty();
+        this.lbPort = Codegen.empty();
+        this.loadBalancer = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class AppCookieStickinessPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public AppCookieStickinessPolicyArgs build() {
             return new AppCookieStickinessPolicyArgs(cookieName, lbPort, loadBalancer, name);

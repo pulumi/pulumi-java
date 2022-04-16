@@ -14,6 +14,7 @@ import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
     @Export(name="configuration", type=StudioComponentConfiguration.class, parameters={})
     private Output</* @Nullable */ StudioComponentConfiguration> configuration;
 
-    public Output</* @Nullable */ StudioComponentConfiguration> getConfiguration() {
+    public Output</* @Nullable */ StudioComponentConfiguration> configuration() {
         return this.configuration;
     }
     /**
@@ -41,7 +42,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * @return <p>The description.</p>
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -55,7 +56,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * @return <p>The EC2 security groups that control access to the studio component.</p>
      * 
      */
-    public Output</* @Nullable */ List<String>> getEc2SecurityGroupIds() {
+    public Output</* @Nullable */ List<String>> ec2SecurityGroupIds() {
         return this.ec2SecurityGroupIds;
     }
     /**
@@ -69,7 +70,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * @return <p>Initialization scripts for studio components.</p>
      * 
      */
-    public Output</* @Nullable */ List<StudioComponentInitializationScript>> getInitializationScripts() {
+    public Output</* @Nullable */ List<StudioComponentInitializationScript>> initializationScripts() {
         return this.initializationScripts;
     }
     /**
@@ -83,7 +84,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * @return <p>The name for the studio component.</p>
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,13 +98,13 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * @return <p>Parameters for the studio component scripts.</p>
      * 
      */
-    public Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> getScriptParameters() {
+    public Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> scriptParameters() {
         return this.scriptParameters;
     }
     @Export(name="studioComponentId", type=String.class, parameters={})
     private Output<String> studioComponentId;
 
-    public Output<String> getStudioComponentId() {
+    public Output<String> studioComponentId() {
         return this.studioComponentId;
     }
     /**
@@ -117,25 +118,25 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * @return <p>The studioId. </p>
      * 
      */
-    public Output<String> getStudioId() {
+    public Output<String> studioId() {
         return this.studioId;
     }
     @Export(name="subtype", type=StudioComponentSubtype.class, parameters={})
     private Output</* @Nullable */ StudioComponentSubtype> subtype;
 
-    public Output</* @Nullable */ StudioComponentSubtype> getSubtype() {
+    public Output</* @Nullable */ StudioComponentSubtype> subtype() {
         return this.subtype;
     }
     @Export(name="tags", type=StudioComponentTags.class, parameters={})
     private Output</* @Nullable */ StudioComponentTags> tags;
 
-    public Output</* @Nullable */ StudioComponentTags> getTags() {
+    public Output</* @Nullable */ StudioComponentTags> tags() {
         return this.tags;
     }
     @Export(name="type", type=StudioComponentType.class, parameters={})
     private Output<StudioComponentType> type;
 
-    public Output<StudioComponentType> getType() {
+    public Output<StudioComponentType> type() {
         return this.type;
     }
 
@@ -161,7 +162,7 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StudioComponent(String name, StudioComponentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:nimblestudio:StudioComponent", name, args == null ? StudioComponentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:nimblestudio:StudioComponent", name, args == null ? StudioComponentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StudioComponent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

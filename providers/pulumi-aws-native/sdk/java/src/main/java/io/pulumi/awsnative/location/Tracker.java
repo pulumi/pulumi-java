@@ -10,6 +10,7 @@ import io.pulumi.awsnative.location.enums.TrackerPricingPlan;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -22,61 +23,61 @@ public class Tracker extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     @Export(name="positionFiltering", type=TrackerPositionFiltering.class, parameters={})
     private Output</* @Nullable */ TrackerPositionFiltering> positionFiltering;
 
-    public Output</* @Nullable */ TrackerPositionFiltering> getPositionFiltering() {
+    public Output</* @Nullable */ TrackerPositionFiltering> positionFiltering() {
         return this.positionFiltering;
     }
     @Export(name="pricingPlan", type=TrackerPricingPlan.class, parameters={})
     private Output</* @Nullable */ TrackerPricingPlan> pricingPlan;
 
-    public Output</* @Nullable */ TrackerPricingPlan> getPricingPlan() {
+    public Output</* @Nullable */ TrackerPricingPlan> pricingPlan() {
         return this.pricingPlan;
     }
     @Export(name="pricingPlanDataSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> pricingPlanDataSource;
 
-    public Output</* @Nullable */ String> getPricingPlanDataSource() {
+    public Output</* @Nullable */ String> pricingPlanDataSource() {
         return this.pricingPlanDataSource;
     }
     @Export(name="trackerArn", type=String.class, parameters={})
     private Output<String> trackerArn;
 
-    public Output<String> getTrackerArn() {
+    public Output<String> trackerArn() {
         return this.trackerArn;
     }
     @Export(name="trackerName", type=String.class, parameters={})
     private Output<String> trackerName;
 
-    public Output<String> getTrackerName() {
+    public Output<String> trackerName() {
         return this.trackerName;
     }
     @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -102,7 +103,7 @@ public class Tracker extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Tracker(String name, @Nullable TrackerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:location:Tracker", name, args == null ? TrackerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:location:Tracker", name, args == null ? TrackerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Tracker(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

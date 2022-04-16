@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
     @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
 
@@ -40,7 +41,7 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
     @Import(name="entity", required=true)
       private final Output<String> entity;
 
-    public Output<String> getEntity() {
+    public Output<String> entity() {
         return this.entity;
     }
 
@@ -51,8 +52,8 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
     @Import(name="object")
       private final @Nullable Output<String> object;
 
-    public Output<String> getObject() {
-        return this.object == null ? Output.empty() : this.object;
+    public Output<String> object() {
+        return this.object == null ? Codegen.empty() : this.object;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -79,10 +80,10 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
     }
 
     private DefaultObjectAccessControlArgs() {
-        this.bucket = Output.empty();
-        this.entity = Output.empty();
-        this.object = Output.empty();
-        this.role = Output.empty();
+        this.bucket = Codegen.empty();
+        this.entity = Codegen.empty();
+        this.object = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class DefaultObjectAccessControlArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder object(@Nullable String object) {
-            this.object = Output.ofNullable(object);
+            this.object = Codegen.ofNullable(object);
             return this;
         }
         public Builder role(Output<String> role) {

@@ -24,7 +24,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="encryptionStatus", required=true)
       private final StatusResponse encryptionStatus;
 
-    public StatusResponse getEncryptionStatus() {
+    public StatusResponse encryptionStatus() {
         return this.encryptionStatus;
     }
 
@@ -35,7 +35,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="encryptionType", required=true)
       private final String encryptionType;
 
-    public String getEncryptionType() {
+    public String encryptionType() {
         return this.encryptionType;
     }
 
@@ -46,7 +46,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="kmsKeyVersion", required=true)
       private final String kmsKeyVersion;
 
-    public String getKmsKeyVersion() {
+    public String kmsKeyVersion() {
         return this.kmsKeyVersion;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLCaptchaActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLCountActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,29 +25,29 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="allow")
       private final @Nullable Output<WebACLAllowActionArgs> allow;
 
-    public Output<WebACLAllowActionArgs> getAllow() {
-        return this.allow == null ? Output.empty() : this.allow;
+    public Output<WebACLAllowActionArgs> allow() {
+        return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     @Import(name="block")
       private final @Nullable Output<WebACLBlockActionArgs> block;
 
-    public Output<WebACLBlockActionArgs> getBlock() {
-        return this.block == null ? Output.empty() : this.block;
+    public Output<WebACLBlockActionArgs> block() {
+        return this.block == null ? Codegen.empty() : this.block;
     }
 
     @Import(name="captcha")
       private final @Nullable Output<WebACLCaptchaActionArgs> captcha;
 
-    public Output<WebACLCaptchaActionArgs> getCaptcha() {
-        return this.captcha == null ? Output.empty() : this.captcha;
+    public Output<WebACLCaptchaActionArgs> captcha() {
+        return this.captcha == null ? Codegen.empty() : this.captcha;
     }
 
     @Import(name="count")
       private final @Nullable Output<WebACLCountActionArgs> count;
 
-    public Output<WebACLCountActionArgs> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<WebACLCountActionArgs> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     public WebACLRuleActionArgs(
@@ -61,10 +62,10 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WebACLRuleActionArgs() {
-        this.allow = Output.empty();
-        this.block = Output.empty();
-        this.captcha = Output.empty();
-        this.count = Output.empty();
+        this.allow = Codegen.empty();
+        this.block = Codegen.empty();
+        this.captcha = Codegen.empty();
+        this.count = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder allow(@Nullable WebACLAllowActionArgs allow) {
-            this.allow = Output.ofNullable(allow);
+            this.allow = Codegen.ofNullable(allow);
             return this;
         }
         public Builder block(@Nullable Output<WebACLBlockActionArgs> block) {
@@ -106,7 +107,7 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder block(@Nullable WebACLBlockActionArgs block) {
-            this.block = Output.ofNullable(block);
+            this.block = Codegen.ofNullable(block);
             return this;
         }
         public Builder captcha(@Nullable Output<WebACLCaptchaActionArgs> captcha) {
@@ -114,7 +115,7 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder captcha(@Nullable WebACLCaptchaActionArgs captcha) {
-            this.captcha = Output.ofNullable(captcha);
+            this.captcha = Codegen.ofNullable(captcha);
             return this;
         }
         public Builder count(@Nullable Output<WebACLCountActionArgs> count) {
@@ -122,7 +123,7 @@ public final class WebACLRuleActionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder count(@Nullable WebACLCountActionArgs count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }        public WebACLRuleActionArgs build() {
             return new WebACLRuleActionArgs(allow, block, captcha, count);

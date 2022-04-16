@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ClassifierGrokClassifierArgs extends io.pulumi.resources.Reso
     @Import(name="classification", required=true)
       private final Output<String> classification;
 
-    public Output<String> getClassification() {
+    public Output<String> classification() {
         return this.classification;
     }
 
@@ -32,8 +33,8 @@ public final class ClassifierGrokClassifierArgs extends io.pulumi.resources.Reso
     @Import(name="customPatterns")
       private final @Nullable Output<String> customPatterns;
 
-    public Output<String> getCustomPatterns() {
-        return this.customPatterns == null ? Output.empty() : this.customPatterns;
+    public Output<String> customPatterns() {
+        return this.customPatterns == null ? Codegen.empty() : this.customPatterns;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ClassifierGrokClassifierArgs extends io.pulumi.resources.Reso
     @Import(name="grokPattern", required=true)
       private final Output<String> grokPattern;
 
-    public Output<String> getGrokPattern() {
+    public Output<String> grokPattern() {
         return this.grokPattern;
     }
 
@@ -57,9 +58,9 @@ public final class ClassifierGrokClassifierArgs extends io.pulumi.resources.Reso
     }
 
     private ClassifierGrokClassifierArgs() {
-        this.classification = Output.empty();
-        this.customPatterns = Output.empty();
-        this.grokPattern = Output.empty();
+        this.classification = Codegen.empty();
+        this.customPatterns = Codegen.empty();
+        this.grokPattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ClassifierGrokClassifierArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder customPatterns(@Nullable String customPatterns) {
-            this.customPatterns = Output.ofNullable(customPatterns);
+            this.customPatterns = Codegen.ofNullable(customPatterns);
             return this;
         }
         public Builder grokPattern(Output<String> grokPattern) {

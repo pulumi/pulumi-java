@@ -9,6 +9,7 @@ import io.pulumi.aws.rds.inputs.ProxyEndpointState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the proxy endpoint.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The identifier for the proxy endpoint. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
      * 
      */
-    public Output<String> getDbProxyEndpointName() {
+    public Output<String> dbProxyEndpointName() {
         return this.dbProxyEndpointName;
     }
     /**
@@ -70,7 +71,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the DB proxy associated with the DB proxy endpoint that you create.
      * 
      */
-    public Output<String> getDbProxyName() {
+    public Output<String> dbProxyName() {
         return this.dbProxyName;
     }
     /**
@@ -84,7 +85,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -98,7 +99,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return Indicates whether this endpoint is the default endpoint for the associated DB proxy.
      * 
      */
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
     /**
@@ -112,13 +113,13 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -132,7 +133,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the DB proxy endpoint can be used for read/write or read-only operations. The default is `READ_WRITE`. Valid values are `READ_WRITE` and `READ_ONLY`.
      * 
      */
-    public Output</* @Nullable */ String> getTargetRole() {
+    public Output</* @Nullable */ String> targetRole() {
         return this.targetRole;
     }
     /**
@@ -146,7 +147,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return The VPC ID of the DB proxy endpoint.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -160,7 +161,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return One or more VPC security group IDs to associate with the new proxy.
      * 
      */
-    public Output<List<String>> getVpcSecurityGroupIds() {
+    public Output<List<String>> vpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
     }
     /**
@@ -174,7 +175,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @return One or more VPC subnet IDs to associate with the new proxy.
      * 
      */
-    public Output<List<String>> getVpcSubnetIds() {
+    public Output<List<String>> vpcSubnetIds() {
         return this.vpcSubnetIds;
     }
 
@@ -200,7 +201,7 @@ public class ProxyEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProxyEndpoint(String name, ProxyEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/proxyEndpoint:ProxyEndpoint", name, args == null ? ProxyEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:rds/proxyEndpoint:ProxyEndpoint", name, args == null ? ProxyEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProxyEndpoint(String name, Output<String> id, @Nullable ProxyEndpointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AzureCredentialsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     @Import(name="azureCredentials", required=true)
       private final Output<AzureCredentialsArgs> azureCredentials;
 
-    public Output<AzureCredentialsArgs> getAzureCredentials() {
+    public Output<AzureCredentialsArgs> azureCredentials() {
         return this.azureCredentials;
     }
 
@@ -37,7 +38,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     @Import(name="container", required=true)
       private final Output<String> container;
 
-    public Output<String> getContainer() {
+    public Output<String> container() {
         return this.container;
     }
 
@@ -48,8 +49,8 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     @Import(name="storageAccount", required=true)
       private final Output<String> storageAccount;
 
-    public Output<String> getStorageAccount() {
+    public Output<String> storageAccount() {
         return this.storageAccount;
     }
 
@@ -75,10 +76,10 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
     }
 
     private AzureBlobStorageDataArgs() {
-        this.azureCredentials = Output.empty();
-        this.container = Output.empty();
-        this.path = Output.empty();
-        this.storageAccount = Output.empty();
+        this.azureCredentials = Codegen.empty();
+        this.container = Codegen.empty();
+        this.path = Codegen.empty();
+        this.storageAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder storageAccount(Output<String> storageAccount) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DomainNameEndpointConfigurationGetArgs extends io.pulumi.reso
     @Import(name="types", required=true)
       private final Output<String> types;
 
-    public Output<String> getTypes() {
+    public Output<String> types() {
         return this.types;
     }
 
@@ -29,7 +30,7 @@ public final class DomainNameEndpointConfigurationGetArgs extends io.pulumi.reso
     }
 
     private DomainNameEndpointConfigurationGetArgs() {
-        this.types = Output.empty();
+        this.types = Codegen.empty();
     }
 
     public static Builder builder() {

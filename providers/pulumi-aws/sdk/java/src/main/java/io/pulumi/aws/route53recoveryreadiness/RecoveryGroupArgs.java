@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
-    public Output<List<String>> getCells() {
-        return this.cells == null ? Output.empty() : this.cells;
+    public Output<List<String>> cells() {
+        return this.cells == null ? Codegen.empty() : this.cells;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recoveryGroupName", required=true)
       private final Output<String> recoveryGroupName;
 
-    public Output<String> getRecoveryGroupName() {
+    public Output<String> recoveryGroupName() {
         return this.recoveryGroupName;
     }
 
@@ -45,8 +46,8 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RecoveryGroupArgs(
@@ -59,9 +60,9 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecoveryGroupArgs() {
-        this.cells = Output.empty();
-        this.recoveryGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.cells = Codegen.empty();
+        this.recoveryGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cells(@Nullable List<String> cells) {
-            this.cells = Output.ofNullable(cells);
+            this.cells = Codegen.ofNullable(cells);
             return this;
         }
         public Builder cells(String... cells) {
@@ -112,7 +113,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RecoveryGroupArgs build() {
             return new RecoveryGroupArgs(cells, recoveryGroupName, tags);

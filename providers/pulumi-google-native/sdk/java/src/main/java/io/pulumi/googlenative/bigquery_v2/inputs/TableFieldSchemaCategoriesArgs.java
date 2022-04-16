@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
     @Import(name="names")
       private final @Nullable Output<List<String>> names;
 
-    public Output<List<String>> getNames() {
-        return this.names == null ? Output.empty() : this.names;
+    public Output<List<String>> names() {
+        return this.names == null ? Codegen.empty() : this.names;
     }
 
     public TableFieldSchemaCategoriesArgs(@Nullable Output<List<String>> names) {
@@ -35,7 +36,7 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
     }
 
     private TableFieldSchemaCategoriesArgs() {
-        this.names = Output.empty();
+        this.names = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class TableFieldSchemaCategoriesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder names(@Nullable List<String> names) {
-            this.names = Output.ofNullable(names);
+            this.names = Codegen.ofNullable(names);
             return this;
         }
         public Builder names(String... names) {

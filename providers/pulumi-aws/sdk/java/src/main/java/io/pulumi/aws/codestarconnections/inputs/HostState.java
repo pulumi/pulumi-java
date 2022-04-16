@@ -6,6 +6,7 @@ package io.pulumi.aws.codestarconnections.inputs;
 import io.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerEndpoint")
       private final @Nullable Output<String> providerEndpoint;
 
-    public Output<String> getProviderEndpoint() {
-        return this.providerEndpoint == null ? Output.empty() : this.providerEndpoint;
+    public Output<String> providerEndpoint() {
+        return this.providerEndpoint == null ? Codegen.empty() : this.providerEndpoint;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
-    public Output<String> getProviderType() {
-        return this.providerType == null ? Output.empty() : this.providerType;
+    public Output<String> providerType() {
+        return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfiguration")
       private final @Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration;
 
-    public Output<HostVpcConfigurationGetArgs> getVpcConfiguration() {
-        return this.vpcConfiguration == null ? Output.empty() : this.vpcConfiguration;
+    public Output<HostVpcConfigurationGetArgs> vpcConfiguration() {
+        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 
     public HostState(
@@ -97,12 +98,12 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.providerEndpoint = Output.empty();
-        this.providerType = Output.empty();
-        this.status = Output.empty();
-        this.vpcConfiguration = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.providerEndpoint = Codegen.empty();
+        this.providerType = Codegen.empty();
+        this.status = Codegen.empty();
+        this.vpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -148,7 +149,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder providerEndpoint(@Nullable Output<String> providerEndpoint) {
@@ -156,7 +157,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerEndpoint(@Nullable String providerEndpoint) {
-            this.providerEndpoint = Output.ofNullable(providerEndpoint);
+            this.providerEndpoint = Codegen.ofNullable(providerEndpoint);
             return this;
         }
         public Builder providerType(@Nullable Output<String> providerType) {
@@ -164,7 +165,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = Output.ofNullable(providerType);
+            this.providerType = Codegen.ofNullable(providerType);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -172,7 +173,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder vpcConfiguration(@Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration) {
@@ -180,7 +181,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConfiguration(@Nullable HostVpcConfigurationGetArgs vpcConfiguration) {
-            this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
+            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
             return this;
         }        public HostState build() {
             return new HostState(arn, name, providerEndpoint, providerType, status, vpcConfiguration);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+    public Output<String> vmSize() {
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     public HardwareProfileArgs(@Nullable Output<String> vmSize) {
@@ -34,7 +35,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private HardwareProfileArgs() {
-        this.vmSize = Output.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }        public HardwareProfileArgs build() {
             return new HardwareProfileArgs(vmSize);

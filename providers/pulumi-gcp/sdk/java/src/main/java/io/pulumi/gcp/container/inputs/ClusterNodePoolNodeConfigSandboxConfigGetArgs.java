@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ClusterNodePoolNodeConfigSandboxConfigGetArgs extends io.pulu
     @Import(name="sandboxType", required=true)
       private final Output<String> sandboxType;
 
-    public Output<String> getSandboxType() {
+    public Output<String> sandboxType() {
         return this.sandboxType;
     }
 
@@ -30,7 +31,7 @@ public final class ClusterNodePoolNodeConfigSandboxConfigGetArgs extends io.pulu
     }
 
     private ClusterNodePoolNodeConfigSandboxConfigGetArgs() {
-        this.sandboxType = Output.empty();
+        this.sandboxType = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -61,42 +61,42 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
      * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
      * 
     */
-    public Integer getAvailabilityDomainCount() {
+    public Integer availabilityDomainCount() {
         return this.availabilityDomainCount;
     }
     /**
      * Specifies network collocation
      * 
     */
-    public String getCollocation() {
+    public String collocation() {
         return this.collocation;
     }
     /**
      * Specifies network locality
      * 
     */
-    public String getLocality() {
+    public String locality() {
         return this.locality;
     }
     /**
      * Scope specifies the availability domain to which the VMs should be spread.
      * 
     */
-    public String getScope() {
+    public String scope() {
         return this.scope;
     }
     /**
      * Specifies instances to hosts placement relationship
      * 
     */
-    public String getStyle() {
+    public String style() {
         return this.style;
     }
     /**
      * Number of vms in this placement group
      * 
     */
-    public Integer getVmCount() {
+    public Integer vmCount() {
         return this.vmCount;
     }
 

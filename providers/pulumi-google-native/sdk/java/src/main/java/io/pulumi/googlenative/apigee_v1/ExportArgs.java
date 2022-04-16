@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1DateRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
 
-    public Output<String> getCsvDelimiter() {
-        return this.csvDelimiter == null ? Output.empty() : this.csvDelimiter;
+    public Output<String> csvDelimiter() {
+        return this.csvDelimiter == null ? Codegen.empty() : this.csvDelimiter;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datastoreName", required=true)
       private final Output<String> datastoreName;
 
-    public Output<String> getDatastoreName() {
+    public Output<String> datastoreName() {
         return this.datastoreName;
     }
 
@@ -44,7 +45,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dateRange", required=true)
       private final Output<GoogleCloudApigeeV1DateRangeArgs> dateRange;
 
-    public Output<GoogleCloudApigeeV1DateRangeArgs> getDateRange() {
+    public Output<GoogleCloudApigeeV1DateRangeArgs> dateRange() {
         return this.dateRange;
     }
 
@@ -55,14 +56,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -73,14 +74,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -91,8 +92,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
-    public Output<String> getOutputFormat() {
-        return this.outputFormat == null ? Output.empty() : this.outputFormat;
+    public Output<String> outputFormat() {
+        return this.outputFormat == null ? Codegen.empty() : this.outputFormat;
     }
 
     public ExportArgs(
@@ -115,14 +116,14 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExportArgs() {
-        this.csvDelimiter = Output.empty();
-        this.datastoreName = Output.empty();
-        this.dateRange = Output.empty();
-        this.description = Output.empty();
-        this.environmentId = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.outputFormat = Output.empty();
+        this.csvDelimiter = Codegen.empty();
+        this.datastoreName = Codegen.empty();
+        this.dateRange = Codegen.empty();
+        this.description = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.outputFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder csvDelimiter(@Nullable String csvDelimiter) {
-            this.csvDelimiter = Output.ofNullable(csvDelimiter);
+            this.csvDelimiter = Codegen.ofNullable(csvDelimiter);
             return this;
         }
         public Builder datastoreName(Output<String> datastoreName) {
@@ -188,7 +189,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -204,7 +205,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -220,7 +221,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputFormat(@Nullable String outputFormat) {
-            this.outputFormat = Output.ofNullable(outputFormat);
+            this.outputFormat = Codegen.ofNullable(outputFormat);
             return this;
         }        public ExportArgs build() {
             return new ExportArgs(csvDelimiter, datastoreName, dateRange, description, environmentId, name, organizationId, outputFormat);

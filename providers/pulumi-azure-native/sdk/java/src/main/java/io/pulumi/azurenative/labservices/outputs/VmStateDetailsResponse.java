@@ -46,28 +46,28 @@ public final class VmStateDetailsResponse {
      * Last known compute power state captured in DTL
      * 
     */
-    public String getLastKnownPowerState() {
+    public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
     /**
      * The power state of the reference virtual machine.
      * 
     */
-    public String getPowerState() {
+    public String powerState() {
         return this.powerState;
     }
     /**
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
      * 
     */
-    public String getRdpAuthority() {
+    public String rdpAuthority() {
         return this.rdpAuthority;
     }
     /**
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
      * 
     */
-    public String getSshAuthority() {
+    public String sshAuthority() {
         return this.sshAuthority;
     }
 

@@ -23,7 +23,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
     @Import(name="platform", required=true)
       private final String platform;
 
-    public String getPlatform() {
+    public String platform() {
         return this.platform;
     }
 
@@ -34,7 +34,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
     @Import(name="resource", required=true)
       private final String resource;
 
-    public String getResource() {
+    public String resource() {
         return this.resource;
     }
 
@@ -45,7 +45,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
     @Import(name="urlMask", required=true)
       private final String urlMask;
 
-    public String getUrlMask() {
+    public String urlMask() {
         return this.urlMask;
     }
 
@@ -56,7 +56,7 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse extends io.p
     @Import(name="version", required=true)
       private final String version;
 
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

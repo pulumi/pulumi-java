@@ -7,6 +7,7 @@ import io.pulumi.azurenative.azurestackhci.enums.CreatedByType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aadClientId", required=true)
       private final Output<String> aadClientId;
 
-    public Output<String> getAadClientId() {
+    public Output<String> aadClientId() {
         return this.aadClientId;
     }
 
@@ -35,7 +36,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="aadTenantId", required=true)
       private final Output<String> aadTenantId;
 
-    public Output<String> getAadTenantId() {
+    public Output<String> aadTenantId() {
         return this.aadTenantId;
     }
 
@@ -46,8 +47,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+    public Output<String> createdAt() {
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+    public Output<String> createdBy() {
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Output<Either<String,CreatedByType>> getCreatedByType() {
-        return this.createdByType == null ? Output.empty() : this.createdByType;
+    public Output<Either<String,CreatedByType>> createdByType() {
+        return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
+    public Output<String> lastModifiedAt() {
+        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
+    public Output<String> lastModifiedBy() {
+        return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
+    public Output<Either<String,CreatedByType>> lastModifiedByType() {
+        return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -145,8 +146,8 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterArgs(
@@ -177,18 +178,18 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.aadClientId = Output.empty();
-        this.aadTenantId = Output.empty();
-        this.clusterName = Output.empty();
-        this.createdAt = Output.empty();
-        this.createdBy = Output.empty();
-        this.createdByType = Output.empty();
-        this.lastModifiedAt = Output.empty();
-        this.lastModifiedBy = Output.empty();
-        this.lastModifiedByType = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.aadClientId = Codegen.empty();
+        this.aadTenantId = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.createdAt = Codegen.empty();
+        this.createdBy = Codegen.empty();
+        this.createdByType = Codegen.empty();
+        this.lastModifiedAt = Codegen.empty();
+        this.lastModifiedBy = Codegen.empty();
+        this.lastModifiedByType = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -254,7 +255,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder createdAt(@Nullable Output<String> createdAt) {
@@ -262,7 +263,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder createdBy(@Nullable Output<String> createdBy) {
@@ -270,7 +271,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
@@ -278,7 +279,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Output.ofNullable(createdByType);
+            this.createdByType = Codegen.ofNullable(createdByType);
             return this;
         }
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
@@ -286,7 +287,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
             return this;
         }
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
@@ -294,7 +295,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Codegen.ofNullable(lastModifiedBy);
             return this;
         }
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
@@ -302,7 +303,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Codegen.ofNullable(lastModifiedByType);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -310,7 +311,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -326,7 +327,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(aadClientId, aadTenantId, clusterName, createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType, location, resourceGroupName, tags);

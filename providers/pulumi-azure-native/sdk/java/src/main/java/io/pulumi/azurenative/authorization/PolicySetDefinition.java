@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return The policy set definition description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -60,7 +61,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return The display name of the policy set definition.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -74,7 +75,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    public Output</* @Nullable */ Object> getMetadata() {
+    public Output</* @Nullable */ Object> metadata() {
         return this.metadata;
     }
     /**
@@ -88,7 +89,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return The name of the policy set definition.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return The policy set definition parameters that can be used in policy definition references.
      * 
      */
-    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> getParameters() {
+    public Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters() {
         return this.parameters;
     }
     /**
@@ -116,7 +117,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return The metadata describing groups of policy definition references within the policy set definition.
      * 
      */
-    public Output</* @Nullable */ List<PolicyDefinitionGroupResponse>> getPolicyDefinitionGroups() {
+    public Output</* @Nullable */ List<PolicyDefinitionGroupResponse>> policyDefinitionGroups() {
         return this.policyDefinitionGroups;
     }
     /**
@@ -130,7 +131,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return An array of policy definition references.
      * 
      */
-    public Output<List<PolicyDefinitionReferenceResponse>> getPolicyDefinitions() {
+    public Output<List<PolicyDefinitionReferenceResponse>> policyDefinitions() {
         return this.policyDefinitions;
     }
     /**
@@ -144,7 +145,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    public Output</* @Nullable */ String> getPolicyType() {
+    public Output</* @Nullable */ String> policyType() {
         return this.policyType;
     }
     /**
@@ -158,7 +159,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @return The type of the resource (Microsoft.Authorization/policySetDefinitions).
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -184,7 +185,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicySetDefinition(String name, PolicySetDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:PolicySetDefinition", name, args == null ? PolicySetDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:authorization:PolicySetDefinition", name, args == null ? PolicySetDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PolicySetDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

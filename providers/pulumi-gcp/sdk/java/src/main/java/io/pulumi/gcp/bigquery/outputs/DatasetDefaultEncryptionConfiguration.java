@@ -28,7 +28,7 @@ public final class DatasetDefaultEncryptionConfiguration {
      * access to this encryption key.
      * 
     */
-    public String getKmsKeyName() {
+    public String kmsKeyName() {
         return this.kmsKeyName;
     }
 

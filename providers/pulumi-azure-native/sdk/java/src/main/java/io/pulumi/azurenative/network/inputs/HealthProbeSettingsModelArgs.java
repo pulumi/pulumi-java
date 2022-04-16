@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.enums.HealthProbeEnabled;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,HealthProbeEnabled>> enabledState;
 
-    public Output<Either<String,HealthProbeEnabled>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+    public Output<Either<String,HealthProbeEnabled>> enabledState() {
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     @Import(name="healthProbeMethod")
       private final @Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod;
 
-    public Output<Either<String,FrontDoorHealthProbeMethod>> getHealthProbeMethod() {
-        return this.healthProbeMethod == null ? Output.empty() : this.healthProbeMethod;
+    public Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod() {
+        return this.healthProbeMethod == null ? Codegen.empty() : this.healthProbeMethod;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
+    public Output<Integer> intervalInSeconds() {
+        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     @Import(name="protocol")
       private final @Nullable Output<Either<String,FrontDoorProtocol>> protocol;
 
-    public Output<Either<String,FrontDoorProtocol>> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<Either<String,FrontDoorProtocol>> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public HealthProbeSettingsModelArgs(
@@ -118,13 +119,13 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
     }
 
     private HealthProbeSettingsModelArgs() {
-        this.enabledState = Output.empty();
-        this.healthProbeMethod = Output.empty();
-        this.id = Output.empty();
-        this.intervalInSeconds = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.protocol = Output.empty();
+        this.enabledState = Codegen.empty();
+        this.healthProbeMethod = Codegen.empty();
+        this.id = Codegen.empty();
+        this.intervalInSeconds = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enabledState(@Nullable Either<String,HealthProbeEnabled> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder healthProbeMethod(@Nullable Output<Either<String,FrontDoorHealthProbeMethod>> healthProbeMethod) {
@@ -172,7 +173,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder healthProbeMethod(@Nullable Either<String,FrontDoorHealthProbeMethod> healthProbeMethod) {
-            this.healthProbeMethod = Output.ofNullable(healthProbeMethod);
+            this.healthProbeMethod = Codegen.ofNullable(healthProbeMethod);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -180,7 +181,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
@@ -188,7 +189,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -196,7 +197,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -204,7 +205,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder protocol(@Nullable Output<Either<String,FrontDoorProtocol>> protocol) {
@@ -212,7 +213,7 @@ public final class HealthProbeSettingsModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder protocol(@Nullable Either<String,FrontDoorProtocol> protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public HealthProbeSettingsModelArgs build() {
             return new HealthProbeSettingsModelArgs(enabledState, healthProbeMethod, id, intervalInSeconds, name, path, protocol);

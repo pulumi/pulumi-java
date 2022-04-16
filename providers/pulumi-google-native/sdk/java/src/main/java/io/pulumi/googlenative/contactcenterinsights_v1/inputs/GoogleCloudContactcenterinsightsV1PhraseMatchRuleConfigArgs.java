@@ -5,6 +5,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
     @Import(name="exactMatchConfig")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
-    public Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> getExactMatchConfig() {
-        return this.exactMatchConfig == null ? Output.empty() : this.exactMatchConfig;
+    public Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig() {
+        return this.exactMatchConfig == null ? Codegen.empty() : this.exactMatchConfig;
     }
 
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(@Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
@@ -34,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
     }
 
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs() {
-        this.exactMatchConfig = Output.empty();
+        this.exactMatchConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
             return this;
         }
         public Builder exactMatchConfig(@Nullable GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs exactMatchConfig) {
-            this.exactMatchConfig = Output.ofNullable(exactMatchConfig);
+            this.exactMatchConfig = Codegen.ofNullable(exactMatchConfig);
             return this;
         }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(exactMatchConfig);

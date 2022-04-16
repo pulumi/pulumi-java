@@ -41,14 +41,14 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      * Structure is documented below.
      * 
     */
-    public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType getInfoType() {
+    public PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType() {
         return this.infoType;
     }
     /**
      * Max findings limit for the given infoType.
      * 
     */
-    public Integer getMaxFindings() {
+    public Integer maxFindings() {
         return this.maxFindings;
     }
 

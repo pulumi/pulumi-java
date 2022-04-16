@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -45,7 +46,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
     @Import(name="operator", required=true)
       private final Output<String> operator;
 
-    public Output<String> getOperator() {
+    public Output<String> operator() {
         return this.operator;
     }
 
@@ -56,8 +57,8 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public NodeSelectorRequirementArgs(
@@ -70,9 +71,9 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
     }
 
     private NodeSelectorRequirementArgs() {
-        this.key = Output.empty();
-        this.operator = Output.empty();
-        this.values = Output.empty();
+        this.key = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class NodeSelectorRequirementArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

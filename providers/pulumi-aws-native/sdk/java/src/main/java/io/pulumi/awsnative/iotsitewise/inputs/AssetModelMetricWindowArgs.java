@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTumblingWindowArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class AssetModelMetricWindowArgs extends io.pulumi.resources.Resour
     @Import(name="tumbling")
       private final @Nullable Output<AssetModelTumblingWindowArgs> tumbling;
 
-    public Output<AssetModelTumblingWindowArgs> getTumbling() {
-        return this.tumbling == null ? Output.empty() : this.tumbling;
+    public Output<AssetModelTumblingWindowArgs> tumbling() {
+        return this.tumbling == null ? Codegen.empty() : this.tumbling;
     }
 
     public AssetModelMetricWindowArgs(@Nullable Output<AssetModelTumblingWindowArgs> tumbling) {
@@ -30,7 +31,7 @@ public final class AssetModelMetricWindowArgs extends io.pulumi.resources.Resour
     }
 
     private AssetModelMetricWindowArgs() {
-        this.tumbling = Output.empty();
+        this.tumbling = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AssetModelMetricWindowArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tumbling(@Nullable AssetModelTumblingWindowArgs tumbling) {
-            this.tumbling = Output.ofNullable(tumbling);
+            this.tumbling = Codegen.ofNullable(tumbling);
             return this;
         }        public AssetModelMetricWindowArgs build() {
             return new AssetModelMetricWindowArgs(tumbling);

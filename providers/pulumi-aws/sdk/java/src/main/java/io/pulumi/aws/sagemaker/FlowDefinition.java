@@ -13,6 +13,7 @@ import io.pulumi.aws.sagemaker.outputs.FlowDefinitionOutputConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Flow Definition.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return The name of your flow definition.
      * 
      */
-    public Output<String> getFlowDefinitionName() {
+    public Output<String> flowDefinitionName() {
         return this.flowDefinitionName;
     }
     /**
@@ -72,7 +73,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return An object containing information about the events that trigger a human workflow. See Human Loop Activation Config details below.
      * 
      */
-    public Output</* @Nullable */ FlowDefinitionHumanLoopActivationConfig> getHumanLoopActivationConfig() {
+    public Output</* @Nullable */ FlowDefinitionHumanLoopActivationConfig> humanLoopActivationConfig() {
         return this.humanLoopActivationConfig;
     }
     /**
@@ -86,7 +87,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return An object containing information about the tasks the human reviewers will perform. See Human Loop Config details below.
      * 
      */
-    public Output<FlowDefinitionHumanLoopConfig> getHumanLoopConfig() {
+    public Output<FlowDefinitionHumanLoopConfig> humanLoopConfig() {
         return this.humanLoopConfig;
     }
     /**
@@ -100,7 +101,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return Container for configuring the source of human task requests. Use to specify if Amazon Rekognition or Amazon Textract is used as an integration source. See Human Loop Request Source details below.
      * 
      */
-    public Output</* @Nullable */ FlowDefinitionHumanLoopRequestSource> getHumanLoopRequestSource() {
+    public Output</* @Nullable */ FlowDefinitionHumanLoopRequestSource> humanLoopRequestSource() {
         return this.humanLoopRequestSource;
     }
     /**
@@ -114,7 +115,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return An object containing information about where the human review results will be uploaded. See Output Config details below.
      * 
      */
-    public Output<FlowDefinitionOutputConfig> getOutputConfig() {
+    public Output<FlowDefinitionOutputConfig> outputConfig() {
         return this.outputConfig;
     }
     /**
@@ -128,7 +129,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the role needed to call other services on your behalf.
      * 
      */
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
     /**
@@ -142,7 +143,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -156,7 +157,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -182,7 +183,7 @@ public class FlowDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FlowDefinition(String name, FlowDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/flowDefinition:FlowDefinition", name, args == null ? FlowDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/flowDefinition:FlowDefinition", name, args == null ? FlowDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FlowDefinition(String name, Output<String> id, @Nullable FlowDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

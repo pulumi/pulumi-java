@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="auditLogConfigs", required=true)
       private final Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<IAMAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
+    public Output<List<IAMAuditConfigAuditLogConfigArgs>> auditLogConfigs() {
         return this.auditLogConfigs;
     }
 
@@ -34,7 +35,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -45,7 +46,7 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -59,9 +60,9 @@ public final class IAMAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMAuditConfigArgs() {
-        this.auditLogConfigs = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.auditLogConfigs = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {

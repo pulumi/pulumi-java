@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
     @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+    public Output<String> kmsKeyName() {
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     public AiMetadataStoreEncryptionSpecGetArgs(@Nullable Output<String> kmsKeyName) {
@@ -31,7 +32,7 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
     }
 
     private AiMetadataStoreEncryptionSpecGetArgs() {
-        this.kmsKeyName = Output.empty();
+        this.kmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }        public AiMetadataStoreEncryptionSpecGetArgs build() {
             return new AiMetadataStoreEncryptionSpecGetArgs(kmsKeyName);

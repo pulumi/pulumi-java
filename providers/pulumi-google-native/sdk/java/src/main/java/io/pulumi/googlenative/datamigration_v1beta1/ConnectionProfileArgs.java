@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.ConnectionProfileProvider;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.ConnectionProfileState;
 import io.pulumi.googlenative.datamigration_v1beta1.inputs.CloudSqlConnectionProfileArgs;
@@ -26,14 +27,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="cloudsql")
       private final @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql;
 
-    public Output<CloudSqlConnectionProfileArgs> getCloudsql() {
-        return this.cloudsql == null ? Output.empty() : this.cloudsql;
+    public Output<CloudSqlConnectionProfileArgs> cloudsql() {
+        return this.cloudsql == null ? Codegen.empty() : this.cloudsql;
     }
 
     @Import(name="connectionProfileId", required=true)
       private final Output<String> connectionProfileId;
 
-    public Output<String> getConnectionProfileId() {
+    public Output<String> connectionProfileId() {
         return this.connectionProfileId;
     }
 
@@ -44,8 +45,8 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -55,15 +56,15 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="mysql")
       private final @Nullable Output<MySqlConnectionProfileArgs> mysql;
 
-    public Output<MySqlConnectionProfileArgs> getMysql() {
-        return this.mysql == null ? Output.empty() : this.mysql;
+    public Output<MySqlConnectionProfileArgs> mysql() {
+        return this.mysql == null ? Codegen.empty() : this.mysql;
     }
 
     /**
@@ -84,15 +85,15 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -102,15 +103,15 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="provider")
       private final @Nullable Output<ConnectionProfileProvider> provider;
 
-    public Output<ConnectionProfileProvider> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+    public Output<ConnectionProfileProvider> provider() {
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     @Import(name="state")
       private final @Nullable Output<ConnectionProfileState> state;
 
-    public Output<ConnectionProfileState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<ConnectionProfileState> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public ConnectionProfileArgs(
@@ -150,17 +151,17 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConnectionProfileArgs() {
-        this.cloudsql = Output.empty();
-        this.connectionProfileId = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.mysql = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.provider = Output.empty();
-        this.requestId = Output.empty();
-        this.state = Output.empty();
+        this.cloudsql = Codegen.empty();
+        this.connectionProfileId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mysql = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.provider = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cloudsql(@Nullable CloudSqlConnectionProfileArgs cloudsql) {
-            this.cloudsql = Output.ofNullable(cloudsql);
+            this.cloudsql = Codegen.ofNullable(cloudsql);
             return this;
         }
         public Builder connectionProfileId(Output<String> connectionProfileId) {
@@ -224,7 +225,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -232,7 +233,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -240,7 +241,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mysql(@Nullable Output<MySqlConnectionProfileArgs> mysql) {
@@ -248,7 +249,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder mysql(@Nullable MySqlConnectionProfileArgs mysql) {
-            this.mysql = Output.ofNullable(mysql);
+            this.mysql = Codegen.ofNullable(mysql);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -256,7 +257,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -264,7 +265,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder provider(@Nullable Output<ConnectionProfileProvider> provider) {
@@ -272,7 +273,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder provider(@Nullable ConnectionProfileProvider provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -280,7 +281,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder state(@Nullable Output<ConnectionProfileState> state) {
@@ -288,7 +289,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder state(@Nullable ConnectionProfileState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public ConnectionProfileArgs build() {
             return new ConnectionProfileArgs(cloudsql, connectionProfileId, displayName, labels, location, mysql, name, project, provider, requestId, state);

@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SnapshotCopyGrantArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SnapshotCopyGrantArgs extends io.pulumi.resources.ResourceArg
     @Import(name="snapshotCopyGrantName", required=true)
       private final Output<String> snapshotCopyGrantName;
 
-    public Output<String> getSnapshotCopyGrantName() {
+    public Output<String> snapshotCopyGrantName() {
         return this.snapshotCopyGrantName;
     }
 
@@ -44,8 +45,8 @@ public final class SnapshotCopyGrantArgs extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SnapshotCopyGrantArgs(
@@ -58,9 +59,9 @@ public final class SnapshotCopyGrantArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SnapshotCopyGrantArgs() {
-        this.kmsKeyId = Output.empty();
-        this.snapshotCopyGrantName = Output.empty();
-        this.tags = Output.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.snapshotCopyGrantName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class SnapshotCopyGrantArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder snapshotCopyGrantName(Output<String> snapshotCopyGrantName) {
@@ -108,7 +109,7 @@ public final class SnapshotCopyGrantArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SnapshotCopyGrantArgs build() {
             return new SnapshotCopyGrantArgs(kmsKeyId, snapshotCopyGrantName, tags);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     @Import(name="domainNameLabel")
       private final @Nullable Output<String> domainNameLabel;
 
-    public Output<String> getDomainNameLabel() {
-        return this.domainNameLabel == null ? Output.empty() : this.domainNameLabel;
+    public Output<String> domainNameLabel() {
+        return this.domainNameLabel == null ? Codegen.empty() : this.domainNameLabel;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
-        return this.fqdn == null ? Output.empty() : this.fqdn;
+    public Output<String> fqdn() {
+        return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     @Import(name="reverseFqdn")
       private final @Nullable Output<String> reverseFqdn;
 
-    public Output<String> getReverseFqdn() {
-        return this.reverseFqdn == null ? Output.empty() : this.reverseFqdn;
+    public Output<String> reverseFqdn() {
+        return this.reverseFqdn == null ? Codegen.empty() : this.reverseFqdn;
     }
 
     public PublicIPAddressDnsSettingsArgs(
@@ -61,9 +62,9 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     }
 
     private PublicIPAddressDnsSettingsArgs() {
-        this.domainNameLabel = Output.empty();
-        this.fqdn = Output.empty();
-        this.reverseFqdn = Output.empty();
+        this.domainNameLabel = Codegen.empty();
+        this.fqdn = Codegen.empty();
+        this.reverseFqdn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder domainNameLabel(@Nullable String domainNameLabel) {
-            this.domainNameLabel = Output.ofNullable(domainNameLabel);
+            this.domainNameLabel = Codegen.ofNullable(domainNameLabel);
             return this;
         }
         public Builder fqdn(@Nullable Output<String> fqdn) {
@@ -103,7 +104,7 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Output.ofNullable(fqdn);
+            this.fqdn = Codegen.ofNullable(fqdn);
             return this;
         }
         public Builder reverseFqdn(@Nullable Output<String> reverseFqdn) {
@@ -111,7 +112,7 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder reverseFqdn(@Nullable String reverseFqdn) {
-            this.reverseFqdn = Output.ofNullable(reverseFqdn);
+            this.reverseFqdn = Codegen.ofNullable(reverseFqdn);
             return this;
         }        public PublicIPAddressDnsSettingsArgs build() {
             return new PublicIPAddressDnsSettingsArgs(domainNameLabel, fqdn, reverseFqdn);

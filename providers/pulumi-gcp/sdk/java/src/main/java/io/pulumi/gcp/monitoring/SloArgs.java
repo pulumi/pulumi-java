@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.SloBasicSliArgs;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliArgs;
@@ -32,8 +33,8 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="basicSli")
       private final @Nullable Output<SloBasicSliArgs> basicSli;
 
-    public Output<SloBasicSliArgs> getBasicSli() {
-        return this.basicSli == null ? Output.empty() : this.basicSli;
+    public Output<SloBasicSliArgs> basicSli() {
+        return this.basicSli == null ? Codegen.empty() : this.basicSli;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="calendarPeriod")
       private final @Nullable Output<String> calendarPeriod;
 
-    public Output<String> getCalendarPeriod() {
-        return this.calendarPeriod == null ? Output.empty() : this.calendarPeriod;
+    public Output<String> calendarPeriod() {
+        return this.calendarPeriod == null ? Codegen.empty() : this.calendarPeriod;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="goal", required=true)
       private final Output<Double> goal;
 
-    public Output<Double> getGoal() {
+    public Output<Double> goal() {
         return this.goal;
     }
 
@@ -80,8 +81,8 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestBasedSli")
       private final @Nullable Output<SloRequestBasedSliArgs> requestBasedSli;
 
-    public Output<SloRequestBasedSliArgs> getRequestBasedSli() {
-        return this.requestBasedSli == null ? Output.empty() : this.requestBasedSli;
+    public Output<SloRequestBasedSliArgs> requestBasedSli() {
+        return this.requestBasedSli == null ? Codegen.empty() : this.requestBasedSli;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rollingPeriodDays")
       private final @Nullable Output<Integer> rollingPeriodDays;
 
-    public Output<Integer> getRollingPeriodDays() {
-        return this.rollingPeriodDays == null ? Output.empty() : this.rollingPeriodDays;
+    public Output<Integer> rollingPeriodDays() {
+        return this.rollingPeriodDays == null ? Codegen.empty() : this.rollingPeriodDays;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="service", required=true)
       private final Output<String> service;
 
-    public Output<String> getService() {
+    public Output<String> service() {
         return this.service;
     }
 
@@ -132,8 +133,8 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sloId")
       private final @Nullable Output<String> sloId;
 
-    public Output<String> getSloId() {
-        return this.sloId == null ? Output.empty() : this.sloId;
+    public Output<String> sloId() {
+        return this.sloId == null ? Codegen.empty() : this.sloId;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="windowsBasedSli")
       private final @Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli;
 
-    public Output<SloWindowsBasedSliArgs> getWindowsBasedSli() {
-        return this.windowsBasedSli == null ? Output.empty() : this.windowsBasedSli;
+    public Output<SloWindowsBasedSliArgs> windowsBasedSli() {
+        return this.windowsBasedSli == null ? Codegen.empty() : this.windowsBasedSli;
     }
 
     public SloArgs(
@@ -179,16 +180,16 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SloArgs() {
-        this.basicSli = Output.empty();
-        this.calendarPeriod = Output.empty();
-        this.displayName = Output.empty();
-        this.goal = Output.empty();
-        this.project = Output.empty();
-        this.requestBasedSli = Output.empty();
-        this.rollingPeriodDays = Output.empty();
-        this.service = Output.empty();
-        this.sloId = Output.empty();
-        this.windowsBasedSli = Output.empty();
+        this.basicSli = Codegen.empty();
+        this.calendarPeriod = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.goal = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestBasedSli = Codegen.empty();
+        this.rollingPeriodDays = Codegen.empty();
+        this.service = Codegen.empty();
+        this.sloId = Codegen.empty();
+        this.windowsBasedSli = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -234,7 +235,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder basicSli(@Nullable SloBasicSliArgs basicSli) {
-            this.basicSli = Output.ofNullable(basicSli);
+            this.basicSli = Codegen.ofNullable(basicSli);
             return this;
         }
         public Builder calendarPeriod(@Nullable Output<String> calendarPeriod) {
@@ -242,7 +243,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder calendarPeriod(@Nullable String calendarPeriod) {
-            this.calendarPeriod = Output.ofNullable(calendarPeriod);
+            this.calendarPeriod = Codegen.ofNullable(calendarPeriod);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -250,7 +251,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder goal(Output<Double> goal) {
@@ -266,7 +267,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestBasedSli(@Nullable Output<SloRequestBasedSliArgs> requestBasedSli) {
@@ -274,7 +275,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestBasedSli(@Nullable SloRequestBasedSliArgs requestBasedSli) {
-            this.requestBasedSli = Output.ofNullable(requestBasedSli);
+            this.requestBasedSli = Codegen.ofNullable(requestBasedSli);
             return this;
         }
         public Builder rollingPeriodDays(@Nullable Output<Integer> rollingPeriodDays) {
@@ -282,7 +283,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rollingPeriodDays(@Nullable Integer rollingPeriodDays) {
-            this.rollingPeriodDays = Output.ofNullable(rollingPeriodDays);
+            this.rollingPeriodDays = Codegen.ofNullable(rollingPeriodDays);
             return this;
         }
         public Builder service(Output<String> service) {
@@ -298,7 +299,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sloId(@Nullable String sloId) {
-            this.sloId = Output.ofNullable(sloId);
+            this.sloId = Codegen.ofNullable(sloId);
             return this;
         }
         public Builder windowsBasedSli(@Nullable Output<SloWindowsBasedSliArgs> windowsBasedSli) {
@@ -306,7 +307,7 @@ public final class SloArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder windowsBasedSli(@Nullable SloWindowsBasedSliArgs windowsBasedSli) {
-            this.windowsBasedSli = Output.ofNullable(windowsBasedSli);
+            this.windowsBasedSli = Codegen.ofNullable(windowsBasedSli);
             return this;
         }        public SloArgs build() {
             return new SloArgs(basicSli, calendarPeriod, displayName, goal, project, requestBasedSli, rollingPeriodDays, service, sloId, windowsBasedSli);

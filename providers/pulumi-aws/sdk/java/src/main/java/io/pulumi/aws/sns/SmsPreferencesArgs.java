@@ -5,6 +5,7 @@ package io.pulumi.aws.sns;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSenderId")
       private final @Nullable Output<String> defaultSenderId;
 
-    public Output<String> getDefaultSenderId() {
-        return this.defaultSenderId == null ? Output.empty() : this.defaultSenderId;
+    public Output<String> defaultSenderId() {
+        return this.defaultSenderId == null ? Codegen.empty() : this.defaultSenderId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultSmsType")
       private final @Nullable Output<String> defaultSmsType;
 
-    public Output<String> getDefaultSmsType() {
-        return this.defaultSmsType == null ? Output.empty() : this.defaultSmsType;
+    public Output<String> defaultSmsType() {
+        return this.defaultSmsType == null ? Codegen.empty() : this.defaultSmsType;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryStatusIamRoleArn")
       private final @Nullable Output<String> deliveryStatusIamRoleArn;
 
-    public Output<String> getDeliveryStatusIamRoleArn() {
-        return this.deliveryStatusIamRoleArn == null ? Output.empty() : this.deliveryStatusIamRoleArn;
+    public Output<String> deliveryStatusIamRoleArn() {
+        return this.deliveryStatusIamRoleArn == null ? Codegen.empty() : this.deliveryStatusIamRoleArn;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryStatusSuccessSamplingRate")
       private final @Nullable Output<String> deliveryStatusSuccessSamplingRate;
 
-    public Output<String> getDeliveryStatusSuccessSamplingRate() {
-        return this.deliveryStatusSuccessSamplingRate == null ? Output.empty() : this.deliveryStatusSuccessSamplingRate;
+    public Output<String> deliveryStatusSuccessSamplingRate() {
+        return this.deliveryStatusSuccessSamplingRate == null ? Codegen.empty() : this.deliveryStatusSuccessSamplingRate;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monthlySpendLimit")
       private final @Nullable Output<Integer> monthlySpendLimit;
 
-    public Output<Integer> getMonthlySpendLimit() {
-        return this.monthlySpendLimit == null ? Output.empty() : this.monthlySpendLimit;
+    public Output<Integer> monthlySpendLimit() {
+        return this.monthlySpendLimit == null ? Codegen.empty() : this.monthlySpendLimit;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usageReportS3Bucket")
       private final @Nullable Output<String> usageReportS3Bucket;
 
-    public Output<String> getUsageReportS3Bucket() {
-        return this.usageReportS3Bucket == null ? Output.empty() : this.usageReportS3Bucket;
+    public Output<String> usageReportS3Bucket() {
+        return this.usageReportS3Bucket == null ? Codegen.empty() : this.usageReportS3Bucket;
     }
 
     public SmsPreferencesArgs(
@@ -97,12 +98,12 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmsPreferencesArgs() {
-        this.defaultSenderId = Output.empty();
-        this.defaultSmsType = Output.empty();
-        this.deliveryStatusIamRoleArn = Output.empty();
-        this.deliveryStatusSuccessSamplingRate = Output.empty();
-        this.monthlySpendLimit = Output.empty();
-        this.usageReportS3Bucket = Output.empty();
+        this.defaultSenderId = Codegen.empty();
+        this.defaultSmsType = Codegen.empty();
+        this.deliveryStatusIamRoleArn = Codegen.empty();
+        this.deliveryStatusSuccessSamplingRate = Codegen.empty();
+        this.monthlySpendLimit = Codegen.empty();
+        this.usageReportS3Bucket = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultSenderId(@Nullable String defaultSenderId) {
-            this.defaultSenderId = Output.ofNullable(defaultSenderId);
+            this.defaultSenderId = Codegen.ofNullable(defaultSenderId);
             return this;
         }
         public Builder defaultSmsType(@Nullable Output<String> defaultSmsType) {
@@ -148,7 +149,7 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultSmsType(@Nullable String defaultSmsType) {
-            this.defaultSmsType = Output.ofNullable(defaultSmsType);
+            this.defaultSmsType = Codegen.ofNullable(defaultSmsType);
             return this;
         }
         public Builder deliveryStatusIamRoleArn(@Nullable Output<String> deliveryStatusIamRoleArn) {
@@ -156,7 +157,7 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryStatusIamRoleArn(@Nullable String deliveryStatusIamRoleArn) {
-            this.deliveryStatusIamRoleArn = Output.ofNullable(deliveryStatusIamRoleArn);
+            this.deliveryStatusIamRoleArn = Codegen.ofNullable(deliveryStatusIamRoleArn);
             return this;
         }
         public Builder deliveryStatusSuccessSamplingRate(@Nullable Output<String> deliveryStatusSuccessSamplingRate) {
@@ -164,7 +165,7 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryStatusSuccessSamplingRate(@Nullable String deliveryStatusSuccessSamplingRate) {
-            this.deliveryStatusSuccessSamplingRate = Output.ofNullable(deliveryStatusSuccessSamplingRate);
+            this.deliveryStatusSuccessSamplingRate = Codegen.ofNullable(deliveryStatusSuccessSamplingRate);
             return this;
         }
         public Builder monthlySpendLimit(@Nullable Output<Integer> monthlySpendLimit) {
@@ -172,7 +173,7 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder monthlySpendLimit(@Nullable Integer monthlySpendLimit) {
-            this.monthlySpendLimit = Output.ofNullable(monthlySpendLimit);
+            this.monthlySpendLimit = Codegen.ofNullable(monthlySpendLimit);
             return this;
         }
         public Builder usageReportS3Bucket(@Nullable Output<String> usageReportS3Bucket) {
@@ -180,7 +181,7 @@ public final class SmsPreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usageReportS3Bucket(@Nullable String usageReportS3Bucket) {
-            this.usageReportS3Bucket = Output.ofNullable(usageReportS3Bucket);
+            this.usageReportS3Bucket = Codegen.ofNullable(usageReportS3Bucket);
             return this;
         }        public SmsPreferencesArgs build() {
             return new SmsPreferencesArgs(defaultSenderId, defaultSmsType, deliveryStatusIamRoleArn, deliveryStatusSuccessSamplingRate, monthlySpendLimit, usageReportS3Bucket);

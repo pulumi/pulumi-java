@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gkehub_v1alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gkehub_v1alpha.FleetArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return When the Fleet was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +44,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return When the Fleet was deleted.
      * 
      */
-    public Output<String> getDeleteTime() {
+    public Output<String> deleteTime() {
         return this.deleteTime;
     }
     /**
@@ -57,7 +58,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Optional. A user-assigned display name of the Fleet. When present, it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `Production Fleet`
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -71,7 +72,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The name for the fleet. The name must meet the following constraints: + The name of a fleet should be unique within the organization; + It must consist of lower case alphanumeric characters or `-`; + The length of the name must be less than or equal to 63; + Unicode names must be expressed in Punycode format (rfc3492). Examples: + prod-fleet + xn--wlq33vhyw9jb （Punycode form for "生产环境")
      * 
      */
-    public Output<String> getFleetName() {
+    public Output<String> fleetName() {
         return this.fleetName;
     }
     /**
@@ -85,7 +86,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return The full, unique resource name of this fleet in the format of `projects/{project}/locations/{location}/fleets/{fleet}`. Each GCP project can have at most one fleet resource, named "default".
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return Google-generated UUID for this resource. This is unique across all Fleet resources. If a Fleet resource is deleted and another resource with the same name is created, it gets a different uid.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -113,7 +114,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @return When the Fleet was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -139,7 +140,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Fleet(String name, @Nullable FleetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gkehub/v1alpha:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gkehub/v1alpha:Fleet", name, args == null ? FleetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Fleet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

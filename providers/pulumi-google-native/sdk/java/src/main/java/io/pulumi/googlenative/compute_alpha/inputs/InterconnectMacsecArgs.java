@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.InterconnectMacsecPreSharedKeyArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
     @Import(name="failOpen")
       private final @Nullable Output<Boolean> failOpen;
 
-    public Output<Boolean> getFailOpen() {
-        return this.failOpen == null ? Output.empty() : this.failOpen;
+    public Output<Boolean> failOpen() {
+        return this.failOpen == null ? Codegen.empty() : this.failOpen;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
     @Import(name="preSharedKeys", required=true)
       private final Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys;
 
-    public Output<List<InterconnectMacsecPreSharedKeyArgs>> getPreSharedKeys() {
+    public Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys() {
         return this.preSharedKeys;
     }
 
@@ -50,8 +51,8 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InterconnectMacsecArgs() {
-        this.failOpen = Output.empty();
-        this.preSharedKeys = Output.empty();
+        this.failOpen = Codegen.empty();
+        this.preSharedKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class InterconnectMacsecArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder failOpen(@Nullable Boolean failOpen) {
-            this.failOpen = Output.ofNullable(failOpen);
+            this.failOpen = Codegen.ofNullable(failOpen);
             return this;
         }
         public Builder preSharedKeys(Output<List<InterconnectMacsecPreSharedKeyArgs>> preSharedKeys) {

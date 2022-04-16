@@ -19,7 +19,7 @@ public final class GetResourceGuardArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -30,7 +30,7 @@ public final class GetResourceGuardArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="resourceGuardsName", required=true)
       private final String resourceGuardsName;
 
-    public String getResourceGuardsName() {
+    public String resourceGuardsName() {
         return this.resourceGuardsName;
     }
 

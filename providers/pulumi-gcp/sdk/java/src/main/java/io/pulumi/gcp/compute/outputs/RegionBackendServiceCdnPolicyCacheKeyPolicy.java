@@ -70,14 +70,14 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
      * If true requests to different hosts will be cached separately.
      * 
     */
-    public Optional<Boolean> getIncludeHost() {
+    public Optional<Boolean> includeHost() {
         return Optional.ofNullable(this.includeHost);
     }
     /**
      * If true, http and https requests will be cached separately.
      * 
     */
-    public Optional<Boolean> getIncludeProtocol() {
+    public Optional<Boolean> includeProtocol() {
         return Optional.ofNullable(this.includeProtocol);
     }
     /**
@@ -89,7 +89,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
      * key entirely.
      * 
     */
-    public Optional<Boolean> getIncludeQueryString() {
+    public Optional<Boolean> includeQueryString() {
         return Optional.ofNullable(this.includeQueryString);
     }
     /**
@@ -100,7 +100,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
      * delimiters.
      * 
     */
-    public List<String> getQueryStringBlacklists() {
+    public List<String> queryStringBlacklists() {
         return this.queryStringBlacklists == null ? List.of() : this.queryStringBlacklists;
     }
     /**
@@ -111,7 +111,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
      * delimiters.
      * 
     */
-    public List<String> getQueryStringWhitelists() {
+    public List<String> queryStringWhitelists() {
         return this.queryStringWhitelists == null ? List.of() : this.queryStringWhitelists;
     }
 

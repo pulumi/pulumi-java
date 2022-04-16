@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.DiskResourcePolicyAttachmentArgs;
 import io.pulumi.gcp.compute.inputs.DiskResourcePolicyAttachmentState;
@@ -54,7 +55,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * @return The name of the disk in which the resource policies are attached to.
      * 
      */
-    public Output<String> getDisk() {
+    public Output<String> disk() {
         return this.disk;
     }
     /**
@@ -70,7 +71,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * creation. Do not specify the self link.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -100,7 +101,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * @return A reference to the zone where the disk resides.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -126,7 +127,7 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public DiskResourcePolicyAttachment(String name, DiskResourcePolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment", name, args == null ? DiskResourcePolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment", name, args == null ? DiskResourcePolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DiskResourcePolicyAttachment(String name, Output<String> id, @Nullable DiskResourcePolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

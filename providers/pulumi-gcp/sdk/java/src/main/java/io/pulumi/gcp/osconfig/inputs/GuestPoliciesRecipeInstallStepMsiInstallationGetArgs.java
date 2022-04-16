@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
     @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
-    public Output<List<Integer>> getAllowedExitCodes() {
-        return this.allowedExitCodes == null ? Output.empty() : this.allowedExitCodes;
+    public Output<List<Integer>> allowedExitCodes() {
+        return this.allowedExitCodes == null ? Codegen.empty() : this.allowedExitCodes;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
     @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
-    public Output<String> getArtifactId() {
+    public Output<String> artifactId() {
         return this.artifactId;
     }
 
@@ -45,8 +46,8 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
     @Import(name="flags")
       private final @Nullable Output<List<String>> flags;
 
-    public Output<List<String>> getFlags() {
-        return this.flags == null ? Output.empty() : this.flags;
+    public Output<List<String>> flags() {
+        return this.flags == null ? Codegen.empty() : this.flags;
     }
 
     public GuestPoliciesRecipeInstallStepMsiInstallationGetArgs(
@@ -59,9 +60,9 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
     }
 
     private GuestPoliciesRecipeInstallStepMsiInstallationGetArgs() {
-        this.allowedExitCodes = Output.empty();
-        this.artifactId = Output.empty();
-        this.flags = Output.empty();
+        this.allowedExitCodes = Codegen.empty();
+        this.artifactId = Codegen.empty();
+        this.flags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
             return this;
         }
         public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Output.ofNullable(allowedExitCodes);
+            this.allowedExitCodes = Codegen.ofNullable(allowedExitCodes);
             return this;
         }
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
@@ -112,7 +113,7 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallationGetArgs extends 
             return this;
         }
         public Builder flags(@Nullable List<String> flags) {
-            this.flags = Output.ofNullable(flags);
+            this.flags = Codegen.ofNullable(flags);
             return this;
         }
         public Builder flags(String... flags) {

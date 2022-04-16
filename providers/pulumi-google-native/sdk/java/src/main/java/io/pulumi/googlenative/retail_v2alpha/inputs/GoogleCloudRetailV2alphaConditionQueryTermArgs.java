@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
     @Import(name="fullMatch")
       private final @Nullable Output<Boolean> fullMatch;
 
-    public Output<Boolean> getFullMatch() {
-        return this.fullMatch == null ? Output.empty() : this.fullMatch;
+    public Output<Boolean> fullMatch() {
+        return this.fullMatch == null ? Codegen.empty() : this.fullMatch;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public GoogleCloudRetailV2alphaConditionQueryTermArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
     }
 
     private GoogleCloudRetailV2alphaConditionQueryTermArgs() {
-        this.fullMatch = Output.empty();
-        this.value = Output.empty();
+        this.fullMatch = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
             return this;
         }
         public Builder fullMatch(@Nullable Boolean fullMatch) {
-            this.fullMatch = Output.ofNullable(fullMatch);
+            this.fullMatch = Codegen.ofNullable(fullMatch);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -88,7 +89,7 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermArgs extends io.pul
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public GoogleCloudRetailV2alphaConditionQueryTermArgs build() {
             return new GoogleCloudRetailV2alphaConditionQueryTermArgs(fullMatch, value);

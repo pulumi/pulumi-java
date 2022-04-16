@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.inputs.ChannelTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorized")
       private final @Nullable Output<Boolean> authorized;
 
-    public Output<Boolean> getAuthorized() {
-        return this.authorized == null ? Output.empty() : this.authorized;
+    public Output<Boolean> authorized() {
+        return this.authorized == null ? Codegen.empty() : this.authorized;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="latencyMode")
       private final @Nullable Output<ChannelLatencyMode> latencyMode;
 
-    public Output<ChannelLatencyMode> getLatencyMode() {
-        return this.latencyMode == null ? Output.empty() : this.latencyMode;
+    public Output<ChannelLatencyMode> latencyMode() {
+        return this.latencyMode == null ? Codegen.empty() : this.latencyMode;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recordingConfigurationArn")
       private final @Nullable Output<String> recordingConfigurationArn;
 
-    public Output<String> getRecordingConfigurationArn() {
-        return this.recordingConfigurationArn == null ? Output.empty() : this.recordingConfigurationArn;
+    public Output<String> recordingConfigurationArn() {
+        return this.recordingConfigurationArn == null ? Codegen.empty() : this.recordingConfigurationArn;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
-    public Output<List<ChannelTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ChannelTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<ChannelType> type;
 
-    public Output<ChannelType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<ChannelType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ChannelArgs(
@@ -101,12 +102,12 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.authorized = Output.empty();
-        this.latencyMode = Output.empty();
-        this.name = Output.empty();
-        this.recordingConfigurationArn = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.authorized = Codegen.empty();
+        this.latencyMode = Codegen.empty();
+        this.name = Codegen.empty();
+        this.recordingConfigurationArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorized(@Nullable Boolean authorized) {
-            this.authorized = Output.ofNullable(authorized);
+            this.authorized = Codegen.ofNullable(authorized);
             return this;
         }
         public Builder latencyMode(@Nullable Output<ChannelLatencyMode> latencyMode) {
@@ -152,7 +153,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latencyMode(@Nullable ChannelLatencyMode latencyMode) {
-            this.latencyMode = Output.ofNullable(latencyMode);
+            this.latencyMode = Codegen.ofNullable(latencyMode);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -160,7 +161,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder recordingConfigurationArn(@Nullable Output<String> recordingConfigurationArn) {
@@ -168,7 +169,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recordingConfigurationArn(@Nullable String recordingConfigurationArn) {
-            this.recordingConfigurationArn = Output.ofNullable(recordingConfigurationArn);
+            this.recordingConfigurationArn = Codegen.ofNullable(recordingConfigurationArn);
             return this;
         }
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
@@ -176,7 +177,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ChannelTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ChannelTagArgs... tags) {
@@ -187,7 +188,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable ChannelType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ChannelArgs build() {
             return new ChannelArgs(authorized, latencyMode, name, recordingConfigurationArn, tags, type);

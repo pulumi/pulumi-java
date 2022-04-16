@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionVpcConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
     @Import(name="enableInterContainerTrafficEncryption")
       private final @Nullable Output<Boolean> enableInterContainerTrafficEncryption;
 
-    public Output<Boolean> getEnableInterContainerTrafficEncryption() {
-        return this.enableInterContainerTrafficEncryption == null ? Output.empty() : this.enableInterContainerTrafficEncryption;
+    public Output<Boolean> enableInterContainerTrafficEncryption() {
+        return this.enableInterContainerTrafficEncryption == null ? Codegen.empty() : this.enableInterContainerTrafficEncryption;
     }
 
     /**
@@ -37,15 +38,15 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
     @Import(name="enableNetworkIsolation")
       private final @Nullable Output<Boolean> enableNetworkIsolation;
 
-    public Output<Boolean> getEnableNetworkIsolation() {
-        return this.enableNetworkIsolation == null ? Output.empty() : this.enableNetworkIsolation;
+    public Output<Boolean> enableNetworkIsolation() {
+        return this.enableNetworkIsolation == null ? Codegen.empty() : this.enableNetworkIsolation;
     }
 
     @Import(name="vpcConfig")
       private final @Nullable Output<DataQualityJobDefinitionVpcConfigArgs> vpcConfig;
 
-    public Output<DataQualityJobDefinitionVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
+    public Output<DataQualityJobDefinitionVpcConfigArgs> vpcConfig() {
+        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 
     public DataQualityJobDefinitionNetworkConfigArgs(
@@ -58,9 +59,9 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
     }
 
     private DataQualityJobDefinitionNetworkConfigArgs() {
-        this.enableInterContainerTrafficEncryption = Output.empty();
-        this.enableNetworkIsolation = Output.empty();
-        this.vpcConfig = Output.empty();
+        this.enableInterContainerTrafficEncryption = Codegen.empty();
+        this.enableNetworkIsolation = Codegen.empty();
+        this.vpcConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
-            this.enableInterContainerTrafficEncryption = Output.ofNullable(enableInterContainerTrafficEncryption);
+            this.enableInterContainerTrafficEncryption = Codegen.ofNullable(enableInterContainerTrafficEncryption);
             return this;
         }
         public Builder enableNetworkIsolation(@Nullable Output<Boolean> enableNetworkIsolation) {
@@ -100,7 +101,7 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
-            this.enableNetworkIsolation = Output.ofNullable(enableNetworkIsolation);
+            this.enableNetworkIsolation = Codegen.ofNullable(enableNetworkIsolation);
             return this;
         }
         public Builder vpcConfig(@Nullable Output<DataQualityJobDefinitionVpcConfigArgs> vpcConfig) {
@@ -108,7 +109,7 @@ public final class DataQualityJobDefinitionNetworkConfigArgs extends io.pulumi.r
             return this;
         }
         public Builder vpcConfig(@Nullable DataQualityJobDefinitionVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Output.ofNullable(vpcConfig);
+            this.vpcConfig = Codegen.ofNullable(vpcConfig);
             return this;
         }        public DataQualityJobDefinitionNetworkConfigArgs build() {
             return new DataQualityJobDefinitionNetworkConfigArgs(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);

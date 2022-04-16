@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
-    public Output<Boolean> getIgnoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint == null ? Output.empty() : this.ignoreMissingVnetServiceEndpoint;
+    public Output<Boolean> ignoreMissingVnetServiceEndpoint() {
+        return this.ignoreMissingVnetServiceEndpoint == null ? Codegen.empty() : this.ignoreMissingVnetServiceEndpoint;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -44,7 +45,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -55,8 +56,8 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="virtualNetworkRuleName")
       private final @Nullable Output<String> virtualNetworkRuleName;
 
-    public Output<String> getVirtualNetworkRuleName() {
-        return this.virtualNetworkRuleName == null ? Output.empty() : this.virtualNetworkRuleName;
+    public Output<String> virtualNetworkRuleName() {
+        return this.virtualNetworkRuleName == null ? Codegen.empty() : this.virtualNetworkRuleName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="virtualNetworkSubnetId", required=true)
       private final Output<String> virtualNetworkSubnetId;
 
-    public Output<String> getVirtualNetworkSubnetId() {
+    public Output<String> virtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
     }
 
@@ -84,11 +85,11 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private VirtualNetworkRuleArgs() {
-        this.ignoreMissingVnetServiceEndpoint = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.virtualNetworkRuleName = Output.empty();
-        this.virtualNetworkSubnetId = Output.empty();
+        this.ignoreMissingVnetServiceEndpoint = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.virtualNetworkRuleName = Codegen.empty();
+        this.virtualNetworkSubnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = Output.ofNullable(ignoreMissingVnetServiceEndpoint);
+            this.ignoreMissingVnetServiceEndpoint = Codegen.ofNullable(ignoreMissingVnetServiceEndpoint);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -148,7 +149,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder virtualNetworkRuleName(@Nullable String virtualNetworkRuleName) {
-            this.virtualNetworkRuleName = Output.ofNullable(virtualNetworkRuleName);
+            this.virtualNetworkRuleName = Codegen.ofNullable(virtualNetworkRuleName);
             return this;
         }
         public Builder virtualNetworkSubnetId(Output<String> virtualNetworkSubnetId) {

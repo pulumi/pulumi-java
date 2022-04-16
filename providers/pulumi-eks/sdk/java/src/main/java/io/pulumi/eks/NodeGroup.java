@@ -8,6 +8,7 @@ import io.pulumi.aws.ec2.SecurityGroup;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.NodeGroupArgs;
 import io.pulumi.eks.Utilities;
 import java.lang.String;
@@ -31,7 +32,7 @@ public class NodeGroup extends io.pulumi.resources.ComponentResource {
      * @return The AutoScalingGroup name for the Node group.
      * 
      */
-    public Output<String> getAutoScalingGroupName() {
+    public Output<String> autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
     /**
@@ -45,7 +46,7 @@ public class NodeGroup extends io.pulumi.resources.ComponentResource {
      * @return The CloudFormation Stack which defines the Node AutoScalingGroup.
      * 
      */
-    public Output<Stack> getCfnStack() {
+    public Output<Stack> cfnStack() {
         return this.cfnStack;
     }
     /**
@@ -59,7 +60,7 @@ public class NodeGroup extends io.pulumi.resources.ComponentResource {
      * @return The additional security groups for the node group that captures user-specific rules.
      * 
      */
-    public Output<List<SecurityGroup>> getExtraNodeSecurityGroups() {
+    public Output<List<SecurityGroup>> extraNodeSecurityGroups() {
         return this.extraNodeSecurityGroups;
     }
     /**
@@ -73,7 +74,7 @@ public class NodeGroup extends io.pulumi.resources.ComponentResource {
      * @return The security group for the node group to communicate with the cluster.
      * 
      */
-    public Output<SecurityGroup> getNodeSecurityGroup() {
+    public Output<SecurityGroup> nodeSecurityGroup() {
         return this.nodeSecurityGroup;
     }
 
@@ -99,7 +100,7 @@ public class NodeGroup extends io.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeGroup(String name, NodeGroupArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("eks:index:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()), true);
+        super("eks:index:NodeGroup", name, args == null ? NodeGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

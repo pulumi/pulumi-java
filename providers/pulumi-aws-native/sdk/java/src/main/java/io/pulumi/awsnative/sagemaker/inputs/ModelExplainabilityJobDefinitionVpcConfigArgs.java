@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ModelExplainabilityJobDefinitionVpcConfigArgs extends io.pulu
     @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> getSecurityGroupIds() {
+    public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -36,7 +37,7 @@ public final class ModelExplainabilityJobDefinitionVpcConfigArgs extends io.pulu
     @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
 
@@ -48,8 +49,8 @@ public final class ModelExplainabilityJobDefinitionVpcConfigArgs extends io.pulu
     }
 
     private ModelExplainabilityJobDefinitionVpcConfigArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnets = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnets = Codegen.empty();
     }
 
     public static Builder builder() {

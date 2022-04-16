@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="sourceRegion", required=true)
       private final Output<String> sourceRegion;
 
-    public Output<String> getSourceRegion() {
+    public Output<String> sourceRegion() {
         return this.sourceRegion;
     }
 
@@ -35,7 +36,7 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
     @Import(name="targetRegion", required=true)
       private final Output<String> targetRegion;
 
-    public Output<String> getTargetRegion() {
+    public Output<String> targetRegion() {
         return this.targetRegion;
     }
 
@@ -47,8 +48,8 @@ public final class MoveCollectionPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private MoveCollectionPropertiesArgs() {
-        this.sourceRegion = Output.empty();
-        this.targetRegion = Output.empty();
+        this.sourceRegion = Codegen.empty();
+        this.targetRegion = Codegen.empty();
     }
 
     public static Builder builder() {

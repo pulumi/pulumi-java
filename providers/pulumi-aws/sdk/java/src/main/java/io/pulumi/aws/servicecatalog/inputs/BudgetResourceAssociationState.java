@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
     @Import(name="budgetName")
       private final @Nullable Output<String> budgetName;
 
-    public Output<String> getBudgetName() {
-        return this.budgetName == null ? Output.empty() : this.budgetName;
+    public Output<String> budgetName() {
+        return this.budgetName == null ? Codegen.empty() : this.budgetName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public BudgetResourceAssociationState(
@@ -44,8 +45,8 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
     }
 
     private BudgetResourceAssociationState() {
-        this.budgetName = Output.empty();
-        this.resourceId = Output.empty();
+        this.budgetName = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder budgetName(@Nullable String budgetName) {
-            this.budgetName = Output.ofNullable(budgetName);
+            this.budgetName = Codegen.ofNullable(budgetName);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -83,7 +84,7 @@ public final class BudgetResourceAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public BudgetResourceAssociationState build() {
             return new BudgetResourceAssociationState(budgetName, resourceId);

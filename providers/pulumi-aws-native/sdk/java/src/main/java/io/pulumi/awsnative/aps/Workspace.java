@@ -9,6 +9,7 @@ import io.pulumi.awsnative.aps.outputs.WorkspaceTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The AMP Workspace alert manager definition data
      * 
      */
-    public Output</* @Nullable */ String> getAlertManagerDefinition() {
+    public Output</* @Nullable */ String> alertManagerDefinition() {
         return this.alertManagerDefinition;
     }
     /**
@@ -46,7 +47,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return AMP Workspace alias.
      * 
      */
-    public Output</* @Nullable */ String> getAlias() {
+    public Output</* @Nullable */ String> alias() {
         return this.alias;
     }
     /**
@@ -60,7 +61,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Workspace arn.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -74,7 +75,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return AMP Workspace prometheus endpoint
      * 
      */
-    public Output<String> getPrometheusEndpoint() {
+    public Output<String> prometheusEndpoint() {
         return this.prometheusEndpoint;
     }
     /**
@@ -88,7 +89,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<WorkspaceTag>> getTags() {
+    public Output</* @Nullable */ List<WorkspaceTag>> tags() {
         return this.tags;
     }
     /**
@@ -102,7 +103,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Required to identify a specific APS Workspace.
      * 
      */
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -128,7 +129,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, @Nullable WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:aps:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:aps:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workspace(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

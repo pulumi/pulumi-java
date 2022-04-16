@@ -26,7 +26,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
-    public Optional<Integer> getDiskSizeGB() {
+    public Optional<Integer> diskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
     }
 
@@ -37,7 +37,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="lun", required=true)
       private final Integer lun;
 
-    public Integer getLun() {
+    public Integer lun() {
         return this.lun;
     }
 
@@ -48,7 +48,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name")
       private final @Nullable String name;
 
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
-    public Output<List<String>> getCategories() {
-        return this.categories == null ? Output.empty() : this.categories;
+    public Output<List<String>> categories() {
+        return this.categories == null ? Codegen.empty() : this.categories;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+    public Output<List<String>> excludes() {
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     @Import(name="exclusivePatches")
       private final @Nullable Output<List<String>> exclusivePatches;
 
-    public Output<List<String>> getExclusivePatches() {
-        return this.exclusivePatches == null ? Output.empty() : this.exclusivePatches;
+    public Output<List<String>> exclusivePatches() {
+        return this.exclusivePatches == null ? Codegen.empty() : this.exclusivePatches;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     @Import(name="severities")
       private final @Nullable Output<List<String>> severities;
 
-    public Output<List<String>> getSeverities() {
-        return this.severities == null ? Output.empty() : this.severities;
+    public Output<List<String>> severities() {
+        return this.severities == null ? Codegen.empty() : this.severities;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     @Import(name="withOptional")
       private final @Nullable Output<Boolean> withOptional;
 
-    public Output<Boolean> getWithOptional() {
-        return this.withOptional == null ? Output.empty() : this.withOptional;
+    public Output<Boolean> withOptional() {
+        return this.withOptional == null ? Codegen.empty() : this.withOptional;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     @Import(name="withUpdate")
       private final @Nullable Output<Boolean> withUpdate;
 
-    public Output<Boolean> getWithUpdate() {
-        return this.withUpdate == null ? Output.empty() : this.withUpdate;
+    public Output<Boolean> withUpdate() {
+        return this.withUpdate == null ? Codegen.empty() : this.withUpdate;
     }
 
     public PatchDeploymentPatchConfigZypperArgs(
@@ -99,12 +100,12 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
     }
 
     private PatchDeploymentPatchConfigZypperArgs() {
-        this.categories = Output.empty();
-        this.excludes = Output.empty();
-        this.exclusivePatches = Output.empty();
-        this.severities = Output.empty();
-        this.withOptional = Output.empty();
-        this.withUpdate = Output.empty();
+        this.categories = Codegen.empty();
+        this.excludes = Codegen.empty();
+        this.exclusivePatches = Codegen.empty();
+        this.severities = Codegen.empty();
+        this.withOptional = Codegen.empty();
+        this.withUpdate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
             return this;
         }
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Output.ofNullable(categories);
+            this.categories = Codegen.ofNullable(categories);
             return this;
         }
         public Builder categories(String... categories) {
@@ -153,7 +154,7 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
             return this;
         }
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder excludes(String... excludes) {
@@ -164,7 +165,7 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
             return this;
         }
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
-            this.exclusivePatches = Output.ofNullable(exclusivePatches);
+            this.exclusivePatches = Codegen.ofNullable(exclusivePatches);
             return this;
         }
         public Builder exclusivePatches(String... exclusivePatches) {
@@ -175,7 +176,7 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
             return this;
         }
         public Builder severities(@Nullable List<String> severities) {
-            this.severities = Output.ofNullable(severities);
+            this.severities = Codegen.ofNullable(severities);
             return this;
         }
         public Builder severities(String... severities) {
@@ -186,7 +187,7 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
             return this;
         }
         public Builder withOptional(@Nullable Boolean withOptional) {
-            this.withOptional = Output.ofNullable(withOptional);
+            this.withOptional = Codegen.ofNullable(withOptional);
             return this;
         }
         public Builder withUpdate(@Nullable Output<Boolean> withUpdate) {
@@ -194,7 +195,7 @@ public final class PatchDeploymentPatchConfigZypperArgs extends io.pulumi.resour
             return this;
         }
         public Builder withUpdate(@Nullable Boolean withUpdate) {
-            this.withUpdate = Output.ofNullable(withUpdate);
+            this.withUpdate = Codegen.ofNullable(withUpdate);
             return this;
         }        public PatchDeploymentPatchConfigZypperArgs build() {
             return new PatchDeploymentPatchConfigZypperArgs(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);

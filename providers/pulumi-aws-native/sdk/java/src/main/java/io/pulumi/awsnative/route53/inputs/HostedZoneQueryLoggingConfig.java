@@ -23,7 +23,7 @@ public final class HostedZoneQueryLoggingConfig extends io.pulumi.resources.Invo
     @Import(name="cloudWatchLogsLogGroupArn", required=true)
       private final String cloudWatchLogsLogGroupArn;
 
-    public String getCloudWatchLogsLogGroupArn() {
+    public String cloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
     }
 

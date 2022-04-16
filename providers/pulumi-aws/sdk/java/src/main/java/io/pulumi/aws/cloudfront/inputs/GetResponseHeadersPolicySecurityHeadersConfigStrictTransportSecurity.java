@@ -20,7 +20,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     @Import(name="accessControlMaxAgeSec", required=true)
       private final Integer accessControlMaxAgeSec;
 
-    public Integer getAccessControlMaxAgeSec() {
+    public Integer accessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
 
@@ -31,7 +31,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     @Import(name="includeSubdomains", required=true)
       private final Boolean includeSubdomains;
 
-    public Boolean getIncludeSubdomains() {
+    public Boolean includeSubdomains() {
         return this.includeSubdomains;
     }
 
@@ -42,7 +42,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 
@@ -53,7 +53,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     @Import(name="preload", required=true)
       private final Boolean preload;
 
-    public Boolean getPreload() {
+    public Boolean preload() {
         return this.preload;
     }
 

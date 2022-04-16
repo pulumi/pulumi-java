@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -44,7 +45,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the configuration of the node.
      * 
      */
-    public Output</* @Nullable */ DscConfigurationAssociationPropertyResponse> getConfiguration() {
+    public Output</* @Nullable */ DscConfigurationAssociationPropertyResponse> configuration() {
         return this.configuration;
     }
     /**
@@ -58,7 +59,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @return Gets or sets creation time.
      * 
      */
-    public Output</* @Nullable */ String> getCreationTime() {
+    public Output</* @Nullable */ String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -72,7 +73,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @return If a new build version of NodeConfiguration is required.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIncrementNodeConfigurationBuild() {
+    public Output</* @Nullable */ Boolean> incrementNodeConfigurationBuild() {
         return this.incrementNodeConfigurationBuild;
     }
     /**
@@ -86,7 +87,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> getLastModifiedTime() {
+    public Output</* @Nullable */ String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -100,7 +101,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @return Number of nodes with this node configuration assigned
      * 
      */
-    public Output</* @Nullable */ Double> getNodeCount() {
+    public Output</* @Nullable */ Double> nodeCount() {
         return this.nodeCount;
     }
     /**
@@ -128,7 +129,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @return Source of node configuration.
      * 
      */
-    public Output</* @Nullable */ String> getSource() {
+    public Output</* @Nullable */ String> source() {
         return this.source;
     }
     /**
@@ -142,7 +143,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +169,7 @@ public class DscNodeConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DscNodeConfiguration(String name, DscNodeConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:DscNodeConfiguration", name, args == null ? DscNodeConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:automation:DscNodeConfiguration", name, args == null ? DscNodeConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DscNodeConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

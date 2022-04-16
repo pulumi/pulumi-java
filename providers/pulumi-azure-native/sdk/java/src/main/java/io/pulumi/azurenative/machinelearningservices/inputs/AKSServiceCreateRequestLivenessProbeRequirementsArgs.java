@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
+    public Output<Integer> failureThreshold() {
+        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="initialDelaySeconds")
       private final @Nullable Output<Integer> initialDelaySeconds;
 
-    public Output<Integer> getInitialDelaySeconds() {
-        return this.initialDelaySeconds == null ? Output.empty() : this.initialDelaySeconds;
+    public Output<Integer> initialDelaySeconds() {
+        return this.initialDelaySeconds == null ? Codegen.empty() : this.initialDelaySeconds;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="periodSeconds")
       private final @Nullable Output<Integer> periodSeconds;
 
-    public Output<Integer> getPeriodSeconds() {
-        return this.periodSeconds == null ? Output.empty() : this.periodSeconds;
+    public Output<Integer> periodSeconds() {
+        return this.periodSeconds == null ? Codegen.empty() : this.periodSeconds;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
-    public Output<Integer> getSuccessThreshold() {
-        return this.successThreshold == null ? Output.empty() : this.successThreshold;
+    public Output<Integer> successThreshold() {
+        return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
+    public Output<Integer> timeoutSeconds() {
+        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
     public AKSServiceCreateRequestLivenessProbeRequirementsArgs(
@@ -87,11 +88,11 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
     }
 
     private AKSServiceCreateRequestLivenessProbeRequirementsArgs() {
-        this.failureThreshold = Output.empty();
-        this.initialDelaySeconds = Output.empty();
-        this.periodSeconds = Output.empty();
-        this.successThreshold = Output.empty();
-        this.timeoutSeconds = Output.empty();
+        this.failureThreshold = Codegen.empty();
+        this.initialDelaySeconds = Codegen.empty();
+        this.periodSeconds = Codegen.empty();
+        this.successThreshold = Codegen.empty();
+        this.timeoutSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
             return this;
         }
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Output.ofNullable(failureThreshold);
+            this.failureThreshold = Codegen.ofNullable(failureThreshold);
             return this;
         }
         public Builder initialDelaySeconds(@Nullable Output<Integer> initialDelaySeconds) {
@@ -135,7 +136,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
             return this;
         }
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
-            this.initialDelaySeconds = Output.ofNullable(initialDelaySeconds);
+            this.initialDelaySeconds = Codegen.ofNullable(initialDelaySeconds);
             return this;
         }
         public Builder periodSeconds(@Nullable Output<Integer> periodSeconds) {
@@ -143,7 +144,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
             return this;
         }
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
-            this.periodSeconds = Output.ofNullable(periodSeconds);
+            this.periodSeconds = Codegen.ofNullable(periodSeconds);
             return this;
         }
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
@@ -151,7 +152,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
             return this;
         }
         public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = Output.ofNullable(successThreshold);
+            this.successThreshold = Codegen.ofNullable(successThreshold);
             return this;
         }
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
@@ -159,7 +160,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
             return this;
         }
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
             return this;
         }        public AKSServiceCreateRequestLivenessProbeRequirementsArgs build() {
             return new AKSServiceCreateRequestLivenessProbeRequirementsArgs(failureThreshold, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);

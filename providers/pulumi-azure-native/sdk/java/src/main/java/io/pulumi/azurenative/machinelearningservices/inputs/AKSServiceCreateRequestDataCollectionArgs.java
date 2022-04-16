@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
     @Import(name="eventHubEnabled")
       private final @Nullable Output<Boolean> eventHubEnabled;
 
-    public Output<Boolean> getEventHubEnabled() {
-        return this.eventHubEnabled == null ? Output.empty() : this.eventHubEnabled;
+    public Output<Boolean> eventHubEnabled() {
+        return this.eventHubEnabled == null ? Codegen.empty() : this.eventHubEnabled;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
     @Import(name="storageEnabled")
       private final @Nullable Output<Boolean> storageEnabled;
 
-    public Output<Boolean> getStorageEnabled() {
-        return this.storageEnabled == null ? Output.empty() : this.storageEnabled;
+    public Output<Boolean> storageEnabled() {
+        return this.storageEnabled == null ? Codegen.empty() : this.storageEnabled;
     }
 
     public AKSServiceCreateRequestDataCollectionArgs(
@@ -48,8 +49,8 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
     }
 
     private AKSServiceCreateRequestDataCollectionArgs() {
-        this.eventHubEnabled = Output.empty();
-        this.storageEnabled = Output.empty();
+        this.eventHubEnabled = Codegen.empty();
+        this.storageEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
             return this;
         }
         public Builder eventHubEnabled(@Nullable Boolean eventHubEnabled) {
-            this.eventHubEnabled = Output.ofNullable(eventHubEnabled);
+            this.eventHubEnabled = Codegen.ofNullable(eventHubEnabled);
             return this;
         }
         public Builder storageEnabled(@Nullable Output<Boolean> storageEnabled) {
@@ -87,7 +88,7 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
             return this;
         }
         public Builder storageEnabled(@Nullable Boolean storageEnabled) {
-            this.storageEnabled = Output.ofNullable(storageEnabled);
+            this.storageEnabled = Codegen.ofNullable(storageEnabled);
             return this;
         }        public AKSServiceCreateRequestDataCollectionArgs build() {
             return new AKSServiceCreateRequestDataCollectionArgs(eventHubEnabled, storageEnabled);

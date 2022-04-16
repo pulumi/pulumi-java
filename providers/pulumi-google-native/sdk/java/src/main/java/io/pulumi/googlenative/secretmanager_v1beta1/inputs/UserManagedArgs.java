@@ -5,6 +5,7 @@ package io.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.ReplicaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicas", required=true)
       private final Output<List<ReplicaArgs>> replicas;
 
-    public Output<List<ReplicaArgs>> getReplicas() {
+    public Output<List<ReplicaArgs>> replicas() {
         return this.replicas;
     }
 
@@ -34,7 +35,7 @@ public final class UserManagedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserManagedArgs() {
-        this.replicas = Output.empty();
+        this.replicas = Codegen.empty();
     }
 
     public static Builder builder() {

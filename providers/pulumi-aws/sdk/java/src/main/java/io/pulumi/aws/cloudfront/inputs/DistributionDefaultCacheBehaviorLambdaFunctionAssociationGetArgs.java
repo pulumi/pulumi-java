@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationGetA
     @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
-    public Output<String> getEventType() {
+    public Output<String> eventType() {
         return this.eventType;
     }
 
@@ -34,8 +35,8 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationGetA
     @Import(name="includeBody")
       private final @Nullable Output<Boolean> includeBody;
 
-    public Output<Boolean> getIncludeBody() {
-        return this.includeBody == null ? Output.empty() : this.includeBody;
+    public Output<Boolean> includeBody() {
+        return this.includeBody == null ? Codegen.empty() : this.includeBody;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationGetA
     @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
 
-    public Output<String> getLambdaArn() {
+    public Output<String> lambdaArn() {
         return this.lambdaArn;
     }
 
@@ -59,9 +60,9 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationGetA
     }
 
     private DistributionDefaultCacheBehaviorLambdaFunctionAssociationGetArgs() {
-        this.eventType = Output.empty();
-        this.includeBody = Output.empty();
-        this.lambdaArn = Output.empty();
+        this.eventType = Codegen.empty();
+        this.includeBody = Codegen.empty();
+        this.lambdaArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class DistributionDefaultCacheBehaviorLambdaFunctionAssociationGetA
             return this;
         }
         public Builder includeBody(@Nullable Boolean includeBody) {
-            this.includeBody = Output.ofNullable(includeBody);
+            this.includeBody = Codegen.ofNullable(includeBody);
             return this;
         }
         public Builder lambdaArn(Output<String> lambdaArn) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.events;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -19,28 +20,28 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="eventPattern")
       private final @Nullable Output<Object> eventPattern;
 
-    public Output<Object> getEventPattern() {
-        return this.eventPattern == null ? Output.empty() : this.eventPattern;
+    public Output<Object> eventPattern() {
+        return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
     }
 
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+    public Output<Integer> retentionDays() {
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     @Import(name="sourceArn", required=true)
       private final Output<String> sourceArn;
 
-    public Output<String> getSourceArn() {
+    public Output<String> sourceArn() {
         return this.sourceArn;
     }
 
@@ -56,10 +57,10 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArchiveArgs() {
-        this.description = Output.empty();
-        this.eventPattern = Output.empty();
-        this.retentionDays = Output.empty();
-        this.sourceArn = Output.empty();
+        this.description = Codegen.empty();
+        this.eventPattern = Codegen.empty();
+        this.retentionDays = Codegen.empty();
+        this.sourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder eventPattern(@Nullable Output<Object> eventPattern) {
@@ -101,7 +102,7 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventPattern(@Nullable Object eventPattern) {
-            this.eventPattern = Output.ofNullable(eventPattern);
+            this.eventPattern = Codegen.ofNullable(eventPattern);
             return this;
         }
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
@@ -109,7 +110,7 @@ public final class ArchiveArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }
         public Builder sourceArn(Output<String> sourceArn) {

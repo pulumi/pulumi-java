@@ -6,6 +6,7 @@ package io.pulumi.azurenative.mixedreality.inputs;
 import io.pulumi.azurenative.mixedreality.enums.ResourceIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class ObjectAnchorsAccountIdentityArgs extends io.pulumi.resources.
     @Import(name="type")
       private final @Nullable Output<ResourceIdentityType> type;
 
-    public Output<ResourceIdentityType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<ResourceIdentityType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ObjectAnchorsAccountIdentityArgs(@Nullable Output<ResourceIdentityType> type) {
@@ -30,7 +31,7 @@ public final class ObjectAnchorsAccountIdentityArgs extends io.pulumi.resources.
     }
 
     private ObjectAnchorsAccountIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ObjectAnchorsAccountIdentityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder type(@Nullable ResourceIdentityType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ObjectAnchorsAccountIdentityArgs build() {
             return new ObjectAnchorsAccountIdentityArgs(type);

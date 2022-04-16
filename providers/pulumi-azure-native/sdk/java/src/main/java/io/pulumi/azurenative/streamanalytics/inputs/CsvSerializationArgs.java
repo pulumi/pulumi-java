@@ -7,6 +7,7 @@ import io.pulumi.azurenative.streamanalytics.enums.Encoding;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="encoding")
       private final @Nullable Output<Either<String,Encoding>> encoding;
 
-    public Output<Either<String,Encoding>> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+    public Output<Either<String,Encoding>> encoding() {
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
 
-    public Output<String> getFieldDelimiter() {
-        return this.fieldDelimiter == null ? Output.empty() : this.fieldDelimiter;
+    public Output<String> fieldDelimiter() {
+        return this.fieldDelimiter == null ? Codegen.empty() : this.fieldDelimiter;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -64,9 +65,9 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CsvSerializationArgs() {
-        this.encoding = Output.empty();
-        this.fieldDelimiter = Output.empty();
-        this.type = Output.empty();
+        this.encoding = Codegen.empty();
+        this.fieldDelimiter = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder encoding(@Nullable Either<String,Encoding> encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder fieldDelimiter(@Nullable Output<String> fieldDelimiter) {
@@ -106,7 +107,7 @@ public final class CsvSerializationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
-            this.fieldDelimiter = Output.ofNullable(fieldDelimiter);
+            this.fieldDelimiter = Codegen.ofNullable(fieldDelimiter);
             return this;
         }
         public Builder type(Output<String> type) {

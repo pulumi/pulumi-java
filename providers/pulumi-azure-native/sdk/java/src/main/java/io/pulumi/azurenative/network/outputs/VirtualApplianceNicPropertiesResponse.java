@@ -39,21 +39,21 @@ public final class VirtualApplianceNicPropertiesResponse {
      * NIC name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Private IP address.
      * 
     */
-    public String getPrivateIpAddress() {
+    public String privateIpAddress() {
         return this.privateIpAddress;
     }
     /**
      * Public IP address.
      * 
     */
-    public String getPublicIpAddress() {
+    public String publicIpAddress() {
         return this.publicIpAddress;
     }
 

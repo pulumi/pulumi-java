@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
-    public Output<Boolean> getAllowLeadingAndTrailingSpacesAndZeroes() {
+    public Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -39,7 +40,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="checkDuplicateGroupControlNumber", required=true)
       private final Output<Boolean> checkDuplicateGroupControlNumber;
 
-    public Output<Boolean> getCheckDuplicateGroupControlNumber() {
+    public Output<Boolean> checkDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
     }
 
@@ -50,7 +51,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="checkDuplicateInterchangeControlNumber", required=true)
       private final Output<Boolean> checkDuplicateInterchangeControlNumber;
 
-    public Output<Boolean> getCheckDuplicateInterchangeControlNumber() {
+    public Output<Boolean> checkDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
     }
 
@@ -61,7 +62,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="checkDuplicateTransactionSetControlNumber", required=true)
       private final Output<Boolean> checkDuplicateTransactionSetControlNumber;
 
-    public Output<Boolean> getCheckDuplicateTransactionSetControlNumber() {
+    public Output<Boolean> checkDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
     }
 
@@ -72,7 +73,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="interchangeControlNumberValidityDays", required=true)
       private final Output<Integer> interchangeControlNumberValidityDays;
 
-    public Output<Integer> getInterchangeControlNumberValidityDays() {
+    public Output<Integer> interchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
     }
 
@@ -83,7 +84,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="trailingSeparatorPolicy", required=true)
       private final Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
-    public Output<Either<String,TrailingSeparatorPolicy>> getTrailingSeparatorPolicy() {
+    public Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
 
@@ -94,7 +95,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
-    public Output<Boolean> getTrimLeadingAndTrailingSpacesAndZeroes() {
+    public Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -105,7 +106,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="validateCharacterSet", required=true)
       private final Output<Boolean> validateCharacterSet;
 
-    public Output<Boolean> getValidateCharacterSet() {
+    public Output<Boolean> validateCharacterSet() {
         return this.validateCharacterSet;
     }
 
@@ -116,7 +117,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="validateEDITypes", required=true)
       private final Output<Boolean> validateEDITypes;
 
-    public Output<Boolean> getValidateEDITypes() {
+    public Output<Boolean> validateEDITypes() {
         return this.validateEDITypes;
     }
 
@@ -127,7 +128,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     @Import(name="validateXSDTypes", required=true)
       private final Output<Boolean> validateXSDTypes;
 
-    public Output<Boolean> getValidateXSDTypes() {
+    public Output<Boolean> validateXSDTypes() {
         return this.validateXSDTypes;
     }
 
@@ -155,16 +156,16 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
     }
 
     private EdifactValidationSettingsArgs() {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Output.empty();
-        this.checkDuplicateGroupControlNumber = Output.empty();
-        this.checkDuplicateInterchangeControlNumber = Output.empty();
-        this.checkDuplicateTransactionSetControlNumber = Output.empty();
-        this.interchangeControlNumberValidityDays = Output.empty();
-        this.trailingSeparatorPolicy = Output.empty();
-        this.trimLeadingAndTrailingSpacesAndZeroes = Output.empty();
-        this.validateCharacterSet = Output.empty();
-        this.validateEDITypes = Output.empty();
-        this.validateXSDTypes = Output.empty();
+        this.allowLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
+        this.checkDuplicateGroupControlNumber = Codegen.empty();
+        this.checkDuplicateInterchangeControlNumber = Codegen.empty();
+        this.checkDuplicateTransactionSetControlNumber = Codegen.empty();
+        this.interchangeControlNumberValidityDays = Codegen.empty();
+        this.trailingSeparatorPolicy = Codegen.empty();
+        this.trimLeadingAndTrailingSpacesAndZeroes = Codegen.empty();
+        this.validateCharacterSet = Codegen.empty();
+        this.validateEDITypes = Codegen.empty();
+        this.validateXSDTypes = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.networkmanager.outputs.DeviceTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The description of the device.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -45,7 +46,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the device.
      * 
      */
-    public Output<String> getDeviceArn() {
+    public Output<String> deviceArn() {
         return this.deviceArn;
     }
     /**
@@ -59,7 +60,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The ID of the device.
      * 
      */
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
     /**
@@ -73,7 +74,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The ID of the global network.
      * 
      */
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
     /**
@@ -87,7 +88,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The site location.
      * 
      */
-    public Output</* @Nullable */ DeviceLocation> getLocation() {
+    public Output</* @Nullable */ DeviceLocation> location() {
         return this.location;
     }
     /**
@@ -101,7 +102,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The device model
      * 
      */
-    public Output</* @Nullable */ String> getModel() {
+    public Output</* @Nullable */ String> model() {
         return this.model;
     }
     /**
@@ -115,7 +116,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The device serial number.
      * 
      */
-    public Output</* @Nullable */ String> getSerialNumber() {
+    public Output</* @Nullable */ String> serialNumber() {
         return this.serialNumber;
     }
     /**
@@ -129,7 +130,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The site ID.
      * 
      */
-    public Output</* @Nullable */ String> getSiteId() {
+    public Output</* @Nullable */ String> siteId() {
         return this.siteId;
     }
     /**
@@ -143,7 +144,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The tags for the device.
      * 
      */
-    public Output</* @Nullable */ List<DeviceTag>> getTags() {
+    public Output</* @Nullable */ List<DeviceTag>> tags() {
         return this.tags;
     }
     /**
@@ -157,7 +158,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The device type.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
     /**
@@ -171,7 +172,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The device vendor.
      * 
      */
-    public Output</* @Nullable */ String> getVendor() {
+    public Output</* @Nullable */ String> vendor() {
         return this.vendor;
     }
 
@@ -197,7 +198,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Device(String name, DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkmanager:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkmanager:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Device(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

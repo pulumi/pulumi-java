@@ -24,7 +24,7 @@ public final class NetworkProfileResponseOutboundIPs extends io.pulumi.resources
     @Import(name="publicIPs", required=true)
       private final List<String> publicIPs;
 
-    public List<String> getPublicIPs() {
+    public List<String> publicIPs() {
         return this.publicIPs;
     }
 

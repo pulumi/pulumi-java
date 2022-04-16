@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="keyIdentifier")
       private final @Nullable Output<String> keyIdentifier;
 
-    public Output<String> getKeyIdentifier() {
-        return this.keyIdentifier == null ? Output.empty() : this.keyIdentifier;
+    public Output<String> keyIdentifier() {
+        return this.keyIdentifier == null ? Codegen.empty() : this.keyIdentifier;
     }
 
     public KeyVaultPropertiesArgs(@Nullable Output<String> keyIdentifier) {
@@ -38,7 +39,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private KeyVaultPropertiesArgs() {
-        this.keyIdentifier = Output.empty();
+        this.keyIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -66,7 +67,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
-            this.keyIdentifier = Output.ofNullable(keyIdentifier);
+            this.keyIdentifier = Codegen.ofNullable(keyIdentifier);
             return this;
         }        public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(keyIdentifier);

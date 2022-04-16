@@ -5,6 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     @Import(name="deleteOnTermination")
       private final @Nullable Output<String> deleteOnTermination;
 
-    public Output<String> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+    public Output<String> deleteOnTermination() {
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     @Import(name="encrypted")
       private final @Nullable Output<String> encrypted;
 
-    public Output<String> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+    public Output<String> encrypted() {
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
-    public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+    public Output<Integer> iops() {
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+    public Output<String> snapshotId() {
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Output.empty() : this.volumeSize;
+    public Output<Integer> volumeSize() {
+        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
-    public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+    public Output<String> volumeType() {
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public ImageRecipeBlockDeviceMappingEbsGetArgs(
@@ -110,13 +111,13 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
     }
 
     private ImageRecipeBlockDeviceMappingEbsGetArgs() {
-        this.deleteOnTermination = Output.empty();
-        this.encrypted = Output.empty();
-        this.iops = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.snapshotId = Output.empty();
-        this.volumeSize = Output.empty();
-        this.volumeType = Output.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.snapshotId = Codegen.empty();
+        this.volumeSize = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder deleteOnTermination(@Nullable String deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder encrypted(@Nullable Output<String> encrypted) {
@@ -164,7 +165,7 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder encrypted(@Nullable String encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -172,7 +173,7 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -180,7 +181,7 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
@@ -188,7 +189,7 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
@@ -196,7 +197,7 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Output.ofNullable(volumeSize);
+            this.volumeSize = Codegen.ofNullable(volumeSize);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -204,7 +205,7 @@ public final class ImageRecipeBlockDeviceMappingEbsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public ImageRecipeBlockDeviceMappingEbsGetArgs build() {
             return new ImageRecipeBlockDeviceMappingEbsGetArgs(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, volumeSize, volumeType);

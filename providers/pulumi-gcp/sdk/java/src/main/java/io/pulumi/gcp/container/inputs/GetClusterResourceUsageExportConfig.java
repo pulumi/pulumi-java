@@ -17,21 +17,21 @@ public final class GetClusterResourceUsageExportConfig extends io.pulumi.resourc
     @Import(name="bigqueryDestinations", required=true)
       private final List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations;
 
-    public List<GetClusterResourceUsageExportConfigBigqueryDestination> getBigqueryDestinations() {
+    public List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations() {
         return this.bigqueryDestinations;
     }
 
     @Import(name="enableNetworkEgressMetering", required=true)
       private final Boolean enableNetworkEgressMetering;
 
-    public Boolean getEnableNetworkEgressMetering() {
+    public Boolean enableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }
 
     @Import(name="enableResourceConsumptionMetering", required=true)
       private final Boolean enableResourceConsumptionMetering;
 
-    public Boolean getEnableResourceConsumptionMetering() {
+    public Boolean enableResourceConsumptionMetering() {
         return this.enableResourceConsumptionMetering;
     }
 

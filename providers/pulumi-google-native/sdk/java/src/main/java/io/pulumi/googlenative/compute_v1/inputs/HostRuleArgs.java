@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hosts")
       private final @Nullable Output<List<String>> hosts;
 
-    public Output<List<String>> getHosts() {
-        return this.hosts == null ? Output.empty() : this.hosts;
+    public Output<List<String>> hosts() {
+        return this.hosts == null ? Codegen.empty() : this.hosts;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pathMatcher")
       private final @Nullable Output<String> pathMatcher;
 
-    public Output<String> getPathMatcher() {
-        return this.pathMatcher == null ? Output.empty() : this.pathMatcher;
+    public Output<String> pathMatcher() {
+        return this.pathMatcher == null ? Codegen.empty() : this.pathMatcher;
     }
 
     public HostRuleArgs(
@@ -62,9 +63,9 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HostRuleArgs() {
-        this.description = Output.empty();
-        this.hosts = Output.empty();
-        this.pathMatcher = Output.empty();
+        this.description = Codegen.empty();
+        this.hosts = Codegen.empty();
+        this.pathMatcher = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hosts(@Nullable Output<List<String>> hosts) {
@@ -104,7 +105,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hosts(@Nullable List<String> hosts) {
-            this.hosts = Output.ofNullable(hosts);
+            this.hosts = Codegen.ofNullable(hosts);
             return this;
         }
         public Builder hosts(String... hosts) {
@@ -115,7 +116,7 @@ public final class HostRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pathMatcher(@Nullable String pathMatcher) {
-            this.pathMatcher = Output.ofNullable(pathMatcher);
+            this.pathMatcher = Codegen.ofNullable(pathMatcher);
             return this;
         }        public HostRuleArgs build() {
             return new HostRuleArgs(description, hosts, pathMatcher);

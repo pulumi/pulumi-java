@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
-    public Output<String> getMetricName() {
+    public Output<String> metricName() {
         return this.metricName;
     }
 
@@ -32,7 +33,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     @Import(name="metricNamespace", required=true)
       private final Output<String> metricNamespace;
 
-    public Output<String> getMetricNamespace() {
+    public Output<String> metricNamespace() {
         return this.metricNamespace;
     }
 
@@ -43,8 +44,8 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     @Import(name="metricTimestamp")
       private final @Nullable Output<String> metricTimestamp;
 
-    public Output<String> getMetricTimestamp() {
-        return this.metricTimestamp == null ? Output.empty() : this.metricTimestamp;
+    public Output<String> metricTimestamp() {
+        return this.metricTimestamp == null ? Codegen.empty() : this.metricTimestamp;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     @Import(name="metricUnit", required=true)
       private final Output<String> metricUnit;
 
-    public Output<String> getMetricUnit() {
+    public Output<String> metricUnit() {
         return this.metricUnit;
     }
 
@@ -65,7 +66,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     @Import(name="metricValue", required=true)
       private final Output<String> metricValue;
 
-    public Output<String> getMetricValue() {
+    public Output<String> metricValue() {
         return this.metricValue;
     }
 
@@ -76,7 +77,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -96,12 +97,12 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
     }
 
     private TopicRuleCloudwatchMetricArgs() {
-        this.metricName = Output.empty();
-        this.metricNamespace = Output.empty();
-        this.metricTimestamp = Output.empty();
-        this.metricUnit = Output.empty();
-        this.metricValue = Output.empty();
-        this.roleArn = Output.empty();
+        this.metricName = Codegen.empty();
+        this.metricNamespace = Codegen.empty();
+        this.metricTimestamp = Codegen.empty();
+        this.metricUnit = Codegen.empty();
+        this.metricValue = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder metricTimestamp(@Nullable String metricTimestamp) {
-            this.metricTimestamp = Output.ofNullable(metricTimestamp);
+            this.metricTimestamp = Codegen.ofNullable(metricTimestamp);
             return this;
         }
         public Builder metricUnit(Output<String> metricUnit) {

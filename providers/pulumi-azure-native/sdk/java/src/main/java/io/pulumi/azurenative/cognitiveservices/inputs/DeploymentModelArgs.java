@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<String> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public DeploymentModelArgs(
@@ -61,9 +62,9 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DeploymentModelArgs() {
-        this.format = Output.empty();
-        this.name = Output.empty();
-        this.version = Output.empty();
+        this.format = Codegen.empty();
+        this.name = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -103,7 +104,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -111,7 +112,7 @@ public final class DeploymentModelArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public DeploymentModelArgs build() {
             return new DeploymentModelArgs(format, name, version);

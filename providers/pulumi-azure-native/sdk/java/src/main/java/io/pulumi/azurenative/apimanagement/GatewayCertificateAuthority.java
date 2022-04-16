@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * @return Determines whether certificate authority is trusted.
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsTrusted() {
+    public Output</* @Nullable */ Boolean> isTrusted() {
         return this.isTrusted;
     }
     /**
@@ -56,7 +57,7 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -96,7 +97,7 @@ public class GatewayCertificateAuthority extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayCertificateAuthority(String name, GatewayCertificateAuthorityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:GatewayCertificateAuthority", name, args == null ? GatewayCertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:GatewayCertificateAuthority", name, args == null ? GatewayCertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GatewayCertificateAuthority(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

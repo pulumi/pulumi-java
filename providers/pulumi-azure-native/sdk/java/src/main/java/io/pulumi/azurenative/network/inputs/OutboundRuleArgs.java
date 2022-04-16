@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,8 +32,8 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allocatedOutboundPorts")
       private final @Nullable Output<Integer> allocatedOutboundPorts;
 
-    public Output<Integer> getAllocatedOutboundPorts() {
-        return this.allocatedOutboundPorts == null ? Output.empty() : this.allocatedOutboundPorts;
+    public Output<Integer> allocatedOutboundPorts() {
+        return this.allocatedOutboundPorts == null ? Codegen.empty() : this.allocatedOutboundPorts;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backendAddressPool", required=true)
       private final Output<SubResourceArgs> backendAddressPool;
 
-    public Output<SubResourceArgs> getBackendAddressPool() {
+    public Output<SubResourceArgs> backendAddressPool() {
         return this.backendAddressPool;
     }
 
@@ -53,8 +54,8 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableTcpReset")
       private final @Nullable Output<Boolean> enableTcpReset;
 
-    public Output<Boolean> getEnableTcpReset() {
-        return this.enableTcpReset == null ? Output.empty() : this.enableTcpReset;
+    public Output<Boolean> enableTcpReset() {
+        return this.enableTcpReset == null ? Codegen.empty() : this.enableTcpReset;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="frontendIPConfigurations", required=true)
       private final Output<List<SubResourceArgs>> frontendIPConfigurations;
 
-    public Output<List<SubResourceArgs>> getFrontendIPConfigurations() {
+    public Output<List<SubResourceArgs>> frontendIPConfigurations() {
         return this.frontendIPConfigurations;
     }
 
@@ -75,8 +76,8 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Output<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
+    public Output<Integer> idleTimeoutInMinutes() {
+        return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
       private final Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol;
 
-    public Output<Either<String,LoadBalancerOutboundRuleProtocol>> getProtocol() {
+    public Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol() {
         return this.protocol;
     }
 
@@ -132,14 +133,14 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OutboundRuleArgs() {
-        this.allocatedOutboundPorts = Output.empty();
-        this.backendAddressPool = Output.empty();
-        this.enableTcpReset = Output.empty();
-        this.frontendIPConfigurations = Output.empty();
-        this.id = Output.empty();
-        this.idleTimeoutInMinutes = Output.empty();
-        this.name = Output.empty();
-        this.protocol = Output.empty();
+        this.allocatedOutboundPorts = Codegen.empty();
+        this.backendAddressPool = Codegen.empty();
+        this.enableTcpReset = Codegen.empty();
+        this.frontendIPConfigurations = Codegen.empty();
+        this.id = Codegen.empty();
+        this.idleTimeoutInMinutes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
-            this.allocatedOutboundPorts = Output.ofNullable(allocatedOutboundPorts);
+            this.allocatedOutboundPorts = Codegen.ofNullable(allocatedOutboundPorts);
             return this;
         }
         public Builder backendAddressPool(Output<SubResourceArgs> backendAddressPool) {
@@ -197,7 +198,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = Output.ofNullable(enableTcpReset);
+            this.enableTcpReset = Codegen.ofNullable(enableTcpReset);
             return this;
         }
         public Builder frontendIPConfigurations(Output<List<SubResourceArgs>> frontendIPConfigurations) {
@@ -216,7 +217,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
@@ -224,7 +225,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Codegen.ofNullable(idleTimeoutInMinutes);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -232,7 +233,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder protocol(Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol) {

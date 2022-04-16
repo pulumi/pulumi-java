@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ThemeMarginStyleArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="show")
       private final @Nullable Output<Boolean> show;
 
-    public Output<Boolean> getShow() {
-        return this.show == null ? Output.empty() : this.show;
+    public Output<Boolean> show() {
+        return this.show == null ? Codegen.empty() : this.show;
     }
 
     public ThemeMarginStyleArgs(@Nullable Output<Boolean> show) {
@@ -34,7 +35,7 @@ public final class ThemeMarginStyleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ThemeMarginStyleArgs() {
-        this.show = Output.empty();
+        this.show = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ThemeMarginStyleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder show(@Nullable Boolean show) {
-            this.show = Output.ofNullable(show);
+            this.show = Codegen.ofNullable(show);
             return this;
         }        public ThemeMarginStyleArgs build() {
             return new ThemeMarginStyleArgs(show);

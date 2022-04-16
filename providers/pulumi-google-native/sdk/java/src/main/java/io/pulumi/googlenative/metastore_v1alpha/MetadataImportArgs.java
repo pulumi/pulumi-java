@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.DatabaseDumpArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseDump")
       private final @Nullable Output<DatabaseDumpArgs> databaseDump;
 
-    public Output<DatabaseDumpArgs> getDatabaseDump() {
-        return this.databaseDump == null ? Output.empty() : this.databaseDump;
+    public Output<DatabaseDumpArgs> databaseDump() {
+        return this.databaseDump == null ? Codegen.empty() : this.databaseDump;
     }
 
     /**
@@ -33,21 +34,21 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="metadataImportId", required=true)
       private final Output<String> metadataImportId;
 
-    public Output<String> getMetadataImportId() {
+    public Output<String> metadataImportId() {
         return this.metadataImportId;
     }
 
@@ -58,28 +59,28 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
-    public Output<String> getServiceId() {
+    public Output<String> serviceId() {
         return this.serviceId;
     }
 
@@ -103,14 +104,14 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataImportArgs() {
-        this.databaseDump = Output.empty();
-        this.description = Output.empty();
-        this.location = Output.empty();
-        this.metadataImportId = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.serviceId = Output.empty();
+        this.databaseDump = Codegen.empty();
+        this.description = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadataImportId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.serviceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseDump(@Nullable DatabaseDumpArgs databaseDump) {
-            this.databaseDump = Output.ofNullable(databaseDump);
+            this.databaseDump = Codegen.ofNullable(databaseDump);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -160,7 +161,7 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -168,7 +169,7 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadataImportId(Output<String> metadataImportId) {
@@ -184,7 +185,7 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -192,7 +193,7 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -200,7 +201,7 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder serviceId(Output<String> serviceId) {

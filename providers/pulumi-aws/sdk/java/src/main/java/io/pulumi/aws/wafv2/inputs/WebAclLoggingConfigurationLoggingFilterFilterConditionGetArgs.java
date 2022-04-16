@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterC
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
     @Import(name="actionCondition")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> getActionCondition() {
-        return this.actionCondition == null ? Output.empty() : this.actionCondition;
+    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition() {
+        return this.actionCondition == null ? Codegen.empty() : this.actionCondition;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
     @Import(name="labelNameCondition")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition;
 
-    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> getLabelNameCondition() {
-        return this.labelNameCondition == null ? Output.empty() : this.labelNameCondition;
+    public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition() {
+        return this.labelNameCondition == null ? Codegen.empty() : this.labelNameCondition;
     }
 
     public WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs(
@@ -45,8 +46,8 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
     }
 
     private WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs() {
-        this.actionCondition = Output.empty();
-        this.labelNameCondition = Output.empty();
+        this.actionCondition = Codegen.empty();
+        this.labelNameCondition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
             return this;
         }
         public Builder actionCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs actionCondition) {
-            this.actionCondition = Output.ofNullable(actionCondition);
+            this.actionCondition = Codegen.ofNullable(actionCondition);
             return this;
         }
         public Builder labelNameCondition(@Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition) {
@@ -84,7 +85,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
             return this;
         }
         public Builder labelNameCondition(@Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs labelNameCondition) {
-            this.labelNameCondition = Output.ofNullable(labelNameCondition);
+            this.labelNameCondition = Codegen.ofNullable(labelNameCondition);
             return this;
         }        public WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs build() {
             return new WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs(actionCondition, labelNameCondition);

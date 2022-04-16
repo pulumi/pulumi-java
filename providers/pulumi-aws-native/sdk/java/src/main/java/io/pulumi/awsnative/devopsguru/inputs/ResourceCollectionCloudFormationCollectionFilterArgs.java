@@ -5,6 +5,7 @@ package io.pulumi.awsnative.devopsguru.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
     @Import(name="stackNames")
       private final @Nullable Output<List<String>> stackNames;
 
-    public Output<List<String>> getStackNames() {
-        return this.stackNames == null ? Output.empty() : this.stackNames;
+    public Output<List<String>> stackNames() {
+        return this.stackNames == null ? Codegen.empty() : this.stackNames;
     }
 
     public ResourceCollectionCloudFormationCollectionFilterArgs(@Nullable Output<List<String>> stackNames) {
@@ -35,7 +36,7 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
     }
 
     private ResourceCollectionCloudFormationCollectionFilterArgs() {
-        this.stackNames = Output.empty();
+        this.stackNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
             return this;
         }
         public Builder stackNames(@Nullable List<String> stackNames) {
-            this.stackNames = Output.ofNullable(stackNames);
+            this.stackNames = Codegen.ofNullable(stackNames);
             return this;
         }
         public Builder stackNames(String... stackNames) {

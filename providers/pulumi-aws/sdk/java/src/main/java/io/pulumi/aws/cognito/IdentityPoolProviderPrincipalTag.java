@@ -9,6 +9,7 @@ import io.pulumi.aws.cognito.inputs.IdentityPoolProviderPrincipalTagState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -39,7 +40,7 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
      * @return An identity pool ID in the format REGION:GUID.
      * 
      */
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
     /**
@@ -57,19 +58,19 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
      * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
      * 
      */
-    public Output<String> getIdentityProviderName() {
+    public Output<String> identityProviderName() {
         return this.identityProviderName;
     }
     @Export(name="principalTags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> principalTags;
 
-    public Output</* @Nullable */ Map<String,String>> getPrincipalTags() {
+    public Output</* @Nullable */ Map<String,String>> principalTags() {
         return this.principalTags;
     }
     @Export(name="useDefaults", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useDefaults;
 
-    public Output</* @Nullable */ Boolean> getUseDefaults() {
+    public Output</* @Nullable */ Boolean> useDefaults() {
         return this.useDefaults;
     }
 
@@ -95,7 +96,7 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityPoolProviderPrincipalTag(String name, IdentityPoolProviderPrincipalTagArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag", name, args == null ? IdentityPoolProviderPrincipalTagArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cognito/identityPoolProviderPrincipalTag:IdentityPoolProviderPrincipalTag", name, args == null ? IdentityPoolProviderPrincipalTagArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IdentityPoolProviderPrincipalTag(String name, Output<String> id, @Nullable IdentityPoolProviderPrincipalTagState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

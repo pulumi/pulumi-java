@@ -6,6 +6,7 @@ package io.pulumi.azurenative.offazure;
 import io.pulumi.azurenative.offazure.inputs.SitePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+    public Output<String> eTag() {
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="properties")
       private final @Nullable Output<SitePropertiesArgs> properties;
 
-    public Output<SitePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<SitePropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,15 +79,15 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteName")
       private final @Nullable Output<String> siteName;
 
-    public Output<String> getSiteName() {
-        return this.siteName == null ? Output.empty() : this.siteName;
+    public Output<String> siteName() {
+        return this.siteName == null ? Codegen.empty() : this.siteName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public HyperVSiteArgs(
@@ -107,13 +108,13 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HyperVSiteArgs() {
-        this.eTag = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.siteName = Output.empty();
-        this.tags = Output.empty();
+        this.eTag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.siteName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -161,7 +162,7 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -169,7 +170,7 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<SitePropertiesArgs> properties) {
@@ -177,7 +178,7 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable SitePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -193,7 +194,7 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder siteName(@Nullable String siteName) {
-            this.siteName = Output.ofNullable(siteName);
+            this.siteName = Codegen.ofNullable(siteName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -201,7 +202,7 @@ public final class HyperVSiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public HyperVSiteArgs build() {
             return new HyperVSiteArgs(eTag, location, name, properties, resourceGroupName, siteName, tags);

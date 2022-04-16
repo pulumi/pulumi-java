@@ -24,7 +24,7 @@ public final class NodeNetworkConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="createPodRange", required=true)
       private final Boolean createPodRange;
 
-    public Boolean getCreatePodRange() {
+    public Boolean createPodRange() {
         return this.createPodRange;
     }
 
@@ -35,7 +35,7 @@ public final class NodeNetworkConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="podIpv4CidrBlock", required=true)
       private final String podIpv4CidrBlock;
 
-    public String getPodIpv4CidrBlock() {
+    public String podIpv4CidrBlock() {
         return this.podIpv4CidrBlock;
     }
 
@@ -46,7 +46,7 @@ public final class NodeNetworkConfigResponse extends io.pulumi.resources.InvokeA
     @Import(name="podRange", required=true)
       private final String podRange;
 
-    public String getPodRange() {
+    public String podRange() {
         return this.podRange;
     }
 

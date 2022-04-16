@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.ClusterResourceUsageExportConfigBigqueryDestinationGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ClusterResourceUsageExportConfigGetArgs extends io.pulumi.res
     @Import(name="bigqueryDestination", required=true)
       private final Output<ClusterResourceUsageExportConfigBigqueryDestinationGetArgs> bigqueryDestination;
 
-    public Output<ClusterResourceUsageExportConfigBigqueryDestinationGetArgs> getBigqueryDestination() {
+    public Output<ClusterResourceUsageExportConfigBigqueryDestinationGetArgs> bigqueryDestination() {
         return this.bigqueryDestination;
     }
 
@@ -34,8 +35,8 @@ public final class ClusterResourceUsageExportConfigGetArgs extends io.pulumi.res
     @Import(name="enableNetworkEgressMetering")
       private final @Nullable Output<Boolean> enableNetworkEgressMetering;
 
-    public Output<Boolean> getEnableNetworkEgressMetering() {
-        return this.enableNetworkEgressMetering == null ? Output.empty() : this.enableNetworkEgressMetering;
+    public Output<Boolean> enableNetworkEgressMetering() {
+        return this.enableNetworkEgressMetering == null ? Codegen.empty() : this.enableNetworkEgressMetering;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ClusterResourceUsageExportConfigGetArgs extends io.pulumi.res
     @Import(name="enableResourceConsumptionMetering")
       private final @Nullable Output<Boolean> enableResourceConsumptionMetering;
 
-    public Output<Boolean> getEnableResourceConsumptionMetering() {
-        return this.enableResourceConsumptionMetering == null ? Output.empty() : this.enableResourceConsumptionMetering;
+    public Output<Boolean> enableResourceConsumptionMetering() {
+        return this.enableResourceConsumptionMetering == null ? Codegen.empty() : this.enableResourceConsumptionMetering;
     }
 
     public ClusterResourceUsageExportConfigGetArgs(
@@ -63,9 +64,9 @@ public final class ClusterResourceUsageExportConfigGetArgs extends io.pulumi.res
     }
 
     private ClusterResourceUsageExportConfigGetArgs() {
-        this.bigqueryDestination = Output.empty();
-        this.enableNetworkEgressMetering = Output.empty();
-        this.enableResourceConsumptionMetering = Output.empty();
+        this.bigqueryDestination = Codegen.empty();
+        this.enableNetworkEgressMetering = Codegen.empty();
+        this.enableResourceConsumptionMetering = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ClusterResourceUsageExportConfigGetArgs extends io.pulumi.res
             return this;
         }
         public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
-            this.enableNetworkEgressMetering = Output.ofNullable(enableNetworkEgressMetering);
+            this.enableNetworkEgressMetering = Codegen.ofNullable(enableNetworkEgressMetering);
             return this;
         }
         public Builder enableResourceConsumptionMetering(@Nullable Output<Boolean> enableResourceConsumptionMetering) {
@@ -113,7 +114,7 @@ public final class ClusterResourceUsageExportConfigGetArgs extends io.pulumi.res
             return this;
         }
         public Builder enableResourceConsumptionMetering(@Nullable Boolean enableResourceConsumptionMetering) {
-            this.enableResourceConsumptionMetering = Output.ofNullable(enableResourceConsumptionMetering);
+            this.enableResourceConsumptionMetering = Codegen.ofNullable(enableResourceConsumptionMetering);
             return this;
         }        public ClusterResourceUsageExportConfigGetArgs build() {
             return new ClusterResourceUsageExportConfigGetArgs(bigqueryDestination, enableNetworkEgressMetering, enableResourceConsumptionMetering);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firebaseappcheck_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaseappcheck_v1beta.DebugTokenArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
      * @return A human readable display name used to identify this debug token.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -42,7 +43,7 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
      * @return The relative resource name of the debug token, in the format: ```projects/{project_number}/apps/{app_id}/debugTokens/{debug_token_id}```
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
      * @return Input only. Immutable. The secret token itself. Must be provided during creation, and must be a UUID4, case insensitive. This field is immutable once set, and cannot be provided during an UpdateDebugToken request. You can, however, delete this debug token using DeleteDebugToken to revoke it. For security reasons, this field will never be populated in any response.
      * 
      */
-    public Output<String> getToken() {
+    public Output<String> token() {
         return this.token;
     }
 
@@ -82,7 +83,7 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DebugToken(String name, DebugTokenArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firebaseappcheck/v1beta:DebugToken", name, args == null ? DebugTokenArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firebaseappcheck/v1beta:DebugToken", name, args == null ? DebugTokenArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DebugToken(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

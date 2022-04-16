@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessId")
       private final @Nullable Output<String> accessId;
 
-    public Output<String> getAccessId() {
-        return this.accessId == null ? Output.empty() : this.accessId;
+    public Output<String> accessId() {
+        return this.accessId == null ? Codegen.empty() : this.accessId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<String> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+    public Output<String> serviceAccountEmail() {
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
 
-    public Output<String> getTimeCreated() {
-        return this.timeCreated == null ? Output.empty() : this.timeCreated;
+    public Output<String> timeCreated() {
+        return this.timeCreated == null ? Codegen.empty() : this.timeCreated;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updated")
       private final @Nullable Output<String> updated;
 
-    public Output<String> getUpdated() {
-        return this.updated == null ? Output.empty() : this.updated;
+    public Output<String> updated() {
+        return this.updated == null ? Codegen.empty() : this.updated;
     }
 
     public HmacKeyState(
@@ -112,13 +113,13 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HmacKeyState() {
-        this.accessId = Output.empty();
-        this.project = Output.empty();
-        this.secret = Output.empty();
-        this.serviceAccountEmail = Output.empty();
-        this.state = Output.empty();
-        this.timeCreated = Output.empty();
-        this.updated = Output.empty();
+        this.accessId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.state = Codegen.empty();
+        this.timeCreated = Codegen.empty();
+        this.updated = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessId(@Nullable String accessId) {
-            this.accessId = Output.ofNullable(accessId);
+            this.accessId = Codegen.ofNullable(accessId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -166,7 +167,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder secret(@Nullable Output<String> secret) {
@@ -174,7 +175,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
@@ -182,7 +183,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -190,7 +191,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder timeCreated(@Nullable Output<String> timeCreated) {
@@ -198,7 +199,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeCreated(@Nullable String timeCreated) {
-            this.timeCreated = Output.ofNullable(timeCreated);
+            this.timeCreated = Codegen.ofNullable(timeCreated);
             return this;
         }
         public Builder updated(@Nullable Output<String> updated) {
@@ -206,7 +207,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updated(@Nullable String updated) {
-            this.updated = Output.ofNullable(updated);
+            this.updated = Codegen.ofNullable(updated);
             return this;
         }        public HmacKeyState build() {
             return new HmacKeyState(accessId, project, secret, serviceAccountEmail, state, timeCreated, updated);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetPoolArgs;
 import io.pulumi.gcp.compute.inputs.TargetPoolState;
@@ -59,7 +60,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * failover\_ratio.
      * 
      */
-    public Output</* @Nullable */ String> getBackupPool() {
+    public Output</* @Nullable */ String> backupPool() {
         return this.backupPool;
     }
     /**
@@ -73,7 +74,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * @return Textual description field.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -89,7 +90,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * backup pool (which must also be set).
      * 
      */
-    public Output</* @Nullable */ Double> getFailoverRatio() {
+    public Output</* @Nullable */ Double> failoverRatio() {
         return this.failoverRatio;
     }
     /**
@@ -105,7 +106,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * legacy `gcp.compute.HttpHealthCheck` is supported.
      * 
      */
-    public Output</* @Nullable */ String> getHealthChecks() {
+    public Output</* @Nullable */ String> healthChecks() {
         return this.healthChecks;
     }
     /**
@@ -127,7 +128,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * target pool.
      * 
      */
-    public Output<List<String>> getInstances() {
+    public Output<List<String>> instances() {
         return this.instances;
     }
     /**
@@ -143,7 +144,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * this forces a new resource to be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -159,7 +160,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -175,7 +176,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * region.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -189,7 +190,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -207,7 +208,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * "CLIENT\_IP\_PROTO" also includes the protocol (default "NONE").
      * 
      */
-    public Output</* @Nullable */ String> getSessionAffinity() {
+    public Output</* @Nullable */ String> sessionAffinity() {
         return this.sessionAffinity;
     }
 
@@ -233,7 +234,7 @@ public class TargetPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetPool(String name, @Nullable TargetPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/targetPool:TargetPool", name, args == null ? TargetPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/targetPool:TargetPool", name, args == null ? TargetPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetPool(String name, Output<String> id, @Nullable TargetPoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

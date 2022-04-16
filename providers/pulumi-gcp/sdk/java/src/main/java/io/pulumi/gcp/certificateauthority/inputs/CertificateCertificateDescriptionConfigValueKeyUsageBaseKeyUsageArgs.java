@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     @Import(name="keyUsageOptions")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions;
 
-    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> getKeyUsageOptions() {
-        return this.keyUsageOptions == null ? Output.empty() : this.keyUsageOptions;
+    public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions() {
+        return this.keyUsageOptions == null ? Codegen.empty() : this.keyUsageOptions;
     }
 
     public CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs>> keyUsageOptions) {
@@ -27,7 +28,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     }
 
     private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs() {
-        this.keyUsageOptions = Output.empty();
+        this.keyUsageOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
             return this;
         }
         public Builder keyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs> keyUsageOptions) {
-            this.keyUsageOptions = Output.ofNullable(keyUsageOptions);
+            this.keyUsageOptions = Codegen.ofNullable(keyUsageOptions);
             return this;
         }
         public Builder keyUsageOptions(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOptionArgs... keyUsageOptions) {

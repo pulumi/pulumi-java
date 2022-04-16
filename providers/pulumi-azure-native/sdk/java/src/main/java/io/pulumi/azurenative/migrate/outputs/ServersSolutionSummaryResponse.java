@@ -64,14 +64,14 @@ public final class ServersSolutionSummaryResponse {
      * Gets or sets the count of servers assessed.
      * 
     */
-    public Optional<Integer> getAssessedCount() {
+    public Optional<Integer> assessedCount() {
         return Optional.ofNullable(this.assessedCount);
     }
     /**
      * Gets or sets the count of servers discovered.
      * 
     */
-    public Optional<Integer> getDiscoveredCount() {
+    public Optional<Integer> discoveredCount() {
         return Optional.ofNullable(this.discoveredCount);
     }
     /**
@@ -79,28 +79,28 @@ public final class ServersSolutionSummaryResponse {
      * Expected value is 'Servers'.
      * 
     */
-    public String getInstanceType() {
+    public String instanceType() {
         return this.instanceType;
     }
     /**
      * Gets or sets the count of servers migrated.
      * 
     */
-    public Optional<Integer> getMigratedCount() {
+    public Optional<Integer> migratedCount() {
         return Optional.ofNullable(this.migratedCount);
     }
     /**
      * Gets or sets the count of servers being replicated.
      * 
     */
-    public Optional<Integer> getReplicatingCount() {
+    public Optional<Integer> replicatingCount() {
         return Optional.ofNullable(this.replicatingCount);
     }
     /**
      * Gets or sets the count of servers test migrated.
      * 
     */
-    public Optional<Integer> getTestMigratedCount() {
+    public Optional<Integer> testMigratedCount() {
         return Optional.ofNullable(this.testMigratedCount);
     }
 

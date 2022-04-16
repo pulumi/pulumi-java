@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return Last connectivity time of the IoT sensor
      * 
      */
-    public Output<String> getConnectivityTime() {
+    public Output<String> connectivityTime() {
         return this.connectivityTime;
     }
     /**
@@ -57,7 +58,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return Dynamic mode status of the IoT sensor
      * 
      */
-    public Output<Boolean> getDynamicLearning() {
+    public Output<Boolean> dynamicLearning() {
         return this.dynamicLearning;
     }
     /**
@@ -71,7 +72,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return Learning mode status of the IoT sensor
      * 
      */
-    public Output<Boolean> getLearningMode() {
+    public Output<Boolean> learningMode() {
         return this.learningMode;
     }
     /**
@@ -85,7 +86,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return Status of the IoT sensor
      * 
      */
-    public Output<String> getSensorStatus() {
+    public Output<String> sensorStatus() {
         return this.sensorStatus;
     }
     /**
@@ -113,7 +114,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return Type of sensor
      * 
      */
-    public Output</* @Nullable */ String> getSensorType() {
+    public Output</* @Nullable */ String> sensorType() {
         return this.sensorType;
     }
     /**
@@ -127,7 +128,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return Version of the IoT sensor
      * 
      */
-    public Output<String> getSensorVersion() {
+    public Output<String> sensorVersion() {
         return this.sensorVersion;
     }
     /**
@@ -141,7 +142,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -155,7 +156,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return TI Automatic mode status of the IoT sensor
      * 
      */
-    public Output</* @Nullable */ Boolean> getTiAutomaticUpdates() {
+    public Output</* @Nullable */ Boolean> tiAutomaticUpdates() {
         return this.tiAutomaticUpdates;
     }
     /**
@@ -169,7 +170,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return TI Status of the IoT sensor
      * 
      */
-    public Output<String> getTiStatus() {
+    public Output<String> tiStatus() {
         return this.tiStatus;
     }
     /**
@@ -183,7 +184,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return TI Version of the IoT sensor
      * 
      */
-    public Output<String> getTiVersion() {
+    public Output<String> tiVersion() {
         return this.tiVersion;
     }
     /**
@@ -197,7 +198,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -211,7 +212,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @return Zone of the IoT sensor
      * 
      */
-    public Output</* @Nullable */ String> getZone() {
+    public Output</* @Nullable */ String> zone() {
         return this.zone;
     }
 
@@ -237,7 +238,7 @@ public class Sensor extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Sensor(String name, SensorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:iotsecurity:Sensor", name, args == null ? SensorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:iotsecurity:Sensor", name, args == null ? SensorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Sensor(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.organizations.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="enrolledServices", required=true)
       private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
-    public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
+    public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices() {
         return this.enrolledServices;
     }
 
@@ -40,8 +41,8 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="notificationEmails")
       private final @Nullable Output<List<String>> notificationEmails;
 
-    public Output<List<String>> getNotificationEmails() {
-        return this.notificationEmails == null ? Output.empty() : this.notificationEmails;
+    public Output<List<String>> notificationEmails() {
+        return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -65,9 +66,9 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private AccessApprovalSettingsArgs() {
-        this.enrolledServices = Output.empty();
-        this.notificationEmails = Output.empty();
-        this.organizationId = Output.empty();
+        this.enrolledServices = Codegen.empty();
+        this.notificationEmails = Codegen.empty();
+        this.organizationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Output.ofNullable(notificationEmails);
+            this.notificationEmails = Codegen.ofNullable(notificationEmails);
             return this;
         }
         public Builder notificationEmails(String... notificationEmails) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.KeyPairState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @return The key pair ARN.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +63,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @return The MD5 public key fingerprint as specified in section 4 of RFC 4716.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -76,7 +77,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @return The name for the key pair.
      * 
      */
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
     /**
@@ -90,7 +91,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
      * 
      */
-    public Output<String> getKeyNamePrefix() {
+    public Output<String> keyNamePrefix() {
         return this.keyNamePrefix;
     }
     /**
@@ -104,7 +105,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @return The key pair ID.
      * 
      */
-    public Output<String> getKeyPairId() {
+    public Output<String> keyPairId() {
         return this.keyPairId;
     }
     /**
@@ -118,7 +119,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @return The public key material.
      * 
      */
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
     /**
@@ -132,7 +133,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -146,7 +147,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -172,7 +173,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyPair(String name, KeyPairArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/keyPair:KeyPair", name, args == null ? KeyPairArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/keyPair:KeyPair", name, args == null ? KeyPairArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyPair(String name, Output<String> id, @Nullable KeyPairState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

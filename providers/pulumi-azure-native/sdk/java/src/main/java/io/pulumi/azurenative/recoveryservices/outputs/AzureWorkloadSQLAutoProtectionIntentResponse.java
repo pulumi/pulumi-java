@@ -70,21 +70,21 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse {
      * Type of backup management for the backed up item.
      * 
     */
-    public Optional<String> getBackupManagementType() {
+    public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
     /**
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
      * 
     */
-    public Optional<String> getItemId() {
+    public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
     }
     /**
      * ID of the backup policy with which this item is backed up.
      * 
     */
-    public Optional<String> getPolicyId() {
+    public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
     /**
@@ -92,28 +92,28 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse {
      * Expected value is 'AzureWorkloadSQLAutoProtectionIntent'.
      * 
     */
-    public String getProtectionIntentItemType() {
+    public String protectionIntentItemType() {
         return this.protectionIntentItemType;
     }
     /**
      * Backup state of this backup item.
      * 
     */
-    public Optional<String> getProtectionState() {
+    public Optional<String> protectionState() {
         return Optional.ofNullable(this.protectionState);
     }
     /**
      * ARM ID of the resource to be backed up.
      * 
     */
-    public Optional<String> getSourceResourceId() {
+    public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
     /**
      * Workload item type of the item for which intent is to be set
      * 
     */
-    public Optional<String> getWorkloadItemType() {
+    public Optional<String> workloadItemType() {
         return Optional.ofNullable(this.workloadItemType);
     }
 

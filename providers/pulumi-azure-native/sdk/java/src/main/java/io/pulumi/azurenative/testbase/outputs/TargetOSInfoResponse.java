@@ -33,14 +33,14 @@ public final class TargetOSInfoResponse {
      * Specifies the OS update type to test against, e.g., 'Security updates' or 'Feature updates'.
      * 
     */
-    public String getOsUpdateType() {
+    public String osUpdateType() {
         return this.osUpdateType;
     }
     /**
      * Specifies the target OSs to be tested.
      * 
     */
-    public List<String> getTargetOSs() {
+    public List<String> targetOSs() {
         return this.targetOSs;
     }
 

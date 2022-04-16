@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
     @Import(name="cpus")
       private final @Nullable Output<String> cpus;
 
-    public Output<String> getCpus() {
-        return this.cpus == null ? Output.empty() : this.cpus;
+    public Output<String> cpus() {
+        return this.cpus == null ? Codegen.empty() : this.cpus;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
     @Import(name="localSsd")
       private final @Nullable Output<String> localSsd;
 
-    public Output<String> getLocalSsd() {
-        return this.localSsd == null ? Output.empty() : this.localSsd;
+    public Output<String> localSsd() {
+        return this.localSsd == null ? Codegen.empty() : this.localSsd;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
     @Import(name="memory")
       private final @Nullable Output<String> memory;
 
-    public Output<String> getMemory() {
-        return this.memory == null ? Output.empty() : this.memory;
+    public Output<String> memory() {
+        return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     public NodeTemplateNodeTypeFlexibilityGetArgs(
@@ -58,9 +59,9 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
     }
 
     private NodeTemplateNodeTypeFlexibilityGetArgs() {
-        this.cpus = Output.empty();
-        this.localSsd = Output.empty();
-        this.memory = Output.empty();
+        this.cpus = Codegen.empty();
+        this.localSsd = Codegen.empty();
+        this.memory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder cpus(@Nullable String cpus) {
-            this.cpus = Output.ofNullable(cpus);
+            this.cpus = Codegen.ofNullable(cpus);
             return this;
         }
         public Builder localSsd(@Nullable Output<String> localSsd) {
@@ -100,7 +101,7 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder localSsd(@Nullable String localSsd) {
-            this.localSsd = Output.ofNullable(localSsd);
+            this.localSsd = Codegen.ofNullable(localSsd);
             return this;
         }
         public Builder memory(@Nullable Output<String> memory) {
@@ -108,7 +109,7 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder memory(@Nullable String memory) {
-            this.memory = Output.ofNullable(memory);
+            this.memory = Codegen.ofNullable(memory);
             return this;
         }        public NodeTemplateNodeTypeFlexibilityGetArgs build() {
             return new NodeTemplateNodeTypeFlexibilityGetArgs(cpus, localSsd, memory);

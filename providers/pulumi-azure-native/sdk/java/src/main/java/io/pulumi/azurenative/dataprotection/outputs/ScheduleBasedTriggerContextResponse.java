@@ -44,21 +44,21 @@ public final class ScheduleBasedTriggerContextResponse {
      * Expected value is 'ScheduleBasedTriggerContext'.
      * 
     */
-    public String getObjectType() {
+    public String objectType() {
         return this.objectType;
     }
     /**
      * Schedule for this backup
      * 
     */
-    public BackupScheduleResponse getSchedule() {
+    public BackupScheduleResponse schedule() {
         return this.schedule;
     }
     /**
      * List of tags that can be applicable for given schedule.
      * 
     */
-    public List<TaggingCriteriaResponse> getTaggingCriteria() {
+    public List<TaggingCriteriaResponse> taggingCriteria() {
         return this.taggingCriteria;
     }
 

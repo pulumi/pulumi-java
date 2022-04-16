@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkSqlJobLoggingConfigArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkSqlJobQueryListArgs;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
     @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
+    public Output<List<String>> jarFileUris() {
+        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
     @Import(name="loggingConfig")
       private final @Nullable Output<WorkflowTemplateJobSparkSqlJobLoggingConfigArgs> loggingConfig;
 
-    public Output<WorkflowTemplateJobSparkSqlJobLoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
+    public Output<WorkflowTemplateJobSparkSqlJobLoggingConfigArgs> loggingConfig() {
+        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
     @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
     @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
-    public Output<String> getQueryFileUri() {
-        return this.queryFileUri == null ? Output.empty() : this.queryFileUri;
+    public Output<String> queryFileUri() {
+        return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
     @Import(name="queryList")
       private final @Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListArgs> queryList;
 
-    public Output<WorkflowTemplateJobSparkSqlJobQueryListArgs> getQueryList() {
-        return this.queryList == null ? Output.empty() : this.queryList;
+    public Output<WorkflowTemplateJobSparkSqlJobQueryListArgs> queryList() {
+        return this.queryList == null ? Codegen.empty() : this.queryList;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
     @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
-    public Output<Map<String,String>> getScriptVariables() {
-        return this.scriptVariables == null ? Output.empty() : this.scriptVariables;
+    public Output<Map<String,String>> scriptVariables() {
+        return this.scriptVariables == null ? Codegen.empty() : this.scriptVariables;
     }
 
     public WorkflowTemplateJobSparkSqlJobArgs(
@@ -100,12 +101,12 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
     }
 
     private WorkflowTemplateJobSparkSqlJobArgs() {
-        this.jarFileUris = Output.empty();
-        this.loggingConfig = Output.empty();
-        this.properties = Output.empty();
-        this.queryFileUri = Output.empty();
-        this.queryList = Output.empty();
-        this.scriptVariables = Output.empty();
+        this.jarFileUris = Codegen.empty();
+        this.loggingConfig = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.queryFileUri = Codegen.empty();
+        this.queryList = Codegen.empty();
+        this.scriptVariables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
             return this;
         }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Output.ofNullable(jarFileUris);
+            this.jarFileUris = Codegen.ofNullable(jarFileUris);
             return this;
         }
         public Builder jarFileUris(String... jarFileUris) {
@@ -154,7 +155,7 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
             return this;
         }
         public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkSqlJobLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Output.ofNullable(loggingConfig);
+            this.loggingConfig = Codegen.ofNullable(loggingConfig);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -162,7 +163,7 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
@@ -170,7 +171,7 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
             return this;
         }
         public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Output.ofNullable(queryFileUri);
+            this.queryFileUri = Codegen.ofNullable(queryFileUri);
             return this;
         }
         public Builder queryList(@Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListArgs> queryList) {
@@ -178,7 +179,7 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
             return this;
         }
         public Builder queryList(@Nullable WorkflowTemplateJobSparkSqlJobQueryListArgs queryList) {
-            this.queryList = Output.ofNullable(queryList);
+            this.queryList = Codegen.ofNullable(queryList);
             return this;
         }
         public Builder scriptVariables(@Nullable Output<Map<String,String>> scriptVariables) {
@@ -186,7 +187,7 @@ public final class WorkflowTemplateJobSparkSqlJobArgs extends io.pulumi.resource
             return this;
         }
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
-            this.scriptVariables = Output.ofNullable(scriptVariables);
+            this.scriptVariables = Codegen.ofNullable(scriptVariables);
             return this;
         }        public WorkflowTemplateJobSparkSqlJobArgs build() {
             return new WorkflowTemplateJobSparkSqlJobArgs(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);

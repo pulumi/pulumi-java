@@ -98,77 +98,77 @@ public final class EdifactFramingSettingsResponse {
      * The character encoding.
      * 
     */
-    public Optional<String> getCharacterEncoding() {
+    public Optional<String> characterEncoding() {
         return Optional.ofNullable(this.characterEncoding);
     }
     /**
      * The EDIFACT frame setting characterSet.
      * 
     */
-    public String getCharacterSet() {
+    public String characterSet() {
         return this.characterSet;
     }
     /**
      * The component separator.
      * 
     */
-    public Integer getComponentSeparator() {
+    public Integer componentSeparator() {
         return this.componentSeparator;
     }
     /**
      * The data element separator.
      * 
     */
-    public Integer getDataElementSeparator() {
+    public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
     /**
      * The EDIFACT frame setting decimal indicator.
      * 
     */
-    public String getDecimalPointIndicator() {
+    public String decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
     /**
      * The protocol version.
      * 
     */
-    public Integer getProtocolVersion() {
+    public Integer protocolVersion() {
         return this.protocolVersion;
     }
     /**
      * The release indicator.
      * 
     */
-    public Integer getReleaseIndicator() {
+    public Integer releaseIndicator() {
         return this.releaseIndicator;
     }
     /**
      * The repetition separator.
      * 
     */
-    public Integer getRepetitionSeparator() {
+    public Integer repetitionSeparator() {
         return this.repetitionSeparator;
     }
     /**
      * The segment terminator.
      * 
     */
-    public Integer getSegmentTerminator() {
+    public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
     /**
      * The EDIFACT frame setting segment terminator suffix.
      * 
     */
-    public String getSegmentTerminatorSuffix() {
+    public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
     /**
      * The service code list directory version.
      * 
     */
-    public Optional<String> getServiceCodeListDirectoryVersion() {
+    public Optional<String> serviceCodeListDirectoryVersion() {
         return Optional.ofNullable(this.serviceCodeListDirectoryVersion);
     }
 

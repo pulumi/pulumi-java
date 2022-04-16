@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabric.enums.ServiceCorrelationScheme;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
     @Import(name="scheme", required=true)
       private final Output<Either<String,ServiceCorrelationScheme>> scheme;
 
-    public Output<Either<String,ServiceCorrelationScheme>> getScheme() {
+    public Output<Either<String,ServiceCorrelationScheme>> scheme() {
         return this.scheme;
     }
 
@@ -37,7 +38,7 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -49,8 +50,8 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
     }
 
     private ServiceCorrelationDescriptionArgs() {
-        this.scheme = Output.empty();
-        this.serviceName = Output.empty();
+        this.scheme = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {

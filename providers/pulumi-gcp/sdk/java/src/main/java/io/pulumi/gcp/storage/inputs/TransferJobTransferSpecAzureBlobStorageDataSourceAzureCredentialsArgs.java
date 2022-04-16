@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
     @Import(name="sasToken", required=true)
       private final Output<String> sasToken;
 
-    public Output<String> getSasToken() {
+    public Output<String> sasToken() {
         return this.sasToken;
     }
 
@@ -29,7 +30,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
     }
 
     private TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsArgs() {
-        this.sasToken = Output.empty();
+        this.sasToken = Codegen.empty();
     }
 
     public static Builder builder() {

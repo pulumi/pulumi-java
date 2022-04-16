@@ -100,77 +100,77 @@ public final class GetAgentPoolResult {
      * The count of agent machine
      * 
     */
-    public Optional<Integer> getCount() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
      * The resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The location of the resource. This cannot be changed after the resource is created.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * The name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The OS of agent machine
      * 
     */
-    public Optional<String> getOs() {
+    public Optional<String> os() {
         return Optional.ofNullable(this.os);
     }
     /**
      * The provisioning state of this agent pool
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Metadata pertaining to creation and last modification of the resource.
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The tags of the resource.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * The Tier of agent machine
      * 
     */
-    public Optional<String> getTier() {
+    public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
     /**
      * The type of the resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * The Virtual Network Subnet Resource Id of the agent machine
      * 
     */
-    public Optional<String> getVirtualNetworkSubnetResourceId() {
+    public Optional<String> virtualNetworkSubnetResourceId() {
         return Optional.ofNullable(this.virtualNetworkSubnetResourceId);
     }
 

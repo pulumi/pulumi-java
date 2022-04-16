@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
     @Import(name="allowSingleColumn")
       private final @Nullable Output<Boolean> allowSingleColumn;
 
-    public Output<Boolean> getAllowSingleColumn() {
-        return this.allowSingleColumn == null ? Output.empty() : this.allowSingleColumn;
+    public Output<Boolean> allowSingleColumn() {
+        return this.allowSingleColumn == null ? Codegen.empty() : this.allowSingleColumn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
     @Import(name="containsHeader")
       private final @Nullable Output<String> containsHeader;
 
-    public Output<String> getContainsHeader() {
-        return this.containsHeader == null ? Output.empty() : this.containsHeader;
+    public Output<String> containsHeader() {
+        return this.containsHeader == null ? Codegen.empty() : this.containsHeader;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
     @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
-    public Output<String> getDelimiter() {
-        return this.delimiter == null ? Output.empty() : this.delimiter;
+    public Output<String> delimiter() {
+        return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
     @Import(name="disableValueTrimming")
       private final @Nullable Output<Boolean> disableValueTrimming;
 
-    public Output<Boolean> getDisableValueTrimming() {
-        return this.disableValueTrimming == null ? Output.empty() : this.disableValueTrimming;
+    public Output<Boolean> disableValueTrimming() {
+        return this.disableValueTrimming == null ? Codegen.empty() : this.disableValueTrimming;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
     @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
-    public Output<List<String>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+    public Output<List<String>> headers() {
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
     @Import(name="quoteSymbol")
       private final @Nullable Output<String> quoteSymbol;
 
-    public Output<String> getQuoteSymbol() {
-        return this.quoteSymbol == null ? Output.empty() : this.quoteSymbol;
+    public Output<String> quoteSymbol() {
+        return this.quoteSymbol == null ? Codegen.empty() : this.quoteSymbol;
     }
 
     public ClassifierCsvClassifierArgs(
@@ -98,12 +99,12 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
     }
 
     private ClassifierCsvClassifierArgs() {
-        this.allowSingleColumn = Output.empty();
-        this.containsHeader = Output.empty();
-        this.delimiter = Output.empty();
-        this.disableValueTrimming = Output.empty();
-        this.headers = Output.empty();
-        this.quoteSymbol = Output.empty();
+        this.allowSingleColumn = Codegen.empty();
+        this.containsHeader = Codegen.empty();
+        this.delimiter = Codegen.empty();
+        this.disableValueTrimming = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.quoteSymbol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder allowSingleColumn(@Nullable Boolean allowSingleColumn) {
-            this.allowSingleColumn = Output.ofNullable(allowSingleColumn);
+            this.allowSingleColumn = Codegen.ofNullable(allowSingleColumn);
             return this;
         }
         public Builder containsHeader(@Nullable Output<String> containsHeader) {
@@ -149,7 +150,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder containsHeader(@Nullable String containsHeader) {
-            this.containsHeader = Output.ofNullable(containsHeader);
+            this.containsHeader = Codegen.ofNullable(containsHeader);
             return this;
         }
         public Builder delimiter(@Nullable Output<String> delimiter) {
@@ -157,7 +158,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Output.ofNullable(delimiter);
+            this.delimiter = Codegen.ofNullable(delimiter);
             return this;
         }
         public Builder disableValueTrimming(@Nullable Output<Boolean> disableValueTrimming) {
@@ -165,7 +166,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder disableValueTrimming(@Nullable Boolean disableValueTrimming) {
-            this.disableValueTrimming = Output.ofNullable(disableValueTrimming);
+            this.disableValueTrimming = Codegen.ofNullable(disableValueTrimming);
             return this;
         }
         public Builder headers(@Nullable Output<List<String>> headers) {
@@ -173,7 +174,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(String... headers) {
@@ -184,7 +185,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder quoteSymbol(@Nullable String quoteSymbol) {
-            this.quoteSymbol = Output.ofNullable(quoteSymbol);
+            this.quoteSymbol = Codegen.ofNullable(quoteSymbol);
             return this;
         }        public ClassifierCsvClassifierArgs build() {
             return new ClassifierCsvClassifierArgs(allowSingleColumn, containsHeader, delimiter, disableValueTrimming, headers, quoteSymbol);

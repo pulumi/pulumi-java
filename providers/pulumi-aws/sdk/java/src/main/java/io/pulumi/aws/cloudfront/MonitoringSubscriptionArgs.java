@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront;
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class MonitoringSubscriptionArgs extends io.pulumi.resources.Resour
     @Import(name="distributionId", required=true)
       private final Output<String> distributionId;
 
-    public Output<String> getDistributionId() {
+    public Output<String> distributionId() {
         return this.distributionId;
     }
 
@@ -32,7 +33,7 @@ public final class MonitoringSubscriptionArgs extends io.pulumi.resources.Resour
     @Import(name="monitoringSubscription", required=true)
       private final Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription;
 
-    public Output<MonitoringSubscriptionMonitoringSubscriptionArgs> getMonitoringSubscription() {
+    public Output<MonitoringSubscriptionMonitoringSubscriptionArgs> monitoringSubscription() {
         return this.monitoringSubscription;
     }
 
@@ -44,8 +45,8 @@ public final class MonitoringSubscriptionArgs extends io.pulumi.resources.Resour
     }
 
     private MonitoringSubscriptionArgs() {
-        this.distributionId = Output.empty();
-        this.monitoringSubscription = Output.empty();
+        this.distributionId = Codegen.empty();
+        this.monitoringSubscription = Codegen.empty();
     }
 
     public static Builder builder() {

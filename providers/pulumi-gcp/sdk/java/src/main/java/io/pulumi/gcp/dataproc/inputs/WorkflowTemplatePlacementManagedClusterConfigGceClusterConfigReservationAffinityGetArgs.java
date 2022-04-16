@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="consumeReservationType")
       private final @Nullable Output<String> consumeReservationType;
 
-    public Output<String> getConsumeReservationType() {
-        return this.consumeReservationType == null ? Output.empty() : this.consumeReservationType;
+    public Output<String> consumeReservationType() {
+        return this.consumeReservationType == null ? Codegen.empty() : this.consumeReservationType;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+    public Output<List<String>> values() {
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs(
@@ -58,9 +59,9 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs() {
-        this.consumeReservationType = Output.empty();
-        this.key = Output.empty();
-        this.values = Output.empty();
+        this.consumeReservationType = Codegen.empty();
+        this.key = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder consumeReservationType(@Nullable String consumeReservationType) {
-            this.consumeReservationType = Output.ofNullable(consumeReservationType);
+            this.consumeReservationType = Codegen.ofNullable(consumeReservationType);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -100,7 +101,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder values(@Nullable Output<List<String>> values) {
@@ -108,7 +109,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

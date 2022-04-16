@@ -6,6 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupRuleOrder;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
     @Import(name="ruleOrder")
       private final @Nullable Output<RuleGroupRuleOrder> ruleOrder;
 
-    public Output<RuleGroupRuleOrder> getRuleOrder() {
-        return this.ruleOrder == null ? Output.empty() : this.ruleOrder;
+    public Output<RuleGroupRuleOrder> ruleOrder() {
+        return this.ruleOrder == null ? Codegen.empty() : this.ruleOrder;
     }
 
     public RuleGroupStatefulRuleOptionsArgs(@Nullable Output<RuleGroupRuleOrder> ruleOrder) {
@@ -26,7 +27,7 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
     }
 
     private RuleGroupStatefulRuleOptionsArgs() {
-        this.ruleOrder = Output.empty();
+        this.ruleOrder = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ruleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
-            this.ruleOrder = Output.ofNullable(ruleOrder);
+            this.ruleOrder = Codegen.ofNullable(ruleOrder);
             return this;
         }        public RuleGroupStatefulRuleOptionsArgs build() {
             return new RuleGroupStatefulRuleOptionsArgs(ruleOrder);

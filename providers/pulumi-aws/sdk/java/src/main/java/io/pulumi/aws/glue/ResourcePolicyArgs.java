@@ -5,6 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableHybrid")
       private final @Nullable Output<String> enableHybrid;
 
-    public Output<String> getEnableHybrid() {
-        return this.enableHybrid == null ? Output.empty() : this.enableHybrid;
+    public Output<String> enableHybrid() {
+        return this.enableHybrid == null ? Codegen.empty() : this.enableHybrid;
     }
 
     /**
@@ -28,7 +29,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -40,8 +41,8 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourcePolicyArgs() {
-        this.enableHybrid = Output.empty();
-        this.policy = Output.empty();
+        this.enableHybrid = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableHybrid(@Nullable String enableHybrid) {
-            this.enableHybrid = Output.ofNullable(enableHybrid);
+            this.enableHybrid = Codegen.ofNullable(enableHybrid);
             return this;
         }
         public Builder policy(Output<String> policy) {

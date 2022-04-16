@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkBigqueryOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkExclusionGetArgs;
 import java.lang.Boolean;
@@ -25,8 +26,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="bigqueryOptions")
       private final @Nullable Output<OrganizationSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
-    public Output<OrganizationSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
-        return this.bigqueryOptions == null ? Output.empty() : this.bigqueryOptions;
+    public Output<OrganizationSinkBigqueryOptionsGetArgs> bigqueryOptions() {
+        return this.bigqueryOptions == null ? Codegen.empty() : this.bigqueryOptions;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<String> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+    public Output<Boolean> disabled() {
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="exclusions")
       private final @Nullable Output<List<OrganizationSinkExclusionGetArgs>> exclusions;
 
-    public Output<List<OrganizationSinkExclusionGetArgs>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+    public Output<List<OrganizationSinkExclusionGetArgs>> exclusions() {
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="includeChildren")
       private final @Nullable Output<Boolean> includeChildren;
 
-    public Output<Boolean> getIncludeChildren() {
-        return this.includeChildren == null ? Output.empty() : this.includeChildren;
+    public Output<Boolean> includeChildren() {
+        return this.includeChildren == null ? Codegen.empty() : this.includeChildren;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
-        return this.orgId == null ? Output.empty() : this.orgId;
+    public Output<String> orgId() {
+        return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     @Import(name="writerIdentity")
       private final @Nullable Output<String> writerIdentity;
 
-    public Output<String> getWriterIdentity() {
-        return this.writerIdentity == null ? Output.empty() : this.writerIdentity;
+    public Output<String> writerIdentity() {
+        return this.writerIdentity == null ? Codegen.empty() : this.writerIdentity;
     }
 
     public OrganizationSinkState(
@@ -158,16 +159,16 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
     }
 
     private OrganizationSinkState() {
-        this.bigqueryOptions = Output.empty();
-        this.description = Output.empty();
-        this.destination = Output.empty();
-        this.disabled = Output.empty();
-        this.exclusions = Output.empty();
-        this.filter = Output.empty();
-        this.includeChildren = Output.empty();
-        this.name = Output.empty();
-        this.orgId = Output.empty();
-        this.writerIdentity = Output.empty();
+        this.bigqueryOptions = Codegen.empty();
+        this.description = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.exclusions = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.includeChildren = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.writerIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -213,7 +214,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bigqueryOptions(@Nullable OrganizationSinkBigqueryOptionsGetArgs bigqueryOptions) {
-            this.bigqueryOptions = Output.ofNullable(bigqueryOptions);
+            this.bigqueryOptions = Codegen.ofNullable(bigqueryOptions);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -221,7 +222,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destination(@Nullable Output<String> destination) {
@@ -229,7 +230,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -237,7 +238,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder exclusions(@Nullable Output<List<OrganizationSinkExclusionGetArgs>> exclusions) {
@@ -245,7 +246,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder exclusions(@Nullable List<OrganizationSinkExclusionGetArgs> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(OrganizationSinkExclusionGetArgs... exclusions) {
@@ -256,7 +257,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder includeChildren(@Nullable Output<Boolean> includeChildren) {
@@ -264,7 +265,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder includeChildren(@Nullable Boolean includeChildren) {
-            this.includeChildren = Output.ofNullable(includeChildren);
+            this.includeChildren = Codegen.ofNullable(includeChildren);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -272,7 +273,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgId(@Nullable Output<String> orgId) {
@@ -280,7 +281,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Output.ofNullable(orgId);
+            this.orgId = Codegen.ofNullable(orgId);
             return this;
         }
         public Builder writerIdentity(@Nullable Output<String> writerIdentity) {
@@ -288,7 +289,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder writerIdentity(@Nullable String writerIdentity) {
-            this.writerIdentity = Output.ofNullable(writerIdentity);
+            this.writerIdentity = Codegen.ofNullable(writerIdentity);
             return this;
         }        public OrganizationSinkState build() {
             return new OrganizationSinkState(bigqueryOptions, description, destination, disabled, exclusions, filter, includeChildren, name, orgId, writerIdentity);

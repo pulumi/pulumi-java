@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * @return Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -56,7 +57,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSecret() {
+    public Output</* @Nullable */ Boolean> secret() {
         return this.secret;
     }
     /**
@@ -84,7 +85,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * @return Optional tags that when provided can be used to filter the property list.
      * 
      */
-    public Output</* @Nullable */ List<String>> getTags() {
+    public Output</* @Nullable */ List<String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +99,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -112,7 +113,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * @return Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
      * 
      */
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -138,7 +139,7 @@ public class Property extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Property(String name, PropertyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Property", name, args == null ? PropertyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:Property", name, args == null ? PropertyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Property(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

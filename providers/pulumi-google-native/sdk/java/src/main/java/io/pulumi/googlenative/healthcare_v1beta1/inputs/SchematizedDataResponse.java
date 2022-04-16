@@ -23,7 +23,7 @@ public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArg
     @Import(name="data", required=true)
       private final String data;
 
-    public String getData() {
+    public String data() {
         return this.data;
     }
 
@@ -34,7 +34,7 @@ public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArg
     @Import(name="error", required=true)
       private final String error;
 
-    public String getError() {
+    public String error() {
         return this.error;
     }
 

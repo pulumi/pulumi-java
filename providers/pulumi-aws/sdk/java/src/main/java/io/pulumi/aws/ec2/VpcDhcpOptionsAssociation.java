@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcDhcpOptionsAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -43,7 +44,7 @@ public class VpcDhcpOptionsAssociation extends io.pulumi.resources.CustomResourc
      * @return The ID of the DHCP Options Set to associate to the VPC.
      * 
      */
-    public Output<String> getDhcpOptionsId() {
+    public Output<String> dhcpOptionsId() {
         return this.dhcpOptionsId;
     }
     /**
@@ -57,7 +58,7 @@ public class VpcDhcpOptionsAssociation extends io.pulumi.resources.CustomResourc
      * @return The ID of the VPC to which we would like to associate a DHCP Options Set.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -83,7 +84,7 @@ public class VpcDhcpOptionsAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcDhcpOptionsAssociation(String name, VpcDhcpOptionsAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcDhcpOptionsAssociation:VpcDhcpOptionsAssociation", name, args == null ? VpcDhcpOptionsAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcDhcpOptionsAssociation:VpcDhcpOptionsAssociation", name, args == null ? VpcDhcpOptionsAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcDhcpOptionsAssociation(String name, Output<String> id, @Nullable VpcDhcpOptionsAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

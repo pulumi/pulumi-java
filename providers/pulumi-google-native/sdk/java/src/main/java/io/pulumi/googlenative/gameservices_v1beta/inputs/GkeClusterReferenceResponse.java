@@ -23,7 +23,7 @@ public final class GkeClusterReferenceResponse extends io.pulumi.resources.Invok
     @Import(name="cluster", required=true)
       private final String cluster;
 
-    public String getCluster() {
+    public String cluster() {
         return this.cluster;
     }
 

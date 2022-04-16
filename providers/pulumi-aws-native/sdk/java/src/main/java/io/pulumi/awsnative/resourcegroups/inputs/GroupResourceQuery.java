@@ -18,14 +18,14 @@ public final class GroupResourceQuery extends io.pulumi.resources.InvokeArgs {
     @Import(name="query")
       private final @Nullable GroupQuery query;
 
-    public Optional<GroupQuery> getQuery() {
+    public Optional<GroupQuery> query() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
     @Import(name="type")
       private final @Nullable GroupResourceQueryType type;
 
-    public Optional<GroupResourceQueryType> getType() {
+    public Optional<GroupResourceQueryType> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

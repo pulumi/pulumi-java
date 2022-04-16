@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeidentifyConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="deidentifyConfig")
       private final @Nullable Output<GooglePrivacyDlpV2DeidentifyConfigArgs> deidentifyConfig;
 
-    public Output<GooglePrivacyDlpV2DeidentifyConfigArgs> getDeidentifyConfig() {
-        return this.deidentifyConfig == null ? Output.empty() : this.deidentifyConfig;
+    public Output<GooglePrivacyDlpV2DeidentifyConfigArgs> deidentifyConfig() {
+        return this.deidentifyConfig == null ? Codegen.empty() : this.deidentifyConfig;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,22 +45,22 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
-    public Output<String> getTemplateId() {
-        return this.templateId == null ? Output.empty() : this.templateId;
+    public Output<String> templateId() {
+        return this.templateId == null ? Codegen.empty() : this.templateId;
     }
 
     public DeidentifyTemplateArgs(
@@ -89,12 +90,12 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DeidentifyTemplateArgs() {
-        this.deidentifyConfig = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.templateId = Output.empty();
+        this.deidentifyConfig = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.templateId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder deidentifyConfig(@Nullable GooglePrivacyDlpV2DeidentifyConfigArgs deidentifyConfig) {
-            this.deidentifyConfig = Output.ofNullable(deidentifyConfig);
+            this.deidentifyConfig = Codegen.ofNullable(deidentifyConfig);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -140,7 +141,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -148,7 +149,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -156,7 +157,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -164,7 +165,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder templateId(@Nullable Output<String> templateId) {
@@ -172,7 +173,7 @@ public final class DeidentifyTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder templateId(@Nullable String templateId) {
-            this.templateId = Output.ofNullable(templateId);
+            this.templateId = Codegen.ofNullable(templateId);
             return this;
         }        public DeidentifyTemplateArgs build() {
             return new DeidentifyTemplateArgs(deidentifyConfig, description, displayName, location, project, templateId);

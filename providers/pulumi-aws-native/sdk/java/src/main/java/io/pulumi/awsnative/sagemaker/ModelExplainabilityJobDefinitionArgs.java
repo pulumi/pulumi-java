@@ -13,6 +13,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionStop
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,50 +27,50 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
     @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
-    public Output<String> getJobDefinitionName() {
-        return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
+    public Output<String> jobDefinitionName() {
+        return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
     }
 
     @Import(name="jobResources", required=true)
       private final Output<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> jobResources;
 
-    public Output<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> getJobResources() {
+    public Output<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> jobResources() {
         return this.jobResources;
     }
 
     @Import(name="modelExplainabilityAppSpecification", required=true)
       private final Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> modelExplainabilityAppSpecification;
 
-    public Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> getModelExplainabilityAppSpecification() {
+    public Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationArgs> modelExplainabilityAppSpecification() {
         return this.modelExplainabilityAppSpecification;
     }
 
     @Import(name="modelExplainabilityBaselineConfig")
       private final @Nullable Output<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> modelExplainabilityBaselineConfig;
 
-    public Output<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> getModelExplainabilityBaselineConfig() {
-        return this.modelExplainabilityBaselineConfig == null ? Output.empty() : this.modelExplainabilityBaselineConfig;
+    public Output<ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs> modelExplainabilityBaselineConfig() {
+        return this.modelExplainabilityBaselineConfig == null ? Codegen.empty() : this.modelExplainabilityBaselineConfig;
     }
 
     @Import(name="modelExplainabilityJobInput", required=true)
       private final Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> modelExplainabilityJobInput;
 
-    public Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> getModelExplainabilityJobInput() {
+    public Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> modelExplainabilityJobInput() {
         return this.modelExplainabilityJobInput;
     }
 
     @Import(name="modelExplainabilityJobOutputConfig", required=true)
       private final Output<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> modelExplainabilityJobOutputConfig;
 
-    public Output<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> getModelExplainabilityJobOutputConfig() {
+    public Output<ModelExplainabilityJobDefinitionMonitoringOutputConfigArgs> modelExplainabilityJobOutputConfig() {
         return this.modelExplainabilityJobOutputConfig;
     }
 
     @Import(name="networkConfig")
       private final @Nullable Output<ModelExplainabilityJobDefinitionNetworkConfigArgs> networkConfig;
 
-    public Output<ModelExplainabilityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+    public Output<ModelExplainabilityJobDefinitionNetworkConfigArgs> networkConfig() {
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -79,15 +80,15 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
       private final @Nullable Output<ModelExplainabilityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
-    public Output<ModelExplainabilityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
-        return this.stoppingCondition == null ? Output.empty() : this.stoppingCondition;
+    public Output<ModelExplainabilityJobDefinitionStoppingConditionArgs> stoppingCondition() {
+        return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
     @Import(name="tags")
       private final @Nullable Output<List<ModelExplainabilityJobDefinitionTagArgs>> tags;
 
-    public Output<List<ModelExplainabilityJobDefinitionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ModelExplainabilityJobDefinitionTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ModelExplainabilityJobDefinitionArgs(
@@ -125,16 +126,16 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
     }
 
     private ModelExplainabilityJobDefinitionArgs() {
-        this.jobDefinitionName = Output.empty();
-        this.jobResources = Output.empty();
-        this.modelExplainabilityAppSpecification = Output.empty();
-        this.modelExplainabilityBaselineConfig = Output.empty();
-        this.modelExplainabilityJobInput = Output.empty();
-        this.modelExplainabilityJobOutputConfig = Output.empty();
-        this.networkConfig = Output.empty();
-        this.roleArn = Output.empty();
-        this.stoppingCondition = Output.empty();
-        this.tags = Output.empty();
+        this.jobDefinitionName = Codegen.empty();
+        this.jobResources = Codegen.empty();
+        this.modelExplainabilityAppSpecification = Codegen.empty();
+        this.modelExplainabilityBaselineConfig = Codegen.empty();
+        this.modelExplainabilityJobInput = Codegen.empty();
+        this.modelExplainabilityJobOutputConfig = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stoppingCondition = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
-            this.jobDefinitionName = Output.ofNullable(jobDefinitionName);
+            this.jobDefinitionName = Codegen.ofNullable(jobDefinitionName);
             return this;
         }
         public Builder jobResources(Output<ModelExplainabilityJobDefinitionMonitoringResourcesArgs> jobResources) {
@@ -204,7 +205,7 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder modelExplainabilityBaselineConfig(@Nullable ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigArgs modelExplainabilityBaselineConfig) {
-            this.modelExplainabilityBaselineConfig = Output.ofNullable(modelExplainabilityBaselineConfig);
+            this.modelExplainabilityBaselineConfig = Codegen.ofNullable(modelExplainabilityBaselineConfig);
             return this;
         }
         public Builder modelExplainabilityJobInput(Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInputArgs> modelExplainabilityJobInput) {
@@ -228,7 +229,7 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder networkConfig(@Nullable ModelExplainabilityJobDefinitionNetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -244,7 +245,7 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder stoppingCondition(@Nullable ModelExplainabilityJobDefinitionStoppingConditionArgs stoppingCondition) {
-            this.stoppingCondition = Output.ofNullable(stoppingCondition);
+            this.stoppingCondition = Codegen.ofNullable(stoppingCondition);
             return this;
         }
         public Builder tags(@Nullable Output<List<ModelExplainabilityJobDefinitionTagArgs>> tags) {
@@ -252,7 +253,7 @@ public final class ModelExplainabilityJobDefinitionArgs extends io.pulumi.resour
             return this;
         }
         public Builder tags(@Nullable List<ModelExplainabilityJobDefinitionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ModelExplainabilityJobDefinitionTagArgs... tags) {

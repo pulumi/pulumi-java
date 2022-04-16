@@ -8,6 +8,7 @@ import io.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerHealthCheckArgs;
 import io.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerListenerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessLogs")
       private final @Nullable Output<LoadBalancerAccessLogsArgs> accessLogs;
 
-    public Output<LoadBalancerAccessLogsArgs> getAccessLogs() {
-        return this.accessLogs == null ? Output.empty() : this.accessLogs;
+    public Output<LoadBalancerAccessLogsArgs> accessLogs() {
+        return this.accessLogs == null ? Codegen.empty() : this.accessLogs;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
+    public Output<List<String>> availabilityZones() {
+        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionDraining")
       private final @Nullable Output<Boolean> connectionDraining;
 
-    public Output<Boolean> getConnectionDraining() {
-        return this.connectionDraining == null ? Output.empty() : this.connectionDraining;
+    public Output<Boolean> connectionDraining() {
+        return this.connectionDraining == null ? Codegen.empty() : this.connectionDraining;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionDrainingTimeout")
       private final @Nullable Output<Integer> connectionDrainingTimeout;
 
-    public Output<Integer> getConnectionDrainingTimeout() {
-        return this.connectionDrainingTimeout == null ? Output.empty() : this.connectionDrainingTimeout;
+    public Output<Integer> connectionDrainingTimeout() {
+        return this.connectionDrainingTimeout == null ? Codegen.empty() : this.connectionDrainingTimeout;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="crossZoneLoadBalancing")
       private final @Nullable Output<Boolean> crossZoneLoadBalancing;
 
-    public Output<Boolean> getCrossZoneLoadBalancing() {
-        return this.crossZoneLoadBalancing == null ? Output.empty() : this.crossZoneLoadBalancing;
+    public Output<Boolean> crossZoneLoadBalancing() {
+        return this.crossZoneLoadBalancing == null ? Codegen.empty() : this.crossZoneLoadBalancing;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="desyncMitigationMode")
       private final @Nullable Output<String> desyncMitigationMode;
 
-    public Output<String> getDesyncMitigationMode() {
-        return this.desyncMitigationMode == null ? Output.empty() : this.desyncMitigationMode;
+    public Output<String> desyncMitigationMode() {
+        return this.desyncMitigationMode == null ? Codegen.empty() : this.desyncMitigationMode;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheck")
       private final @Nullable Output<LoadBalancerHealthCheckArgs> healthCheck;
 
-    public Output<LoadBalancerHealthCheckArgs> getHealthCheck() {
-        return this.healthCheck == null ? Output.empty() : this.healthCheck;
+    public Output<LoadBalancerHealthCheckArgs> healthCheck() {
+        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idleTimeout")
       private final @Nullable Output<Integer> idleTimeout;
 
-    public Output<Integer> getIdleTimeout() {
-        return this.idleTimeout == null ? Output.empty() : this.idleTimeout;
+    public Output<Integer> idleTimeout() {
+        return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
-    public Output<List<String>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+    public Output<List<String>> instances() {
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="internal")
       private final @Nullable Output<Boolean> internal;
 
-    public Output<Boolean> getInternal() {
-        return this.internal == null ? Output.empty() : this.internal;
+    public Output<Boolean> internal() {
+        return this.internal == null ? Codegen.empty() : this.internal;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="listeners", required=true)
       private final Output<List<LoadBalancerListenerArgs>> listeners;
 
-    public Output<List<LoadBalancerListenerArgs>> getListeners() {
+    public Output<List<LoadBalancerListenerArgs>> listeners() {
         return this.listeners;
     }
 
@@ -149,8 +150,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+    public Output<List<String>> securityGroups() {
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSecurityGroup")
       private final @Nullable Output<String> sourceSecurityGroup;
 
-    public Output<String> getSourceSecurityGroup() {
-        return this.sourceSecurityGroup == null ? Output.empty() : this.sourceSecurityGroup;
+    public Output<String> sourceSecurityGroup() {
+        return this.sourceSecurityGroup == null ? Codegen.empty() : this.sourceSecurityGroup;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnets")
       private final @Nullable Output<List<String>> subnets;
 
-    public Output<List<String>> getSubnets() {
-        return this.subnets == null ? Output.empty() : this.subnets;
+    public Output<List<String>> subnets() {
+        return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
     /**
@@ -208,8 +209,8 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LoadBalancerArgs(
@@ -250,23 +251,23 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoadBalancerArgs() {
-        this.accessLogs = Output.empty();
-        this.availabilityZones = Output.empty();
-        this.connectionDraining = Output.empty();
-        this.connectionDrainingTimeout = Output.empty();
-        this.crossZoneLoadBalancing = Output.empty();
-        this.desyncMitigationMode = Output.empty();
-        this.healthCheck = Output.empty();
-        this.idleTimeout = Output.empty();
-        this.instances = Output.empty();
-        this.internal = Output.empty();
-        this.listeners = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.securityGroups = Output.empty();
-        this.sourceSecurityGroup = Output.empty();
-        this.subnets = Output.empty();
-        this.tags = Output.empty();
+        this.accessLogs = Codegen.empty();
+        this.availabilityZones = Codegen.empty();
+        this.connectionDraining = Codegen.empty();
+        this.connectionDrainingTimeout = Codegen.empty();
+        this.crossZoneLoadBalancing = Codegen.empty();
+        this.desyncMitigationMode = Codegen.empty();
+        this.healthCheck = Codegen.empty();
+        this.idleTimeout = Codegen.empty();
+        this.instances = Codegen.empty();
+        this.internal = Codegen.empty();
+        this.listeners = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.sourceSecurityGroup = Codegen.empty();
+        this.subnets = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -326,7 +327,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessLogs(@Nullable LoadBalancerAccessLogsArgs accessLogs) {
-            this.accessLogs = Output.ofNullable(accessLogs);
+            this.accessLogs = Codegen.ofNullable(accessLogs);
             return this;
         }
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
@@ -334,7 +335,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Output.ofNullable(availabilityZones);
+            this.availabilityZones = Codegen.ofNullable(availabilityZones);
             return this;
         }
         public Builder availabilityZones(String... availabilityZones) {
@@ -345,7 +346,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionDraining(@Nullable Boolean connectionDraining) {
-            this.connectionDraining = Output.ofNullable(connectionDraining);
+            this.connectionDraining = Codegen.ofNullable(connectionDraining);
             return this;
         }
         public Builder connectionDrainingTimeout(@Nullable Output<Integer> connectionDrainingTimeout) {
@@ -353,7 +354,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionDrainingTimeout(@Nullable Integer connectionDrainingTimeout) {
-            this.connectionDrainingTimeout = Output.ofNullable(connectionDrainingTimeout);
+            this.connectionDrainingTimeout = Codegen.ofNullable(connectionDrainingTimeout);
             return this;
         }
         public Builder crossZoneLoadBalancing(@Nullable Output<Boolean> crossZoneLoadBalancing) {
@@ -361,7 +362,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crossZoneLoadBalancing(@Nullable Boolean crossZoneLoadBalancing) {
-            this.crossZoneLoadBalancing = Output.ofNullable(crossZoneLoadBalancing);
+            this.crossZoneLoadBalancing = Codegen.ofNullable(crossZoneLoadBalancing);
             return this;
         }
         public Builder desyncMitigationMode(@Nullable Output<String> desyncMitigationMode) {
@@ -369,7 +370,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder desyncMitigationMode(@Nullable String desyncMitigationMode) {
-            this.desyncMitigationMode = Output.ofNullable(desyncMitigationMode);
+            this.desyncMitigationMode = Codegen.ofNullable(desyncMitigationMode);
             return this;
         }
         public Builder healthCheck(@Nullable Output<LoadBalancerHealthCheckArgs> healthCheck) {
@@ -377,7 +378,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheck(@Nullable LoadBalancerHealthCheckArgs healthCheck) {
-            this.healthCheck = Output.ofNullable(healthCheck);
+            this.healthCheck = Codegen.ofNullable(healthCheck);
             return this;
         }
         public Builder idleTimeout(@Nullable Output<Integer> idleTimeout) {
@@ -385,7 +386,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleTimeout(@Nullable Integer idleTimeout) {
-            this.idleTimeout = Output.ofNullable(idleTimeout);
+            this.idleTimeout = Codegen.ofNullable(idleTimeout);
             return this;
         }
         public Builder instances(@Nullable Output<List<String>> instances) {
@@ -393,7 +394,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(String... instances) {
@@ -404,7 +405,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder internal(@Nullable Boolean internal) {
-            this.internal = Output.ofNullable(internal);
+            this.internal = Codegen.ofNullable(internal);
             return this;
         }
         public Builder listeners(Output<List<LoadBalancerListenerArgs>> listeners) {
@@ -423,7 +424,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -431,7 +432,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -439,7 +440,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -450,7 +451,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceSecurityGroup(@Nullable String sourceSecurityGroup) {
-            this.sourceSecurityGroup = Output.ofNullable(sourceSecurityGroup);
+            this.sourceSecurityGroup = Codegen.ofNullable(sourceSecurityGroup);
             return this;
         }
         public Builder subnets(@Nullable Output<List<String>> subnets) {
@@ -458,7 +459,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnets(@Nullable List<String> subnets) {
-            this.subnets = Output.ofNullable(subnets);
+            this.subnets = Codegen.ofNullable(subnets);
             return this;
         }
         public Builder subnets(String... subnets) {
@@ -469,7 +470,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LoadBalancerArgs build() {
             return new LoadBalancerArgs(accessLogs, availabilityZones, connectionDraining, connectionDrainingTimeout, crossZoneLoadBalancing, desyncMitigationMode, healthCheck, idleTimeout, instances, internal, listeners, name, namePrefix, securityGroups, sourceSecurityGroup, subnets, tags);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+    public Output<String> instance() {
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="networkEndpointGroup")
       private final @Nullable Output<String> networkEndpointGroup;
 
-    public Output<String> getNetworkEndpointGroup() {
-        return this.networkEndpointGroup == null ? Output.empty() : this.networkEndpointGroup;
+    public Output<String> networkEndpointGroup() {
+        return this.networkEndpointGroup == null ? Codegen.empty() : this.networkEndpointGroup;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public NetworkEndpointState(
@@ -102,12 +103,12 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
     }
 
     private NetworkEndpointState() {
-        this.instance = Output.empty();
-        this.ipAddress = Output.empty();
-        this.networkEndpointGroup = Output.empty();
-        this.port = Output.empty();
-        this.project = Output.empty();
-        this.zone = Output.empty();
+        this.instance = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.networkEndpointGroup = Codegen.empty();
+        this.port = Codegen.empty();
+        this.project = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -153,7 +154,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder networkEndpointGroup(@Nullable Output<String> networkEndpointGroup) {
@@ -161,7 +162,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder networkEndpointGroup(@Nullable String networkEndpointGroup) {
-            this.networkEndpointGroup = Output.ofNullable(networkEndpointGroup);
+            this.networkEndpointGroup = Codegen.ofNullable(networkEndpointGroup);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -169,7 +170,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -177,7 +178,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -185,7 +186,7 @@ public final class NetworkEndpointState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public NetworkEndpointState build() {
             return new NetworkEndpointState(instance, ipAddress, networkEndpointGroup, port, project, zone);

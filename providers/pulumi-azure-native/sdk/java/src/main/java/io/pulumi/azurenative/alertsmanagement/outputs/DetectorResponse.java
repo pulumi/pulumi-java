@@ -65,42 +65,42 @@ public final class DetectorResponse {
      * The Smart Detector description. By default this is not populated, unless it's specified in expandDetector
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * The detector id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The Smart Detector image path. By default this is not populated, unless it's specified in expandDetector
      * 
     */
-    public List<String> getImagePaths() {
+    public List<String> imagePaths() {
         return this.imagePaths == null ? List.of() : this.imagePaths;
     }
     /**
      * The Smart Detector name. By default this is not populated, unless it's specified in expandDetector
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The detector's parameters.'
      * 
     */
-    public Map<String,Object> getParameters() {
+    public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
      * The Smart Detector supported resource types. By default this is not populated, unless it's specified in expandDetector
      * 
     */
-    public List<String> getSupportedResourceTypes() {
+    public List<String> supportedResourceTypes() {
         return this.supportedResourceTypes == null ? List.of() : this.supportedResourceTypes;
     }
 

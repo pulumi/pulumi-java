@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.batch_v1.inputs.JobSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ObjectMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="spec")
       private final @Nullable Output<JobSpecArgs> spec;
 
-    public Output<JobSpecArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<JobSpecArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     public JobTemplateSpecArgs(
@@ -49,8 +50,8 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private JobTemplateSpecArgs() {
-        this.metadata = Output.empty();
-        this.spec = Output.empty();
+        this.metadata = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder spec(@Nullable Output<JobSpecArgs> spec) {
@@ -88,7 +89,7 @@ public final class JobTemplateSpecArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder spec(@Nullable JobSpecArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }        public JobTemplateSpecArgs build() {
             return new JobTemplateSpecArgs(metadata, spec);

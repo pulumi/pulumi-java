@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1EntryOverviewArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
     @Import(name="contacts")
       private final @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
 
-    public Output<GoogleCloudDatacatalogV1ContactsArgs> getContacts() {
-        return this.contacts == null ? Output.empty() : this.contacts;
+    public Output<GoogleCloudDatacatalogV1ContactsArgs> contacts() {
+        return this.contacts == null ? Codegen.empty() : this.contacts;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
     @Import(name="entryOverview")
       private final @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 
-    public Output<GoogleCloudDatacatalogV1EntryOverviewArgs> getEntryOverview() {
-        return this.entryOverview == null ? Output.empty() : this.entryOverview;
+    public Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview() {
+        return this.entryOverview == null ? Codegen.empty() : this.entryOverview;
     }
 
     public GoogleCloudDatacatalogV1BusinessContextArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
     }
 
     private GoogleCloudDatacatalogV1BusinessContextArgs() {
-        this.contacts = Output.empty();
-        this.entryOverview = Output.empty();
+        this.contacts = Codegen.empty();
+        this.entryOverview = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
             return this;
         }
         public Builder contacts(@Nullable GoogleCloudDatacatalogV1ContactsArgs contacts) {
-            this.contacts = Output.ofNullable(contacts);
+            this.contacts = Codegen.ofNullable(contacts);
             return this;
         }
         public Builder entryOverview(@Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
@@ -88,7 +89,7 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends io.pulumi
             return this;
         }
         public Builder entryOverview(@Nullable GoogleCloudDatacatalogV1EntryOverviewArgs entryOverview) {
-            this.entryOverview = Output.ofNullable(entryOverview);
+            this.entryOverview = Codegen.ofNullable(entryOverview);
             return this;
         }        public GoogleCloudDatacatalogV1BusinessContextArgs build() {
             return new GoogleCloudDatacatalogV1BusinessContextArgs(contacts, entryOverview);

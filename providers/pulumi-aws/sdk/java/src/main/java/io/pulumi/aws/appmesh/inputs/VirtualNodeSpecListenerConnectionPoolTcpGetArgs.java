@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VirtualNodeSpecListenerConnectionPoolTcpGetArgs extends io.pu
     @Import(name="maxConnections", required=true)
       private final Output<Integer> maxConnections;
 
-    public Output<Integer> getMaxConnections() {
+    public Output<Integer> maxConnections() {
         return this.maxConnections;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualNodeSpecListenerConnectionPoolTcpGetArgs extends io.pu
     }
 
     private VirtualNodeSpecListenerConnectionPoolTcpGetArgs() {
-        this.maxConnections = Output.empty();
+        this.maxConnections = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.InstancePostKeyRevocationActionType;
 import io.pulumi.googlenative.compute_beta.enums.InstancePrivateIpv6GoogleAccess;
 import io.pulumi.googlenative.compute_beta.inputs.AcceleratorConfigArgs;
@@ -44,8 +45,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="advancedMachineFeatures")
       private final @Nullable Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
-    public Output<AdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
-        return this.advancedMachineFeatures == null ? Output.empty() : this.advancedMachineFeatures;
+    public Output<AdvancedMachineFeaturesArgs> advancedMachineFeatures() {
+        return this.advancedMachineFeatures == null ? Codegen.empty() : this.advancedMachineFeatures;
     }
 
     /**
@@ -55,15 +56,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
-    public Output<Boolean> getCanIpForward() {
-        return this.canIpForward == null ? Output.empty() : this.canIpForward;
+    public Output<Boolean> canIpForward() {
+        return this.canIpForward == null ? Codegen.empty() : this.canIpForward;
     }
 
     @Import(name="confidentialInstanceConfig")
       private final @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
-    public Output<ConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
-        return this.confidentialInstanceConfig == null ? Output.empty() : this.confidentialInstanceConfig;
+    public Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig() {
+        return this.confidentialInstanceConfig == null ? Codegen.empty() : this.confidentialInstanceConfig;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
-    public Output<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
+    public Output<Boolean> deletionProtection() {
+        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disks")
       private final @Nullable Output<List<AttachedDiskArgs>> disks;
 
-    public Output<List<AttachedDiskArgs>> getDisks() {
-        return this.disks == null ? Output.empty() : this.disks;
+    public Output<List<AttachedDiskArgs>> disks() {
+        return this.disks == null ? Codegen.empty() : this.disks;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayDevice")
       private final @Nullable Output<DisplayDeviceArgs> displayDevice;
 
-    public Output<DisplayDeviceArgs> getDisplayDevice() {
-        return this.displayDevice == null ? Output.empty() : this.displayDevice;
+    public Output<DisplayDeviceArgs> displayDevice() {
+        return this.displayDevice == null ? Codegen.empty() : this.displayDevice;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eraseWindowsVssSignature")
       private final @Nullable Output<Boolean> eraseWindowsVssSignature;
 
-    public Output<Boolean> getEraseWindowsVssSignature() {
-        return this.eraseWindowsVssSignature == null ? Output.empty() : this.eraseWindowsVssSignature;
+    public Output<Boolean> eraseWindowsVssSignature() {
+        return this.eraseWindowsVssSignature == null ? Codegen.empty() : this.eraseWindowsVssSignature;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="guestAccelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
-    public Output<List<AcceleratorConfigArgs>> getGuestAccelerators() {
-        return this.guestAccelerators == null ? Output.empty() : this.guestAccelerators;
+    public Output<List<AcceleratorConfigArgs>> guestAccelerators() {
+        return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -161,8 +162,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+    public Output<String> machineType() {
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -172,8 +173,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<MetadataArgs> metadata;
 
-    public Output<MetadataArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<MetadataArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -183,8 +184,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
+    public Output<String> minCpuPlatform() {
+        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -194,8 +195,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -205,15 +206,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     @Import(name="networkPerformanceConfig")
       private final @Nullable Output<NetworkPerformanceConfigArgs> networkPerformanceConfig;
 
-    public Output<NetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
-        return this.networkPerformanceConfig == null ? Output.empty() : this.networkPerformanceConfig;
+    public Output<NetworkPerformanceConfigArgs> networkPerformanceConfig() {
+        return this.networkPerformanceConfig == null ? Codegen.empty() : this.networkPerformanceConfig;
     }
 
     /**
@@ -223,8 +224,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="params")
       private final @Nullable Output<InstanceParamsArgs> params;
 
-    public Output<InstanceParamsArgs> getParams() {
-        return this.params == null ? Output.empty() : this.params;
+    public Output<InstanceParamsArgs> params() {
+        return this.params == null ? Codegen.empty() : this.params;
     }
 
     /**
@@ -234,8 +235,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postKeyRevocationActionType")
       private final @Nullable Output<InstancePostKeyRevocationActionType> postKeyRevocationActionType;
 
-    public Output<InstancePostKeyRevocationActionType> getPostKeyRevocationActionType() {
-        return this.postKeyRevocationActionType == null ? Output.empty() : this.postKeyRevocationActionType;
+    public Output<InstancePostKeyRevocationActionType> postKeyRevocationActionType() {
+        return this.postKeyRevocationActionType == null ? Codegen.empty() : this.postKeyRevocationActionType;
     }
 
     /**
@@ -245,22 +246,22 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<InstancePrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
-    public Output<InstancePrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
+    public Output<InstancePrivateIpv6GoogleAccess> privateIpv6GoogleAccess() {
+        return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -270,8 +271,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="reservationAffinity")
       private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
-    public Output<ReservationAffinityArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
+    public Output<ReservationAffinityArgs> reservationAffinity() {
+        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
     }
 
     /**
@@ -281,8 +282,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourcePolicies")
       private final @Nullable Output<List<String>> resourcePolicies;
 
-    public Output<List<String>> getResourcePolicies() {
-        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
+    public Output<List<String>> resourcePolicies() {
+        return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
     }
 
     /**
@@ -292,8 +293,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
 
-    public Output<SchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Output.empty() : this.scheduling;
+    public Output<SchedulingArgs> scheduling() {
+        return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
     /**
@@ -303,22 +304,22 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccounts")
       private final @Nullable Output<List<ServiceAccountArgs>> serviceAccounts;
 
-    public Output<List<ServiceAccountArgs>> getServiceAccounts() {
-        return this.serviceAccounts == null ? Output.empty() : this.serviceAccounts;
+    public Output<List<ServiceAccountArgs>> serviceAccounts() {
+        return this.serviceAccounts == null ? Codegen.empty() : this.serviceAccounts;
     }
 
     @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
+    public Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig() {
+        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     @Import(name="shieldedInstanceIntegrityPolicy")
       private final @Nullable Output<ShieldedInstanceIntegrityPolicyArgs> shieldedInstanceIntegrityPolicy;
 
-    public Output<ShieldedInstanceIntegrityPolicyArgs> getShieldedInstanceIntegrityPolicy() {
-        return this.shieldedInstanceIntegrityPolicy == null ? Output.empty() : this.shieldedInstanceIntegrityPolicy;
+    public Output<ShieldedInstanceIntegrityPolicyArgs> shieldedInstanceIntegrityPolicy() {
+        return this.shieldedInstanceIntegrityPolicy == null ? Codegen.empty() : this.shieldedInstanceIntegrityPolicy;
     }
 
     /**
@@ -328,8 +329,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shieldedVmConfig")
       private final @Nullable Output<ShieldedVmConfigArgs> shieldedVmConfig;
 
-    public Output<ShieldedVmConfigArgs> getShieldedVmConfig() {
-        return this.shieldedVmConfig == null ? Output.empty() : this.shieldedVmConfig;
+    public Output<ShieldedVmConfigArgs> shieldedVmConfig() {
+        return this.shieldedVmConfig == null ? Codegen.empty() : this.shieldedVmConfig;
     }
 
     /**
@@ -339,15 +340,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shieldedVmIntegrityPolicy")
       private final @Nullable Output<ShieldedVmIntegrityPolicyArgs> shieldedVmIntegrityPolicy;
 
-    public Output<ShieldedVmIntegrityPolicyArgs> getShieldedVmIntegrityPolicy() {
-        return this.shieldedVmIntegrityPolicy == null ? Output.empty() : this.shieldedVmIntegrityPolicy;
+    public Output<ShieldedVmIntegrityPolicyArgs> shieldedVmIntegrityPolicy() {
+        return this.shieldedVmIntegrityPolicy == null ? Codegen.empty() : this.shieldedVmIntegrityPolicy;
     }
 
     @Import(name="sourceInstanceTemplate")
       private final @Nullable Output<String> sourceInstanceTemplate;
 
-    public Output<String> getSourceInstanceTemplate() {
-        return this.sourceInstanceTemplate == null ? Output.empty() : this.sourceInstanceTemplate;
+    public Output<String> sourceInstanceTemplate() {
+        return this.sourceInstanceTemplate == null ? Codegen.empty() : this.sourceInstanceTemplate;
     }
 
     /**
@@ -357,8 +358,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceMachineImage")
       private final @Nullable Output<String> sourceMachineImage;
 
-    public Output<String> getSourceMachineImage() {
-        return this.sourceMachineImage == null ? Output.empty() : this.sourceMachineImage;
+    public Output<String> sourceMachineImage() {
+        return this.sourceMachineImage == null ? Codegen.empty() : this.sourceMachineImage;
     }
 
     /**
@@ -368,8 +369,8 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceMachineImageEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceMachineImageEncryptionKey;
 
-    public Output<CustomerEncryptionKeyArgs> getSourceMachineImageEncryptionKey() {
-        return this.sourceMachineImageEncryptionKey == null ? Output.empty() : this.sourceMachineImageEncryptionKey;
+    public Output<CustomerEncryptionKeyArgs> sourceMachineImageEncryptionKey() {
+        return this.sourceMachineImageEncryptionKey == null ? Codegen.empty() : this.sourceMachineImageEncryptionKey;
     }
 
     /**
@@ -379,15 +380,15 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<TagsArgs> tags;
 
-    public Output<TagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<TagsArgs> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceArgs(
@@ -464,41 +465,41 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.advancedMachineFeatures = Output.empty();
-        this.canIpForward = Output.empty();
-        this.confidentialInstanceConfig = Output.empty();
-        this.deletionProtection = Output.empty();
-        this.description = Output.empty();
-        this.disks = Output.empty();
-        this.displayDevice = Output.empty();
-        this.eraseWindowsVssSignature = Output.empty();
-        this.guestAccelerators = Output.empty();
-        this.hostname = Output.empty();
-        this.labels = Output.empty();
-        this.machineType = Output.empty();
-        this.metadata = Output.empty();
-        this.minCpuPlatform = Output.empty();
-        this.name = Output.empty();
-        this.networkInterfaces = Output.empty();
-        this.networkPerformanceConfig = Output.empty();
-        this.params = Output.empty();
-        this.postKeyRevocationActionType = Output.empty();
-        this.privateIpv6GoogleAccess = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.reservationAffinity = Output.empty();
-        this.resourcePolicies = Output.empty();
-        this.scheduling = Output.empty();
-        this.serviceAccounts = Output.empty();
-        this.shieldedInstanceConfig = Output.empty();
-        this.shieldedInstanceIntegrityPolicy = Output.empty();
-        this.shieldedVmConfig = Output.empty();
-        this.shieldedVmIntegrityPolicy = Output.empty();
-        this.sourceInstanceTemplate = Output.empty();
-        this.sourceMachineImage = Output.empty();
-        this.sourceMachineImageEncryptionKey = Output.empty();
-        this.tags = Output.empty();
-        this.zone = Output.empty();
+        this.advancedMachineFeatures = Codegen.empty();
+        this.canIpForward = Codegen.empty();
+        this.confidentialInstanceConfig = Codegen.empty();
+        this.deletionProtection = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disks = Codegen.empty();
+        this.displayDevice = Codegen.empty();
+        this.eraseWindowsVssSignature = Codegen.empty();
+        this.guestAccelerators = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.minCpuPlatform = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkInterfaces = Codegen.empty();
+        this.networkPerformanceConfig = Codegen.empty();
+        this.params = Codegen.empty();
+        this.postKeyRevocationActionType = Codegen.empty();
+        this.privateIpv6GoogleAccess = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.reservationAffinity = Codegen.empty();
+        this.resourcePolicies = Codegen.empty();
+        this.scheduling = Codegen.empty();
+        this.serviceAccounts = Codegen.empty();
+        this.shieldedInstanceConfig = Codegen.empty();
+        this.shieldedInstanceIntegrityPolicy = Codegen.empty();
+        this.shieldedVmConfig = Codegen.empty();
+        this.shieldedVmIntegrityPolicy = Codegen.empty();
+        this.sourceInstanceTemplate = Codegen.empty();
+        this.sourceMachineImage = Codegen.empty();
+        this.sourceMachineImageEncryptionKey = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -594,7 +595,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advancedMachineFeatures(@Nullable AdvancedMachineFeaturesArgs advancedMachineFeatures) {
-            this.advancedMachineFeatures = Output.ofNullable(advancedMachineFeatures);
+            this.advancedMachineFeatures = Codegen.ofNullable(advancedMachineFeatures);
             return this;
         }
         public Builder canIpForward(@Nullable Output<Boolean> canIpForward) {
@@ -602,7 +603,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder canIpForward(@Nullable Boolean canIpForward) {
-            this.canIpForward = Output.ofNullable(canIpForward);
+            this.canIpForward = Codegen.ofNullable(canIpForward);
             return this;
         }
         public Builder confidentialInstanceConfig(@Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
@@ -610,7 +611,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder confidentialInstanceConfig(@Nullable ConfidentialInstanceConfigArgs confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Output.ofNullable(confidentialInstanceConfig);
+            this.confidentialInstanceConfig = Codegen.ofNullable(confidentialInstanceConfig);
             return this;
         }
         public Builder deletionProtection(@Nullable Output<Boolean> deletionProtection) {
@@ -618,7 +619,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Output.ofNullable(deletionProtection);
+            this.deletionProtection = Codegen.ofNullable(deletionProtection);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -626,7 +627,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disks(@Nullable Output<List<AttachedDiskArgs>> disks) {
@@ -634,7 +635,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disks(@Nullable List<AttachedDiskArgs> disks) {
-            this.disks = Output.ofNullable(disks);
+            this.disks = Codegen.ofNullable(disks);
             return this;
         }
         public Builder disks(AttachedDiskArgs... disks) {
@@ -645,7 +646,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayDevice(@Nullable DisplayDeviceArgs displayDevice) {
-            this.displayDevice = Output.ofNullable(displayDevice);
+            this.displayDevice = Codegen.ofNullable(displayDevice);
             return this;
         }
         public Builder eraseWindowsVssSignature(@Nullable Output<Boolean> eraseWindowsVssSignature) {
@@ -653,7 +654,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eraseWindowsVssSignature(@Nullable Boolean eraseWindowsVssSignature) {
-            this.eraseWindowsVssSignature = Output.ofNullable(eraseWindowsVssSignature);
+            this.eraseWindowsVssSignature = Codegen.ofNullable(eraseWindowsVssSignature);
             return this;
         }
         public Builder guestAccelerators(@Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators) {
@@ -661,7 +662,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder guestAccelerators(@Nullable List<AcceleratorConfigArgs> guestAccelerators) {
-            this.guestAccelerators = Output.ofNullable(guestAccelerators);
+            this.guestAccelerators = Codegen.ofNullable(guestAccelerators);
             return this;
         }
         public Builder guestAccelerators(AcceleratorConfigArgs... guestAccelerators) {
@@ -672,7 +673,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -680,7 +681,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -688,7 +689,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder metadata(@Nullable Output<MetadataArgs> metadata) {
@@ -696,7 +697,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable MetadataArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
@@ -704,7 +705,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -712,7 +713,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
@@ -720,7 +721,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
@@ -731,7 +732,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkPerformanceConfig(@Nullable NetworkPerformanceConfigArgs networkPerformanceConfig) {
-            this.networkPerformanceConfig = Output.ofNullable(networkPerformanceConfig);
+            this.networkPerformanceConfig = Codegen.ofNullable(networkPerformanceConfig);
             return this;
         }
         public Builder params(@Nullable Output<InstanceParamsArgs> params) {
@@ -739,7 +740,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder params(@Nullable InstanceParamsArgs params) {
-            this.params = Output.ofNullable(params);
+            this.params = Codegen.ofNullable(params);
             return this;
         }
         public Builder postKeyRevocationActionType(@Nullable Output<InstancePostKeyRevocationActionType> postKeyRevocationActionType) {
@@ -747,7 +748,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postKeyRevocationActionType(@Nullable InstancePostKeyRevocationActionType postKeyRevocationActionType) {
-            this.postKeyRevocationActionType = Output.ofNullable(postKeyRevocationActionType);
+            this.postKeyRevocationActionType = Codegen.ofNullable(postKeyRevocationActionType);
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable Output<InstancePrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
@@ -755,7 +756,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable InstancePrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Codegen.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -763,7 +764,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -771,7 +772,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
@@ -779,7 +780,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Output.ofNullable(reservationAffinity);
+            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
             return this;
         }
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
@@ -787,7 +788,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Output.ofNullable(resourcePolicies);
+            this.resourcePolicies = Codegen.ofNullable(resourcePolicies);
             return this;
         }
         public Builder resourcePolicies(String... resourcePolicies) {
@@ -798,7 +799,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduling(@Nullable SchedulingArgs scheduling) {
-            this.scheduling = Output.ofNullable(scheduling);
+            this.scheduling = Codegen.ofNullable(scheduling);
             return this;
         }
         public Builder serviceAccounts(@Nullable Output<List<ServiceAccountArgs>> serviceAccounts) {
@@ -806,7 +807,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccounts(@Nullable List<ServiceAccountArgs> serviceAccounts) {
-            this.serviceAccounts = Output.ofNullable(serviceAccounts);
+            this.serviceAccounts = Codegen.ofNullable(serviceAccounts);
             return this;
         }
         public Builder serviceAccounts(ServiceAccountArgs... serviceAccounts) {
@@ -817,7 +818,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
             return this;
         }
         public Builder shieldedInstanceIntegrityPolicy(@Nullable Output<ShieldedInstanceIntegrityPolicyArgs> shieldedInstanceIntegrityPolicy) {
@@ -825,7 +826,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shieldedInstanceIntegrityPolicy(@Nullable ShieldedInstanceIntegrityPolicyArgs shieldedInstanceIntegrityPolicy) {
-            this.shieldedInstanceIntegrityPolicy = Output.ofNullable(shieldedInstanceIntegrityPolicy);
+            this.shieldedInstanceIntegrityPolicy = Codegen.ofNullable(shieldedInstanceIntegrityPolicy);
             return this;
         }
         public Builder shieldedVmConfig(@Nullable Output<ShieldedVmConfigArgs> shieldedVmConfig) {
@@ -833,7 +834,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shieldedVmConfig(@Nullable ShieldedVmConfigArgs shieldedVmConfig) {
-            this.shieldedVmConfig = Output.ofNullable(shieldedVmConfig);
+            this.shieldedVmConfig = Codegen.ofNullable(shieldedVmConfig);
             return this;
         }
         public Builder shieldedVmIntegrityPolicy(@Nullable Output<ShieldedVmIntegrityPolicyArgs> shieldedVmIntegrityPolicy) {
@@ -841,7 +842,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shieldedVmIntegrityPolicy(@Nullable ShieldedVmIntegrityPolicyArgs shieldedVmIntegrityPolicy) {
-            this.shieldedVmIntegrityPolicy = Output.ofNullable(shieldedVmIntegrityPolicy);
+            this.shieldedVmIntegrityPolicy = Codegen.ofNullable(shieldedVmIntegrityPolicy);
             return this;
         }
         public Builder sourceInstanceTemplate(@Nullable Output<String> sourceInstanceTemplate) {
@@ -849,7 +850,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceInstanceTemplate(@Nullable String sourceInstanceTemplate) {
-            this.sourceInstanceTemplate = Output.ofNullable(sourceInstanceTemplate);
+            this.sourceInstanceTemplate = Codegen.ofNullable(sourceInstanceTemplate);
             return this;
         }
         public Builder sourceMachineImage(@Nullable Output<String> sourceMachineImage) {
@@ -857,7 +858,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceMachineImage(@Nullable String sourceMachineImage) {
-            this.sourceMachineImage = Output.ofNullable(sourceMachineImage);
+            this.sourceMachineImage = Codegen.ofNullable(sourceMachineImage);
             return this;
         }
         public Builder sourceMachineImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceMachineImageEncryptionKey) {
@@ -865,7 +866,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceMachineImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceMachineImageEncryptionKey) {
-            this.sourceMachineImageEncryptionKey = Output.ofNullable(sourceMachineImageEncryptionKey);
+            this.sourceMachineImageEncryptionKey = Codegen.ofNullable(sourceMachineImageEncryptionKey);
             return this;
         }
         public Builder tags(@Nullable Output<TagsArgs> tags) {
@@ -873,7 +874,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable TagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -881,7 +882,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, deletionProtection, description, disks, displayDevice, eraseWindowsVssSignature, guestAccelerators, hostname, labels, machineType, metadata, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, params, postKeyRevocationActionType, privateIpv6GoogleAccess, project, requestId, reservationAffinity, resourcePolicies, scheduling, serviceAccounts, shieldedInstanceConfig, shieldedInstanceIntegrityPolicy, shieldedVmConfig, shieldedVmIntegrityPolicy, sourceInstanceTemplate, sourceMachineImage, sourceMachineImageEncryptionKey, tags, zone);

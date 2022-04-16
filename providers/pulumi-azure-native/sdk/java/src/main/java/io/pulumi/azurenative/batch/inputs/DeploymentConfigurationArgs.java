@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.inputs.CloudServiceConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.VirtualMachineConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="cloudServiceConfiguration")
       private final @Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration;
 
-    public Output<CloudServiceConfigurationArgs> getCloudServiceConfiguration() {
-        return this.cloudServiceConfiguration == null ? Output.empty() : this.cloudServiceConfiguration;
+    public Output<CloudServiceConfigurationArgs> cloudServiceConfiguration() {
+        return this.cloudServiceConfiguration == null ? Codegen.empty() : this.cloudServiceConfiguration;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="virtualMachineConfiguration")
       private final @Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
 
-    public Output<VirtualMachineConfigurationArgs> getVirtualMachineConfiguration() {
-        return this.virtualMachineConfiguration == null ? Output.empty() : this.virtualMachineConfiguration;
+    public Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration() {
+        return this.virtualMachineConfiguration == null ? Codegen.empty() : this.virtualMachineConfiguration;
     }
 
     public DeploymentConfigurationArgs(
@@ -45,8 +46,8 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private DeploymentConfigurationArgs() {
-        this.cloudServiceConfiguration = Output.empty();
-        this.virtualMachineConfiguration = Output.empty();
+        this.cloudServiceConfiguration = Codegen.empty();
+        this.virtualMachineConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder cloudServiceConfiguration(@Nullable CloudServiceConfigurationArgs cloudServiceConfiguration) {
-            this.cloudServiceConfiguration = Output.ofNullable(cloudServiceConfiguration);
+            this.cloudServiceConfiguration = Codegen.ofNullable(cloudServiceConfiguration);
             return this;
         }
         public Builder virtualMachineConfiguration(@Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration) {
@@ -84,7 +85,7 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder virtualMachineConfiguration(@Nullable VirtualMachineConfigurationArgs virtualMachineConfiguration) {
-            this.virtualMachineConfiguration = Output.ofNullable(virtualMachineConfiguration);
+            this.virtualMachineConfiguration = Codegen.ofNullable(virtualMachineConfiguration);
             return this;
         }        public DeploymentConfigurationArgs build() {
             return new DeploymentConfigurationArgs(cloudServiceConfiguration, virtualMachineConfiguration);

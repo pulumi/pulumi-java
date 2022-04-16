@@ -6,6 +6,7 @@ package io.pulumi.gcp.oslogin;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.oslogin.SshPublicKeyArgs;
 import io.pulumi.gcp.oslogin.inputs.SshPublicKeyState;
@@ -49,7 +50,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return An expiration time in microseconds since epoch.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationTimeUsec() {
+    public Output</* @Nullable */ String> expirationTimeUsec() {
         return this.expirationTimeUsec;
     }
     /**
@@ -63,7 +64,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return The SHA-256 fingerprint of the SSH public key.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -77,7 +78,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return Public key text in SSH format, defined by RFC4253 section 6.6.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -91,7 +92,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return The project ID of the Google Cloud Platform project.
      * 
      */
-    public Output</* @Nullable */ String> getProject() {
+    public Output</* @Nullable */ String> project() {
         return this.project;
     }
     /**
@@ -105,7 +106,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return The user email.
      * 
      */
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 
@@ -131,7 +132,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SshPublicKey(String name, SshPublicKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:oslogin/sshPublicKey:SshPublicKey", name, args == null ? SshPublicKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:oslogin/sshPublicKey:SshPublicKey", name, args == null ? SshPublicKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SshPublicKey(String name, Output<String> id, @Nullable SshPublicKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

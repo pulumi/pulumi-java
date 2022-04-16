@@ -18,6 +18,7 @@ import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageReadSettingsAr
 import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -39,8 +40,8 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
-    public Output<Object> getAdditionalColumns() {
-        return this.additionalColumns == null ? Output.empty() : this.additionalColumns;
+    public Output<Object> additionalColumns() {
+        return this.additionalColumns == null ? Codegen.empty() : this.additionalColumns;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+    public Output<Object> disableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+    public Output<Object> maxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
-    public Output<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
+    public Output<Object> sourceRetryCount() {
+        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
-    public Output<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
+    public Output<Object> sourceRetryWait() {
+        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
 
-    public Output<Object> getStoreSettings() {
-        return this.storeSettings == null ? Output.empty() : this.storeSettings;
+    public Output<Object> storeSettings() {
+        return this.storeSettings == null ? Codegen.empty() : this.storeSettings;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -128,13 +129,13 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParquetSourceArgs() {
-        this.additionalColumns = Output.empty();
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.sourceRetryCount = Output.empty();
-        this.sourceRetryWait = Output.empty();
-        this.storeSettings = Output.empty();
-        this.type = Output.empty();
+        this.additionalColumns = Codegen.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.sourceRetryCount = Codegen.empty();
+        this.sourceRetryWait = Codegen.empty();
+        this.storeSettings = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Output.ofNullable(additionalColumns);
+            this.additionalColumns = Codegen.ofNullable(additionalColumns);
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
@@ -182,7 +183,7 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -190,7 +191,7 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
@@ -198,7 +199,7 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
             return this;
         }
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
@@ -206,7 +207,7 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
             return this;
         }
         public Builder storeSettings(@Nullable Output<Object> storeSettings) {
@@ -214,7 +215,7 @@ public final class ParquetSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = Output.ofNullable(storeSettings);
+            this.storeSettings = Codegen.ofNullable(storeSettings);
             return this;
         }
         public Builder type(Output<String> type) {

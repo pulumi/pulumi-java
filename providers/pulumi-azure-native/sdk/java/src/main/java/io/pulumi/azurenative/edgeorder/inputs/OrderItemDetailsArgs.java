@@ -9,6 +9,7 @@ import io.pulumi.azurenative.edgeorder.inputs.ProductDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="notificationEmailList")
       private final @Nullable Output<List<String>> notificationEmailList;
 
-    public Output<List<String>> getNotificationEmailList() {
-        return this.notificationEmailList == null ? Output.empty() : this.notificationEmailList;
+    public Output<List<String>> notificationEmailList() {
+        return this.notificationEmailList == null ? Codegen.empty() : this.notificationEmailList;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="orderItemType", required=true)
       private final Output<Either<String,OrderItemType>> orderItemType;
 
-    public Output<Either<String,OrderItemType>> getOrderItemType() {
+    public Output<Either<String,OrderItemType>> orderItemType() {
         return this.orderItemType;
     }
 
@@ -52,8 +53,8 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="preferences")
       private final @Nullable Output<PreferencesArgs> preferences;
 
-    public Output<PreferencesArgs> getPreferences() {
-        return this.preferences == null ? Output.empty() : this.preferences;
+    public Output<PreferencesArgs> preferences() {
+        return this.preferences == null ? Codegen.empty() : this.preferences;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="productDetails", required=true)
       private final Output<ProductDetailsArgs> productDetails;
 
-    public Output<ProductDetailsArgs> getProductDetails() {
+    public Output<ProductDetailsArgs> productDetails() {
         return this.productDetails;
     }
 
@@ -79,10 +80,10 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OrderItemDetailsArgs() {
-        this.notificationEmailList = Output.empty();
-        this.orderItemType = Output.empty();
-        this.preferences = Output.empty();
-        this.productDetails = Output.empty();
+        this.notificationEmailList = Codegen.empty();
+        this.orderItemType = Codegen.empty();
+        this.preferences = Codegen.empty();
+        this.productDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
-            this.notificationEmailList = Output.ofNullable(notificationEmailList);
+            this.notificationEmailList = Codegen.ofNullable(notificationEmailList);
             return this;
         }
         public Builder notificationEmailList(String... notificationEmailList) {
@@ -135,7 +136,7 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder preferences(@Nullable PreferencesArgs preferences) {
-            this.preferences = Output.ofNullable(preferences);
+            this.preferences = Codegen.ofNullable(preferences);
             return this;
         }
         public Builder productDetails(Output<ProductDetailsArgs> productDetails) {

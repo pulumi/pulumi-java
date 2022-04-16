@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<KeyRingIAMBindingConditionArgs> condition;
 
-    public Output<KeyRingIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<KeyRingIAMBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -38,14 +39,14 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
-    public Output<String> getKeyRingId() {
+    public Output<String> keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -58,7 +59,7 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -74,10 +75,10 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private KeyRingIAMBindingArgs() {
-        this.condition = Output.empty();
-        this.keyRingId = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.keyRingId = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable KeyRingIAMBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder keyRingId(Output<String> keyRingId) {

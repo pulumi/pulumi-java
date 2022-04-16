@@ -33,14 +33,14 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
      * Ignore errors
      * 
     */
-    public GooglePrivacyDlpV2LeaveUntransformedResponse getLeaveUntransformed() {
+    public GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed() {
         return this.leaveUntransformed;
     }
     /**
      * Throw an error
      * 
     */
-    public GooglePrivacyDlpV2ThrowErrorResponse getThrowError() {
+    public GooglePrivacyDlpV2ThrowErrorResponse throwError() {
         return this.throwError;
     }
 

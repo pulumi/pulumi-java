@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
     @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
+    public Output<String> deviceName() {
         return this.deviceName;
     }
 
@@ -33,8 +34,8 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
     @Import(name="noDevice")
       private final @Nullable Output<Boolean> noDevice;
 
-    public Output<Boolean> getNoDevice() {
-        return this.noDevice == null ? Output.empty() : this.noDevice;
+    public Output<Boolean> noDevice() {
+        return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
     @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
-    public Output<String> getVirtualName() {
-        return this.virtualName == null ? Output.empty() : this.virtualName;
+    public Output<String> virtualName() {
+        return this.virtualName == null ? Codegen.empty() : this.virtualName;
     }
 
     public InstanceEphemeralBlockDeviceArgs(
@@ -58,9 +59,9 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
     }
 
     private InstanceEphemeralBlockDeviceArgs() {
-        this.deviceName = Output.empty();
-        this.noDevice = Output.empty();
-        this.virtualName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.noDevice = Codegen.empty();
+        this.virtualName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder noDevice(@Nullable Boolean noDevice) {
-            this.noDevice = Output.ofNullable(noDevice);
+            this.noDevice = Codegen.ofNullable(noDevice);
             return this;
         }
         public Builder virtualName(@Nullable Output<String> virtualName) {
@@ -108,7 +109,7 @@ public final class InstanceEphemeralBlockDeviceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder virtualName(@Nullable String virtualName) {
-            this.virtualName = Output.ofNullable(virtualName);
+            this.virtualName = Codegen.ofNullable(virtualName);
             return this;
         }        public InstanceEphemeralBlockDeviceArgs build() {
             return new InstanceEphemeralBlockDeviceArgs(deviceName, noDevice, virtualName);

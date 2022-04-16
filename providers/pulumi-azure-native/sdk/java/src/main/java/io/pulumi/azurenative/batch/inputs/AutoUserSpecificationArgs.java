@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.enums.AutoUserScope;
 import io.pulumi.azurenative.batch.enums.ElevationLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
     @Import(name="elevationLevel")
       private final @Nullable Output<ElevationLevel> elevationLevel;
 
-    public Output<ElevationLevel> getElevationLevel() {
-        return this.elevationLevel == null ? Output.empty() : this.elevationLevel;
+    public Output<ElevationLevel> elevationLevel() {
+        return this.elevationLevel == null ? Codegen.empty() : this.elevationLevel;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
     @Import(name="scope")
       private final @Nullable Output<AutoUserScope> scope;
 
-    public Output<AutoUserScope> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<AutoUserScope> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public AutoUserSpecificationArgs(
@@ -45,8 +46,8 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
     }
 
     private AutoUserSpecificationArgs() {
-        this.elevationLevel = Output.empty();
-        this.scope = Output.empty();
+        this.elevationLevel = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
-            this.elevationLevel = Output.ofNullable(elevationLevel);
+            this.elevationLevel = Codegen.ofNullable(elevationLevel);
             return this;
         }
         public Builder scope(@Nullable Output<AutoUserScope> scope) {
@@ -84,7 +85,7 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder scope(@Nullable AutoUserScope scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public AutoUserSpecificationArgs build() {
             return new AutoUserSpecificationArgs(elevationLevel, scope);

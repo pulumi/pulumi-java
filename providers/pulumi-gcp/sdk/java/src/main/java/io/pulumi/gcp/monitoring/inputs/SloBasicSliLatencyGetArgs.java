@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class SloBasicSliLatencyGetArgs extends io.pulumi.resources.Resourc
     @Import(name="threshold", required=true)
       private final Output<String> threshold;
 
-    public Output<String> getThreshold() {
+    public Output<String> threshold() {
         return this.threshold;
     }
 
@@ -31,7 +32,7 @@ public final class SloBasicSliLatencyGetArgs extends io.pulumi.resources.Resourc
     }
 
     private SloBasicSliLatencyGetArgs() {
-        this.threshold = Output.empty();
+        this.threshold = Codegen.empty();
     }
 
     public static Builder builder() {

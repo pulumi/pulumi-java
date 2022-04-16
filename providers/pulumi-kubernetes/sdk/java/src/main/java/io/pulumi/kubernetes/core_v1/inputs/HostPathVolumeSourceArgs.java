@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -36,8 +37,8 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public HostPathVolumeSourceArgs(
@@ -48,8 +49,8 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
     }
 
     private HostPathVolumeSourceArgs() {
-        this.path = Output.empty();
-        this.type = Output.empty();
+        this.path = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class HostPathVolumeSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public HostPathVolumeSourceArgs build() {
             return new HostPathVolumeSourceArgs(path, type);

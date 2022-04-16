@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
     @Import(name="lifecyclePolicyText")
       private final @Nullable Output<String> lifecyclePolicyText;
 
-    public Output<String> getLifecyclePolicyText() {
-        return this.lifecyclePolicyText == null ? Output.empty() : this.lifecyclePolicyText;
+    public Output<String> lifecyclePolicyText() {
+        return this.lifecyclePolicyText == null ? Codegen.empty() : this.lifecyclePolicyText;
     }
 
     @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
-    public Output<String> getRegistryId() {
-        return this.registryId == null ? Output.empty() : this.registryId;
+    public Output<String> registryId() {
+        return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
     public RepositoryLifecyclePolicyArgs(
@@ -40,8 +41,8 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
     }
 
     private RepositoryLifecyclePolicyArgs() {
-        this.lifecyclePolicyText = Output.empty();
-        this.registryId = Output.empty();
+        this.lifecyclePolicyText = Codegen.empty();
+        this.registryId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder lifecyclePolicyText(@Nullable String lifecyclePolicyText) {
-            this.lifecyclePolicyText = Output.ofNullable(lifecyclePolicyText);
+            this.lifecyclePolicyText = Codegen.ofNullable(lifecyclePolicyText);
             return this;
         }
         public Builder registryId(@Nullable Output<String> registryId) {
@@ -79,7 +80,7 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Output.ofNullable(registryId);
+            this.registryId = Codegen.ofNullable(registryId);
             return this;
         }        public RepositoryLifecyclePolicyArgs build() {
             return new RepositoryLifecyclePolicyArgs(lifecyclePolicyText, registryId);

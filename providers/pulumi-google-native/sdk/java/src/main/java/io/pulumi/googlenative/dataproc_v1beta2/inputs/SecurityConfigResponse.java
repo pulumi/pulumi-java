@@ -23,7 +23,7 @@ public final class SecurityConfigResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="kerberosConfig", required=true)
       private final KerberosConfigResponse kerberosConfig;
 
-    public KerberosConfigResponse getKerberosConfig() {
+    public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }
 

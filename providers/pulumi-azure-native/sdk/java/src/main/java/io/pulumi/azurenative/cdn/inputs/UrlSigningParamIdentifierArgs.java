@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cdn.enums.ParamIndicator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="paramIndicator", required=true)
       private final Output<Either<String,ParamIndicator>> paramIndicator;
 
-    public Output<Either<String,ParamIndicator>> getParamIndicator() {
+    public Output<Either<String,ParamIndicator>> paramIndicator() {
         return this.paramIndicator;
     }
 
@@ -37,7 +38,7 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
     @Import(name="paramName", required=true)
       private final Output<String> paramName;
 
-    public Output<String> getParamName() {
+    public Output<String> paramName() {
         return this.paramName;
     }
 
@@ -49,8 +50,8 @@ public final class UrlSigningParamIdentifierArgs extends io.pulumi.resources.Res
     }
 
     private UrlSigningParamIdentifierArgs() {
-        this.paramIndicator = Output.empty();
-        this.paramName = Output.empty();
+        this.paramIndicator = Codegen.empty();
+        this.paramName = Codegen.empty();
     }
 
     public static Builder builder() {

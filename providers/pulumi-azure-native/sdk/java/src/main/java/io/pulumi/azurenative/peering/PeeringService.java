@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -57,7 +58,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The location (state/province) of the customer.
      * 
      */
-    public Output</* @Nullable */ String> getPeeringServiceLocation() {
+    public Output</* @Nullable */ String> peeringServiceLocation() {
         return this.peeringServiceLocation;
     }
     /**
@@ -85,7 +86,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The name of the service provider.
      * 
      */
-    public Output</* @Nullable */ String> getPeeringServiceProvider() {
+    public Output</* @Nullable */ String> peeringServiceProvider() {
         return this.peeringServiceProvider;
     }
     /**
@@ -99,7 +100,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The backup peering (Microsoft/service provider) location to be used for customer traffic.
      * 
      */
-    public Output</* @Nullable */ String> getProviderBackupPeeringLocation() {
+    public Output</* @Nullable */ String> providerBackupPeeringLocation() {
         return this.providerBackupPeeringLocation;
     }
     /**
@@ -113,7 +114,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The primary peering (Microsoft/service provider) location to be used for customer traffic.
      * 
      */
-    public Output</* @Nullable */ String> getProviderPrimaryPeeringLocation() {
+    public Output</* @Nullable */ String> providerPrimaryPeeringLocation() {
         return this.providerPrimaryPeeringLocation;
     }
     /**
@@ -127,7 +128,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -141,7 +142,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The SKU that defines the type of the peering service.
      * 
      */
-    public Output</* @Nullable */ PeeringServiceSkuResponse> getSku() {
+    public Output</* @Nullable */ PeeringServiceSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -155,7 +156,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +170,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -195,7 +196,7 @@ public class PeeringService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PeeringService(String name, PeeringServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:peering:PeeringService", name, args == null ? PeeringServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:peering:PeeringService", name, args == null ? PeeringServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PeeringService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

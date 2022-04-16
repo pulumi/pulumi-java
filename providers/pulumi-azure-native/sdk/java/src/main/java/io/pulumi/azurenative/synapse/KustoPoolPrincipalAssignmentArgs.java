@@ -8,6 +8,7 @@ import io.pulumi.azurenative.synapse.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
-    public Output<String> getKustoPoolName() {
+    public Output<String> kustoPoolName() {
         return this.kustoPoolName;
     }
 
@@ -35,8 +36,8 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     @Import(name="principalAssignmentName")
       private final @Nullable Output<String> principalAssignmentName;
 
-    public Output<String> getPrincipalAssignmentName() {
-        return this.principalAssignmentName == null ? Output.empty() : this.principalAssignmentName;
+    public Output<String> principalAssignmentName() {
+        return this.principalAssignmentName == null ? Codegen.empty() : this.principalAssignmentName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
 
@@ -57,7 +58,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     @Import(name="principalType", required=true)
       private final Output<Either<String,PrincipalType>> principalType;
 
-    public Output<Either<String,PrincipalType>> getPrincipalType() {
+    public Output<Either<String,PrincipalType>> principalType() {
         return this.principalType;
     }
 
@@ -68,7 +69,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -79,7 +80,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     @Import(name="role", required=true)
       private final Output<Either<String,ClusterPrincipalRole>> role;
 
-    public Output<Either<String,ClusterPrincipalRole>> getRole() {
+    public Output<Either<String,ClusterPrincipalRole>> role() {
         return this.role;
     }
 
@@ -90,8 +91,8 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -125,14 +126,14 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
     }
 
     private KustoPoolPrincipalAssignmentArgs() {
-        this.kustoPoolName = Output.empty();
-        this.principalAssignmentName = Output.empty();
-        this.principalId = Output.empty();
-        this.principalType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.role = Output.empty();
-        this.tenantId = Output.empty();
-        this.workspaceName = Output.empty();
+        this.kustoPoolName = Codegen.empty();
+        this.principalAssignmentName = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.role = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder principalAssignmentName(@Nullable String principalAssignmentName) {
-            this.principalAssignmentName = Output.ofNullable(principalAssignmentName);
+            this.principalAssignmentName = Codegen.ofNullable(principalAssignmentName);
             return this;
         }
         public Builder principalId(Output<String> principalId) {
@@ -222,7 +223,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

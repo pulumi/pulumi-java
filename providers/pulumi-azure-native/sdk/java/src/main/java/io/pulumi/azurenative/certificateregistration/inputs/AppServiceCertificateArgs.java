@@ -5,6 +5,7 @@ package io.pulumi.azurenative.certificateregistration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="keyVaultId")
       private final @Nullable Output<String> keyVaultId;
 
-    public Output<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
+    public Output<String> keyVaultId() {
+        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
     @Import(name="keyVaultSecretName")
       private final @Nullable Output<String> keyVaultSecretName;
 
-    public Output<String> getKeyVaultSecretName() {
-        return this.keyVaultSecretName == null ? Output.empty() : this.keyVaultSecretName;
+    public Output<String> keyVaultSecretName() {
+        return this.keyVaultSecretName == null ? Codegen.empty() : this.keyVaultSecretName;
     }
 
     public AppServiceCertificateArgs(
@@ -48,8 +49,8 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
     }
 
     private AppServiceCertificateArgs() {
-        this.keyVaultId = Output.empty();
-        this.keyVaultSecretName = Output.empty();
+        this.keyVaultId = Codegen.empty();
+        this.keyVaultSecretName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Output.ofNullable(keyVaultId);
+            this.keyVaultId = Codegen.ofNullable(keyVaultId);
             return this;
         }
         public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
@@ -87,7 +88,7 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
-            this.keyVaultSecretName = Output.ofNullable(keyVaultSecretName);
+            this.keyVaultSecretName = Codegen.ofNullable(keyVaultSecretName);
             return this;
         }        public AppServiceCertificateArgs build() {
             return new AppServiceCertificateArgs(keyVaultId, keyVaultSecretName);

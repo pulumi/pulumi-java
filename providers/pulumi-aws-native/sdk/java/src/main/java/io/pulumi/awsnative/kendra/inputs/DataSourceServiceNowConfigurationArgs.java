@@ -9,6 +9,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceServiceNowKnowledgeArticleCon
 import io.pulumi.awsnative.kendra.inputs.DataSourceServiceNowServiceCatalogConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,42 +22,42 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
     @Import(name="authenticationType")
       private final @Nullable Output<DataSourceServiceNowAuthenticationType> authenticationType;
 
-    public Output<DataSourceServiceNowAuthenticationType> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<DataSourceServiceNowAuthenticationType> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     @Import(name="hostUrl", required=true)
       private final Output<String> hostUrl;
 
-    public Output<String> getHostUrl() {
+    public Output<String> hostUrl() {
         return this.hostUrl;
     }
 
     @Import(name="knowledgeArticleConfiguration")
       private final @Nullable Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration;
 
-    public Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> getKnowledgeArticleConfiguration() {
-        return this.knowledgeArticleConfiguration == null ? Output.empty() : this.knowledgeArticleConfiguration;
+    public Output<DataSourceServiceNowKnowledgeArticleConfigurationArgs> knowledgeArticleConfiguration() {
+        return this.knowledgeArticleConfiguration == null ? Codegen.empty() : this.knowledgeArticleConfiguration;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="serviceCatalogConfiguration")
       private final @Nullable Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration;
 
-    public Output<DataSourceServiceNowServiceCatalogConfigurationArgs> getServiceCatalogConfiguration() {
-        return this.serviceCatalogConfiguration == null ? Output.empty() : this.serviceCatalogConfiguration;
+    public Output<DataSourceServiceNowServiceCatalogConfigurationArgs> serviceCatalogConfiguration() {
+        return this.serviceCatalogConfiguration == null ? Codegen.empty() : this.serviceCatalogConfiguration;
     }
 
     @Import(name="serviceNowBuildVersion", required=true)
       private final Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion;
 
-    public Output<DataSourceServiceNowBuildVersionType> getServiceNowBuildVersion() {
+    public Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion() {
         return this.serviceNowBuildVersion;
     }
 
@@ -76,12 +77,12 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
     }
 
     private DataSourceServiceNowConfigurationArgs() {
-        this.authenticationType = Output.empty();
-        this.hostUrl = Output.empty();
-        this.knowledgeArticleConfiguration = Output.empty();
-        this.secretArn = Output.empty();
-        this.serviceCatalogConfiguration = Output.empty();
-        this.serviceNowBuildVersion = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.hostUrl = Codegen.empty();
+        this.knowledgeArticleConfiguration = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.serviceCatalogConfiguration = Codegen.empty();
+        this.serviceNowBuildVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder authenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder hostUrl(Output<String> hostUrl) {
@@ -135,7 +136,7 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder knowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfigurationArgs knowledgeArticleConfiguration) {
-            this.knowledgeArticleConfiguration = Output.ofNullable(knowledgeArticleConfiguration);
+            this.knowledgeArticleConfiguration = Codegen.ofNullable(knowledgeArticleConfiguration);
             return this;
         }
         public Builder secretArn(Output<String> secretArn) {
@@ -151,7 +152,7 @@ public final class DataSourceServiceNowConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder serviceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfigurationArgs serviceCatalogConfiguration) {
-            this.serviceCatalogConfiguration = Output.ofNullable(serviceCatalogConfiguration);
+            this.serviceCatalogConfiguration = Codegen.ofNullable(serviceCatalogConfiguration);
             return this;
         }
         public Builder serviceNowBuildVersion(Output<DataSourceServiceNowBuildVersionType> serviceNowBuildVersion) {

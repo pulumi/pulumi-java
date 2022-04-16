@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionRoleConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
     @Import(name="networkFunctionRoleConfigurations")
       private final @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
 
-    public Output<List<NetworkFunctionRoleConfigurationArgs>> getNetworkFunctionRoleConfigurations() {
-        return this.networkFunctionRoleConfigurations == null ? Output.empty() : this.networkFunctionRoleConfigurations;
+    public Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations() {
+        return this.networkFunctionRoleConfigurations == null ? Codegen.empty() : this.networkFunctionRoleConfigurations;
     }
 
     public NetworkFunctionTemplateArgs(@Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations) {
@@ -35,7 +36,7 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
     }
 
     private NetworkFunctionTemplateArgs() {
-        this.networkFunctionRoleConfigurations = Output.empty();
+        this.networkFunctionRoleConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder networkFunctionRoleConfigurations(@Nullable List<NetworkFunctionRoleConfigurationArgs> networkFunctionRoleConfigurations) {
-            this.networkFunctionRoleConfigurations = Output.ofNullable(networkFunctionRoleConfigurations);
+            this.networkFunctionRoleConfigurations = Codegen.ofNullable(networkFunctionRoleConfigurations);
             return this;
         }
         public Builder networkFunctionRoleConfigurations(NetworkFunctionRoleConfigurationArgs... networkFunctionRoleConfigurations) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="binaryData")
       private final @Nullable Output<Map<String,String>> binaryData;
 
-    public Output<Map<String,String>> getBinaryData() {
-        return this.binaryData == null ? Output.empty() : this.binaryData;
+    public Output<Map<String,String>> binaryData() {
+        return this.binaryData == null ? Codegen.empty() : this.binaryData;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="data")
       private final @Nullable Output<Map<String,String>> data;
 
-    public Output<Map<String,String>> getData() {
-        return this.data == null ? Output.empty() : this.data;
+    public Output<Map<String,String>> data() {
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="immutable")
       private final @Nullable Output<Boolean> immutable;
 
-    public Output<Boolean> getImmutable() {
-        return this.immutable == null ? Output.empty() : this.immutable;
+    public Output<Boolean> immutable() {
+        return this.immutable == null ? Codegen.empty() : this.immutable;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ObjectMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public ConfigMapArgs(
@@ -103,12 +104,12 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigMapArgs() {
-        this.apiVersion = Output.empty();
-        this.binaryData = Output.empty();
-        this.data = Output.empty();
-        this.immutable = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.binaryData = Codegen.empty();
+        this.data = Codegen.empty();
+        this.immutable = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder binaryData(@Nullable Output<Map<String,String>> binaryData) {
@@ -154,7 +155,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder binaryData(@Nullable Map<String,String> binaryData) {
-            this.binaryData = Output.ofNullable(binaryData);
+            this.binaryData = Codegen.ofNullable(binaryData);
             return this;
         }
         public Builder data(@Nullable Output<Map<String,String>> data) {
@@ -162,7 +163,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable Map<String,String> data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder immutable(@Nullable Output<Boolean> immutable) {
@@ -170,7 +171,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder immutable(@Nullable Boolean immutable) {
-            this.immutable = Output.ofNullable(immutable);
+            this.immutable = Codegen.ofNullable(immutable);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -178,7 +179,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -186,7 +187,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public ConfigMapArgs build() {
             return new ConfigMapArgs(apiVersion, binaryData, data, immutable, kind, metadata);

@@ -55,35 +55,35 @@ public final class GetCustomerSubscriptionResult {
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
     */
-    public Optional<String> getEtag() {
+    public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
      * ID of the resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Name of the resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Tenant Id.
      * 
     */
-    public Optional<String> getTenantId() {
+    public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
      * Type of Resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

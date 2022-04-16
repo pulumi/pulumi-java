@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="authProviderX509CertUrl", required=true)
       private final Output<String> authProviderX509CertUrl;
 
-    public Output<String> getAuthProviderX509CertUrl() {
+    public Output<String> authProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
 
@@ -35,7 +36,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="authUri", required=true)
       private final Output<String> authUri;
 
-    public Output<String> getAuthUri() {
+    public Output<String> authUri() {
         return this.authUri;
     }
 
@@ -47,7 +48,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
+    public Output<String> authenticationType() {
         return this.authenticationType;
     }
 
@@ -58,7 +59,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="clientEmail", required=true)
       private final Output<String> clientEmail;
 
-    public Output<String> getClientEmail() {
+    public Output<String> clientEmail() {
         return this.clientEmail;
     }
 
@@ -69,7 +70,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -80,7 +81,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="clientX509CertUrl", required=true)
       private final Output<String> clientX509CertUrl;
 
-    public Output<String> getClientX509CertUrl() {
+    public Output<String> clientX509CertUrl() {
         return this.clientX509CertUrl;
     }
 
@@ -91,7 +92,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -102,7 +103,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
 
@@ -113,7 +114,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="privateKeyId", required=true)
       private final Output<String> privateKeyId;
 
-    public Output<String> getPrivateKeyId() {
+    public Output<String> privateKeyId() {
         return this.privateKeyId;
     }
 
@@ -124,7 +125,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -135,7 +136,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="tokenUri", required=true)
       private final Output<String> tokenUri;
 
-    public Output<String> getTokenUri() {
+    public Output<String> tokenUri() {
         return this.tokenUri;
     }
 
@@ -146,7 +147,7 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -178,18 +179,18 @@ public final class GcpCredentialsDetailsPropertiesArgs extends io.pulumi.resourc
     }
 
     private GcpCredentialsDetailsPropertiesArgs() {
-        this.authProviderX509CertUrl = Output.empty();
-        this.authUri = Output.empty();
-        this.authenticationType = Output.empty();
-        this.clientEmail = Output.empty();
-        this.clientId = Output.empty();
-        this.clientX509CertUrl = Output.empty();
-        this.organizationId = Output.empty();
-        this.privateKey = Output.empty();
-        this.privateKeyId = Output.empty();
-        this.projectId = Output.empty();
-        this.tokenUri = Output.empty();
-        this.type = Output.empty();
+        this.authProviderX509CertUrl = Codegen.empty();
+        this.authUri = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.clientEmail = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientX509CertUrl = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.privateKeyId = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.tokenUri = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

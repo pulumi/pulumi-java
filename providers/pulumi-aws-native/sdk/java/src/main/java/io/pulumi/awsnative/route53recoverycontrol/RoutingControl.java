@@ -9,6 +9,7 @@ import io.pulumi.awsnative.route53recoverycontrol.enums.RoutingControlStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -29,7 +30,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return Arn associated with Control Panel
      * 
      */
-    public Output</* @Nullable */ String> getClusterArn() {
+    public Output</* @Nullable */ String> clusterArn() {
         return this.clusterArn;
     }
     /**
@@ -43,7 +44,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the control panel.
      * 
      */
-    public Output</* @Nullable */ String> getControlPanelArn() {
+    public Output</* @Nullable */ String> controlPanelArn() {
         return this.controlPanelArn;
     }
     /**
@@ -57,7 +58,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return The name of the routing control. You can use any non-white space character in the name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the routing control.
      * 
      */
-    public Output<String> getRoutingControlArn() {
+    public Output<String> routingControlArn() {
         return this.routingControlArn;
     }
     /**
@@ -85,7 +86,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @return The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    public Output<RoutingControlStatus> getStatus() {
+    public Output<RoutingControlStatus> status() {
         return this.status;
     }
 
@@ -111,7 +112,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RoutingControl(String name, @Nullable RoutingControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoverycontrol:RoutingControl", name, args == null ? RoutingControlArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53recoverycontrol:RoutingControl", name, args == null ? RoutingControlArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RoutingControl(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

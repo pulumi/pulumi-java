@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.RepoSourceArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.StorageSourceManifestArgs;
@@ -27,8 +28,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repoSource")
       private final @Nullable Output<RepoSourceArgs> repoSource;
 
-    public Output<RepoSourceArgs> getRepoSource() {
-        return this.repoSource == null ? Output.empty() : this.repoSource;
+    public Output<RepoSourceArgs> repoSource() {
+        return this.repoSource == null ? Codegen.empty() : this.repoSource;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageSource")
       private final @Nullable Output<StorageSourceArgs> storageSource;
 
-    public Output<StorageSourceArgs> getStorageSource() {
-        return this.storageSource == null ? Output.empty() : this.storageSource;
+    public Output<StorageSourceArgs> storageSource() {
+        return this.storageSource == null ? Codegen.empty() : this.storageSource;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storageSourceManifest")
       private final @Nullable Output<StorageSourceManifestArgs> storageSourceManifest;
 
-    public Output<StorageSourceManifestArgs> getStorageSourceManifest() {
-        return this.storageSourceManifest == null ? Output.empty() : this.storageSourceManifest;
+    public Output<StorageSourceManifestArgs> storageSourceManifest() {
+        return this.storageSourceManifest == null ? Codegen.empty() : this.storageSourceManifest;
     }
 
     public SourceArgs(
@@ -63,9 +64,9 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceArgs() {
-        this.repoSource = Output.empty();
-        this.storageSource = Output.empty();
-        this.storageSourceManifest = Output.empty();
+        this.repoSource = Codegen.empty();
+        this.storageSource = Codegen.empty();
+        this.storageSourceManifest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repoSource(@Nullable RepoSourceArgs repoSource) {
-            this.repoSource = Output.ofNullable(repoSource);
+            this.repoSource = Codegen.ofNullable(repoSource);
             return this;
         }
         public Builder storageSource(@Nullable Output<StorageSourceArgs> storageSource) {
@@ -105,7 +106,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageSource(@Nullable StorageSourceArgs storageSource) {
-            this.storageSource = Output.ofNullable(storageSource);
+            this.storageSource = Codegen.ofNullable(storageSource);
             return this;
         }
         public Builder storageSourceManifest(@Nullable Output<StorageSourceManifestArgs> storageSourceManifest) {
@@ -113,7 +114,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageSourceManifest(@Nullable StorageSourceManifestArgs storageSourceManifest) {
-            this.storageSourceManifest = Output.ofNullable(storageSourceManifest);
+            this.storageSourceManifest = Codegen.ofNullable(storageSourceManifest);
             return this;
         }        public SourceArgs build() {
             return new SourceArgs(repoSource, storageSource, storageSourceManifest);

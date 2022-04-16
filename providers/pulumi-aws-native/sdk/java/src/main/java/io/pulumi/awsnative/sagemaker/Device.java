@@ -9,6 +9,7 @@ import io.pulumi.awsnative.sagemaker.outputs.DeviceTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The Edge Device you want to register against a device fleet
      * 
      */
-    public Output</* @Nullable */ io.pulumi.awsnative.sagemaker.outputs.Device> getDevice() {
+    public Output</* @Nullable */ io.pulumi.awsnative.sagemaker.outputs.Device> device() {
         return this.device;
     }
     /**
@@ -44,7 +45,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return The name of the edge device fleet
      * 
      */
-    public Output<String> getDeviceFleetName() {
+    public Output<String> deviceFleetName() {
         return this.deviceFleetName;
     }
     /**
@@ -58,7 +59,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @return Associate tags with the resource
      * 
      */
-    public Output</* @Nullable */ List<DeviceTag>> getTags() {
+    public Output</* @Nullable */ List<DeviceTag>> tags() {
         return this.tags;
     }
 
@@ -84,7 +85,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Device(String name, DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sagemaker:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sagemaker:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Device(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

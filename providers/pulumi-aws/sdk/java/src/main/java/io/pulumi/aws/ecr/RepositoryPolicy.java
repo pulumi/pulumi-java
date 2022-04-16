@@ -9,6 +9,7 @@ import io.pulumi.aws.ecr.inputs.RepositoryPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * @return The policy document. This is a JSON formatted string.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -55,7 +56,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * @return The registry ID where the repository was created.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -69,7 +70,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the repository to apply the policy.
      * 
      */
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -95,7 +96,7 @@ public class RepositoryPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RepositoryPolicy(String name, RepositoryPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/repositoryPolicy:RepositoryPolicy", name, args == null ? RepositoryPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecr/repositoryPolicy:RepositoryPolicy", name, args == null ? RepositoryPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RepositoryPolicy(String name, Output<String> id, @Nullable RepositoryPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

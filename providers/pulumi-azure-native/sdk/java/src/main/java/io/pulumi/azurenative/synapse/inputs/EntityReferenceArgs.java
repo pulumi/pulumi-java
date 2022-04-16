@@ -7,6 +7,7 @@ import io.pulumi.azurenative.synapse.enums.IntegrationRuntimeEntityReferenceType
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
-    public Output<String> getReferenceName() {
-        return this.referenceName == null ? Output.empty() : this.referenceName;
+    public Output<String> referenceName() {
+        return this.referenceName == null ? Codegen.empty() : this.referenceName;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="type")
       private final @Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type;
 
-    public Output<Either<String,IntegrationRuntimeEntityReferenceType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,IntegrationRuntimeEntityReferenceType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public EntityReferenceArgs(
@@ -50,8 +51,8 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EntityReferenceArgs() {
-        this.referenceName = Output.empty();
-        this.type = Output.empty();
+        this.referenceName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Output.ofNullable(referenceName);
+            this.referenceName = Codegen.ofNullable(referenceName);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type) {
@@ -89,7 +90,7 @@ public final class EntityReferenceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable Either<String,IntegrationRuntimeEntityReferenceType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public EntityReferenceArgs build() {
             return new EntityReferenceArgs(referenceName, type);

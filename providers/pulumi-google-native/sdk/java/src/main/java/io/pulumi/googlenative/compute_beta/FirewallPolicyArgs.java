@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.FirewallPolicyAssociationArgs;
 import io.pulumi.googlenative.compute_beta.inputs.FirewallPolicyRuleArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="associations")
       private final @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
 
-    public Output<List<FirewallPolicyAssociationArgs>> getAssociations() {
-        return this.associations == null ? Output.empty() : this.associations;
+    public Output<List<FirewallPolicyAssociationArgs>> associations() {
+        return this.associations == null ? Codegen.empty() : this.associations;
     }
 
     /**
@@ -35,22 +36,22 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="parentId")
       private final @Nullable Output<String> parentId;
 
-    public Output<String> getParentId() {
-        return this.parentId == null ? Output.empty() : this.parentId;
+    public Output<String> parentId() {
+        return this.parentId == null ? Codegen.empty() : this.parentId;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rules")
       private final @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
 
-    public Output<List<FirewallPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+    public Output<List<FirewallPolicyRuleArgs>> rules() {
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
-    public Output<String> getShortName() {
-        return this.shortName == null ? Output.empty() : this.shortName;
+    public Output<String> shortName() {
+        return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
     public FirewallPolicyArgs(
@@ -91,12 +92,12 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallPolicyArgs() {
-        this.associations = Output.empty();
-        this.description = Output.empty();
-        this.parentId = Output.empty();
-        this.requestId = Output.empty();
-        this.rules = Output.empty();
-        this.shortName = Output.empty();
+        this.associations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.parentId = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.shortName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder associations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
-            this.associations = Output.ofNullable(associations);
+            this.associations = Codegen.ofNullable(associations);
             return this;
         }
         public Builder associations(FirewallPolicyAssociationArgs... associations) {
@@ -145,7 +146,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder parentId(@Nullable Output<String> parentId) {
@@ -153,7 +154,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentId(@Nullable String parentId) {
-            this.parentId = Output.ofNullable(parentId);
+            this.parentId = Codegen.ofNullable(parentId);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -161,7 +162,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder rules(@Nullable Output<List<FirewallPolicyRuleArgs>> rules) {
@@ -169,7 +170,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<FirewallPolicyRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(FirewallPolicyRuleArgs... rules) {
@@ -180,7 +181,7 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Output.ofNullable(shortName);
+            this.shortName = Codegen.ofNullable(shortName);
             return this;
         }        public FirewallPolicyArgs build() {
             return new FirewallPolicyArgs(associations, description, parentId, requestId, rules, shortName);

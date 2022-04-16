@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.GalleryDataDiskImageArgs;
 import io.pulumi.azurenative.compute.inputs.GalleryOSDiskImageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
     @Import(name="dataDiskImages")
       private final @Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages;
 
-    public Output<List<GalleryDataDiskImageArgs>> getDataDiskImages() {
-        return this.dataDiskImages == null ? Output.empty() : this.dataDiskImages;
+    public Output<List<GalleryDataDiskImageArgs>> dataDiskImages() {
+        return this.dataDiskImages == null ? Codegen.empty() : this.dataDiskImages;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
     @Import(name="osDiskImage")
       private final @Nullable Output<GalleryOSDiskImageArgs> osDiskImage;
 
-    public Output<GalleryOSDiskImageArgs> getOsDiskImage() {
-        return this.osDiskImage == null ? Output.empty() : this.osDiskImage;
+    public Output<GalleryOSDiskImageArgs> osDiskImage() {
+        return this.osDiskImage == null ? Codegen.empty() : this.osDiskImage;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
     @Import(name="source")
       private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
-    public Output<GalleryArtifactVersionSourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<GalleryArtifactVersionSourceArgs> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public GalleryImageVersionStorageProfileArgs(
@@ -64,9 +65,9 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
     }
 
     private GalleryImageVersionStorageProfileArgs() {
-        this.dataDiskImages = Output.empty();
-        this.osDiskImage = Output.empty();
-        this.source = Output.empty();
+        this.dataDiskImages = Codegen.empty();
+        this.osDiskImage = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
             return this;
         }
         public Builder dataDiskImages(@Nullable List<GalleryDataDiskImageArgs> dataDiskImages) {
-            this.dataDiskImages = Output.ofNullable(dataDiskImages);
+            this.dataDiskImages = Codegen.ofNullable(dataDiskImages);
             return this;
         }
         public Builder dataDiskImages(GalleryDataDiskImageArgs... dataDiskImages) {
@@ -109,7 +110,7 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
             return this;
         }
         public Builder osDiskImage(@Nullable GalleryOSDiskImageArgs osDiskImage) {
-            this.osDiskImage = Output.ofNullable(osDiskImage);
+            this.osDiskImage = Codegen.ofNullable(osDiskImage);
             return this;
         }
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
@@ -117,7 +118,7 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
             return this;
         }
         public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public GalleryImageVersionStorageProfileArgs build() {
             return new GalleryImageVersionStorageProfileArgs(dataDiskImages, osDiskImage, source);

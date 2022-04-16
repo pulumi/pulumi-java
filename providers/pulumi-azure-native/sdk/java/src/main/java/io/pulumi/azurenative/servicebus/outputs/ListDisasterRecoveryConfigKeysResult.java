@@ -67,49 +67,49 @@ public final class ListDisasterRecoveryConfigKeysResult {
      * Primary connection string of the alias if GEO DR is enabled
      * 
     */
-    public String getAliasPrimaryConnectionString() {
+    public String aliasPrimaryConnectionString() {
         return this.aliasPrimaryConnectionString;
     }
     /**
      * Secondary  connection string of the alias if GEO DR is enabled
      * 
     */
-    public String getAliasSecondaryConnectionString() {
+    public String aliasSecondaryConnectionString() {
         return this.aliasSecondaryConnectionString;
     }
     /**
      * A string that describes the authorization rule.
      * 
     */
-    public String getKeyName() {
+    public String keyName() {
         return this.keyName;
     }
     /**
      * Primary connection string of the created namespace authorization rule.
      * 
     */
-    public String getPrimaryConnectionString() {
+    public String primaryConnectionString() {
         return this.primaryConnectionString;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
     */
-    public String getPrimaryKey() {
+    public String primaryKey() {
         return this.primaryKey;
     }
     /**
      * Secondary connection string of the created namespace authorization rule.
      * 
     */
-    public String getSecondaryConnectionString() {
+    public String secondaryConnectionString() {
         return this.secondaryConnectionString;
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
     */
-    public String getSecondaryKey() {
+    public String secondaryKey() {
         return this.secondaryKey;
     }
 

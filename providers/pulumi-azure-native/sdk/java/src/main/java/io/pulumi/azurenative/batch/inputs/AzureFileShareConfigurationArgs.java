@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,14 +18,14 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
     @Import(name="accountKey", required=true)
       private final Output<String> accountKey;
 
-    public Output<String> getAccountKey() {
+    public Output<String> accountKey() {
         return this.accountKey;
     }
 
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -35,7 +36,7 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
     @Import(name="azureFileUrl", required=true)
       private final Output<String> azureFileUrl;
 
-    public Output<String> getAzureFileUrl() {
+    public Output<String> azureFileUrl() {
         return this.azureFileUrl;
     }
 
@@ -46,8 +47,8 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
     @Import(name="mountOptions")
       private final @Nullable Output<String> mountOptions;
 
-    public Output<String> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+    public Output<String> mountOptions() {
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
     @Import(name="relativeMountPath", required=true)
       private final Output<String> relativeMountPath;
 
-    public Output<String> getRelativeMountPath() {
+    public Output<String> relativeMountPath() {
         return this.relativeMountPath;
     }
 
@@ -75,11 +76,11 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
     }
 
     private AzureFileShareConfigurationArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
-        this.azureFileUrl = Output.empty();
-        this.mountOptions = Output.empty();
-        this.relativeMountPath = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.azureFileUrl = Codegen.empty();
+        this.mountOptions = Codegen.empty();
+        this.relativeMountPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder relativeMountPath(Output<String> relativeMountPath) {

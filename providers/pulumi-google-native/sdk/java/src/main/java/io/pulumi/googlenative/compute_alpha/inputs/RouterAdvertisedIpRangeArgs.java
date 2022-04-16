@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
     @Import(name="range")
       private final @Nullable Output<String> range;
 
-    public Output<String> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+    public Output<String> range() {
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     public RouterAdvertisedIpRangeArgs(
@@ -48,8 +49,8 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
     }
 
     private RouterAdvertisedIpRangeArgs() {
-        this.description = Output.empty();
-        this.range = Output.empty();
+        this.description = Codegen.empty();
+        this.range = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder range(@Nullable Output<String> range) {
@@ -87,7 +88,7 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder range(@Nullable String range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }        public RouterAdvertisedIpRangeArgs build() {
             return new RouterAdvertisedIpRangeArgs(description, range);

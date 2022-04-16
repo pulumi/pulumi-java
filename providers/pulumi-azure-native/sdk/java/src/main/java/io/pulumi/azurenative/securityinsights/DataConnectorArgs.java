@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.DataConnectorKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
 
-    public Output<String> getDataConnectorId() {
-        return this.dataConnectorId == null ? Output.empty() : this.dataConnectorId;
+    public Output<String> dataConnectorId() {
+        return this.dataConnectorId == null ? Codegen.empty() : this.dataConnectorId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectorKind>> kind;
 
-    public Output<Either<String,DataConnectorKind>> getKind() {
+    public Output<Either<String,DataConnectorKind>> kind() {
         return this.kind;
     }
 
@@ -45,7 +46,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,7 +57,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -72,10 +73,10 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataConnectorArgs() {
-        this.dataConnectorId = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.dataConnectorId = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataConnectorId(@Nullable String dataConnectorId) {
-            this.dataConnectorId = Output.ofNullable(dataConnectorId);
+            this.dataConnectorId = Codegen.ofNullable(dataConnectorId);
             return this;
         }
         public Builder kind(Output<Either<String,DataConnectorKind>> kind) {

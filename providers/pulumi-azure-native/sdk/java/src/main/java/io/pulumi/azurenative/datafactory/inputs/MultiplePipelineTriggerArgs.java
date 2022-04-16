@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="pipelines")
       private final @Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines;
 
-    public Output<List<TriggerPipelineReferenceArgs>> getPipelines() {
-        return this.pipelines == null ? Output.empty() : this.pipelines;
+    public Output<List<TriggerPipelineReferenceArgs>> pipelines() {
+        return this.pipelines == null ? Codegen.empty() : this.pipelines;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -78,10 +79,10 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
     }
 
     private MultiplePipelineTriggerArgs() {
-        this.annotations = Output.empty();
-        this.description = Output.empty();
-        this.pipelines = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.pipelines = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -126,7 +127,7 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder pipelines(@Nullable Output<List<TriggerPipelineReferenceArgs>> pipelines) {
@@ -134,7 +135,7 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder pipelines(@Nullable List<TriggerPipelineReferenceArgs> pipelines) {
-            this.pipelines = Output.ofNullable(pipelines);
+            this.pipelines = Codegen.ofNullable(pipelines);
             return this;
         }
         public Builder pipelines(TriggerPipelineReferenceArgs... pipelines) {

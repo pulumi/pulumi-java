@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -35,7 +36,7 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -47,8 +48,8 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private KeyVaultReferenceArgs() {
-        this.id = Output.empty();
-        this.url = Output.empty();
+        this.id = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {

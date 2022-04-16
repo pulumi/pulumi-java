@@ -6,6 +6,7 @@ package io.pulumi.gcp.accesscontextmanager;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelsArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsState;
@@ -55,7 +56,7 @@ public class AccessLevels extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<AccessLevelsAccessLevel>> getAccessLevels() {
+    public Output</* @Nullable */ List<AccessLevelsAccessLevel>> accessLevels() {
         return this.accessLevels;
     }
     /**
@@ -71,7 +72,7 @@ public class AccessLevels extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -97,7 +98,7 @@ public class AccessLevels extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessLevels(String name, AccessLevelsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:accesscontextmanager/accessLevels:AccessLevels", name, args == null ? AccessLevelsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:accesscontextmanager/accessLevels:AccessLevels", name, args == null ? AccessLevelsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessLevels(String name, Output<String> id, @Nullable AccessLevelsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

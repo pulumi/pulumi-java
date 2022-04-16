@@ -7,6 +7,7 @@ import io.pulumi.aws.signer.inputs.SigningProfileRevocationRecordGetArgs;
 import io.pulumi.aws.signer.inputs.SigningProfileSignatureValidityPeriodGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +26,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="platformDisplayName")
       private final @Nullable Output<String> platformDisplayName;
 
-    public Output<String> getPlatformDisplayName() {
-        return this.platformDisplayName == null ? Output.empty() : this.platformDisplayName;
+    public Output<String> platformDisplayName() {
+        return this.platformDisplayName == null ? Codegen.empty() : this.platformDisplayName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="platformId")
       private final @Nullable Output<String> platformId;
 
-    public Output<String> getPlatformId() {
-        return this.platformId == null ? Output.empty() : this.platformId;
+    public Output<String> platformId() {
+        return this.platformId == null ? Codegen.empty() : this.platformId;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="revocationRecords")
       private final @Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords;
 
-    public Output<List<SigningProfileRevocationRecordGetArgs>> getRevocationRecords() {
-        return this.revocationRecords == null ? Output.empty() : this.revocationRecords;
+    public Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords() {
+        return this.revocationRecords == null ? Codegen.empty() : this.revocationRecords;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="signatureValidityPeriod")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod;
 
-    public Output<SigningProfileSignatureValidityPeriodGetArgs> getSignatureValidityPeriod() {
-        return this.signatureValidityPeriod == null ? Output.empty() : this.signatureValidityPeriod;
+    public Output<SigningProfileSignatureValidityPeriodGetArgs> signatureValidityPeriod() {
+        return this.signatureValidityPeriod == null ? Codegen.empty() : this.signatureValidityPeriod;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     @Import(name="versionArn")
       private final @Nullable Output<String> versionArn;
 
-    public Output<String> getVersionArn() {
-        return this.versionArn == null ? Output.empty() : this.versionArn;
+    public Output<String> versionArn() {
+        return this.versionArn == null ? Codegen.empty() : this.versionArn;
     }
 
     public SigningProfileState(
@@ -178,18 +179,18 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
     }
 
     private SigningProfileState() {
-        this.arn = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.platformDisplayName = Output.empty();
-        this.platformId = Output.empty();
-        this.revocationRecords = Output.empty();
-        this.signatureValidityPeriod = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.version = Output.empty();
-        this.versionArn = Output.empty();
+        this.arn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.platformDisplayName = Codegen.empty();
+        this.platformId = Codegen.empty();
+        this.revocationRecords = Codegen.empty();
+        this.signatureValidityPeriod = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.version = Codegen.empty();
+        this.versionArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -247,7 +248,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -255,7 +256,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder platformDisplayName(@Nullable Output<String> platformDisplayName) {
@@ -263,7 +264,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder platformDisplayName(@Nullable String platformDisplayName) {
-            this.platformDisplayName = Output.ofNullable(platformDisplayName);
+            this.platformDisplayName = Codegen.ofNullable(platformDisplayName);
             return this;
         }
         public Builder platformId(@Nullable Output<String> platformId) {
@@ -271,7 +272,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder platformId(@Nullable String platformId) {
-            this.platformId = Output.ofNullable(platformId);
+            this.platformId = Codegen.ofNullable(platformId);
             return this;
         }
         public Builder revocationRecords(@Nullable Output<List<SigningProfileRevocationRecordGetArgs>> revocationRecords) {
@@ -279,7 +280,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder revocationRecords(@Nullable List<SigningProfileRevocationRecordGetArgs> revocationRecords) {
-            this.revocationRecords = Output.ofNullable(revocationRecords);
+            this.revocationRecords = Codegen.ofNullable(revocationRecords);
             return this;
         }
         public Builder revocationRecords(SigningProfileRevocationRecordGetArgs... revocationRecords) {
@@ -290,7 +291,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder signatureValidityPeriod(@Nullable SigningProfileSignatureValidityPeriodGetArgs signatureValidityPeriod) {
-            this.signatureValidityPeriod = Output.ofNullable(signatureValidityPeriod);
+            this.signatureValidityPeriod = Codegen.ofNullable(signatureValidityPeriod);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -298,7 +299,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -306,7 +307,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -314,7 +315,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -322,7 +323,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder versionArn(@Nullable Output<String> versionArn) {
@@ -330,7 +331,7 @@ public final class SigningProfileState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder versionArn(@Nullable String versionArn) {
-            this.versionArn = Output.ofNullable(versionArn);
+            this.versionArn = Codegen.ofNullable(versionArn);
             return this;
         }        public SigningProfileState build() {
             return new SigningProfileState(arn, name, namePrefix, platformDisplayName, platformId, revocationRecords, signatureValidityPeriod, status, tags, tagsAll, version, versionArn);

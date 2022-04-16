@@ -6,6 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<SecureStringArgs> password;
 
-    public Output<SecureStringArgs> getPassword() {
+    public Output<SecureStringArgs> password() {
         return this.password;
     }
 
@@ -37,7 +38,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetName", required=true)
       private final Output<Object> targetName;
 
-    public Output<Object> getTargetName() {
+    public Output<Object> targetName() {
         return this.targetName;
     }
 
@@ -49,7 +50,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -60,7 +61,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<Object> userName;
 
-    public Output<Object> getUserName() {
+    public Output<Object> userName() {
         return this.userName;
     }
 
@@ -76,10 +77,10 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CmdkeySetupArgs() {
-        this.password = Output.empty();
-        this.targetName = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.password = Codegen.empty();
+        this.targetName = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {

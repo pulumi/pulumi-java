@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public final class DeliveryStreamKMSEncryptionConfigArgs extends io.pulumi.resou
     @Import(name="aWSKMSKeyARN", required=true)
       private final Output<String> aWSKMSKeyARN;
 
-    public Output<String> getAWSKMSKeyARN() {
+    public Output<String> aWSKMSKeyARN() {
         return this.aWSKMSKeyARN;
     }
 
@@ -25,7 +26,7 @@ public final class DeliveryStreamKMSEncryptionConfigArgs extends io.pulumi.resou
     }
 
     private DeliveryStreamKMSEncryptionConfigArgs() {
-        this.aWSKMSKeyARN = Output.empty();
+        this.aWSKMSKeyARN = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.devtestlab.inputs.CustomImagePropertiesFromVmArgs;
 import io.pulumi.azurenative.devtestlab.inputs.DataDiskStorageTypeInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="author")
       private final @Nullable Output<String> author;
 
-    public Output<String> getAuthor() {
-        return this.author == null ? Output.empty() : this.author;
+    public Output<String> author() {
+        return this.author == null ? Codegen.empty() : this.author;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customImagePlan")
       private final @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan;
 
-    public Output<CustomImagePropertiesFromPlanArgs> getCustomImagePlan() {
-        return this.customImagePlan == null ? Output.empty() : this.customImagePlan;
+    public Output<CustomImagePropertiesFromPlanArgs> customImagePlan() {
+        return this.customImagePlan == null ? Codegen.empty() : this.customImagePlan;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskStorageInfo")
       private final @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
 
-    public Output<List<DataDiskStorageTypeInfoArgs>> getDataDiskStorageInfo() {
-        return this.dataDiskStorageInfo == null ? Output.empty() : this.dataDiskStorageInfo;
+    public Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo() {
+        return this.dataDiskStorageInfo == null ? Codegen.empty() : this.dataDiskStorageInfo;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isPlanAuthorized")
       private final @Nullable Output<Boolean> isPlanAuthorized;
 
-    public Output<Boolean> getIsPlanAuthorized() {
-        return this.isPlanAuthorized == null ? Output.empty() : this.isPlanAuthorized;
+    public Output<Boolean> isPlanAuthorized() {
+        return this.isPlanAuthorized == null ? Codegen.empty() : this.isPlanAuthorized;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -94,8 +95,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedImageId")
       private final @Nullable Output<String> managedImageId;
 
-    public Output<String> getManagedImageId() {
-        return this.managedImageId == null ? Output.empty() : this.managedImageId;
+    public Output<String> managedImageId() {
+        return this.managedImageId == null ? Codegen.empty() : this.managedImageId;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedSnapshotId")
       private final @Nullable Output<String> managedSnapshotId;
 
-    public Output<String> getManagedSnapshotId() {
-        return this.managedSnapshotId == null ? Output.empty() : this.managedSnapshotId;
+    public Output<String> managedSnapshotId() {
+        return this.managedSnapshotId == null ? Codegen.empty() : this.managedSnapshotId;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -149,8 +150,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -160,8 +161,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vhd")
       private final @Nullable Output<CustomImagePropertiesCustomArgs> vhd;
 
-    public Output<CustomImagePropertiesCustomArgs> getVhd() {
-        return this.vhd == null ? Output.empty() : this.vhd;
+    public Output<CustomImagePropertiesCustomArgs> vhd() {
+        return this.vhd == null ? Codegen.empty() : this.vhd;
     }
 
     /**
@@ -171,8 +172,8 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vm")
       private final @Nullable Output<CustomImagePropertiesFromVmArgs> vm;
 
-    public Output<CustomImagePropertiesFromVmArgs> getVm() {
-        return this.vm == null ? Output.empty() : this.vm;
+    public Output<CustomImagePropertiesFromVmArgs> vm() {
+        return this.vm == null ? Codegen.empty() : this.vm;
     }
 
     public CustomImageArgs(
@@ -207,20 +208,20 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomImageArgs() {
-        this.author = Output.empty();
-        this.customImagePlan = Output.empty();
-        this.dataDiskStorageInfo = Output.empty();
-        this.description = Output.empty();
-        this.isPlanAuthorized = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.managedImageId = Output.empty();
-        this.managedSnapshotId = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.vhd = Output.empty();
-        this.vm = Output.empty();
+        this.author = Codegen.empty();
+        this.customImagePlan = Codegen.empty();
+        this.dataDiskStorageInfo = Codegen.empty();
+        this.description = Codegen.empty();
+        this.isPlanAuthorized = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedImageId = Codegen.empty();
+        this.managedSnapshotId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vhd = Codegen.empty();
+        this.vm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -274,7 +275,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder author(@Nullable String author) {
-            this.author = Output.ofNullable(author);
+            this.author = Codegen.ofNullable(author);
             return this;
         }
         public Builder customImagePlan(@Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan) {
@@ -282,7 +283,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customImagePlan(@Nullable CustomImagePropertiesFromPlanArgs customImagePlan) {
-            this.customImagePlan = Output.ofNullable(customImagePlan);
+            this.customImagePlan = Codegen.ofNullable(customImagePlan);
             return this;
         }
         public Builder dataDiskStorageInfo(@Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo) {
@@ -290,7 +291,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDiskStorageInfo(@Nullable List<DataDiskStorageTypeInfoArgs> dataDiskStorageInfo) {
-            this.dataDiskStorageInfo = Output.ofNullable(dataDiskStorageInfo);
+            this.dataDiskStorageInfo = Codegen.ofNullable(dataDiskStorageInfo);
             return this;
         }
         public Builder dataDiskStorageInfo(DataDiskStorageTypeInfoArgs... dataDiskStorageInfo) {
@@ -301,7 +302,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder isPlanAuthorized(@Nullable Output<Boolean> isPlanAuthorized) {
@@ -309,7 +310,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
-            this.isPlanAuthorized = Output.ofNullable(isPlanAuthorized);
+            this.isPlanAuthorized = Codegen.ofNullable(isPlanAuthorized);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -325,7 +326,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedImageId(@Nullable Output<String> managedImageId) {
@@ -333,7 +334,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedImageId(@Nullable String managedImageId) {
-            this.managedImageId = Output.ofNullable(managedImageId);
+            this.managedImageId = Codegen.ofNullable(managedImageId);
             return this;
         }
         public Builder managedSnapshotId(@Nullable Output<String> managedSnapshotId) {
@@ -341,7 +342,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedSnapshotId(@Nullable String managedSnapshotId) {
-            this.managedSnapshotId = Output.ofNullable(managedSnapshotId);
+            this.managedSnapshotId = Codegen.ofNullable(managedSnapshotId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -349,7 +350,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -365,7 +366,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vhd(@Nullable Output<CustomImagePropertiesCustomArgs> vhd) {
@@ -373,7 +374,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vhd(@Nullable CustomImagePropertiesCustomArgs vhd) {
-            this.vhd = Output.ofNullable(vhd);
+            this.vhd = Codegen.ofNullable(vhd);
             return this;
         }
         public Builder vm(@Nullable Output<CustomImagePropertiesFromVmArgs> vm) {
@@ -381,7 +382,7 @@ public final class CustomImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vm(@Nullable CustomImagePropertiesFromVmArgs vm) {
-            this.vm = Output.ofNullable(vm);
+            this.vm = Codegen.ofNullable(vm);
             return this;
         }        public CustomImageArgs build() {
             return new CustomImageArgs(author, customImagePlan, dataDiskStorageInfo, description, isPlanAuthorized, labName, location, managedImageId, managedSnapshotId, name, resourceGroupName, tags, vhd, vm);

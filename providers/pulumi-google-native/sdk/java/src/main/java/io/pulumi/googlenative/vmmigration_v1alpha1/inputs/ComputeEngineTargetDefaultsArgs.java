@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsDiskType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsLicenseType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.ComputeSchedulingArgs;
@@ -32,8 +33,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="additionalLicenses")
       private final @Nullable Output<List<String>> additionalLicenses;
 
-    public Output<List<String>> getAdditionalLicenses() {
-        return this.additionalLicenses == null ? Output.empty() : this.additionalLicenses;
+    public Output<List<String>> additionalLicenses() {
+        return this.additionalLicenses == null ? Codegen.empty() : this.additionalLicenses;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="computeScheduling")
       private final @Nullable Output<ComputeSchedulingArgs> computeScheduling;
 
-    public Output<ComputeSchedulingArgs> getComputeScheduling() {
-        return this.computeScheduling == null ? Output.empty() : this.computeScheduling;
+    public Output<ComputeSchedulingArgs> computeScheduling() {
+        return this.computeScheduling == null ? Codegen.empty() : this.computeScheduling;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="diskType")
       private final @Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType;
 
-    public Output<ComputeEngineTargetDefaultsDiskType> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+    public Output<ComputeEngineTargetDefaultsDiskType> diskType() {
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="licenseType")
       private final @Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType;
 
-    public Output<ComputeEngineTargetDefaultsLicenseType> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+    public Output<ComputeEngineTargetDefaultsLicenseType> licenseType() {
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
-    public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+    public Output<String> machineType() {
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="machineTypeSeries")
       private final @Nullable Output<String> machineTypeSeries;
 
-    public Output<String> getMachineTypeSeries() {
-        return this.machineTypeSeries == null ? Output.empty() : this.machineTypeSeries;
+    public Output<String> machineTypeSeries() {
+        return this.machineTypeSeries == null ? Codegen.empty() : this.machineTypeSeries;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
-    public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+    public Output<List<NetworkInterfaceArgs>> networkInterfaces() {
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="networkTags")
       private final @Nullable Output<List<String>> networkTags;
 
-    public Output<List<String>> getNetworkTags() {
-        return this.networkTags == null ? Output.empty() : this.networkTags;
+    public Output<List<String>> networkTags() {
+        return this.networkTags == null ? Codegen.empty() : this.networkTags;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="secureBoot")
       private final @Nullable Output<Boolean> secureBoot;
 
-    public Output<Boolean> getSecureBoot() {
-        return this.secureBoot == null ? Output.empty() : this.secureBoot;
+    public Output<Boolean> secureBoot() {
+        return this.secureBoot == null ? Codegen.empty() : this.secureBoot;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="targetProject")
       private final @Nullable Output<String> targetProject;
 
-    public Output<String> getTargetProject() {
-        return this.targetProject == null ? Output.empty() : this.targetProject;
+    public Output<String> targetProject() {
+        return this.targetProject == null ? Codegen.empty() : this.targetProject;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="vmName")
       private final @Nullable Output<String> vmName;
 
-    public Output<String> getVmName() {
-        return this.vmName == null ? Output.empty() : this.vmName;
+    public Output<String> vmName() {
+        return this.vmName == null ? Codegen.empty() : this.vmName;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public ComputeEngineTargetDefaultsArgs(
@@ -224,21 +225,21 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
     }
 
     private ComputeEngineTargetDefaultsArgs() {
-        this.additionalLicenses = Output.empty();
-        this.computeScheduling = Output.empty();
-        this.diskType = Output.empty();
-        this.labels = Output.empty();
-        this.licenseType = Output.empty();
-        this.machineType = Output.empty();
-        this.machineTypeSeries = Output.empty();
-        this.metadata = Output.empty();
-        this.networkInterfaces = Output.empty();
-        this.networkTags = Output.empty();
-        this.secureBoot = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.targetProject = Output.empty();
-        this.vmName = Output.empty();
-        this.zone = Output.empty();
+        this.additionalLicenses = Codegen.empty();
+        this.computeScheduling = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.machineTypeSeries = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.networkInterfaces = Codegen.empty();
+        this.networkTags = Codegen.empty();
+        this.secureBoot = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.targetProject = Codegen.empty();
+        this.vmName = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -294,7 +295,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder additionalLicenses(@Nullable List<String> additionalLicenses) {
-            this.additionalLicenses = Output.ofNullable(additionalLicenses);
+            this.additionalLicenses = Codegen.ofNullable(additionalLicenses);
             return this;
         }
         public Builder additionalLicenses(String... additionalLicenses) {
@@ -305,7 +306,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder computeScheduling(@Nullable ComputeSchedulingArgs computeScheduling) {
-            this.computeScheduling = Output.ofNullable(computeScheduling);
+            this.computeScheduling = Codegen.ofNullable(computeScheduling);
             return this;
         }
         public Builder diskType(@Nullable Output<ComputeEngineTargetDefaultsDiskType> diskType) {
@@ -313,7 +314,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder diskType(@Nullable ComputeEngineTargetDefaultsDiskType diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -321,7 +322,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder licenseType(@Nullable Output<ComputeEngineTargetDefaultsLicenseType> licenseType) {
@@ -329,7 +330,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder licenseType(@Nullable ComputeEngineTargetDefaultsLicenseType licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -337,7 +338,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder machineTypeSeries(@Nullable Output<String> machineTypeSeries) {
@@ -345,7 +346,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder machineTypeSeries(@Nullable String machineTypeSeries) {
-            this.machineTypeSeries = Output.ofNullable(machineTypeSeries);
+            this.machineTypeSeries = Codegen.ofNullable(machineTypeSeries);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -353,7 +354,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder networkInterfaces(@Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces) {
@@ -361,7 +362,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
@@ -372,7 +373,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder networkTags(@Nullable List<String> networkTags) {
-            this.networkTags = Output.ofNullable(networkTags);
+            this.networkTags = Codegen.ofNullable(networkTags);
             return this;
         }
         public Builder networkTags(String... networkTags) {
@@ -383,7 +384,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder secureBoot(@Nullable Boolean secureBoot) {
-            this.secureBoot = Output.ofNullable(secureBoot);
+            this.secureBoot = Codegen.ofNullable(secureBoot);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -391,7 +392,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder targetProject(@Nullable Output<String> targetProject) {
@@ -399,7 +400,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder targetProject(@Nullable String targetProject) {
-            this.targetProject = Output.ofNullable(targetProject);
+            this.targetProject = Codegen.ofNullable(targetProject);
             return this;
         }
         public Builder vmName(@Nullable Output<String> vmName) {
@@ -407,7 +408,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder vmName(@Nullable String vmName) {
-            this.vmName = Output.ofNullable(vmName);
+            this.vmName = Codegen.ofNullable(vmName);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -415,7 +416,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public ComputeEngineTargetDefaultsArgs build() {
             return new ComputeEngineTargetDefaultsArgs(additionalLicenses, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, secureBoot, serviceAccount, targetProject, vmName, zone);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -32,7 +33,7 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -43,8 +44,8 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncAgentName")
       private final @Nullable Output<String> syncAgentName;
 
-    public Output<String> getSyncAgentName() {
-        return this.syncAgentName == null ? Output.empty() : this.syncAgentName;
+    public Output<String> syncAgentName() {
+        return this.syncAgentName == null ? Codegen.empty() : this.syncAgentName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncDatabaseId")
       private final @Nullable Output<String> syncDatabaseId;
 
-    public Output<String> getSyncDatabaseId() {
-        return this.syncDatabaseId == null ? Output.empty() : this.syncDatabaseId;
+    public Output<String> syncDatabaseId() {
+        return this.syncDatabaseId == null ? Codegen.empty() : this.syncDatabaseId;
     }
 
     public SyncAgentArgs(
@@ -70,10 +71,10 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SyncAgentArgs() {
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.syncAgentName = Output.empty();
-        this.syncDatabaseId = Output.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.syncAgentName = Codegen.empty();
+        this.syncDatabaseId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncAgentName(@Nullable String syncAgentName) {
-            this.syncAgentName = Output.ofNullable(syncAgentName);
+            this.syncAgentName = Codegen.ofNullable(syncAgentName);
             return this;
         }
         public Builder syncDatabaseId(@Nullable Output<String> syncDatabaseId) {
@@ -131,7 +132,7 @@ public final class SyncAgentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
-            this.syncDatabaseId = Output.ofNullable(syncDatabaseId);
+            this.syncDatabaseId = Codegen.ofNullable(syncDatabaseId);
             return this;
         }        public SyncAgentArgs build() {
             return new SyncAgentArgs(resourceGroupName, serverName, syncAgentName, syncDatabaseId);

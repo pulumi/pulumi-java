@@ -23,7 +23,7 @@ public final class ClientCertificateConfigResponse extends io.pulumi.resources.I
     @Import(name="issueClientCertificate", required=true)
       private final Boolean issueClientCertificate;
 
-    public Boolean getIssueClientCertificate() {
+    public Boolean issueClientCertificate() {
         return this.issueClientCertificate;
     }
 

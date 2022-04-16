@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionCountCustomRequestHandlingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class WebAclRuleActionCountArgs extends io.pulumi.resources.Resourc
     @Import(name="customRequestHandling")
       private final @Nullable Output<WebAclRuleActionCountCustomRequestHandlingArgs> customRequestHandling;
 
-    public Output<WebAclRuleActionCountCustomRequestHandlingArgs> getCustomRequestHandling() {
-        return this.customRequestHandling == null ? Output.empty() : this.customRequestHandling;
+    public Output<WebAclRuleActionCountCustomRequestHandlingArgs> customRequestHandling() {
+        return this.customRequestHandling == null ? Codegen.empty() : this.customRequestHandling;
     }
 
     public WebAclRuleActionCountArgs(@Nullable Output<WebAclRuleActionCountCustomRequestHandlingArgs> customRequestHandling) {
@@ -30,7 +31,7 @@ public final class WebAclRuleActionCountArgs extends io.pulumi.resources.Resourc
     }
 
     private WebAclRuleActionCountArgs() {
-        this.customRequestHandling = Output.empty();
+        this.customRequestHandling = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class WebAclRuleActionCountArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder customRequestHandling(@Nullable WebAclRuleActionCountCustomRequestHandlingArgs customRequestHandling) {
-            this.customRequestHandling = Output.ofNullable(customRequestHandling);
+            this.customRequestHandling = Codegen.ofNullable(customRequestHandling);
             return this;
         }        public WebAclRuleActionCountArgs build() {
             return new WebAclRuleActionCountArgs(customRequestHandling);

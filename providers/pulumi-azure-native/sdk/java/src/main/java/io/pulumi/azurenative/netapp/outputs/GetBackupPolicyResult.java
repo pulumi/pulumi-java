@@ -116,91 +116,91 @@ public final class GetBackupPolicyResult {
      * Daily backups count to keep
      * 
     */
-    public Optional<Integer> getDailyBackupsToKeep() {
+    public Optional<Integer> dailyBackupsToKeep() {
         return Optional.ofNullable(this.dailyBackupsToKeep);
     }
     /**
      * The property to decide policy is enabled or not
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
      * Resource Id
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource location
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Monthly backups count to keep
      * 
     */
-    public Optional<Integer> getMonthlyBackupsToKeep() {
+    public Optional<Integer> monthlyBackupsToKeep() {
         return Optional.ofNullable(this.monthlyBackupsToKeep);
     }
     /**
      * Name of backup policy
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Azure lifecycle management
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Resource tags
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * A list of volumes assigned to this policy
      * 
     */
-    public List<VolumeBackupsResponse> getVolumeBackups() {
+    public List<VolumeBackupsResponse> volumeBackups() {
         return this.volumeBackups == null ? List.of() : this.volumeBackups;
     }
     /**
      * Volumes using current backup policy
      * 
     */
-    public Optional<Integer> getVolumesAssigned() {
+    public Optional<Integer> volumesAssigned() {
         return Optional.ofNullable(this.volumesAssigned);
     }
     /**
      * Weekly backups count to keep
      * 
     */
-    public Optional<Integer> getWeeklyBackupsToKeep() {
+    public Optional<Integer> weeklyBackupsToKeep() {
         return Optional.ofNullable(this.weeklyBackupsToKeep);
     }
     /**
      * Yearly backups count to keep
      * 
     */
-    public Optional<Integer> getYearlyBackupsToKeep() {
+    public Optional<Integer> yearlyBackupsToKeep() {
         return Optional.ofNullable(this.yearlyBackupsToKeep);
     }
 

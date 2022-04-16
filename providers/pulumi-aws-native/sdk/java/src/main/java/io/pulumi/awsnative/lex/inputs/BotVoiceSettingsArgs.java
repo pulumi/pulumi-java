@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="voiceId", required=true)
       private final Output<String> voiceId;
 
-    public Output<String> getVoiceId() {
+    public Output<String> voiceId() {
         return this.voiceId;
     }
 
@@ -33,7 +34,7 @@ public final class BotVoiceSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BotVoiceSettingsArgs() {
-        this.voiceId = Output.empty();
+        this.voiceId = Codegen.empty();
     }
 
     public static Builder builder() {

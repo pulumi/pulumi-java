@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3PageArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageTextArgs;
@@ -31,8 +32,8 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="currentPage")
       private final @Nullable Output<GoogleCloudDialogflowCxV3PageArgs> currentPage;
 
-    public Output<GoogleCloudDialogflowCxV3PageArgs> getCurrentPage() {
-        return this.currentPage == null ? Output.empty() : this.currentPage;
+    public Output<GoogleCloudDialogflowCxV3PageArgs> currentPage() {
+        return this.currentPage == null ? Codegen.empty() : this.currentPage;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="diagnosticInfo", required=true)
       private final Output<Map<String,String>> diagnosticInfo;
 
-    public Output<Map<String,String>> getDiagnosticInfo() {
+    public Output<Map<String,String>> diagnosticInfo() {
         return this.diagnosticInfo;
     }
 
@@ -53,8 +54,8 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="sessionParameters")
       private final @Nullable Output<Map<String,String>> sessionParameters;
 
-    public Output<Map<String,String>> getSessionParameters() {
-        return this.sessionParameters == null ? Output.empty() : this.sessionParameters;
+    public Output<Map<String,String>> sessionParameters() {
+        return this.sessionParameters == null ? Codegen.empty() : this.sessionParameters;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="status")
       private final @Nullable Output<GoogleRpcStatusArgs> status;
 
-    public Output<GoogleRpcStatusArgs> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<GoogleRpcStatusArgs> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="textResponses")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> textResponses;
 
-    public Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> getTextResponses() {
-        return this.textResponses == null ? Output.empty() : this.textResponses;
+    public Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> textResponses() {
+        return this.textResponses == null ? Codegen.empty() : this.textResponses;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     @Import(name="triggeredIntent")
       private final @Nullable Output<GoogleCloudDialogflowCxV3IntentArgs> triggeredIntent;
 
-    public Output<GoogleCloudDialogflowCxV3IntentArgs> getTriggeredIntent() {
-        return this.triggeredIntent == null ? Output.empty() : this.triggeredIntent;
+    public Output<GoogleCloudDialogflowCxV3IntentArgs> triggeredIntent() {
+        return this.triggeredIntent == null ? Codegen.empty() : this.triggeredIntent;
     }
 
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs(
@@ -106,12 +107,12 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
     }
 
     private GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs() {
-        this.currentPage = Output.empty();
-        this.diagnosticInfo = Output.empty();
-        this.sessionParameters = Output.empty();
-        this.status = Output.empty();
-        this.textResponses = Output.empty();
-        this.triggeredIntent = Output.empty();
+        this.currentPage = Codegen.empty();
+        this.diagnosticInfo = Codegen.empty();
+        this.sessionParameters = Codegen.empty();
+        this.status = Codegen.empty();
+        this.textResponses = Codegen.empty();
+        this.triggeredIntent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
             return this;
         }
         public Builder currentPage(@Nullable GoogleCloudDialogflowCxV3PageArgs currentPage) {
-            this.currentPage = Output.ofNullable(currentPage);
+            this.currentPage = Codegen.ofNullable(currentPage);
             return this;
         }
         public Builder diagnosticInfo(Output<Map<String,String>> diagnosticInfo) {
@@ -165,7 +166,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
             return this;
         }
         public Builder sessionParameters(@Nullable Map<String,String> sessionParameters) {
-            this.sessionParameters = Output.ofNullable(sessionParameters);
+            this.sessionParameters = Codegen.ofNullable(sessionParameters);
             return this;
         }
         public Builder status(@Nullable Output<GoogleRpcStatusArgs> status) {
@@ -173,7 +174,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
             return this;
         }
         public Builder status(@Nullable GoogleRpcStatusArgs status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder textResponses(@Nullable Output<List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs>> textResponses) {
@@ -181,7 +182,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
             return this;
         }
         public Builder textResponses(@Nullable List<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> textResponses) {
-            this.textResponses = Output.ofNullable(textResponses);
+            this.textResponses = Codegen.ofNullable(textResponses);
             return this;
         }
         public Builder textResponses(GoogleCloudDialogflowCxV3ResponseMessageTextArgs... textResponses) {
@@ -192,7 +193,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputAr
             return this;
         }
         public Builder triggeredIntent(@Nullable GoogleCloudDialogflowCxV3IntentArgs triggeredIntent) {
-            this.triggeredIntent = Output.ofNullable(triggeredIntent);
+            this.triggeredIntent = Codegen.ofNullable(triggeredIntent);
             return this;
         }        public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs build() {
             return new GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputArgs(currentPage, diagnosticInfo, sessionParameters, status, textResponses, triggeredIntent);

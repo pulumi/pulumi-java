@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent")
       private final @Nullable Output<String> parent;
 
-    public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+    public Output<String> parent() {
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionConfigs")
       private final @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
 
-    public Output<List<CxEnvironmentVersionConfigGetArgs>> getVersionConfigs() {
-        return this.versionConfigs == null ? Output.empty() : this.versionConfigs;
+    public Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs() {
+        return this.versionConfigs == null ? Codegen.empty() : this.versionConfigs;
     }
 
     public CxEnvironmentState(
@@ -101,12 +102,12 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CxEnvironmentState() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.updateTime = Output.empty();
-        this.versionConfigs = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.versionConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -152,7 +153,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -160,7 +161,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -168,7 +169,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -176,7 +177,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder versionConfigs(@Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs) {
@@ -184,7 +185,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionConfigs(@Nullable List<CxEnvironmentVersionConfigGetArgs> versionConfigs) {
-            this.versionConfigs = Output.ofNullable(versionConfigs);
+            this.versionConfigs = Codegen.ofNullable(versionConfigs);
             return this;
         }
         public Builder versionConfigs(CxEnvironmentVersionConfigGetArgs... versionConfigs) {

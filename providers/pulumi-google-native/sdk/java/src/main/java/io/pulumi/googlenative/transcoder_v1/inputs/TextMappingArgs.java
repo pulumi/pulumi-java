@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="atomKey", required=true)
       private final Output<String> atomKey;
 
-    public Output<String> getAtomKey() {
+    public Output<String> atomKey() {
         return this.atomKey;
     }
 
@@ -36,7 +37,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputKey", required=true)
       private final Output<String> inputKey;
 
-    public Output<String> getInputKey() {
+    public Output<String> inputKey() {
         return this.inputKey;
     }
 
@@ -47,7 +48,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputTrack", required=true)
       private final Output<Integer> inputTrack;
 
-    public Output<Integer> getInputTrack() {
+    public Output<Integer> inputTrack() {
         return this.inputTrack;
     }
 
@@ -61,9 +62,9 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TextMappingArgs() {
-        this.atomKey = Output.empty();
-        this.inputKey = Output.empty();
-        this.inputTrack = Output.empty();
+        this.atomKey = Codegen.empty();
+        this.inputKey = Codegen.empty();
+        this.inputTrack = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
     @Import(name="tempDirectory")
       private final @Nullable Output<JobS3LocationArgs> tempDirectory;
 
-    public Output<JobS3LocationArgs> getTempDirectory() {
-        return this.tempDirectory == null ? Output.empty() : this.tempDirectory;
+    public Output<JobS3LocationArgs> tempDirectory() {
+        return this.tempDirectory == null ? Codegen.empty() : this.tempDirectory;
     }
 
     public JobDatabaseTableOutputOptionsArgs(
@@ -37,8 +38,8 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
     }
 
     private JobDatabaseTableOutputOptionsArgs() {
-        this.tableName = Output.empty();
-        this.tempDirectory = Output.empty();
+        this.tableName = Codegen.empty();
+        this.tempDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
             return this;
         }
         public Builder tempDirectory(@Nullable JobS3LocationArgs tempDirectory) {
-            this.tempDirectory = Output.ofNullable(tempDirectory);
+            this.tempDirectory = Codegen.ofNullable(tempDirectory);
             return this;
         }        public JobDatabaseTableOutputOptionsArgs build() {
             return new JobDatabaseTableOutputOptionsArgs(tableName, tempDirectory);

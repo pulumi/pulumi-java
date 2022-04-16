@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.HorizontalPodAutoscalerArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
     @Import(name="items", required=true)
       private final Output<List<HorizontalPodAutoscalerArgs>> items;
 
-    public Output<List<HorizontalPodAutoscalerArgs>> getItems() {
+    public Output<List<HorizontalPodAutoscalerArgs>> items() {
         return this.items;
     }
 
@@ -46,8 +47,8 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
     @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;
 
-    public Output<ListMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ListMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public HorizontalPodAutoscalerListArgs(
@@ -73,10 +74,10 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
     }
 
     private HorizontalPodAutoscalerListArgs() {
-        this.apiVersion = Output.empty();
-        this.items = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.items = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder items(Output<List<HorizontalPodAutoscalerArgs>> items) {
@@ -129,7 +130,7 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ListMetaArgs> metadata) {
@@ -137,7 +138,7 @@ public final class HorizontalPodAutoscalerListArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder metadata(@Nullable ListMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public HorizontalPodAutoscalerListArgs build() {
             return new HorizontalPodAutoscalerListArgs(apiVersion, items, kind, metadata);

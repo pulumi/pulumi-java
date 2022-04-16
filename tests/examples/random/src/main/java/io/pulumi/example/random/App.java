@@ -1,6 +1,8 @@
 package io.pulumi.example.random;
 
 import io.pulumi.Pulumi;
+import io.pulumi.context.ExportContext;
+import io.pulumi.context.StackContext;
 import io.pulumi.core.Output;
 import io.pulumi.random.RandomId;
 import io.pulumi.random.RandomIdArgs;
@@ -15,9 +17,7 @@ import io.pulumi.random.RandomString;
 import io.pulumi.random.RandomStringArgs;
 import io.pulumi.random.RandomUuid;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class App {
 
@@ -26,62 +26,53 @@ public class App {
         System.exit(exitCode);
     }
 
-    private static Map<String, Output<?>> stack() {
-        var exports = new HashMap<String, Output<?>>();
-
+    private static ExportContext stack(StackContext ctx) {
         var randomPassword = new RandomPassword("my-password",
-            RandomPasswordArgs.builder().length(16)
-                .special(true)
-                .overrideSpecial("_@")
-                .build());
-
-        exports.put("randomPassword", randomPassword.getResult());
+                RandomPasswordArgs.builder().length(16)
+                        .special(true)
+                        .overrideSpecial("_@")
+                        .build());
+        ctx.export("randomPassword", randomPassword.result());
 
         var randomPet = new RandomPet("my-pet");
-
-        exports.put("randomPetKeepers", randomPet.getKeepers());
+        ctx.export("randomPetKeepers", randomPet.keepers());
 
         var randomInteger = new RandomInteger("my-int",
-            RandomIntegerArgs.builder()
-                .max(100)
-                .min(0)
-                .build()
+                RandomIntegerArgs.builder()
+                        .max(100)
+                        .min(0)
+                        .build()
         );
-
-        exports.put("randomInteger", randomInteger.getResult());
+        ctx.export("randomInteger", randomInteger.result());
 
         var randomString = new RandomString("my-string",
-            RandomStringArgs.builder()
-                .length(10)
-                .build()
-        ).getResult();
-
-        exports.put("randomString", randomString);
+                RandomStringArgs.builder()
+                        .length(10)
+                        .build()
+        ).result();
+        ctx.export("randomString", randomString);
 
         var randomId = new RandomId("my-id",
-            RandomIdArgs.builder()
-                .byteLength(10)
-                .build()
+                RandomIdArgs.builder()
+                        .byteLength(10)
+                        .build()
         );
+        ctx.export("randomIdHex", randomId.hex());
 
-        exports.put("randomIdHex", randomId.getHex());
-
-        var randomUuid = new RandomUuid("my-uuid").getResult();
-        exports.put("randomUuid", randomUuid);
+        var randomUuid = new RandomUuid("my-uuid").result();
+        ctx.export("randomUuid", randomUuid);
 
         var randomShuffle = new RandomShuffle("my-shuffle",
-            RandomShuffleArgs.builder()
-                .inputs(List.of("A", "B", "C"))
-                .build()
-        ).getResults();
+                RandomShuffleArgs.builder()
+                        .inputs(List.of("A", "B", "C"))
+                        .build()
+        ).results();
+        ctx.export("shuffled", randomShuffle);
 
-        exports.put("shuffled", randomShuffle);
+        ctx.export("randomTuple", Output.tuple(randomString, randomUuid)
+                .applyValue(t -> t.t1 + t.t2));
+        ctx.export("randomAll", Output.all(randomString, randomUuid));
 
-        exports.put("randomTuple", Output.tuple(randomString, randomUuid)
-            .applyValue(t -> t.t1 + t.t2));
-
-        exports.put("randomAll", Output.all(randomString, randomUuid));
-
-        return exports;
+        return ctx.exports();
     }
 }

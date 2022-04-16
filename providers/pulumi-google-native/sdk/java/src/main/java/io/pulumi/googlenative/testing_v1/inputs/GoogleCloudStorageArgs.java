@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
     @Import(name="gcsPath", required=true)
       private final Output<String> gcsPath;
 
-    public Output<String> getGcsPath() {
+    public Output<String> gcsPath() {
         return this.gcsPath;
     }
 
@@ -33,7 +34,7 @@ public final class GoogleCloudStorageArgs extends io.pulumi.resources.ResourceAr
     }
 
     private GoogleCloudStorageArgs() {
-        this.gcsPath = Output.empty();
+        this.gcsPath = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.inputs.BucketReplicationRuleAndOperatorArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,22 +20,22 @@ public final class BucketReplicationRuleFilterArgs extends io.pulumi.resources.R
     @Import(name="and")
       private final @Nullable Output<BucketReplicationRuleAndOperatorArgs> and;
 
-    public Output<BucketReplicationRuleAndOperatorArgs> getAnd() {
-        return this.and == null ? Output.empty() : this.and;
+    public Output<BucketReplicationRuleAndOperatorArgs> and() {
+        return this.and == null ? Codegen.empty() : this.and;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="tagFilter")
       private final @Nullable Output<BucketTagFilterArgs> tagFilter;
 
-    public Output<BucketTagFilterArgs> getTagFilter() {
-        return this.tagFilter == null ? Output.empty() : this.tagFilter;
+    public Output<BucketTagFilterArgs> tagFilter() {
+        return this.tagFilter == null ? Codegen.empty() : this.tagFilter;
     }
 
     public BucketReplicationRuleFilterArgs(
@@ -47,9 +48,9 @@ public final class BucketReplicationRuleFilterArgs extends io.pulumi.resources.R
     }
 
     private BucketReplicationRuleFilterArgs() {
-        this.and = Output.empty();
-        this.prefix = Output.empty();
-        this.tagFilter = Output.empty();
+        this.and = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.tagFilter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class BucketReplicationRuleFilterArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder and(@Nullable BucketReplicationRuleAndOperatorArgs and) {
-            this.and = Output.ofNullable(and);
+            this.and = Codegen.ofNullable(and);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -89,7 +90,7 @@ public final class BucketReplicationRuleFilterArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder tagFilter(@Nullable Output<BucketTagFilterArgs> tagFilter) {
@@ -97,7 +98,7 @@ public final class BucketReplicationRuleFilterArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tagFilter(@Nullable BucketTagFilterArgs tagFilter) {
-            this.tagFilter = Output.ofNullable(tagFilter);
+            this.tagFilter = Codegen.ofNullable(tagFilter);
             return this;
         }        public BucketReplicationRuleFilterArgs build() {
             return new BucketReplicationRuleFilterArgs(and, prefix, tagFilter);

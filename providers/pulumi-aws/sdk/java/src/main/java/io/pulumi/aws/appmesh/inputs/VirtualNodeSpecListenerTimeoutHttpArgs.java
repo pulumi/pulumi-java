@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttpIdleArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttpPerRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,8 +23,8 @@ public final class VirtualNodeSpecListenerTimeoutHttpArgs extends io.pulumi.reso
     @Import(name="idle")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpIdleArgs> idle;
 
-    public Output<VirtualNodeSpecListenerTimeoutHttpIdleArgs> getIdle() {
-        return this.idle == null ? Output.empty() : this.idle;
+    public Output<VirtualNodeSpecListenerTimeoutHttpIdleArgs> idle() {
+        return this.idle == null ? Codegen.empty() : this.idle;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VirtualNodeSpecListenerTimeoutHttpArgs extends io.pulumi.reso
     @Import(name="perRequest")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpPerRequestArgs> perRequest;
 
-    public Output<VirtualNodeSpecListenerTimeoutHttpPerRequestArgs> getPerRequest() {
-        return this.perRequest == null ? Output.empty() : this.perRequest;
+    public Output<VirtualNodeSpecListenerTimeoutHttpPerRequestArgs> perRequest() {
+        return this.perRequest == null ? Codegen.empty() : this.perRequest;
     }
 
     public VirtualNodeSpecListenerTimeoutHttpArgs(
@@ -45,8 +46,8 @@ public final class VirtualNodeSpecListenerTimeoutHttpArgs extends io.pulumi.reso
     }
 
     private VirtualNodeSpecListenerTimeoutHttpArgs() {
-        this.idle = Output.empty();
-        this.perRequest = Output.empty();
+        this.idle = Codegen.empty();
+        this.perRequest = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class VirtualNodeSpecListenerTimeoutHttpArgs extends io.pulumi.reso
             return this;
         }
         public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutHttpIdleArgs idle) {
-            this.idle = Output.ofNullable(idle);
+            this.idle = Codegen.ofNullable(idle);
             return this;
         }
         public Builder perRequest(@Nullable Output<VirtualNodeSpecListenerTimeoutHttpPerRequestArgs> perRequest) {
@@ -84,7 +85,7 @@ public final class VirtualNodeSpecListenerTimeoutHttpArgs extends io.pulumi.reso
             return this;
         }
         public Builder perRequest(@Nullable VirtualNodeSpecListenerTimeoutHttpPerRequestArgs perRequest) {
-            this.perRequest = Output.ofNullable(perRequest);
+            this.perRequest = Codegen.ofNullable(perRequest);
             return this;
         }        public VirtualNodeSpecListenerTimeoutHttpArgs build() {
             return new VirtualNodeSpecListenerTimeoutHttpArgs(idle, perRequest);

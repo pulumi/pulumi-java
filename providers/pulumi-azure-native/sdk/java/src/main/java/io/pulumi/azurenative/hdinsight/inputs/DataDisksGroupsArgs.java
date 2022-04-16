@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="disksPerNode")
       private final @Nullable Output<Integer> disksPerNode;
 
-    public Output<Integer> getDisksPerNode() {
-        return this.disksPerNode == null ? Output.empty() : this.disksPerNode;
+    public Output<Integer> disksPerNode() {
+        return this.disksPerNode == null ? Codegen.empty() : this.disksPerNode;
     }
 
     public DataDisksGroupsArgs(@Nullable Output<Integer> disksPerNode) {
@@ -34,7 +35,7 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DataDisksGroupsArgs() {
-        this.disksPerNode = Output.empty();
+        this.disksPerNode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder disksPerNode(@Nullable Integer disksPerNode) {
-            this.disksPerNode = Output.ofNullable(disksPerNode);
+            this.disksPerNode = Codegen.ofNullable(disksPerNode);
             return this;
         }        public DataDisksGroupsArgs build() {
             return new DataDisksGroupsArgs(disksPerNode);

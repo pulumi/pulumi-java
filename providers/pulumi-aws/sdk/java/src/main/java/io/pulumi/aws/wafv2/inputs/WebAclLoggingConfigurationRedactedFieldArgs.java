@@ -12,6 +12,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldSingleQ
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldUriPathArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -32,8 +33,8 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> getAllQueryArguments() {
-        return this.allQueryArguments == null ? Output.empty() : this.allQueryArguments;
+    public Output<WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs> allQueryArguments() {
+        return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+    public Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body() {
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     @Import(name="method")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+    public Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method() {
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     @Import(name="queryString")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> getQueryString() {
-        return this.queryString == null ? Output.empty() : this.queryString;
+    public Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString() {
+        return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     @Import(name="singleHeader")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> getSingleHeader() {
-        return this.singleHeader == null ? Output.empty() : this.singleHeader;
+    public Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader() {
+        return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument;
 
     @Deprecated /* Not supported by WAFv2 API */
-    public Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> getSingleQueryArgument() {
-        return this.singleQueryArgument == null ? Output.empty() : this.singleQueryArgument;
+    public Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument() {
+        return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     @Import(name="uriPath")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath;
 
-    public Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> getUriPath() {
-        return this.uriPath == null ? Output.empty() : this.uriPath;
+    public Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath() {
+        return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 
     public WebAclLoggingConfigurationRedactedFieldArgs(
@@ -130,13 +131,13 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
     }
 
     private WebAclLoggingConfigurationRedactedFieldArgs() {
-        this.allQueryArguments = Output.empty();
-        this.body = Output.empty();
-        this.method = Output.empty();
-        this.queryString = Output.empty();
-        this.singleHeader = Output.empty();
-        this.singleQueryArgument = Output.empty();
-        this.uriPath = Output.empty();
+        this.allQueryArguments = Codegen.empty();
+        this.body = Codegen.empty();
+        this.method = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.singleHeader = Codegen.empty();
+        this.singleQueryArgument = Codegen.empty();
+        this.uriPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
             return this;
         }
         public Builder allQueryArguments(@Nullable WebAclLoggingConfigurationRedactedFieldAllQueryArgumentsArgs allQueryArguments) {
-            this.allQueryArguments = Output.ofNullable(allQueryArguments);
+            this.allQueryArguments = Codegen.ofNullable(allQueryArguments);
             return this;
         }
         public Builder body(@Nullable Output<WebAclLoggingConfigurationRedactedFieldBodyArgs> body) {
@@ -184,7 +185,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
             return this;
         }
         public Builder body(@Nullable WebAclLoggingConfigurationRedactedFieldBodyArgs body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder method(@Nullable Output<WebAclLoggingConfigurationRedactedFieldMethodArgs> method) {
@@ -192,7 +193,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
             return this;
         }
         public Builder method(@Nullable WebAclLoggingConfigurationRedactedFieldMethodArgs method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder queryString(@Nullable Output<WebAclLoggingConfigurationRedactedFieldQueryStringArgs> queryString) {
@@ -200,7 +201,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
             return this;
         }
         public Builder queryString(@Nullable WebAclLoggingConfigurationRedactedFieldQueryStringArgs queryString) {
-            this.queryString = Output.ofNullable(queryString);
+            this.queryString = Codegen.ofNullable(queryString);
             return this;
         }
         public Builder singleHeader(@Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs> singleHeader) {
@@ -208,7 +209,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
             return this;
         }
         public Builder singleHeader(@Nullable WebAclLoggingConfigurationRedactedFieldSingleHeaderArgs singleHeader) {
-            this.singleHeader = Output.ofNullable(singleHeader);
+            this.singleHeader = Codegen.ofNullable(singleHeader);
             return this;
         }
         public Builder singleQueryArgument(@Nullable Output<WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs> singleQueryArgument) {
@@ -216,7 +217,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
             return this;
         }
         public Builder singleQueryArgument(@Nullable WebAclLoggingConfigurationRedactedFieldSingleQueryArgumentArgs singleQueryArgument) {
-            this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
+            this.singleQueryArgument = Codegen.ofNullable(singleQueryArgument);
             return this;
         }
         public Builder uriPath(@Nullable Output<WebAclLoggingConfigurationRedactedFieldUriPathArgs> uriPath) {
@@ -224,7 +225,7 @@ public final class WebAclLoggingConfigurationRedactedFieldArgs extends io.pulumi
             return this;
         }
         public Builder uriPath(@Nullable WebAclLoggingConfigurationRedactedFieldUriPathArgs uriPath) {
-            this.uriPath = Output.ofNullable(uriPath);
+            this.uriPath = Codegen.ofNullable(uriPath);
             return this;
         }        public WebAclLoggingConfigurationRedactedFieldArgs build() {
             return new WebAclLoggingConfigurationRedactedFieldArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);

@@ -34,14 +34,14 @@ public final class SchemaRegistry {
      * Amazon Resource Name for the Registry.
      * 
     */
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
      * Name of the registry in which the schema will be created.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
 

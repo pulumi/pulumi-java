@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @return The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.
      * 
      */
-    public Output<String> getLevel() {
+    public Output<String> level() {
         return this.level;
     }
     /**
@@ -56,7 +57,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @return The name of the lock.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @return Notes about the lock. Maximum of 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> getNotes() {
+    public Output</* @Nullable */ String> notes() {
         return this.notes;
     }
     /**
@@ -84,7 +85,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @return The owners of the lock.
      * 
      */
-    public Output</* @Nullable */ List<ManagementLockOwnerResponse>> getOwners() {
+    public Output</* @Nullable */ List<ManagementLockOwnerResponse>> owners() {
         return this.owners;
     }
     /**
@@ -98,7 +99,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @return The resource type of the lock - Microsoft.Authorization/locks.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -124,7 +125,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagementLockAtResourceLevel(String name, ManagementLockAtResourceLevelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:ManagementLockAtResourceLevel", name, args == null ? ManagementLockAtResourceLevelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:authorization:ManagementLockAtResourceLevel", name, args == null ? ManagementLockAtResourceLevelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagementLockAtResourceLevel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -15,6 +15,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -48,7 +49,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return Time the factory was created in ISO8601 format.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -62,7 +63,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return Etag identifies change in the resource.
      * 
      */
-    public Output<String> getETag() {
+    public Output<String> eTag() {
         return this.eTag;
     }
     /**
@@ -76,7 +77,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return Properties to enable Customer Managed Key for the factory.
      * 
      */
-    public Output</* @Nullable */ EncryptionConfigurationResponse> getEncryption() {
+    public Output</* @Nullable */ EncryptionConfigurationResponse> encryption() {
         return this.encryption;
     }
     /**
@@ -90,7 +91,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return List of parameters for factory.
      * 
      */
-    public Output</* @Nullable */ Map<String,GlobalParameterSpecificationResponse>> getGlobalParameters() {
+    public Output</* @Nullable */ Map<String,GlobalParameterSpecificationResponse>> globalParameters() {
         return this.globalParameters;
     }
     /**
@@ -104,7 +105,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return Managed service identity of the factory.
      * 
      */
-    public Output</* @Nullable */ FactoryIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ FactoryIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -118,7 +119,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -132,7 +133,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -146,7 +147,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return Factory provisioning state, example Succeeded.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -160,7 +161,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return Whether or not public network access is allowed for the data factory.
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -174,7 +175,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return Git repo information of the factory.
      * 
      */
-    public Output</* @Nullable */ Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> getRepoConfiguration() {
+    public Output</* @Nullable */ Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> repoConfiguration() {
         return this.repoConfiguration;
     }
     /**
@@ -188,7 +189,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -202,7 +203,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -216,7 +217,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @return Version of the factory.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -242,7 +243,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Factory(String name, FactoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datafactory:Factory", name, args == null ? FactoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:datafactory:Factory", name, args == null ? FactoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Factory(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

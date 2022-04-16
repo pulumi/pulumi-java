@@ -7,6 +7,7 @@ import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaDeviceMount
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaVolumeMountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -21,29 +22,29 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
     @Import(name="devices")
       private final @Nullable Output<List<ComponentVersionLambdaDeviceMountArgs>> devices;
 
-    public Output<List<ComponentVersionLambdaDeviceMountArgs>> getDevices() {
-        return this.devices == null ? Output.empty() : this.devices;
+    public Output<List<ComponentVersionLambdaDeviceMountArgs>> devices() {
+        return this.devices == null ? Codegen.empty() : this.devices;
     }
 
     @Import(name="memorySizeInKB")
       private final @Nullable Output<Integer> memorySizeInKB;
 
-    public Output<Integer> getMemorySizeInKB() {
-        return this.memorySizeInKB == null ? Output.empty() : this.memorySizeInKB;
+    public Output<Integer> memorySizeInKB() {
+        return this.memorySizeInKB == null ? Codegen.empty() : this.memorySizeInKB;
     }
 
     @Import(name="mountROSysfs")
       private final @Nullable Output<Boolean> mountROSysfs;
 
-    public Output<Boolean> getMountROSysfs() {
-        return this.mountROSysfs == null ? Output.empty() : this.mountROSysfs;
+    public Output<Boolean> mountROSysfs() {
+        return this.mountROSysfs == null ? Codegen.empty() : this.mountROSysfs;
     }
 
     @Import(name="volumes")
       private final @Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes;
 
-    public Output<List<ComponentVersionLambdaVolumeMountArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+    public Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes() {
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public ComponentVersionLambdaContainerParamsArgs(
@@ -58,10 +59,10 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
     }
 
     private ComponentVersionLambdaContainerParamsArgs() {
-        this.devices = Output.empty();
-        this.memorySizeInKB = Output.empty();
-        this.mountROSysfs = Output.empty();
-        this.volumes = Output.empty();
+        this.devices = Codegen.empty();
+        this.memorySizeInKB = Codegen.empty();
+        this.mountROSysfs = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
             return this;
         }
         public Builder devices(@Nullable List<ComponentVersionLambdaDeviceMountArgs> devices) {
-            this.devices = Output.ofNullable(devices);
+            this.devices = Codegen.ofNullable(devices);
             return this;
         }
         public Builder devices(ComponentVersionLambdaDeviceMountArgs... devices) {
@@ -106,7 +107,7 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
             return this;
         }
         public Builder memorySizeInKB(@Nullable Integer memorySizeInKB) {
-            this.memorySizeInKB = Output.ofNullable(memorySizeInKB);
+            this.memorySizeInKB = Codegen.ofNullable(memorySizeInKB);
             return this;
         }
         public Builder mountROSysfs(@Nullable Output<Boolean> mountROSysfs) {
@@ -114,7 +115,7 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
             return this;
         }
         public Builder mountROSysfs(@Nullable Boolean mountROSysfs) {
-            this.mountROSysfs = Output.ofNullable(mountROSysfs);
+            this.mountROSysfs = Codegen.ofNullable(mountROSysfs);
             return this;
         }
         public Builder volumes(@Nullable Output<List<ComponentVersionLambdaVolumeMountArgs>> volumes) {
@@ -122,7 +123,7 @@ public final class ComponentVersionLambdaContainerParamsArgs extends io.pulumi.r
             return this;
         }
         public Builder volumes(@Nullable List<ComponentVersionLambdaVolumeMountArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(ComponentVersionLambdaVolumeMountArgs... volumes) {

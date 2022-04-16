@@ -6,6 +6,7 @@ package io.pulumi.azurenative.orbital;
 import io.pulumi.azurenative.orbital.inputs.SpacecraftLinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="links")
       private final @Nullable Output<List<SpacecraftLinkArgs>> links;
 
-    public Output<List<SpacecraftLinkArgs>> getLinks() {
-        return this.links == null ? Output.empty() : this.links;
+    public Output<List<SpacecraftLinkArgs>> links() {
+        return this.links == null ? Codegen.empty() : this.links;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="noradId", required=true)
       private final Output<String> noradId;
 
-    public Output<String> getNoradId() {
+    public Output<String> noradId() {
         return this.noradId;
     }
 
@@ -57,7 +58,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,8 +69,8 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="spacecraftName")
       private final @Nullable Output<String> spacecraftName;
 
-    public Output<String> getSpacecraftName() {
-        return this.spacecraftName == null ? Output.empty() : this.spacecraftName;
+    public Output<String> spacecraftName() {
+        return this.spacecraftName == null ? Codegen.empty() : this.spacecraftName;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="titleLine")
       private final @Nullable Output<String> titleLine;
 
-    public Output<String> getTitleLine() {
-        return this.titleLine == null ? Output.empty() : this.titleLine;
+    public Output<String> titleLine() {
+        return this.titleLine == null ? Codegen.empty() : this.titleLine;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tleLine1")
       private final @Nullable Output<String> tleLine1;
 
-    public Output<String> getTleLine1() {
-        return this.tleLine1 == null ? Output.empty() : this.tleLine1;
+    public Output<String> tleLine1() {
+        return this.tleLine1 == null ? Codegen.empty() : this.tleLine1;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tleLine2")
       private final @Nullable Output<String> tleLine2;
 
-    public Output<String> getTleLine2() {
-        return this.tleLine2 == null ? Output.empty() : this.tleLine2;
+    public Output<String> tleLine2() {
+        return this.tleLine2 == null ? Codegen.empty() : this.tleLine2;
     }
 
     public SpacecraftArgs(
@@ -138,15 +139,15 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpacecraftArgs() {
-        this.links = Output.empty();
-        this.location = Output.empty();
-        this.noradId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.spacecraftName = Output.empty();
-        this.tags = Output.empty();
-        this.titleLine = Output.empty();
-        this.tleLine1 = Output.empty();
-        this.tleLine2 = Output.empty();
+        this.links = Codegen.empty();
+        this.location = Codegen.empty();
+        this.noradId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.spacecraftName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.titleLine = Codegen.empty();
+        this.tleLine1 = Codegen.empty();
+        this.tleLine2 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder links(@Nullable List<SpacecraftLinkArgs> links) {
-            this.links = Output.ofNullable(links);
+            this.links = Codegen.ofNullable(links);
             return this;
         }
         public Builder links(SpacecraftLinkArgs... links) {
@@ -201,7 +202,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder noradId(Output<String> noradId) {
@@ -225,7 +226,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spacecraftName(@Nullable String spacecraftName) {
-            this.spacecraftName = Output.ofNullable(spacecraftName);
+            this.spacecraftName = Codegen.ofNullable(spacecraftName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -233,7 +234,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder titleLine(@Nullable Output<String> titleLine) {
@@ -241,7 +242,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder titleLine(@Nullable String titleLine) {
-            this.titleLine = Output.ofNullable(titleLine);
+            this.titleLine = Codegen.ofNullable(titleLine);
             return this;
         }
         public Builder tleLine1(@Nullable Output<String> tleLine1) {
@@ -249,7 +250,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tleLine1(@Nullable String tleLine1) {
-            this.tleLine1 = Output.ofNullable(tleLine1);
+            this.tleLine1 = Codegen.ofNullable(tleLine1);
             return this;
         }
         public Builder tleLine2(@Nullable Output<String> tleLine2) {
@@ -257,7 +258,7 @@ public final class SpacecraftArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tleLine2(@Nullable String tleLine2) {
-            this.tleLine2 = Output.ofNullable(tleLine2);
+            this.tleLine2 = Codegen.ofNullable(tleLine2);
             return this;
         }        public SpacecraftArgs build() {
             return new SpacecraftArgs(links, location, noradId, resourceGroupName, spacecraftName, tags, titleLine, tleLine1, tleLine2);

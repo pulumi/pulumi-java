@@ -25,7 +25,7 @@ public final class DiffDiskSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="option")
       private final @Nullable String option;
 
-    public Optional<String> getOption() {
+    public Optional<String> option() {
         return this.option == null ? Optional.empty() : Optional.ofNullable(this.option);
     }
 
@@ -36,7 +36,7 @@ public final class DiffDiskSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="placement")
       private final @Nullable String placement;
 
-    public Optional<String> getPlacement() {
+    public Optional<String> placement() {
         return this.placement == null ? Optional.empty() : Optional.ofNullable(this.placement);
     }
 

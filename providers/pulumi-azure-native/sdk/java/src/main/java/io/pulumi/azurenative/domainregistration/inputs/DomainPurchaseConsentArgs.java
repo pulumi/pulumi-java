@@ -5,6 +5,7 @@ package io.pulumi.azurenative.domainregistration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
     @Import(name="agreedAt")
       private final @Nullable Output<String> agreedAt;
 
-    public Output<String> getAgreedAt() {
-        return this.agreedAt == null ? Output.empty() : this.agreedAt;
+    public Output<String> agreedAt() {
+        return this.agreedAt == null ? Codegen.empty() : this.agreedAt;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
     @Import(name="agreedBy")
       private final @Nullable Output<String> agreedBy;
 
-    public Output<String> getAgreedBy() {
-        return this.agreedBy == null ? Output.empty() : this.agreedBy;
+    public Output<String> agreedBy() {
+        return this.agreedBy == null ? Codegen.empty() : this.agreedBy;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
     @Import(name="agreementKeys")
       private final @Nullable Output<List<String>> agreementKeys;
 
-    public Output<List<String>> getAgreementKeys() {
-        return this.agreementKeys == null ? Output.empty() : this.agreementKeys;
+    public Output<List<String>> agreementKeys() {
+        return this.agreementKeys == null ? Codegen.empty() : this.agreementKeys;
     }
 
     public DomainPurchaseConsentArgs(
@@ -62,9 +63,9 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
     }
 
     private DomainPurchaseConsentArgs() {
-        this.agreedAt = Output.empty();
-        this.agreedBy = Output.empty();
-        this.agreementKeys = Output.empty();
+        this.agreedAt = Codegen.empty();
+        this.agreedBy = Codegen.empty();
+        this.agreementKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder agreedAt(@Nullable String agreedAt) {
-            this.agreedAt = Output.ofNullable(agreedAt);
+            this.agreedAt = Codegen.ofNullable(agreedAt);
             return this;
         }
         public Builder agreedBy(@Nullable Output<String> agreedBy) {
@@ -104,7 +105,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder agreedBy(@Nullable String agreedBy) {
-            this.agreedBy = Output.ofNullable(agreedBy);
+            this.agreedBy = Codegen.ofNullable(agreedBy);
             return this;
         }
         public Builder agreementKeys(@Nullable Output<List<String>> agreementKeys) {
@@ -112,7 +113,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder agreementKeys(@Nullable List<String> agreementKeys) {
-            this.agreementKeys = Output.ofNullable(agreementKeys);
+            this.agreementKeys = Codegen.ofNullable(agreementKeys);
             return this;
         }
         public Builder agreementKeys(String... agreementKeys) {

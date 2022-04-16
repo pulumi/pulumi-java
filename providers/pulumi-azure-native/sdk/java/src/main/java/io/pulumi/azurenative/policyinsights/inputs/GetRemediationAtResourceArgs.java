@@ -19,7 +19,7 @@ public final class GetRemediationAtResourceArgs extends io.pulumi.resources.Invo
     @Import(name="remediationName", required=true)
       private final String remediationName;
 
-    public String getRemediationName() {
+    public String remediationName() {
         return this.remediationName;
     }
 
@@ -30,7 +30,7 @@ public final class GetRemediationAtResourceArgs extends io.pulumi.resources.Invo
     @Import(name="resourceId", required=true)
       private final String resourceId;
 
-    public String getResourceId() {
+    public String resourceId() {
         return this.resourceId;
     }
 

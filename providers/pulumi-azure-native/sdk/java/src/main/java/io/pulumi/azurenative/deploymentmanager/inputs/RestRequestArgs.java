@@ -9,6 +9,7 @@ import io.pulumi.azurenative.deploymentmanager.inputs.RolloutIdentityAuthenticat
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -28,7 +29,7 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication", required=true)
       private final Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication;
 
-    public Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> getAuthentication() {
+    public Output<Either<ApiKeyAuthenticationArgs,RolloutIdentityAuthenticationArgs>> authentication() {
         return this.authentication;
     }
 
@@ -39,7 +40,7 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="method", required=true)
       private final Output<RestRequestMethod> method;
 
-    public Output<RestRequestMethod> getMethod() {
+    public Output<RestRequestMethod> method() {
         return this.method;
     }
 
@@ -50,7 +51,7 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
       private final Output<String> uri;
 
-    public Output<String> getUri() {
+    public Output<String> uri() {
         return this.uri;
     }
 
@@ -64,9 +65,9 @@ public final class RestRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestRequestArgs() {
-        this.authentication = Output.empty();
-        this.method = Output.empty();
-        this.uri = Output.empty();
+        this.authentication = Codegen.empty();
+        this.method = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {

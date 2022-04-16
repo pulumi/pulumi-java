@@ -120,10 +120,10 @@ public final class GetApiResult {
      * The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
      * 
     */
-    public String getApiEndpoint() {
+    public String apiEndpoint() {
         return this.apiEndpoint;
     }
-    public String getApiId() {
+    public String apiId() {
         return this.apiId;
     }
     /**
@@ -131,14 +131,14 @@ public final class GetApiResult {
      * Applicable for WebSocket APIs.
      * 
     */
-    public String getApiKeySelectionExpression() {
+    public String apiKeySelectionExpression() {
         return this.apiKeySelectionExpression;
     }
     /**
      * The ARN of the API.
      * 
     */
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
     /**
@@ -146,21 +146,21 @@ public final class GetApiResult {
      * Applicable for HTTP APIs.
      * 
     */
-    public List<GetApiCorsConfiguration> getCorsConfigurations() {
+    public List<GetApiCorsConfiguration> corsConfigurations() {
         return this.corsConfigurations;
     }
     /**
      * The description of the API.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Whether clients can invoke the API by using the default `execute-api` endpoint.
      * 
     */
-    public Boolean getDisableExecuteApiEndpoint() {
+    public Boolean disableExecuteApiEndpoint() {
         return this.disableExecuteApiEndpoint;
     }
     /**
@@ -169,49 +169,49 @@ public final class GetApiResult {
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 
     */
-    public String getExecutionArn() {
+    public String executionArn() {
         return this.executionArn;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the API.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The API protocol.
      * 
     */
-    public String getProtocolType() {
+    public String protocolType() {
         return this.protocolType;
     }
     /**
      * The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-selection-expressions) for the API.
      * 
     */
-    public String getRouteSelectionExpression() {
+    public String routeSelectionExpression() {
         return this.routeSelectionExpression;
     }
     /**
      * A map of resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags;
     }
     /**
      * A version identifier for the API.
      * 
     */
-    public String getVersion() {
+    public String version() {
         return this.version;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.aws.amp.inputs.WorkspaceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
      * 
      */
-    public Output</* @Nullable */ String> getAlias() {
+    public Output</* @Nullable */ String> alias() {
         return this.alias;
     }
     /**
@@ -55,7 +56,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the workspace.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -69,7 +70,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @return Prometheus endpoint available for this workspace.
      * 
      */
-    public Output<String> getPrometheusEndpoint() {
+    public Output<String> prometheusEndpoint() {
         return this.prometheusEndpoint;
     }
 
@@ -95,7 +96,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workspace(String name, @Nullable WorkspaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:amp/workspace:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:amp/workspace:Workspace", name, args == null ? WorkspaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workspace(String name, Output<String> id, @Nullable WorkspaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudcontrol;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="desiredState", required=true)
       private final Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState;
     }
 
@@ -28,8 +29,8 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schema")
       private final @Nullable Output<String> schema;
 
-    public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+    public Output<String> schema() {
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="typeName", required=true)
       private final Output<String> typeName;
 
-    public Output<String> getTypeName() {
+    public Output<String> typeName() {
         return this.typeName;
     }
 
@@ -61,8 +62,8 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="typeVersionId")
       private final @Nullable Output<String> typeVersionId;
 
-    public Output<String> getTypeVersionId() {
-        return this.typeVersionId == null ? Output.empty() : this.typeVersionId;
+    public Output<String> typeVersionId() {
+        return this.typeVersionId == null ? Codegen.empty() : this.typeVersionId;
     }
 
     public ResourceArgs(
@@ -79,11 +80,11 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceArgs() {
-        this.desiredState = Output.empty();
-        this.roleArn = Output.empty();
-        this.schema = Output.empty();
-        this.typeName = Output.empty();
-        this.typeVersionId = Output.empty();
+        this.desiredState = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.typeName = Codegen.empty();
+        this.typeVersionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -135,7 +136,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder typeName(Output<String> typeName) {
@@ -151,7 +152,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeVersionId(@Nullable String typeVersionId) {
-            this.typeVersionId = Output.ofNullable(typeVersionId);
+            this.typeVersionId = Codegen.ofNullable(typeVersionId);
             return this;
         }        public ResourceArgs build() {
             return new ResourceArgs(desiredState, roleArn, schema, typeName, typeVersionId);

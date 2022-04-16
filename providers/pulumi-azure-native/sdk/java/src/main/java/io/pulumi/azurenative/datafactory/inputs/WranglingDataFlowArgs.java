@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.DataFlowFolderArgs;
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="documentLocale")
       private final @Nullable Output<String> documentLocale;
 
-    public Output<String> getDocumentLocale() {
-        return this.documentLocale == null ? Output.empty() : this.documentLocale;
+    public Output<String> documentLocale() {
+        return this.documentLocale == null ? Codegen.empty() : this.documentLocale;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="folder")
       private final @Nullable Output<DataFlowFolderArgs> folder;
 
-    public Output<DataFlowFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+    public Output<DataFlowFolderArgs> folder() {
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+    public Output<String> script() {
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="sources")
       private final @Nullable Output<List<PowerQuerySourceArgs>> sources;
 
-    public Output<List<PowerQuerySourceArgs>> getSources() {
-        return this.sources == null ? Output.empty() : this.sources;
+    public Output<List<PowerQuerySourceArgs>> sources() {
+        return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -118,13 +119,13 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WranglingDataFlowArgs() {
-        this.annotations = Output.empty();
-        this.description = Output.empty();
-        this.documentLocale = Output.empty();
-        this.folder = Output.empty();
-        this.script = Output.empty();
-        this.sources = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.documentLocale = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.script = Codegen.empty();
+        this.sources = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -175,7 +176,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder documentLocale(@Nullable Output<String> documentLocale) {
@@ -183,7 +184,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder documentLocale(@Nullable String documentLocale) {
-            this.documentLocale = Output.ofNullable(documentLocale);
+            this.documentLocale = Codegen.ofNullable(documentLocale);
             return this;
         }
         public Builder folder(@Nullable Output<DataFlowFolderArgs> folder) {
@@ -191,7 +192,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder folder(@Nullable DataFlowFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -199,7 +200,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }
         public Builder sources(@Nullable Output<List<PowerQuerySourceArgs>> sources) {
@@ -207,7 +208,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sources(@Nullable List<PowerQuerySourceArgs> sources) {
-            this.sources = Output.ofNullable(sources);
+            this.sources = Codegen.ofNullable(sources);
             return this;
         }
         public Builder sources(PowerQuerySourceArgs... sources) {

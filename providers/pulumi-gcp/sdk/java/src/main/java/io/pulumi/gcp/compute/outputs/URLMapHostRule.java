@@ -45,7 +45,7 @@ public final class URLMapHostRule {
      * Description of this test case.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
@@ -54,7 +54,7 @@ public final class URLMapHostRule {
      * and must be followed in the pattern by either - or ..
      * 
     */
-    public List<String> getHosts() {
+    public List<String> hosts() {
         return this.hosts;
     }
     /**
@@ -62,7 +62,7 @@ public final class URLMapHostRule {
      * hostRule matches the URL's host portion.
      * 
     */
-    public String getPathMatcher() {
+    public String pathMatcher() {
         return this.pathMatcher;
     }
 

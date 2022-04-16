@@ -5,6 +5,7 @@ package io.pulumi.googlenative.essentialcontacts_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.ContactNotificationCategorySubscriptionsItem;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.ContactValidationState;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -35,8 +36,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageTag")
       private final @Nullable Output<String> languageTag;
 
-    public Output<String> getLanguageTag() {
-        return this.languageTag == null ? Output.empty() : this.languageTag;
+    public Output<String> languageTag() {
+        return this.languageTag == null ? Codegen.empty() : this.languageTag;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,15 +58,15 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationCategorySubscriptions")
       private final @Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
-    public Output<List<ContactNotificationCategorySubscriptionsItem>> getNotificationCategorySubscriptions() {
-        return this.notificationCategorySubscriptions == null ? Output.empty() : this.notificationCategorySubscriptions;
+    public Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions() {
+        return this.notificationCategorySubscriptions == null ? Codegen.empty() : this.notificationCategorySubscriptions;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validateTime")
       private final @Nullable Output<String> validateTime;
 
-    public Output<String> getValidateTime() {
-        return this.validateTime == null ? Output.empty() : this.validateTime;
+    public Output<String> validateTime() {
+        return this.validateTime == null ? Codegen.empty() : this.validateTime;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationState")
       private final @Nullable Output<ContactValidationState> validationState;
 
-    public Output<ContactValidationState> getValidationState() {
-        return this.validationState == null ? Output.empty() : this.validationState;
+    public Output<ContactValidationState> validationState() {
+        return this.validationState == null ? Codegen.empty() : this.validationState;
     }
 
     public ContactArgs(
@@ -108,13 +109,13 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.email = Output.empty();
-        this.languageTag = Output.empty();
-        this.name = Output.empty();
-        this.notificationCategorySubscriptions = Output.empty();
-        this.project = Output.empty();
-        this.validateTime = Output.empty();
-        this.validationState = Output.empty();
+        this.email = Codegen.empty();
+        this.languageTag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationCategorySubscriptions = Codegen.empty();
+        this.project = Codegen.empty();
+        this.validateTime = Codegen.empty();
+        this.validationState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageTag(@Nullable String languageTag) {
-            this.languageTag = Output.ofNullable(languageTag);
+            this.languageTag = Codegen.ofNullable(languageTag);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -170,7 +171,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationCategorySubscriptions(@Nullable Output<List<ContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
@@ -178,7 +179,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationCategorySubscriptions(@Nullable List<ContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
+            this.notificationCategorySubscriptions = Codegen.ofNullable(notificationCategorySubscriptions);
             return this;
         }
         public Builder notificationCategorySubscriptions(ContactNotificationCategorySubscriptionsItem... notificationCategorySubscriptions) {
@@ -189,7 +190,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder validateTime(@Nullable Output<String> validateTime) {
@@ -197,7 +198,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateTime(@Nullable String validateTime) {
-            this.validateTime = Output.ofNullable(validateTime);
+            this.validateTime = Codegen.ofNullable(validateTime);
             return this;
         }
         public Builder validationState(@Nullable Output<ContactValidationState> validationState) {
@@ -205,7 +206,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validationState(@Nullable ContactValidationState validationState) {
-            this.validationState = Output.ofNullable(validationState);
+            this.validationState = Codegen.ofNullable(validationState);
             return this;
         }        public ContactArgs build() {
             return new ContactArgs(email, languageTag, name, notificationCategorySubscriptions, project, validateTime, validationState);

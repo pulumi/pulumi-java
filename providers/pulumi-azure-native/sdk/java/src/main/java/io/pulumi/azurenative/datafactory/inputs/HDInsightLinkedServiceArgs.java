@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,8 +35,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="clusterUri", required=true)
       private final Output<Object> clusterUri;
 
-    public Output<Object> getClusterUri() {
+    public Output<Object> clusterUri() {
         return this.clusterUri;
     }
 
@@ -56,8 +57,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="fileSystem")
       private final @Nullable Output<Object> fileSystem;
 
-    public Output<Object> getFileSystem() {
-        return this.fileSystem == null ? Output.empty() : this.fileSystem;
+    public Output<Object> fileSystem() {
+        return this.fileSystem == null ? Codegen.empty() : this.fileSystem;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="hcatalogLinkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getHcatalogLinkedServiceName() {
-        return this.hcatalogLinkedServiceName == null ? Output.empty() : this.hcatalogLinkedServiceName;
+    public Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName() {
+        return this.hcatalogLinkedServiceName == null ? Codegen.empty() : this.hcatalogLinkedServiceName;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="isEspEnabled")
       private final @Nullable Output<Object> isEspEnabled;
 
-    public Output<Object> getIsEspEnabled() {
-        return this.isEspEnabled == null ? Output.empty() : this.isEspEnabled;
+    public Output<Object> isEspEnabled() {
+        return this.isEspEnabled == null ? Codegen.empty() : this.isEspEnabled;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,8 +168,8 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<Object> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public HDInsightLinkedServiceArgs(
@@ -201,19 +202,19 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
     }
 
     private HDInsightLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.clusterUri = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.fileSystem = Output.empty();
-        this.hcatalogLinkedServiceName = Output.empty();
-        this.isEspEnabled = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.annotations = Codegen.empty();
+        this.clusterUri = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.fileSystem = Codegen.empty();
+        this.hcatalogLinkedServiceName = Codegen.empty();
+        this.isEspEnabled = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -265,7 +266,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -284,7 +285,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -292,7 +293,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -300,7 +301,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder fileSystem(@Nullable Output<Object> fileSystem) {
@@ -308,7 +309,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder fileSystem(@Nullable Object fileSystem) {
-            this.fileSystem = Output.ofNullable(fileSystem);
+            this.fileSystem = Codegen.ofNullable(fileSystem);
             return this;
         }
         public Builder hcatalogLinkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName) {
@@ -316,7 +317,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceArgs hcatalogLinkedServiceName) {
-            this.hcatalogLinkedServiceName = Output.ofNullable(hcatalogLinkedServiceName);
+            this.hcatalogLinkedServiceName = Codegen.ofNullable(hcatalogLinkedServiceName);
             return this;
         }
         public Builder isEspEnabled(@Nullable Output<Object> isEspEnabled) {
@@ -324,7 +325,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder isEspEnabled(@Nullable Object isEspEnabled) {
-            this.isEspEnabled = Output.ofNullable(isEspEnabled);
+            this.isEspEnabled = Codegen.ofNullable(isEspEnabled);
             return this;
         }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -332,7 +333,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -340,7 +341,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -348,7 +349,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -364,7 +365,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder userName(@Nullable Object userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public HDInsightLinkedServiceArgs build() {
             return new HDInsightLinkedServiceArgs(annotations, clusterUri, connectVia, description, encryptedCredential, fileSystem, hcatalogLinkedServiceName, isEspEnabled, linkedServiceName, parameters, password, type, userName);

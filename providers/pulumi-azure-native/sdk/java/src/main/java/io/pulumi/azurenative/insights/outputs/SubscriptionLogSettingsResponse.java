@@ -35,14 +35,14 @@ public final class SubscriptionLogSettingsResponse {
      * Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
      * 
     */
-    public Optional<String> getCategory() {
+    public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
      * a value indicating whether this log is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

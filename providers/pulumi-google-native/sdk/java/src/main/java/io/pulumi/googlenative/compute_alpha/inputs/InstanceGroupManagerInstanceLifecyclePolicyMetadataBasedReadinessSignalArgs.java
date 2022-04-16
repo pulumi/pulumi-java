@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
-    public Output<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
+    public Output<Integer> timeoutSec() {
+        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 
     public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(@Nullable Output<Integer> timeoutSec) {
@@ -30,7 +31,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     }
 
     private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs() {
-        this.timeoutSec = Output.empty();
+        this.timeoutSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
             return this;
         }
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Output.ofNullable(timeoutSec);
+            this.timeoutSec = Codegen.ofNullable(timeoutSec);
             return this;
         }        public InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs(timeoutSec);

@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Represents the filter actions which are allowed for the transformation of a message that have been matched by a filter expression.
      * 
      */
-    public Output</* @Nullable */ ActionResponse> getAction() {
+    public Output</* @Nullable */ ActionResponse> action() {
         return this.action;
     }
     /**
@@ -58,7 +59,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Properties of correlationFilter
      * 
      */
-    public Output</* @Nullable */ CorrelationFilterResponse> getCorrelationFilter() {
+    public Output</* @Nullable */ CorrelationFilterResponse> correlationFilter() {
         return this.correlationFilter;
     }
     /**
@@ -72,7 +73,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Filter type that is evaluated against a BrokeredMessage.
      * 
      */
-    public Output</* @Nullable */ String> getFilterType() {
+    public Output</* @Nullable */ String> filterType() {
         return this.filterType;
     }
     /**
@@ -86,7 +87,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Properties of sqlFilter
      * 
      */
-    public Output</* @Nullable */ SqlFilterResponse> getSqlFilter() {
+    public Output</* @Nullable */ SqlFilterResponse> sqlFilter() {
         return this.sqlFilter;
     }
     /**
@@ -114,7 +115,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,7 +141,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Rule(String name, RuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicebus:Rule", name, args == null ? RuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:servicebus:Rule", name, args == null ? RuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Rule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

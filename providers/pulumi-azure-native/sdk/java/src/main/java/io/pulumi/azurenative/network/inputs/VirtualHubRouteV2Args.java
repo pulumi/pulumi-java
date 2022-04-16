@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     @Import(name="destinationType")
       private final @Nullable Output<String> destinationType;
 
-    public Output<String> getDestinationType() {
-        return this.destinationType == null ? Output.empty() : this.destinationType;
+    public Output<String> destinationType() {
+        return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
-        return this.destinations == null ? Output.empty() : this.destinations;
+    public Output<List<String>> destinations() {
+        return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     @Import(name="nextHopType")
       private final @Nullable Output<String> nextHopType;
 
-    public Output<String> getNextHopType() {
-        return this.nextHopType == null ? Output.empty() : this.nextHopType;
+    public Output<String> nextHopType() {
+        return this.nextHopType == null ? Codegen.empty() : this.nextHopType;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     @Import(name="nextHops")
       private final @Nullable Output<List<String>> nextHops;
 
-    public Output<List<String>> getNextHops() {
-        return this.nextHops == null ? Output.empty() : this.nextHops;
+    public Output<List<String>> nextHops() {
+        return this.nextHops == null ? Codegen.empty() : this.nextHops;
     }
 
     public VirtualHubRouteV2Args(
@@ -75,10 +76,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     }
 
     private VirtualHubRouteV2Args() {
-        this.destinationType = Output.empty();
-        this.destinations = Output.empty();
-        this.nextHopType = Output.empty();
-        this.nextHops = Output.empty();
+        this.destinationType = Codegen.empty();
+        this.destinations = Codegen.empty();
+        this.nextHopType = Codegen.empty();
+        this.nextHops = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = Output.ofNullable(destinationType);
+            this.destinationType = Codegen.ofNullable(destinationType);
             return this;
         }
         public Builder destinations(@Nullable Output<List<String>> destinations) {
@@ -120,7 +121,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Output.ofNullable(destinations);
+            this.destinations = Codegen.ofNullable(destinations);
             return this;
         }
         public Builder destinations(String... destinations) {
@@ -131,7 +132,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder nextHopType(@Nullable String nextHopType) {
-            this.nextHopType = Output.ofNullable(nextHopType);
+            this.nextHopType = Codegen.ofNullable(nextHopType);
             return this;
         }
         public Builder nextHops(@Nullable Output<List<String>> nextHops) {
@@ -139,7 +140,7 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder nextHops(@Nullable List<String> nextHops) {
-            this.nextHops = Output.ofNullable(nextHops);
+            this.nextHops = Codegen.ofNullable(nextHops);
             return this;
         }
         public Builder nextHops(String... nextHops) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.DataTypeState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class OfficeDataConnectorDataTypesTeamsArgs extends io.pulumi.resou
     @Import(name="state")
       private final @Nullable Output<Either<String,DataTypeState>> state;
 
-    public Output<Either<String,DataTypeState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<Either<String,DataTypeState>> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public OfficeDataConnectorDataTypesTeamsArgs(@Nullable Output<Either<String,DataTypeState>> state) {
@@ -36,7 +37,7 @@ public final class OfficeDataConnectorDataTypesTeamsArgs extends io.pulumi.resou
     }
 
     private OfficeDataConnectorDataTypesTeamsArgs() {
-        this.state = Output.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class OfficeDataConnectorDataTypesTeamsArgs extends io.pulumi.resou
             return this;
         }
         public Builder state(@Nullable Either<String,DataTypeState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public OfficeDataConnectorDataTypesTeamsArgs build() {
             return new OfficeDataConnectorDataTypesTeamsArgs(state);

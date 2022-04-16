@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceFileResourceState;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileArgs> file;
 
-    public Output<OSPolicyResourceFileArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+    public Output<OSPolicyResourceFileArgs> file() {
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -60,8 +61,8 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
-    public Output<String> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<String> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     @Import(name="state", required=true)
       private final Output<OSPolicyResourceFileResourceState> state;
 
-    public Output<OSPolicyResourceFileResourceState> getState() {
+    public Output<OSPolicyResourceFileResourceState> state() {
         return this.state;
     }
 
@@ -89,11 +90,11 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
     }
 
     private OSPolicyResourceFileResourceArgs() {
-        this.content = Output.empty();
-        this.file = Output.empty();
-        this.path = Output.empty();
-        this.permissions = Output.empty();
-        this.state = Output.empty();
+        this.content = Codegen.empty();
+        this.file = Codegen.empty();
+        this.path = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder file(@Nullable Output<OSPolicyResourceFileArgs> file) {
@@ -137,7 +138,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder file(@Nullable OSPolicyResourceFileArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -153,7 +154,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder state(Output<OSPolicyResourceFileResourceState> state) {

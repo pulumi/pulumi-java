@@ -6,6 +6,7 @@ package io.pulumi.gcp.container;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.AzureNodePoolArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolState;
@@ -54,7 +55,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getAnnotations() {
+    public Output</* @Nullable */ Map<String,String>> annotations() {
         return this.annotations;
     }
     /**
@@ -68,7 +69,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. Autoscaler configuration for this node pool.
      * 
      */
-    public Output<AzureNodePoolAutoscaling> getAutoscaling() {
+    public Output<AzureNodePoolAutoscaling> autoscaling() {
         return this.autoscaling;
     }
     /**
@@ -82,7 +83,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`.
      * 
      */
-    public Output<String> getAzureAvailabilityZone() {
+    public Output<String> azureAvailabilityZone() {
         return this.azureAvailabilityZone;
     }
     /**
@@ -96,7 +97,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return The azureCluster for the resource
      * 
      */
-    public Output<String> getCluster() {
+    public Output<String> cluster() {
         return this.cluster;
     }
     /**
@@ -110,7 +111,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. The node configuration of the node pool.
      * 
      */
-    public Output<AzureNodePoolConfig> getConfig() {
+    public Output<AzureNodePoolConfig> config() {
         return this.config;
     }
     /**
@@ -124,7 +125,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this node pool was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -140,7 +141,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -154,7 +155,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -168,7 +169,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
-    public Output<AzureNodePoolMaxPodsConstraint> getMaxPodsConstraint() {
+    public Output<AzureNodePoolMaxPodsConstraint> maxPodsConstraint() {
         return this.maxPodsConstraint;
     }
     /**
@@ -182,7 +183,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return The name of this resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -196,7 +197,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -210,7 +211,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Output only. If set, there are currently pending changes to the node pool.
      * 
      */
-    public Output<Boolean> getReconciling() {
+    public Output<Boolean> reconciling() {
         return this.reconciling;
     }
     /**
@@ -226,7 +227,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * STOPPING, ERROR, DEGRADED
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -240,7 +241,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. The ARM ID of the subnet where the node pool VMs run. Make sure it's a subnet under the virtual network in the cluster configuration.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -254,7 +255,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Output only. A globally unique identifier for the node pool.
      * 
      */
-    public Output<String> getUid() {
+    public Output<String> uid() {
         return this.uid;
     }
     /**
@@ -268,7 +269,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Output only. The time at which this node pool was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
     /**
@@ -282,7 +283,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @return Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -308,7 +309,7 @@ public class AzureNodePool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AzureNodePool(String name, AzureNodePoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/azureNodePool:AzureNodePool", name, args == null ? AzureNodePoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:container/azureNodePool:AzureNodePool", name, args == null ? AzureNodePoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AzureNodePool(String name, Output<String> id, @Nullable AzureNodePoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

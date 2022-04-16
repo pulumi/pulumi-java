@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.CookieExpirationConvention;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="convention")
       private final @Nullable Output<CookieExpirationConvention> convention;
 
-    public Output<CookieExpirationConvention> getConvention() {
-        return this.convention == null ? Output.empty() : this.convention;
+    public Output<CookieExpirationConvention> convention() {
+        return this.convention == null ? Codegen.empty() : this.convention;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="timeToExpiration")
       private final @Nullable Output<String> timeToExpiration;
 
-    public Output<String> getTimeToExpiration() {
-        return this.timeToExpiration == null ? Output.empty() : this.timeToExpiration;
+    public Output<String> timeToExpiration() {
+        return this.timeToExpiration == null ? Codegen.empty() : this.timeToExpiration;
     }
 
     public CookieExpirationArgs(
@@ -49,8 +50,8 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CookieExpirationArgs() {
-        this.convention = Output.empty();
-        this.timeToExpiration = Output.empty();
+        this.convention = Codegen.empty();
+        this.timeToExpiration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder convention(@Nullable CookieExpirationConvention convention) {
-            this.convention = Output.ofNullable(convention);
+            this.convention = Codegen.ofNullable(convention);
             return this;
         }
         public Builder timeToExpiration(@Nullable Output<String> timeToExpiration) {
@@ -88,7 +89,7 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder timeToExpiration(@Nullable String timeToExpiration) {
-            this.timeToExpiration = Output.ofNullable(timeToExpiration);
+            this.timeToExpiration = Codegen.ofNullable(timeToExpiration);
             return this;
         }        public CookieExpirationArgs build() {
             return new CookieExpirationArgs(convention, timeToExpiration);

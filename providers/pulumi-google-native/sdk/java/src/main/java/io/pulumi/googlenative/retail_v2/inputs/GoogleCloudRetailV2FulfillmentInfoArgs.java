@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRetailV2FulfillmentInfoArgs extends io.pulumi.reso
     @Import(name="placeIds")
       private final @Nullable Output<List<String>> placeIds;
 
-    public Output<List<String>> getPlaceIds() {
-        return this.placeIds == null ? Output.empty() : this.placeIds;
+    public Output<List<String>> placeIds() {
+        return this.placeIds == null ? Codegen.empty() : this.placeIds;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudRetailV2FulfillmentInfoArgs extends io.pulumi.reso
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GoogleCloudRetailV2FulfillmentInfoArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRetailV2FulfillmentInfoArgs extends io.pulumi.reso
     }
 
     private GoogleCloudRetailV2FulfillmentInfoArgs() {
-        this.placeIds = Output.empty();
-        this.type = Output.empty();
+        this.placeIds = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRetailV2FulfillmentInfoArgs extends io.pulumi.reso
             return this;
         }
         public Builder placeIds(@Nullable List<String> placeIds) {
-            this.placeIds = Output.ofNullable(placeIds);
+            this.placeIds = Codegen.ofNullable(placeIds);
             return this;
         }
         public Builder placeIds(String... placeIds) {
@@ -91,7 +92,7 @@ public final class GoogleCloudRetailV2FulfillmentInfoArgs extends io.pulumi.reso
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GoogleCloudRetailV2FulfillmentInfoArgs build() {
             return new GoogleCloudRetailV2FulfillmentInfoArgs(placeIds, type);

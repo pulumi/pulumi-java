@@ -15,7 +15,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="environmentIdentifier", required=true)
       private final String environmentIdentifier;
 
-    public String getEnvironmentIdentifier() {
+    public String environmentIdentifier() {
         return this.environmentIdentifier;
     }
 

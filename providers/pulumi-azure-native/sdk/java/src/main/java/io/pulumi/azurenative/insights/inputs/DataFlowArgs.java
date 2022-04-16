@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.enums.KnownDataFlowStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
-        return this.destinations == null ? Output.empty() : this.destinations;
+    public Output<List<String>> destinations() {
+        return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownDataFlowStreams>>> streams;
 
-    public Output<List<Either<String,KnownDataFlowStreams>>> getStreams() {
-        return this.streams == null ? Output.empty() : this.streams;
+    public Output<List<Either<String,KnownDataFlowStreams>>> streams() {
+        return this.streams == null ? Codegen.empty() : this.streams;
     }
 
     public DataFlowArgs(
@@ -51,8 +52,8 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataFlowArgs() {
-        this.destinations = Output.empty();
-        this.streams = Output.empty();
+        this.destinations = Codegen.empty();
+        this.streams = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Output.ofNullable(destinations);
+            this.destinations = Codegen.ofNullable(destinations);
             return this;
         }
         public Builder destinations(String... destinations) {
@@ -93,7 +94,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streams(@Nullable List<Either<String,KnownDataFlowStreams>> streams) {
-            this.streams = Output.ofNullable(streams);
+            this.streams = Codegen.ofNullable(streams);
             return this;
         }
         public Builder streams(Either<String,KnownDataFlowStreams>... streams) {

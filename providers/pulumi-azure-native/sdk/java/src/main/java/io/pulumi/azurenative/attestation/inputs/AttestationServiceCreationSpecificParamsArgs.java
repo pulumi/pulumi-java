@@ -6,6 +6,7 @@ package io.pulumi.azurenative.attestation.inputs;
 import io.pulumi.azurenative.attestation.inputs.JSONWebKeySetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
     @Import(name="policySigningCertificates")
       private final @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
 
-    public Output<JSONWebKeySetArgs> getPolicySigningCertificates() {
-        return this.policySigningCertificates == null ? Output.empty() : this.policySigningCertificates;
+    public Output<JSONWebKeySetArgs> policySigningCertificates() {
+        return this.policySigningCertificates == null ? Codegen.empty() : this.policySigningCertificates;
     }
 
     public AttestationServiceCreationSpecificParamsArgs(@Nullable Output<JSONWebKeySetArgs> policySigningCertificates) {
@@ -34,7 +35,7 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
     }
 
     private AttestationServiceCreationSpecificParamsArgs() {
-        this.policySigningCertificates = Output.empty();
+        this.policySigningCertificates = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
             return this;
         }
         public Builder policySigningCertificates(@Nullable JSONWebKeySetArgs policySigningCertificates) {
-            this.policySigningCertificates = Output.ofNullable(policySigningCertificates);
+            this.policySigningCertificates = Codegen.ofNullable(policySigningCertificates);
             return this;
         }        public AttestationServiceCreationSpecificParamsArgs build() {
             return new AttestationServiceCreationSpecificParamsArgs(policySigningCertificates);

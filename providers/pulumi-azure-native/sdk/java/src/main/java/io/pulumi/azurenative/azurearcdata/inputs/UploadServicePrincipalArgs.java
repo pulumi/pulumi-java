@@ -5,6 +5,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     @Import(name="authority")
       private final @Nullable Output<String> authority;
 
-    public Output<String> getAuthority() {
-        return this.authority == null ? Output.empty() : this.authority;
+    public Output<String> authority() {
+        return this.authority == null ? Codegen.empty() : this.authority;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<String> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public UploadServicePrincipalArgs(
@@ -74,10 +75,10 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     }
 
     private UploadServicePrincipalArgs() {
-        this.authority = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.tenantId = Output.empty();
+        this.authority = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder authority(@Nullable String authority) {
-            this.authority = Output.ofNullable(authority);
+            this.authority = Codegen.ofNullable(authority);
             return this;
         }
         public Builder clientId(@Nullable Output<String> clientId) {
@@ -119,7 +120,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -127,7 +128,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -135,7 +136,7 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public UploadServicePrincipalArgs build() {
             return new UploadServicePrincipalArgs(authority, clientId, clientSecret, tenantId);

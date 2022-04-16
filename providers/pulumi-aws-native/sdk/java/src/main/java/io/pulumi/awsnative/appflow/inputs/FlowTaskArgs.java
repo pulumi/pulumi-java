@@ -8,6 +8,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowConnectorOperatorArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTaskPropertiesObjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectorOperator")
       private final @Nullable Output<FlowConnectorOperatorArgs> connectorOperator;
 
-    public Output<FlowConnectorOperatorArgs> getConnectorOperator() {
-        return this.connectorOperator == null ? Output.empty() : this.connectorOperator;
+    public Output<FlowConnectorOperatorArgs> connectorOperator() {
+        return this.connectorOperator == null ? Codegen.empty() : this.connectorOperator;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destinationField")
       private final @Nullable Output<String> destinationField;
 
-    public Output<String> getDestinationField() {
-        return this.destinationField == null ? Output.empty() : this.destinationField;
+    public Output<String> destinationField() {
+        return this.destinationField == null ? Codegen.empty() : this.destinationField;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceFields", required=true)
       private final Output<List<String>> sourceFields;
 
-    public Output<List<String>> getSourceFields() {
+    public Output<List<String>> sourceFields() {
         return this.sourceFields;
     }
 
@@ -58,8 +59,8 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskProperties")
       private final @Nullable Output<List<FlowTaskPropertiesObjectArgs>> taskProperties;
 
-    public Output<List<FlowTaskPropertiesObjectArgs>> getTaskProperties() {
-        return this.taskProperties == null ? Output.empty() : this.taskProperties;
+    public Output<List<FlowTaskPropertiesObjectArgs>> taskProperties() {
+        return this.taskProperties == null ? Codegen.empty() : this.taskProperties;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskType", required=true)
       private final Output<FlowTaskType> taskType;
 
-    public Output<FlowTaskType> getTaskType() {
+    public Output<FlowTaskType> taskType() {
         return this.taskType;
     }
 
@@ -87,11 +88,11 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowTaskArgs() {
-        this.connectorOperator = Output.empty();
-        this.destinationField = Output.empty();
-        this.sourceFields = Output.empty();
-        this.taskProperties = Output.empty();
-        this.taskType = Output.empty();
+        this.connectorOperator = Codegen.empty();
+        this.destinationField = Codegen.empty();
+        this.sourceFields = Codegen.empty();
+        this.taskProperties = Codegen.empty();
+        this.taskType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectorOperator(@Nullable FlowConnectorOperatorArgs connectorOperator) {
-            this.connectorOperator = Output.ofNullable(connectorOperator);
+            this.connectorOperator = Codegen.ofNullable(connectorOperator);
             return this;
         }
         public Builder destinationField(@Nullable Output<String> destinationField) {
@@ -135,7 +136,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationField(@Nullable String destinationField) {
-            this.destinationField = Output.ofNullable(destinationField);
+            this.destinationField = Codegen.ofNullable(destinationField);
             return this;
         }
         public Builder sourceFields(Output<List<String>> sourceFields) {
@@ -154,7 +155,7 @@ public final class FlowTaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskProperties(@Nullable List<FlowTaskPropertiesObjectArgs> taskProperties) {
-            this.taskProperties = Output.ofNullable(taskProperties);
+            this.taskProperties = Codegen.ofNullable(taskProperties);
             return this;
         }
         public Builder taskProperties(FlowTaskPropertiesObjectArgs... taskProperties) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.billingbudgets_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.billingbudgets_v1.BudgetArgs;
 import io.pulumi.googlenative.billingbudgets_v1.outputs.GoogleCloudBillingBudgetsV1BudgetAmountResponse;
@@ -34,7 +35,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Budgeted amount.
      * 
      */
-    public Output<GoogleCloudBillingBudgetsV1BudgetAmountResponse> getAmount() {
+    public Output<GoogleCloudBillingBudgetsV1BudgetAmountResponse> amount() {
         return this.amount;
     }
     /**
@@ -48,7 +49,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.
      * 
      */
-    public Output<GoogleCloudBillingBudgetsV1FilterResponse> getBudgetFilter() {
+    public Output<GoogleCloudBillingBudgetsV1FilterResponse> budgetFilter() {
         return this.budgetFilter;
     }
     /**
@@ -62,7 +63,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return User data for display name in UI. The name must be less than or equal to 60 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -76,7 +77,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag causes an update to overwrite other changes.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -90,7 +91,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Resource name of the budget. The resource name implies the scope of a budget. Values are of the form `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +105,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Optional. Rules to apply to notifications sent based on budget spend and thresholds.
      * 
      */
-    public Output<GoogleCloudBillingBudgetsV1NotificationsRuleResponse> getNotificationsRule() {
+    public Output<GoogleCloudBillingBudgetsV1NotificationsRuleResponse> notificationsRule() {
         return this.notificationsRule;
     }
     /**
@@ -118,7 +119,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @return Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget. Optional for `pubsubTopic` notifications. Required if using email notifications.
      * 
      */
-    public Output<List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse>> getThresholdRules() {
+    public Output<List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse>> thresholdRules() {
         return this.thresholdRules;
     }
 
@@ -144,7 +145,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Budget(String name, BudgetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:billingbudgets/v1:Budget", name, args == null ? BudgetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:billingbudgets/v1:Budget", name, args == null ? BudgetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Budget(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

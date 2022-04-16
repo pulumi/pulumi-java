@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
     @Import(name="networkManagerConnectionName")
       private final @Nullable Output<String> networkManagerConnectionName;
 
-    public Output<String> getNetworkManagerConnectionName() {
-        return this.networkManagerConnectionName == null ? Output.empty() : this.networkManagerConnectionName;
+    public Output<String> networkManagerConnectionName() {
+        return this.networkManagerConnectionName == null ? Codegen.empty() : this.networkManagerConnectionName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
     @Import(name="networkManagerId")
       private final @Nullable Output<String> networkManagerId;
 
-    public Output<String> getNetworkManagerId() {
-        return this.networkManagerId == null ? Output.empty() : this.networkManagerId;
+    public Output<String> networkManagerId() {
+        return this.networkManagerId == null ? Codegen.empty() : this.networkManagerId;
     }
 
     public SubscriptionNetworkManagerConnectionArgs(
@@ -57,9 +58,9 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
     }
 
     private SubscriptionNetworkManagerConnectionArgs() {
-        this.description = Output.empty();
-        this.networkManagerConnectionName = Output.empty();
-        this.networkManagerId = Output.empty();
+        this.description = Codegen.empty();
+        this.networkManagerConnectionName = Codegen.empty();
+        this.networkManagerId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder networkManagerConnectionName(@Nullable Output<String> networkManagerConnectionName) {
@@ -99,7 +100,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
             return this;
         }
         public Builder networkManagerConnectionName(@Nullable String networkManagerConnectionName) {
-            this.networkManagerConnectionName = Output.ofNullable(networkManagerConnectionName);
+            this.networkManagerConnectionName = Codegen.ofNullable(networkManagerConnectionName);
             return this;
         }
         public Builder networkManagerId(@Nullable Output<String> networkManagerId) {
@@ -107,7 +108,7 @@ public final class SubscriptionNetworkManagerConnectionArgs extends io.pulumi.re
             return this;
         }
         public Builder networkManagerId(@Nullable String networkManagerId) {
-            this.networkManagerId = Output.ofNullable(networkManagerId);
+            this.networkManagerId = Codegen.ofNullable(networkManagerId);
             return this;
         }        public SubscriptionNetworkManagerConnectionArgs build() {
             return new SubscriptionNetworkManagerConnectionArgs(description, networkManagerConnectionName, networkManagerId);

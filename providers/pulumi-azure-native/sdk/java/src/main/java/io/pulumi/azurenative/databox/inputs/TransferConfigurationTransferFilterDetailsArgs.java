@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.TransferFilterDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
     @Import(name="include")
       private final @Nullable Output<TransferFilterDetailsArgs> include;
 
-    public Output<TransferFilterDetailsArgs> getInclude() {
-        return this.include == null ? Output.empty() : this.include;
+    public Output<TransferFilterDetailsArgs> include() {
+        return this.include == null ? Codegen.empty() : this.include;
     }
 
     public TransferConfigurationTransferFilterDetailsArgs(@Nullable Output<TransferFilterDetailsArgs> include) {
@@ -34,7 +35,7 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
     }
 
     private TransferConfigurationTransferFilterDetailsArgs() {
-        this.include = Output.empty();
+        this.include = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class TransferConfigurationTransferFilterDetailsArgs extends io.pul
             return this;
         }
         public Builder include(@Nullable TransferFilterDetailsArgs include) {
-            this.include = Output.ofNullable(include);
+            this.include = Codegen.ofNullable(include);
             return this;
         }        public TransferConfigurationTransferFilterDetailsArgs build() {
             return new TransferConfigurationTransferFilterDetailsArgs(include);

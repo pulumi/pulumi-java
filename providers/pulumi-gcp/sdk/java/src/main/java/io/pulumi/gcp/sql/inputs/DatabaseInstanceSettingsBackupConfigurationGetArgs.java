@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,8 +25,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     @Import(name="backupRetentionSettings")
       private final @Nullable Output<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> backupRetentionSettings;
 
-    public Output<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> getBackupRetentionSettings() {
-        return this.backupRetentionSettings == null ? Output.empty() : this.backupRetentionSettings;
+    public Output<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> backupRetentionSettings() {
+        return this.backupRetentionSettings == null ? Codegen.empty() : this.backupRetentionSettings;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     @Import(name="binaryLogEnabled")
       private final @Nullable Output<Boolean> binaryLogEnabled;
 
-    public Output<Boolean> getBinaryLogEnabled() {
-        return this.binaryLogEnabled == null ? Output.empty() : this.binaryLogEnabled;
+    public Output<Boolean> binaryLogEnabled() {
+        return this.binaryLogEnabled == null ? Codegen.empty() : this.binaryLogEnabled;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
-    public Output<Boolean> getPointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Output.empty() : this.pointInTimeRecoveryEnabled;
+    public Output<Boolean> pointInTimeRecoveryEnabled() {
+        return this.pointInTimeRecoveryEnabled == null ? Codegen.empty() : this.pointInTimeRecoveryEnabled;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     @Import(name="transactionLogRetentionDays")
       private final @Nullable Output<Integer> transactionLogRetentionDays;
 
-    public Output<Integer> getTransactionLogRetentionDays() {
-        return this.transactionLogRetentionDays == null ? Output.empty() : this.transactionLogRetentionDays;
+    public Output<Integer> transactionLogRetentionDays() {
+        return this.transactionLogRetentionDays == null ? Codegen.empty() : this.transactionLogRetentionDays;
     }
 
     public DatabaseInstanceSettingsBackupConfigurationGetArgs(
@@ -114,13 +115,13 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     }
 
     private DatabaseInstanceSettingsBackupConfigurationGetArgs() {
-        this.backupRetentionSettings = Output.empty();
-        this.binaryLogEnabled = Output.empty();
-        this.enabled = Output.empty();
-        this.location = Output.empty();
-        this.pointInTimeRecoveryEnabled = Output.empty();
-        this.startTime = Output.empty();
-        this.transactionLogRetentionDays = Output.empty();
+        this.backupRetentionSettings = Codegen.empty();
+        this.binaryLogEnabled = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.pointInTimeRecoveryEnabled = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.transactionLogRetentionDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
             return this;
         }
         public Builder backupRetentionSettings(@Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs backupRetentionSettings) {
-            this.backupRetentionSettings = Output.ofNullable(backupRetentionSettings);
+            this.backupRetentionSettings = Codegen.ofNullable(backupRetentionSettings);
             return this;
         }
         public Builder binaryLogEnabled(@Nullable Output<Boolean> binaryLogEnabled) {
@@ -168,7 +169,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
             return this;
         }
         public Builder binaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
-            this.binaryLogEnabled = Output.ofNullable(binaryLogEnabled);
+            this.binaryLogEnabled = Codegen.ofNullable(binaryLogEnabled);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -176,7 +177,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -184,7 +185,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder pointInTimeRecoveryEnabled(@Nullable Output<Boolean> pointInTimeRecoveryEnabled) {
@@ -192,7 +193,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
             return this;
         }
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = Output.ofNullable(pointInTimeRecoveryEnabled);
+            this.pointInTimeRecoveryEnabled = Codegen.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -200,7 +201,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder transactionLogRetentionDays(@Nullable Output<Integer> transactionLogRetentionDays) {
@@ -208,7 +209,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
             return this;
         }
         public Builder transactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
-            this.transactionLogRetentionDays = Output.ofNullable(transactionLogRetentionDays);
+            this.transactionLogRetentionDays = Codegen.ofNullable(transactionLogRetentionDays);
             return this;
         }        public DatabaseInstanceSettingsBackupConfigurationGetArgs build() {
             return new DatabaseInstanceSettingsBackupConfigurationGetArgs(backupRetentionSettings, binaryLogEnabled, enabled, location, pointInTimeRecoveryEnabled, startTime, transactionLogRetentionDays);

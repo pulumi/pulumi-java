@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
-    public Output<String> getCertificateName() {
-        return this.certificateName == null ? Output.empty() : this.certificateName;
+    public Output<String> certificateName() {
+        return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
-    public Output<String> getManagedInstanceName() {
+    public Output<String> managedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -43,8 +44,8 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     @Import(name="publicBlob")
       private final @Nullable Output<String> publicBlob;
 
-    public Output<String> getPublicBlob() {
-        return this.publicBlob == null ? Output.empty() : this.publicBlob;
+    public Output<String> publicBlob() {
+        return this.publicBlob == null ? Codegen.empty() : this.publicBlob;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -70,10 +71,10 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     }
 
     private ServerTrustCertificateArgs() {
-        this.certificateName = Output.empty();
-        this.managedInstanceName = Output.empty();
-        this.publicBlob = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.certificateName = Codegen.empty();
+        this.managedInstanceName = Codegen.empty();
+        this.publicBlob = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Output.ofNullable(certificateName);
+            this.certificateName = Codegen.ofNullable(certificateName);
             return this;
         }
         public Builder managedInstanceName(Output<String> managedInstanceName) {
@@ -123,7 +124,7 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder publicBlob(@Nullable String publicBlob) {
-            this.publicBlob = Output.ofNullable(publicBlob);
+            this.publicBlob = Codegen.ofNullable(publicBlob);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

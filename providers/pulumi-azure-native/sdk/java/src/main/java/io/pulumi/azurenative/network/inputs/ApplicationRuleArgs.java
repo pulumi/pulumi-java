@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyRuleApplicationProtocolArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="destinationAddresses")
       private final @Nullable Output<List<String>> destinationAddresses;
 
-    public Output<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
+    public Output<List<String>> destinationAddresses() {
+        return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="fqdnTags")
       private final @Nullable Output<List<String>> fqdnTags;
 
-    public Output<List<String>> getFqdnTags() {
-        return this.fqdnTags == null ? Output.empty() : this.fqdnTags;
+    public Output<List<String>> fqdnTags() {
+        return this.fqdnTags == null ? Codegen.empty() : this.fqdnTags;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="protocols")
       private final @Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols;
 
-    public Output<List<FirewallPolicyRuleApplicationProtocolArgs>> getProtocols() {
-        return this.protocols == null ? Output.empty() : this.protocols;
+    public Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols() {
+        return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
-    public Output<String> getRuleType() {
+    public Output<String> ruleType() {
         return this.ruleType;
     }
 
@@ -95,8 +96,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceAddresses")
       private final @Nullable Output<List<String>> sourceAddresses;
 
-    public Output<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
+    public Output<List<String>> sourceAddresses() {
+        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="sourceIpGroups")
       private final @Nullable Output<List<String>> sourceIpGroups;
 
-    public Output<List<String>> getSourceIpGroups() {
-        return this.sourceIpGroups == null ? Output.empty() : this.sourceIpGroups;
+    public Output<List<String>> sourceIpGroups() {
+        return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetFqdns")
       private final @Nullable Output<List<String>> targetFqdns;
 
-    public Output<List<String>> getTargetFqdns() {
-        return this.targetFqdns == null ? Output.empty() : this.targetFqdns;
+    public Output<List<String>> targetFqdns() {
+        return this.targetFqdns == null ? Codegen.empty() : this.targetFqdns;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="targetUrls")
       private final @Nullable Output<List<String>> targetUrls;
 
-    public Output<List<String>> getTargetUrls() {
-        return this.targetUrls == null ? Output.empty() : this.targetUrls;
+    public Output<List<String>> targetUrls() {
+        return this.targetUrls == null ? Codegen.empty() : this.targetUrls;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="terminateTLS")
       private final @Nullable Output<Boolean> terminateTLS;
 
-    public Output<Boolean> getTerminateTLS() {
-        return this.terminateTLS == null ? Output.empty() : this.terminateTLS;
+    public Output<Boolean> terminateTLS() {
+        return this.terminateTLS == null ? Codegen.empty() : this.terminateTLS;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="webCategories")
       private final @Nullable Output<List<String>> webCategories;
 
-    public Output<List<String>> getWebCategories() {
-        return this.webCategories == null ? Output.empty() : this.webCategories;
+    public Output<List<String>> webCategories() {
+        return this.webCategories == null ? Codegen.empty() : this.webCategories;
     }
 
     public ApplicationRuleArgs(
@@ -182,18 +183,18 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ApplicationRuleArgs() {
-        this.description = Output.empty();
-        this.destinationAddresses = Output.empty();
-        this.fqdnTags = Output.empty();
-        this.name = Output.empty();
-        this.protocols = Output.empty();
-        this.ruleType = Output.empty();
-        this.sourceAddresses = Output.empty();
-        this.sourceIpGroups = Output.empty();
-        this.targetFqdns = Output.empty();
-        this.targetUrls = Output.empty();
-        this.terminateTLS = Output.empty();
-        this.webCategories = Output.empty();
+        this.description = Codegen.empty();
+        this.destinationAddresses = Codegen.empty();
+        this.fqdnTags = Codegen.empty();
+        this.name = Codegen.empty();
+        this.protocols = Codegen.empty();
+        this.ruleType = Codegen.empty();
+        this.sourceAddresses = Codegen.empty();
+        this.sourceIpGroups = Codegen.empty();
+        this.targetFqdns = Codegen.empty();
+        this.targetUrls = Codegen.empty();
+        this.terminateTLS = Codegen.empty();
+        this.webCategories = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
@@ -251,7 +252,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Output.ofNullable(destinationAddresses);
+            this.destinationAddresses = Codegen.ofNullable(destinationAddresses);
             return this;
         }
         public Builder destinationAddresses(String... destinationAddresses) {
@@ -262,7 +263,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fqdnTags(@Nullable List<String> fqdnTags) {
-            this.fqdnTags = Output.ofNullable(fqdnTags);
+            this.fqdnTags = Codegen.ofNullable(fqdnTags);
             return this;
         }
         public Builder fqdnTags(String... fqdnTags) {
@@ -273,7 +274,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder protocols(@Nullable Output<List<FirewallPolicyRuleApplicationProtocolArgs>> protocols) {
@@ -281,7 +282,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder protocols(@Nullable List<FirewallPolicyRuleApplicationProtocolArgs> protocols) {
-            this.protocols = Output.ofNullable(protocols);
+            this.protocols = Codegen.ofNullable(protocols);
             return this;
         }
         public Builder protocols(FirewallPolicyRuleApplicationProtocolArgs... protocols) {
@@ -300,7 +301,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Output.ofNullable(sourceAddresses);
+            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
             return this;
         }
         public Builder sourceAddresses(String... sourceAddresses) {
@@ -311,7 +312,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
+            this.sourceIpGroups = Codegen.ofNullable(sourceIpGroups);
             return this;
         }
         public Builder sourceIpGroups(String... sourceIpGroups) {
@@ -322,7 +323,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetFqdns(@Nullable List<String> targetFqdns) {
-            this.targetFqdns = Output.ofNullable(targetFqdns);
+            this.targetFqdns = Codegen.ofNullable(targetFqdns);
             return this;
         }
         public Builder targetFqdns(String... targetFqdns) {
@@ -333,7 +334,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetUrls(@Nullable List<String> targetUrls) {
-            this.targetUrls = Output.ofNullable(targetUrls);
+            this.targetUrls = Codegen.ofNullable(targetUrls);
             return this;
         }
         public Builder targetUrls(String... targetUrls) {
@@ -344,7 +345,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder terminateTLS(@Nullable Boolean terminateTLS) {
-            this.terminateTLS = Output.ofNullable(terminateTLS);
+            this.terminateTLS = Codegen.ofNullable(terminateTLS);
             return this;
         }
         public Builder webCategories(@Nullable Output<List<String>> webCategories) {
@@ -352,7 +353,7 @@ public final class ApplicationRuleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder webCategories(@Nullable List<String> webCategories) {
-            this.webCategories = Output.ofNullable(webCategories);
+            this.webCategories = Codegen.ofNullable(webCategories);
             return this;
         }
         public Builder webCategories(String... webCategories) {

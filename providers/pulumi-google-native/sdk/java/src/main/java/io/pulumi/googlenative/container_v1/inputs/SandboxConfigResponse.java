@@ -23,7 +23,7 @@ public final class SandboxConfigResponse extends io.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

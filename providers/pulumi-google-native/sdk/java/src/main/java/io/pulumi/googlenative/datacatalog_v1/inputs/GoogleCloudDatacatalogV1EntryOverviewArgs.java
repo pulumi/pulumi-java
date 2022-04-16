@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
     @Import(name="overview")
       private final @Nullable Output<String> overview;
 
-    public Output<String> getOverview() {
-        return this.overview == null ? Output.empty() : this.overview;
+    public Output<String> overview() {
+        return this.overview == null ? Codegen.empty() : this.overview;
     }
 
     public GoogleCloudDatacatalogV1EntryOverviewArgs(@Nullable Output<String> overview) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
     }
 
     private GoogleCloudDatacatalogV1EntryOverviewArgs() {
-        this.overview = Output.empty();
+        this.overview = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends io.pulumi.r
             return this;
         }
         public Builder overview(@Nullable String overview) {
-            this.overview = Output.ofNullable(overview);
+            this.overview = Codegen.ofNullable(overview);
             return this;
         }        public GoogleCloudDatacatalogV1EntryOverviewArgs build() {
             return new GoogleCloudDatacatalogV1EntryOverviewArgs(overview);

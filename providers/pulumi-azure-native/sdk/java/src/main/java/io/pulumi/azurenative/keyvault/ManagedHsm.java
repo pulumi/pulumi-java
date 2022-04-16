@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -59,7 +60,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return The name of the managed HSM Pool.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +74,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return Properties of the managed HSM
      * 
      */
-    public Output<ManagedHsmPropertiesResponse> getProperties() {
+    public Output<ManagedHsmPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -87,7 +88,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return SKU details
      * 
      */
-    public Output</* @Nullable */ ManagedHsmSkuResponse> getSku() {
+    public Output</* @Nullable */ ManagedHsmSkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -101,7 +102,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the key vault resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -115,7 +116,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -129,7 +130,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @return The resource type of the managed HSM Pool.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -155,7 +156,7 @@ public class ManagedHsm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedHsm(String name, ManagedHsmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:keyvault:ManagedHsm", name, args == null ? ManagedHsmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:keyvault:ManagedHsm", name, args == null ? ManagedHsmArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedHsm(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -112,84 +112,84 @@ public final class VirtualMachineScaleSetVMProfileResponse {
      * Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.
      * 
     */
-    public Optional<BillingProfileResponse> getBillingProfile() {
+    public Optional<BillingProfileResponse> billingProfile() {
         return Optional.ofNullable(this.billingProfile);
     }
     /**
      * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
      * 
     */
-    public Optional<DiagnosticsProfileResponse> getDiagnosticsProfile() {
+    public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
         return Optional.ofNullable(this.diagnosticsProfile);
     }
     /**
      * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
      * 
     */
-    public Optional<String> getEvictionPolicy() {
+    public Optional<String> evictionPolicy() {
         return Optional.ofNullable(this.evictionPolicy);
     }
     /**
      * Specifies a collection of settings for extensions installed on virtual machines in the scale set.
      * 
     */
-    public Optional<VirtualMachineScaleSetExtensionProfileResponse> getExtensionProfile() {
+    public Optional<VirtualMachineScaleSetExtensionProfileResponse> extensionProfile() {
         return Optional.ofNullable(this.extensionProfile);
     }
     /**
      * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
      * 
     */
-    public Optional<String> getLicenseType() {
+    public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
      * Specifies properties of the network interfaces of the virtual machines in the scale set.
      * 
     */
-    public Optional<VirtualMachineScaleSetNetworkProfileResponse> getNetworkProfile() {
+    public Optional<VirtualMachineScaleSetNetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
      * Specifies the operating system settings for the virtual machines in the scale set.
      * 
     */
-    public Optional<VirtualMachineScaleSetOSProfileResponse> getOsProfile() {
+    public Optional<VirtualMachineScaleSetOSProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
      * Specifies the priority for the virtual machines in the scale set. <br><br>Minimum api-version: 2017-10-30-preview
      * 
     */
-    public Optional<String> getPriority() {
+    public Optional<String> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
      * Specifies Scheduled Event related configurations.
      * 
     */
-    public Optional<ScheduledEventsProfileResponse> getScheduledEventsProfile() {
+    public Optional<ScheduledEventsProfileResponse> scheduledEventsProfile() {
         return Optional.ofNullable(this.scheduledEventsProfile);
     }
     /**
      * Specifies the Security related profile settings for the virtual machines in the scale set.
      * 
     */
-    public Optional<SecurityProfileResponse> getSecurityProfile() {
+    public Optional<SecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
     /**
      * Specifies the storage settings for the virtual machine disks.
      * 
     */
-    public Optional<VirtualMachineScaleSetStorageProfileResponse> getStorageProfile() {
+    public Optional<VirtualMachineScaleSetStorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
      * UserData for the virtual machines in the scale set, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
      * 
     */
-    public Optional<String> getUserData() {
+    public Optional<String> userData() {
         return Optional.ofNullable(this.userData);
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
     @Import(name="diskSignature")
       private final @Nullable Output<String> diskSignature;
 
-    public Output<String> getDiskSignature() {
-        return this.diskSignature == null ? Output.empty() : this.diskSignature;
+    public Output<String> diskSignature() {
+        return this.diskSignature == null ? Codegen.empty() : this.diskSignature;
     }
 
     public InMageDiskSignatureExclusionOptionsArgs(@Nullable Output<String> diskSignature) {
@@ -34,7 +35,7 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
     }
 
     private InMageDiskSignatureExclusionOptionsArgs() {
-        this.diskSignature = Output.empty();
+        this.diskSignature = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
             return this;
         }
         public Builder diskSignature(@Nullable String diskSignature) {
-            this.diskSignature = Output.ofNullable(diskSignature);
+            this.diskSignature = Codegen.ofNullable(diskSignature);
             return this;
         }        public InMageDiskSignatureExclusionOptionsArgs build() {
             return new InMageDiskSignatureExclusionOptionsArgs(diskSignature);

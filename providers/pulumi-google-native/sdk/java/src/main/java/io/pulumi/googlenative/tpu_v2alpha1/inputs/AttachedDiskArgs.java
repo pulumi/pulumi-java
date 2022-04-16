@@ -5,6 +5,7 @@ package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.tpu_v2alpha1.enums.AttachedDiskMode;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<AttachedDiskMode> mode;
 
-    public Output<AttachedDiskMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<AttachedDiskMode> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
-    public Output<String> getSourceDisk() {
-        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
+    public Output<String> sourceDisk() {
+        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
     public AttachedDiskArgs(
@@ -49,8 +50,8 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttachedDiskArgs() {
-        this.mode = Output.empty();
-        this.sourceDisk = Output.empty();
+        this.mode = Codegen.empty();
+        this.sourceDisk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable AttachedDiskMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
@@ -88,7 +89,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Output.ofNullable(sourceDisk);
+            this.sourceDisk = Codegen.ofNullable(sourceDisk);
             return this;
         }        public AttachedDiskArgs build() {
             return new AttachedDiskArgs(mode, sourceDisk);

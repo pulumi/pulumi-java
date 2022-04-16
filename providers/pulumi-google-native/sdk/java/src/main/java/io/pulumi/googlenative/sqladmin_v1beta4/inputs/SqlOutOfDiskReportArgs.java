@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.SqlOutOfDiskReportSqlOutOfDiskState;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sqlMinRecommendedIncreaseSizeGb")
       private final @Nullable Output<Integer> sqlMinRecommendedIncreaseSizeGb;
 
-    public Output<Integer> getSqlMinRecommendedIncreaseSizeGb() {
-        return this.sqlMinRecommendedIncreaseSizeGb == null ? Output.empty() : this.sqlMinRecommendedIncreaseSizeGb;
+    public Output<Integer> sqlMinRecommendedIncreaseSizeGb() {
+        return this.sqlMinRecommendedIncreaseSizeGb == null ? Codegen.empty() : this.sqlMinRecommendedIncreaseSizeGb;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sqlOutOfDiskState")
       private final @Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState;
 
-    public Output<SqlOutOfDiskReportSqlOutOfDiskState> getSqlOutOfDiskState() {
-        return this.sqlOutOfDiskState == null ? Output.empty() : this.sqlOutOfDiskState;
+    public Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState() {
+        return this.sqlOutOfDiskState == null ? Codegen.empty() : this.sqlOutOfDiskState;
     }
 
     public SqlOutOfDiskReportArgs(
@@ -49,8 +50,8 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SqlOutOfDiskReportArgs() {
-        this.sqlMinRecommendedIncreaseSizeGb = Output.empty();
-        this.sqlOutOfDiskState = Output.empty();
+        this.sqlMinRecommendedIncreaseSizeGb = Codegen.empty();
+        this.sqlOutOfDiskState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sqlMinRecommendedIncreaseSizeGb(@Nullable Integer sqlMinRecommendedIncreaseSizeGb) {
-            this.sqlMinRecommendedIncreaseSizeGb = Output.ofNullable(sqlMinRecommendedIncreaseSizeGb);
+            this.sqlMinRecommendedIncreaseSizeGb = Codegen.ofNullable(sqlMinRecommendedIncreaseSizeGb);
             return this;
         }
         public Builder sqlOutOfDiskState(@Nullable Output<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState) {
@@ -88,7 +89,7 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sqlOutOfDiskState(@Nullable SqlOutOfDiskReportSqlOutOfDiskState sqlOutOfDiskState) {
-            this.sqlOutOfDiskState = Output.ofNullable(sqlOutOfDiskState);
+            this.sqlOutOfDiskState = Codegen.ofNullable(sqlOutOfDiskState);
             return this;
         }        public SqlOutOfDiskReportArgs build() {
             return new SqlOutOfDiskReportArgs(sqlMinRecommendedIncreaseSizeGb, sqlOutOfDiskState);

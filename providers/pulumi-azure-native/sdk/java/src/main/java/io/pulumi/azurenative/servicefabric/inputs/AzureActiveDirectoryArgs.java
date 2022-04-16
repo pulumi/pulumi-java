@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     @Import(name="clientApplication")
       private final @Nullable Output<String> clientApplication;
 
-    public Output<String> getClientApplication() {
-        return this.clientApplication == null ? Output.empty() : this.clientApplication;
+    public Output<String> clientApplication() {
+        return this.clientApplication == null ? Codegen.empty() : this.clientApplication;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     @Import(name="clusterApplication")
       private final @Nullable Output<String> clusterApplication;
 
-    public Output<String> getClusterApplication() {
-        return this.clusterApplication == null ? Output.empty() : this.clusterApplication;
+    public Output<String> clusterApplication() {
+        return this.clusterApplication == null ? Codegen.empty() : this.clusterApplication;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public AzureActiveDirectoryArgs(
@@ -61,9 +62,9 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
     }
 
     private AzureActiveDirectoryArgs() {
-        this.clientApplication = Output.empty();
-        this.clusterApplication = Output.empty();
-        this.tenantId = Output.empty();
+        this.clientApplication = Codegen.empty();
+        this.clusterApplication = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder clientApplication(@Nullable String clientApplication) {
-            this.clientApplication = Output.ofNullable(clientApplication);
+            this.clientApplication = Codegen.ofNullable(clientApplication);
             return this;
         }
         public Builder clusterApplication(@Nullable Output<String> clusterApplication) {
@@ -103,7 +104,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder clusterApplication(@Nullable String clusterApplication) {
-            this.clusterApplication = Output.ofNullable(clusterApplication);
+            this.clusterApplication = Codegen.ofNullable(clusterApplication);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -111,7 +112,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public AzureActiveDirectoryArgs build() {
             return new AzureActiveDirectoryArgs(clientApplication, clusterApplication, tenantId);

@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
     @Import(name="group")
       private final @Nullable Output<String> group;
 
-    public Output<String> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+    public Output<String> group() {
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
     @Import(name="policyArn")
       private final @Nullable Output<String> policyArn;
 
-    public Output<String> getPolicyArn() {
-        return this.policyArn == null ? Output.empty() : this.policyArn;
+    public Output<String> policyArn() {
+        return this.policyArn == null ? Codegen.empty() : this.policyArn;
     }
 
     public GroupPolicyAttachmentState(
@@ -44,8 +45,8 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
     }
 
     private GroupPolicyAttachmentState() {
-        this.group = Output.empty();
-        this.policyArn = Output.empty();
+        this.group = Codegen.empty();
+        this.policyArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GroupPolicyAttachmentState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder policyArn(@Nullable String policyArn) {
-            this.policyArn = Output.ofNullable(policyArn);
+            this.policyArn = Codegen.ofNullable(policyArn);
             return this;
         }        public GroupPolicyAttachmentState build() {
             return new GroupPolicyAttachmentState(group, policyArn);

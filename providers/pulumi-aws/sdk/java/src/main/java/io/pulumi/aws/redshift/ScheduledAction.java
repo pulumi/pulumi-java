@@ -10,6 +10,7 @@ import io.pulumi.aws.redshift.outputs.ScheduledActionTargetAction;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @return The description of the scheduled action.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -53,7 +54,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @return Whether to enable the scheduled action. Default is `true` .
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnable() {
+    public Output</* @Nullable */ Boolean> enable() {
         return this.enable;
     }
     /**
@@ -67,7 +68,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @return The end time in UTC when the schedule is active, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ).
      * 
      */
-    public Output</* @Nullable */ String> getEndTime() {
+    public Output</* @Nullable */ String> endTime() {
         return this.endTime;
     }
     /**
@@ -81,7 +82,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @return The IAM role to assume to run the scheduled action.
      * 
      */
-    public Output<String> getIamRole() {
+    public Output<String> iamRole() {
         return this.iamRole;
     }
     /**
@@ -95,7 +96,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @return The scheduled action name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -109,7 +110,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @return The schedule of action. The schedule is defined format of "at expression" or "cron expression", for example `at(2016-03-04T17:27:00)` or `cron(0 10 ? * MON *)`. See [Scheduled Action](https://docs.aws.amazon.com/redshift/latest/APIReference/API_ScheduledAction.html) for more information.
      * 
      */
-    public Output<String> getSchedule() {
+    public Output<String> schedule() {
         return this.schedule;
     }
     /**
@@ -123,7 +124,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @return The start time in UTC when the schedule is active, in UTC RFC3339 format(for example, YYYY-MM-DDTHH:MM:SSZ).
      * 
      */
-    public Output</* @Nullable */ String> getStartTime() {
+    public Output</* @Nullable */ String> startTime() {
         return this.startTime;
     }
     /**
@@ -137,7 +138,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @return Target action. Documented below.
      * 
      */
-    public Output<ScheduledActionTargetAction> getTargetAction() {
+    public Output<ScheduledActionTargetAction> targetAction() {
         return this.targetAction;
     }
 
@@ -163,7 +164,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ScheduledAction(String name, ScheduledActionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:redshift/scheduledAction:ScheduledAction", name, args == null ? ScheduledActionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:redshift/scheduledAction:ScheduledAction", name, args == null ? ScheduledActionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ScheduledAction(String name, Output<String> id, @Nullable ScheduledActionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

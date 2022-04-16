@@ -18,7 +18,7 @@ public final class ClusterConfiguration {
         this.executeCommandConfiguration = executeCommandConfiguration;
     }
 
-    public Optional<ClusterExecuteCommandConfiguration> getExecuteCommandConfiguration() {
+    public Optional<ClusterExecuteCommandConfiguration> executeCommandConfiguration() {
         return Optional.ofNullable(this.executeCommandConfiguration);
     }
 

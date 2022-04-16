@@ -7,6 +7,7 @@ import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionFormatVersi
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionPolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,15 +28,15 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
     @Import(name="arn", required=true)
       private final Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
 
     @Import(name="formatVersion")
       private final @Nullable Output<DataSetRowLevelPermissionFormatVersion> formatVersion;
 
-    public Output<DataSetRowLevelPermissionFormatVersion> getFormatVersion() {
-        return this.formatVersion == null ? Output.empty() : this.formatVersion;
+    public Output<DataSetRowLevelPermissionFormatVersion> formatVersion() {
+        return this.formatVersion == null ? Codegen.empty() : this.formatVersion;
     }
 
     /**
@@ -45,14 +46,14 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     @Import(name="permissionPolicy", required=true)
       private final Output<DataSetRowLevelPermissionPolicy> permissionPolicy;
 
-    public Output<DataSetRowLevelPermissionPolicy> getPermissionPolicy() {
+    public Output<DataSetRowLevelPermissionPolicy> permissionPolicy() {
         return this.permissionPolicy;
     }
 
@@ -68,10 +69,10 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
     }
 
     private DataSetRowLevelPermissionDataSetArgs() {
-        this.arn = Output.empty();
-        this.formatVersion = Output.empty();
-        this.namespace = Output.empty();
-        this.permissionPolicy = Output.empty();
+        this.arn = Codegen.empty();
+        this.formatVersion = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.permissionPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
             return this;
         }
         public Builder formatVersion(@Nullable DataSetRowLevelPermissionFormatVersion formatVersion) {
-            this.formatVersion = Output.ofNullable(formatVersion);
+            this.formatVersion = Codegen.ofNullable(formatVersion);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -121,7 +122,7 @@ public final class DataSetRowLevelPermissionDataSetArgs extends io.pulumi.resour
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder permissionPolicy(Output<DataSetRowLevelPermissionPolicy> permissionPolicy) {

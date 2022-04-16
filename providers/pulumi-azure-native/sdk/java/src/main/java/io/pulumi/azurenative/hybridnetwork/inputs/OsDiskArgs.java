@@ -8,6 +8,7 @@ import io.pulumi.azurenative.hybridnetwork.inputs.VirtualHardDiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+    public Output<Integer> diskSizeGB() {
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="osType")
       private final @Nullable Output<Either<String,OperatingSystemTypes>> osType;
 
-    public Output<Either<String,OperatingSystemTypes>> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+    public Output<Either<String,OperatingSystemTypes>> osType() {
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vhd")
       private final @Nullable Output<VirtualHardDiskArgs> vhd;
 
-    public Output<VirtualHardDiskArgs> getVhd() {
-        return this.vhd == null ? Output.empty() : this.vhd;
+    public Output<VirtualHardDiskArgs> vhd() {
+        return this.vhd == null ? Codegen.empty() : this.vhd;
     }
 
     public OsDiskArgs(
@@ -78,10 +79,10 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OsDiskArgs() {
-        this.diskSizeGB = Output.empty();
-        this.name = Output.empty();
-        this.osType = Output.empty();
-        this.vhd = Output.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.name = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.vhd = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -123,7 +124,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder osType(@Nullable Output<Either<String,OperatingSystemTypes>> osType) {
@@ -131,7 +132,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osType(@Nullable Either<String,OperatingSystemTypes> osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
@@ -139,7 +140,7 @@ public final class OsDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vhd(@Nullable VirtualHardDiskArgs vhd) {
-            this.vhd = Output.ofNullable(vhd);
+            this.vhd = Codegen.ofNullable(vhd);
             return this;
         }        public OsDiskArgs build() {
             return new OsDiskArgs(diskSizeGB, name, osType, vhd);

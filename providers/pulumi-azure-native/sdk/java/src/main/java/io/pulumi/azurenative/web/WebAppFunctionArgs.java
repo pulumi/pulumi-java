@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<Object> config;
 
-    public Output<Object> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<Object> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configHref")
       private final @Nullable Output<String> configHref;
 
-    public Output<String> getConfigHref() {
-        return this.configHref == null ? Output.empty() : this.configHref;
+    public Output<String> configHref() {
+        return this.configHref == null ? Codegen.empty() : this.configHref;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="files")
       private final @Nullable Output<Map<String,String>> files;
 
-    public Output<Map<String,String>> getFiles() {
-        return this.files == null ? Output.empty() : this.files;
+    public Output<Map<String,String>> files() {
+        return this.files == null ? Codegen.empty() : this.files;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionAppId")
       private final @Nullable Output<String> functionAppId;
 
-    public Output<String> getFunctionAppId() {
-        return this.functionAppId == null ? Output.empty() : this.functionAppId;
+    public Output<String> functionAppId() {
+        return this.functionAppId == null ? Codegen.empty() : this.functionAppId;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
-        return this.functionName == null ? Output.empty() : this.functionName;
+    public Output<String> functionName() {
+        return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="href")
       private final @Nullable Output<String> href;
 
-    public Output<String> getHref() {
-        return this.href == null ? Output.empty() : this.href;
+    public Output<String> href() {
+        return this.href == null ? Codegen.empty() : this.href;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="invokeUrlTemplate")
       private final @Nullable Output<String> invokeUrlTemplate;
 
-    public Output<String> getInvokeUrlTemplate() {
-        return this.invokeUrlTemplate == null ? Output.empty() : this.invokeUrlTemplate;
+    public Output<String> invokeUrlTemplate() {
+        return this.invokeUrlTemplate == null ? Codegen.empty() : this.invokeUrlTemplate;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isDisabled")
       private final @Nullable Output<Boolean> isDisabled;
 
-    public Output<Boolean> getIsDisabled() {
-        return this.isDisabled == null ? Output.empty() : this.isDisabled;
+    public Output<Boolean> isDisabled() {
+        return this.isDisabled == null ? Codegen.empty() : this.isDisabled;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="language")
       private final @Nullable Output<String> language;
 
-    public Output<String> getLanguage() {
-        return this.language == null ? Output.empty() : this.language;
+    public Output<String> language() {
+        return this.language == null ? Codegen.empty() : this.language;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -145,7 +146,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -156,8 +157,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptHref")
       private final @Nullable Output<String> scriptHref;
 
-    public Output<String> getScriptHref() {
-        return this.scriptHref == null ? Output.empty() : this.scriptHref;
+    public Output<String> scriptHref() {
+        return this.scriptHref == null ? Codegen.empty() : this.scriptHref;
     }
 
     /**
@@ -167,8 +168,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptRootPathHref")
       private final @Nullable Output<String> scriptRootPathHref;
 
-    public Output<String> getScriptRootPathHref() {
-        return this.scriptRootPathHref == null ? Output.empty() : this.scriptRootPathHref;
+    public Output<String> scriptRootPathHref() {
+        return this.scriptRootPathHref == null ? Codegen.empty() : this.scriptRootPathHref;
     }
 
     /**
@@ -178,8 +179,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretsFileHref")
       private final @Nullable Output<String> secretsFileHref;
 
-    public Output<String> getSecretsFileHref() {
-        return this.secretsFileHref == null ? Output.empty() : this.secretsFileHref;
+    public Output<String> secretsFileHref() {
+        return this.secretsFileHref == null ? Codegen.empty() : this.secretsFileHref;
     }
 
     /**
@@ -189,8 +190,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testData")
       private final @Nullable Output<String> testData;
 
-    public Output<String> getTestData() {
-        return this.testData == null ? Output.empty() : this.testData;
+    public Output<String> testData() {
+        return this.testData == null ? Codegen.empty() : this.testData;
     }
 
     /**
@@ -200,8 +201,8 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testDataHref")
       private final @Nullable Output<String> testDataHref;
 
-    public Output<String> getTestDataHref() {
-        return this.testDataHref == null ? Output.empty() : this.testDataHref;
+    public Output<String> testDataHref() {
+        return this.testDataHref == null ? Codegen.empty() : this.testDataHref;
     }
 
     public WebAppFunctionArgs(
@@ -242,23 +243,23 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAppFunctionArgs() {
-        this.config = Output.empty();
-        this.configHref = Output.empty();
-        this.files = Output.empty();
-        this.functionAppId = Output.empty();
-        this.functionName = Output.empty();
-        this.href = Output.empty();
-        this.invokeUrlTemplate = Output.empty();
-        this.isDisabled = Output.empty();
-        this.kind = Output.empty();
-        this.language = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scriptHref = Output.empty();
-        this.scriptRootPathHref = Output.empty();
-        this.secretsFileHref = Output.empty();
-        this.testData = Output.empty();
-        this.testDataHref = Output.empty();
+        this.config = Codegen.empty();
+        this.configHref = Codegen.empty();
+        this.files = Codegen.empty();
+        this.functionAppId = Codegen.empty();
+        this.functionName = Codegen.empty();
+        this.href = Codegen.empty();
+        this.invokeUrlTemplate = Codegen.empty();
+        this.isDisabled = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.language = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scriptHref = Codegen.empty();
+        this.scriptRootPathHref = Codegen.empty();
+        this.secretsFileHref = Codegen.empty();
+        this.testData = Codegen.empty();
+        this.testDataHref = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -318,7 +319,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable Object config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder configHref(@Nullable Output<String> configHref) {
@@ -326,7 +327,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configHref(@Nullable String configHref) {
-            this.configHref = Output.ofNullable(configHref);
+            this.configHref = Codegen.ofNullable(configHref);
             return this;
         }
         public Builder files(@Nullable Output<Map<String,String>> files) {
@@ -334,7 +335,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder files(@Nullable Map<String,String> files) {
-            this.files = Output.ofNullable(files);
+            this.files = Codegen.ofNullable(files);
             return this;
         }
         public Builder functionAppId(@Nullable Output<String> functionAppId) {
@@ -342,7 +343,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionAppId(@Nullable String functionAppId) {
-            this.functionAppId = Output.ofNullable(functionAppId);
+            this.functionAppId = Codegen.ofNullable(functionAppId);
             return this;
         }
         public Builder functionName(@Nullable Output<String> functionName) {
@@ -350,7 +351,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Output.ofNullable(functionName);
+            this.functionName = Codegen.ofNullable(functionName);
             return this;
         }
         public Builder href(@Nullable Output<String> href) {
@@ -358,7 +359,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder href(@Nullable String href) {
-            this.href = Output.ofNullable(href);
+            this.href = Codegen.ofNullable(href);
             return this;
         }
         public Builder invokeUrlTemplate(@Nullable Output<String> invokeUrlTemplate) {
@@ -366,7 +367,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invokeUrlTemplate(@Nullable String invokeUrlTemplate) {
-            this.invokeUrlTemplate = Output.ofNullable(invokeUrlTemplate);
+            this.invokeUrlTemplate = Codegen.ofNullable(invokeUrlTemplate);
             return this;
         }
         public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
@@ -374,7 +375,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isDisabled(@Nullable Boolean isDisabled) {
-            this.isDisabled = Output.ofNullable(isDisabled);
+            this.isDisabled = Codegen.ofNullable(isDisabled);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -382,7 +383,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder language(@Nullable Output<String> language) {
@@ -390,7 +391,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder language(@Nullable String language) {
-            this.language = Output.ofNullable(language);
+            this.language = Codegen.ofNullable(language);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -414,7 +415,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptHref(@Nullable String scriptHref) {
-            this.scriptHref = Output.ofNullable(scriptHref);
+            this.scriptHref = Codegen.ofNullable(scriptHref);
             return this;
         }
         public Builder scriptRootPathHref(@Nullable Output<String> scriptRootPathHref) {
@@ -422,7 +423,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptRootPathHref(@Nullable String scriptRootPathHref) {
-            this.scriptRootPathHref = Output.ofNullable(scriptRootPathHref);
+            this.scriptRootPathHref = Codegen.ofNullable(scriptRootPathHref);
             return this;
         }
         public Builder secretsFileHref(@Nullable Output<String> secretsFileHref) {
@@ -430,7 +431,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretsFileHref(@Nullable String secretsFileHref) {
-            this.secretsFileHref = Output.ofNullable(secretsFileHref);
+            this.secretsFileHref = Codegen.ofNullable(secretsFileHref);
             return this;
         }
         public Builder testData(@Nullable Output<String> testData) {
@@ -438,7 +439,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testData(@Nullable String testData) {
-            this.testData = Output.ofNullable(testData);
+            this.testData = Codegen.ofNullable(testData);
             return this;
         }
         public Builder testDataHref(@Nullable Output<String> testDataHref) {
@@ -446,7 +447,7 @@ public final class WebAppFunctionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testDataHref(@Nullable String testDataHref) {
-            this.testDataHref = Output.ofNullable(testDataHref);
+            this.testDataHref = Codegen.ofNullable(testDataHref);
             return this;
         }        public WebAppFunctionArgs build() {
             return new WebAppFunctionArgs(config, configHref, files, functionAppId, functionName, href, invokeUrlTemplate, isDisabled, kind, language, name, resourceGroupName, scriptHref, scriptRootPathHref, secretsFileHref, testData, testDataHref);

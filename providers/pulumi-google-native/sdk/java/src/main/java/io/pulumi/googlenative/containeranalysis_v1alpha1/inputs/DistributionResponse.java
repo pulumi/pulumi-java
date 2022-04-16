@@ -24,7 +24,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="architecture", required=true)
       private final String architecture;
 
-    public String getArchitecture() {
+    public String architecture() {
         return this.architecture;
     }
 
@@ -35,7 +35,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
-    public String getCpeUri() {
+    public String cpeUri() {
         return this.cpeUri;
     }
 
@@ -46,7 +46,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description", required=true)
       private final String description;
 
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
 
@@ -57,7 +57,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="latestVersion", required=true)
       private final VersionResponse latestVersion;
 
-    public VersionResponse getLatestVersion() {
+    public VersionResponse latestVersion() {
         return this.latestVersion;
     }
 
@@ -68,7 +68,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="maintainer", required=true)
       private final String maintainer;
 
-    public String getMaintainer() {
+    public String maintainer() {
         return this.maintainer;
     }
 
@@ -79,7 +79,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="url", required=true)
       private final String url;
 
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

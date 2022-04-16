@@ -5,6 +5,7 @@ package io.pulumi.azurenative.azurestack;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     @Import(name="customerSubscriptionName")
       private final @Nullable Output<String> customerSubscriptionName;
 
-    public Output<String> getCustomerSubscriptionName() {
-        return this.customerSubscriptionName == null ? Output.empty() : this.customerSubscriptionName;
+    public Output<String> customerSubscriptionName() {
+        return this.customerSubscriptionName == null ? Codegen.empty() : this.customerSubscriptionName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     @Import(name="registrationName", required=true)
       private final Output<String> registrationName;
 
-    public Output<String> getRegistrationName() {
+    public Output<String> registrationName() {
         return this.registrationName;
     }
 
@@ -43,7 +44,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
+    public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
 
@@ -54,8 +55,8 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
-    public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+    public Output<String> tenantId() {
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public CustomerSubscriptionArgs(
@@ -70,10 +71,10 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     }
 
     private CustomerSubscriptionArgs() {
-        this.customerSubscriptionName = Output.empty();
-        this.registrationName = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.tenantId = Output.empty();
+        this.customerSubscriptionName = Codegen.empty();
+        this.registrationName = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder customerSubscriptionName(@Nullable String customerSubscriptionName) {
-            this.customerSubscriptionName = Output.ofNullable(customerSubscriptionName);
+            this.customerSubscriptionName = Codegen.ofNullable(customerSubscriptionName);
             return this;
         }
         public Builder registrationName(Output<String> registrationName) {
@@ -131,7 +132,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public CustomerSubscriptionArgs build() {
             return new CustomerSubscriptionArgs(customerSubscriptionName, registrationName, resourceGroup, tenantId);

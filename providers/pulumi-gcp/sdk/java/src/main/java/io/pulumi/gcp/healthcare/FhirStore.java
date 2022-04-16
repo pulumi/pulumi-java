@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.FhirStoreArgs;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreState;
@@ -57,7 +58,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
     /**
@@ -81,7 +82,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the FHIR store (removing all data) **
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableReferentialIntegrity() {
+    public Output</* @Nullable */ Boolean> disableReferentialIntegrity() {
         return this.disableReferentialIntegrity;
     }
     /**
@@ -105,7 +106,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the FHIR store (removing all data) **
      * 
      */
-    public Output</* @Nullable */ Boolean> getDisableResourceVersioning() {
+    public Output</* @Nullable */ Boolean> disableResourceVersioning() {
         return this.disableResourceVersioning;
     }
     /**
@@ -129,7 +130,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableHistoryImport() {
+    public Output</* @Nullable */ Boolean> enableHistoryImport() {
         return this.enableHistoryImport;
     }
     /**
@@ -153,7 +154,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * notifications.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableUpdateCreate() {
+    public Output</* @Nullable */ Boolean> enableUpdateCreate() {
         return this.enableUpdateCreate;
     }
     /**
@@ -181,7 +182,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -197,7 +198,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the FHIR store (removing all data) **
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -213,7 +214,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ FhirStoreNotificationConfig> getNotificationConfig() {
+    public Output</* @Nullable */ FhirStoreNotificationConfig> notificationConfig() {
         return this.notificationConfig;
     }
     /**
@@ -227,7 +228,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @return The fully qualified name of this dataset
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -253,7 +254,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<FhirStoreStreamConfig>> getStreamConfigs() {
+    public Output</* @Nullable */ List<FhirStoreStreamConfig>> streamConfigs() {
         return this.streamConfigs;
     }
     /**
@@ -271,7 +272,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * Possible values are `DSTU2`, `STU3`, and `R4`.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 
@@ -297,7 +298,7 @@ public class FhirStore extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FhirStore(String name, FhirStoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/fhirStore:FhirStore", name, args == null ? FhirStoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/fhirStore:FhirStore", name, args == null ? FhirStoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FhirStore(String name, Output<String> id, @Nullable FhirStoreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

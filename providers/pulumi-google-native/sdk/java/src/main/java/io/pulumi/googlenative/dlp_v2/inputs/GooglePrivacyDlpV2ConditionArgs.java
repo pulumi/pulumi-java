@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ConditionOperator;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
     @Import(name="field", required=true)
       private final Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
+    public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field;
     }
 
@@ -38,7 +39,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
     @Import(name="operator", required=true)
       private final Output<GooglePrivacyDlpV2ConditionOperator> operator;
 
-    public Output<GooglePrivacyDlpV2ConditionOperator> getOperator() {
+    public Output<GooglePrivacyDlpV2ConditionOperator> operator() {
         return this.operator;
     }
 
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
     @Import(name="value")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> value;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<GooglePrivacyDlpV2ValueArgs> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public GooglePrivacyDlpV2ConditionArgs(
@@ -63,9 +64,9 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
     }
 
     private GooglePrivacyDlpV2ConditionArgs() {
-        this.field = Output.empty();
-        this.operator = Output.empty();
-        this.value = Output.empty();
+        this.field = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder value(@Nullable GooglePrivacyDlpV2ValueArgs value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public GooglePrivacyDlpV2ConditionArgs build() {
             return new GooglePrivacyDlpV2ConditionArgs(field, operator, value);

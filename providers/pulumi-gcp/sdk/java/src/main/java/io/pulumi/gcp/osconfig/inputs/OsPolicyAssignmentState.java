@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutGetArgs;
@@ -28,8 +29,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="baseline")
       private final @Nullable Output<Boolean> baseline;
 
-    public Output<Boolean> getBaseline() {
-        return this.baseline == null ? Output.empty() : this.baseline;
+    public Output<Boolean> baseline() {
+        return this.baseline == null ? Codegen.empty() : this.baseline;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="deleted")
       private final @Nullable Output<Boolean> deleted;
 
-    public Output<Boolean> getDeleted() {
-        return this.deleted == null ? Output.empty() : this.deleted;
+    public Output<Boolean> deleted() {
+        return this.deleted == null ? Codegen.empty() : this.deleted;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="instanceFilter")
       private final @Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter;
 
-    public Output<OsPolicyAssignmentInstanceFilterGetArgs> getInstanceFilter() {
-        return this.instanceFilter == null ? Output.empty() : this.instanceFilter;
+    public Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter() {
+        return this.instanceFilter == null ? Codegen.empty() : this.instanceFilter;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="osPolicies")
       private final @Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies;
 
-    public Output<List<OsPolicyAssignmentOsPolicyGetArgs>> getOsPolicies() {
-        return this.osPolicies == null ? Output.empty() : this.osPolicies;
+    public Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies() {
+        return this.osPolicies == null ? Codegen.empty() : this.osPolicies;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="reconciling")
       private final @Nullable Output<Boolean> reconciling;
 
-    public Output<Boolean> getReconciling() {
-        return this.reconciling == null ? Output.empty() : this.reconciling;
+    public Output<Boolean> reconciling() {
+        return this.reconciling == null ? Codegen.empty() : this.reconciling;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="revisionCreateTime")
       private final @Nullable Output<String> revisionCreateTime;
 
-    public Output<String> getRevisionCreateTime() {
-        return this.revisionCreateTime == null ? Output.empty() : this.revisionCreateTime;
+    public Output<String> revisionCreateTime() {
+        return this.revisionCreateTime == null ? Codegen.empty() : this.revisionCreateTime;
     }
 
     /**
@@ -151,8 +152,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
-        return this.revisionId == null ? Output.empty() : this.revisionId;
+    public Output<String> revisionId() {
+        return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="rollout")
       private final @Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout;
 
-    public Output<OsPolicyAssignmentRolloutGetArgs> getRollout() {
-        return this.rollout == null ? Output.empty() : this.rollout;
+    public Output<OsPolicyAssignmentRolloutGetArgs> rollout() {
+        return this.rollout == null ? Codegen.empty() : this.rollout;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="rolloutState")
       private final @Nullable Output<String> rolloutState;
 
-    public Output<String> getRolloutState() {
-        return this.rolloutState == null ? Output.empty() : this.rolloutState;
+    public Output<String> rolloutState() {
+        return this.rolloutState == null ? Codegen.empty() : this.rolloutState;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     @Import(name="uid")
       private final @Nullable Output<String> uid;
 
-    public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+    public Output<String> uid() {
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     public OsPolicyAssignmentState(
@@ -223,21 +224,21 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
     }
 
     private OsPolicyAssignmentState() {
-        this.baseline = Output.empty();
-        this.deleted = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.instanceFilter = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.osPolicies = Output.empty();
-        this.project = Output.empty();
-        this.reconciling = Output.empty();
-        this.revisionCreateTime = Output.empty();
-        this.revisionId = Output.empty();
-        this.rollout = Output.empty();
-        this.rolloutState = Output.empty();
-        this.uid = Output.empty();
+        this.baseline = Codegen.empty();
+        this.deleted = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.instanceFilter = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.osPolicies = Codegen.empty();
+        this.project = Codegen.empty();
+        this.reconciling = Codegen.empty();
+        this.revisionCreateTime = Codegen.empty();
+        this.revisionId = Codegen.empty();
+        this.rollout = Codegen.empty();
+        this.rolloutState = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -293,7 +294,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder baseline(@Nullable Boolean baseline) {
-            this.baseline = Output.ofNullable(baseline);
+            this.baseline = Codegen.ofNullable(baseline);
             return this;
         }
         public Builder deleted(@Nullable Output<Boolean> deleted) {
@@ -301,7 +302,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder deleted(@Nullable Boolean deleted) {
-            this.deleted = Output.ofNullable(deleted);
+            this.deleted = Codegen.ofNullable(deleted);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -309,7 +310,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -317,7 +318,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder instanceFilter(@Nullable Output<OsPolicyAssignmentInstanceFilterGetArgs> instanceFilter) {
@@ -325,7 +326,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceFilter(@Nullable OsPolicyAssignmentInstanceFilterGetArgs instanceFilter) {
-            this.instanceFilter = Output.ofNullable(instanceFilter);
+            this.instanceFilter = Codegen.ofNullable(instanceFilter);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -333,7 +334,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -341,7 +342,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder osPolicies(@Nullable Output<List<OsPolicyAssignmentOsPolicyGetArgs>> osPolicies) {
@@ -349,7 +350,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder osPolicies(@Nullable List<OsPolicyAssignmentOsPolicyGetArgs> osPolicies) {
-            this.osPolicies = Output.ofNullable(osPolicies);
+            this.osPolicies = Codegen.ofNullable(osPolicies);
             return this;
         }
         public Builder osPolicies(OsPolicyAssignmentOsPolicyGetArgs... osPolicies) {
@@ -360,7 +361,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder reconciling(@Nullable Output<Boolean> reconciling) {
@@ -368,7 +369,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder reconciling(@Nullable Boolean reconciling) {
-            this.reconciling = Output.ofNullable(reconciling);
+            this.reconciling = Codegen.ofNullable(reconciling);
             return this;
         }
         public Builder revisionCreateTime(@Nullable Output<String> revisionCreateTime) {
@@ -376,7 +377,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder revisionCreateTime(@Nullable String revisionCreateTime) {
-            this.revisionCreateTime = Output.ofNullable(revisionCreateTime);
+            this.revisionCreateTime = Codegen.ofNullable(revisionCreateTime);
             return this;
         }
         public Builder revisionId(@Nullable Output<String> revisionId) {
@@ -384,7 +385,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Output.ofNullable(revisionId);
+            this.revisionId = Codegen.ofNullable(revisionId);
             return this;
         }
         public Builder rollout(@Nullable Output<OsPolicyAssignmentRolloutGetArgs> rollout) {
@@ -392,7 +393,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder rollout(@Nullable OsPolicyAssignmentRolloutGetArgs rollout) {
-            this.rollout = Output.ofNullable(rollout);
+            this.rollout = Codegen.ofNullable(rollout);
             return this;
         }
         public Builder rolloutState(@Nullable Output<String> rolloutState) {
@@ -400,7 +401,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder rolloutState(@Nullable String rolloutState) {
-            this.rolloutState = Output.ofNullable(rolloutState);
+            this.rolloutState = Codegen.ofNullable(rolloutState);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -408,7 +409,7 @@ public final class OsPolicyAssignmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }        public OsPolicyAssignmentState build() {
             return new OsPolicyAssignmentState(baseline, deleted, description, etag, instanceFilter, location, name, osPolicies, project, reconciling, revisionCreateTime, revisionId, rollout, rolloutState, uid);

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogPatternSetAr
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoConfigurationEnabled")
       private final @Nullable Output<Boolean> autoConfigurationEnabled;
 
-    public Output<Boolean> getAutoConfigurationEnabled() {
-        return this.autoConfigurationEnabled == null ? Output.empty() : this.autoConfigurationEnabled;
+    public Output<Boolean> autoConfigurationEnabled() {
+        return this.autoConfigurationEnabled == null ? Codegen.empty() : this.autoConfigurationEnabled;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cWEMonitorEnabled")
       private final @Nullable Output<Boolean> cWEMonitorEnabled;
 
-    public Output<Boolean> getCWEMonitorEnabled() {
-        return this.cWEMonitorEnabled == null ? Output.empty() : this.cWEMonitorEnabled;
+    public Output<Boolean> cWEMonitorEnabled() {
+        return this.cWEMonitorEnabled == null ? Codegen.empty() : this.cWEMonitorEnabled;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="componentMonitoringSettings")
       private final @Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
 
-    public Output<List<ApplicationComponentMonitoringSettingArgs>> getComponentMonitoringSettings() {
-        return this.componentMonitoringSettings == null ? Output.empty() : this.componentMonitoringSettings;
+    public Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings() {
+        return this.componentMonitoringSettings == null ? Codegen.empty() : this.componentMonitoringSettings;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customComponents")
       private final @Nullable Output<List<ApplicationCustomComponentArgs>> customComponents;
 
-    public Output<List<ApplicationCustomComponentArgs>> getCustomComponents() {
-        return this.customComponents == null ? Output.empty() : this.customComponents;
+    public Output<List<ApplicationCustomComponentArgs>> customComponents() {
+        return this.customComponents == null ? Codegen.empty() : this.customComponents;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logPatternSets")
       private final @Nullable Output<List<ApplicationLogPatternSetArgs>> logPatternSets;
 
-    public Output<List<ApplicationLogPatternSetArgs>> getLogPatternSets() {
-        return this.logPatternSets == null ? Output.empty() : this.logPatternSets;
+    public Output<List<ApplicationLogPatternSetArgs>> logPatternSets() {
+        return this.logPatternSets == null ? Codegen.empty() : this.logPatternSets;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="opsCenterEnabled")
       private final @Nullable Output<Boolean> opsCenterEnabled;
 
-    public Output<Boolean> getOpsCenterEnabled() {
-        return this.opsCenterEnabled == null ? Output.empty() : this.opsCenterEnabled;
+    public Output<Boolean> opsCenterEnabled() {
+        return this.opsCenterEnabled == null ? Codegen.empty() : this.opsCenterEnabled;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="opsItemSNSTopicArn")
       private final @Nullable Output<String> opsItemSNSTopicArn;
 
-    public Output<String> getOpsItemSNSTopicArn() {
-        return this.opsItemSNSTopicArn == null ? Output.empty() : this.opsItemSNSTopicArn;
+    public Output<String> opsItemSNSTopicArn() {
+        return this.opsItemSNSTopicArn == null ? Codegen.empty() : this.opsItemSNSTopicArn;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,8 +116,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
-    public Output<List<ApplicationTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ApplicationTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationArgs(
@@ -141,15 +142,15 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.autoConfigurationEnabled = Output.empty();
-        this.cWEMonitorEnabled = Output.empty();
-        this.componentMonitoringSettings = Output.empty();
-        this.customComponents = Output.empty();
-        this.logPatternSets = Output.empty();
-        this.opsCenterEnabled = Output.empty();
-        this.opsItemSNSTopicArn = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.autoConfigurationEnabled = Codegen.empty();
+        this.cWEMonitorEnabled = Codegen.empty();
+        this.componentMonitoringSettings = Codegen.empty();
+        this.customComponents = Codegen.empty();
+        this.logPatternSets = Codegen.empty();
+        this.opsCenterEnabled = Codegen.empty();
+        this.opsItemSNSTopicArn = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoConfigurationEnabled(@Nullable Boolean autoConfigurationEnabled) {
-            this.autoConfigurationEnabled = Output.ofNullable(autoConfigurationEnabled);
+            this.autoConfigurationEnabled = Codegen.ofNullable(autoConfigurationEnabled);
             return this;
         }
         public Builder cWEMonitorEnabled(@Nullable Output<Boolean> cWEMonitorEnabled) {
@@ -201,7 +202,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cWEMonitorEnabled(@Nullable Boolean cWEMonitorEnabled) {
-            this.cWEMonitorEnabled = Output.ofNullable(cWEMonitorEnabled);
+            this.cWEMonitorEnabled = Codegen.ofNullable(cWEMonitorEnabled);
             return this;
         }
         public Builder componentMonitoringSettings(@Nullable Output<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings) {
@@ -209,7 +210,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder componentMonitoringSettings(@Nullable List<ApplicationComponentMonitoringSettingArgs> componentMonitoringSettings) {
-            this.componentMonitoringSettings = Output.ofNullable(componentMonitoringSettings);
+            this.componentMonitoringSettings = Codegen.ofNullable(componentMonitoringSettings);
             return this;
         }
         public Builder componentMonitoringSettings(ApplicationComponentMonitoringSettingArgs... componentMonitoringSettings) {
@@ -220,7 +221,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customComponents(@Nullable List<ApplicationCustomComponentArgs> customComponents) {
-            this.customComponents = Output.ofNullable(customComponents);
+            this.customComponents = Codegen.ofNullable(customComponents);
             return this;
         }
         public Builder customComponents(ApplicationCustomComponentArgs... customComponents) {
@@ -231,7 +232,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logPatternSets(@Nullable List<ApplicationLogPatternSetArgs> logPatternSets) {
-            this.logPatternSets = Output.ofNullable(logPatternSets);
+            this.logPatternSets = Codegen.ofNullable(logPatternSets);
             return this;
         }
         public Builder logPatternSets(ApplicationLogPatternSetArgs... logPatternSets) {
@@ -242,7 +243,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder opsCenterEnabled(@Nullable Boolean opsCenterEnabled) {
-            this.opsCenterEnabled = Output.ofNullable(opsCenterEnabled);
+            this.opsCenterEnabled = Codegen.ofNullable(opsCenterEnabled);
             return this;
         }
         public Builder opsItemSNSTopicArn(@Nullable Output<String> opsItemSNSTopicArn) {
@@ -250,7 +251,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder opsItemSNSTopicArn(@Nullable String opsItemSNSTopicArn) {
-            this.opsItemSNSTopicArn = Output.ofNullable(opsItemSNSTopicArn);
+            this.opsItemSNSTopicArn = Codegen.ofNullable(opsItemSNSTopicArn);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -266,7 +267,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ApplicationTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ApplicationTagArgs... tags) {

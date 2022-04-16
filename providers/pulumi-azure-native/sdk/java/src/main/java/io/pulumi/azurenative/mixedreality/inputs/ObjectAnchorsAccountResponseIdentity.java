@@ -21,7 +21,7 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
     @Import(name="principalId", required=true)
       private final String principalId;
 
-    public String getPrincipalId() {
+    public String principalId() {
         return this.principalId;
     }
 
@@ -32,7 +32,7 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
     @Import(name="tenantId", required=true)
       private final String tenantId;
 
-    public String getTenantId() {
+    public String tenantId() {
         return this.tenantId;
     }
 
@@ -43,7 +43,7 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
     @Import(name="type")
       private final @Nullable String type;
 
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 

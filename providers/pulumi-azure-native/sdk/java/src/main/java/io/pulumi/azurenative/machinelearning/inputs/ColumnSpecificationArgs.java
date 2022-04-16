@@ -8,6 +8,7 @@ import io.pulumi.azurenative.machinelearning.enums.ColumnType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -31,8 +32,8 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     @Import(name="enum")
       private final @Nullable Output<List<Object>> enum_;
 
-    public Output<List<Object>> getEnum_() {
-        return this.enum_ == null ? Output.empty() : this.enum_;
+    public Output<List<Object>> enum_() {
+        return this.enum_ == null ? Codegen.empty() : this.enum_;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     @Import(name="format")
       private final @Nullable Output<Either<String,ColumnFormat>> format;
 
-    public Output<Either<String,ColumnFormat>> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<Either<String,ColumnFormat>> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     @Import(name="type", required=true)
       private final Output<Either<String,ColumnType>> type;
 
-    public Output<Either<String,ColumnType>> getType() {
+    public Output<Either<String,ColumnType>> type() {
         return this.type;
     }
 
@@ -64,8 +65,8 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     @Import(name="xMsIsnullable")
       private final @Nullable Output<Boolean> xMsIsnullable;
 
-    public Output<Boolean> getXMsIsnullable() {
-        return this.xMsIsnullable == null ? Output.empty() : this.xMsIsnullable;
+    public Output<Boolean> xMsIsnullable() {
+        return this.xMsIsnullable == null ? Codegen.empty() : this.xMsIsnullable;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     @Import(name="xMsIsordered")
       private final @Nullable Output<Boolean> xMsIsordered;
 
-    public Output<Boolean> getXMsIsordered() {
-        return this.xMsIsordered == null ? Output.empty() : this.xMsIsordered;
+    public Output<Boolean> xMsIsordered() {
+        return this.xMsIsordered == null ? Codegen.empty() : this.xMsIsordered;
     }
 
     public ColumnSpecificationArgs(
@@ -93,11 +94,11 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ColumnSpecificationArgs() {
-        this.enum_ = Output.empty();
-        this.format = Output.empty();
-        this.type = Output.empty();
-        this.xMsIsnullable = Output.empty();
-        this.xMsIsordered = Output.empty();
+        this.enum_ = Codegen.empty();
+        this.format = Codegen.empty();
+        this.type = Codegen.empty();
+        this.xMsIsnullable = Codegen.empty();
+        this.xMsIsordered = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enum_(@Nullable List<Object> enum_) {
-            this.enum_ = Output.ofNullable(enum_);
+            this.enum_ = Codegen.ofNullable(enum_);
             return this;
         }
         public Builder enum_(Object... enum_) {
@@ -144,7 +145,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder format(@Nullable Either<String,ColumnFormat> format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder type(Output<Either<String,ColumnType>> type) {
@@ -160,7 +161,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
-            this.xMsIsnullable = Output.ofNullable(xMsIsnullable);
+            this.xMsIsnullable = Codegen.ofNullable(xMsIsnullable);
             return this;
         }
         public Builder xMsIsordered(@Nullable Output<Boolean> xMsIsordered) {
@@ -168,7 +169,7 @@ public final class ColumnSpecificationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
-            this.xMsIsordered = Output.ofNullable(xMsIsordered);
+            this.xMsIsordered = Codegen.ofNullable(xMsIsordered);
             return this;
         }        public ColumnSpecificationArgs build() {
             return new ColumnSpecificationArgs(enum_, format, type, xMsIsnullable, xMsIsordered);

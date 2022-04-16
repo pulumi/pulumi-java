@@ -6,6 +6,7 @@ package io.pulumi.gcp.storage;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.NotificationArgs;
 import io.pulumi.gcp.storage.inputs.NotificationState;
@@ -56,7 +57,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return The name of the bucket.
      * 
      */
-    public Output<String> getBucket() {
+    public Output<String> bucket() {
         return this.bucket;
     }
     /**
@@ -70,7 +71,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getCustomAttributes() {
+    public Output</* @Nullable */ Map<String,String>> customAttributes() {
         return this.customAttributes;
     }
     /**
@@ -84,7 +85,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
      * 
      */
-    public Output</* @Nullable */ List<String>> getEventTypes() {
+    public Output</* @Nullable */ List<String>> eventTypes() {
         return this.eventTypes;
     }
     /**
@@ -98,7 +99,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return The ID of the created notification.
      * 
      */
-    public Output<String> getNotificationId() {
+    public Output<String> notificationId() {
         return this.notificationId;
     }
     /**
@@ -112,7 +113,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
      * 
      */
-    public Output</* @Nullable */ String> getObjectNamePrefix() {
+    public Output</* @Nullable */ String> objectNamePrefix() {
         return this.objectNamePrefix;
     }
     /**
@@ -126,7 +127,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
      * 
      */
-    public Output<String> getPayloadFormat() {
+    public Output<String> payloadFormat() {
         return this.payloadFormat;
     }
     /**
@@ -140,7 +141,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -160,7 +161,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * you will need to use the project-level name.
      * 
      */
-    public Output<String> getTopic() {
+    public Output<String> topic() {
         return this.topic;
     }
 
@@ -186,7 +187,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Notification(String name, NotificationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:storage/notification:Notification", name, args == null ? NotificationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:storage/notification:Notification", name, args == null ? NotificationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Notification(String name, Output<String> id, @Nullable NotificationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

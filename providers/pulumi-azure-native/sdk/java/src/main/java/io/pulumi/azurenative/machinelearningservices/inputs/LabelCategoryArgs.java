@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelClassArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,8 +29,8 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowMultiSelect")
       private final @Nullable Output<Boolean> allowMultiSelect;
 
-    public Output<Boolean> getAllowMultiSelect() {
-        return this.allowMultiSelect == null ? Output.empty() : this.allowMultiSelect;
+    public Output<Boolean> allowMultiSelect() {
+        return this.allowMultiSelect == null ? Codegen.empty() : this.allowMultiSelect;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="classes", required=true)
       private final Output<Map<String,LabelClassArgs>> classes;
 
-    public Output<Map<String,LabelClassArgs>> getClasses() {
+    public Output<Map<String,LabelClassArgs>> classes() {
         return this.classes;
     }
 
@@ -50,8 +51,8 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     public LabelCategoryArgs(
@@ -64,9 +65,9 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabelCategoryArgs() {
-        this.allowMultiSelect = Output.empty();
-        this.classes = Output.empty();
-        this.displayName = Output.empty();
+        this.allowMultiSelect = Codegen.empty();
+        this.classes = Codegen.empty();
+        this.displayName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
-            this.allowMultiSelect = Output.ofNullable(allowMultiSelect);
+            this.allowMultiSelect = Codegen.ofNullable(allowMultiSelect);
             return this;
         }
         public Builder classes(Output<Map<String,LabelClassArgs>> classes) {
@@ -114,7 +115,7 @@ public final class LabelCategoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }        public LabelCategoryArgs build() {
             return new LabelCategoryArgs(allowMultiSelect, classes, displayName);

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.CapacityReservationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Capacity Reservation.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -56,7 +57,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return The Availability Zone in which to create the Capacity Reservation.
      * 
      */
-    public Output<String> getAvailabilityZone() {
+    public Output<String> availabilityZone() {
         return this.availabilityZone;
     }
     /**
@@ -70,7 +71,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the Capacity Reservation supports EBS-optimized instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEbsOptimized() {
+    public Output</* @Nullable */ Boolean> ebsOptimized() {
         return this.ebsOptimized;
     }
     /**
@@ -84,7 +85,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    public Output</* @Nullable */ String> getEndDate() {
+    public Output</* @Nullable */ String> endDate() {
         return this.endDate;
     }
     /**
@@ -98,7 +99,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
      * 
      */
-    public Output</* @Nullable */ String> getEndDateType() {
+    public Output</* @Nullable */ String> endDateType() {
         return this.endDateType;
     }
     /**
@@ -112,7 +113,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEphemeralStorage() {
+    public Output</* @Nullable */ Boolean> ephemeralStorage() {
         return this.ephemeralStorage;
     }
     /**
@@ -126,7 +127,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return The number of instances for which to reserve capacity.
      * 
      */
-    public Output<Integer> getInstanceCount() {
+    public Output<Integer> instanceCount() {
         return this.instanceCount;
     }
     /**
@@ -140,7 +141,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
      * 
      */
-    public Output</* @Nullable */ String> getInstanceMatchCriteria() {
+    public Output</* @Nullable */ String> instanceMatchCriteria() {
         return this.instanceMatchCriteria;
     }
     /**
@@ -154,7 +155,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
      * 
      */
-    public Output<String> getInstancePlatform() {
+    public Output<String> instancePlatform() {
         return this.instancePlatform;
     }
     /**
@@ -168,7 +169,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return The instance type for which to reserve capacity.
      * 
      */
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
     /**
@@ -182,7 +183,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
      * 
      */
-    public Output</* @Nullable */ String> getOutpostArn() {
+    public Output</* @Nullable */ String> outpostArn() {
         return this.outpostArn;
     }
     /**
@@ -196,7 +197,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return The ID of the AWS account that owns the Capacity Reservation.
      * 
      */
-    public Output<String> getOwnerId() {
+    public Output<String> ownerId() {
         return this.ownerId;
     }
     /**
@@ -210,13 +211,13 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -230,7 +231,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @return Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
      * 
      */
-    public Output</* @Nullable */ String> getTenancy() {
+    public Output</* @Nullable */ String> tenancy() {
         return this.tenancy;
     }
 
@@ -256,7 +257,7 @@ public class CapacityReservation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CapacityReservation(String name, CapacityReservationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/capacityReservation:CapacityReservation", name, args == null ? CapacityReservationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/capacityReservation:CapacityReservation", name, args == null ? CapacityReservationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CapacityReservation(String name, Output<String> id, @Nullable CapacityReservationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TopicRuleErrorActionKinesisGetArgs extends io.pulumi.resource
     @Import(name="partitionKey")
       private final @Nullable Output<String> partitionKey;
 
-    public Output<String> getPartitionKey() {
-        return this.partitionKey == null ? Output.empty() : this.partitionKey;
+    public Output<String> partitionKey() {
+        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class TopicRuleErrorActionKinesisGetArgs extends io.pulumi.resource
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -43,7 +44,7 @@ public final class TopicRuleErrorActionKinesisGetArgs extends io.pulumi.resource
     @Import(name="streamName", required=true)
       private final Output<String> streamName;
 
-    public Output<String> getStreamName() {
+    public Output<String> streamName() {
         return this.streamName;
     }
 
@@ -57,9 +58,9 @@ public final class TopicRuleErrorActionKinesisGetArgs extends io.pulumi.resource
     }
 
     private TopicRuleErrorActionKinesisGetArgs() {
-        this.partitionKey = Output.empty();
-        this.roleArn = Output.empty();
-        this.streamName = Output.empty();
+        this.partitionKey = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.streamName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class TopicRuleErrorActionKinesisGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Output.ofNullable(partitionKey);
+            this.partitionKey = Codegen.ofNullable(partitionKey);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

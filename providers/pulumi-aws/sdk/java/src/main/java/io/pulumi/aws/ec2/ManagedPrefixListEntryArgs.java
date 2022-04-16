@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
     @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
-    public Output<String> getCidr() {
+    public Output<String> cidr() {
         return this.cidr;
     }
 
@@ -32,8 +33,8 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
     @Import(name="prefixListId", required=true)
       private final Output<String> prefixListId;
 
-    public Output<String> getPrefixListId() {
+    public Output<String> prefixListId() {
         return this.prefixListId;
     }
 
@@ -57,9 +58,9 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
     }
 
     private ManagedPrefixListEntryArgs() {
-        this.cidr = Output.empty();
-        this.description = Output.empty();
-        this.prefixListId = Output.empty();
+        this.cidr = Codegen.empty();
+        this.description = Codegen.empty();
+        this.prefixListId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ManagedPrefixListEntryArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder prefixListId(Output<String> prefixListId) {

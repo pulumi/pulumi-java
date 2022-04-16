@@ -9,6 +9,7 @@ import io.pulumi.azurenative.devtestlab.enums.PolicyStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="evaluatorType")
       private final @Nullable Output<Either<String,PolicyEvaluatorType>> evaluatorType;
 
-    public Output<Either<String,PolicyEvaluatorType>> getEvaluatorType() {
-        return this.evaluatorType == null ? Output.empty() : this.evaluatorType;
+    public Output<Either<String,PolicyEvaluatorType>> evaluatorType() {
+        return this.evaluatorType == null ? Codegen.empty() : this.evaluatorType;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="factData")
       private final @Nullable Output<String> factData;
 
-    public Output<String> getFactData() {
-        return this.factData == null ? Output.empty() : this.factData;
+    public Output<String> factData() {
+        return this.factData == null ? Codegen.empty() : this.factData;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="factName")
       private final @Nullable Output<Either<String,PolicyFactName>> factName;
 
-    public Output<Either<String,PolicyFactName>> getFactName() {
-        return this.factName == null ? Output.empty() : this.factName;
+    public Output<Either<String,PolicyFactName>> factName() {
+        return this.factName == null ? Codegen.empty() : this.factName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
       private final Output<String> labName;
 
-    public Output<String> getLabName() {
+    public Output<String> labName() {
         return this.labName;
     }
 
@@ -81,8 +82,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policySetName", required=true)
       private final Output<String> policySetName;
 
-    public Output<String> getPolicySetName() {
+    public Output<String> policySetName() {
         return this.policySetName;
     }
 
@@ -114,7 +115,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -125,8 +126,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,PolicyStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="threshold")
       private final @Nullable Output<String> threshold;
 
-    public Output<String> getThreshold() {
-        return this.threshold == null ? Output.empty() : this.threshold;
+    public Output<String> threshold() {
+        return this.threshold == null ? Codegen.empty() : this.threshold;
     }
 
     public PolicyArgs(
@@ -179,18 +180,18 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.description = Output.empty();
-        this.evaluatorType = Output.empty();
-        this.factData = Output.empty();
-        this.factName = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.policySetName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.threshold = Output.empty();
+        this.description = Codegen.empty();
+        this.evaluatorType = Codegen.empty();
+        this.factData = Codegen.empty();
+        this.factName = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policySetName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.threshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -240,7 +241,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder evaluatorType(@Nullable Output<Either<String,PolicyEvaluatorType>> evaluatorType) {
@@ -248,7 +249,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder evaluatorType(@Nullable Either<String,PolicyEvaluatorType> evaluatorType) {
-            this.evaluatorType = Output.ofNullable(evaluatorType);
+            this.evaluatorType = Codegen.ofNullable(evaluatorType);
             return this;
         }
         public Builder factData(@Nullable Output<String> factData) {
@@ -256,7 +257,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder factData(@Nullable String factData) {
-            this.factData = Output.ofNullable(factData);
+            this.factData = Codegen.ofNullable(factData);
             return this;
         }
         public Builder factName(@Nullable Output<Either<String,PolicyFactName>> factName) {
@@ -264,7 +265,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder factName(@Nullable Either<String,PolicyFactName> factName) {
-            this.factName = Output.ofNullable(factName);
+            this.factName = Codegen.ofNullable(factName);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -280,7 +281,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -288,7 +289,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policySetName(Output<String> policySetName) {
@@ -312,7 +313,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -320,7 +321,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder threshold(@Nullable Output<String> threshold) {
@@ -328,7 +329,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder threshold(@Nullable String threshold) {
-            this.threshold = Output.ofNullable(threshold);
+            this.threshold = Codegen.ofNullable(threshold);
             return this;
         }        public PolicyArgs build() {
             return new PolicyArgs(description, evaluatorType, factData, factName, labName, location, name, policySetName, resourceGroupName, status, tags, threshold);

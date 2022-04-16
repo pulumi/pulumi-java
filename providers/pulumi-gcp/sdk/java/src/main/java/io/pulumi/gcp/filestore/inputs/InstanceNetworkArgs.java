@@ -5,6 +5,7 @@ package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="connectMode")
       private final @Nullable Output<String> connectMode;
 
-    public Output<String> getConnectMode() {
-        return this.connectMode == null ? Output.empty() : this.connectMode;
+    public Output<String> connectMode() {
+        return this.connectMode == null ? Codegen.empty() : this.connectMode;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
+    public Output<List<String>> ipAddresses() {
+        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="modes", required=true)
       private final Output<List<String>> modes;
 
-    public Output<List<String>> getModes() {
+    public Output<List<String>> modes() {
         return this.modes;
     }
 
@@ -63,7 +64,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="network", required=true)
       private final Output<String> network;
 
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
 
@@ -75,8 +76,8 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="reservedIpRange")
       private final @Nullable Output<String> reservedIpRange;
 
-    public Output<String> getReservedIpRange() {
-        return this.reservedIpRange == null ? Output.empty() : this.reservedIpRange;
+    public Output<String> reservedIpRange() {
+        return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
     }
 
     public InstanceNetworkArgs(
@@ -93,11 +94,11 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private InstanceNetworkArgs() {
-        this.connectMode = Output.empty();
-        this.ipAddresses = Output.empty();
-        this.modes = Output.empty();
-        this.network = Output.empty();
-        this.reservedIpRange = Output.empty();
+        this.connectMode = Codegen.empty();
+        this.ipAddresses = Codegen.empty();
+        this.modes = Codegen.empty();
+        this.network = Codegen.empty();
+        this.reservedIpRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder connectMode(@Nullable String connectMode) {
-            this.connectMode = Output.ofNullable(connectMode);
+            this.connectMode = Codegen.ofNullable(connectMode);
             return this;
         }
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
@@ -141,7 +142,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Output.ofNullable(ipAddresses);
+            this.ipAddresses = Codegen.ofNullable(ipAddresses);
             return this;
         }
         public Builder ipAddresses(String... ipAddresses) {
@@ -171,7 +172,7 @@ public final class InstanceNetworkArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Output.ofNullable(reservedIpRange);
+            this.reservedIpRange = Codegen.ofNullable(reservedIpRange);
             return this;
         }        public InstanceNetworkArgs build() {
             return new InstanceNetworkArgs(connectMode, ipAddresses, modes, network, reservedIpRange);

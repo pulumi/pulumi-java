@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyArgs extends io.
     @Import(name="tls")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls;
 
-    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> getTls() {
-        return this.tls == null ? Output.empty() : this.tls;
+    public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls() {
+        return this.tls == null ? Codegen.empty() : this.tls;
     }
 
     public VirtualGatewaySpecBackendDefaultsClientPolicyArgs(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs> tls) {
@@ -30,7 +31,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyArgs extends io.
     }
 
     private VirtualGatewaySpecBackendDefaultsClientPolicyArgs() {
-        this.tls = Output.empty();
+        this.tls = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyArgs extends io.
             return this;
         }
         public Builder tls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs tls) {
-            this.tls = Output.ofNullable(tls);
+            this.tls = Codegen.ofNullable(tls);
             return this;
         }        public VirtualGatewaySpecBackendDefaultsClientPolicyArgs build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyArgs(tls);

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
      * @return Custom email addresses for this rule notifications
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomEmails() {
+    public Output</* @Nullable */ List<String>> customEmails() {
         return this.customEmails;
     }
     /**
@@ -57,7 +58,7 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
      * @return A flag that indicates whether this rule is enabled by the user
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -71,7 +72,7 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
      * @return The last time this rule was updated
      * 
      */
-    public Output</* @Nullable */ String> getLastUpdatedTime() {
+    public Output</* @Nullable */ String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -85,7 +86,7 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
      * @return The rule name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -99,7 +100,7 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
      * @return Static definitions of the ProactiveDetection configuration rule (same values for all components).
      * 
      */
-    public Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> getRuleDefinitions() {
+    public Output</* @Nullable */ ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions> ruleDefinitions() {
         return this.ruleDefinitions;
     }
     /**
@@ -113,7 +114,7 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
      * @return A flag that indicated whether notifications on this rule should be sent to subscription owners
      * 
      */
-    public Output</* @Nullable */ Boolean> getSendEmailsToSubscriptionOwners() {
+    public Output</* @Nullable */ Boolean> sendEmailsToSubscriptionOwners() {
         return this.sendEmailsToSubscriptionOwners;
     }
 
@@ -139,7 +140,7 @@ public class ProactiveDetectionConfiguration extends io.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public ProactiveDetectionConfiguration(String name, ProactiveDetectionConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:ProactiveDetectionConfiguration", name, args == null ? ProactiveDetectionConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:ProactiveDetectionConfiguration", name, args == null ? ProactiveDetectionConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProactiveDetectionConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

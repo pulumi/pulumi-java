@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.RegexPatternSetRegularExpressionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,15 +36,15 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="lockToken")
       private final @Nullable Output<String> lockToken;
 
-    public Output<String> getLockToken() {
-        return this.lockToken == null ? Output.empty() : this.lockToken;
+    public Output<String> lockToken() {
+        return this.lockToken == null ? Codegen.empty() : this.lockToken;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="regularExpressions")
       private final @Nullable Output<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions;
 
-    public Output<List<RegexPatternSetRegularExpressionGetArgs>> getRegularExpressions() {
-        return this.regularExpressions == null ? Output.empty() : this.regularExpressions;
+    public Output<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions() {
+        return this.regularExpressions == null ? Codegen.empty() : this.regularExpressions;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
-    public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+    public Output<String> scope() {
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public RegexPatternSetState(
@@ -121,14 +122,14 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
     }
 
     private RegexPatternSetState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.lockToken = Output.empty();
-        this.name = Output.empty();
-        this.regularExpressions = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.lockToken = Codegen.empty();
+        this.name = Codegen.empty();
+        this.regularExpressions = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -178,7 +179,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder lockToken(@Nullable Output<String> lockToken) {
@@ -186,7 +187,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lockToken(@Nullable String lockToken) {
-            this.lockToken = Output.ofNullable(lockToken);
+            this.lockToken = Codegen.ofNullable(lockToken);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -194,7 +195,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder regularExpressions(@Nullable Output<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions) {
@@ -202,7 +203,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder regularExpressions(@Nullable List<RegexPatternSetRegularExpressionGetArgs> regularExpressions) {
-            this.regularExpressions = Output.ofNullable(regularExpressions);
+            this.regularExpressions = Codegen.ofNullable(regularExpressions);
             return this;
         }
         public Builder regularExpressions(RegexPatternSetRegularExpressionGetArgs... regularExpressions) {
@@ -213,7 +214,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -221,7 +222,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -229,7 +230,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public RegexPatternSetState build() {
             return new RegexPatternSetState(arn, description, lockToken, name, regularExpressions, scope, tags, tagsAll);

@@ -31,17 +31,17 @@ public final class GetStreamResult {
         this.tags = tags;
     }
 
-    public Optional<String> getArn() {
+    public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
      * An array of key-value pairs to apply to this resource.
      * 
     */
-    public List<StreamTag> getTags() {
+    public List<StreamTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SnapshotArgs;
 import io.pulumi.gcp.compute.inputs.SnapshotState;
@@ -72,7 +73,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -86,7 +87,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -100,7 +101,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Size of the snapshot, specified in GB.
      * 
      */
-    public Output<Integer> getDiskSizeGb() {
+    public Output<Integer> diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
@@ -114,7 +115,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    public Output<String> getLabelFingerprint() {
+    public Output<String> labelFingerprint() {
         return this.labelFingerprint;
     }
     /**
@@ -128,7 +129,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Labels to apply to this Snapshot.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -146,7 +147,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * encryption key.
      * 
      */
-    public Output<List<String>> getLicenses() {
+    public Output<List<String>> licenses() {
         return this.licenses;
     }
     /**
@@ -172,7 +173,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -188,7 +189,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -202,7 +203,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -220,7 +221,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SnapshotSnapshotEncryptionKey> getSnapshotEncryptionKey() {
+    public Output</* @Nullable */ SnapshotSnapshotEncryptionKey> snapshotEncryptionKey() {
         return this.snapshotEncryptionKey;
     }
     /**
@@ -234,7 +235,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The unique identifier for the resource.
      * 
      */
-    public Output<Integer> getSnapshotId() {
+    public Output<Integer> snapshotId() {
         return this.snapshotId;
     }
     /**
@@ -248,7 +249,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return A reference to the disk used to create this snapshot.
      * 
      */
-    public Output<String> getSourceDisk() {
+    public Output<String> sourceDisk() {
         return this.sourceDisk;
     }
     /**
@@ -268,7 +269,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SnapshotSourceDiskEncryptionKey> getSourceDiskEncryptionKey() {
+    public Output</* @Nullable */ SnapshotSourceDiskEncryptionKey> sourceDiskEncryptionKey() {
         return this.sourceDiskEncryptionKey;
     }
     /**
@@ -284,7 +285,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * creation/deletion.
      * 
      */
-    public Output<Integer> getStorageBytes() {
+    public Output<Integer> storageBytes() {
         return this.storageBytes;
     }
     /**
@@ -298,7 +299,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
      * 
      */
-    public Output<List<String>> getStorageLocations() {
+    public Output<List<String>> storageLocations() {
         return this.storageLocations;
     }
     /**
@@ -312,7 +313,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return A reference to the zone where the disk is hosted.
      * 
      */
-    public Output<String> getZone() {
+    public Output<String> zone() {
         return this.zone;
     }
 
@@ -338,7 +339,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/snapshot:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/snapshot:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Snapshot(String name, Output<String> id, @Nullable SnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

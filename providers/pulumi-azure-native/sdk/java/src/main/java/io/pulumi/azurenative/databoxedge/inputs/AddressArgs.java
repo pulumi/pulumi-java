@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressLine1")
       private final @Nullable Output<String> addressLine1;
 
-    public Output<String> getAddressLine1() {
-        return this.addressLine1 == null ? Output.empty() : this.addressLine1;
+    public Output<String> addressLine1() {
+        return this.addressLine1 == null ? Codegen.empty() : this.addressLine1;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressLine2")
       private final @Nullable Output<String> addressLine2;
 
-    public Output<String> getAddressLine2() {
-        return this.addressLine2 == null ? Output.empty() : this.addressLine2;
+    public Output<String> addressLine2() {
+        return this.addressLine2 == null ? Codegen.empty() : this.addressLine2;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addressLine3")
       private final @Nullable Output<String> addressLine3;
 
-    public Output<String> getAddressLine3() {
-        return this.addressLine3 == null ? Output.empty() : this.addressLine3;
+    public Output<String> addressLine3() {
+        return this.addressLine3 == null ? Codegen.empty() : this.addressLine3;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="city")
       private final @Nullable Output<String> city;
 
-    public Output<String> getCity() {
-        return this.city == null ? Output.empty() : this.city;
+    public Output<String> city() {
+        return this.city == null ? Codegen.empty() : this.city;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="country", required=true)
       private final Output<String> country;
 
-    public Output<String> getCountry() {
+    public Output<String> country() {
         return this.country;
     }
 
@@ -80,8 +81,8 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
-    public Output<String> getPostalCode() {
-        return this.postalCode == null ? Output.empty() : this.postalCode;
+    public Output<String> postalCode() {
+        return this.postalCode == null ? Codegen.empty() : this.postalCode;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public AddressArgs(
@@ -113,13 +114,13 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddressArgs() {
-        this.addressLine1 = Output.empty();
-        this.addressLine2 = Output.empty();
-        this.addressLine3 = Output.empty();
-        this.city = Output.empty();
-        this.country = Output.empty();
-        this.postalCode = Output.empty();
-        this.state = Output.empty();
+        this.addressLine1 = Codegen.empty();
+        this.addressLine2 = Codegen.empty();
+        this.addressLine3 = Codegen.empty();
+        this.city = Codegen.empty();
+        this.country = Codegen.empty();
+        this.postalCode = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressLine1(@Nullable String addressLine1) {
-            this.addressLine1 = Output.ofNullable(addressLine1);
+            this.addressLine1 = Codegen.ofNullable(addressLine1);
             return this;
         }
         public Builder addressLine2(@Nullable Output<String> addressLine2) {
@@ -167,7 +168,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressLine2(@Nullable String addressLine2) {
-            this.addressLine2 = Output.ofNullable(addressLine2);
+            this.addressLine2 = Codegen.ofNullable(addressLine2);
             return this;
         }
         public Builder addressLine3(@Nullable Output<String> addressLine3) {
@@ -175,7 +176,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressLine3(@Nullable String addressLine3) {
-            this.addressLine3 = Output.ofNullable(addressLine3);
+            this.addressLine3 = Codegen.ofNullable(addressLine3);
             return this;
         }
         public Builder city(@Nullable Output<String> city) {
@@ -183,7 +184,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder city(@Nullable String city) {
-            this.city = Output.ofNullable(city);
+            this.city = Codegen.ofNullable(city);
             return this;
         }
         public Builder country(Output<String> country) {
@@ -199,7 +200,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Output.ofNullable(postalCode);
+            this.postalCode = Codegen.ofNullable(postalCode);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -207,7 +208,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public AddressArgs build() {
             return new AddressArgs(addressLine1, addressLine2, addressLine3, city, country, postalCode, state);

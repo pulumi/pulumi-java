@@ -23,7 +23,7 @@ public final class ImageRawDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="containerType", required=true)
       private final String containerType;
 
-    public String getContainerType() {
+    public String containerType() {
         return this.containerType;
     }
 
@@ -34,7 +34,7 @@ public final class ImageRawDiskResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final String source;
 
-    public String getSource() {
+    public String source() {
         return this.source;
     }
 

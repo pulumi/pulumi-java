@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
-    public Output<String> getFqdn() {
-        return this.fqdn == null ? Output.empty() : this.fqdn;
+    public Output<String> fqdn() {
+        return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="globalNetworkEndpointGroup", required=true)
       private final Output<String> globalNetworkEndpointGroup;
 
-    public Output<String> getGlobalNetworkEndpointGroup() {
+    public Output<String> globalNetworkEndpointGroup() {
         return this.globalNetworkEndpointGroup;
     }
 
@@ -45,8 +46,8 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -68,8 +69,8 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public GlobalNetworkEndpointArgs(
@@ -86,11 +87,11 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
     }
 
     private GlobalNetworkEndpointArgs() {
-        this.fqdn = Output.empty();
-        this.globalNetworkEndpointGroup = Output.empty();
-        this.ipAddress = Output.empty();
-        this.port = Output.empty();
-        this.project = Output.empty();
+        this.fqdn = Codegen.empty();
+        this.globalNetworkEndpointGroup = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.port = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Output.ofNullable(fqdn);
+            this.fqdn = Codegen.ofNullable(fqdn);
             return this;
         }
         public Builder globalNetworkEndpointGroup(Output<String> globalNetworkEndpointGroup) {
@@ -142,7 +143,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder port(Output<Integer> port) {
@@ -158,7 +159,7 @@ public final class GlobalNetworkEndpointArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public GlobalNetworkEndpointArgs build() {
             return new GlobalNetworkEndpointArgs(fqdn, globalNetworkEndpointGroup, ipAddress, port, project);

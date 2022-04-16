@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.JobIAMBindingArgs;
 import io.pulumi.gcp.dataproc.inputs.JobIAMBindingState;
@@ -57,7 +58,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=JobIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ JobIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ JobIAMBindingCondition> getCondition() {
+    public Output</* @Nullable */ JobIAMBindingCondition> condition() {
         return this.condition;
     }
     /**
@@ -71,19 +72,19 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the jobs's IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
-    public Output<String> getJobId() {
+    public Output<String> jobId() {
         return this.jobId;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     /**
@@ -99,7 +100,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -115,7 +116,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -133,7 +134,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -159,7 +160,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public JobIAMBinding(String name, JobIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/jobIAMBinding:JobIAMBinding", name, args == null ? JobIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/jobIAMBinding:JobIAMBinding", name, args == null ? JobIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private JobIAMBinding(String name, Output<String> id, @Nullable JobIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

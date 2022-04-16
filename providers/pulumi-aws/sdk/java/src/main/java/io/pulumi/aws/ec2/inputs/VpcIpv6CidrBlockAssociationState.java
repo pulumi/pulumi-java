@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
-    public Output<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
+    public Output<String> ipv6CidrBlock() {
+        return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     @Import(name="ipv6IpamPoolId")
       private final @Nullable Output<String> ipv6IpamPoolId;
 
-    public Output<String> getIpv6IpamPoolId() {
-        return this.ipv6IpamPoolId == null ? Output.empty() : this.ipv6IpamPoolId;
+    public Output<String> ipv6IpamPoolId() {
+        return this.ipv6IpamPoolId == null ? Codegen.empty() : this.ipv6IpamPoolId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     @Import(name="ipv6NetmaskLength")
       private final @Nullable Output<Integer> ipv6NetmaskLength;
 
-    public Output<Integer> getIpv6NetmaskLength() {
-        return this.ipv6NetmaskLength == null ? Output.empty() : this.ipv6NetmaskLength;
+    public Output<Integer> ipv6NetmaskLength() {
+        return this.ipv6NetmaskLength == null ? Codegen.empty() : this.ipv6NetmaskLength;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public VpcIpv6CidrBlockAssociationState(
@@ -71,10 +72,10 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     }
 
     private VpcIpv6CidrBlockAssociationState() {
-        this.ipv6CidrBlock = Output.empty();
-        this.ipv6IpamPoolId = Output.empty();
-        this.ipv6NetmaskLength = Output.empty();
-        this.vpcId = Output.empty();
+        this.ipv6CidrBlock = Codegen.empty();
+        this.ipv6IpamPoolId = Codegen.empty();
+        this.ipv6NetmaskLength = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Codegen.ofNullable(ipv6CidrBlock);
             return this;
         }
         public Builder ipv6IpamPoolId(@Nullable Output<String> ipv6IpamPoolId) {
@@ -116,7 +117,7 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder ipv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
-            this.ipv6IpamPoolId = Output.ofNullable(ipv6IpamPoolId);
+            this.ipv6IpamPoolId = Codegen.ofNullable(ipv6IpamPoolId);
             return this;
         }
         public Builder ipv6NetmaskLength(@Nullable Output<Integer> ipv6NetmaskLength) {
@@ -124,7 +125,7 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
-            this.ipv6NetmaskLength = Output.ofNullable(ipv6NetmaskLength);
+            this.ipv6NetmaskLength = Codegen.ofNullable(ipv6NetmaskLength);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -132,7 +133,7 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public VpcIpv6CidrBlockAssociationState build() {
             return new VpcIpv6CidrBlockAssociationState(ipv6CidrBlock, ipv6IpamPoolId, ipv6NetmaskLength, vpcId);

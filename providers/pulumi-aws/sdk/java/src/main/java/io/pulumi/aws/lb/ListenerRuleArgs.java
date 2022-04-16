@@ -7,6 +7,7 @@ import io.pulumi.aws.lb.inputs.ListenerRuleActionArgs;
 import io.pulumi.aws.lb.inputs.ListenerRuleConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<ListenerRuleActionArgs>> actions;
 
-    public Output<List<ListenerRuleActionArgs>> getActions() {
+    public Output<List<ListenerRuleActionArgs>> actions() {
         return this.actions;
     }
 
@@ -37,7 +38,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="conditions", required=true)
       private final Output<List<ListenerRuleConditionArgs>> conditions;
 
-    public Output<List<ListenerRuleConditionArgs>> getConditions() {
+    public Output<List<ListenerRuleConditionArgs>> conditions() {
         return this.conditions;
     }
 
@@ -48,7 +49,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
@@ -59,8 +60,8 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ListenerRuleArgs(
@@ -88,11 +89,11 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerRuleArgs() {
-        this.actions = Output.empty();
-        this.conditions = Output.empty();
-        this.listenerArn = Output.empty();
-        this.priority = Output.empty();
-        this.tags = Output.empty();
+        this.actions = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.listenerArn = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -166,7 +167,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ListenerRuleArgs build() {
             return new ListenerRuleArgs(actions, conditions, listenerArn, priority, tags);

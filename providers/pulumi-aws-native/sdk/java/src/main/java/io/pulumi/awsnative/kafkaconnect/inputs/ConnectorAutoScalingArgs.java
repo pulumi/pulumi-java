@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleInPolicyArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleOutPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     @Import(name="maxWorkerCount", required=true)
       private final Output<Integer> maxWorkerCount;
 
-    public Output<Integer> getMaxWorkerCount() {
+    public Output<Integer> maxWorkerCount() {
         return this.maxWorkerCount;
     }
 
@@ -37,7 +38,7 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     @Import(name="mcuCount", required=true)
       private final Output<Integer> mcuCount;
 
-    public Output<Integer> getMcuCount() {
+    public Output<Integer> mcuCount() {
         return this.mcuCount;
     }
 
@@ -48,21 +49,21 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     @Import(name="minWorkerCount", required=true)
       private final Output<Integer> minWorkerCount;
 
-    public Output<Integer> getMinWorkerCount() {
+    public Output<Integer> minWorkerCount() {
         return this.minWorkerCount;
     }
 
     @Import(name="scaleInPolicy", required=true)
       private final Output<ConnectorScaleInPolicyArgs> scaleInPolicy;
 
-    public Output<ConnectorScaleInPolicyArgs> getScaleInPolicy() {
+    public Output<ConnectorScaleInPolicyArgs> scaleInPolicy() {
         return this.scaleInPolicy;
     }
 
     @Import(name="scaleOutPolicy", required=true)
       private final Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
 
-    public Output<ConnectorScaleOutPolicyArgs> getScaleOutPolicy() {
+    public Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy() {
         return this.scaleOutPolicy;
     }
 
@@ -80,11 +81,11 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     }
 
     private ConnectorAutoScalingArgs() {
-        this.maxWorkerCount = Output.empty();
-        this.mcuCount = Output.empty();
-        this.minWorkerCount = Output.empty();
-        this.scaleInPolicy = Output.empty();
-        this.scaleOutPolicy = Output.empty();
+        this.maxWorkerCount = Codegen.empty();
+        this.mcuCount = Codegen.empty();
+        this.minWorkerCount = Codegen.empty();
+        this.scaleInPolicy = Codegen.empty();
+        this.scaleOutPolicy = Codegen.empty();
     }
 
     public static Builder builder() {

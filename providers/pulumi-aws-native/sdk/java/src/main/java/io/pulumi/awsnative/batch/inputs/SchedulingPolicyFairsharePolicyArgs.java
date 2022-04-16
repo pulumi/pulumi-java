@@ -6,6 +6,7 @@ package io.pulumi.awsnative.batch.inputs;
 import io.pulumi.awsnative.batch.inputs.SchedulingPolicyShareAttributesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -23,15 +24,15 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
     @Import(name="computeReservation")
       private final @Nullable Output<Double> computeReservation;
 
-    public Output<Double> getComputeReservation() {
-        return this.computeReservation == null ? Output.empty() : this.computeReservation;
+    public Output<Double> computeReservation() {
+        return this.computeReservation == null ? Codegen.empty() : this.computeReservation;
     }
 
     @Import(name="shareDecaySeconds")
       private final @Nullable Output<Double> shareDecaySeconds;
 
-    public Output<Double> getShareDecaySeconds() {
-        return this.shareDecaySeconds == null ? Output.empty() : this.shareDecaySeconds;
+    public Output<Double> shareDecaySeconds() {
+        return this.shareDecaySeconds == null ? Codegen.empty() : this.shareDecaySeconds;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
     @Import(name="shareDistribution")
       private final @Nullable Output<List<SchedulingPolicyShareAttributesArgs>> shareDistribution;
 
-    public Output<List<SchedulingPolicyShareAttributesArgs>> getShareDistribution() {
-        return this.shareDistribution == null ? Output.empty() : this.shareDistribution;
+    public Output<List<SchedulingPolicyShareAttributesArgs>> shareDistribution() {
+        return this.shareDistribution == null ? Codegen.empty() : this.shareDistribution;
     }
 
     public SchedulingPolicyFairsharePolicyArgs(
@@ -55,9 +56,9 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
     }
 
     private SchedulingPolicyFairsharePolicyArgs() {
-        this.computeReservation = Output.empty();
-        this.shareDecaySeconds = Output.empty();
-        this.shareDistribution = Output.empty();
+        this.computeReservation = Codegen.empty();
+        this.shareDecaySeconds = Codegen.empty();
+        this.shareDistribution = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder computeReservation(@Nullable Double computeReservation) {
-            this.computeReservation = Output.ofNullable(computeReservation);
+            this.computeReservation = Codegen.ofNullable(computeReservation);
             return this;
         }
         public Builder shareDecaySeconds(@Nullable Output<Double> shareDecaySeconds) {
@@ -97,7 +98,7 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder shareDecaySeconds(@Nullable Double shareDecaySeconds) {
-            this.shareDecaySeconds = Output.ofNullable(shareDecaySeconds);
+            this.shareDecaySeconds = Codegen.ofNullable(shareDecaySeconds);
             return this;
         }
         public Builder shareDistribution(@Nullable Output<List<SchedulingPolicyShareAttributesArgs>> shareDistribution) {
@@ -105,7 +106,7 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
             return this;
         }
         public Builder shareDistribution(@Nullable List<SchedulingPolicyShareAttributesArgs> shareDistribution) {
-            this.shareDistribution = Output.ofNullable(shareDistribution);
+            this.shareDistribution = Codegen.ofNullable(shareDistribution);
             return this;
         }
         public Builder shareDistribution(SchedulingPolicyShareAttributesArgs... shareDistribution) {

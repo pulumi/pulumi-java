@@ -18,7 +18,7 @@ public final class BucketStorageClassAnalysis {
         this.dataExport = dataExport;
     }
 
-    public Optional<BucketDataExport> getDataExport() {
+    public Optional<BucketDataExport> dataExport() {
         return Optional.ofNullable(this.dataExport);
     }
 

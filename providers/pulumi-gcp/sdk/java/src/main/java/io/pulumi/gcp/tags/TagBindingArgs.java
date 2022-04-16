@@ -5,6 +5,7 @@ package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -31,7 +32,7 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagValue", required=true)
       private final Output<String> tagValue;
 
-    public Output<String> getTagValue() {
+    public Output<String> tagValue() {
         return this.tagValue;
     }
 
@@ -43,8 +44,8 @@ public final class TagBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagBindingArgs() {
-        this.parent = Output.empty();
-        this.tagValue = Output.empty();
+        this.parent = Codegen.empty();
+        this.tagValue = Codegen.empty();
     }
 
     public static Builder builder() {

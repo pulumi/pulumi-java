@@ -7,6 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.HealthAlertActionArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthAlertCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,8 +27,8 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions")
       private final @Nullable Output<List<HealthAlertActionArgs>> actions;
 
-    public Output<List<HealthAlertActionArgs>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+    public Output<List<HealthAlertActionArgs>> actions() {
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="criteria", required=true)
       private final Output<HealthAlertCriteriaArgs> criteria;
 
-    public Output<HealthAlertCriteriaArgs> getCriteria() {
+    public Output<HealthAlertCriteriaArgs> criteria() {
         return this.criteria;
     }
 
@@ -48,7 +49,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
@@ -59,7 +60,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -70,8 +71,8 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,8 +93,8 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
-    public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+    public Output<String> ruleName() {
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+    public Output<List<String>> scopes() {
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public HealthAlertArgs(
@@ -140,15 +141,15 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthAlertArgs() {
-        this.actions = Output.empty();
-        this.criteria = Output.empty();
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleName = Output.empty();
-        this.scopes = Output.empty();
-        this.tags = Output.empty();
+        this.actions = Codegen.empty();
+        this.criteria = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actions(@Nullable List<HealthAlertActionArgs> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(HealthAlertActionArgs... actions) {
@@ -227,7 +228,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -243,7 +244,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder scopes(@Nullable Output<List<String>> scopes) {
@@ -251,7 +252,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(String... scopes) {
@@ -262,7 +263,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public HealthAlertArgs build() {
             return new HealthAlertArgs(actions, criteria, description, enabled, location, resourceGroupName, ruleName, scopes, tags);

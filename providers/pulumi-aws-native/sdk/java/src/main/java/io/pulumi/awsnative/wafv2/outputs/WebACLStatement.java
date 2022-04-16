@@ -75,49 +75,49 @@ public final class WebACLStatement {
         this.xssMatchStatement = xssMatchStatement;
     }
 
-    public Optional<WebACLAndStatement> getAndStatement() {
+    public Optional<WebACLAndStatement> andStatement() {
         return Optional.ofNullable(this.andStatement);
     }
-    public Optional<WebACLByteMatchStatement> getByteMatchStatement() {
+    public Optional<WebACLByteMatchStatement> byteMatchStatement() {
         return Optional.ofNullable(this.byteMatchStatement);
     }
-    public Optional<WebACLGeoMatchStatement> getGeoMatchStatement() {
+    public Optional<WebACLGeoMatchStatement> geoMatchStatement() {
         return Optional.ofNullable(this.geoMatchStatement);
     }
-    public Optional<WebACLIPSetReferenceStatement> getIPSetReferenceStatement() {
+    public Optional<WebACLIPSetReferenceStatement> iPSetReferenceStatement() {
         return Optional.ofNullable(this.iPSetReferenceStatement);
     }
-    public Optional<WebACLLabelMatchStatement> getLabelMatchStatement() {
+    public Optional<WebACLLabelMatchStatement> labelMatchStatement() {
         return Optional.ofNullable(this.labelMatchStatement);
     }
-    public Optional<WebACLManagedRuleGroupStatement> getManagedRuleGroupStatement() {
+    public Optional<WebACLManagedRuleGroupStatement> managedRuleGroupStatement() {
         return Optional.ofNullable(this.managedRuleGroupStatement);
     }
-    public Optional<WebACLNotStatement> getNotStatement() {
+    public Optional<WebACLNotStatement> notStatement() {
         return Optional.ofNullable(this.notStatement);
     }
-    public Optional<WebACLOrStatement> getOrStatement() {
+    public Optional<WebACLOrStatement> orStatement() {
         return Optional.ofNullable(this.orStatement);
     }
-    public Optional<WebACLRateBasedStatement> getRateBasedStatement() {
+    public Optional<WebACLRateBasedStatement> rateBasedStatement() {
         return Optional.ofNullable(this.rateBasedStatement);
     }
-    public Optional<WebACLRegexMatchStatement> getRegexMatchStatement() {
+    public Optional<WebACLRegexMatchStatement> regexMatchStatement() {
         return Optional.ofNullable(this.regexMatchStatement);
     }
-    public Optional<WebACLRegexPatternSetReferenceStatement> getRegexPatternSetReferenceStatement() {
+    public Optional<WebACLRegexPatternSetReferenceStatement> regexPatternSetReferenceStatement() {
         return Optional.ofNullable(this.regexPatternSetReferenceStatement);
     }
-    public Optional<WebACLRuleGroupReferenceStatement> getRuleGroupReferenceStatement() {
+    public Optional<WebACLRuleGroupReferenceStatement> ruleGroupReferenceStatement() {
         return Optional.ofNullable(this.ruleGroupReferenceStatement);
     }
-    public Optional<WebACLSizeConstraintStatement> getSizeConstraintStatement() {
+    public Optional<WebACLSizeConstraintStatement> sizeConstraintStatement() {
         return Optional.ofNullable(this.sizeConstraintStatement);
     }
-    public Optional<WebACLSqliMatchStatement> getSqliMatchStatement() {
+    public Optional<WebACLSqliMatchStatement> sqliMatchStatement() {
         return Optional.ofNullable(this.sqliMatchStatement);
     }
-    public Optional<WebACLXssMatchStatement> getXssMatchStatement() {
+    public Optional<WebACLXssMatchStatement> xssMatchStatement() {
         return Optional.ofNullable(this.xssMatchStatement);
     }
 

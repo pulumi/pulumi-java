@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.NatAddressArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class NatAddress extends io.pulumi.resources.CustomResource {
      * @return The static IPV4 address.
      * 
      */
-    public Output<String> getIpAddress() {
+    public Output<String> ipAddress() {
         return this.ipAddress;
     }
     /**
@@ -42,7 +43,7 @@ public class NatAddress extends io.pulumi.resources.CustomResource {
      * @return Resource ID of the NAT address.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -56,7 +57,7 @@ public class NatAddress extends io.pulumi.resources.CustomResource {
      * @return State of the nat address.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -82,7 +83,7 @@ public class NatAddress extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NatAddress(String name, NatAddressArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:NatAddress", name, args == null ? NatAddressArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:NatAddress", name, args == null ? NatAddressArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NatAddress(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

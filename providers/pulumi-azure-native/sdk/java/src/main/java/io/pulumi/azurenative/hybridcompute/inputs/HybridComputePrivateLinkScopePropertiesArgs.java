@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hybridcompute.enums.PublicNetworkAccessType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
     @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     public HybridComputePrivateLinkScopePropertiesArgs(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccess) {
@@ -36,7 +37,7 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
     }
 
     private HybridComputePrivateLinkScopePropertiesArgs() {
-        this.publicNetworkAccess = Output.empty();
+        this.publicNetworkAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessType> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }        public HybridComputePrivateLinkScopePropertiesArgs build() {
             return new HybridComputePrivateLinkScopePropertiesArgs(publicNetworkAccess);

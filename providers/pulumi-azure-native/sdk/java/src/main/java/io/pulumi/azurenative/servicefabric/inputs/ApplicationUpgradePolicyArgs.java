@@ -9,6 +9,7 @@ import io.pulumi.azurenative.servicefabric.inputs.ArmRollingUpgradeMonitoringPol
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     @Import(name="applicationHealthPolicy")
       private final @Nullable Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy;
 
-    public Output<ArmApplicationHealthPolicyArgs> getApplicationHealthPolicy() {
-        return this.applicationHealthPolicy == null ? Output.empty() : this.applicationHealthPolicy;
+    public Output<ArmApplicationHealthPolicyArgs> applicationHealthPolicy() {
+        return this.applicationHealthPolicy == null ? Codegen.empty() : this.applicationHealthPolicy;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     @Import(name="forceRestart")
       private final @Nullable Output<Boolean> forceRestart;
 
-    public Output<Boolean> getForceRestart() {
-        return this.forceRestart == null ? Output.empty() : this.forceRestart;
+    public Output<Boolean> forceRestart() {
+        return this.forceRestart == null ? Codegen.empty() : this.forceRestart;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     @Import(name="recreateApplication")
       private final @Nullable Output<Boolean> recreateApplication;
 
-    public Output<Boolean> getRecreateApplication() {
-        return this.recreateApplication == null ? Output.empty() : this.recreateApplication;
+    public Output<Boolean> recreateApplication() {
+        return this.recreateApplication == null ? Codegen.empty() : this.recreateApplication;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     @Import(name="rollingUpgradeMonitoringPolicy")
       private final @Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy;
 
-    public Output<ArmRollingUpgradeMonitoringPolicyArgs> getRollingUpgradeMonitoringPolicy() {
-        return this.rollingUpgradeMonitoringPolicy == null ? Output.empty() : this.rollingUpgradeMonitoringPolicy;
+    public Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy() {
+        return this.rollingUpgradeMonitoringPolicy == null ? Codegen.empty() : this.rollingUpgradeMonitoringPolicy;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     @Import(name="upgradeMode")
       private final @Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode;
 
-    public Output<Either<String,RollingUpgradeMode>> getUpgradeMode() {
-        return this.upgradeMode == null ? Output.empty() : this.upgradeMode;
+    public Output<Either<String,RollingUpgradeMode>> upgradeMode() {
+        return this.upgradeMode == null ? Codegen.empty() : this.upgradeMode;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     @Import(name="upgradeReplicaSetCheckTimeout")
       private final @Nullable Output<String> upgradeReplicaSetCheckTimeout;
 
-    public Output<String> getUpgradeReplicaSetCheckTimeout() {
-        return this.upgradeReplicaSetCheckTimeout == null ? Output.empty() : this.upgradeReplicaSetCheckTimeout;
+    public Output<String> upgradeReplicaSetCheckTimeout() {
+        return this.upgradeReplicaSetCheckTimeout == null ? Codegen.empty() : this.upgradeReplicaSetCheckTimeout;
     }
 
     public ApplicationUpgradePolicyArgs(
@@ -105,12 +106,12 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
     }
 
     private ApplicationUpgradePolicyArgs() {
-        this.applicationHealthPolicy = Output.empty();
-        this.forceRestart = Output.empty();
-        this.recreateApplication = Output.empty();
-        this.rollingUpgradeMonitoringPolicy = Output.empty();
-        this.upgradeMode = Output.empty();
-        this.upgradeReplicaSetCheckTimeout = Output.empty();
+        this.applicationHealthPolicy = Codegen.empty();
+        this.forceRestart = Codegen.empty();
+        this.recreateApplication = Codegen.empty();
+        this.rollingUpgradeMonitoringPolicy = Codegen.empty();
+        this.upgradeMode = Codegen.empty();
+        this.upgradeReplicaSetCheckTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder applicationHealthPolicy(@Nullable ArmApplicationHealthPolicyArgs applicationHealthPolicy) {
-            this.applicationHealthPolicy = Output.ofNullable(applicationHealthPolicy);
+            this.applicationHealthPolicy = Codegen.ofNullable(applicationHealthPolicy);
             return this;
         }
         public Builder forceRestart(@Nullable Output<Boolean> forceRestart) {
@@ -156,7 +157,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder forceRestart(@Nullable Boolean forceRestart) {
-            this.forceRestart = Output.ofNullable(forceRestart);
+            this.forceRestart = Codegen.ofNullable(forceRestart);
             return this;
         }
         public Builder recreateApplication(@Nullable Output<Boolean> recreateApplication) {
@@ -164,7 +165,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder recreateApplication(@Nullable Boolean recreateApplication) {
-            this.recreateApplication = Output.ofNullable(recreateApplication);
+            this.recreateApplication = Codegen.ofNullable(recreateApplication);
             return this;
         }
         public Builder rollingUpgradeMonitoringPolicy(@Nullable Output<ArmRollingUpgradeMonitoringPolicyArgs> rollingUpgradeMonitoringPolicy) {
@@ -172,7 +173,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder rollingUpgradeMonitoringPolicy(@Nullable ArmRollingUpgradeMonitoringPolicyArgs rollingUpgradeMonitoringPolicy) {
-            this.rollingUpgradeMonitoringPolicy = Output.ofNullable(rollingUpgradeMonitoringPolicy);
+            this.rollingUpgradeMonitoringPolicy = Codegen.ofNullable(rollingUpgradeMonitoringPolicy);
             return this;
         }
         public Builder upgradeMode(@Nullable Output<Either<String,RollingUpgradeMode>> upgradeMode) {
@@ -180,7 +181,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder upgradeMode(@Nullable Either<String,RollingUpgradeMode> upgradeMode) {
-            this.upgradeMode = Output.ofNullable(upgradeMode);
+            this.upgradeMode = Codegen.ofNullable(upgradeMode);
             return this;
         }
         public Builder upgradeReplicaSetCheckTimeout(@Nullable Output<String> upgradeReplicaSetCheckTimeout) {
@@ -188,7 +189,7 @@ public final class ApplicationUpgradePolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder upgradeReplicaSetCheckTimeout(@Nullable String upgradeReplicaSetCheckTimeout) {
-            this.upgradeReplicaSetCheckTimeout = Output.ofNullable(upgradeReplicaSetCheckTimeout);
+            this.upgradeReplicaSetCheckTimeout = Codegen.ofNullable(upgradeReplicaSetCheckTimeout);
             return this;
         }        public ApplicationUpgradePolicyArgs build() {
             return new ApplicationUpgradePolicyArgs(applicationHealthPolicy, forceRestart, recreateApplication, rollingUpgradeMonitoringPolicy, upgradeMode, upgradeReplicaSetCheckTimeout);

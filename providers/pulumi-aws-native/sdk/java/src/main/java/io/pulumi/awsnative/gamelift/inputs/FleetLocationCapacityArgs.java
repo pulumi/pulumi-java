@@ -5,6 +5,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     @Import(name="desiredEC2Instances", required=true)
       private final Output<Integer> desiredEC2Instances;
 
-    public Output<Integer> getDesiredEC2Instances() {
+    public Output<Integer> desiredEC2Instances() {
         return this.desiredEC2Instances;
     }
 
@@ -35,7 +36,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     @Import(name="maxSize", required=true)
       private final Output<Integer> maxSize;
 
-    public Output<Integer> getMaxSize() {
+    public Output<Integer> maxSize() {
         return this.maxSize;
     }
 
@@ -46,7 +47,7 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     @Import(name="minSize", required=true)
       private final Output<Integer> minSize;
 
-    public Output<Integer> getMinSize() {
+    public Output<Integer> minSize() {
         return this.minSize;
     }
 
@@ -60,9 +61,9 @@ public final class FleetLocationCapacityArgs extends io.pulumi.resources.Resourc
     }
 
     private FleetLocationCapacityArgs() {
-        this.desiredEC2Instances = Output.empty();
-        this.maxSize = Output.empty();
-        this.minSize = Output.empty();
+        this.desiredEC2Instances = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.minSize = Codegen.empty();
     }
 
     public static Builder builder() {

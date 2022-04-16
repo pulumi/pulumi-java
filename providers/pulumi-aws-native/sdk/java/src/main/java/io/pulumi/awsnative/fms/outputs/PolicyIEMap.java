@@ -22,10 +22,10 @@ public final class PolicyIEMap {
         this.oRGUNIT = oRGUNIT;
     }
 
-    public List<String> getACCOUNT() {
+    public List<String> aCCOUNT() {
         return this.aCCOUNT == null ? List.of() : this.aCCOUNT;
     }
-    public List<String> getORGUNIT() {
+    public List<String> oRGUNIT() {
         return this.oRGUNIT == null ? List.of() : this.oRGUNIT;
     }
 

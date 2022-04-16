@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GooRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -35,7 +36,7 @@ public final class GooRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url", required=true)
       private final Output<String> url;
 
-    public Output<String> getUrl() {
+    public Output<String> url() {
         return this.url;
     }
 
@@ -47,8 +48,8 @@ public final class GooRepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GooRepositoryArgs() {
-        this.name = Output.empty();
-        this.url = Output.empty();
+        this.name = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public GooglePrivacyDlpV2StoredTypeArgs(
@@ -48,8 +49,8 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
     }
 
     private GooglePrivacyDlpV2StoredTypeArgs() {
-        this.createTime = Output.empty();
-        this.name = Output.empty();
+        this.createTime = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public GooglePrivacyDlpV2StoredTypeArgs build() {
             return new GooglePrivacyDlpV2StoredTypeArgs(createTime, name);

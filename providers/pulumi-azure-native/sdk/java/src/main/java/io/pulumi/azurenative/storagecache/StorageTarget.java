@@ -15,6 +15,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return Properties when targetType is blobNfs.
      * 
      */
-    public Output</* @Nullable */ BlobNfsTargetResponse> getBlobNfs() {
+    public Output</* @Nullable */ BlobNfsTargetResponse> blobNfs() {
         return this.blobNfs;
     }
     /**
@@ -61,7 +62,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return Properties when targetType is clfs.
      * 
      */
-    public Output</* @Nullable */ ClfsTargetResponse> getClfs() {
+    public Output</* @Nullable */ ClfsTargetResponse> clfs() {
         return this.clfs;
     }
     /**
@@ -75,7 +76,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return List of Cache namespace junctions to target for namespace associations.
      * 
      */
-    public Output</* @Nullable */ List<NamespaceJunctionResponse>> getJunctions() {
+    public Output</* @Nullable */ List<NamespaceJunctionResponse>> junctions() {
         return this.junctions;
     }
     /**
@@ -89,7 +90,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return Region name string.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -103,7 +104,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return Name of the Storage Target.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -117,7 +118,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return Properties when targetType is nfs3.
      * 
      */
-    public Output</* @Nullable */ Nfs3TargetResponse> getNfs3() {
+    public Output</* @Nullable */ Nfs3TargetResponse> nfs3() {
         return this.nfs3;
     }
     /**
@@ -131,7 +132,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -145,7 +146,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return The system meta data relating to this resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -159,7 +160,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return Type of the Storage Target.
      * 
      */
-    public Output<String> getTargetType() {
+    public Output<String> targetType() {
         return this.targetType;
     }
     /**
@@ -173,7 +174,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return Type of the Storage Target; Microsoft.StorageCache/Cache/StorageTarget
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -187,7 +188,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @return Properties when targetType is unknown.
      * 
      */
-    public Output</* @Nullable */ UnknownTargetResponse> getUnknown() {
+    public Output</* @Nullable */ UnknownTargetResponse> unknown() {
         return this.unknown;
     }
 
@@ -213,7 +214,7 @@ public class StorageTarget extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StorageTarget(String name, StorageTargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagecache:StorageTarget", name, args == null ? StorageTargetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storagecache:StorageTarget", name, args == null ? StorageTargetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StorageTarget(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

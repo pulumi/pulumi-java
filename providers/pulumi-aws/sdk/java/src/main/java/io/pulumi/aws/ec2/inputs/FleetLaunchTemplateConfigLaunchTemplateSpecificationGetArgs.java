@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
     @Import(name="launchTemplateId")
       private final @Nullable Output<String> launchTemplateId;
 
-    public Output<String> getLaunchTemplateId() {
-        return this.launchTemplateId == null ? Output.empty() : this.launchTemplateId;
+    public Output<String> launchTemplateId() {
+        return this.launchTemplateId == null ? Codegen.empty() : this.launchTemplateId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
     @Import(name="launchTemplateName")
       private final @Nullable Output<String> launchTemplateName;
 
-    public Output<String> getLaunchTemplateName() {
-        return this.launchTemplateName == null ? Output.empty() : this.launchTemplateName;
+    public Output<String> launchTemplateName() {
+        return this.launchTemplateName == null ? Codegen.empty() : this.launchTemplateName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
     @Import(name="version", required=true)
       private final Output<String> version;
 
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -57,9 +58,9 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
     }
 
     private FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs() {
-        this.launchTemplateId = Output.empty();
-        this.launchTemplateName = Output.empty();
-        this.version = Output.empty();
+        this.launchTemplateId = Codegen.empty();
+        this.launchTemplateName = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
             return this;
         }
         public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = Output.ofNullable(launchTemplateId);
+            this.launchTemplateId = Codegen.ofNullable(launchTemplateId);
             return this;
         }
         public Builder launchTemplateName(@Nullable Output<String> launchTemplateName) {
@@ -99,7 +100,7 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
             return this;
         }
         public Builder launchTemplateName(@Nullable String launchTemplateName) {
-            this.launchTemplateName = Output.ofNullable(launchTemplateName);
+            this.launchTemplateName = Codegen.ofNullable(launchTemplateName);
             return this;
         }
         public Builder version(Output<String> version) {

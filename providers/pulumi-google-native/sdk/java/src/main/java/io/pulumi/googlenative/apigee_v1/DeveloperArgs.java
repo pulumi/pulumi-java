@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessType")
       private final @Nullable Output<String> accessType;
 
-    public Output<String> getAccessType() {
-        return this.accessType == null ? Output.empty() : this.accessType;
+    public Output<String> accessType() {
+        return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appFamily")
       private final @Nullable Output<String> appFamily;
 
-    public Output<String> getAppFamily() {
-        return this.appFamily == null ? Output.empty() : this.appFamily;
+    public Output<String> appFamily() {
+        return this.appFamily == null ? Codegen.empty() : this.appFamily;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apps")
       private final @Nullable Output<List<String>> apps;
 
-    public Output<List<String>> getApps() {
-        return this.apps == null ? Output.empty() : this.apps;
+    public Output<List<String>> apps() {
+        return this.apps == null ? Codegen.empty() : this.apps;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="companies")
       private final @Nullable Output<List<String>> companies;
 
-    public Output<List<String>> getCompanies() {
-        return this.companies == null ? Output.empty() : this.companies;
+    public Output<List<String>> companies() {
+        return this.companies == null ? Codegen.empty() : this.companies;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="developerId")
       private final @Nullable Output<String> developerId;
 
-    public Output<String> getDeveloperId() {
-        return this.developerId == null ? Output.empty() : this.developerId;
+    public Output<String> developerId() {
+        return this.developerId == null ? Codegen.empty() : this.developerId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -100,7 +101,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstName", required=true)
       private final Output<String> firstName;
 
-    public Output<String> getFirstName() {
+    public Output<String> firstName() {
         return this.firstName;
     }
 
@@ -111,14 +112,14 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastName", required=true)
       private final Output<String> lastName;
 
-    public Output<String> getLastName() {
+    public Output<String> lastName() {
         return this.lastName;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -129,7 +130,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -159,17 +160,17 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeveloperArgs() {
-        this.accessType = Output.empty();
-        this.appFamily = Output.empty();
-        this.apps = Output.empty();
-        this.attributes = Output.empty();
-        this.companies = Output.empty();
-        this.developerId = Output.empty();
-        this.email = Output.empty();
-        this.firstName = Output.empty();
-        this.lastName = Output.empty();
-        this.organizationId = Output.empty();
-        this.userName = Output.empty();
+        this.accessType = Codegen.empty();
+        this.appFamily = Codegen.empty();
+        this.apps = Codegen.empty();
+        this.attributes = Codegen.empty();
+        this.companies = Codegen.empty();
+        this.developerId = Codegen.empty();
+        this.email = Codegen.empty();
+        this.firstName = Codegen.empty();
+        this.lastName = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -217,7 +218,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessType(@Nullable String accessType) {
-            this.accessType = Output.ofNullable(accessType);
+            this.accessType = Codegen.ofNullable(accessType);
             return this;
         }
         public Builder appFamily(@Nullable Output<String> appFamily) {
@@ -225,7 +226,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appFamily(@Nullable String appFamily) {
-            this.appFamily = Output.ofNullable(appFamily);
+            this.appFamily = Codegen.ofNullable(appFamily);
             return this;
         }
         public Builder apps(@Nullable Output<List<String>> apps) {
@@ -233,7 +234,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apps(@Nullable List<String> apps) {
-            this.apps = Output.ofNullable(apps);
+            this.apps = Codegen.ofNullable(apps);
             return this;
         }
         public Builder apps(String... apps) {
@@ -244,7 +245,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
@@ -255,7 +256,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder companies(@Nullable List<String> companies) {
-            this.companies = Output.ofNullable(companies);
+            this.companies = Codegen.ofNullable(companies);
             return this;
         }
         public Builder companies(String... companies) {
@@ -266,7 +267,7 @@ public final class DeveloperArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder developerId(@Nullable String developerId) {
-            this.developerId = Output.ofNullable(developerId);
+            this.developerId = Codegen.ofNullable(developerId);
             return this;
         }
         public Builder email(Output<String> email) {

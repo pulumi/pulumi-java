@@ -5,6 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="expires")
       private final @Nullable Output<Integer> expires;
 
-    public Output<Integer> getExpires() {
-        return this.expires == null ? Output.empty() : this.expires;
+    public Output<Integer> expires() {
+        return this.expires == null ? Codegen.empty() : this.expires;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="notBefore")
       private final @Nullable Output<Integer> notBefore;
 
-    public Output<Integer> getNotBefore() {
-        return this.notBefore == null ? Output.empty() : this.notBefore;
+    public Output<Integer> notBefore() {
+        return this.notBefore == null ? Codegen.empty() : this.notBefore;
     }
 
     public SecretAttributesArgs(
@@ -62,9 +63,9 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SecretAttributesArgs() {
-        this.enabled = Output.empty();
-        this.expires = Output.empty();
-        this.notBefore = Output.empty();
+        this.enabled = Codegen.empty();
+        this.expires = Codegen.empty();
+        this.notBefore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder expires(@Nullable Output<Integer> expires) {
@@ -104,7 +105,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expires(@Nullable Integer expires) {
-            this.expires = Output.ofNullable(expires);
+            this.expires = Codegen.ofNullable(expires);
             return this;
         }
         public Builder notBefore(@Nullable Output<Integer> notBefore) {
@@ -112,7 +113,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder notBefore(@Nullable Integer notBefore) {
-            this.notBefore = Output.ofNullable(notBefore);
+            this.notBefore = Codegen.ofNullable(notBefore);
             return this;
         }        public SecretAttributesArgs build() {
             return new SecretAttributesArgs(enabled, expires, notBefore);

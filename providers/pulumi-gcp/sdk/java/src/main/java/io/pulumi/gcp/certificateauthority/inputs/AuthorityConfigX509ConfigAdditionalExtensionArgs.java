@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +24,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends io.p
     @Import(name="critical", required=true)
       private final Output<Boolean> critical;
 
-    public Output<Boolean> getCritical() {
+    public Output<Boolean> critical() {
         return this.critical;
     }
 
@@ -35,7 +36,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends io.p
     @Import(name="objectId", required=true)
       private final Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId;
 
-    public Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> getObjectId() {
+    public Output<AuthorityConfigX509ConfigAdditionalExtensionObjectIdArgs> objectId() {
         return this.objectId;
     }
 
@@ -46,7 +47,7 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends io.p
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -60,9 +61,9 @@ public final class AuthorityConfigX509ConfigAdditionalExtensionArgs extends io.p
     }
 
     private AuthorityConfigX509ConfigAdditionalExtensionArgs() {
-        this.critical = Output.empty();
-        this.objectId = Output.empty();
-        this.value = Output.empty();
+        this.critical = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

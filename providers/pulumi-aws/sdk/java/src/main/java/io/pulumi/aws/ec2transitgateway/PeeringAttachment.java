@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2transitgateway.inputs.PeeringAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class PeeringAttachment extends io.pulumi.resources.CustomResource {
      * @return Account ID of EC2 Transit Gateway to peer with. Defaults to the account ID the current provider is currently connected to.
      * 
      */
-    public Output<String> getPeerAccountId() {
+    public Output<String> peerAccountId() {
         return this.peerAccountId;
     }
     /**
@@ -55,7 +56,7 @@ public class PeeringAttachment extends io.pulumi.resources.CustomResource {
      * @return Region of EC2 Transit Gateway to peer with.
      * 
      */
-    public Output<String> getPeerRegion() {
+    public Output<String> peerRegion() {
         return this.peerRegion;
     }
     /**
@@ -69,7 +70,7 @@ public class PeeringAttachment extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway to peer with.
      * 
      */
-    public Output<String> getPeerTransitGatewayId() {
+    public Output<String> peerTransitGatewayId() {
         return this.peerTransitGatewayId;
     }
     /**
@@ -83,7 +84,7 @@ public class PeeringAttachment extends io.pulumi.resources.CustomResource {
      * @return Key-value tags for the EC2 Transit Gateway Peering Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -97,7 +98,7 @@ public class PeeringAttachment extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -111,7 +112,7 @@ public class PeeringAttachment extends io.pulumi.resources.CustomResource {
      * @return Identifier of EC2 Transit Gateway.
      * 
      */
-    public Output<String> getTransitGatewayId() {
+    public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 
@@ -137,7 +138,7 @@ public class PeeringAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PeeringAttachment(String name, PeeringAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2transitgateway/peeringAttachment:PeeringAttachment", name, args == null ? PeeringAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2transitgateway/peeringAttachment:PeeringAttachment", name, args == null ? PeeringAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PeeringAttachment(String name, Output<String> id, @Nullable PeeringAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

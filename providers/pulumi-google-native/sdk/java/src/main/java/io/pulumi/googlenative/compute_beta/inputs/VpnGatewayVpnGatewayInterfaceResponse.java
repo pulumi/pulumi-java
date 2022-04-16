@@ -23,7 +23,7 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends io.pulumi.resou
     @Import(name="interconnectAttachment", required=true)
       private final String interconnectAttachment;
 
-    public String getInterconnectAttachment() {
+    public String interconnectAttachment() {
         return this.interconnectAttachment;
     }
 
@@ -34,7 +34,7 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends io.pulumi.resou
     @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
 

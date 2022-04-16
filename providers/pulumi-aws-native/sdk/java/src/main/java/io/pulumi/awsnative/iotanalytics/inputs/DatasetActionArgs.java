@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatasetContainerActionArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetQueryActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,22 +20,22 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
-    public Output<String> getActionName() {
+    public Output<String> actionName() {
         return this.actionName;
     }
 
     @Import(name="containerAction")
       private final @Nullable Output<DatasetContainerActionArgs> containerAction;
 
-    public Output<DatasetContainerActionArgs> getContainerAction() {
-        return this.containerAction == null ? Output.empty() : this.containerAction;
+    public Output<DatasetContainerActionArgs> containerAction() {
+        return this.containerAction == null ? Codegen.empty() : this.containerAction;
     }
 
     @Import(name="queryAction")
       private final @Nullable Output<DatasetQueryActionArgs> queryAction;
 
-    public Output<DatasetQueryActionArgs> getQueryAction() {
-        return this.queryAction == null ? Output.empty() : this.queryAction;
+    public Output<DatasetQueryActionArgs> queryAction() {
+        return this.queryAction == null ? Codegen.empty() : this.queryAction;
     }
 
     public DatasetActionArgs(
@@ -47,9 +48,9 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetActionArgs() {
-        this.actionName = Output.empty();
-        this.containerAction = Output.empty();
-        this.queryAction = Output.empty();
+        this.actionName = Codegen.empty();
+        this.containerAction = Codegen.empty();
+        this.queryAction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerAction(@Nullable DatasetContainerActionArgs containerAction) {
-            this.containerAction = Output.ofNullable(containerAction);
+            this.containerAction = Codegen.ofNullable(containerAction);
             return this;
         }
         public Builder queryAction(@Nullable Output<DatasetQueryActionArgs> queryAction) {
@@ -97,7 +98,7 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryAction(@Nullable DatasetQueryActionArgs queryAction) {
-            this.queryAction = Output.ofNullable(queryAction);
+            this.queryAction = Codegen.ofNullable(queryAction);
             return this;
         }        public DatasetActionArgs build() {
             return new DatasetActionArgs(actionName, containerAction, queryAction);

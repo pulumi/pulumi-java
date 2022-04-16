@@ -5,6 +5,7 @@ package io.pulumi.azurenative.advisor;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="recommendationId", required=true)
       private final Output<String> recommendationId;
 
-    public Output<String> getRecommendationId() {
+    public Output<String> recommendationId() {
         return this.recommendationId;
     }
 
@@ -43,7 +44,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
-    public Output<String> getResourceUri() {
+    public Output<String> resourceUri() {
         return this.resourceUri;
     }
 
@@ -54,8 +55,8 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="suppressionId")
       private final @Nullable Output<String> suppressionId;
 
-    public Output<String> getSuppressionId() {
-        return this.suppressionId == null ? Output.empty() : this.suppressionId;
+    public Output<String> suppressionId() {
+        return this.suppressionId == null ? Codegen.empty() : this.suppressionId;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<String> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public SuppressionArgs(
@@ -83,11 +84,11 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SuppressionArgs() {
-        this.name = Output.empty();
-        this.recommendationId = Output.empty();
-        this.resourceUri = Output.empty();
-        this.suppressionId = Output.empty();
-        this.ttl = Output.empty();
+        this.name = Codegen.empty();
+        this.recommendationId = Codegen.empty();
+        this.resourceUri = Codegen.empty();
+        this.suppressionId = Codegen.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder recommendationId(Output<String> recommendationId) {
@@ -147,7 +148,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder suppressionId(@Nullable String suppressionId) {
-            this.suppressionId = Output.ofNullable(suppressionId);
+            this.suppressionId = Codegen.ofNullable(suppressionId);
             return this;
         }
         public Builder ttl(@Nullable Output<String> ttl) {
@@ -155,7 +156,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public SuppressionArgs build() {
             return new SuppressionArgs(name, recommendationId, resourceUri, suppressionId, ttl);

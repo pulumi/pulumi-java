@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingSpecGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusGetArgs;
@@ -25,8 +26,8 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<DomainMappingMetadataGetArgs> metadata;
 
-    public Output<DomainMappingMetadataGetArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<DomainMappingMetadataGetArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="spec")
       private final @Nullable Output<DomainMappingSpecGetArgs> spec;
 
-    public Output<DomainMappingSpecGetArgs> getSpec() {
-        return this.spec == null ? Output.empty() : this.spec;
+    public Output<DomainMappingSpecGetArgs> spec() {
+        return this.spec == null ? Codegen.empty() : this.spec;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="statuses")
       private final @Nullable Output<List<DomainMappingStatusGetArgs>> statuses;
 
-    public Output<List<DomainMappingStatusGetArgs>> getStatuses() {
-        return this.statuses == null ? Output.empty() : this.statuses;
+    public Output<List<DomainMappingStatusGetArgs>> statuses() {
+        return this.statuses == null ? Codegen.empty() : this.statuses;
     }
 
     public DomainMappingState(
@@ -103,12 +104,12 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainMappingState() {
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.spec = Output.empty();
-        this.statuses = Output.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.spec = Codegen.empty();
+        this.statuses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<DomainMappingMetadataGetArgs> metadata) {
@@ -154,7 +155,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable DomainMappingMetadataGetArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -162,7 +163,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -170,7 +171,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder spec(@Nullable Output<DomainMappingSpecGetArgs> spec) {
@@ -178,7 +179,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spec(@Nullable DomainMappingSpecGetArgs spec) {
-            this.spec = Output.ofNullable(spec);
+            this.spec = Codegen.ofNullable(spec);
             return this;
         }
         public Builder statuses(@Nullable Output<List<DomainMappingStatusGetArgs>> statuses) {
@@ -186,7 +187,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder statuses(@Nullable List<DomainMappingStatusGetArgs> statuses) {
-            this.statuses = Output.ofNullable(statuses);
+            this.statuses = Codegen.ofNullable(statuses);
             return this;
         }
         public Builder statuses(DomainMappingStatusGetArgs... statuses) {

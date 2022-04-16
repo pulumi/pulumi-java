@@ -33,14 +33,14 @@ public final class SpecificationResponse {
      * An Android mobile test execution specification.
      * 
     */
-    public AndroidTestResponse getAndroidTest() {
+    public AndroidTestResponse androidTest() {
         return this.androidTest;
     }
     /**
      * An iOS mobile test execution specification.
      * 
     */
-    public IosTestResponse getIosTest() {
+    public IosTestResponse iosTest() {
         return this.iosTest;
     }
 

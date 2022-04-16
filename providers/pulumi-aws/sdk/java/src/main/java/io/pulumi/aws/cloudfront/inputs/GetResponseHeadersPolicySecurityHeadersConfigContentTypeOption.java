@@ -19,7 +19,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 

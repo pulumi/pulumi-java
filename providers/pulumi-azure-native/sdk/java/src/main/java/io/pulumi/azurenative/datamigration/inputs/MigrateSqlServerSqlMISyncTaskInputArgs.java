@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabaseI
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
     @Import(name="azureApp", required=true)
       private final Output<AzureActiveDirectoryAppArgs> azureApp;
 
-    public Output<AzureActiveDirectoryAppArgs> getAzureApp() {
+    public Output<AzureActiveDirectoryAppArgs> azureApp() {
         return this.azureApp;
     }
 
@@ -42,8 +43,8 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
     @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
-    public Output<FileShareArgs> getBackupFileShare() {
-        return this.backupFileShare == null ? Output.empty() : this.backupFileShare;
+    public Output<FileShareArgs> backupFileShare() {
+        return this.backupFileShare == null ? Codegen.empty() : this.backupFileShare;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
-    public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -64,7 +65,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -75,7 +76,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
     @Import(name="storageResourceId", required=true)
       private final Output<String> storageResourceId;
 
-    public Output<String> getStorageResourceId() {
+    public Output<String> storageResourceId() {
         return this.storageResourceId;
     }
 
@@ -86,7 +87,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
     @Import(name="targetConnectionInfo", required=true)
       private final Output<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<MiSqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<MiSqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
@@ -106,12 +107,12 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
     }
 
     private MigrateSqlServerSqlMISyncTaskInputArgs() {
-        this.azureApp = Output.empty();
-        this.backupFileShare = Output.empty();
-        this.selectedDatabases = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.storageResourceId = Output.empty();
-        this.targetConnectionInfo = Output.empty();
+        this.azureApp = Codegen.empty();
+        this.backupFileShare = Codegen.empty();
+        this.selectedDatabases = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.storageResourceId = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class MigrateSqlServerSqlMISyncTaskInputArgs extends io.pulumi.reso
             return this;
         }
         public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
-            this.backupFileShare = Output.ofNullable(backupFileShare);
+            this.backupFileShare = Codegen.ofNullable(backupFileShare);
             return this;
         }
         public Builder selectedDatabases(Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases) {

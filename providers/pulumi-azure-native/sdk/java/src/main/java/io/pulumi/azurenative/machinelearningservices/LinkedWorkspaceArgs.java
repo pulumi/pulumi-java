@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.machinelearningservices.inputs.LinkedWorkspacePropsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="linkName")
       private final @Nullable Output<String> linkName;
 
-    public Output<String> getLinkName() {
-        return this.linkName == null ? Output.empty() : this.linkName;
+    public Output<String> linkName() {
+        return this.linkName == null ? Codegen.empty() : this.linkName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="properties")
       private final @Nullable Output<LinkedWorkspacePropsArgs> properties;
 
-    public Output<LinkedWorkspacePropsArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<LinkedWorkspacePropsArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,7 +67,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -84,11 +85,11 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private LinkedWorkspaceArgs() {
-        this.linkName = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.linkName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder linkName(@Nullable String linkName) {
-            this.linkName = Output.ofNullable(linkName);
+            this.linkName = Codegen.ofNullable(linkName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -132,7 +133,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<LinkedWorkspacePropsArgs> properties) {
@@ -140,7 +141,7 @@ public final class LinkedWorkspaceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder properties(@Nullable LinkedWorkspacePropsArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

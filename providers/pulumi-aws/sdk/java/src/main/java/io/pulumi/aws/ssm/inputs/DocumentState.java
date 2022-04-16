@@ -7,6 +7,7 @@ import io.pulumi.aws.ssm.inputs.DocumentAttachmentsSourceGetArgs;
 import io.pulumi.aws.ssm.inputs.DocumentParameterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,8 +22,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="attachmentsSources")
       private final @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
 
-    public Output<List<DocumentAttachmentsSourceGetArgs>> getAttachmentsSources() {
-        return this.attachmentsSources == null ? Output.empty() : this.attachmentsSources;
+    public Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources() {
+        return this.attachmentsSources == null ? Codegen.empty() : this.attachmentsSources;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="content")
       private final @Nullable Output<String> content;
 
-    public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+    public Output<String> content() {
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
-    public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+    public Output<String> createdDate() {
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
       private final @Nullable Output<String> defaultVersion;
 
-    public Output<String> getDefaultVersion() {
-        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
+    public Output<String> defaultVersion() {
+        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentFormat")
       private final @Nullable Output<String> documentFormat;
 
-    public Output<String> getDocumentFormat() {
-        return this.documentFormat == null ? Output.empty() : this.documentFormat;
+    public Output<String> documentFormat() {
+        return this.documentFormat == null ? Codegen.empty() : this.documentFormat;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentType")
       private final @Nullable Output<String> documentType;
 
-    public Output<String> getDocumentType() {
-        return this.documentType == null ? Output.empty() : this.documentType;
+    public Output<String> documentType() {
+        return this.documentType == null ? Codegen.empty() : this.documentType;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
-    public Output<String> getDocumentVersion() {
-        return this.documentVersion == null ? Output.empty() : this.documentVersion;
+    public Output<String> documentVersion() {
+        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hash")
       private final @Nullable Output<String> hash;
 
-    public Output<String> getHash() {
-        return this.hash == null ? Output.empty() : this.hash;
+    public Output<String> hash() {
+        return this.hash == null ? Codegen.empty() : this.hash;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hashType")
       private final @Nullable Output<String> hashType;
 
-    public Output<String> getHashType() {
-        return this.hashType == null ? Output.empty() : this.hashType;
+    public Output<String> hashType() {
+        return this.hashType == null ? Codegen.empty() : this.hashType;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="latestVersion")
       private final @Nullable Output<String> latestVersion;
 
-    public Output<String> getLatestVersion() {
-        return this.latestVersion == null ? Output.empty() : this.latestVersion;
+    public Output<String> latestVersion() {
+        return this.latestVersion == null ? Codegen.empty() : this.latestVersion;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+    public Output<String> owner() {
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<List<DocumentParameterGetArgs>> parameters;
 
-    public Output<List<DocumentParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<DocumentParameterGetArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<Map<String,String>> permissions;
 
-    public Output<Map<String,String>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<Map<String,String>> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="platformTypes")
       private final @Nullable Output<List<String>> platformTypes;
 
-    public Output<List<String>> getPlatformTypes() {
-        return this.platformTypes == null ? Output.empty() : this.platformTypes;
+    public Output<List<String>> platformTypes() {
+        return this.platformTypes == null ? Codegen.empty() : this.platformTypes;
     }
 
     /**
@@ -208,8 +209,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="schemaVersion")
       private final @Nullable Output<String> schemaVersion;
 
-    public Output<String> getSchemaVersion() {
-        return this.schemaVersion == null ? Output.empty() : this.schemaVersion;
+    public Output<String> schemaVersion() {
+        return this.schemaVersion == null ? Codegen.empty() : this.schemaVersion;
     }
 
     /**
@@ -219,8 +220,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -230,8 +231,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -241,8 +242,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -252,8 +253,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
-        return this.targetType == null ? Output.empty() : this.targetType;
+    public Output<String> targetType() {
+        return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
     /**
@@ -263,8 +264,8 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
-    public Output<String> getVersionName() {
-        return this.versionName == null ? Output.empty() : this.versionName;
+    public Output<String> versionName() {
+        return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 
     public DocumentState(
@@ -317,29 +318,29 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentState() {
-        this.arn = Output.empty();
-        this.attachmentsSources = Output.empty();
-        this.content = Output.empty();
-        this.createdDate = Output.empty();
-        this.defaultVersion = Output.empty();
-        this.description = Output.empty();
-        this.documentFormat = Output.empty();
-        this.documentType = Output.empty();
-        this.documentVersion = Output.empty();
-        this.hash = Output.empty();
-        this.hashType = Output.empty();
-        this.latestVersion = Output.empty();
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.parameters = Output.empty();
-        this.permissions = Output.empty();
-        this.platformTypes = Output.empty();
-        this.schemaVersion = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.targetType = Output.empty();
-        this.versionName = Output.empty();
+        this.arn = Codegen.empty();
+        this.attachmentsSources = Codegen.empty();
+        this.content = Codegen.empty();
+        this.createdDate = Codegen.empty();
+        this.defaultVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.documentFormat = Codegen.empty();
+        this.documentType = Codegen.empty();
+        this.documentVersion = Codegen.empty();
+        this.hash = Codegen.empty();
+        this.hashType = Codegen.empty();
+        this.latestVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.platformTypes = Codegen.empty();
+        this.schemaVersion = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.targetType = Codegen.empty();
+        this.versionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -411,7 +412,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder attachmentsSources(@Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources) {
@@ -419,7 +420,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attachmentsSources(@Nullable List<DocumentAttachmentsSourceGetArgs> attachmentsSources) {
-            this.attachmentsSources = Output.ofNullable(attachmentsSources);
+            this.attachmentsSources = Codegen.ofNullable(attachmentsSources);
             return this;
         }
         public Builder attachmentsSources(DocumentAttachmentsSourceGetArgs... attachmentsSources) {
@@ -430,7 +431,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder createdDate(@Nullable Output<String> createdDate) {
@@ -438,7 +439,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
@@ -446,7 +447,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultVersion(@Nullable String defaultVersion) {
-            this.defaultVersion = Output.ofNullable(defaultVersion);
+            this.defaultVersion = Codegen.ofNullable(defaultVersion);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -454,7 +455,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder documentFormat(@Nullable Output<String> documentFormat) {
@@ -462,7 +463,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentFormat(@Nullable String documentFormat) {
-            this.documentFormat = Output.ofNullable(documentFormat);
+            this.documentFormat = Codegen.ofNullable(documentFormat);
             return this;
         }
         public Builder documentType(@Nullable Output<String> documentType) {
@@ -470,7 +471,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentType(@Nullable String documentType) {
-            this.documentType = Output.ofNullable(documentType);
+            this.documentType = Codegen.ofNullable(documentType);
             return this;
         }
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
@@ -478,7 +479,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Output.ofNullable(documentVersion);
+            this.documentVersion = Codegen.ofNullable(documentVersion);
             return this;
         }
         public Builder hash(@Nullable Output<String> hash) {
@@ -486,7 +487,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hash(@Nullable String hash) {
-            this.hash = Output.ofNullable(hash);
+            this.hash = Codegen.ofNullable(hash);
             return this;
         }
         public Builder hashType(@Nullable Output<String> hashType) {
@@ -494,7 +495,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hashType(@Nullable String hashType) {
-            this.hashType = Output.ofNullable(hashType);
+            this.hashType = Codegen.ofNullable(hashType);
             return this;
         }
         public Builder latestVersion(@Nullable Output<String> latestVersion) {
@@ -502,7 +503,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latestVersion(@Nullable String latestVersion) {
-            this.latestVersion = Output.ofNullable(latestVersion);
+            this.latestVersion = Codegen.ofNullable(latestVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -510,7 +511,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -518,7 +519,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder parameters(@Nullable Output<List<DocumentParameterGetArgs>> parameters) {
@@ -526,7 +527,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<DocumentParameterGetArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(DocumentParameterGetArgs... parameters) {
@@ -537,7 +538,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable Map<String,String> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder platformTypes(@Nullable Output<List<String>> platformTypes) {
@@ -545,7 +546,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformTypes(@Nullable List<String> platformTypes) {
-            this.platformTypes = Output.ofNullable(platformTypes);
+            this.platformTypes = Codegen.ofNullable(platformTypes);
             return this;
         }
         public Builder platformTypes(String... platformTypes) {
@@ -556,7 +557,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaVersion(@Nullable String schemaVersion) {
-            this.schemaVersion = Output.ofNullable(schemaVersion);
+            this.schemaVersion = Codegen.ofNullable(schemaVersion);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -564,7 +565,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -572,7 +573,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -580,7 +581,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder targetType(@Nullable Output<String> targetType) {
@@ -588,7 +589,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Output.ofNullable(targetType);
+            this.targetType = Codegen.ofNullable(targetType);
             return this;
         }
         public Builder versionName(@Nullable Output<String> versionName) {
@@ -596,7 +597,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Output.ofNullable(versionName);
+            this.versionName = Codegen.ofNullable(versionName);
             return this;
         }        public DocumentState build() {
             return new DocumentState(arn, attachmentsSources, content, createdDate, defaultVersion, description, documentFormat, documentType, documentVersion, hash, hashType, latestVersion, name, owner, parameters, permissions, platformTypes, schemaVersion, status, tags, tagsAll, targetType, versionName);

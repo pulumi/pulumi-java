@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.FileNoteFileType;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="checksum")
       private final @Nullable Output<List<String>> checksum;
 
-    public Output<List<String>> getChecksum() {
-        return this.checksum == null ? Output.empty() : this.checksum;
+    public Output<List<String>> checksum() {
+        return this.checksum == null ? Codegen.empty() : this.checksum;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileType")
       private final @Nullable Output<FileNoteFileType> fileType;
 
-    public Output<FileNoteFileType> getFileType() {
-        return this.fileType == null ? Output.empty() : this.fileType;
+    public Output<FileNoteFileType> fileType() {
+        return this.fileType == null ? Codegen.empty() : this.fileType;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public FileNoteArgs(
@@ -63,9 +64,9 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileNoteArgs() {
-        this.checksum = Output.empty();
-        this.fileType = Output.empty();
-        this.title = Output.empty();
+        this.checksum = Codegen.empty();
+        this.fileType = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder checksum(@Nullable List<String> checksum) {
-            this.checksum = Output.ofNullable(checksum);
+            this.checksum = Codegen.ofNullable(checksum);
             return this;
         }
         public Builder checksum(String... checksum) {
@@ -108,7 +109,7 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileType(@Nullable FileNoteFileType fileType) {
-            this.fileType = Output.ofNullable(fileType);
+            this.fileType = Codegen.ofNullable(fileType);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -116,7 +117,7 @@ public final class FileNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public FileNoteArgs build() {
             return new FileNoteArgs(checksum, fileType, title);

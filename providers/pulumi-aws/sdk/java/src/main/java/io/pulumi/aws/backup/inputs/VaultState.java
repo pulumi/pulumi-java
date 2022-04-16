@@ -5,6 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="recoveryPoints")
       private final @Nullable Output<Integer> recoveryPoints;
 
-    public Output<Integer> getRecoveryPoints() {
-        return this.recoveryPoints == null ? Output.empty() : this.recoveryPoints;
+    public Output<Integer> recoveryPoints() {
+        return this.recoveryPoints == null ? Codegen.empty() : this.recoveryPoints;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public VaultState(
@@ -98,12 +99,12 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultState() {
-        this.arn = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.name = Output.empty();
-        this.recoveryPoints = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.recoveryPoints = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -149,7 +150,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -157,7 +158,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder recoveryPoints(@Nullable Output<Integer> recoveryPoints) {
@@ -165,7 +166,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recoveryPoints(@Nullable Integer recoveryPoints) {
-            this.recoveryPoints = Output.ofNullable(recoveryPoints);
+            this.recoveryPoints = Codegen.ofNullable(recoveryPoints);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -173,7 +174,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -181,7 +182,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public VaultState build() {
             return new VaultState(arn, kmsKeyArn, name, recoveryPoints, tags, tagsAll);

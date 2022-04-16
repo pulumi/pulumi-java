@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
     @Import(name="routeTableId")
       private final @Nullable Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
-        return this.routeTableId == null ? Output.empty() : this.routeTableId;
+    public Output<String> routeTableId() {
+        return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
     @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
-    public Output<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
+    public Output<String> vpcEndpointId() {
+        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
     public VpcEndpointRouteTableAssociationState(
@@ -44,8 +45,8 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
     }
 
     private VpcEndpointRouteTableAssociationState() {
-        this.routeTableId = Output.empty();
-        this.vpcEndpointId = Output.empty();
+        this.routeTableId = Codegen.empty();
+        this.vpcEndpointId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
             return this;
         }
         public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Output.ofNullable(routeTableId);
+            this.routeTableId = Codegen.ofNullable(routeTableId);
             return this;
         }
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
@@ -83,7 +84,7 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
             return this;
         }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
             return this;
         }        public VpcEndpointRouteTableAssociationState build() {
             return new VpcEndpointRouteTableAssociationState(routeTableId, vpcEndpointId);

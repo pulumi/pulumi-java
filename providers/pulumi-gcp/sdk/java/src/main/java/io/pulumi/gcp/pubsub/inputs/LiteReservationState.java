@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     @Import(name="throughputCapacity")
       private final @Nullable Output<Integer> throughputCapacity;
 
-    public Output<Integer> getThroughputCapacity() {
-        return this.throughputCapacity == null ? Output.empty() : this.throughputCapacity;
+    public Output<Integer> throughputCapacity() {
+        return this.throughputCapacity == null ? Codegen.empty() : this.throughputCapacity;
     }
 
     public LiteReservationState(
@@ -74,10 +75,10 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     }
 
     private LiteReservationState() {
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.throughputCapacity = Output.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.throughputCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -119,7 +120,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -127,7 +128,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder throughputCapacity(@Nullable Output<Integer> throughputCapacity) {
@@ -135,7 +136,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder throughputCapacity(@Nullable Integer throughputCapacity) {
-            this.throughputCapacity = Output.ofNullable(throughputCapacity);
+            this.throughputCapacity = Codegen.ofNullable(throughputCapacity);
             return this;
         }        public LiteReservationState build() {
             return new LiteReservationState(name, project, region, throughputCapacity);

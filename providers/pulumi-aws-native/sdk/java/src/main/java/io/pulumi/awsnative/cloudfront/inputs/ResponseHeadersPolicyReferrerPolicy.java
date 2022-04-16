@@ -16,14 +16,14 @@ public final class ResponseHeadersPolicyReferrerPolicy extends io.pulumi.resourc
     @Import(name="override", required=true)
       private final Boolean override;
 
-    public Boolean getOverride() {
+    public Boolean override() {
         return this.override;
     }
 
     @Import(name="referrerPolicy", required=true)
       private final String referrerPolicy;
 
-    public String getReferrerPolicy() {
+    public String referrerPolicy() {
         return this.referrerPolicy;
     }
 

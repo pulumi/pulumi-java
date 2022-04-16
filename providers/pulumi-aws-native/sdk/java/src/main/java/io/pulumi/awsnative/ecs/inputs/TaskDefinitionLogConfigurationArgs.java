@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionSecretArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,22 +21,22 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
     @Import(name="logDriver", required=true)
       private final Output<String> logDriver;
 
-    public Output<String> getLogDriver() {
+    public Output<String> logDriver() {
         return this.logDriver;
     }
 
     @Import(name="options")
       private final @Nullable Output<Object> options;
 
-    public Output<Object> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<Object> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="secretOptions")
       private final @Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions;
 
-    public Output<List<TaskDefinitionSecretArgs>> getSecretOptions() {
-        return this.secretOptions == null ? Output.empty() : this.secretOptions;
+    public Output<List<TaskDefinitionSecretArgs>> secretOptions() {
+        return this.secretOptions == null ? Codegen.empty() : this.secretOptions;
     }
 
     public TaskDefinitionLogConfigurationArgs(
@@ -48,9 +49,9 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
     }
 
     private TaskDefinitionLogConfigurationArgs() {
-        this.logDriver = Output.empty();
-        this.options = Output.empty();
-        this.secretOptions = Output.empty();
+        this.logDriver = Codegen.empty();
+        this.options = Codegen.empty();
+        this.secretOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder options(@Nullable Object options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder secretOptions(@Nullable Output<List<TaskDefinitionSecretArgs>> secretOptions) {
@@ -98,7 +99,7 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder secretOptions(@Nullable List<TaskDefinitionSecretArgs> secretOptions) {
-            this.secretOptions = Output.ofNullable(secretOptions);
+            this.secretOptions = Codegen.ofNullable(secretOptions);
             return this;
         }
         public Builder secretOptions(TaskDefinitionSecretArgs... secretOptions) {

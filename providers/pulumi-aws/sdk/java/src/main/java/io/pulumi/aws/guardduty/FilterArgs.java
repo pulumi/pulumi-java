@@ -6,6 +6,7 @@ package io.pulumi.aws.guardduty;
 import io.pulumi.aws.guardduty.inputs.FilterFindingCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<String> action;
 
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
 
@@ -35,8 +36,8 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
+    public Output<String> detectorId() {
         return this.detectorId;
     }
 
@@ -57,7 +58,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="findingCriteria", required=true)
       private final Output<FilterFindingCriteriaArgs> findingCriteria;
 
-    public Output<FilterFindingCriteriaArgs> getFindingCriteria() {
+    public Output<FilterFindingCriteriaArgs> findingCriteria() {
         return this.findingCriteria;
     }
 
@@ -68,8 +69,8 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="rank", required=true)
       private final Output<Integer> rank;
 
-    public Output<Integer> getRank() {
+    public Output<Integer> rank() {
         return this.rank;
     }
 
@@ -90,8 +91,8 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FilterArgs(
@@ -112,13 +113,13 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterArgs() {
-        this.action = Output.empty();
-        this.description = Output.empty();
-        this.detectorId = Output.empty();
-        this.findingCriteria = Output.empty();
-        this.name = Output.empty();
-        this.rank = Output.empty();
-        this.tags = Output.empty();
+        this.action = Codegen.empty();
+        this.description = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.findingCriteria = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rank = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder detectorId(Output<String> detectorId) {
@@ -190,7 +191,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rank(Output<Integer> rank) {
@@ -206,7 +207,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public FilterArgs build() {
             return new FilterArgs(action, description, detectorId, findingCriteria, name, rank, tags);

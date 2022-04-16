@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
     @Import(name="verifyClientCertIssuerDN")
       private final @Nullable Output<Boolean> verifyClientCertIssuerDN;
 
-    public Output<Boolean> getVerifyClientCertIssuerDN() {
-        return this.verifyClientCertIssuerDN == null ? Output.empty() : this.verifyClientCertIssuerDN;
+    public Output<Boolean> verifyClientCertIssuerDN() {
+        return this.verifyClientCertIssuerDN == null ? Codegen.empty() : this.verifyClientCertIssuerDN;
     }
 
     public ApplicationGatewayClientAuthConfigurationArgs(@Nullable Output<Boolean> verifyClientCertIssuerDN) {
@@ -34,7 +35,7 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
     }
 
     private ApplicationGatewayClientAuthConfigurationArgs() {
-        this.verifyClientCertIssuerDN = Output.empty();
+        this.verifyClientCertIssuerDN = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
             return this;
         }
         public Builder verifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
-            this.verifyClientCertIssuerDN = Output.ofNullable(verifyClientCertIssuerDN);
+            this.verifyClientCertIssuerDN = Codegen.ofNullable(verifyClientCertIssuerDN);
             return this;
         }        public ApplicationGatewayClientAuthConfigurationArgs build() {
             return new ApplicationGatewayClientAuthConfigurationArgs(verifyClientCertIssuerDN);

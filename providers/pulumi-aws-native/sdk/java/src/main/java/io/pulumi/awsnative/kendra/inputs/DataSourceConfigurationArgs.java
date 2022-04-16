@@ -15,6 +15,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWorkDocsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,71 +27,71 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
     @Import(name="confluenceConfiguration")
       private final @Nullable Output<DataSourceConfluenceConfigurationArgs> confluenceConfiguration;
 
-    public Output<DataSourceConfluenceConfigurationArgs> getConfluenceConfiguration() {
-        return this.confluenceConfiguration == null ? Output.empty() : this.confluenceConfiguration;
+    public Output<DataSourceConfluenceConfigurationArgs> confluenceConfiguration() {
+        return this.confluenceConfiguration == null ? Codegen.empty() : this.confluenceConfiguration;
     }
 
     @Import(name="databaseConfiguration")
       private final @Nullable Output<DataSourceDatabaseConfigurationArgs> databaseConfiguration;
 
-    public Output<DataSourceDatabaseConfigurationArgs> getDatabaseConfiguration() {
-        return this.databaseConfiguration == null ? Output.empty() : this.databaseConfiguration;
+    public Output<DataSourceDatabaseConfigurationArgs> databaseConfiguration() {
+        return this.databaseConfiguration == null ? Codegen.empty() : this.databaseConfiguration;
     }
 
     @Import(name="googleDriveConfiguration")
       private final @Nullable Output<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration;
 
-    public Output<DataSourceGoogleDriveConfigurationArgs> getGoogleDriveConfiguration() {
-        return this.googleDriveConfiguration == null ? Output.empty() : this.googleDriveConfiguration;
+    public Output<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration() {
+        return this.googleDriveConfiguration == null ? Codegen.empty() : this.googleDriveConfiguration;
     }
 
     @Import(name="oneDriveConfiguration")
       private final @Nullable Output<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration;
 
-    public Output<DataSourceOneDriveConfigurationArgs> getOneDriveConfiguration() {
-        return this.oneDriveConfiguration == null ? Output.empty() : this.oneDriveConfiguration;
+    public Output<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration() {
+        return this.oneDriveConfiguration == null ? Codegen.empty() : this.oneDriveConfiguration;
     }
 
     @Import(name="s3Configuration")
       private final @Nullable Output<DataSourceS3DataSourceConfigurationArgs> s3Configuration;
 
-    public Output<DataSourceS3DataSourceConfigurationArgs> getS3Configuration() {
-        return this.s3Configuration == null ? Output.empty() : this.s3Configuration;
+    public Output<DataSourceS3DataSourceConfigurationArgs> s3Configuration() {
+        return this.s3Configuration == null ? Codegen.empty() : this.s3Configuration;
     }
 
     @Import(name="salesforceConfiguration")
       private final @Nullable Output<DataSourceSalesforceConfigurationArgs> salesforceConfiguration;
 
-    public Output<DataSourceSalesforceConfigurationArgs> getSalesforceConfiguration() {
-        return this.salesforceConfiguration == null ? Output.empty() : this.salesforceConfiguration;
+    public Output<DataSourceSalesforceConfigurationArgs> salesforceConfiguration() {
+        return this.salesforceConfiguration == null ? Codegen.empty() : this.salesforceConfiguration;
     }
 
     @Import(name="serviceNowConfiguration")
       private final @Nullable Output<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration;
 
-    public Output<DataSourceServiceNowConfigurationArgs> getServiceNowConfiguration() {
-        return this.serviceNowConfiguration == null ? Output.empty() : this.serviceNowConfiguration;
+    public Output<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration() {
+        return this.serviceNowConfiguration == null ? Codegen.empty() : this.serviceNowConfiguration;
     }
 
     @Import(name="sharePointConfiguration")
       private final @Nullable Output<DataSourceSharePointConfigurationArgs> sharePointConfiguration;
 
-    public Output<DataSourceSharePointConfigurationArgs> getSharePointConfiguration() {
-        return this.sharePointConfiguration == null ? Output.empty() : this.sharePointConfiguration;
+    public Output<DataSourceSharePointConfigurationArgs> sharePointConfiguration() {
+        return this.sharePointConfiguration == null ? Codegen.empty() : this.sharePointConfiguration;
     }
 
     @Import(name="webCrawlerConfiguration")
       private final @Nullable Output<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration;
 
-    public Output<DataSourceWebCrawlerConfigurationArgs> getWebCrawlerConfiguration() {
-        return this.webCrawlerConfiguration == null ? Output.empty() : this.webCrawlerConfiguration;
+    public Output<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration() {
+        return this.webCrawlerConfiguration == null ? Codegen.empty() : this.webCrawlerConfiguration;
     }
 
     @Import(name="workDocsConfiguration")
       private final @Nullable Output<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration;
 
-    public Output<DataSourceWorkDocsConfigurationArgs> getWorkDocsConfiguration() {
-        return this.workDocsConfiguration == null ? Output.empty() : this.workDocsConfiguration;
+    public Output<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration() {
+        return this.workDocsConfiguration == null ? Codegen.empty() : this.workDocsConfiguration;
     }
 
     public DataSourceConfigurationArgs(
@@ -117,16 +118,16 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private DataSourceConfigurationArgs() {
-        this.confluenceConfiguration = Output.empty();
-        this.databaseConfiguration = Output.empty();
-        this.googleDriveConfiguration = Output.empty();
-        this.oneDriveConfiguration = Output.empty();
-        this.s3Configuration = Output.empty();
-        this.salesforceConfiguration = Output.empty();
-        this.serviceNowConfiguration = Output.empty();
-        this.sharePointConfiguration = Output.empty();
-        this.webCrawlerConfiguration = Output.empty();
-        this.workDocsConfiguration = Output.empty();
+        this.confluenceConfiguration = Codegen.empty();
+        this.databaseConfiguration = Codegen.empty();
+        this.googleDriveConfiguration = Codegen.empty();
+        this.oneDriveConfiguration = Codegen.empty();
+        this.s3Configuration = Codegen.empty();
+        this.salesforceConfiguration = Codegen.empty();
+        this.serviceNowConfiguration = Codegen.empty();
+        this.sharePointConfiguration = Codegen.empty();
+        this.webCrawlerConfiguration = Codegen.empty();
+        this.workDocsConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder confluenceConfiguration(@Nullable DataSourceConfluenceConfigurationArgs confluenceConfiguration) {
-            this.confluenceConfiguration = Output.ofNullable(confluenceConfiguration);
+            this.confluenceConfiguration = Codegen.ofNullable(confluenceConfiguration);
             return this;
         }
         public Builder databaseConfiguration(@Nullable Output<DataSourceDatabaseConfigurationArgs> databaseConfiguration) {
@@ -180,7 +181,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder databaseConfiguration(@Nullable DataSourceDatabaseConfigurationArgs databaseConfiguration) {
-            this.databaseConfiguration = Output.ofNullable(databaseConfiguration);
+            this.databaseConfiguration = Codegen.ofNullable(databaseConfiguration);
             return this;
         }
         public Builder googleDriveConfiguration(@Nullable Output<DataSourceGoogleDriveConfigurationArgs> googleDriveConfiguration) {
@@ -188,7 +189,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder googleDriveConfiguration(@Nullable DataSourceGoogleDriveConfigurationArgs googleDriveConfiguration) {
-            this.googleDriveConfiguration = Output.ofNullable(googleDriveConfiguration);
+            this.googleDriveConfiguration = Codegen.ofNullable(googleDriveConfiguration);
             return this;
         }
         public Builder oneDriveConfiguration(@Nullable Output<DataSourceOneDriveConfigurationArgs> oneDriveConfiguration) {
@@ -196,7 +197,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder oneDriveConfiguration(@Nullable DataSourceOneDriveConfigurationArgs oneDriveConfiguration) {
-            this.oneDriveConfiguration = Output.ofNullable(oneDriveConfiguration);
+            this.oneDriveConfiguration = Codegen.ofNullable(oneDriveConfiguration);
             return this;
         }
         public Builder s3Configuration(@Nullable Output<DataSourceS3DataSourceConfigurationArgs> s3Configuration) {
@@ -204,7 +205,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder s3Configuration(@Nullable DataSourceS3DataSourceConfigurationArgs s3Configuration) {
-            this.s3Configuration = Output.ofNullable(s3Configuration);
+            this.s3Configuration = Codegen.ofNullable(s3Configuration);
             return this;
         }
         public Builder salesforceConfiguration(@Nullable Output<DataSourceSalesforceConfigurationArgs> salesforceConfiguration) {
@@ -212,7 +213,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder salesforceConfiguration(@Nullable DataSourceSalesforceConfigurationArgs salesforceConfiguration) {
-            this.salesforceConfiguration = Output.ofNullable(salesforceConfiguration);
+            this.salesforceConfiguration = Codegen.ofNullable(salesforceConfiguration);
             return this;
         }
         public Builder serviceNowConfiguration(@Nullable Output<DataSourceServiceNowConfigurationArgs> serviceNowConfiguration) {
@@ -220,7 +221,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder serviceNowConfiguration(@Nullable DataSourceServiceNowConfigurationArgs serviceNowConfiguration) {
-            this.serviceNowConfiguration = Output.ofNullable(serviceNowConfiguration);
+            this.serviceNowConfiguration = Codegen.ofNullable(serviceNowConfiguration);
             return this;
         }
         public Builder sharePointConfiguration(@Nullable Output<DataSourceSharePointConfigurationArgs> sharePointConfiguration) {
@@ -228,7 +229,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sharePointConfiguration(@Nullable DataSourceSharePointConfigurationArgs sharePointConfiguration) {
-            this.sharePointConfiguration = Output.ofNullable(sharePointConfiguration);
+            this.sharePointConfiguration = Codegen.ofNullable(sharePointConfiguration);
             return this;
         }
         public Builder webCrawlerConfiguration(@Nullable Output<DataSourceWebCrawlerConfigurationArgs> webCrawlerConfiguration) {
@@ -236,7 +237,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder webCrawlerConfiguration(@Nullable DataSourceWebCrawlerConfigurationArgs webCrawlerConfiguration) {
-            this.webCrawlerConfiguration = Output.ofNullable(webCrawlerConfiguration);
+            this.webCrawlerConfiguration = Codegen.ofNullable(webCrawlerConfiguration);
             return this;
         }
         public Builder workDocsConfiguration(@Nullable Output<DataSourceWorkDocsConfigurationArgs> workDocsConfiguration) {
@@ -244,7 +245,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder workDocsConfiguration(@Nullable DataSourceWorkDocsConfigurationArgs workDocsConfiguration) {
-            this.workDocsConfiguration = Output.ofNullable(workDocsConfiguration);
+            this.workDocsConfiguration = Codegen.ofNullable(workDocsConfiguration);
             return this;
         }        public DataSourceConfigurationArgs build() {
             return new DataSourceConfigurationArgs(confluenceConfiguration, databaseConfiguration, googleDriveConfiguration, oneDriveConfiguration, s3Configuration, salesforceConfiguration, serviceNowConfiguration, sharePointConfiguration, webCrawlerConfiguration, workDocsConfiguration);

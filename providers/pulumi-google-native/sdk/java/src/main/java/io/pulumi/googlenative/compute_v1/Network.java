@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.NetworkArgs;
 import io.pulumi.googlenative.compute_v1.outputs.NetworkPeeringResponse;
@@ -33,7 +34,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
      * 
      */
-    public Output<Boolean> getAutoCreateSubnetworks() {
+    public Output<Boolean> autoCreateSubnetworks() {
         return this.autoCreateSubnetworks;
     }
     /**
@@ -47,7 +48,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -61,7 +62,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this field when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -75,7 +76,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return The gateway address for default routing out of the network, selected by GCP.
      * 
      */
-    public Output<String> getGatewayIPv4() {
+    public Output<String> gatewayIPv4() {
         return this.gatewayIPv4;
     }
     /**
@@ -89,7 +90,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#network for networks.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -103,7 +104,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Maximum Transmission Unit in bytes. The minimum value for this field is 1460 and the maximum value is 1500 bytes. If unspecified, defaults to 1460.
      * 
      */
-    public Output<Integer> getMtu() {
+    public Output<Integer> mtu() {
         return this.mtu;
     }
     /**
@@ -117,7 +118,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +132,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return A list of network peerings for the resource.
      * 
      */
-    public Output<List<NetworkPeeringResponse>> getPeerings() {
+    public Output<List<NetworkPeeringResponse>> peerings() {
         return this.peerings;
     }
     /**
@@ -145,7 +146,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return The network-level routing configuration for this network. Used by Cloud Router to determine what type of network-wide routing behavior to enforce.
      * 
      */
-    public Output<NetworkRoutingConfigResponse> getRoutingConfig() {
+    public Output<NetworkRoutingConfigResponse> routingConfig() {
         return this.routingConfig;
     }
     /**
@@ -159,7 +160,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -173,7 +174,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @return Server-defined fully-qualified URLs for all subnetworks in this VPC network.
      * 
      */
-    public Output<List<String>> getSubnetworks() {
+    public Output<List<String>> subnetworks() {
         return this.subnetworks;
     }
 
@@ -199,7 +200,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Network(String name, @Nullable NetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/v1:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/v1:Network", name, args == null ? NetworkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Network(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -174,112 +174,112 @@ public final class GetAppServiceEnvironmentResult {
      * Custom settings for changing the behavior of the App Service Environment.
      * 
     */
-    public List<NameValuePairResponse> getClusterSettings() {
+    public List<NameValuePairResponse> clusterSettings() {
         return this.clusterSettings == null ? List.of() : this.clusterSettings;
     }
     /**
      * Dedicated Host Count
      * 
     */
-    public Integer getDedicatedHostCount() {
+    public Integer dedicatedHostCount() {
         return this.dedicatedHostCount;
     }
     /**
      * DNS suffix of the App Service Environment.
      * 
     */
-    public Optional<String> getDnsSuffix() {
+    public Optional<String> dnsSuffix() {
         return Optional.ofNullable(this.dnsSuffix);
     }
     /**
      * Scale factor for front-ends.
      * 
     */
-    public Optional<Integer> getFrontEndScaleFactor() {
+    public Optional<Integer> frontEndScaleFactor() {
         return Optional.ofNullable(this.frontEndScaleFactor);
     }
     /**
      * Flag that displays whether an ASE has linux workers or not
      * 
     */
-    public Boolean getHasLinuxWorkers() {
+    public Boolean hasLinuxWorkers() {
         return this.hasLinuxWorkers;
     }
     /**
      * Resource Id.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Specifies which endpoints to serve internally in the Virtual Network for the App Service Environment.
      * 
     */
-    public Optional<String> getInternalLoadBalancingMode() {
+    public Optional<String> internalLoadBalancingMode() {
         return Optional.ofNullable(this.internalLoadBalancingMode);
     }
     /**
      * Number of IP SSL addresses reserved for the App Service Environment.
      * 
     */
-    public Optional<Integer> getIpsslAddressCount() {
+    public Optional<Integer> ipsslAddressCount() {
         return Optional.ofNullable(this.ipsslAddressCount);
     }
     /**
      * Kind of resource.
      * 
     */
-    public Optional<String> getKind() {
+    public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
      * Resource Location.
      * 
     */
-    public String getLocation() {
+    public String location() {
         return this.location;
     }
     /**
      * Maximum number of VMs in the App Service Environment.
      * 
     */
-    public Integer getMaximumNumberOfMachines() {
+    public Integer maximumNumberOfMachines() {
         return this.maximumNumberOfMachines;
     }
     /**
      * Number of front-end instances.
      * 
     */
-    public Integer getMultiRoleCount() {
+    public Integer multiRoleCount() {
         return this.multiRoleCount;
     }
     /**
      * Front-end VM size, e.g. "Medium", "Large".
      * 
     */
-    public Optional<String> getMultiSize() {
+    public Optional<String> multiSize() {
         return Optional.ofNullable(this.multiSize);
     }
     /**
      * Resource Name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Provisioning state of the App Service Environment.
      * 
     */
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
     /**
      * Current status of the App Service Environment.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
@@ -287,35 +287,35 @@ public final class GetAppServiceEnvironmentResult {
      *  (most likely because NSG blocked the incoming traffic).
      * 
     */
-    public Boolean getSuspended() {
+    public Boolean suspended() {
         return this.suspended;
     }
     /**
      * Resource tags.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * User added ip ranges to whitelist on ASE db
      * 
     */
-    public List<String> getUserWhitelistedIpRanges() {
+    public List<String> userWhitelistedIpRanges() {
         return this.userWhitelistedIpRanges == null ? List.of() : this.userWhitelistedIpRanges;
     }
     /**
      * Description of the Virtual Network.
      * 
     */
-    public VirtualNetworkProfileResponse getVirtualNetwork() {
+    public VirtualNetworkProfileResponse virtualNetwork() {
         return this.virtualNetwork;
     }
 

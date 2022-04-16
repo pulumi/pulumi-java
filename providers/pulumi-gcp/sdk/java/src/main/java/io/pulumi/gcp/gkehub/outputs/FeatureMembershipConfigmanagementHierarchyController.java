@@ -41,21 +41,21 @@ public final class FeatureMembershipConfigmanagementHierarchyController {
      * Whether hierarchical resource quota is enabled in this cluster.
      * 
     */
-    public Optional<Boolean> getEnableHierarchicalResourceQuota() {
+    public Optional<Boolean> enableHierarchicalResourceQuota() {
         return Optional.ofNullable(this.enableHierarchicalResourceQuota);
     }
     /**
      * Whether pod tree labels are enabled in this cluster.
      * 
     */
-    public Optional<Boolean> getEnablePodTreeLabels() {
+    public Optional<Boolean> enablePodTreeLabels() {
         return Optional.ofNullable(this.enablePodTreeLabels);
     }
     /**
      * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

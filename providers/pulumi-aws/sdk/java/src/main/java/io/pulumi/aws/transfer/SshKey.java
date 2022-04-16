@@ -9,6 +9,7 @@ import io.pulumi.aws.transfer.inputs.SshKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return The public key portion of an SSH key pair.
      * 
      */
-    public Output<String> getBody() {
+    public Output<String> body() {
         return this.body;
     }
     /**
@@ -53,7 +54,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return The Server ID of the Transfer Server (e.g., `s-12345678`)
      * 
      */
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
     /**
@@ -67,7 +68,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @return The name of the user account that is assigned to one or more servers.
      * 
      */
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -93,7 +94,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SshKey(String name, SshKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:transfer/sshKey:SshKey", name, args == null ? SshKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:transfer/sshKey:SshKey", name, args == null ? SshKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SshKey(String name, Output<String> id, @Nullable SshKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

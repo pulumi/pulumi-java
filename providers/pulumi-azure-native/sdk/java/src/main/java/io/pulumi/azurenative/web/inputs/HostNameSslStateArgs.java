@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.enums.HostType;
 import io.pulumi.azurenative.web.enums.SslState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="hostType")
       private final @Nullable Output<HostType> hostType;
 
-    public Output<HostType> getHostType() {
-        return this.hostType == null ? Output.empty() : this.hostType;
+    public Output<HostType> hostType() {
+        return this.hostType == null ? Codegen.empty() : this.hostType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sslState")
       private final @Nullable Output<SslState> sslState;
 
-    public Output<SslState> getSslState() {
-        return this.sslState == null ? Output.empty() : this.sslState;
+    public Output<SslState> sslState() {
+        return this.sslState == null ? Codegen.empty() : this.sslState;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
-    public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+    public Output<String> thumbprint() {
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="toUpdate")
       private final @Nullable Output<Boolean> toUpdate;
 
-    public Output<Boolean> getToUpdate() {
-        return this.toUpdate == null ? Output.empty() : this.toUpdate;
+    public Output<Boolean> toUpdate() {
+        return this.toUpdate == null ? Codegen.empty() : this.toUpdate;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="virtualIP")
       private final @Nullable Output<String> virtualIP;
 
-    public Output<String> getVirtualIP() {
-        return this.virtualIP == null ? Output.empty() : this.virtualIP;
+    public Output<String> virtualIP() {
+        return this.virtualIP == null ? Codegen.empty() : this.virtualIP;
     }
 
     public HostNameSslStateArgs(
@@ -103,12 +104,12 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HostNameSslStateArgs() {
-        this.hostType = Output.empty();
-        this.name = Output.empty();
-        this.sslState = Output.empty();
-        this.thumbprint = Output.empty();
-        this.toUpdate = Output.empty();
-        this.virtualIP = Output.empty();
+        this.hostType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sslState = Codegen.empty();
+        this.thumbprint = Codegen.empty();
+        this.toUpdate = Codegen.empty();
+        this.virtualIP = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder hostType(@Nullable HostType hostType) {
-            this.hostType = Output.ofNullable(hostType);
+            this.hostType = Codegen.ofNullable(hostType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -154,7 +155,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sslState(@Nullable Output<SslState> sslState) {
@@ -162,7 +163,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sslState(@Nullable SslState sslState) {
-            this.sslState = Output.ofNullable(sslState);
+            this.sslState = Codegen.ofNullable(sslState);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -170,7 +171,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }
         public Builder toUpdate(@Nullable Output<Boolean> toUpdate) {
@@ -178,7 +179,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder toUpdate(@Nullable Boolean toUpdate) {
-            this.toUpdate = Output.ofNullable(toUpdate);
+            this.toUpdate = Codegen.ofNullable(toUpdate);
             return this;
         }
         public Builder virtualIP(@Nullable Output<String> virtualIP) {
@@ -186,7 +187,7 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder virtualIP(@Nullable String virtualIP) {
-            this.virtualIP = Output.ofNullable(virtualIP);
+            this.virtualIP = Codegen.ofNullable(virtualIP);
             return this;
         }        public HostNameSslStateArgs build() {
             return new HostNameSslStateArgs(hostType, name, sslState, thumbprint, toUpdate, virtualIP);

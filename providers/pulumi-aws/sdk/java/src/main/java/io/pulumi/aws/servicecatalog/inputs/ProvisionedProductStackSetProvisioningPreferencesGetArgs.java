@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
     @Import(name="accounts")
       private final @Nullable Output<List<String>> accounts;
 
-    public Output<List<String>> getAccounts() {
-        return this.accounts == null ? Output.empty() : this.accounts;
+    public Output<List<String>> accounts() {
+        return this.accounts == null ? Codegen.empty() : this.accounts;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
     @Import(name="failureToleranceCount")
       private final @Nullable Output<Integer> failureToleranceCount;
 
-    public Output<Integer> getFailureToleranceCount() {
-        return this.failureToleranceCount == null ? Output.empty() : this.failureToleranceCount;
+    public Output<Integer> failureToleranceCount() {
+        return this.failureToleranceCount == null ? Codegen.empty() : this.failureToleranceCount;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
     @Import(name="failureTolerancePercentage")
       private final @Nullable Output<Integer> failureTolerancePercentage;
 
-    public Output<Integer> getFailureTolerancePercentage() {
-        return this.failureTolerancePercentage == null ? Output.empty() : this.failureTolerancePercentage;
+    public Output<Integer> failureTolerancePercentage() {
+        return this.failureTolerancePercentage == null ? Codegen.empty() : this.failureTolerancePercentage;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
     @Import(name="maxConcurrencyCount")
       private final @Nullable Output<Integer> maxConcurrencyCount;
 
-    public Output<Integer> getMaxConcurrencyCount() {
-        return this.maxConcurrencyCount == null ? Output.empty() : this.maxConcurrencyCount;
+    public Output<Integer> maxConcurrencyCount() {
+        return this.maxConcurrencyCount == null ? Codegen.empty() : this.maxConcurrencyCount;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
     @Import(name="maxConcurrencyPercentage")
       private final @Nullable Output<Integer> maxConcurrencyPercentage;
 
-    public Output<Integer> getMaxConcurrencyPercentage() {
-        return this.maxConcurrencyPercentage == null ? Output.empty() : this.maxConcurrencyPercentage;
+    public Output<Integer> maxConcurrencyPercentage() {
+        return this.maxConcurrencyPercentage == null ? Codegen.empty() : this.maxConcurrencyPercentage;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+    public Output<List<String>> regions() {
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     public ProvisionedProductStackSetProvisioningPreferencesGetArgs(
@@ -98,12 +99,12 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
     }
 
     private ProvisionedProductStackSetProvisioningPreferencesGetArgs() {
-        this.accounts = Output.empty();
-        this.failureToleranceCount = Output.empty();
-        this.failureTolerancePercentage = Output.empty();
-        this.maxConcurrencyCount = Output.empty();
-        this.maxConcurrencyPercentage = Output.empty();
-        this.regions = Output.empty();
+        this.accounts = Codegen.empty();
+        this.failureToleranceCount = Codegen.empty();
+        this.failureTolerancePercentage = Codegen.empty();
+        this.maxConcurrencyCount = Codegen.empty();
+        this.maxConcurrencyPercentage = Codegen.empty();
+        this.regions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
             return this;
         }
         public Builder accounts(@Nullable List<String> accounts) {
-            this.accounts = Output.ofNullable(accounts);
+            this.accounts = Codegen.ofNullable(accounts);
             return this;
         }
         public Builder accounts(String... accounts) {
@@ -152,7 +153,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
             return this;
         }
         public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
-            this.failureToleranceCount = Output.ofNullable(failureToleranceCount);
+            this.failureToleranceCount = Codegen.ofNullable(failureToleranceCount);
             return this;
         }
         public Builder failureTolerancePercentage(@Nullable Output<Integer> failureTolerancePercentage) {
@@ -160,7 +161,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
             return this;
         }
         public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
-            this.failureTolerancePercentage = Output.ofNullable(failureTolerancePercentage);
+            this.failureTolerancePercentage = Codegen.ofNullable(failureTolerancePercentage);
             return this;
         }
         public Builder maxConcurrencyCount(@Nullable Output<Integer> maxConcurrencyCount) {
@@ -168,7 +169,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
             return this;
         }
         public Builder maxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
-            this.maxConcurrencyCount = Output.ofNullable(maxConcurrencyCount);
+            this.maxConcurrencyCount = Codegen.ofNullable(maxConcurrencyCount);
             return this;
         }
         public Builder maxConcurrencyPercentage(@Nullable Output<Integer> maxConcurrencyPercentage) {
@@ -176,7 +177,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
             return this;
         }
         public Builder maxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
-            this.maxConcurrencyPercentage = Output.ofNullable(maxConcurrencyPercentage);
+            this.maxConcurrencyPercentage = Codegen.ofNullable(maxConcurrencyPercentage);
             return this;
         }
         public Builder regions(@Nullable Output<List<String>> regions) {
@@ -184,7 +185,7 @@ public final class ProvisionedProductStackSetProvisioningPreferencesGetArgs exte
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {

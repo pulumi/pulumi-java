@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.Reso
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -37,7 +38,7 @@ public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.Reso
     @Import(name="values", required=true)
       private final Output<List<Double>> values;
 
-    public Output<List<Double>> getValues() {
+    public Output<List<Double>> values() {
         return this.values;
     }
 
@@ -49,8 +50,8 @@ public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.Reso
     }
 
     private AnalysisIntegerParameterArgs() {
-        this.name = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

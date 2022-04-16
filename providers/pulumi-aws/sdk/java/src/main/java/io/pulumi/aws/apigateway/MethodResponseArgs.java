@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
-    public Output<String> getHttpMethod() {
+    public Output<String> httpMethod() {
         return this.httpMethod;
     }
 
@@ -34,7 +35,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -45,8 +46,8 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseModels")
       private final @Nullable Output<Map<String,String>> responseModels;
 
-    public Output<Map<String,String>> getResponseModels() {
-        return this.responseModels == null ? Output.empty() : this.responseModels;
+    public Output<Map<String,String>> responseModels() {
+        return this.responseModels == null ? Codegen.empty() : this.responseModels;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseParameters")
       private final @Nullable Output<Map<String,Boolean>> responseParameters;
 
-    public Output<Map<String,Boolean>> getResponseParameters() {
-        return this.responseParameters == null ? Output.empty() : this.responseParameters;
+    public Output<Map<String,Boolean>> responseParameters() {
+        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
 
@@ -80,7 +81,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 
@@ -100,12 +101,12 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodResponseArgs() {
-        this.httpMethod = Output.empty();
-        this.resourceId = Output.empty();
-        this.responseModels = Output.empty();
-        this.responseParameters = Output.empty();
-        this.restApi = Output.empty();
-        this.statusCode = Output.empty();
+        this.httpMethod = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.responseModels = Codegen.empty();
+        this.responseParameters = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
-            this.responseModels = Output.ofNullable(responseModels);
+            this.responseModels = Codegen.ofNullable(responseModels);
             return this;
         }
         public Builder responseParameters(@Nullable Output<Map<String,Boolean>> responseParameters) {
@@ -167,7 +168,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseParameters(@Nullable Map<String,Boolean> responseParameters) {
-            this.responseParameters = Output.ofNullable(responseParameters);
+            this.responseParameters = Codegen.ofNullable(responseParameters);
             return this;
         }
         public Builder restApi(Output<String> restApi) {

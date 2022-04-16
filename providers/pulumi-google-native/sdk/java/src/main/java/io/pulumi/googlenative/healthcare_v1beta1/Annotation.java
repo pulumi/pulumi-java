@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.AnnotationArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AnnotationSourceResponse;
@@ -33,7 +34,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * @return Details of the source.
      * 
      */
-    public Output<AnnotationSourceResponse> getAnnotationSource() {
+    public Output<AnnotationSourceResponse> annotationSource() {
         return this.annotationSource;
     }
     /**
@@ -47,7 +48,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * @return Additional information for this annotation record, such as annotator and verifier information or study campaign.
      * 
      */
-    public Output<Map<String,String>> getCustomData() {
+    public Output<Map<String,String>> customData() {
         return this.customData;
     }
     /**
@@ -61,7 +62,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * @return Annotations for images. For example, bounding polygons.
      * 
      */
-    public Output<ImageAnnotationResponse> getImageAnnotation() {
+    public Output<ImageAnnotationResponse> imageAnnotation() {
         return this.imageAnnotation;
     }
     /**
@@ -75,7 +76,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * @return Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -89,7 +90,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * @return Annotations for resource. For example, classification tags.
      * 
      */
-    public Output<ResourceAnnotationResponse> getResourceAnnotation() {
+    public Output<ResourceAnnotationResponse> resourceAnnotation() {
         return this.resourceAnnotation;
     }
     /**
@@ -103,7 +104,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * @return Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
      * 
      */
-    public Output<SensitiveTextAnnotationResponse> getTextAnnotation() {
+    public Output<SensitiveTextAnnotationResponse> textAnnotation() {
         return this.textAnnotation;
     }
 
@@ -129,7 +130,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Annotation(String name, AnnotationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1beta1:Annotation", name, args == null ? AnnotationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1beta1:Annotation", name, args == null ? AnnotationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Annotation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

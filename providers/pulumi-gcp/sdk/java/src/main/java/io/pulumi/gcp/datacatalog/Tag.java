@@ -6,6 +6,7 @@ package io.pulumi.gcp.datacatalog;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagArgs;
 import io.pulumi.gcp.datacatalog.inputs.TagState;
@@ -55,7 +56,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * `outer_column.inner_column`
      * 
      */
-    public Output</* @Nullable */ String> getColumn() {
+    public Output</* @Nullable */ String> column() {
         return this.column;
     }
     /**
@@ -73,7 +74,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<List<TagField>> getFields() {
+    public Output<List<TagField>> fields() {
         return this.fields;
     }
     /**
@@ -93,7 +94,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * identifier. Note that this Tag may not actually be stored in the location in this name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -109,7 +110,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * all entries in that group.
      * 
      */
-    public Output</* @Nullable */ String> getParent() {
+    public Output</* @Nullable */ String> parent() {
         return this.parent;
     }
     /**
@@ -127,7 +128,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * This field cannot be modified after creation.
      * 
      */
-    public Output<String> getTemplate() {
+    public Output<String> template() {
         return this.template;
     }
     /**
@@ -141,7 +142,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @return The display name of the tag template.
      * 
      */
-    public Output<String> getTemplateDisplayname() {
+    public Output<String> templateDisplayname() {
         return this.templateDisplayname;
     }
 
@@ -167,7 +168,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Tag(String name, TagArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/tag:Tag", name, args == null ? TagArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datacatalog/tag:Tag", name, args == null ? TagArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Tag(String name, Output<String> id, @Nullable TagState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

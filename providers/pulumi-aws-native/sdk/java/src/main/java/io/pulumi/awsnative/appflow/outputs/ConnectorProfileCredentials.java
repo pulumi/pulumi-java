@@ -79,52 +79,52 @@ public final class ConnectorProfileCredentials {
         this.zendesk = zendesk;
     }
 
-    public Optional<ConnectorProfileAmplitudeConnectorProfileCredentials> getAmplitude() {
+    public Optional<ConnectorProfileAmplitudeConnectorProfileCredentials> amplitude() {
         return Optional.ofNullable(this.amplitude);
     }
-    public Optional<ConnectorProfileDatadogConnectorProfileCredentials> getDatadog() {
+    public Optional<ConnectorProfileDatadogConnectorProfileCredentials> datadog() {
         return Optional.ofNullable(this.datadog);
     }
-    public Optional<ConnectorProfileDynatraceConnectorProfileCredentials> getDynatrace() {
+    public Optional<ConnectorProfileDynatraceConnectorProfileCredentials> dynatrace() {
         return Optional.ofNullable(this.dynatrace);
     }
-    public Optional<ConnectorProfileGoogleAnalyticsConnectorProfileCredentials> getGoogleAnalytics() {
+    public Optional<ConnectorProfileGoogleAnalyticsConnectorProfileCredentials> googleAnalytics() {
         return Optional.ofNullable(this.googleAnalytics);
     }
-    public Optional<ConnectorProfileInforNexusConnectorProfileCredentials> getInforNexus() {
+    public Optional<ConnectorProfileInforNexusConnectorProfileCredentials> inforNexus() {
         return Optional.ofNullable(this.inforNexus);
     }
-    public Optional<ConnectorProfileMarketoConnectorProfileCredentials> getMarketo() {
+    public Optional<ConnectorProfileMarketoConnectorProfileCredentials> marketo() {
         return Optional.ofNullable(this.marketo);
     }
-    public Optional<ConnectorProfileRedshiftConnectorProfileCredentials> getRedshift() {
+    public Optional<ConnectorProfileRedshiftConnectorProfileCredentials> redshift() {
         return Optional.ofNullable(this.redshift);
     }
-    public Optional<ConnectorProfileSAPODataConnectorProfileCredentials> getSAPOData() {
+    public Optional<ConnectorProfileSAPODataConnectorProfileCredentials> sAPOData() {
         return Optional.ofNullable(this.sAPOData);
     }
-    public Optional<ConnectorProfileSalesforceConnectorProfileCredentials> getSalesforce() {
+    public Optional<ConnectorProfileSalesforceConnectorProfileCredentials> salesforce() {
         return Optional.ofNullable(this.salesforce);
     }
-    public Optional<ConnectorProfileServiceNowConnectorProfileCredentials> getServiceNow() {
+    public Optional<ConnectorProfileServiceNowConnectorProfileCredentials> serviceNow() {
         return Optional.ofNullable(this.serviceNow);
     }
-    public Optional<ConnectorProfileSingularConnectorProfileCredentials> getSingular() {
+    public Optional<ConnectorProfileSingularConnectorProfileCredentials> singular() {
         return Optional.ofNullable(this.singular);
     }
-    public Optional<ConnectorProfileSlackConnectorProfileCredentials> getSlack() {
+    public Optional<ConnectorProfileSlackConnectorProfileCredentials> slack() {
         return Optional.ofNullable(this.slack);
     }
-    public Optional<ConnectorProfileSnowflakeConnectorProfileCredentials> getSnowflake() {
+    public Optional<ConnectorProfileSnowflakeConnectorProfileCredentials> snowflake() {
         return Optional.ofNullable(this.snowflake);
     }
-    public Optional<ConnectorProfileTrendmicroConnectorProfileCredentials> getTrendmicro() {
+    public Optional<ConnectorProfileTrendmicroConnectorProfileCredentials> trendmicro() {
         return Optional.ofNullable(this.trendmicro);
     }
-    public Optional<ConnectorProfileVeevaConnectorProfileCredentials> getVeeva() {
+    public Optional<ConnectorProfileVeevaConnectorProfileCredentials> veeva() {
         return Optional.ofNullable(this.veeva);
     }
-    public Optional<ConnectorProfileZendeskConnectorProfileCredentials> getZendesk() {
+    public Optional<ConnectorProfileZendeskConnectorProfileCredentials> zendesk() {
         return Optional.ofNullable(this.zendesk);
     }
 

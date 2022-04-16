@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResp
     @Import(name="cases", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases;
 
-    public List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> getCases() {
+    public List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases() {
         return this.cases;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.aws.secretsmanager.inputs.SecretPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class SecretPolicy extends io.pulumi.resources.CustomResource {
      * @return Makes an optional API call to Zelkova to validate the Resource Policy to prevent broad access to your secret.
      * 
      */
-    public Output</* @Nullable */ Boolean> getBlockPublicPolicy() {
+    public Output</* @Nullable */ Boolean> blockPublicPolicy() {
         return this.blockPublicPolicy;
     }
     /**
@@ -54,7 +55,7 @@ public class SecretPolicy extends io.pulumi.resources.CustomResource {
      * @return Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html). Unlike `aws.secretsmanager.Secret`, where `policy` can be set to `"{}"` to delete the policy, `"{}"` is not a valid policy since `policy` is required.
      * 
      */
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
     /**
@@ -68,7 +69,7 @@ public class SecretPolicy extends io.pulumi.resources.CustomResource {
      * @return Secret ARN.
      * 
      */
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
@@ -94,7 +95,7 @@ public class SecretPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecretPolicy(String name, SecretPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:secretsmanager/secretPolicy:SecretPolicy", name, args == null ? SecretPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:secretsmanager/secretPolicy:SecretPolicy", name, args == null ? SecretPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecretPolicy(String name, Output<String> id, @Nullable SecretPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

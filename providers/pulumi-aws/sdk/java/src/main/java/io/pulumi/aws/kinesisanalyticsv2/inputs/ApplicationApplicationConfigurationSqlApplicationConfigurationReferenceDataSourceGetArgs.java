@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,8 +20,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="referenceId")
       private final @Nullable Output<String> referenceId;
 
-    public Output<String> getReferenceId() {
-        return this.referenceId == null ? Output.empty() : this.referenceId;
+    public Output<String> referenceId() {
+        return this.referenceId == null ? Codegen.empty() : this.referenceId;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="referenceSchema", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> getReferenceSchema() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema() {
         return this.referenceSchema;
     }
 
@@ -41,7 +42,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="s3ReferenceDataSource", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource;
 
-    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> getS3ReferenceDataSource() {
+    public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource() {
         return this.s3ReferenceDataSource;
     }
 
@@ -52,7 +53,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -68,10 +69,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs() {
-        this.referenceId = Output.empty();
-        this.referenceSchema = Output.empty();
-        this.s3ReferenceDataSource = Output.empty();
-        this.tableName = Output.empty();
+        this.referenceId = Codegen.empty();
+        this.referenceSchema = Codegen.empty();
+        this.s3ReferenceDataSource = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder referenceId(@Nullable String referenceId) {
-            this.referenceId = Output.ofNullable(referenceId);
+            this.referenceId = Codegen.ofNullable(referenceId);
             return this;
         }
         public Builder referenceSchema(Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema) {

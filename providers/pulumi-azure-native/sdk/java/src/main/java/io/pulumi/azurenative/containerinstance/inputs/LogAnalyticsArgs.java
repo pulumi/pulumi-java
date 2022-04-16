@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerinstance.enums.LogAnalyticsLogType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logType")
       private final @Nullable Output<Either<String,LogAnalyticsLogType>> logType;
 
-    public Output<Either<String,LogAnalyticsLogType>> getLogType() {
-        return this.logType == null ? Output.empty() : this.logType;
+    public Output<Either<String,LogAnalyticsLogType>> logType() {
+        return this.logType == null ? Codegen.empty() : this.logType;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<Map<String,String>> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
+    public Output<String> workspaceId() {
         return this.workspaceId;
     }
 
@@ -61,7 +62,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceKey", required=true)
       private final Output<String> workspaceKey;
 
-    public Output<String> getWorkspaceKey() {
+    public Output<String> workspaceKey() {
         return this.workspaceKey;
     }
 
@@ -72,8 +73,8 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceResourceId")
       private final @Nullable Output<Map<String,String>> workspaceResourceId;
 
-    public Output<Map<String,String>> getWorkspaceResourceId() {
-        return this.workspaceResourceId == null ? Output.empty() : this.workspaceResourceId;
+    public Output<Map<String,String>> workspaceResourceId() {
+        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
     }
 
     public LogAnalyticsArgs(
@@ -90,11 +91,11 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogAnalyticsArgs() {
-        this.logType = Output.empty();
-        this.metadata = Output.empty();
-        this.workspaceId = Output.empty();
-        this.workspaceKey = Output.empty();
-        this.workspaceResourceId = Output.empty();
+        this.logType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.workspaceId = Codegen.empty();
+        this.workspaceKey = Codegen.empty();
+        this.workspaceResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logType(@Nullable Either<String,LogAnalyticsLogType> logType) {
-            this.logType = Output.ofNullable(logType);
+            this.logType = Codegen.ofNullable(logType);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -138,7 +139,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder workspaceId(Output<String> workspaceId) {
@@ -162,7 +163,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
-            this.workspaceResourceId = Output.ofNullable(workspaceResourceId);
+            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
             return this;
         }        public LogAnalyticsArgs build() {
             return new LogAnalyticsArgs(logType, metadata, workspaceId, workspaceKey, workspaceResourceId);

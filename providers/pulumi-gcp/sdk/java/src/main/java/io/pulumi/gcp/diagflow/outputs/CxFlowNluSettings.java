@@ -50,7 +50,7 @@ public final class CxFlowNluSettings {
      * If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
      * 
     */
-    public Optional<Double> getClassificationThreshold() {
+    public Optional<Double> classificationThreshold() {
         return Optional.ofNullable(this.classificationThreshold);
     }
     /**
@@ -60,7 +60,7 @@ public final class CxFlowNluSettings {
      *   Possible values are `MODEL_TRAINING_MODE_AUTOMATIC` and `MODEL_TRAINING_MODE_MANUAL`.
      * 
     */
-    public Optional<String> getModelTrainingMode() {
+    public Optional<String> modelTrainingMode() {
         return Optional.ofNullable(this.modelTrainingMode);
     }
     /**
@@ -70,7 +70,7 @@ public final class CxFlowNluSettings {
      *   Possible values are `MODEL_TYPE_STANDARD` and `MODEL_TYPE_ADVANCED`.
      * 
     */
-    public Optional<String> getModelType() {
+    public Optional<String> modelType() {
         return Optional.ofNullable(this.modelType);
     }
 

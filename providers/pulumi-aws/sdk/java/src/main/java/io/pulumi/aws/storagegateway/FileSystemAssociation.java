@@ -10,6 +10,7 @@ import io.pulumi.aws.storagegateway.outputs.FileSystemAssociationCacheAttributes
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the newly created file system association.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the storage used for the audit logs.
      * 
      */
-    public Output</* @Nullable */ String> getAuditDestinationArn() {
+    public Output</* @Nullable */ String> auditDestinationArn() {
         return this.auditDestinationArn;
     }
     /**
@@ -72,7 +73,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    public Output</* @Nullable */ FileSystemAssociationCacheAttributes> getCacheAttributes() {
+    public Output</* @Nullable */ FileSystemAssociationCacheAttributes> cacheAttributes() {
         return this.cacheAttributes;
     }
     /**
@@ -86,7 +87,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    public Output<String> getGatewayArn() {
+    public Output<String> gatewayArn() {
         return this.gatewayArn;
     }
     /**
@@ -100,7 +101,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon FSx file system to associate with the FSx File Gateway.
      * 
      */
-    public Output<String> getLocationArn() {
+    public Output<String> locationArn() {
         return this.locationArn;
     }
     /**
@@ -114,7 +115,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return The password of the user credential.
      * 
      */
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
     /**
@@ -128,7 +129,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -156,7 +157,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @return The user name of the user credential that has permission to access the root share of the Amazon FSx file system. The user account must belong to the Amazon FSx delegated admin user group.
      * 
      */
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -182,7 +183,7 @@ public class FileSystemAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileSystemAssociation(String name, FileSystemAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:storagegateway/fileSystemAssociation:FileSystemAssociation", name, args == null ? FileSystemAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:storagegateway/fileSystemAssociation:FileSystemAssociation", name, args == null ? FileSystemAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FileSystemAssociation(String name, Output<String> id, @Nullable FileSystemAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

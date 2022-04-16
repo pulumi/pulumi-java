@@ -74,56 +74,56 @@ public final class AssetStreamingLocatorResponse {
      * Asset Name.
      * 
     */
-    public String getAssetName() {
+    public String assetName() {
         return this.assetName;
     }
     /**
      * The creation time of the Streaming Locator.
      * 
     */
-    public String getCreated() {
+    public String created() {
         return this.created;
     }
     /**
      * Name of the default ContentKeyPolicy used by this Streaming Locator.
      * 
     */
-    public String getDefaultContentKeyPolicyName() {
+    public String defaultContentKeyPolicyName() {
         return this.defaultContentKeyPolicyName;
     }
     /**
      * The end time of the Streaming Locator.
      * 
     */
-    public String getEndTime() {
+    public String endTime() {
         return this.endTime;
     }
     /**
      * Streaming Locator name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * The start time of the Streaming Locator.
      * 
     */
-    public String getStartTime() {
+    public String startTime() {
         return this.startTime;
     }
     /**
      * StreamingLocatorId of the Streaming Locator.
      * 
     */
-    public String getStreamingLocatorId() {
+    public String streamingLocatorId() {
         return this.streamingLocatorId;
     }
     /**
      * Name of the Streaming Policy used by this Streaming Locator.
      * 
     */
-    public String getStreamingPolicyName() {
+    public String streamingPolicyName() {
         return this.streamingPolicyName;
     }
 

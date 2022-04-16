@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dataproc_v1beta2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1beta2.ClusterArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ClusterConfigResponse;
@@ -34,7 +35,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
      * 
      */
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
     /**
@@ -48,7 +49,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.
      * 
      */
-    public Output<String> getClusterUuid() {
+    public Output<String> clusterUuid() {
         return this.clusterUuid;
     }
     /**
@@ -62,7 +63,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The cluster config. Note that Dataproc may set default values, and values may change when clusters are updated.
      * 
      */
-    public Output<ClusterConfigResponse> getConfig() {
+    public Output<ClusterConfigResponse> config() {
         return this.config;
     }
     /**
@@ -76,7 +77,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -90,7 +91,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
      * 
      */
-    public Output<ClusterMetricsResponse> getMetrics() {
+    public Output<ClusterMetricsResponse> metrics() {
         return this.metrics;
     }
     /**
@@ -104,7 +105,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The Google Cloud Platform project ID that the cluster belongs to.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -118,7 +119,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Cluster status.
      * 
      */
-    public Output<ClusterStatusResponse> getStatus() {
+    public Output<ClusterStatusResponse> status() {
         return this.status;
     }
     /**
@@ -132,7 +133,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The previous cluster status.
      * 
      */
-    public Output<List<ClusterStatusResponse>> getStatusHistory() {
+    public Output<List<ClusterStatusResponse>> statusHistory() {
         return this.statusHistory;
     }
 
@@ -158,7 +159,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dataproc/v1beta2:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dataproc/v1beta2:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

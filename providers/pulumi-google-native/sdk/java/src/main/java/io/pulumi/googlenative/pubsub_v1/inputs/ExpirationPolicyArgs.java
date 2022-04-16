@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
-    public Output<String> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<String> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public ExpirationPolicyArgs(@Nullable Output<String> ttl) {
@@ -34,7 +35,7 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ExpirationPolicyArgs() {
-        this.ttl = Output.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ExpirationPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public ExpirationPolicyArgs build() {
             return new ExpirationPolicyArgs(ttl);

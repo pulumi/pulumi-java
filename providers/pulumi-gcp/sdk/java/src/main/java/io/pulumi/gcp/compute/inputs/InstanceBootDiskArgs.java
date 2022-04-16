@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InstanceBootDiskInitializeParamsArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="autoDelete")
       private final @Nullable Output<Boolean> autoDelete;
 
-    public Output<Boolean> getAutoDelete() {
-        return this.autoDelete == null ? Output.empty() : this.autoDelete;
+    public Output<Boolean> autoDelete() {
+        return this.autoDelete == null ? Codegen.empty() : this.autoDelete;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
-    public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+    public Output<String> deviceName() {
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -50,15 +51,15 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="diskEncryptionKeyRaw")
       private final @Nullable Output<String> diskEncryptionKeyRaw;
 
-    public Output<String> getDiskEncryptionKeyRaw() {
-        return this.diskEncryptionKeyRaw == null ? Output.empty() : this.diskEncryptionKeyRaw;
+    public Output<String> diskEncryptionKeyRaw() {
+        return this.diskEncryptionKeyRaw == null ? Codegen.empty() : this.diskEncryptionKeyRaw;
     }
 
     @Import(name="diskEncryptionKeySha256")
       private final @Nullable Output<String> diskEncryptionKeySha256;
 
-    public Output<String> getDiskEncryptionKeySha256() {
-        return this.diskEncryptionKeySha256 == null ? Output.empty() : this.diskEncryptionKeySha256;
+    public Output<String> diskEncryptionKeySha256() {
+        return this.diskEncryptionKeySha256 == null ? Codegen.empty() : this.diskEncryptionKeySha256;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="initializeParams")
       private final @Nullable Output<InstanceBootDiskInitializeParamsArgs> initializeParams;
 
-    public Output<InstanceBootDiskInitializeParamsArgs> getInitializeParams() {
-        return this.initializeParams == null ? Output.empty() : this.initializeParams;
+    public Output<InstanceBootDiskInitializeParamsArgs> initializeParams() {
+        return this.initializeParams == null ? Codegen.empty() : this.initializeParams;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
-    public Output<String> getKmsKeySelfLink() {
-        return this.kmsKeySelfLink == null ? Output.empty() : this.kmsKeySelfLink;
+    public Output<String> kmsKeySelfLink() {
+        return this.kmsKeySelfLink == null ? Codegen.empty() : this.kmsKeySelfLink;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
-    public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<String> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="source")
       private final @Nullable Output<String> source;
 
-    public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<String> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public InstanceBootDiskArgs(
@@ -132,14 +133,14 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceBootDiskArgs() {
-        this.autoDelete = Output.empty();
-        this.deviceName = Output.empty();
-        this.diskEncryptionKeyRaw = Output.empty();
-        this.diskEncryptionKeySha256 = Output.empty();
-        this.initializeParams = Output.empty();
-        this.kmsKeySelfLink = Output.empty();
-        this.mode = Output.empty();
-        this.source = Output.empty();
+        this.autoDelete = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.diskEncryptionKeyRaw = Codegen.empty();
+        this.diskEncryptionKeySha256 = Codegen.empty();
+        this.initializeParams = Codegen.empty();
+        this.kmsKeySelfLink = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder autoDelete(@Nullable Boolean autoDelete) {
-            this.autoDelete = Output.ofNullable(autoDelete);
+            this.autoDelete = Codegen.ofNullable(autoDelete);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -189,7 +190,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder diskEncryptionKeyRaw(@Nullable Output<String> diskEncryptionKeyRaw) {
@@ -197,7 +198,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
-            this.diskEncryptionKeyRaw = Output.ofNullable(diskEncryptionKeyRaw);
+            this.diskEncryptionKeyRaw = Codegen.ofNullable(diskEncryptionKeyRaw);
             return this;
         }
         public Builder diskEncryptionKeySha256(@Nullable Output<String> diskEncryptionKeySha256) {
@@ -205,7 +206,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
-            this.diskEncryptionKeySha256 = Output.ofNullable(diskEncryptionKeySha256);
+            this.diskEncryptionKeySha256 = Codegen.ofNullable(diskEncryptionKeySha256);
             return this;
         }
         public Builder initializeParams(@Nullable Output<InstanceBootDiskInitializeParamsArgs> initializeParams) {
@@ -213,7 +214,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder initializeParams(@Nullable InstanceBootDiskInitializeParamsArgs initializeParams) {
-            this.initializeParams = Output.ofNullable(initializeParams);
+            this.initializeParams = Codegen.ofNullable(initializeParams);
             return this;
         }
         public Builder kmsKeySelfLink(@Nullable Output<String> kmsKeySelfLink) {
@@ -221,7 +222,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Output.ofNullable(kmsKeySelfLink);
+            this.kmsKeySelfLink = Codegen.ofNullable(kmsKeySelfLink);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -229,7 +230,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -237,7 +238,7 @@ public final class InstanceBootDiskArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public InstanceBootDiskArgs build() {
             return new InstanceBootDiskArgs(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);

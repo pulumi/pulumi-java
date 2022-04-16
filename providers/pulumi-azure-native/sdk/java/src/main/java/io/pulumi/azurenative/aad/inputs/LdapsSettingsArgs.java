@@ -8,6 +8,7 @@ import io.pulumi.azurenative.aad.enums.Ldaps;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalAccess")
       private final @Nullable Output<Either<String,ExternalAccess>> externalAccess;
 
-    public Output<Either<String,ExternalAccess>> getExternalAccess() {
-        return this.externalAccess == null ? Output.empty() : this.externalAccess;
+    public Output<Either<String,ExternalAccess>> externalAccess() {
+        return this.externalAccess == null ? Codegen.empty() : this.externalAccess;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ldaps")
       private final @Nullable Output<Either<String,Ldaps>> ldaps;
 
-    public Output<Either<String,Ldaps>> getLdaps() {
-        return this.ldaps == null ? Output.empty() : this.ldaps;
+    public Output<Either<String,Ldaps>> ldaps() {
+        return this.ldaps == null ? Codegen.empty() : this.ldaps;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pfxCertificate")
       private final @Nullable Output<String> pfxCertificate;
 
-    public Output<String> getPfxCertificate() {
-        return this.pfxCertificate == null ? Output.empty() : this.pfxCertificate;
+    public Output<String> pfxCertificate() {
+        return this.pfxCertificate == null ? Codegen.empty() : this.pfxCertificate;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pfxCertificatePassword")
       private final @Nullable Output<String> pfxCertificatePassword;
 
-    public Output<String> getPfxCertificatePassword() {
-        return this.pfxCertificatePassword == null ? Output.empty() : this.pfxCertificatePassword;
+    public Output<String> pfxCertificatePassword() {
+        return this.pfxCertificatePassword == null ? Codegen.empty() : this.pfxCertificatePassword;
     }
 
     public LdapsSettingsArgs(
@@ -77,10 +78,10 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LdapsSettingsArgs() {
-        this.externalAccess = Output.empty();
-        this.ldaps = Output.empty();
-        this.pfxCertificate = Output.empty();
-        this.pfxCertificatePassword = Output.empty();
+        this.externalAccess = Codegen.empty();
+        this.ldaps = Codegen.empty();
+        this.pfxCertificate = Codegen.empty();
+        this.pfxCertificatePassword = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalAccess(@Nullable Either<String,ExternalAccess> externalAccess) {
-            this.externalAccess = Output.ofNullable(externalAccess);
+            this.externalAccess = Codegen.ofNullable(externalAccess);
             return this;
         }
         public Builder ldaps(@Nullable Output<Either<String,Ldaps>> ldaps) {
@@ -122,7 +123,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ldaps(@Nullable Either<String,Ldaps> ldaps) {
-            this.ldaps = Output.ofNullable(ldaps);
+            this.ldaps = Codegen.ofNullable(ldaps);
             return this;
         }
         public Builder pfxCertificate(@Nullable Output<String> pfxCertificate) {
@@ -130,7 +131,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pfxCertificate(@Nullable String pfxCertificate) {
-            this.pfxCertificate = Output.ofNullable(pfxCertificate);
+            this.pfxCertificate = Codegen.ofNullable(pfxCertificate);
             return this;
         }
         public Builder pfxCertificatePassword(@Nullable Output<String> pfxCertificatePassword) {
@@ -138,7 +139,7 @@ public final class LdapsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pfxCertificatePassword(@Nullable String pfxCertificatePassword) {
-            this.pfxCertificatePassword = Output.ofNullable(pfxCertificatePassword);
+            this.pfxCertificatePassword = Codegen.ofNullable(pfxCertificatePassword);
             return this;
         }        public LdapsSettingsArgs build() {
             return new LdapsSettingsArgs(externalAccess, ldaps, pfxCertificate, pfxCertificatePassword);

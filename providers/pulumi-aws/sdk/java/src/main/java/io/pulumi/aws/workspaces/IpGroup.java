@@ -10,6 +10,7 @@ import io.pulumi.aws.workspaces.outputs.IpGroupRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * @return The description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,7 +57,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the IP group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * @return One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
      * 
      */
-    public Output</* @Nullable */ List<IpGroupRule>> getRules() {
+    public Output</* @Nullable */ List<IpGroupRule>> rules() {
         return this.rules;
     }
     /**
@@ -84,7 +85,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -98,7 +99,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -124,7 +125,7 @@ public class IpGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IpGroup(String name, @Nullable IpGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:workspaces/ipGroup:IpGroup", name, args == null ? IpGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:workspaces/ipGroup:IpGroup", name, args == null ? IpGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IpGroup(String name, Output<String> id, @Nullable IpGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

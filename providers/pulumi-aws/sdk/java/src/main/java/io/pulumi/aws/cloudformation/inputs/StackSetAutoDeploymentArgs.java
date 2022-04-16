@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
     @Import(name="retainStacksOnAccountRemoval")
       private final @Nullable Output<Boolean> retainStacksOnAccountRemoval;
 
-    public Output<Boolean> getRetainStacksOnAccountRemoval() {
-        return this.retainStacksOnAccountRemoval == null ? Output.empty() : this.retainStacksOnAccountRemoval;
+    public Output<Boolean> retainStacksOnAccountRemoval() {
+        return this.retainStacksOnAccountRemoval == null ? Codegen.empty() : this.retainStacksOnAccountRemoval;
     }
 
     public StackSetAutoDeploymentArgs(
@@ -44,8 +45,8 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
     }
 
     private StackSetAutoDeploymentArgs() {
-        this.enabled = Output.empty();
-        this.retainStacksOnAccountRemoval = Output.empty();
+        this.enabled = Codegen.empty();
+        this.retainStacksOnAccountRemoval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder retainStacksOnAccountRemoval(@Nullable Output<Boolean> retainStacksOnAccountRemoval) {
@@ -83,7 +84,7 @@ public final class StackSetAutoDeploymentArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder retainStacksOnAccountRemoval(@Nullable Boolean retainStacksOnAccountRemoval) {
-            this.retainStacksOnAccountRemoval = Output.ofNullable(retainStacksOnAccountRemoval);
+            this.retainStacksOnAccountRemoval = Codegen.ofNullable(retainStacksOnAccountRemoval);
             return this;
         }        public StackSetAutoDeploymentArgs build() {
             return new StackSetAutoDeploymentArgs(enabled, retainStacksOnAccountRemoval);

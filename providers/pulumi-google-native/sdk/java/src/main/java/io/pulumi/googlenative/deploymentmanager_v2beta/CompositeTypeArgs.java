@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_v2beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.CompositeTypeStatus;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.CompositeTypeLabelEntryArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.TemplateContentsArgs;
@@ -25,15 +26,15 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<CompositeTypeLabelEntryArgs>> labels;
 
-    public Output<List<CompositeTypeLabelEntryArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<CompositeTypeLabelEntryArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -54,22 +55,22 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="status")
       private final @Nullable Output<CompositeTypeStatus> status;
 
-    public Output<CompositeTypeStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<CompositeTypeStatus> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateContents")
       private final @Nullable Output<TemplateContentsArgs> templateContents;
 
-    public Output<TemplateContentsArgs> getTemplateContents() {
-        return this.templateContents == null ? Output.empty() : this.templateContents;
+    public Output<TemplateContentsArgs> templateContents() {
+        return this.templateContents == null ? Codegen.empty() : this.templateContents;
     }
 
     public CompositeTypeArgs(
@@ -101,13 +102,13 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CompositeTypeArgs() {
-        this.description = Output.empty();
-        this.id = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.status = Output.empty();
-        this.templateContents = Output.empty();
+        this.description = Codegen.empty();
+        this.id = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.status = Codegen.empty();
+        this.templateContents = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -155,7 +156,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder labels(@Nullable Output<List<CompositeTypeLabelEntryArgs>> labels) {
@@ -163,7 +164,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<CompositeTypeLabelEntryArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(CompositeTypeLabelEntryArgs... labels) {
@@ -174,7 +175,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -182,7 +183,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder status(@Nullable Output<CompositeTypeStatus> status) {
@@ -190,7 +191,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable CompositeTypeStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder templateContents(@Nullable Output<TemplateContentsArgs> templateContents) {
@@ -198,7 +199,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateContents(@Nullable TemplateContentsArgs templateContents) {
-            this.templateContents = Output.ofNullable(templateContents);
+            this.templateContents = Codegen.ofNullable(templateContents);
             return this;
         }        public CompositeTypeArgs build() {
             return new CompositeTypeArgs(description, id, labels, name, project, status, templateContents);

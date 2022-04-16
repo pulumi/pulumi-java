@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
     @Import(name="end", required=true)
       private final Output<String> end;
 
-    public Output<String> getEnd() {
+    public Output<String> end() {
         return this.end;
     }
 
@@ -35,7 +36,7 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
     @Import(name="start", required=true)
       private final Output<String> start;
 
-    public Output<String> getStart() {
+    public Output<String> start() {
         return this.start;
     }
 
@@ -47,8 +48,8 @@ public final class GoogleCloudApigeeV1DateRangeArgs extends io.pulumi.resources.
     }
 
     private GoogleCloudApigeeV1DateRangeArgs() {
-        this.end = Output.empty();
-        this.start = Output.empty();
+        this.end = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {

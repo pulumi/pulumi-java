@@ -87,21 +87,21 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
      * Control-Allow-Credentials header. Defaults to false.
      * 
     */
-    public Optional<Boolean> getAllowCredentials() {
+    public Optional<Boolean> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
      * Specifies the content for the Access-Control-Allow-Headers header.
      * 
     */
-    public List<String> getAllowHeaders() {
+    public List<String> allowHeaders() {
         return this.allowHeaders == null ? List.of() : this.allowHeaders;
     }
     /**
      * Specifies the content for the Access-Control-Allow-Methods header.
      * 
     */
-    public List<String> getAllowMethods() {
+    public List<String> allowMethods() {
         return this.allowMethods == null ? List.of() : this.allowMethods;
     }
     /**
@@ -110,7 +110,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
      * An origin is allowed if it matches either allow_origins or allow_origin_regex.
      * 
     */
-    public List<String> getAllowOriginRegexes() {
+    public List<String> allowOriginRegexes() {
         return this.allowOriginRegexes == null ? List.of() : this.allowOriginRegexes;
     }
     /**
@@ -118,21 +118,21 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
      * origin is allowed if it matches either allow_origins or allow_origin_regex.
      * 
     */
-    public List<String> getAllowOrigins() {
+    public List<String> allowOrigins() {
         return this.allowOrigins == null ? List.of() : this.allowOrigins;
     }
     /**
      * If true, specifies the CORS policy is disabled.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
     /**
      * Specifies the content for the Access-Control-Expose-Headers header.
      * 
     */
-    public List<String> getExposeHeaders() {
+    public List<String> exposeHeaders() {
         return this.exposeHeaders == null ? List.of() : this.exposeHeaders;
     }
     /**
@@ -140,7 +140,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicy {
      * translates to the content for the Access-Control-Max-Age header.
      * 
     */
-    public Optional<Integer> getMaxAge() {
+    public Optional<Integer> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
 

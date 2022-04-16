@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="codeContent")
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
 
-    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> getCodeContent() {
-        return this.codeContent == null ? Output.empty() : this.codeContent;
+    public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent() {
+        return this.codeContent == null ? Codegen.empty() : this.codeContent;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="codeContentType", required=true)
       private final Output<String> codeContentType;
 
-    public Output<String> getCodeContentType() {
+    public Output<String> codeContentType() {
         return this.codeContentType;
     }
 
@@ -45,8 +46,8 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     }
 
     private ApplicationApplicationConfigurationApplicationCodeConfigurationArgs() {
-        this.codeContent = Output.empty();
-        this.codeContentType = Output.empty();
+        this.codeContent = Codegen.empty();
+        this.codeContentType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             return this;
         }
         public Builder codeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs codeContent) {
-            this.codeContent = Output.ofNullable(codeContent);
+            this.codeContent = Codegen.ofNullable(codeContent);
             return this;
         }
         public Builder codeContentType(Output<String> codeContentType) {

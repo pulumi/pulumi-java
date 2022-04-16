@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
     @Import(name="destinationBucketName")
       private final @Nullable Output<String> destinationBucketName;
 
-    public Output<String> getDestinationBucketName() {
-        return this.destinationBucketName == null ? Output.empty() : this.destinationBucketName;
+    public Output<String> destinationBucketName() {
+        return this.destinationBucketName == null ? Codegen.empty() : this.destinationBucketName;
     }
 
     @Import(name="logFilePrefix")
       private final @Nullable Output<String> logFilePrefix;
 
-    public Output<String> getLogFilePrefix() {
-        return this.logFilePrefix == null ? Output.empty() : this.logFilePrefix;
+    public Output<String> logFilePrefix() {
+        return this.logFilePrefix == null ? Codegen.empty() : this.logFilePrefix;
     }
 
     public BucketLoggingConfigurationArgs(
@@ -40,8 +41,8 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private BucketLoggingConfigurationArgs() {
-        this.destinationBucketName = Output.empty();
-        this.logFilePrefix = Output.empty();
+        this.destinationBucketName = Codegen.empty();
+        this.logFilePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder destinationBucketName(@Nullable String destinationBucketName) {
-            this.destinationBucketName = Output.ofNullable(destinationBucketName);
+            this.destinationBucketName = Codegen.ofNullable(destinationBucketName);
             return this;
         }
         public Builder logFilePrefix(@Nullable Output<String> logFilePrefix) {
@@ -79,7 +80,7 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder logFilePrefix(@Nullable String logFilePrefix) {
-            this.logFilePrefix = Output.ofNullable(logFilePrefix);
+            this.logFilePrefix = Codegen.ofNullable(logFilePrefix);
             return this;
         }        public BucketLoggingConfigurationArgs build() {
             return new BucketLoggingConfigurationArgs(destinationBucketName, logFilePrefix);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,43 +18,43 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
     @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
-    public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+    public Output<String> catalogId() {
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+    public Output<String> databaseName() {
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     @Import(name="roleARN")
       private final @Nullable Output<String> roleARN;
 
-    public Output<String> getRoleARN() {
-        return this.roleARN == null ? Output.empty() : this.roleARN;
+    public Output<String> roleARN() {
+        return this.roleARN == null ? Codegen.empty() : this.roleARN;
     }
 
     @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
-    public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+    public Output<String> tableName() {
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
-        return this.versionId == null ? Output.empty() : this.versionId;
+    public Output<String> versionId() {
+        return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
     public DeliveryStreamSchemaConfigurationArgs(
@@ -72,12 +73,12 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
     }
 
     private DeliveryStreamSchemaConfigurationArgs() {
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
-        this.region = Output.empty();
-        this.roleARN = Output.empty();
-        this.tableName = Output.empty();
-        this.versionId = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.region = Codegen.empty();
+        this.roleARN = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.versionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -123,7 +124,7 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -131,7 +132,7 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder roleARN(@Nullable Output<String> roleARN) {
@@ -139,7 +140,7 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder roleARN(@Nullable String roleARN) {
-            this.roleARN = Output.ofNullable(roleARN);
+            this.roleARN = Codegen.ofNullable(roleARN);
             return this;
         }
         public Builder tableName(@Nullable Output<String> tableName) {
@@ -147,7 +148,7 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder versionId(@Nullable Output<String> versionId) {
@@ -155,7 +156,7 @@ public final class DeliveryStreamSchemaConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Output.ofNullable(versionId);
+            this.versionId = Codegen.ofNullable(versionId);
             return this;
         }        public DeliveryStreamSchemaConfigurationArgs build() {
             return new DeliveryStreamSchemaConfigurationArgs(catalogId, databaseName, region, roleARN, tableName, versionId);

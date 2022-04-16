@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceGetArgs extends io.
     @Import(name="namespaceUrl", required=true)
       private final Output<String> namespaceUrl;
 
-    public Output<String> getNamespaceUrl() {
+    public Output<String> namespaceUrl() {
         return this.namespaceUrl;
     }
 
@@ -33,7 +34,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceGetArgs extends io.
     }
 
     private ManagedZoneServiceDirectoryConfigNamespaceGetArgs() {
-        this.namespaceUrl = Output.empty();
+        this.namespaceUrl = Codegen.empty();
     }
 
     public static Builder builder() {

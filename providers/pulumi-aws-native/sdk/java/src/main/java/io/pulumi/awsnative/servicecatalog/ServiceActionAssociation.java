@@ -8,6 +8,7 @@ import io.pulumi.awsnative.servicecatalog.ServiceActionAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,19 +21,19 @@ public class ServiceActionAssociation extends io.pulumi.resources.CustomResource
     @Export(name="productId", type=String.class, parameters={})
     private Output<String> productId;
 
-    public Output<String> getProductId() {
+    public Output<String> productId() {
         return this.productId;
     }
     @Export(name="provisioningArtifactId", type=String.class, parameters={})
     private Output<String> provisioningArtifactId;
 
-    public Output<String> getProvisioningArtifactId() {
+    public Output<String> provisioningArtifactId() {
         return this.provisioningArtifactId;
     }
     @Export(name="serviceActionId", type=String.class, parameters={})
     private Output<String> serviceActionId;
 
-    public Output<String> getServiceActionId() {
+    public Output<String> serviceActionId() {
         return this.serviceActionId;
     }
 
@@ -58,7 +59,7 @@ public class ServiceActionAssociation extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceActionAssociation(String name, ServiceActionAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:servicecatalog:ServiceActionAssociation", name, args == null ? ServiceActionAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:servicecatalog:ServiceActionAssociation", name, args == null ? ServiceActionAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceActionAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

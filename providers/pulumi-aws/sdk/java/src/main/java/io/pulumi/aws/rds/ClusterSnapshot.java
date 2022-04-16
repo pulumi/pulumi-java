@@ -9,6 +9,7 @@ import io.pulumi.aws.rds.inputs.ClusterSnapshotState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the allocated storage size in gigabytes (GB).
      * 
      */
-    public Output<Integer> getAllocatedStorage() {
+    public Output<Integer> allocatedStorage() {
         return this.allocatedStorage;
     }
     /**
@@ -57,7 +58,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
      * 
      */
-    public Output<List<String>> getAvailabilityZones() {
+    public Output<List<String>> availabilityZones() {
         return this.availabilityZones;
     }
     /**
@@ -71,7 +72,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The DB Cluster Identifier from which to take the snapshot.
      * 
      */
-    public Output<String> getDbClusterIdentifier() {
+    public Output<String> dbClusterIdentifier() {
         return this.dbClusterIdentifier;
     }
     /**
@@ -85,7 +86,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
      * 
      */
-    public Output<String> getDbClusterSnapshotArn() {
+    public Output<String> dbClusterSnapshotArn() {
         return this.dbClusterSnapshotArn;
     }
     /**
@@ -99,7 +100,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The Identifier for the snapshot.
      * 
      */
-    public Output<String> getDbClusterSnapshotIdentifier() {
+    public Output<String> dbClusterSnapshotIdentifier() {
         return this.dbClusterSnapshotIdentifier;
     }
     /**
@@ -113,7 +114,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the database engine.
      * 
      */
-    public Output<String> getEngine() {
+    public Output<String> engine() {
         return this.engine;
     }
     /**
@@ -127,7 +128,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Version of the database engine for this DB cluster snapshot.
      * 
      */
-    public Output<String> getEngineVersion() {
+    public Output<String> engineVersion() {
         return this.engineVersion;
     }
     /**
@@ -141,7 +142,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
      * 
      */
-    public Output<String> getKmsKeyId() {
+    public Output<String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -155,7 +156,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return License model information for the restored DB cluster.
      * 
      */
-    public Output<String> getLicenseModel() {
+    public Output<String> licenseModel() {
         return this.licenseModel;
     }
     /**
@@ -169,19 +170,19 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Port that the DB cluster was listening on at the time of the snapshot.
      * 
      */
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
     @Export(name="snapshotType", type=String.class, parameters={})
     private Output<String> snapshotType;
 
-    public Output<String> getSnapshotType() {
+    public Output<String> snapshotType() {
         return this.snapshotType;
     }
     @Export(name="sourceDbClusterSnapshotArn", type=String.class, parameters={})
     private Output<String> sourceDbClusterSnapshotArn;
 
-    public Output<String> getSourceDbClusterSnapshotArn() {
+    public Output<String> sourceDbClusterSnapshotArn() {
         return this.sourceDbClusterSnapshotArn;
     }
     /**
@@ -195,7 +196,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The status of this DB Cluster Snapshot.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -209,7 +210,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the DB cluster snapshot is encrypted.
      * 
      */
-    public Output<Boolean> getStorageEncrypted() {
+    public Output<Boolean> storageEncrypted() {
         return this.storageEncrypted;
     }
     /**
@@ -223,7 +224,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the DB cluster. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -237,7 +238,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -251,7 +252,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @return The VPC ID associated with the DB cluster snapshot.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -277,7 +278,7 @@ public class ClusterSnapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterSnapshot(String name, ClusterSnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/clusterSnapshot:ClusterSnapshot", name, args == null ? ClusterSnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:rds/clusterSnapshot:ClusterSnapshot", name, args == null ? ClusterSnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterSnapshot(String name, Output<String> id, @Nullable ClusterSnapshotState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

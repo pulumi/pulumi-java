@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userServiceAccountMapping", required=true)
       private final Output<Map<String,String>> userServiceAccountMapping;
 
-    public Output<Map<String,String>> getUserServiceAccountMapping() {
+    public Output<Map<String,String>> userServiceAccountMapping() {
         return this.userServiceAccountMapping;
     }
 
@@ -34,7 +35,7 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentityConfigArgs() {
-        this.userServiceAccountMapping = Output.empty();
+        this.userServiceAccountMapping = Codegen.empty();
     }
 
     public static Builder builder() {

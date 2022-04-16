@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.LogMetricFilterMetricTransformationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
-        return this.logGroupName == null ? Output.empty() : this.logGroupName;
+    public Output<String> logGroupName() {
+        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     @Import(name="metricTransformation")
       private final @Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation;
 
-    public Output<LogMetricFilterMetricTransformationGetArgs> getMetricTransformation() {
-        return this.metricTransformation == null ? Output.empty() : this.metricTransformation;
+    public Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation() {
+        return this.metricTransformation == null ? Codegen.empty() : this.metricTransformation;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
-        return this.pattern == null ? Output.empty() : this.pattern;
+    public Output<String> pattern() {
+        return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     public LogMetricFilterState(
@@ -72,10 +73,10 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
     }
 
     private LogMetricFilterState() {
-        this.logGroupName = Output.empty();
-        this.metricTransformation = Output.empty();
-        this.name = Output.empty();
-        this.pattern = Output.empty();
+        this.logGroupName = Codegen.empty();
+        this.metricTransformation = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Output.ofNullable(logGroupName);
+            this.logGroupName = Codegen.ofNullable(logGroupName);
             return this;
         }
         public Builder metricTransformation(@Nullable Output<LogMetricFilterMetricTransformationGetArgs> metricTransformation) {
@@ -117,7 +118,7 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metricTransformation(@Nullable LogMetricFilterMetricTransformationGetArgs metricTransformation) {
-            this.metricTransformation = Output.ofNullable(metricTransformation);
+            this.metricTransformation = Codegen.ofNullable(metricTransformation);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -125,7 +126,7 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pattern(@Nullable Output<String> pattern) {
@@ -133,7 +134,7 @@ public final class LogMetricFilterState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Output.ofNullable(pattern);
+            this.pattern = Codegen.ofNullable(pattern);
             return this;
         }        public LogMetricFilterState build() {
             return new LogMetricFilterState(logGroupName, metricTransformation, name, pattern);

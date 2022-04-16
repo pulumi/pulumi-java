@@ -33,14 +33,14 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse {
      * Action to take when a user taps on the button.
      * 
     */
-    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse getOpenUriAction() {
+    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction() {
         return this.openUriAction;
     }
     /**
      * The title of the button.
      * 
     */
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class EntryGroupIamPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="entryGroup", required=true)
       private final Output<String> entryGroup;
 
-    public Output<String> getEntryGroup() {
+    public Output<String> entryGroup() {
         return this.entryGroup;
     }
 
@@ -33,7 +34,7 @@ public final class EntryGroupIamPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -45,15 +46,15 @@ public final class EntryGroupIamPolicyArgs extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public EntryGroupIamPolicyArgs(
@@ -68,10 +69,10 @@ public final class EntryGroupIamPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private EntryGroupIamPolicyArgs() {
-        this.entryGroup = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.entryGroup = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class EntryGroupIamPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -129,7 +130,7 @@ public final class EntryGroupIamPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public EntryGroupIamPolicyArgs build() {
             return new EntryGroupIamPolicyArgs(entryGroup, policyData, project, region);

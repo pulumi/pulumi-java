@@ -10,6 +10,7 @@ import io.pulumi.awsnative.apprunner.inputs.ServiceSourceConfigurationArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,29 +28,29 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoScalingConfigurationArn")
       private final @Nullable Output<String> autoScalingConfigurationArn;
 
-    public Output<String> getAutoScalingConfigurationArn() {
-        return this.autoScalingConfigurationArn == null ? Output.empty() : this.autoScalingConfigurationArn;
+    public Output<String> autoScalingConfigurationArn() {
+        return this.autoScalingConfigurationArn == null ? Codegen.empty() : this.autoScalingConfigurationArn;
     }
 
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
 
-    public Output<ServiceEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+    public Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration() {
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="healthCheckConfiguration")
       private final @Nullable Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
 
-    public Output<ServiceHealthCheckConfigurationArgs> getHealthCheckConfiguration() {
-        return this.healthCheckConfiguration == null ? Output.empty() : this.healthCheckConfiguration;
+    public Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration() {
+        return this.healthCheckConfiguration == null ? Codegen.empty() : this.healthCheckConfiguration;
     }
 
     @Import(name="instanceConfiguration")
       private final @Nullable Output<ServiceInstanceConfigurationArgs> instanceConfiguration;
 
-    public Output<ServiceInstanceConfigurationArgs> getInstanceConfiguration() {
-        return this.instanceConfiguration == null ? Output.empty() : this.instanceConfiguration;
+    public Output<ServiceInstanceConfigurationArgs> instanceConfiguration() {
+        return this.instanceConfiguration == null ? Codegen.empty() : this.instanceConfiguration;
     }
 
     /**
@@ -59,22 +60,22 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
-    public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+    public Output<String> serviceName() {
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     @Import(name="sourceConfiguration", required=true)
       private final Output<ServiceSourceConfigurationArgs> sourceConfiguration;
 
-    public Output<ServiceSourceConfigurationArgs> getSourceConfiguration() {
+    public Output<ServiceSourceConfigurationArgs> sourceConfiguration() {
         return this.sourceConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ServiceTagArgs>> tags;
 
-    public Output<List<ServiceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<ServiceTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServiceArgs(
@@ -95,13 +96,13 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.autoScalingConfigurationArn = Output.empty();
-        this.encryptionConfiguration = Output.empty();
-        this.healthCheckConfiguration = Output.empty();
-        this.instanceConfiguration = Output.empty();
-        this.serviceName = Output.empty();
-        this.sourceConfiguration = Output.empty();
-        this.tags = Output.empty();
+        this.autoScalingConfigurationArn = Codegen.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.healthCheckConfiguration = Codegen.empty();
+        this.instanceConfiguration = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.sourceConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoScalingConfigurationArn(@Nullable String autoScalingConfigurationArn) {
-            this.autoScalingConfigurationArn = Output.ofNullable(autoScalingConfigurationArn);
+            this.autoScalingConfigurationArn = Codegen.ofNullable(autoScalingConfigurationArn);
             return this;
         }
         public Builder encryptionConfiguration(@Nullable Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration) {
@@ -149,7 +150,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfiguration(@Nullable ServiceEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder healthCheckConfiguration(@Nullable Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration) {
@@ -157,7 +158,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckConfiguration(@Nullable ServiceHealthCheckConfigurationArgs healthCheckConfiguration) {
-            this.healthCheckConfiguration = Output.ofNullable(healthCheckConfiguration);
+            this.healthCheckConfiguration = Codegen.ofNullable(healthCheckConfiguration);
             return this;
         }
         public Builder instanceConfiguration(@Nullable Output<ServiceInstanceConfigurationArgs> instanceConfiguration) {
@@ -165,7 +166,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceConfiguration(@Nullable ServiceInstanceConfigurationArgs instanceConfiguration) {
-            this.instanceConfiguration = Output.ofNullable(instanceConfiguration);
+            this.instanceConfiguration = Codegen.ofNullable(instanceConfiguration);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -173,7 +174,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder sourceConfiguration(Output<ServiceSourceConfigurationArgs> sourceConfiguration) {
@@ -189,7 +190,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ServiceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ServiceTagArgs... tags) {

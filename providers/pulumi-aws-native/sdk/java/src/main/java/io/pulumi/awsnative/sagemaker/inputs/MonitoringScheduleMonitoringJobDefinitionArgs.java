@@ -12,6 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleNetworkConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStoppingConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,8 +31,8 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     @Import(name="baselineConfig")
       private final @Nullable Output<MonitoringScheduleBaselineConfigArgs> baselineConfig;
 
-    public Output<MonitoringScheduleBaselineConfigArgs> getBaselineConfig() {
-        return this.baselineConfig == null ? Output.empty() : this.baselineConfig;
+    public Output<MonitoringScheduleBaselineConfigArgs> baselineConfig() {
+        return this.baselineConfig == null ? Codegen.empty() : this.baselineConfig;
     }
 
     /**
@@ -41,43 +42,43 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     @Import(name="environment")
       private final @Nullable Output<Object> environment;
 
-    public Output<Object> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<Object> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     @Import(name="monitoringAppSpecification", required=true)
       private final Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification;
 
-    public Output<MonitoringScheduleMonitoringAppSpecificationArgs> getMonitoringAppSpecification() {
+    public Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification() {
         return this.monitoringAppSpecification;
     }
 
     @Import(name="monitoringInputs", required=true)
       private final Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs;
 
-    public Output<List<MonitoringScheduleMonitoringInputArgs>> getMonitoringInputs() {
+    public Output<List<MonitoringScheduleMonitoringInputArgs>> monitoringInputs() {
         return this.monitoringInputs;
     }
 
     @Import(name="monitoringOutputConfig", required=true)
       private final Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig;
 
-    public Output<MonitoringScheduleMonitoringOutputConfigArgs> getMonitoringOutputConfig() {
+    public Output<MonitoringScheduleMonitoringOutputConfigArgs> monitoringOutputConfig() {
         return this.monitoringOutputConfig;
     }
 
     @Import(name="monitoringResources", required=true)
       private final Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources;
 
-    public Output<MonitoringScheduleMonitoringResourcesArgs> getMonitoringResources() {
+    public Output<MonitoringScheduleMonitoringResourcesArgs> monitoringResources() {
         return this.monitoringResources;
     }
 
     @Import(name="networkConfig")
       private final @Nullable Output<MonitoringScheduleNetworkConfigArgs> networkConfig;
 
-    public Output<MonitoringScheduleNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+    public Output<MonitoringScheduleNetworkConfigArgs> networkConfig() {
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -87,15 +88,15 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stoppingCondition")
       private final @Nullable Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition;
 
-    public Output<MonitoringScheduleStoppingConditionArgs> getStoppingCondition() {
-        return this.stoppingCondition == null ? Output.empty() : this.stoppingCondition;
+    public Output<MonitoringScheduleStoppingConditionArgs> stoppingCondition() {
+        return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
     }
 
     public MonitoringScheduleMonitoringJobDefinitionArgs(
@@ -120,15 +121,15 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
     }
 
     private MonitoringScheduleMonitoringJobDefinitionArgs() {
-        this.baselineConfig = Output.empty();
-        this.environment = Output.empty();
-        this.monitoringAppSpecification = Output.empty();
-        this.monitoringInputs = Output.empty();
-        this.monitoringOutputConfig = Output.empty();
-        this.monitoringResources = Output.empty();
-        this.networkConfig = Output.empty();
-        this.roleArn = Output.empty();
-        this.stoppingCondition = Output.empty();
+        this.baselineConfig = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.monitoringAppSpecification = Codegen.empty();
+        this.monitoringInputs = Codegen.empty();
+        this.monitoringOutputConfig = Codegen.empty();
+        this.monitoringResources = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stoppingCondition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
             return this;
         }
         public Builder baselineConfig(@Nullable MonitoringScheduleBaselineConfigArgs baselineConfig) {
-            this.baselineConfig = Output.ofNullable(baselineConfig);
+            this.baselineConfig = Codegen.ofNullable(baselineConfig);
             return this;
         }
         public Builder environment(@Nullable Output<Object> environment) {
@@ -180,7 +181,7 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
             return this;
         }
         public Builder environment(@Nullable Object environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder monitoringAppSpecification(Output<MonitoringScheduleMonitoringAppSpecificationArgs> monitoringAppSpecification) {
@@ -223,7 +224,7 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
             return this;
         }
         public Builder networkConfig(@Nullable MonitoringScheduleNetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -239,7 +240,7 @@ public final class MonitoringScheduleMonitoringJobDefinitionArgs extends io.pulu
             return this;
         }
         public Builder stoppingCondition(@Nullable MonitoringScheduleStoppingConditionArgs stoppingCondition) {
-            this.stoppingCondition = Output.ofNullable(stoppingCondition);
+            this.stoppingCondition = Codegen.ofNullable(stoppingCondition);
             return this;
         }        public MonitoringScheduleMonitoringJobDefinitionArgs build() {
             return new MonitoringScheduleMonitoringJobDefinitionArgs(baselineConfig, environment, monitoringAppSpecification, monitoringInputs, monitoringOutputConfig, monitoringResources, networkConfig, roleArn, stoppingCondition);

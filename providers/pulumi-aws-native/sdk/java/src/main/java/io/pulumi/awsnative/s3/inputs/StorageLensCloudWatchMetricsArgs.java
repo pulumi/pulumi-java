@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class StorageLensCloudWatchMetricsArgs extends io.pulumi.resources.
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -33,7 +34,7 @@ public final class StorageLensCloudWatchMetricsArgs extends io.pulumi.resources.
     }
 
     private StorageLensCloudWatchMetricsArgs() {
-        this.isEnabled = Output.empty();
+        this.isEnabled = Codegen.empty();
     }
 
     public static Builder builder() {

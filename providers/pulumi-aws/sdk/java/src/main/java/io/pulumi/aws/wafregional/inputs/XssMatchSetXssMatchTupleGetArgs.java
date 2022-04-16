@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.XssMatchSetXssMatchTupleFieldToMatchGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
     @Import(name="fieldToMatch", required=true)
       private final Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
-    public Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
+    public Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
@@ -32,7 +33,7 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
     @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
-    public Output<String> getTextTransformation() {
+    public Output<String> textTransformation() {
         return this.textTransformation;
     }
 
@@ -44,8 +45,8 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
     }
 
     private XssMatchSetXssMatchTupleGetArgs() {
-        this.fieldToMatch = Output.empty();
-        this.textTransformation = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.textTransformation = Codegen.empty();
     }
 
     public static Builder builder() {

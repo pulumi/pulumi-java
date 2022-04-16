@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataloss;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionDeidentifyTemplateArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateState;
@@ -52,7 +53,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * Structure is documented below.
      * 
      */
-    public Output<PreventionDeidentifyTemplateDeidentifyConfig> getDeidentifyConfig() {
+    public Output<PreventionDeidentifyTemplateDeidentifyConfig> deidentifyConfig() {
         return this.deidentifyConfig;
     }
     /**
@@ -66,7 +67,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * @return A description of the template.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -80,7 +81,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * @return User set display name of the template.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -94,7 +95,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * @return Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -116,7 +117,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -142,7 +143,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public PreventionDeidentifyTemplate(String name, PreventionDeidentifyTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataloss/preventionDeidentifyTemplate:PreventionDeidentifyTemplate", name, args == null ? PreventionDeidentifyTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataloss/preventionDeidentifyTemplate:PreventionDeidentifyTemplate", name, args == null ? PreventionDeidentifyTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PreventionDeidentifyTemplate(String name, Output<String> id, @Nullable PreventionDeidentifyTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

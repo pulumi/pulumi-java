@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wisdom.inputs;
 import io.pulumi.awsnative.wisdom.inputs.KnowledgeBaseAppIntegrationsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
     @Import(name="appIntegrations")
       private final @Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations;
 
-    public Output<KnowledgeBaseAppIntegrationsConfigurationArgs> getAppIntegrations() {
-        return this.appIntegrations == null ? Output.empty() : this.appIntegrations;
+    public Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations() {
+        return this.appIntegrations == null ? Codegen.empty() : this.appIntegrations;
     }
 
     public KnowledgeBaseSourceConfigurationArgs(@Nullable Output<KnowledgeBaseAppIntegrationsConfigurationArgs> appIntegrations) {
@@ -26,7 +27,7 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
     }
 
     private KnowledgeBaseSourceConfigurationArgs() {
-        this.appIntegrations = Output.empty();
+        this.appIntegrations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class KnowledgeBaseSourceConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder appIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfigurationArgs appIntegrations) {
-            this.appIntegrations = Output.ofNullable(appIntegrations);
+            this.appIntegrations = Codegen.ofNullable(appIntegrations);
             return this;
         }        public KnowledgeBaseSourceConfigurationArgs build() {
             return new KnowledgeBaseSourceConfigurationArgs(appIntegrations);

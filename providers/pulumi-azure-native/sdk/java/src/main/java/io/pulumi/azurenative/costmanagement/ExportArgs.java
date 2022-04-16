@@ -10,6 +10,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ExportScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="definition", required=true)
       private final Output<ExportDefinitionArgs> definition;
 
-    public Output<ExportDefinitionArgs> getDefinition() {
+    public Output<ExportDefinitionArgs> definition() {
         return this.definition;
     }
 
@@ -37,7 +38,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deliveryInfo", required=true)
       private final Output<ExportDeliveryInfoArgs> deliveryInfo;
 
-    public Output<ExportDeliveryInfoArgs> getDeliveryInfo() {
+    public Output<ExportDeliveryInfoArgs> deliveryInfo() {
         return this.deliveryInfo;
     }
 
@@ -48,8 +49,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+    public Output<String> eTag() {
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="exportName")
       private final @Nullable Output<String> exportName;
 
-    public Output<String> getExportName() {
-        return this.exportName == null ? Output.empty() : this.exportName;
+    public Output<String> exportName() {
+        return this.exportName == null ? Codegen.empty() : this.exportName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="format")
       private final @Nullable Output<Either<String,FormatType>> format;
 
-    public Output<Either<String,FormatType>> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<Either<String,FormatType>> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<ExportScheduleArgs> schedule;
 
-    public Output<ExportScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<ExportScheduleArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -114,13 +115,13 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExportArgs() {
-        this.definition = Output.empty();
-        this.deliveryInfo = Output.empty();
-        this.eTag = Output.empty();
-        this.exportName = Output.empty();
-        this.format = Output.empty();
-        this.schedule = Output.empty();
-        this.scope = Output.empty();
+        this.definition = Codegen.empty();
+        this.deliveryInfo = Codegen.empty();
+        this.eTag = Codegen.empty();
+        this.exportName = Codegen.empty();
+        this.format = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder exportName(@Nullable Output<String> exportName) {
@@ -184,7 +185,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exportName(@Nullable String exportName) {
-            this.exportName = Output.ofNullable(exportName);
+            this.exportName = Codegen.ofNullable(exportName);
             return this;
         }
         public Builder format(@Nullable Output<Either<String,FormatType>> format) {
@@ -192,7 +193,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable Either<String,FormatType> format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder schedule(@Nullable Output<ExportScheduleArgs> schedule) {
@@ -200,7 +201,7 @@ public final class ExportArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable ExportScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder scope(Output<String> scope) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
     @Import(name="properties")
       private final @Nullable Output<List<String>> properties;
 
-    public Output<List<String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<List<String>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
     @Import(name="source", required=true)
       private final Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source;
 
-    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> getSource() {
+    public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceArgs> source() {
         return this.source;
     }
 
@@ -46,8 +47,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs() {
-        this.properties = Output.empty();
-        this.source = Output.empty();
+        this.properties = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs ext
             return this;
         }
         public Builder properties(@Nullable List<String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder properties(String... properties) {

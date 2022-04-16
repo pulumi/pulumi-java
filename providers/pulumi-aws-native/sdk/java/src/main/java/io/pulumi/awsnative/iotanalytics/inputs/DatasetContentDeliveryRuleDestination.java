@@ -18,14 +18,14 @@ public final class DatasetContentDeliveryRuleDestination extends io.pulumi.resou
     @Import(name="iotEventsDestinationConfiguration")
       private final @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration;
 
-    public Optional<DatasetIotEventsDestinationConfiguration> getIotEventsDestinationConfiguration() {
+    public Optional<DatasetIotEventsDestinationConfiguration> iotEventsDestinationConfiguration() {
         return this.iotEventsDestinationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.iotEventsDestinationConfiguration);
     }
 
     @Import(name="s3DestinationConfiguration")
       private final @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration;
 
-    public Optional<DatasetS3DestinationConfiguration> getS3DestinationConfiguration() {
+    public Optional<DatasetS3DestinationConfiguration> s3DestinationConfiguration() {
         return this.s3DestinationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.s3DestinationConfiguration);
     }
 

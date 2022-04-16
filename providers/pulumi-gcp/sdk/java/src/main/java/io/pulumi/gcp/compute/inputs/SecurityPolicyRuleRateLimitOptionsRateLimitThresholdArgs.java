@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs exte
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
@@ -31,7 +32,7 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs exte
     @Import(name="intervalSec", required=true)
       private final Output<Integer> intervalSec;
 
-    public Output<Integer> getIntervalSec() {
+    public Output<Integer> intervalSec() {
         return this.intervalSec;
     }
 
@@ -43,8 +44,8 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs exte
     }
 
     private SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs() {
-        this.count = Output.empty();
-        this.intervalSec = Output.empty();
+        this.count = Codegen.empty();
+        this.intervalSec = Codegen.empty();
     }
 
     public static Builder builder() {

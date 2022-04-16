@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,14 +20,14 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     @Import(name="condition")
       private final @Nullable Output<SubscriptionIAMBindingConditionArgs> condition;
 
-    public Output<SubscriptionIAMBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<SubscriptionIAMBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -38,8 +39,8 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -62,7 +63,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     @Import(name="subscription", required=true)
       private final Output<String> subscription;
 
-    public Output<String> getSubscription() {
+    public Output<String> subscription() {
         return this.subscription;
     }
 
@@ -80,11 +81,11 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     }
 
     private SubscriptionIAMBindingArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.subscription = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.subscription = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder condition(@Nullable SubscriptionIAMBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {
@@ -139,7 +140,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

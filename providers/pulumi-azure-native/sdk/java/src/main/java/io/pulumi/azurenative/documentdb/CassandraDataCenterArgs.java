@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.inputs.DataCenterResourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -33,8 +34,8 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
     @Import(name="dataCenterName")
       private final @Nullable Output<String> dataCenterName;
 
-    public Output<String> getDataCenterName() {
-        return this.dataCenterName == null ? Output.empty() : this.dataCenterName;
+    public Output<String> dataCenterName() {
+        return this.dataCenterName == null ? Codegen.empty() : this.dataCenterName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
     @Import(name="properties")
       private final @Nullable Output<DataCenterResourcePropertiesArgs> properties;
 
-    public Output<DataCenterResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<DataCenterResourcePropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -71,10 +72,10 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
     }
 
     private CassandraDataCenterArgs() {
-        this.clusterName = Output.empty();
-        this.dataCenterName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.dataCenterName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dataCenterName(@Nullable String dataCenterName) {
-            this.dataCenterName = Output.ofNullable(dataCenterName);
+            this.dataCenterName = Codegen.ofNullable(dataCenterName);
             return this;
         }
         public Builder properties(@Nullable Output<DataCenterResourcePropertiesArgs> properties) {
@@ -124,7 +125,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder properties(@Nullable DataCenterResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

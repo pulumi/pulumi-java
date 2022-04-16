@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="controlStatus", required=true)
       private final Output<String> controlStatus;
 
-    public Output<String> getControlStatus() {
+    public Output<String> controlStatus() {
         return this.controlStatus;
     }
 
@@ -32,8 +33,8 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="disabledReason")
       private final @Nullable Output<String> disabledReason;
 
-    public Output<String> getDisabledReason() {
-        return this.disabledReason == null ? Output.empty() : this.disabledReason;
+    public Output<String> disabledReason() {
+        return this.disabledReason == null ? Codegen.empty() : this.disabledReason;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="standardsControlArn", required=true)
       private final Output<String> standardsControlArn;
 
-    public Output<String> getStandardsControlArn() {
+    public Output<String> standardsControlArn() {
         return this.standardsControlArn;
     }
 
@@ -57,9 +58,9 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private StandardsControlArgs() {
-        this.controlStatus = Output.empty();
-        this.disabledReason = Output.empty();
-        this.standardsControlArn = Output.empty();
+        this.controlStatus = Codegen.empty();
+        this.disabledReason = Codegen.empty();
+        this.standardsControlArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder disabledReason(@Nullable String disabledReason) {
-            this.disabledReason = Output.ofNullable(disabledReason);
+            this.disabledReason = Codegen.ofNullable(disabledReason);
             return this;
         }
         public Builder standardsControlArn(Output<String> standardsControlArn) {

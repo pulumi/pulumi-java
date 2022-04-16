@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     @Import(name="containerSpecGcsPath")
       private final @Nullable Output<String> containerSpecGcsPath;
 
-    public Output<String> getContainerSpecGcsPath() {
-        return this.containerSpecGcsPath == null ? Output.empty() : this.containerSpecGcsPath;
+    public Output<String> containerSpecGcsPath() {
+        return this.containerSpecGcsPath == null ? Codegen.empty() : this.containerSpecGcsPath;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
-    public Output<String> getJobId() {
-        return this.jobId == null ? Output.empty() : this.jobId;
+    public Output<String> jobId() {
+        return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,Object>> labels;
 
     @Deprecated /* Deprecated until the API supports this field */
-    public Output<Map<String,Object>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,Object>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     @Import(name="onDelete")
       private final @Nullable Output<String> onDelete;
 
-    public Output<String> getOnDelete() {
-        return this.onDelete == null ? Output.empty() : this.onDelete;
+    public Output<String> onDelete() {
+        return this.onDelete == null ? Codegen.empty() : this.onDelete;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Output<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,Object>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     @Import(name="state")
       private final @Nullable Output<String> state;
 
-    public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+    public Output<String> state() {
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public FlexTemplateJobState(
@@ -153,15 +154,15 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     }
 
     private FlexTemplateJobState() {
-        this.containerSpecGcsPath = Output.empty();
-        this.jobId = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.onDelete = Output.empty();
-        this.parameters = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.state = Output.empty();
+        this.containerSpecGcsPath = Codegen.empty();
+        this.jobId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.onDelete = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder containerSpecGcsPath(@Nullable String containerSpecGcsPath) {
-            this.containerSpecGcsPath = Output.ofNullable(containerSpecGcsPath);
+            this.containerSpecGcsPath = Codegen.ofNullable(containerSpecGcsPath);
             return this;
         }
         public Builder jobId(@Nullable Output<String> jobId) {
@@ -213,7 +214,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Output.ofNullable(jobId);
+            this.jobId = Codegen.ofNullable(jobId);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
@@ -221,7 +222,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder labels(@Nullable Map<String,Object> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -229,7 +230,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder onDelete(@Nullable Output<String> onDelete) {
@@ -237,7 +238,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder onDelete(@Nullable String onDelete) {
-            this.onDelete = Output.ofNullable(onDelete);
+            this.onDelete = Codegen.ofNullable(onDelete);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
@@ -245,7 +246,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -253,7 +254,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -261,7 +262,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -269,7 +270,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public FlexTemplateJobState build() {
             return new FlexTemplateJobState(containerSpecGcsPath, jobId, labels, name, onDelete, parameters, project, region, state);

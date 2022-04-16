@@ -7,6 +7,7 @@ import io.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsGetArgs
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationParameterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="automatic")
       private final @Nullable Output<Boolean> automatic;
 
-    public Output<Boolean> getAutomatic() {
-        return this.automatic == null ? Output.empty() : this.automatic;
+    public Output<Boolean> automatic() {
+        return this.automatic == null ? Codegen.empty() : this.automatic;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="configRuleName")
       private final @Nullable Output<String> configRuleName;
 
-    public Output<String> getConfigRuleName() {
-        return this.configRuleName == null ? Output.empty() : this.configRuleName;
+    public Output<String> configRuleName() {
+        return this.configRuleName == null ? Codegen.empty() : this.configRuleName;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="executionControls")
       private final @Nullable Output<RemediationConfigurationExecutionControlsGetArgs> executionControls;
 
-    public Output<RemediationConfigurationExecutionControlsGetArgs> getExecutionControls() {
-        return this.executionControls == null ? Output.empty() : this.executionControls;
+    public Output<RemediationConfigurationExecutionControlsGetArgs> executionControls() {
+        return this.executionControls == null ? Codegen.empty() : this.executionControls;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="maximumAutomaticAttempts")
       private final @Nullable Output<Integer> maximumAutomaticAttempts;
 
-    public Output<Integer> getMaximumAutomaticAttempts() {
-        return this.maximumAutomaticAttempts == null ? Output.empty() : this.maximumAutomaticAttempts;
+    public Output<Integer> maximumAutomaticAttempts() {
+        return this.maximumAutomaticAttempts == null ? Codegen.empty() : this.maximumAutomaticAttempts;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="parameters")
       private final @Nullable Output<List<RemediationConfigurationParameterGetArgs>> parameters;
 
-    public Output<List<RemediationConfigurationParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<RemediationConfigurationParameterGetArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="retryAttemptSeconds")
       private final @Nullable Output<Integer> retryAttemptSeconds;
 
-    public Output<Integer> getRetryAttemptSeconds() {
-        return this.retryAttemptSeconds == null ? Output.empty() : this.retryAttemptSeconds;
+    public Output<Integer> retryAttemptSeconds() {
+        return this.retryAttemptSeconds == null ? Codegen.empty() : this.retryAttemptSeconds;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
-    public Output<String> getTargetId() {
-        return this.targetId == null ? Output.empty() : this.targetId;
+    public Output<String> targetId() {
+        return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
-        return this.targetType == null ? Output.empty() : this.targetType;
+    public Output<String> targetType() {
+        return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     @Import(name="targetVersion")
       private final @Nullable Output<String> targetVersion;
 
-    public Output<String> getTargetVersion() {
-        return this.targetVersion == null ? Output.empty() : this.targetVersion;
+    public Output<String> targetVersion() {
+        return this.targetVersion == null ? Codegen.empty() : this.targetVersion;
     }
 
     public RemediationConfigurationState(
@@ -166,17 +167,17 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
     }
 
     private RemediationConfigurationState() {
-        this.arn = Output.empty();
-        this.automatic = Output.empty();
-        this.configRuleName = Output.empty();
-        this.executionControls = Output.empty();
-        this.maximumAutomaticAttempts = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceType = Output.empty();
-        this.retryAttemptSeconds = Output.empty();
-        this.targetId = Output.empty();
-        this.targetType = Output.empty();
-        this.targetVersion = Output.empty();
+        this.arn = Codegen.empty();
+        this.automatic = Codegen.empty();
+        this.configRuleName = Codegen.empty();
+        this.executionControls = Codegen.empty();
+        this.maximumAutomaticAttempts = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.retryAttemptSeconds = Codegen.empty();
+        this.targetId = Codegen.empty();
+        this.targetType = Codegen.empty();
+        this.targetVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder automatic(@Nullable Output<Boolean> automatic) {
@@ -232,7 +233,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = Output.ofNullable(automatic);
+            this.automatic = Codegen.ofNullable(automatic);
             return this;
         }
         public Builder configRuleName(@Nullable Output<String> configRuleName) {
@@ -240,7 +241,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder configRuleName(@Nullable String configRuleName) {
-            this.configRuleName = Output.ofNullable(configRuleName);
+            this.configRuleName = Codegen.ofNullable(configRuleName);
             return this;
         }
         public Builder executionControls(@Nullable Output<RemediationConfigurationExecutionControlsGetArgs> executionControls) {
@@ -248,7 +249,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder executionControls(@Nullable RemediationConfigurationExecutionControlsGetArgs executionControls) {
-            this.executionControls = Output.ofNullable(executionControls);
+            this.executionControls = Codegen.ofNullable(executionControls);
             return this;
         }
         public Builder maximumAutomaticAttempts(@Nullable Output<Integer> maximumAutomaticAttempts) {
@@ -256,7 +257,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder maximumAutomaticAttempts(@Nullable Integer maximumAutomaticAttempts) {
-            this.maximumAutomaticAttempts = Output.ofNullable(maximumAutomaticAttempts);
+            this.maximumAutomaticAttempts = Codegen.ofNullable(maximumAutomaticAttempts);
             return this;
         }
         public Builder parameters(@Nullable Output<List<RemediationConfigurationParameterGetArgs>> parameters) {
@@ -264,7 +265,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder parameters(@Nullable List<RemediationConfigurationParameterGetArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(RemediationConfigurationParameterGetArgs... parameters) {
@@ -275,7 +276,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder retryAttemptSeconds(@Nullable Output<Integer> retryAttemptSeconds) {
@@ -283,7 +284,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder retryAttemptSeconds(@Nullable Integer retryAttemptSeconds) {
-            this.retryAttemptSeconds = Output.ofNullable(retryAttemptSeconds);
+            this.retryAttemptSeconds = Codegen.ofNullable(retryAttemptSeconds);
             return this;
         }
         public Builder targetId(@Nullable Output<String> targetId) {
@@ -291,7 +292,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Output.ofNullable(targetId);
+            this.targetId = Codegen.ofNullable(targetId);
             return this;
         }
         public Builder targetType(@Nullable Output<String> targetType) {
@@ -299,7 +300,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Output.ofNullable(targetType);
+            this.targetType = Codegen.ofNullable(targetType);
             return this;
         }
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
@@ -307,7 +308,7 @@ public final class RemediationConfigurationState extends io.pulumi.resources.Res
             return this;
         }
         public Builder targetVersion(@Nullable String targetVersion) {
-            this.targetVersion = Output.ofNullable(targetVersion);
+            this.targetVersion = Codegen.ofNullable(targetVersion);
             return this;
         }        public RemediationConfigurationState build() {
             return new RemediationConfigurationState(arn, automatic, configRuleName, executionControls, maximumAutomaticAttempts, parameters, resourceType, retryAttemptSeconds, targetId, targetType, targetVersion);

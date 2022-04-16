@@ -14,6 +14,7 @@ import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointDashEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -36,22 +37,22 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="adTriggers")
       private final @Nullable Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers;
 
-    public Output<List<OriginEndpointDashPackageAdTriggersItem>> getAdTriggers() {
-        return this.adTriggers == null ? Output.empty() : this.adTriggers;
+    public Output<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers() {
+        return this.adTriggers == null ? Codegen.empty() : this.adTriggers;
     }
 
     @Import(name="adsOnDeliveryRestrictions")
       private final @Nullable Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions;
 
-    public Output<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
-        return this.adsOnDeliveryRestrictions == null ? Output.empty() : this.adsOnDeliveryRestrictions;
+    public Output<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions() {
+        return this.adsOnDeliveryRestrictions == null ? Codegen.empty() : this.adsOnDeliveryRestrictions;
     }
 
     @Import(name="encryption")
       private final @Nullable Output<OriginEndpointDashEncryptionArgs> encryption;
 
-    public Output<OriginEndpointDashEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<OriginEndpointDashEncryptionArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="manifestLayout")
       private final @Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout;
 
-    public Output<OriginEndpointDashPackageManifestLayout> getManifestLayout() {
-        return this.manifestLayout == null ? Output.empty() : this.manifestLayout;
+    public Output<OriginEndpointDashPackageManifestLayout> manifestLayout() {
+        return this.manifestLayout == null ? Codegen.empty() : this.manifestLayout;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="manifestWindowSeconds")
       private final @Nullable Output<Integer> manifestWindowSeconds;
 
-    public Output<Integer> getManifestWindowSeconds() {
-        return this.manifestWindowSeconds == null ? Output.empty() : this.manifestWindowSeconds;
+    public Output<Integer> manifestWindowSeconds() {
+        return this.manifestWindowSeconds == null ? Codegen.empty() : this.manifestWindowSeconds;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="minBufferTimeSeconds")
       private final @Nullable Output<Integer> minBufferTimeSeconds;
 
-    public Output<Integer> getMinBufferTimeSeconds() {
-        return this.minBufferTimeSeconds == null ? Output.empty() : this.minBufferTimeSeconds;
+    public Output<Integer> minBufferTimeSeconds() {
+        return this.minBufferTimeSeconds == null ? Codegen.empty() : this.minBufferTimeSeconds;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="minUpdatePeriodSeconds")
       private final @Nullable Output<Integer> minUpdatePeriodSeconds;
 
-    public Output<Integer> getMinUpdatePeriodSeconds() {
-        return this.minUpdatePeriodSeconds == null ? Output.empty() : this.minUpdatePeriodSeconds;
+    public Output<Integer> minUpdatePeriodSeconds() {
+        return this.minUpdatePeriodSeconds == null ? Codegen.empty() : this.minUpdatePeriodSeconds;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="periodTriggers")
       private final @Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers;
 
-    public Output<List<OriginEndpointDashPackagePeriodTriggersItem>> getPeriodTriggers() {
-        return this.periodTriggers == null ? Output.empty() : this.periodTriggers;
+    public Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers() {
+        return this.periodTriggers == null ? Codegen.empty() : this.periodTriggers;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="profile")
       private final @Nullable Output<OriginEndpointDashPackageProfile> profile;
 
-    public Output<OriginEndpointDashPackageProfile> getProfile() {
-        return this.profile == null ? Output.empty() : this.profile;
+    public Output<OriginEndpointDashPackageProfile> profile() {
+        return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> getSegmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Output.empty() : this.segmentDurationSeconds;
+    public Output<Integer> segmentDurationSeconds() {
+        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 
     /**
@@ -138,15 +139,15 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="segmentTemplateFormat")
       private final @Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat;
 
-    public Output<OriginEndpointDashPackageSegmentTemplateFormat> getSegmentTemplateFormat() {
-        return this.segmentTemplateFormat == null ? Output.empty() : this.segmentTemplateFormat;
+    public Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat() {
+        return this.segmentTemplateFormat == null ? Codegen.empty() : this.segmentTemplateFormat;
     }
 
     @Import(name="streamSelection")
       private final @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
 
-    public Output<OriginEndpointStreamSelectionArgs> getStreamSelection() {
-        return this.streamSelection == null ? Output.empty() : this.streamSelection;
+    public Output<OriginEndpointStreamSelectionArgs> streamSelection() {
+        return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
     }
 
     /**
@@ -156,8 +157,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="suggestedPresentationDelaySeconds")
       private final @Nullable Output<Integer> suggestedPresentationDelaySeconds;
 
-    public Output<Integer> getSuggestedPresentationDelaySeconds() {
-        return this.suggestedPresentationDelaySeconds == null ? Output.empty() : this.suggestedPresentationDelaySeconds;
+    public Output<Integer> suggestedPresentationDelaySeconds() {
+        return this.suggestedPresentationDelaySeconds == null ? Codegen.empty() : this.suggestedPresentationDelaySeconds;
     }
 
     /**
@@ -167,8 +168,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="utcTiming")
       private final @Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming;
 
-    public Output<OriginEndpointDashPackageUtcTiming> getUtcTiming() {
-        return this.utcTiming == null ? Output.empty() : this.utcTiming;
+    public Output<OriginEndpointDashPackageUtcTiming> utcTiming() {
+        return this.utcTiming == null ? Codegen.empty() : this.utcTiming;
     }
 
     /**
@@ -178,8 +179,8 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     @Import(name="utcTimingUri")
       private final @Nullable Output<String> utcTimingUri;
 
-    public Output<String> getUtcTimingUri() {
-        return this.utcTimingUri == null ? Output.empty() : this.utcTimingUri;
+    public Output<String> utcTimingUri() {
+        return this.utcTimingUri == null ? Codegen.empty() : this.utcTimingUri;
     }
 
     public OriginEndpointDashPackageArgs(
@@ -216,21 +217,21 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     }
 
     private OriginEndpointDashPackageArgs() {
-        this.adTriggers = Output.empty();
-        this.adsOnDeliveryRestrictions = Output.empty();
-        this.encryption = Output.empty();
-        this.manifestLayout = Output.empty();
-        this.manifestWindowSeconds = Output.empty();
-        this.minBufferTimeSeconds = Output.empty();
-        this.minUpdatePeriodSeconds = Output.empty();
-        this.periodTriggers = Output.empty();
-        this.profile = Output.empty();
-        this.segmentDurationSeconds = Output.empty();
-        this.segmentTemplateFormat = Output.empty();
-        this.streamSelection = Output.empty();
-        this.suggestedPresentationDelaySeconds = Output.empty();
-        this.utcTiming = Output.empty();
-        this.utcTimingUri = Output.empty();
+        this.adTriggers = Codegen.empty();
+        this.adsOnDeliveryRestrictions = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.manifestLayout = Codegen.empty();
+        this.manifestWindowSeconds = Codegen.empty();
+        this.minBufferTimeSeconds = Codegen.empty();
+        this.minUpdatePeriodSeconds = Codegen.empty();
+        this.periodTriggers = Codegen.empty();
+        this.profile = Codegen.empty();
+        this.segmentDurationSeconds = Codegen.empty();
+        this.segmentTemplateFormat = Codegen.empty();
+        this.streamSelection = Codegen.empty();
+        this.suggestedPresentationDelaySeconds = Codegen.empty();
+        this.utcTiming = Codegen.empty();
+        this.utcTimingUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -286,7 +287,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder adTriggers(@Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
-            this.adTriggers = Output.ofNullable(adTriggers);
+            this.adTriggers = Codegen.ofNullable(adTriggers);
             return this;
         }
         public Builder adTriggers(OriginEndpointDashPackageAdTriggersItem... adTriggers) {
@@ -297,7 +298,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
-            this.adsOnDeliveryRestrictions = Output.ofNullable(adsOnDeliveryRestrictions);
+            this.adsOnDeliveryRestrictions = Codegen.ofNullable(adsOnDeliveryRestrictions);
             return this;
         }
         public Builder encryption(@Nullable Output<OriginEndpointDashEncryptionArgs> encryption) {
@@ -305,7 +306,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder encryption(@Nullable OriginEndpointDashEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder manifestLayout(@Nullable Output<OriginEndpointDashPackageManifestLayout> manifestLayout) {
@@ -313,7 +314,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder manifestLayout(@Nullable OriginEndpointDashPackageManifestLayout manifestLayout) {
-            this.manifestLayout = Output.ofNullable(manifestLayout);
+            this.manifestLayout = Codegen.ofNullable(manifestLayout);
             return this;
         }
         public Builder manifestWindowSeconds(@Nullable Output<Integer> manifestWindowSeconds) {
@@ -321,7 +322,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
-            this.manifestWindowSeconds = Output.ofNullable(manifestWindowSeconds);
+            this.manifestWindowSeconds = Codegen.ofNullable(manifestWindowSeconds);
             return this;
         }
         public Builder minBufferTimeSeconds(@Nullable Output<Integer> minBufferTimeSeconds) {
@@ -329,7 +330,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
-            this.minBufferTimeSeconds = Output.ofNullable(minBufferTimeSeconds);
+            this.minBufferTimeSeconds = Codegen.ofNullable(minBufferTimeSeconds);
             return this;
         }
         public Builder minUpdatePeriodSeconds(@Nullable Output<Integer> minUpdatePeriodSeconds) {
@@ -337,7 +338,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder minUpdatePeriodSeconds(@Nullable Integer minUpdatePeriodSeconds) {
-            this.minUpdatePeriodSeconds = Output.ofNullable(minUpdatePeriodSeconds);
+            this.minUpdatePeriodSeconds = Codegen.ofNullable(minUpdatePeriodSeconds);
             return this;
         }
         public Builder periodTriggers(@Nullable Output<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers) {
@@ -345,7 +346,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder periodTriggers(@Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
-            this.periodTriggers = Output.ofNullable(periodTriggers);
+            this.periodTriggers = Codegen.ofNullable(periodTriggers);
             return this;
         }
         public Builder periodTriggers(OriginEndpointDashPackagePeriodTriggersItem... periodTriggers) {
@@ -356,7 +357,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder profile(@Nullable OriginEndpointDashPackageProfile profile) {
-            this.profile = Output.ofNullable(profile);
+            this.profile = Codegen.ofNullable(profile);
             return this;
         }
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
@@ -364,7 +365,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
+            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
             return this;
         }
         public Builder segmentTemplateFormat(@Nullable Output<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
@@ -372,7 +373,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder segmentTemplateFormat(@Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
-            this.segmentTemplateFormat = Output.ofNullable(segmentTemplateFormat);
+            this.segmentTemplateFormat = Codegen.ofNullable(segmentTemplateFormat);
             return this;
         }
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
@@ -380,7 +381,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
-            this.streamSelection = Output.ofNullable(streamSelection);
+            this.streamSelection = Codegen.ofNullable(streamSelection);
             return this;
         }
         public Builder suggestedPresentationDelaySeconds(@Nullable Output<Integer> suggestedPresentationDelaySeconds) {
@@ -388,7 +389,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder suggestedPresentationDelaySeconds(@Nullable Integer suggestedPresentationDelaySeconds) {
-            this.suggestedPresentationDelaySeconds = Output.ofNullable(suggestedPresentationDelaySeconds);
+            this.suggestedPresentationDelaySeconds = Codegen.ofNullable(suggestedPresentationDelaySeconds);
             return this;
         }
         public Builder utcTiming(@Nullable Output<OriginEndpointDashPackageUtcTiming> utcTiming) {
@@ -396,7 +397,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder utcTiming(@Nullable OriginEndpointDashPackageUtcTiming utcTiming) {
-            this.utcTiming = Output.ofNullable(utcTiming);
+            this.utcTiming = Codegen.ofNullable(utcTiming);
             return this;
         }
         public Builder utcTimingUri(@Nullable Output<String> utcTimingUri) {
@@ -404,7 +405,7 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder utcTimingUri(@Nullable String utcTimingUri) {
-            this.utcTimingUri = Output.ofNullable(utcTimingUri);
+            this.utcTimingUri = Codegen.ofNullable(utcTimingUri);
             return this;
         }        public OriginEndpointDashPackageArgs build() {
             return new OriginEndpointDashPackageArgs(adTriggers, adsOnDeliveryRestrictions, encryption, manifestLayout, manifestWindowSeconds, minBufferTimeSeconds, minUpdatePeriodSeconds, periodTriggers, profile, segmentDurationSeconds, segmentTemplateFormat, streamSelection, suggestedPresentationDelaySeconds, utcTiming, utcTimingUri);

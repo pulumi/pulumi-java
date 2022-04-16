@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
-        return this.functionName == null ? Output.empty() : this.functionName;
+    public Output<String> functionName() {
+        return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="input")
       private final @Nullable Output<String> input;
 
-    public Output<String> getInput() {
-        return this.input == null ? Output.empty() : this.input;
+    public Output<String> input() {
+        return this.input == null ? Codegen.empty() : this.input;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
-    public Output<String> getQualifier() {
-        return this.qualifier == null ? Output.empty() : this.qualifier;
+    public Output<String> qualifier() {
+        return this.qualifier == null ? Codegen.empty() : this.qualifier;
     }
 
     /**
@@ -55,15 +56,15 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="result")
       private final @Nullable Output<String> result;
 
-    public Output<String> getResult() {
-        return this.result == null ? Output.empty() : this.result;
+    public Output<String> result() {
+        return this.result == null ? Codegen.empty() : this.result;
     }
 
     @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
-    public Output<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+    public Output<Map<String,String>> triggers() {
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     public InvocationState(
@@ -80,11 +81,11 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InvocationState() {
-        this.functionName = Output.empty();
-        this.input = Output.empty();
-        this.qualifier = Output.empty();
-        this.result = Output.empty();
-        this.triggers = Output.empty();
+        this.functionName = Codegen.empty();
+        this.input = Codegen.empty();
+        this.qualifier = Codegen.empty();
+        this.result = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Output.ofNullable(functionName);
+            this.functionName = Codegen.ofNullable(functionName);
             return this;
         }
         public Builder input(@Nullable Output<String> input) {
@@ -128,7 +129,7 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder input(@Nullable String input) {
-            this.input = Output.ofNullable(input);
+            this.input = Codegen.ofNullable(input);
             return this;
         }
         public Builder qualifier(@Nullable Output<String> qualifier) {
@@ -136,7 +137,7 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qualifier(@Nullable String qualifier) {
-            this.qualifier = Output.ofNullable(qualifier);
+            this.qualifier = Codegen.ofNullable(qualifier);
             return this;
         }
         public Builder result(@Nullable Output<String> result) {
@@ -144,7 +145,7 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder result(@Nullable String result) {
-            this.result = Output.ofNullable(result);
+            this.result = Codegen.ofNullable(result);
             return this;
         }
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
@@ -152,7 +153,7 @@ public final class InvocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }        public InvocationState build() {
             return new InvocationState(functionName, input, qualifier, result, triggers);

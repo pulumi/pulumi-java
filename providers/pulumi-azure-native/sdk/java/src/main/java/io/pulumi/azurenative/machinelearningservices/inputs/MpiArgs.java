@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
 
-    public Output<String> getDistributionType() {
+    public Output<String> distributionType() {
         return this.distributionType;
     }
 
@@ -38,8 +39,8 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="processCountPerInstance")
       private final @Nullable Output<Integer> processCountPerInstance;
 
-    public Output<Integer> getProcessCountPerInstance() {
-        return this.processCountPerInstance == null ? Output.empty() : this.processCountPerInstance;
+    public Output<Integer> processCountPerInstance() {
+        return this.processCountPerInstance == null ? Codegen.empty() : this.processCountPerInstance;
     }
 
     public MpiArgs(
@@ -50,8 +51,8 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MpiArgs() {
-        this.distributionType = Output.empty();
-        this.processCountPerInstance = Output.empty();
+        this.distributionType = Codegen.empty();
+        this.processCountPerInstance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
-            this.processCountPerInstance = Output.ofNullable(processCountPerInstance);
+            this.processCountPerInstance = Codegen.ofNullable(processCountPerInstance);
             return this;
         }        public MpiArgs build() {
             return new MpiArgs(distributionType, processCountPerInstance);

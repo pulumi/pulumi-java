@@ -5,6 +5,7 @@ package io.pulumi.aws.batch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="computeEnvironments", required=true)
       private final Output<List<String>> computeEnvironments;
 
-    public Output<List<String>> getComputeEnvironments() {
+    public Output<List<String>> computeEnvironments() {
         return this.computeEnvironments;
     }
 
@@ -37,8 +38,8 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -60,8 +61,8 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulingPolicyArn")
       private final @Nullable Output<String> schedulingPolicyArn;
 
-    public Output<String> getSchedulingPolicyArn() {
-        return this.schedulingPolicyArn == null ? Output.empty() : this.schedulingPolicyArn;
+    public Output<String> schedulingPolicyArn() {
+        return this.schedulingPolicyArn == null ? Codegen.empty() : this.schedulingPolicyArn;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
       private final Output<String> state;
 
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -82,8 +83,8 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public JobQueueArgs(
@@ -102,12 +103,12 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobQueueArgs() {
-        this.computeEnvironments = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.schedulingPolicyArn = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
+        this.computeEnvironments = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.schedulingPolicyArn = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(Output<Integer> priority) {
@@ -172,7 +173,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedulingPolicyArn(@Nullable String schedulingPolicyArn) {
-            this.schedulingPolicyArn = Output.ofNullable(schedulingPolicyArn);
+            this.schedulingPolicyArn = Codegen.ofNullable(schedulingPolicyArn);
             return this;
         }
         public Builder state(Output<String> state) {
@@ -188,7 +189,7 @@ public final class JobQueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public JobQueueArgs build() {
             return new JobQueueArgs(computeEnvironments, name, priority, schedulingPolicyArn, state, tags);

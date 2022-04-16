@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -32,7 +33,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> properties;
 
-    public Output<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> getProperties() {
+    public Output<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentSpecificationVersionArgs> properties() {
         return this.properties;
     }
 
@@ -43,7 +44,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,8 +55,8 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -83,11 +84,11 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     }
 
     private EnvironmentSpecificationVersionArgs() {
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.version = Output.empty();
-        this.workspaceName = Output.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.version = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

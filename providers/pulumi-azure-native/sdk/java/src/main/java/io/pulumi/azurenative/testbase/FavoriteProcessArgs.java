@@ -5,6 +5,7 @@ package io.pulumi.azurenative.testbase;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="actualProcessName", required=true)
       private final Output<String> actualProcessName;
 
-    public Output<String> getActualProcessName() {
+    public Output<String> actualProcessName() {
         return this.actualProcessName;
     }
 
@@ -32,8 +33,8 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="favoriteProcessResourceName")
       private final @Nullable Output<String> favoriteProcessResourceName;
 
-    public Output<String> getFavoriteProcessResourceName() {
-        return this.favoriteProcessResourceName == null ? Output.empty() : this.favoriteProcessResourceName;
+    public Output<String> favoriteProcessResourceName() {
+        return this.favoriteProcessResourceName == null ? Codegen.empty() : this.favoriteProcessResourceName;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="packageName", required=true)
       private final Output<String> packageName;
 
-    public Output<String> getPackageName() {
+    public Output<String> packageName() {
         return this.packageName;
     }
 
@@ -54,7 +55,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,7 +66,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
 
-    public Output<String> getTestBaseAccountName() {
+    public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
 
@@ -83,11 +84,11 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FavoriteProcessArgs() {
-        this.actualProcessName = Output.empty();
-        this.favoriteProcessResourceName = Output.empty();
-        this.packageName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.testBaseAccountName = Output.empty();
+        this.actualProcessName = Codegen.empty();
+        this.favoriteProcessResourceName = Codegen.empty();
+        this.packageName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.testBaseAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder favoriteProcessResourceName(@Nullable String favoriteProcessResourceName) {
-            this.favoriteProcessResourceName = Output.ofNullable(favoriteProcessResourceName);
+            this.favoriteProcessResourceName = Codegen.ofNullable(favoriteProcessResourceName);
             return this;
         }
         public Builder packageName(Output<String> packageName) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.eventarc_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.eventarc_v1.inputs.DestinationArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.EventFilterArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.TransportArgs;
@@ -26,7 +27,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destination", required=true)
       private final Output<DestinationArgs> destination;
 
-    public Output<DestinationArgs> getDestination() {
+    public Output<DestinationArgs> destination() {
         return this.destination;
     }
 
@@ -37,7 +38,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventFilters", required=true)
       private final Output<List<EventFilterArgs>> eventFilters;
 
-    public Output<List<EventFilterArgs>> getEventFilters() {
+    public Output<List<EventFilterArgs>> eventFilters() {
         return this.eventFilters;
     }
 
@@ -48,15 +49,15 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -66,15 +67,15 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -95,21 +96,21 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transport")
       private final @Nullable Output<TransportArgs> transport;
 
-    public Output<TransportArgs> getTransport() {
-        return this.transport == null ? Output.empty() : this.transport;
+    public Output<TransportArgs> transport() {
+        return this.transport == null ? Codegen.empty() : this.transport;
     }
 
     @Import(name="triggerId", required=true)
       private final Output<String> triggerId;
 
-    public Output<String> getTriggerId() {
+    public Output<String> triggerId() {
         return this.triggerId;
     }
 
     @Import(name="validateOnly", required=true)
       private final Output<String> validateOnly;
 
-    public Output<String> getValidateOnly() {
+    public Output<String> validateOnly() {
         return this.validateOnly;
     }
 
@@ -137,16 +138,16 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.destination = Output.empty();
-        this.eventFilters = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.transport = Output.empty();
-        this.triggerId = Output.empty();
-        this.validateOnly = Output.empty();
+        this.destination = Codegen.empty();
+        this.eventFilters = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.transport = Codegen.empty();
+        this.triggerId = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -219,7 +220,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -227,7 +228,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -235,7 +236,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -243,7 +244,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder transport(@Nullable Output<TransportArgs> transport) {
@@ -251,7 +252,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transport(@Nullable TransportArgs transport) {
-            this.transport = Output.ofNullable(transport);
+            this.transport = Codegen.ofNullable(transport);
             return this;
         }
         public Builder triggerId(Output<String> triggerId) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
     @Import(name="interconnectAttachment")
       private final @Nullable Output<String> interconnectAttachment;
 
-    public Output<String> getInterconnectAttachment() {
-        return this.interconnectAttachment == null ? Output.empty() : this.interconnectAttachment;
+    public Output<String> interconnectAttachment() {
+        return this.interconnectAttachment == null ? Codegen.empty() : this.interconnectAttachment;
     }
 
     public VpnGatewayVpnGatewayInterfaceArgs(@Nullable Output<String> interconnectAttachment) {
@@ -34,7 +35,7 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
     }
 
     private VpnGatewayVpnGatewayInterfaceArgs() {
-        this.interconnectAttachment = Output.empty();
+        this.interconnectAttachment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
             return this;
         }
         public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
-            this.interconnectAttachment = Output.ofNullable(interconnectAttachment);
+            this.interconnectAttachment = Codegen.ofNullable(interconnectAttachment);
             return this;
         }        public VpnGatewayVpnGatewayInterfaceArgs build() {
             return new VpnGatewayVpnGatewayInterfaceArgs(interconnectAttachment);

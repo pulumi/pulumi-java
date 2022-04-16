@@ -15,14 +15,14 @@ public final class GetGcpUserAccessBindingArgs extends io.pulumi.resources.Invok
     @Import(name="gcpUserAccessBindingId", required=true)
       private final String gcpUserAccessBindingId;
 
-    public String getGcpUserAccessBindingId() {
+    public String gcpUserAccessBindingId() {
         return this.gcpUserAccessBindingId;
     }
 
     @Import(name="organizationId", required=true)
       private final String organizationId;
 
-    public String getOrganizationId() {
+    public String organizationId() {
         return this.organizationId;
     }
 

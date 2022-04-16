@@ -6,6 +6,7 @@ package io.pulumi.googlenative.oslogin_v1alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.oslogin_v1alpha.SshPublicKeyArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return An expiration time in microseconds since epoch.
      * 
      */
-    public Output<String> getExpirationTimeUsec() {
+    public Output<String> expirationTimeUsec() {
         return this.expirationTimeUsec;
     }
     /**
@@ -43,7 +44,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return The SHA-256 fingerprint of the SSH public key.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -57,7 +58,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return Public key text in SSH format, defined by RFC4253 section 6.6.
      * 
      */
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
     /**
@@ -71,7 +72,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @return The canonical resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -97,7 +98,7 @@ public class SshPublicKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SshPublicKey(String name, SshPublicKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:oslogin/v1alpha:SshPublicKey", name, args == null ? SshPublicKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:oslogin/v1alpha:SshPublicKey", name, args == null ? SshPublicKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SshPublicKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.changeanalysis.inputs;
 import io.pulumi.azurenative.changeanalysis.inputs.NotificationSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
     @Import(name="notifications")
       private final @Nullable Output<NotificationSettingsArgs> notifications;
 
-    public Output<NotificationSettingsArgs> getNotifications() {
-        return this.notifications == null ? Output.empty() : this.notifications;
+    public Output<NotificationSettingsArgs> notifications() {
+        return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
     public ConfigurationProfileResourcePropertiesArgs(@Nullable Output<NotificationSettingsArgs> notifications) {
@@ -34,7 +35,7 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
     }
 
     private ConfigurationProfileResourcePropertiesArgs() {
-        this.notifications = Output.empty();
+        this.notifications = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ConfigurationProfileResourcePropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder notifications(@Nullable NotificationSettingsArgs notifications) {
-            this.notifications = Output.ofNullable(notifications);
+            this.notifications = Codegen.ofNullable(notifications);
             return this;
         }        public ConfigurationProfileResourcePropertiesArgs build() {
             return new ConfigurationProfileResourcePropertiesArgs(notifications);

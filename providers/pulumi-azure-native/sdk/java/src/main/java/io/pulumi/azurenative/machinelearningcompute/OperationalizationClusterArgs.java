@@ -12,6 +12,7 @@ import io.pulumi.azurenative.machinelearningcompute.inputs.StorageAccountPropert
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="appInsights")
       private final @Nullable Output<AppInsightsPropertiesArgs> appInsights;
 
-    public Output<AppInsightsPropertiesArgs> getAppInsights() {
-        return this.appInsights == null ? Output.empty() : this.appInsights;
+    public Output<AppInsightsPropertiesArgs> appInsights() {
+        return this.appInsights == null ? Codegen.empty() : this.appInsights;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
-    public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+    public Output<String> clusterName() {
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="clusterType", required=true)
       private final Output<Either<String,ClusterType>> clusterType;
 
-    public Output<Either<String,ClusterType>> getClusterType() {
+    public Output<Either<String,ClusterType>> clusterType() {
         return this.clusterType;
     }
 
@@ -62,8 +63,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="containerRegistry")
       private final @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
 
-    public Output<ContainerRegistryPropertiesArgs> getContainerRegistry() {
-        return this.containerRegistry == null ? Output.empty() : this.containerRegistry;
+    public Output<ContainerRegistryPropertiesArgs> containerRegistry() {
+        return this.containerRegistry == null ? Codegen.empty() : this.containerRegistry;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="containerService")
       private final @Nullable Output<AcsClusterPropertiesArgs> containerService;
 
-    public Output<AcsClusterPropertiesArgs> getContainerService() {
-        return this.containerService == null ? Output.empty() : this.containerService;
+    public Output<AcsClusterPropertiesArgs> containerService() {
+        return this.containerService == null ? Codegen.empty() : this.containerService;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="globalServiceConfiguration")
       private final @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
 
-    public Output<GlobalServiceConfigurationArgs> getGlobalServiceConfiguration() {
-        return this.globalServiceConfiguration == null ? Output.empty() : this.globalServiceConfiguration;
+    public Output<GlobalServiceConfigurationArgs> globalServiceConfiguration() {
+        return this.globalServiceConfiguration == null ? Codegen.empty() : this.globalServiceConfiguration;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,8 +129,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="storageAccount")
       private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Output<StorageAccountPropertiesArgs> getStorageAccount() {
-        return this.storageAccount == null ? Output.empty() : this.storageAccount;
+    public Output<StorageAccountPropertiesArgs> storageAccount() {
+        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 
     /**
@@ -139,8 +140,8 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public OperationalizationClusterArgs(
@@ -169,17 +170,17 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     }
 
     private OperationalizationClusterArgs() {
-        this.appInsights = Output.empty();
-        this.clusterName = Output.empty();
-        this.clusterType = Output.empty();
-        this.containerRegistry = Output.empty();
-        this.containerService = Output.empty();
-        this.description = Output.empty();
-        this.globalServiceConfiguration = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccount = Output.empty();
-        this.tags = Output.empty();
+        this.appInsights = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.clusterType = Codegen.empty();
+        this.containerRegistry = Codegen.empty();
+        this.containerService = Codegen.empty();
+        this.description = Codegen.empty();
+        this.globalServiceConfiguration = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccount = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -227,7 +228,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder appInsights(@Nullable AppInsightsPropertiesArgs appInsights) {
-            this.appInsights = Output.ofNullable(appInsights);
+            this.appInsights = Codegen.ofNullable(appInsights);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -235,7 +236,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder clusterType(Output<Either<String,ClusterType>> clusterType) {
@@ -251,7 +252,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder containerRegistry(@Nullable ContainerRegistryPropertiesArgs containerRegistry) {
-            this.containerRegistry = Output.ofNullable(containerRegistry);
+            this.containerRegistry = Codegen.ofNullable(containerRegistry);
             return this;
         }
         public Builder containerService(@Nullable Output<AcsClusterPropertiesArgs> containerService) {
@@ -259,7 +260,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder containerService(@Nullable AcsClusterPropertiesArgs containerService) {
-            this.containerService = Output.ofNullable(containerService);
+            this.containerService = Codegen.ofNullable(containerService);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -267,7 +268,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder globalServiceConfiguration(@Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration) {
@@ -275,7 +276,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder globalServiceConfiguration(@Nullable GlobalServiceConfigurationArgs globalServiceConfiguration) {
-            this.globalServiceConfiguration = Output.ofNullable(globalServiceConfiguration);
+            this.globalServiceConfiguration = Codegen.ofNullable(globalServiceConfiguration);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -283,7 +284,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -299,7 +300,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
-            this.storageAccount = Output.ofNullable(storageAccount);
+            this.storageAccount = Codegen.ofNullable(storageAccount);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -307,7 +308,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public OperationalizationClusterArgs build() {
             return new OperationalizationClusterArgs(appInsights, clusterName, clusterType, containerRegistry, containerService, description, globalServiceConfiguration, location, resourceGroupName, storageAccount, tags);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.networkfirewall.LoggingConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -20,19 +21,19 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
     @Export(name="firewallArn", type=String.class, parameters={})
     private Output<String> firewallArn;
 
-    public Output<String> getFirewallArn() {
+    public Output<String> firewallArn() {
         return this.firewallArn;
     }
     @Export(name="firewallName", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallName;
 
-    public Output</* @Nullable */ String> getFirewallName() {
+    public Output</* @Nullable */ String> firewallName() {
         return this.firewallName;
     }
     @Export(name="loggingConfiguration", type=io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration.class, parameters={})
     private Output<io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> loggingConfiguration;
 
-    public Output<io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> getLoggingConfiguration() {
+    public Output<io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> loggingConfiguration() {
         return this.loggingConfiguration;
     }
 
@@ -58,7 +59,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LoggingConfiguration(String name, LoggingConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkfirewall:LoggingConfiguration", name, args == null ? LoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkfirewall:LoggingConfiguration", name, args == null ? LoggingConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LoggingConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

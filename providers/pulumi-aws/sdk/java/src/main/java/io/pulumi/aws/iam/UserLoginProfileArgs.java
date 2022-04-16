@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="passwordLength")
       private final @Nullable Output<Integer> passwordLength;
 
-    public Output<Integer> getPasswordLength() {
-        return this.passwordLength == null ? Output.empty() : this.passwordLength;
+    public Output<Integer> passwordLength() {
+        return this.passwordLength == null ? Codegen.empty() : this.passwordLength;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="passwordResetRequired")
       private final @Nullable Output<Boolean> passwordResetRequired;
 
-    public Output<Boolean> getPasswordResetRequired() {
-        return this.passwordResetRequired == null ? Output.empty() : this.passwordResetRequired;
+    public Output<Boolean> passwordResetRequired() {
+        return this.passwordResetRequired == null ? Codegen.empty() : this.passwordResetRequired;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="pgpKey", required=true)
       private final Output<String> pgpKey;
 
-    public Output<String> getPgpKey() {
+    public Output<String> pgpKey() {
         return this.pgpKey;
     }
 
@@ -56,7 +57,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="user", required=true)
       private final Output<String> user;
 
-    public Output<String> getUser() {
+    public Output<String> user() {
         return this.user;
     }
 
@@ -72,10 +73,10 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private UserLoginProfileArgs() {
-        this.passwordLength = Output.empty();
-        this.passwordResetRequired = Output.empty();
-        this.pgpKey = Output.empty();
-        this.user = Output.empty();
+        this.passwordLength = Codegen.empty();
+        this.passwordResetRequired = Codegen.empty();
+        this.pgpKey = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder passwordLength(@Nullable Integer passwordLength) {
-            this.passwordLength = Output.ofNullable(passwordLength);
+            this.passwordLength = Codegen.ofNullable(passwordLength);
             return this;
         }
         public Builder passwordResetRequired(@Nullable Output<Boolean> passwordResetRequired) {
@@ -117,7 +118,7 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder passwordResetRequired(@Nullable Boolean passwordResetRequired) {
-            this.passwordResetRequired = Output.ofNullable(passwordResetRequired);
+            this.passwordResetRequired = Codegen.ofNullable(passwordResetRequired);
             return this;
         }
         public Builder pgpKey(Output<String> pgpKey) {

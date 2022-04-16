@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
     @Import(name="containerImage")
       private final @Nullable Output<String> containerImage;
 
-    public Output<String> getContainerImage() {
-        return this.containerImage == null ? Output.empty() : this.containerImage;
+    public Output<String> containerImage() {
+        return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
     @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+    public Output<String> environmentId() {
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
     @Import(name="useSingleCorePerContainer")
       private final @Nullable Output<Boolean> useSingleCorePerContainer;
 
-    public Output<Boolean> getUseSingleCorePerContainer() {
-        return this.useSingleCorePerContainer == null ? Output.empty() : this.useSingleCorePerContainer;
+    public Output<Boolean> useSingleCorePerContainer() {
+        return this.useSingleCorePerContainer == null ? Codegen.empty() : this.useSingleCorePerContainer;
     }
 
     public SdkHarnessContainerImageArgs(
@@ -62,9 +63,9 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
     }
 
     private SdkHarnessContainerImageArgs() {
-        this.containerImage = Output.empty();
-        this.environmentId = Output.empty();
-        this.useSingleCorePerContainer = Output.empty();
+        this.containerImage = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.useSingleCorePerContainer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder containerImage(@Nullable String containerImage) {
-            this.containerImage = Output.ofNullable(containerImage);
+            this.containerImage = Codegen.ofNullable(containerImage);
             return this;
         }
         public Builder environmentId(@Nullable Output<String> environmentId) {
@@ -104,7 +105,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder useSingleCorePerContainer(@Nullable Output<Boolean> useSingleCorePerContainer) {
@@ -112,7 +113,7 @@ public final class SdkHarnessContainerImageArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder useSingleCorePerContainer(@Nullable Boolean useSingleCorePerContainer) {
-            this.useSingleCorePerContainer = Output.ofNullable(useSingleCorePerContainer);
+            this.useSingleCorePerContainer = Codegen.ofNullable(useSingleCorePerContainer);
             return this;
         }        public SdkHarnessContainerImageArgs build() {
             return new SdkHarnessContainerImageArgs(containerImage, environmentId, useSingleCorePerContainer);

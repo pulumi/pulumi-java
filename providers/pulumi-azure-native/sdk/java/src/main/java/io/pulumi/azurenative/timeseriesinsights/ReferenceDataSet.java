@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @return The time the resource was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -57,7 +58,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @return The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.
      * 
      */
-    public Output</* @Nullable */ String> getDataStringComparisonBehavior() {
+    public Output</* @Nullable */ String> dataStringComparisonBehavior() {
         return this.dataStringComparisonBehavior;
     }
     /**
@@ -71,7 +72,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @return The list of key properties for the reference data set.
      * 
      */
-    public Output<List<ReferenceDataSetKeyPropertyResponse>> getKeyProperties() {
+    public Output<List<ReferenceDataSetKeyPropertyResponse>> keyProperties() {
         return this.keyProperties;
     }
     /**
@@ -85,7 +86,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -99,7 +100,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -127,7 +128,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -141,7 +142,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -167,7 +168,7 @@ public class ReferenceDataSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReferenceDataSet(String name, ReferenceDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:timeseriesinsights:ReferenceDataSet", name, args == null ? ReferenceDataSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:timeseriesinsights:ReferenceDataSet", name, args == null ? ReferenceDataSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReferenceDataSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

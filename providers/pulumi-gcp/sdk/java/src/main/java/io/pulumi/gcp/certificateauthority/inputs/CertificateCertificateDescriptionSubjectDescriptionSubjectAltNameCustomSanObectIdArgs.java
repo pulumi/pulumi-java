@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="objectIdPaths")
       private final @Nullable Output<List<Integer>> objectIdPaths;
 
-    public Output<List<Integer>> getObjectIdPaths() {
-        return this.objectIdPaths == null ? Output.empty() : this.objectIdPaths;
+    public Output<List<Integer>> objectIdPaths() {
+        return this.objectIdPaths == null ? Codegen.empty() : this.objectIdPaths;
     }
 
     public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs(@Nullable Output<List<Integer>> objectIdPaths) {
@@ -31,7 +32,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     }
 
     private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs() {
-        this.objectIdPaths = Output.empty();
+        this.objectIdPaths = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             return this;
         }
         public Builder objectIdPaths(@Nullable List<Integer> objectIdPaths) {
-            this.objectIdPaths = Output.ofNullable(objectIdPaths);
+            this.objectIdPaths = Codegen.ofNullable(objectIdPaths);
             return this;
         }
         public Builder objectIdPaths(Integer... objectIdPaths) {

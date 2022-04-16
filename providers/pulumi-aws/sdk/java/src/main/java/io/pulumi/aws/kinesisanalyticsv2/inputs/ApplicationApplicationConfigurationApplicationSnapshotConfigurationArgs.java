@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     @Import(name="snapshotsEnabled", required=true)
       private final Output<Boolean> snapshotsEnabled;
 
-    public Output<Boolean> getSnapshotsEnabled() {
+    public Output<Boolean> snapshotsEnabled() {
         return this.snapshotsEnabled;
     }
 
@@ -29,7 +30,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     }
 
     private ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs() {
-        this.snapshotsEnabled = Output.empty();
+        this.snapshotsEnabled = Codegen.empty();
     }
 
     public static Builder builder() {

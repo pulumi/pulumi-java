@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.RegistryImageBuildAuthConfigGetArgs;
 import io.pulumi.docker.inputs.RegistryImageBuildUlimitGetArgs;
 import java.lang.Boolean;
@@ -23,225 +24,225 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
     @Import(name="authConfigs")
       private final @Nullable Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs;
 
-    public Output<List<RegistryImageBuildAuthConfigGetArgs>> getAuthConfigs() {
-        return this.authConfigs == null ? Output.empty() : this.authConfigs;
+    public Output<List<RegistryImageBuildAuthConfigGetArgs>> authConfigs() {
+        return this.authConfigs == null ? Codegen.empty() : this.authConfigs;
     }
 
     @Import(name="buildArgs")
       private final @Nullable Output<Map<String,String>> buildArgs;
 
-    public Output<Map<String,String>> getBuildArgs() {
-        return this.buildArgs == null ? Output.empty() : this.buildArgs;
+    public Output<Map<String,String>> buildArgs() {
+        return this.buildArgs == null ? Codegen.empty() : this.buildArgs;
     }
 
     @Import(name="buildId")
       private final @Nullable Output<String> buildId;
 
-    public Output<String> getBuildId() {
-        return this.buildId == null ? Output.empty() : this.buildId;
+    public Output<String> buildId() {
+        return this.buildId == null ? Codegen.empty() : this.buildId;
     }
 
     @Import(name="cacheFroms")
       private final @Nullable Output<List<String>> cacheFroms;
 
-    public Output<List<String>> getCacheFroms() {
-        return this.cacheFroms == null ? Output.empty() : this.cacheFroms;
+    public Output<List<String>> cacheFroms() {
+        return this.cacheFroms == null ? Codegen.empty() : this.cacheFroms;
     }
 
     @Import(name="cgroupParent")
       private final @Nullable Output<String> cgroupParent;
 
-    public Output<String> getCgroupParent() {
-        return this.cgroupParent == null ? Output.empty() : this.cgroupParent;
+    public Output<String> cgroupParent() {
+        return this.cgroupParent == null ? Codegen.empty() : this.cgroupParent;
     }
 
     @Import(name="context", required=true)
       private final Output<String> context;
 
-    public Output<String> getContext() {
+    public Output<String> context() {
         return this.context;
     }
 
     @Import(name="cpuPeriod")
       private final @Nullable Output<Integer> cpuPeriod;
 
-    public Output<Integer> getCpuPeriod() {
-        return this.cpuPeriod == null ? Output.empty() : this.cpuPeriod;
+    public Output<Integer> cpuPeriod() {
+        return this.cpuPeriod == null ? Codegen.empty() : this.cpuPeriod;
     }
 
     @Import(name="cpuQuota")
       private final @Nullable Output<Integer> cpuQuota;
 
-    public Output<Integer> getCpuQuota() {
-        return this.cpuQuota == null ? Output.empty() : this.cpuQuota;
+    public Output<Integer> cpuQuota() {
+        return this.cpuQuota == null ? Codegen.empty() : this.cpuQuota;
     }
 
     @Import(name="cpuSetCpus")
       private final @Nullable Output<String> cpuSetCpus;
 
-    public Output<String> getCpuSetCpus() {
-        return this.cpuSetCpus == null ? Output.empty() : this.cpuSetCpus;
+    public Output<String> cpuSetCpus() {
+        return this.cpuSetCpus == null ? Codegen.empty() : this.cpuSetCpus;
     }
 
     @Import(name="cpuSetMems")
       private final @Nullable Output<String> cpuSetMems;
 
-    public Output<String> getCpuSetMems() {
-        return this.cpuSetMems == null ? Output.empty() : this.cpuSetMems;
+    public Output<String> cpuSetMems() {
+        return this.cpuSetMems == null ? Codegen.empty() : this.cpuSetMems;
     }
 
     @Import(name="cpuShares")
       private final @Nullable Output<Integer> cpuShares;
 
-    public Output<Integer> getCpuShares() {
-        return this.cpuShares == null ? Output.empty() : this.cpuShares;
+    public Output<Integer> cpuShares() {
+        return this.cpuShares == null ? Codegen.empty() : this.cpuShares;
     }
 
     @Import(name="dockerfile")
       private final @Nullable Output<String> dockerfile;
 
-    public Output<String> getDockerfile() {
-        return this.dockerfile == null ? Output.empty() : this.dockerfile;
+    public Output<String> dockerfile() {
+        return this.dockerfile == null ? Codegen.empty() : this.dockerfile;
     }
 
     @Import(name="extraHosts")
       private final @Nullable Output<List<String>> extraHosts;
 
-    public Output<List<String>> getExtraHosts() {
-        return this.extraHosts == null ? Output.empty() : this.extraHosts;
+    public Output<List<String>> extraHosts() {
+        return this.extraHosts == null ? Codegen.empty() : this.extraHosts;
     }
 
     @Import(name="forceRemove")
       private final @Nullable Output<Boolean> forceRemove;
 
-    public Output<Boolean> getForceRemove() {
-        return this.forceRemove == null ? Output.empty() : this.forceRemove;
+    public Output<Boolean> forceRemove() {
+        return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
     }
 
     @Import(name="isolation")
       private final @Nullable Output<String> isolation;
 
-    public Output<String> getIsolation() {
-        return this.isolation == null ? Output.empty() : this.isolation;
+    public Output<String> isolation() {
+        return this.isolation == null ? Codegen.empty() : this.isolation;
     }
 
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="memory")
       private final @Nullable Output<Integer> memory;
 
-    public Output<Integer> getMemory() {
-        return this.memory == null ? Output.empty() : this.memory;
+    public Output<Integer> memory() {
+        return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     @Import(name="memorySwap")
       private final @Nullable Output<Integer> memorySwap;
 
-    public Output<Integer> getMemorySwap() {
-        return this.memorySwap == null ? Output.empty() : this.memorySwap;
+    public Output<Integer> memorySwap() {
+        return this.memorySwap == null ? Codegen.empty() : this.memorySwap;
     }
 
     @Import(name="networkMode")
       private final @Nullable Output<String> networkMode;
 
-    public Output<String> getNetworkMode() {
-        return this.networkMode == null ? Output.empty() : this.networkMode;
+    public Output<String> networkMode() {
+        return this.networkMode == null ? Codegen.empty() : this.networkMode;
     }
 
     @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
-    public Output<Boolean> getNoCache() {
-        return this.noCache == null ? Output.empty() : this.noCache;
+    public Output<Boolean> noCache() {
+        return this.noCache == null ? Codegen.empty() : this.noCache;
     }
 
     @Import(name="platform")
       private final @Nullable Output<String> platform;
 
-    public Output<String> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+    public Output<String> platform() {
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     @Import(name="pullParent")
       private final @Nullable Output<Boolean> pullParent;
 
-    public Output<Boolean> getPullParent() {
-        return this.pullParent == null ? Output.empty() : this.pullParent;
+    public Output<Boolean> pullParent() {
+        return this.pullParent == null ? Codegen.empty() : this.pullParent;
     }
 
     @Import(name="remoteContext")
       private final @Nullable Output<String> remoteContext;
 
-    public Output<String> getRemoteContext() {
-        return this.remoteContext == null ? Output.empty() : this.remoteContext;
+    public Output<String> remoteContext() {
+        return this.remoteContext == null ? Codegen.empty() : this.remoteContext;
     }
 
     @Import(name="remove")
       private final @Nullable Output<Boolean> remove;
 
-    public Output<Boolean> getRemove() {
-        return this.remove == null ? Output.empty() : this.remove;
+    public Output<Boolean> remove() {
+        return this.remove == null ? Codegen.empty() : this.remove;
     }
 
     @Import(name="securityOpts")
       private final @Nullable Output<List<String>> securityOpts;
 
-    public Output<List<String>> getSecurityOpts() {
-        return this.securityOpts == null ? Output.empty() : this.securityOpts;
+    public Output<List<String>> securityOpts() {
+        return this.securityOpts == null ? Codegen.empty() : this.securityOpts;
     }
 
     @Import(name="sessionId")
       private final @Nullable Output<String> sessionId;
 
-    public Output<String> getSessionId() {
-        return this.sessionId == null ? Output.empty() : this.sessionId;
+    public Output<String> sessionId() {
+        return this.sessionId == null ? Codegen.empty() : this.sessionId;
     }
 
     @Import(name="shmSize")
       private final @Nullable Output<Integer> shmSize;
 
-    public Output<Integer> getShmSize() {
-        return this.shmSize == null ? Output.empty() : this.shmSize;
+    public Output<Integer> shmSize() {
+        return this.shmSize == null ? Codegen.empty() : this.shmSize;
     }
 
     @Import(name="squash")
       private final @Nullable Output<Boolean> squash;
 
-    public Output<Boolean> getSquash() {
-        return this.squash == null ? Output.empty() : this.squash;
+    public Output<Boolean> squash() {
+        return this.squash == null ? Codegen.empty() : this.squash;
     }
 
     @Import(name="suppressOutput")
       private final @Nullable Output<Boolean> suppressOutput;
 
-    public Output<Boolean> getSuppressOutput() {
-        return this.suppressOutput == null ? Output.empty() : this.suppressOutput;
+    public Output<Boolean> suppressOutput() {
+        return this.suppressOutput == null ? Codegen.empty() : this.suppressOutput;
     }
 
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     @Import(name="ulimits")
       private final @Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits;
 
-    public Output<List<RegistryImageBuildUlimitGetArgs>> getUlimits() {
-        return this.ulimits == null ? Output.empty() : this.ulimits;
+    public Output<List<RegistryImageBuildUlimitGetArgs>> ulimits() {
+        return this.ulimits == null ? Codegen.empty() : this.ulimits;
     }
 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public RegistryImageBuildGetArgs(
@@ -312,38 +313,38 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
     }
 
     private RegistryImageBuildGetArgs() {
-        this.authConfigs = Output.empty();
-        this.buildArgs = Output.empty();
-        this.buildId = Output.empty();
-        this.cacheFroms = Output.empty();
-        this.cgroupParent = Output.empty();
-        this.context = Output.empty();
-        this.cpuPeriod = Output.empty();
-        this.cpuQuota = Output.empty();
-        this.cpuSetCpus = Output.empty();
-        this.cpuSetMems = Output.empty();
-        this.cpuShares = Output.empty();
-        this.dockerfile = Output.empty();
-        this.extraHosts = Output.empty();
-        this.forceRemove = Output.empty();
-        this.isolation = Output.empty();
-        this.labels = Output.empty();
-        this.memory = Output.empty();
-        this.memorySwap = Output.empty();
-        this.networkMode = Output.empty();
-        this.noCache = Output.empty();
-        this.platform = Output.empty();
-        this.pullParent = Output.empty();
-        this.remoteContext = Output.empty();
-        this.remove = Output.empty();
-        this.securityOpts = Output.empty();
-        this.sessionId = Output.empty();
-        this.shmSize = Output.empty();
-        this.squash = Output.empty();
-        this.suppressOutput = Output.empty();
-        this.target = Output.empty();
-        this.ulimits = Output.empty();
-        this.version = Output.empty();
+        this.authConfigs = Codegen.empty();
+        this.buildArgs = Codegen.empty();
+        this.buildId = Codegen.empty();
+        this.cacheFroms = Codegen.empty();
+        this.cgroupParent = Codegen.empty();
+        this.context = Codegen.empty();
+        this.cpuPeriod = Codegen.empty();
+        this.cpuQuota = Codegen.empty();
+        this.cpuSetCpus = Codegen.empty();
+        this.cpuSetMems = Codegen.empty();
+        this.cpuShares = Codegen.empty();
+        this.dockerfile = Codegen.empty();
+        this.extraHosts = Codegen.empty();
+        this.forceRemove = Codegen.empty();
+        this.isolation = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.memory = Codegen.empty();
+        this.memorySwap = Codegen.empty();
+        this.networkMode = Codegen.empty();
+        this.noCache = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.pullParent = Codegen.empty();
+        this.remoteContext = Codegen.empty();
+        this.remove = Codegen.empty();
+        this.securityOpts = Codegen.empty();
+        this.sessionId = Codegen.empty();
+        this.shmSize = Codegen.empty();
+        this.squash = Codegen.empty();
+        this.suppressOutput = Codegen.empty();
+        this.target = Codegen.empty();
+        this.ulimits = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -433,7 +434,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder authConfigs(@Nullable List<RegistryImageBuildAuthConfigGetArgs> authConfigs) {
-            this.authConfigs = Output.ofNullable(authConfigs);
+            this.authConfigs = Codegen.ofNullable(authConfigs);
             return this;
         }
         public Builder authConfigs(RegistryImageBuildAuthConfigGetArgs... authConfigs) {
@@ -444,7 +445,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder buildArgs(@Nullable Map<String,String> buildArgs) {
-            this.buildArgs = Output.ofNullable(buildArgs);
+            this.buildArgs = Codegen.ofNullable(buildArgs);
             return this;
         }
         public Builder buildId(@Nullable Output<String> buildId) {
@@ -452,7 +453,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder buildId(@Nullable String buildId) {
-            this.buildId = Output.ofNullable(buildId);
+            this.buildId = Codegen.ofNullable(buildId);
             return this;
         }
         public Builder cacheFroms(@Nullable Output<List<String>> cacheFroms) {
@@ -460,7 +461,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cacheFroms(@Nullable List<String> cacheFroms) {
-            this.cacheFroms = Output.ofNullable(cacheFroms);
+            this.cacheFroms = Codegen.ofNullable(cacheFroms);
             return this;
         }
         public Builder cacheFroms(String... cacheFroms) {
@@ -471,7 +472,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cgroupParent(@Nullable String cgroupParent) {
-            this.cgroupParent = Output.ofNullable(cgroupParent);
+            this.cgroupParent = Codegen.ofNullable(cgroupParent);
             return this;
         }
         public Builder context(Output<String> context) {
@@ -487,7 +488,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cpuPeriod(@Nullable Integer cpuPeriod) {
-            this.cpuPeriod = Output.ofNullable(cpuPeriod);
+            this.cpuPeriod = Codegen.ofNullable(cpuPeriod);
             return this;
         }
         public Builder cpuQuota(@Nullable Output<Integer> cpuQuota) {
@@ -495,7 +496,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cpuQuota(@Nullable Integer cpuQuota) {
-            this.cpuQuota = Output.ofNullable(cpuQuota);
+            this.cpuQuota = Codegen.ofNullable(cpuQuota);
             return this;
         }
         public Builder cpuSetCpus(@Nullable Output<String> cpuSetCpus) {
@@ -503,7 +504,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cpuSetCpus(@Nullable String cpuSetCpus) {
-            this.cpuSetCpus = Output.ofNullable(cpuSetCpus);
+            this.cpuSetCpus = Codegen.ofNullable(cpuSetCpus);
             return this;
         }
         public Builder cpuSetMems(@Nullable Output<String> cpuSetMems) {
@@ -511,7 +512,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cpuSetMems(@Nullable String cpuSetMems) {
-            this.cpuSetMems = Output.ofNullable(cpuSetMems);
+            this.cpuSetMems = Codegen.ofNullable(cpuSetMems);
             return this;
         }
         public Builder cpuShares(@Nullable Output<Integer> cpuShares) {
@@ -519,7 +520,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cpuShares(@Nullable Integer cpuShares) {
-            this.cpuShares = Output.ofNullable(cpuShares);
+            this.cpuShares = Codegen.ofNullable(cpuShares);
             return this;
         }
         public Builder dockerfile(@Nullable Output<String> dockerfile) {
@@ -527,7 +528,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dockerfile(@Nullable String dockerfile) {
-            this.dockerfile = Output.ofNullable(dockerfile);
+            this.dockerfile = Codegen.ofNullable(dockerfile);
             return this;
         }
         public Builder extraHosts(@Nullable Output<List<String>> extraHosts) {
@@ -535,7 +536,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder extraHosts(@Nullable List<String> extraHosts) {
-            this.extraHosts = Output.ofNullable(extraHosts);
+            this.extraHosts = Codegen.ofNullable(extraHosts);
             return this;
         }
         public Builder extraHosts(String... extraHosts) {
@@ -546,7 +547,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder forceRemove(@Nullable Boolean forceRemove) {
-            this.forceRemove = Output.ofNullable(forceRemove);
+            this.forceRemove = Codegen.ofNullable(forceRemove);
             return this;
         }
         public Builder isolation(@Nullable Output<String> isolation) {
@@ -554,7 +555,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder isolation(@Nullable String isolation) {
-            this.isolation = Output.ofNullable(isolation);
+            this.isolation = Codegen.ofNullable(isolation);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -562,7 +563,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder memory(@Nullable Output<Integer> memory) {
@@ -570,7 +571,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder memory(@Nullable Integer memory) {
-            this.memory = Output.ofNullable(memory);
+            this.memory = Codegen.ofNullable(memory);
             return this;
         }
         public Builder memorySwap(@Nullable Output<Integer> memorySwap) {
@@ -578,7 +579,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder memorySwap(@Nullable Integer memorySwap) {
-            this.memorySwap = Output.ofNullable(memorySwap);
+            this.memorySwap = Codegen.ofNullable(memorySwap);
             return this;
         }
         public Builder networkMode(@Nullable Output<String> networkMode) {
@@ -586,7 +587,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder networkMode(@Nullable String networkMode) {
-            this.networkMode = Output.ofNullable(networkMode);
+            this.networkMode = Codegen.ofNullable(networkMode);
             return this;
         }
         public Builder noCache(@Nullable Output<Boolean> noCache) {
@@ -594,7 +595,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder noCache(@Nullable Boolean noCache) {
-            this.noCache = Output.ofNullable(noCache);
+            this.noCache = Codegen.ofNullable(noCache);
             return this;
         }
         public Builder platform(@Nullable Output<String> platform) {
@@ -602,7 +603,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder platform(@Nullable String platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder pullParent(@Nullable Output<Boolean> pullParent) {
@@ -610,7 +611,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder pullParent(@Nullable Boolean pullParent) {
-            this.pullParent = Output.ofNullable(pullParent);
+            this.pullParent = Codegen.ofNullable(pullParent);
             return this;
         }
         public Builder remoteContext(@Nullable Output<String> remoteContext) {
@@ -618,7 +619,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder remoteContext(@Nullable String remoteContext) {
-            this.remoteContext = Output.ofNullable(remoteContext);
+            this.remoteContext = Codegen.ofNullable(remoteContext);
             return this;
         }
         public Builder remove(@Nullable Output<Boolean> remove) {
@@ -626,7 +627,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder remove(@Nullable Boolean remove) {
-            this.remove = Output.ofNullable(remove);
+            this.remove = Codegen.ofNullable(remove);
             return this;
         }
         public Builder securityOpts(@Nullable Output<List<String>> securityOpts) {
@@ -634,7 +635,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder securityOpts(@Nullable List<String> securityOpts) {
-            this.securityOpts = Output.ofNullable(securityOpts);
+            this.securityOpts = Codegen.ofNullable(securityOpts);
             return this;
         }
         public Builder securityOpts(String... securityOpts) {
@@ -645,7 +646,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = Output.ofNullable(sessionId);
+            this.sessionId = Codegen.ofNullable(sessionId);
             return this;
         }
         public Builder shmSize(@Nullable Output<Integer> shmSize) {
@@ -653,7 +654,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder shmSize(@Nullable Integer shmSize) {
-            this.shmSize = Output.ofNullable(shmSize);
+            this.shmSize = Codegen.ofNullable(shmSize);
             return this;
         }
         public Builder squash(@Nullable Output<Boolean> squash) {
@@ -661,7 +662,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder squash(@Nullable Boolean squash) {
-            this.squash = Output.ofNullable(squash);
+            this.squash = Codegen.ofNullable(squash);
             return this;
         }
         public Builder suppressOutput(@Nullable Output<Boolean> suppressOutput) {
@@ -669,7 +670,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder suppressOutput(@Nullable Boolean suppressOutput) {
-            this.suppressOutput = Output.ofNullable(suppressOutput);
+            this.suppressOutput = Codegen.ofNullable(suppressOutput);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -677,7 +678,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder ulimits(@Nullable Output<List<RegistryImageBuildUlimitGetArgs>> ulimits) {
@@ -685,7 +686,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ulimits(@Nullable List<RegistryImageBuildUlimitGetArgs> ulimits) {
-            this.ulimits = Output.ofNullable(ulimits);
+            this.ulimits = Codegen.ofNullable(ulimits);
             return this;
         }
         public Builder ulimits(RegistryImageBuildUlimitGetArgs... ulimits) {
@@ -696,7 +697,7 @@ public final class RegistryImageBuildGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public RegistryImageBuildGetArgs build() {
             return new RegistryImageBuildGetArgs(authConfigs, buildArgs, buildId, cacheFroms, cgroupParent, context, cpuPeriod, cpuQuota, cpuSetCpus, cpuSetMems, cpuShares, dockerfile, extraHosts, forceRemove, isolation, labels, memory, memorySwap, networkMode, noCache, platform, pullParent, remoteContext, remove, securityOpts, sessionId, shmSize, squash, suppressOutput, target, ulimits, version);

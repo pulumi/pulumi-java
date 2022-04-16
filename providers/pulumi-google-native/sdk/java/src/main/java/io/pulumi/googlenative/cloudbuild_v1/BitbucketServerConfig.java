@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudbuild_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.BitbucketServerConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerRepositoryIdResponse;
@@ -31,7 +32,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return Immutable. API Key that will be attached to webhook. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
      * 
      */
-    public Output<String> getApiKey() {
+    public Output<String> apiKey() {
         return this.apiKey;
     }
     /**
@@ -45,7 +46,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return Connected Bitbucket Server repositories for this config.
      * 
      */
-    public Output<List<BitbucketServerRepositoryIdResponse>> getConnectedRepositories() {
+    public Output<List<BitbucketServerRepositoryIdResponse>> connectedRepositories() {
         return this.connectedRepositories;
     }
     /**
@@ -59,7 +60,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return Time when the config was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -73,7 +74,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return Immutable. The URI of the Bitbucket Server host. Once this field has been set, it cannot be changed. If you need to change it, please create another BitbucketServerConfig.
      * 
      */
-    public Output<String> getHostUri() {
+    public Output<String> hostUri() {
         return this.hostUri;
     }
     /**
@@ -87,7 +88,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return The resource name for the config.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return Optional. The network to be used when reaching out to the Bitbucket Server instance. The VPC network must be enabled for private service connection. This should be set if the Bitbucket Server instance is hosted on-premises and not reachable by public internet. If this field is left empty, no network peering will occur and calls to the Bitbucket Server instance will be made over the public internet. Must be in the format `projects/{project}/global/networks/{network}`, where {project} is a project number or id and {network} is the name of a VPC network in the project.
      * 
      */
-    public Output<String> getPeeredNetwork() {
+    public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
     /**
@@ -115,7 +116,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return Secret Manager secrets needed by the config.
      * 
      */
-    public Output<BitbucketServerSecretsResponse> getSecrets() {
+    public Output<BitbucketServerSecretsResponse> secrets() {
         return this.secrets;
     }
     /**
@@ -129,7 +130,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return Optional. SSL certificate to use for requests to Bitbucket Server. The format should be PEM format but the extension can be one of .pem, .cer, or .crt.
      * 
      */
-    public Output<String> getSslCa() {
+    public Output<String> sslCa() {
         return this.sslCa;
     }
     /**
@@ -143,7 +144,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return Username of the account Cloud Build will use on Bitbucket Server.
      * 
      */
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
     /**
@@ -157,7 +158,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @return UUID included in webhook requests. The UUID is used to look up the corresponding config.
      * 
      */
-    public Output<String> getWebhookKey() {
+    public Output<String> webhookKey() {
         return this.webhookKey;
     }
 
@@ -183,7 +184,7 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BitbucketServerConfig(String name, BitbucketServerConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudbuild/v1:BitbucketServerConfig", name, args == null ? BitbucketServerConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudbuild/v1:BitbucketServerConfig", name, args == null ? BitbucketServerConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BitbucketServerConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

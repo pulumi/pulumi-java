@@ -7,6 +7,7 @@ import io.pulumi.awsnative.xray.inputs.GroupInsightsConfigurationArgs;
 import io.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filterExpression")
       private final @Nullable Output<String> filterExpression;
 
-    public Output<String> getFilterExpression() {
-        return this.filterExpression == null ? Output.empty() : this.filterExpression;
+    public Output<String> filterExpression() {
+        return this.filterExpression == null ? Codegen.empty() : this.filterExpression;
     }
 
     /**
@@ -35,22 +36,22 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+    public Output<String> groupName() {
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     @Import(name="insightsConfiguration")
       private final @Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration;
 
-    public Output<GroupInsightsConfigurationArgs> getInsightsConfiguration() {
-        return this.insightsConfiguration == null ? Output.empty() : this.insightsConfiguration;
+    public Output<GroupInsightsConfigurationArgs> insightsConfiguration() {
+        return this.insightsConfiguration == null ? Codegen.empty() : this.insightsConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
-    public Output<List<TagsItemPropertiesArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<TagsItemPropertiesArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GroupArgs(
@@ -65,10 +66,10 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.filterExpression = Output.empty();
-        this.groupName = Output.empty();
-        this.insightsConfiguration = Output.empty();
-        this.tags = Output.empty();
+        this.filterExpression = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.insightsConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filterExpression(@Nullable String filterExpression) {
-            this.filterExpression = Output.ofNullable(filterExpression);
+            this.filterExpression = Codegen.ofNullable(filterExpression);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -110,7 +111,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder insightsConfiguration(@Nullable Output<GroupInsightsConfigurationArgs> insightsConfiguration) {
@@ -118,7 +119,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder insightsConfiguration(@Nullable GroupInsightsConfigurationArgs insightsConfiguration) {
-            this.insightsConfiguration = Output.ofNullable(insightsConfiguration);
+            this.insightsConfiguration = Codegen.ofNullable(insightsConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<List<TagsItemPropertiesArgs>> tags) {
@@ -126,7 +127,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TagsItemPropertiesArgs... tags) {

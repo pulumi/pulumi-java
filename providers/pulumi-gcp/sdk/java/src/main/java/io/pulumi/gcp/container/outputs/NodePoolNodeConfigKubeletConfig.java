@@ -26,13 +26,13 @@ public final class NodePoolNodeConfigKubeletConfig {
         this.cpuManagerPolicy = cpuManagerPolicy;
     }
 
-    public Optional<Boolean> getCpuCfsQuota() {
+    public Optional<Boolean> cpuCfsQuota() {
         return Optional.ofNullable(this.cpuCfsQuota);
     }
-    public Optional<String> getCpuCfsQuotaPeriod() {
+    public Optional<String> cpuCfsQuotaPeriod() {
         return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
-    public String getCpuManagerPolicy() {
+    public String cpuManagerPolicy() {
         return this.cpuManagerPolicy;
     }
 

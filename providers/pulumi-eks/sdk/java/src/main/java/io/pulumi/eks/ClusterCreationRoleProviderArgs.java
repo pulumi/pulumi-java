@@ -5,6 +5,7 @@ package io.pulumi.eks;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,15 +18,15 @@ public final class ClusterCreationRoleProviderArgs extends io.pulumi.resources.R
     @Import(name="profile")
       private final @Nullable Output<String> profile;
 
-    public Output<String> getProfile() {
-        return this.profile == null ? Output.empty() : this.profile;
+    public Output<String> profile() {
+        return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public ClusterCreationRoleProviderArgs(
@@ -36,8 +37,8 @@ public final class ClusterCreationRoleProviderArgs extends io.pulumi.resources.R
     }
 
     private ClusterCreationRoleProviderArgs() {
-        this.profile = Output.empty();
-        this.region = Output.empty();
+        this.profile = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ClusterCreationRoleProviderArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder profile(@Nullable String profile) {
-            this.profile = Output.ofNullable(profile);
+            this.profile = Codegen.ofNullable(profile);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -75,7 +76,7 @@ public final class ClusterCreationRoleProviderArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public ClusterCreationRoleProviderArgs build() {
             return new ClusterCreationRoleProviderArgs(profile, region);

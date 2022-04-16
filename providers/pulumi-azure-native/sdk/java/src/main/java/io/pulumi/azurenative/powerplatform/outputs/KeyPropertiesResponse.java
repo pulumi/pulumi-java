@@ -34,14 +34,14 @@ public final class KeyPropertiesResponse {
      * The identifier of the key vault key used to encrypt data.
      * 
     */
-    public Optional<String> getName() {
+    public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
      * The version of the identity which will be used to access key vault.
      * 
     */
-    public Optional<String> getVersion() {
+    public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
 

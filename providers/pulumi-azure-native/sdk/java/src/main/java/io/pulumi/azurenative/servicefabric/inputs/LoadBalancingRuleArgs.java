@@ -8,6 +8,7 @@ import io.pulumi.azurenative.servicefabric.enums.Protocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="backendPort", required=true)
       private final Output<Integer> backendPort;
 
-    public Output<Integer> getBackendPort() {
+    public Output<Integer> backendPort() {
         return this.backendPort;
     }
 
@@ -40,7 +41,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="frontendPort", required=true)
       private final Output<Integer> frontendPort;
 
-    public Output<Integer> getFrontendPort() {
+    public Output<Integer> frontendPort() {
         return this.frontendPort;
     }
 
@@ -51,7 +52,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="probeProtocol", required=true)
       private final Output<Either<String,ProbeProtocol>> probeProtocol;
 
-    public Output<Either<String,ProbeProtocol>> getProbeProtocol() {
+    public Output<Either<String,ProbeProtocol>> probeProtocol() {
         return this.probeProtocol;
     }
 
@@ -62,8 +63,8 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="probeRequestPath")
       private final @Nullable Output<String> probeRequestPath;
 
-    public Output<String> getProbeRequestPath() {
-        return this.probeRequestPath == null ? Output.empty() : this.probeRequestPath;
+    public Output<String> probeRequestPath() {
+        return this.probeRequestPath == null ? Codegen.empty() : this.probeRequestPath;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;
 
-    public Output<Either<String,Protocol>> getProtocol() {
+    public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
 
@@ -91,11 +92,11 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LoadBalancingRuleArgs() {
-        this.backendPort = Output.empty();
-        this.frontendPort = Output.empty();
-        this.probeProtocol = Output.empty();
-        this.probeRequestPath = Output.empty();
-        this.protocol = Output.empty();
+        this.backendPort = Codegen.empty();
+        this.frontendPort = Codegen.empty();
+        this.probeProtocol = Codegen.empty();
+        this.probeRequestPath = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder probeRequestPath(@Nullable String probeRequestPath) {
-            this.probeRequestPath = Output.ofNullable(probeRequestPath);
+            this.probeRequestPath = Codegen.ofNullable(probeRequestPath);
             return this;
         }
         public Builder protocol(Output<Either<String,Protocol>> protocol) {

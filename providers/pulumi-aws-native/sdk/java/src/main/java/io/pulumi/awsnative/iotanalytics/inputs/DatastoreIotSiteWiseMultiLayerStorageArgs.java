@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreCustomerManagedS3StorageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,8 +18,8 @@ public final class DatastoreIotSiteWiseMultiLayerStorageArgs extends io.pulumi.r
     @Import(name="customerManagedS3Storage")
       private final @Nullable Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage;
 
-    public Output<DatastoreCustomerManagedS3StorageArgs> getCustomerManagedS3Storage() {
-        return this.customerManagedS3Storage == null ? Output.empty() : this.customerManagedS3Storage;
+    public Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage() {
+        return this.customerManagedS3Storage == null ? Codegen.empty() : this.customerManagedS3Storage;
     }
 
     public DatastoreIotSiteWiseMultiLayerStorageArgs(@Nullable Output<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage) {
@@ -26,7 +27,7 @@ public final class DatastoreIotSiteWiseMultiLayerStorageArgs extends io.pulumi.r
     }
 
     private DatastoreIotSiteWiseMultiLayerStorageArgs() {
-        this.customerManagedS3Storage = Output.empty();
+        this.customerManagedS3Storage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DatastoreIotSiteWiseMultiLayerStorageArgs extends io.pulumi.r
             return this;
         }
         public Builder customerManagedS3Storage(@Nullable DatastoreCustomerManagedS3StorageArgs customerManagedS3Storage) {
-            this.customerManagedS3Storage = Output.ofNullable(customerManagedS3Storage);
+            this.customerManagedS3Storage = Codegen.ofNullable(customerManagedS3Storage);
             return this;
         }        public DatastoreIotSiteWiseMultiLayerStorageArgs build() {
             return new DatastoreIotSiteWiseMultiLayerStorageArgs(customerManagedS3Storage);

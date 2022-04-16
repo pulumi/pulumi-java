@@ -9,6 +9,7 @@ import io.pulumi.aws.xray.inputs.GroupState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The ARN of the Group.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -54,7 +55,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The filter expression defining criteria by which to group traces. more info can be found in official [docs](https://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html).
      * 
      */
-    public Output<String> getFilterExpression() {
+    public Output<String> filterExpression() {
         return this.filterExpression;
     }
     /**
@@ -68,7 +69,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The name of the group.
      * 
      */
-    public Output<String> getGroupName() {
+    public Output<String> groupName() {
         return this.groupName;
     }
     /**
@@ -82,7 +83,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -96,7 +97,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -122,7 +123,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:xray/group:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:xray/group:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable GroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +41,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return List of authors.
      * 
      */
-    public Output</* @Nullable */ List<String>> getAuthors() {
+    public Output</* @Nullable */ List<String>> authors() {
         return this.authors;
     }
     /**
@@ -54,7 +55,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Site Extension comment.
      * 
      */
-    public Output</* @Nullable */ String> getComment() {
+    public Output</* @Nullable */ String> comment() {
         return this.comment;
     }
     /**
@@ -68,7 +69,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Detailed description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -82,7 +83,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Count of downloads.
      * 
      */
-    public Output</* @Nullable */ Integer> getDownloadCount() {
+    public Output</* @Nullable */ Integer> downloadCount() {
         return this.downloadCount;
     }
     /**
@@ -96,7 +97,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Site extension ID.
      * 
      */
-    public Output</* @Nullable */ String> getExtensionId() {
+    public Output</* @Nullable */ String> extensionId() {
         return this.extensionId;
     }
     /**
@@ -110,7 +111,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Site extension type.
      * 
      */
-    public Output</* @Nullable */ String> getExtensionType() {
+    public Output</* @Nullable */ String> extensionType() {
         return this.extensionType;
     }
     /**
@@ -124,7 +125,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Extension URL.
      * 
      */
-    public Output</* @Nullable */ String> getExtensionUrl() {
+    public Output</* @Nullable */ String> extensionUrl() {
         return this.extensionUrl;
     }
     /**
@@ -138,7 +139,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Feed URL.
      * 
      */
-    public Output</* @Nullable */ String> getFeedUrl() {
+    public Output</* @Nullable */ String> feedUrl() {
         return this.feedUrl;
     }
     /**
@@ -152,7 +153,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Icon URL.
      * 
      */
-    public Output</* @Nullable */ String> getIconUrl() {
+    public Output</* @Nullable */ String> iconUrl() {
         return this.iconUrl;
     }
     /**
@@ -166,7 +167,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Installed timestamp.
      * 
      */
-    public Output</* @Nullable */ String> getInstalledDateTime() {
+    public Output</* @Nullable */ String> installedDateTime() {
         return this.installedDateTime;
     }
     /**
@@ -180,7 +181,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Installer command line parameters.
      * 
      */
-    public Output</* @Nullable */ String> getInstallerCommandLineParams() {
+    public Output</* @Nullable */ String> installerCommandLineParams() {
         return this.installerCommandLineParams;
     }
     /**
@@ -194,7 +195,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -208,7 +209,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return License URL.
      * 
      */
-    public Output</* @Nullable */ String> getLicenseUrl() {
+    public Output</* @Nullable */ String> licenseUrl() {
         return this.licenseUrl;
     }
     /**
@@ -222,7 +223,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
      * 
      */
-    public Output</* @Nullable */ Boolean> getLocalIsLatestVersion() {
+    public Output</* @Nullable */ Boolean> localIsLatestVersion() {
         return this.localIsLatestVersion;
     }
     /**
@@ -236,7 +237,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Local path.
      * 
      */
-    public Output</* @Nullable */ String> getLocalPath() {
+    public Output</* @Nullable */ String> localPath() {
         return this.localPath;
     }
     /**
@@ -250,7 +251,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -264,7 +265,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Project URL.
      * 
      */
-    public Output</* @Nullable */ String> getProjectUrl() {
+    public Output</* @Nullable */ String> projectUrl() {
         return this.projectUrl;
     }
     /**
@@ -278,7 +279,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Provisioning state.
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -292,7 +293,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Published timestamp.
      * 
      */
-    public Output</* @Nullable */ String> getPublishedDateTime() {
+    public Output</* @Nullable */ String> publishedDateTime() {
         return this.publishedDateTime;
     }
     /**
@@ -306,13 +307,13 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Summary description.
      * 
      */
-    public Output</* @Nullable */ String> getSummary() {
+    public Output</* @Nullable */ String> summary() {
         return this.summary;
     }
     @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
-    public Output</* @Nullable */ String> getTitle() {
+    public Output</* @Nullable */ String> title() {
         return this.title;
     }
     /**
@@ -326,7 +327,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -340,7 +341,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @return Version information.
      * 
      */
-    public Output</* @Nullable */ String> getVersion() {
+    public Output</* @Nullable */ String> version() {
         return this.version;
     }
 
@@ -366,7 +367,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppSiteExtensionSlot(String name, WebAppSiteExtensionSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppSiteExtensionSlot", name, args == null ? WebAppSiteExtensionSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppSiteExtensionSlot", name, args == null ? WebAppSiteExtensionSlotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppSiteExtensionSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

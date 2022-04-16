@@ -5,6 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class WebhookAuthenticationConfigurationArgs extends io.pulumi.reso
     @Import(name="allowedIpRange")
       private final @Nullable Output<String> allowedIpRange;
 
-    public Output<String> getAllowedIpRange() {
-        return this.allowedIpRange == null ? Output.empty() : this.allowedIpRange;
+    public Output<String> allowedIpRange() {
+        return this.allowedIpRange == null ? Codegen.empty() : this.allowedIpRange;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class WebhookAuthenticationConfigurationArgs extends io.pulumi.reso
     @Import(name="secretToken")
       private final @Nullable Output<String> secretToken;
 
-    public Output<String> getSecretToken() {
-        return this.secretToken == null ? Output.empty() : this.secretToken;
+    public Output<String> secretToken() {
+        return this.secretToken == null ? Codegen.empty() : this.secretToken;
     }
 
     public WebhookAuthenticationConfigurationArgs(
@@ -44,8 +45,8 @@ public final class WebhookAuthenticationConfigurationArgs extends io.pulumi.reso
     }
 
     private WebhookAuthenticationConfigurationArgs() {
-        this.allowedIpRange = Output.empty();
-        this.secretToken = Output.empty();
+        this.allowedIpRange = Codegen.empty();
+        this.secretToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class WebhookAuthenticationConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder allowedIpRange(@Nullable String allowedIpRange) {
-            this.allowedIpRange = Output.ofNullable(allowedIpRange);
+            this.allowedIpRange = Codegen.ofNullable(allowedIpRange);
             return this;
         }
         public Builder secretToken(@Nullable Output<String> secretToken) {
@@ -83,7 +84,7 @@ public final class WebhookAuthenticationConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder secretToken(@Nullable String secretToken) {
-            this.secretToken = Output.ofNullable(secretToken);
+            this.secretToken = Codegen.ofNullable(secretToken);
             return this;
         }        public WebhookAuthenticationConfigurationArgs build() {
             return new WebhookAuthenticationConfigurationArgs(allowedIpRange, secretToken);

@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.VpcIpamPoolCidrCidrAuthorizationContextArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
-    public Output<String> getCidr() {
-        return this.cidr == null ? Output.empty() : this.cidr;
+    public Output<String> cidr() {
+        return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="cidrAuthorizationContext")
       private final @Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext;
 
-    public Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> getCidrAuthorizationContext() {
-        return this.cidrAuthorizationContext == null ? Output.empty() : this.cidrAuthorizationContext;
+    public Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext() {
+        return this.cidrAuthorizationContext == null ? Codegen.empty() : this.cidrAuthorizationContext;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
 
-    public Output<String> getIpamPoolId() {
+    public Output<String> ipamPoolId() {
         return this.ipamPoolId;
     }
 
@@ -58,9 +59,9 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private VpcIpamPoolCidrArgs() {
-        this.cidr = Output.empty();
-        this.cidrAuthorizationContext = Output.empty();
-        this.ipamPoolId = Output.empty();
+        this.cidr = Codegen.empty();
+        this.cidrAuthorizationContext = Codegen.empty();
+        this.ipamPoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = Output.ofNullable(cidr);
+            this.cidr = Codegen.ofNullable(cidr);
             return this;
         }
         public Builder cidrAuthorizationContext(@Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextArgs> cidrAuthorizationContext) {
@@ -100,7 +101,7 @@ public final class VpcIpamPoolCidrArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder cidrAuthorizationContext(@Nullable VpcIpamPoolCidrCidrAuthorizationContextArgs cidrAuthorizationContext) {
-            this.cidrAuthorizationContext = Output.ofNullable(cidrAuthorizationContext);
+            this.cidrAuthorizationContext = Codegen.ofNullable(cidrAuthorizationContext);
             return this;
         }
         public Builder ipamPoolId(Output<String> ipamPoolId) {

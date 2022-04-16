@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
     @Import(name="configId")
       private final @Nullable Output<String> configId;
 
-    public Output<String> getConfigId() {
-        return this.configId == null ? Output.empty() : this.configId;
+    public Output<String> configId() {
+        return this.configId == null ? Codegen.empty() : this.configId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
     @Import(name="disableTraceSampling")
       private final @Nullable Output<Boolean> disableTraceSampling;
 
-    public Output<Boolean> getDisableTraceSampling() {
-        return this.disableTraceSampling == null ? Output.empty() : this.disableTraceSampling;
+    public Output<Boolean> disableTraceSampling() {
+        return this.disableTraceSampling == null ? Codegen.empty() : this.disableTraceSampling;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -62,8 +63,8 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
     @Import(name="rolloutStrategy")
       private final @Nullable Output<String> rolloutStrategy;
 
-    public Output<String> getRolloutStrategy() {
-        return this.rolloutStrategy == null ? Output.empty() : this.rolloutStrategy;
+    public Output<String> rolloutStrategy() {
+        return this.rolloutStrategy == null ? Codegen.empty() : this.rolloutStrategy;
     }
 
     public FlexibleAppVersionEndpointsApiServiceGetArgs(
@@ -78,10 +79,10 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
     }
 
     private FlexibleAppVersionEndpointsApiServiceGetArgs() {
-        this.configId = Output.empty();
-        this.disableTraceSampling = Output.empty();
-        this.name = Output.empty();
-        this.rolloutStrategy = Output.empty();
+        this.configId = Codegen.empty();
+        this.disableTraceSampling = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rolloutStrategy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
             return this;
         }
         public Builder configId(@Nullable String configId) {
-            this.configId = Output.ofNullable(configId);
+            this.configId = Codegen.ofNullable(configId);
             return this;
         }
         public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
@@ -123,7 +124,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
             return this;
         }
         public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
-            this.disableTraceSampling = Output.ofNullable(disableTraceSampling);
+            this.disableTraceSampling = Codegen.ofNullable(disableTraceSampling);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -139,7 +140,7 @@ public final class FlexibleAppVersionEndpointsApiServiceGetArgs extends io.pulum
             return this;
         }
         public Builder rolloutStrategy(@Nullable String rolloutStrategy) {
-            this.rolloutStrategy = Output.ofNullable(rolloutStrategy);
+            this.rolloutStrategy = Codegen.ofNullable(rolloutStrategy);
             return this;
         }        public FlexibleAppVersionEndpointsApiServiceGetArgs build() {
             return new FlexibleAppVersionEndpointsApiServiceGetArgs(configId, disableTraceSampling, name, rolloutStrategy);

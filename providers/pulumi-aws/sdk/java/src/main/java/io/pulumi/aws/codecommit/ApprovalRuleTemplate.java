@@ -9,6 +9,7 @@ import io.pulumi.aws.codecommit.inputs.ApprovalRuleTemplateState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -39,7 +40,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @return The ID of the approval rule template
      * 
      */
-    public Output<String> getApprovalRuleTemplateId() {
+    public Output<String> approvalRuleTemplateId() {
         return this.approvalRuleTemplateId;
     }
     /**
@@ -53,7 +54,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @return The content of the approval rule template. Maximum of 3000 characters.
      * 
      */
-    public Output<String> getContent() {
+    public Output<String> content() {
         return this.content;
     }
     /**
@@ -67,7 +68,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @return The date the approval rule template was created, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output<String> getCreationDate() {
+    public Output<String> creationDate() {
         return this.creationDate;
     }
     /**
@@ -81,7 +82,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @return The description of the approval rule template. Maximum of 1000 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -95,7 +96,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @return The date the approval rule template was most recently changed, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output<String> getLastModifiedDate() {
+    public Output<String> lastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
@@ -109,7 +110,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the user who made the most recent changes to the approval rule template.
      * 
      */
-    public Output<String> getLastModifiedUser() {
+    public Output<String> lastModifiedUser() {
         return this.lastModifiedUser;
     }
     /**
@@ -123,7 +124,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @return The name for the approval rule template. Maximum of 100 characters.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -137,7 +138,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @return The SHA-256 hash signature for the content of the approval rule template.
      * 
      */
-    public Output<String> getRuleContentSha256() {
+    public Output<String> ruleContentSha256() {
         return this.ruleContentSha256;
     }
 
@@ -163,7 +164,7 @@ public class ApprovalRuleTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApprovalRuleTemplate(String name, ApprovalRuleTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codecommit/approvalRuleTemplate:ApprovalRuleTemplate", name, args == null ? ApprovalRuleTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codecommit/approvalRuleTemplate:ApprovalRuleTemplate", name, args == null ? ApprovalRuleTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApprovalRuleTemplate(String name, Output<String> id, @Nullable ApprovalRuleTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

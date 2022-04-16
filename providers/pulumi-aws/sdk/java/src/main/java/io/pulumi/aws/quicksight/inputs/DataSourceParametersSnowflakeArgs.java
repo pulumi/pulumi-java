@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataSourceParametersSnowflakeArgs extends io.pulumi.resources
     @Import(name="database", required=true)
       private final Output<String> database;
 
-    public Output<String> getDatabase() {
+    public Output<String> database() {
         return this.database;
     }
 
@@ -31,7 +32,7 @@ public final class DataSourceParametersSnowflakeArgs extends io.pulumi.resources
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -42,7 +43,7 @@ public final class DataSourceParametersSnowflakeArgs extends io.pulumi.resources
     @Import(name="warehouse", required=true)
       private final Output<String> warehouse;
 
-    public Output<String> getWarehouse() {
+    public Output<String> warehouse() {
         return this.warehouse;
     }
 
@@ -56,9 +57,9 @@ public final class DataSourceParametersSnowflakeArgs extends io.pulumi.resources
     }
 
     private DataSourceParametersSnowflakeArgs() {
-        this.database = Output.empty();
-        this.host = Output.empty();
-        this.warehouse = Output.empty();
+        this.database = Codegen.empty();
+        this.host = Codegen.empty();
+        this.warehouse = Codegen.empty();
     }
 
     public static Builder builder() {

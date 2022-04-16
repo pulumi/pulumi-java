@@ -6,6 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptRejectionStatementMessageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
     @Import(name="messages", required=true)
       private final Output<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages;
 
-    public Output<List<IntentFollowUpPromptRejectionStatementMessageArgs>> getMessages() {
+    public Output<List<IntentFollowUpPromptRejectionStatementMessageArgs>> messages() {
         return this.messages;
     }
 
@@ -38,8 +39,8 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
-        return this.responseCard == null ? Output.empty() : this.responseCard;
+    public Output<String> responseCard() {
+        return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 
     public IntentFollowUpPromptRejectionStatementArgs(
@@ -50,8 +51,8 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
     }
 
     private IntentFollowUpPromptRejectionStatementArgs() {
-        this.messages = Output.empty();
-        this.responseCard = Output.empty();
+        this.messages = Codegen.empty();
+        this.responseCard = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class IntentFollowUpPromptRejectionStatementArgs extends io.pulumi.
             return this;
         }
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Output.ofNullable(responseCard);
+            this.responseCard = Codegen.ofNullable(responseCard);
             return this;
         }        public IntentFollowUpPromptRejectionStatementArgs build() {
             return new IntentFollowUpPromptRejectionStatementArgs(messages, responseCard);

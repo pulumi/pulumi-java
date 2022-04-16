@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class IntegrationResponseParameterArgs extends io.pulumi.resources.
     @Import(name="mappings", required=true)
       private final Output<Map<String,String>> mappings;
 
-    public Output<Map<String,String>> getMappings() {
+    public Output<Map<String,String>> mappings() {
         return this.mappings;
     }
 
@@ -33,7 +34,7 @@ public final class IntegrationResponseParameterArgs extends io.pulumi.resources.
     @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
-    public Output<String> getStatusCode() {
+    public Output<String> statusCode() {
         return this.statusCode;
     }
 
@@ -45,8 +46,8 @@ public final class IntegrationResponseParameterArgs extends io.pulumi.resources.
     }
 
     private IntegrationResponseParameterArgs() {
-        this.mappings = Output.empty();
-        this.statusCode = Output.empty();
+        this.mappings = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {

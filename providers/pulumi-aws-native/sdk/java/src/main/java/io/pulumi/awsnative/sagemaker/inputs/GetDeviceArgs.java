@@ -19,7 +19,7 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="deviceFleetName", required=true)
       private final String deviceFleetName;
 
-    public String getDeviceFleetName() {
+    public String deviceFleetName() {
         return this.deviceFleetName;
     }
 

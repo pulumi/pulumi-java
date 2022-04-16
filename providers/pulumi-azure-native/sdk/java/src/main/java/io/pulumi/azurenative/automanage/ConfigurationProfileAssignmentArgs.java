@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automanage;
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfileAssignmentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     @Import(name="configurationProfileAssignmentName")
       private final @Nullable Output<String> configurationProfileAssignmentName;
 
-    public Output<String> getConfigurationProfileAssignmentName() {
-        return this.configurationProfileAssignmentName == null ? Output.empty() : this.configurationProfileAssignmentName;
+    public Output<String> configurationProfileAssignmentName() {
+        return this.configurationProfileAssignmentName == null ? Codegen.empty() : this.configurationProfileAssignmentName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     @Import(name="properties")
       private final @Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties;
 
-    public Output<ConfigurationProfileAssignmentPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ConfigurationProfileAssignmentPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,7 +56,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     @Import(name="vmName", required=true)
       private final Output<String> vmName;
 
-    public Output<String> getVmName() {
+    public Output<String> vmName() {
         return this.vmName;
     }
 
@@ -71,10 +72,10 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     }
 
     private ConfigurationProfileAssignmentArgs() {
-        this.configurationProfileAssignmentName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.vmName = Output.empty();
+        this.configurationProfileAssignmentName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.vmName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
             return this;
         }
         public Builder configurationProfileAssignmentName(@Nullable String configurationProfileAssignmentName) {
-            this.configurationProfileAssignmentName = Output.ofNullable(configurationProfileAssignmentName);
+            this.configurationProfileAssignmentName = Codegen.ofNullable(configurationProfileAssignmentName);
             return this;
         }
         public Builder properties(@Nullable Output<ConfigurationProfileAssignmentPropertiesArgs> properties) {
@@ -116,7 +117,7 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
             return this;
         }
         public Builder properties(@Nullable ConfigurationProfileAssignmentPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

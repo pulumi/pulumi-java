@@ -6,6 +6,7 @@ package io.pulumi.aws.glacier.inputs;
 import io.pulumi.aws.glacier.inputs.VaultNotificationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicy")
       private final @Nullable Output<String> accessPolicy;
 
-    public Output<String> getAccessPolicy() {
-        return this.accessPolicy == null ? Output.empty() : this.accessPolicy;
+    public Output<String> accessPolicy() {
+        return this.accessPolicy == null ? Codegen.empty() : this.accessPolicy;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notification")
       private final @Nullable Output<VaultNotificationGetArgs> notification;
 
-    public Output<VaultNotificationGetArgs> getNotification() {
-        return this.notification == null ? Output.empty() : this.notification;
+    public Output<VaultNotificationGetArgs> notification() {
+        return this.notification == null ? Codegen.empty() : this.notification;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public VaultState(
@@ -112,13 +113,13 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultState() {
-        this.accessPolicy = Output.empty();
-        this.arn = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.notification = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.accessPolicy = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notification = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessPolicy(@Nullable String accessPolicy) {
-            this.accessPolicy = Output.ofNullable(accessPolicy);
+            this.accessPolicy = Codegen.ofNullable(accessPolicy);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -166,7 +167,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -174,7 +175,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -182,7 +183,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notification(@Nullable Output<VaultNotificationGetArgs> notification) {
@@ -190,7 +191,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notification(@Nullable VaultNotificationGetArgs notification) {
-            this.notification = Output.ofNullable(notification);
+            this.notification = Codegen.ofNullable(notification);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -198,7 +199,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -206,7 +207,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public VaultState build() {
             return new VaultState(accessPolicy, arn, location, name, notification, tags, tagsAll);

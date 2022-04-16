@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
-        return this.autoscalingGroupName == null ? Output.empty() : this.autoscalingGroupName;
+    public Output<String> autoscalingGroupName() {
+        return this.autoscalingGroupName == null ? Codegen.empty() : this.autoscalingGroupName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultResult")
       private final @Nullable Output<String> defaultResult;
 
-    public Output<String> getDefaultResult() {
-        return this.defaultResult == null ? Output.empty() : this.defaultResult;
+    public Output<String> defaultResult() {
+        return this.defaultResult == null ? Codegen.empty() : this.defaultResult;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="heartbeatTimeout")
       private final @Nullable Output<Integer> heartbeatTimeout;
 
-    public Output<Integer> getHeartbeatTimeout() {
-        return this.heartbeatTimeout == null ? Output.empty() : this.heartbeatTimeout;
+    public Output<Integer> heartbeatTimeout() {
+        return this.heartbeatTimeout == null ? Codegen.empty() : this.heartbeatTimeout;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lifecycleTransition")
       private final @Nullable Output<String> lifecycleTransition;
 
-    public Output<String> getLifecycleTransition() {
-        return this.lifecycleTransition == null ? Output.empty() : this.lifecycleTransition;
+    public Output<String> lifecycleTransition() {
+        return this.lifecycleTransition == null ? Codegen.empty() : this.lifecycleTransition;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationMetadata")
       private final @Nullable Output<String> notificationMetadata;
 
-    public Output<String> getNotificationMetadata() {
-        return this.notificationMetadata == null ? Output.empty() : this.notificationMetadata;
+    public Output<String> notificationMetadata() {
+        return this.notificationMetadata == null ? Codegen.empty() : this.notificationMetadata;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationTargetArn")
       private final @Nullable Output<String> notificationTargetArn;
 
-    public Output<String> getNotificationTargetArn() {
-        return this.notificationTargetArn == null ? Output.empty() : this.notificationTargetArn;
+    public Output<String> notificationTargetArn() {
+        return this.notificationTargetArn == null ? Codegen.empty() : this.notificationTargetArn;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public LifecycleHookState(
@@ -123,14 +124,14 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
     }
 
     private LifecycleHookState() {
-        this.autoscalingGroupName = Output.empty();
-        this.defaultResult = Output.empty();
-        this.heartbeatTimeout = Output.empty();
-        this.lifecycleTransition = Output.empty();
-        this.name = Output.empty();
-        this.notificationMetadata = Output.empty();
-        this.notificationTargetArn = Output.empty();
-        this.roleArn = Output.empty();
+        this.autoscalingGroupName = Codegen.empty();
+        this.defaultResult = Codegen.empty();
+        this.heartbeatTimeout = Codegen.empty();
+        this.lifecycleTransition = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationMetadata = Codegen.empty();
+        this.notificationTargetArn = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
-            this.autoscalingGroupName = Output.ofNullable(autoscalingGroupName);
+            this.autoscalingGroupName = Codegen.ofNullable(autoscalingGroupName);
             return this;
         }
         public Builder defaultResult(@Nullable Output<String> defaultResult) {
@@ -180,7 +181,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultResult(@Nullable String defaultResult) {
-            this.defaultResult = Output.ofNullable(defaultResult);
+            this.defaultResult = Codegen.ofNullable(defaultResult);
             return this;
         }
         public Builder heartbeatTimeout(@Nullable Output<Integer> heartbeatTimeout) {
@@ -188,7 +189,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
-            this.heartbeatTimeout = Output.ofNullable(heartbeatTimeout);
+            this.heartbeatTimeout = Codegen.ofNullable(heartbeatTimeout);
             return this;
         }
         public Builder lifecycleTransition(@Nullable Output<String> lifecycleTransition) {
@@ -196,7 +197,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecycleTransition(@Nullable String lifecycleTransition) {
-            this.lifecycleTransition = Output.ofNullable(lifecycleTransition);
+            this.lifecycleTransition = Codegen.ofNullable(lifecycleTransition);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -204,7 +205,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationMetadata(@Nullable Output<String> notificationMetadata) {
@@ -212,7 +213,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationMetadata(@Nullable String notificationMetadata) {
-            this.notificationMetadata = Output.ofNullable(notificationMetadata);
+            this.notificationMetadata = Codegen.ofNullable(notificationMetadata);
             return this;
         }
         public Builder notificationTargetArn(@Nullable Output<String> notificationTargetArn) {
@@ -220,7 +221,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationTargetArn(@Nullable String notificationTargetArn) {
-            this.notificationTargetArn = Output.ofNullable(notificationTargetArn);
+            this.notificationTargetArn = Codegen.ofNullable(notificationTargetArn);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -228,7 +229,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public LifecycleHookState build() {
             return new LifecycleHookState(autoscalingGroupName, defaultResult, heartbeatTimeout, lifecycleTransition, name, notificationMetadata, notificationTargetArn, roleArn);

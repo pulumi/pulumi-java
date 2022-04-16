@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoCreateNetwork")
       private final @Nullable Output<Boolean> autoCreateNetwork;
 
-    public Output<Boolean> getAutoCreateNetwork() {
-        return this.autoCreateNetwork == null ? Output.empty() : this.autoCreateNetwork;
+    public Output<Boolean> autoCreateNetwork() {
+        return this.autoCreateNetwork == null ? Codegen.empty() : this.autoCreateNetwork;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
-    public Output<String> getBillingAccount() {
-        return this.billingAccount == null ? Output.empty() : this.billingAccount;
+    public Output<String> billingAccount() {
+        return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="folderId")
       private final @Nullable Output<String> folderId;
 
-    public Output<String> getFolderId() {
-        return this.folderId == null ? Output.empty() : this.folderId;
+    public Output<String> folderId() {
+        return this.folderId == null ? Codegen.empty() : this.folderId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
-        return this.orgId == null ? Output.empty() : this.orgId;
+    public Output<String> orgId() {
+        return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
-    public Output<String> getProjectId() {
+    public Output<String> projectId() {
         return this.projectId;
     }
 
@@ -117,8 +118,8 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="skipDelete")
       private final @Nullable Output<Boolean> skipDelete;
 
-    public Output<Boolean> getSkipDelete() {
-        return this.skipDelete == null ? Output.empty() : this.skipDelete;
+    public Output<Boolean> skipDelete() {
+        return this.skipDelete == null ? Codegen.empty() : this.skipDelete;
     }
 
     public ProjectArgs(
@@ -141,14 +142,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.autoCreateNetwork = Output.empty();
-        this.billingAccount = Output.empty();
-        this.folderId = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.orgId = Output.empty();
-        this.projectId = Output.empty();
-        this.skipDelete = Output.empty();
+        this.autoCreateNetwork = Codegen.empty();
+        this.billingAccount = Codegen.empty();
+        this.folderId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.skipDelete = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoCreateNetwork(@Nullable Boolean autoCreateNetwork) {
-            this.autoCreateNetwork = Output.ofNullable(autoCreateNetwork);
+            this.autoCreateNetwork = Codegen.ofNullable(autoCreateNetwork);
             return this;
         }
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
@@ -198,7 +199,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Output.ofNullable(billingAccount);
+            this.billingAccount = Codegen.ofNullable(billingAccount);
             return this;
         }
         public Builder folderId(@Nullable Output<String> folderId) {
@@ -206,7 +207,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folderId(@Nullable String folderId) {
-            this.folderId = Output.ofNullable(folderId);
+            this.folderId = Codegen.ofNullable(folderId);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -214,7 +215,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -222,7 +223,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgId(@Nullable Output<String> orgId) {
@@ -230,7 +231,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Output.ofNullable(orgId);
+            this.orgId = Codegen.ofNullable(orgId);
             return this;
         }
         public Builder projectId(Output<String> projectId) {
@@ -246,7 +247,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipDelete(@Nullable Boolean skipDelete) {
-            this.skipDelete = Output.ofNullable(skipDelete);
+            this.skipDelete = Codegen.ofNullable(skipDelete);
             return this;
         }        public ProjectArgs build() {
             return new ProjectArgs(autoCreateNetwork, billingAccount, folderId, labels, name, orgId, projectId, skipDelete);

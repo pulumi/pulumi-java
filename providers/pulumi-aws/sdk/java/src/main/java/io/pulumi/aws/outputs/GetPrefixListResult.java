@@ -49,27 +49,27 @@ public final class GetPrefixListResult {
      * The list of CIDR blocks for the AWS service associated with the prefix list.
      * 
     */
-    public List<String> getCidrBlocks() {
+    public List<String> cidrBlocks() {
         return this.cidrBlocks;
     }
-    public List<GetPrefixListFilter> getFilters() {
+    public List<GetPrefixListFilter> filters() {
         return this.filters == null ? List.of() : this.filters;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The name of the selected prefix list.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
-    public Optional<String> getPrefixListId() {
+    public Optional<String> prefixListId() {
         return Optional.ofNullable(this.prefixListId);
     }
 

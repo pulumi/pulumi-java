@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePol
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="canarySize")
       private final @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeGetArgs> canarySize;
 
-    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeGetArgs> getCanarySize() {
-        return this.canarySize == null ? Output.empty() : this.canarySize;
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeGetArgs> canarySize() {
+        return this.canarySize == null ? Codegen.empty() : this.canarySize;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="linearStepSize")
       private final @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs> linearStepSize;
 
-    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs> getLinearStepSize() {
-        return this.linearStepSize == null ? Output.empty() : this.linearStepSize;
+    public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs> linearStepSize() {
+        return this.linearStepSize == null ? Codegen.empty() : this.linearStepSize;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -57,7 +58,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     @Import(name="waitIntervalInSeconds", required=true)
       private final Output<Integer> waitIntervalInSeconds;
 
-    public Output<Integer> getWaitIntervalInSeconds() {
+    public Output<Integer> waitIntervalInSeconds() {
         return this.waitIntervalInSeconds;
     }
 
@@ -73,10 +74,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     }
 
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationGetArgs() {
-        this.canarySize = Output.empty();
-        this.linearStepSize = Output.empty();
-        this.type = Output.empty();
-        this.waitIntervalInSeconds = Output.empty();
+        this.canarySize = Codegen.empty();
+        this.linearStepSize = Codegen.empty();
+        this.type = Codegen.empty();
+        this.waitIntervalInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
             return this;
         }
         public Builder canarySize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeGetArgs canarySize) {
-            this.canarySize = Output.ofNullable(canarySize);
+            this.canarySize = Codegen.ofNullable(canarySize);
             return this;
         }
         public Builder linearStepSize(@Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs> linearStepSize) {
@@ -118,7 +119,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
             return this;
         }
         public Builder linearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeGetArgs linearStepSize) {
-            this.linearStepSize = Output.ofNullable(linearStepSize);
+            this.linearStepSize = Codegen.ofNullable(linearStepSize);
             return this;
         }
         public Builder type(Output<String> type) {

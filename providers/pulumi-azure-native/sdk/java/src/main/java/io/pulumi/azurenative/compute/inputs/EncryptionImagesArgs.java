@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.DataDiskImageEncryptionArgs;
 import io.pulumi.azurenative.compute.inputs.OSDiskImageEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="dataDiskImages")
       private final @Nullable Output<List<DataDiskImageEncryptionArgs>> dataDiskImages;
 
-    public Output<List<DataDiskImageEncryptionArgs>> getDataDiskImages() {
-        return this.dataDiskImages == null ? Output.empty() : this.dataDiskImages;
+    public Output<List<DataDiskImageEncryptionArgs>> dataDiskImages() {
+        return this.dataDiskImages == null ? Codegen.empty() : this.dataDiskImages;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="osDiskImage")
       private final @Nullable Output<OSDiskImageEncryptionArgs> osDiskImage;
 
-    public Output<OSDiskImageEncryptionArgs> getOsDiskImage() {
-        return this.osDiskImage == null ? Output.empty() : this.osDiskImage;
+    public Output<OSDiskImageEncryptionArgs> osDiskImage() {
+        return this.osDiskImage == null ? Codegen.empty() : this.osDiskImage;
     }
 
     public EncryptionImagesArgs(
@@ -50,8 +51,8 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EncryptionImagesArgs() {
-        this.dataDiskImages = Output.empty();
-        this.osDiskImage = Output.empty();
+        this.dataDiskImages = Codegen.empty();
+        this.osDiskImage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataDiskImages(@Nullable List<DataDiskImageEncryptionArgs> dataDiskImages) {
-            this.dataDiskImages = Output.ofNullable(dataDiskImages);
+            this.dataDiskImages = Codegen.ofNullable(dataDiskImages);
             return this;
         }
         public Builder dataDiskImages(DataDiskImageEncryptionArgs... dataDiskImages) {
@@ -92,7 +93,7 @@ public final class EncryptionImagesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder osDiskImage(@Nullable OSDiskImageEncryptionArgs osDiskImage) {
-            this.osDiskImage = Output.ofNullable(osDiskImage);
+            this.osDiskImage = Codegen.ofNullable(osDiskImage);
             return this;
         }        public EncryptionImagesArgs build() {
             return new EncryptionImagesArgs(dataDiskImages, osDiskImage);

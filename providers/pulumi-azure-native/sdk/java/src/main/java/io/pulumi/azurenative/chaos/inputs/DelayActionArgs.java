@@ -5,6 +5,7 @@ package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="duration", required=true)
       private final Output<String> duration;
 
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
 
@@ -35,7 +36,7 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -47,7 +48,7 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -61,9 +62,9 @@ public final class DelayActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DelayActionArgs() {
-        this.duration = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.duration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

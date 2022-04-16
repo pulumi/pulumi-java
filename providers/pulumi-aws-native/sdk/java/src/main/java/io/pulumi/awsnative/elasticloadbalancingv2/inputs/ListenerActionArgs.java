@@ -10,6 +10,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerForwardConfigAr
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRedirectConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,56 +24,56 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticateCognitoConfig")
       private final @Nullable Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig;
 
-    public Output<ListenerAuthenticateCognitoConfigArgs> getAuthenticateCognitoConfig() {
-        return this.authenticateCognitoConfig == null ? Output.empty() : this.authenticateCognitoConfig;
+    public Output<ListenerAuthenticateCognitoConfigArgs> authenticateCognitoConfig() {
+        return this.authenticateCognitoConfig == null ? Codegen.empty() : this.authenticateCognitoConfig;
     }
 
     @Import(name="authenticateOidcConfig")
       private final @Nullable Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig;
 
-    public Output<ListenerAuthenticateOidcConfigArgs> getAuthenticateOidcConfig() {
-        return this.authenticateOidcConfig == null ? Output.empty() : this.authenticateOidcConfig;
+    public Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig() {
+        return this.authenticateOidcConfig == null ? Codegen.empty() : this.authenticateOidcConfig;
     }
 
     @Import(name="fixedResponseConfig")
       private final @Nullable Output<ListenerFixedResponseConfigArgs> fixedResponseConfig;
 
-    public Output<ListenerFixedResponseConfigArgs> getFixedResponseConfig() {
-        return this.fixedResponseConfig == null ? Output.empty() : this.fixedResponseConfig;
+    public Output<ListenerFixedResponseConfigArgs> fixedResponseConfig() {
+        return this.fixedResponseConfig == null ? Codegen.empty() : this.fixedResponseConfig;
     }
 
     @Import(name="forwardConfig")
       private final @Nullable Output<ListenerForwardConfigArgs> forwardConfig;
 
-    public Output<ListenerForwardConfigArgs> getForwardConfig() {
-        return this.forwardConfig == null ? Output.empty() : this.forwardConfig;
+    public Output<ListenerForwardConfigArgs> forwardConfig() {
+        return this.forwardConfig == null ? Codegen.empty() : this.forwardConfig;
     }
 
     @Import(name="order")
       private final @Nullable Output<Integer> order;
 
-    public Output<Integer> getOrder() {
-        return this.order == null ? Output.empty() : this.order;
+    public Output<Integer> order() {
+        return this.order == null ? Codegen.empty() : this.order;
     }
 
     @Import(name="redirectConfig")
       private final @Nullable Output<ListenerRedirectConfigArgs> redirectConfig;
 
-    public Output<ListenerRedirectConfigArgs> getRedirectConfig() {
-        return this.redirectConfig == null ? Output.empty() : this.redirectConfig;
+    public Output<ListenerRedirectConfigArgs> redirectConfig() {
+        return this.redirectConfig == null ? Codegen.empty() : this.redirectConfig;
     }
 
     @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
-    public Output<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
+    public Output<String> targetGroupArn() {
+        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -96,14 +97,14 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerActionArgs() {
-        this.authenticateCognitoConfig = Output.empty();
-        this.authenticateOidcConfig = Output.empty();
-        this.fixedResponseConfig = Output.empty();
-        this.forwardConfig = Output.empty();
-        this.order = Output.empty();
-        this.redirectConfig = Output.empty();
-        this.targetGroupArn = Output.empty();
-        this.type = Output.empty();
+        this.authenticateCognitoConfig = Codegen.empty();
+        this.authenticateOidcConfig = Codegen.empty();
+        this.fixedResponseConfig = Codegen.empty();
+        this.forwardConfig = Codegen.empty();
+        this.order = Codegen.empty();
+        this.redirectConfig = Codegen.empty();
+        this.targetGroupArn = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticateCognitoConfig(@Nullable ListenerAuthenticateCognitoConfigArgs authenticateCognitoConfig) {
-            this.authenticateCognitoConfig = Output.ofNullable(authenticateCognitoConfig);
+            this.authenticateCognitoConfig = Codegen.ofNullable(authenticateCognitoConfig);
             return this;
         }
         public Builder authenticateOidcConfig(@Nullable Output<ListenerAuthenticateOidcConfigArgs> authenticateOidcConfig) {
@@ -153,7 +154,7 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticateOidcConfig(@Nullable ListenerAuthenticateOidcConfigArgs authenticateOidcConfig) {
-            this.authenticateOidcConfig = Output.ofNullable(authenticateOidcConfig);
+            this.authenticateOidcConfig = Codegen.ofNullable(authenticateOidcConfig);
             return this;
         }
         public Builder fixedResponseConfig(@Nullable Output<ListenerFixedResponseConfigArgs> fixedResponseConfig) {
@@ -161,7 +162,7 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedResponseConfig(@Nullable ListenerFixedResponseConfigArgs fixedResponseConfig) {
-            this.fixedResponseConfig = Output.ofNullable(fixedResponseConfig);
+            this.fixedResponseConfig = Codegen.ofNullable(fixedResponseConfig);
             return this;
         }
         public Builder forwardConfig(@Nullable Output<ListenerForwardConfigArgs> forwardConfig) {
@@ -169,7 +170,7 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forwardConfig(@Nullable ListenerForwardConfigArgs forwardConfig) {
-            this.forwardConfig = Output.ofNullable(forwardConfig);
+            this.forwardConfig = Codegen.ofNullable(forwardConfig);
             return this;
         }
         public Builder order(@Nullable Output<Integer> order) {
@@ -177,7 +178,7 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder order(@Nullable Integer order) {
-            this.order = Output.ofNullable(order);
+            this.order = Codegen.ofNullable(order);
             return this;
         }
         public Builder redirectConfig(@Nullable Output<ListenerRedirectConfigArgs> redirectConfig) {
@@ -185,7 +186,7 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redirectConfig(@Nullable ListenerRedirectConfigArgs redirectConfig) {
-            this.redirectConfig = Output.ofNullable(redirectConfig);
+            this.redirectConfig = Codegen.ofNullable(redirectConfig);
             return this;
         }
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
@@ -193,7 +194,7 @@ public final class ListenerActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Output.ofNullable(targetGroupArn);
+            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.inputs.JobScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
 
-    public Output<String> getJobAgentName() {
+    public Output<String> jobAgentName() {
         return this.jobAgentName;
     }
 
@@ -44,8 +45,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
-    public Output<String> getJobName() {
-        return this.jobName == null ? Output.empty() : this.jobName;
+    public Output<String> jobName() {
+        return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,8 +67,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedule")
       private final @Nullable Output<JobScheduleArgs> schedule;
 
-    public Output<JobScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+    public Output<JobScheduleArgs> schedule() {
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -88,7 +89,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
         Output<String> resourceGroupName,
         @Nullable Output<JobScheduleArgs> schedule,
         Output<String> serverName) {
-        this.description = description == null ? Output.ofNullable("") : description;
+        this.description = description == null ? Codegen.ofNullable("") : description;
         this.jobAgentName = Objects.requireNonNull(jobAgentName, "expected parameter 'jobAgentName' to be non-null");
         this.jobName = jobName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -97,12 +98,12 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.description = Output.empty();
-        this.jobAgentName = Output.empty();
-        this.jobName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schedule = Output.empty();
-        this.serverName = Output.empty();
+        this.description = Codegen.empty();
+        this.jobAgentName = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder jobAgentName(Output<String> jobAgentName) {
@@ -156,7 +157,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Output.ofNullable(jobName);
+            this.jobName = Codegen.ofNullable(jobName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -172,7 +173,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable JobScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder serverName(Output<String> serverName) {

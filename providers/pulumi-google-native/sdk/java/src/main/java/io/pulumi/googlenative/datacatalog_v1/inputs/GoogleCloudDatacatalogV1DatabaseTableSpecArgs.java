@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1DatabaseTableSpecType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
     @Import(name="type")
       private final @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type;
 
-    public Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GoogleCloudDatacatalogV1DatabaseTableSpecArgs(@Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecType> type) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
     }
 
     private GoogleCloudDatacatalogV1DatabaseTableSpecArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpecArgs extends io.pulu
             return this;
         }
         public Builder type(@Nullable GoogleCloudDatacatalogV1DatabaseTableSpecType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GoogleCloudDatacatalogV1DatabaseTableSpecArgs build() {
             return new GoogleCloudDatacatalogV1DatabaseTableSpecArgs(type);

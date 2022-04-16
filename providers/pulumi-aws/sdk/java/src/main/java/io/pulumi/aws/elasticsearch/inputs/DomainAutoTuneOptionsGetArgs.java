@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 import io.pulumi.aws.elasticsearch.inputs.DomainAutoTuneOptionsMaintenanceScheduleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
     @Import(name="desiredState", required=true)
       private final Output<String> desiredState;
 
-    public Output<String> getDesiredState() {
+    public Output<String> desiredState() {
         return this.desiredState;
     }
 
@@ -34,8 +35,8 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
     @Import(name="maintenanceSchedules")
       private final @Nullable Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> maintenanceSchedules;
 
-    public Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> getMaintenanceSchedules() {
-        return this.maintenanceSchedules == null ? Output.empty() : this.maintenanceSchedules;
+    public Output<List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs>> maintenanceSchedules() {
+        return this.maintenanceSchedules == null ? Codegen.empty() : this.maintenanceSchedules;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
     @Import(name="rollbackOnDisable")
       private final @Nullable Output<String> rollbackOnDisable;
 
-    public Output<String> getRollbackOnDisable() {
-        return this.rollbackOnDisable == null ? Output.empty() : this.rollbackOnDisable;
+    public Output<String> rollbackOnDisable() {
+        return this.rollbackOnDisable == null ? Codegen.empty() : this.rollbackOnDisable;
     }
 
     public DomainAutoTuneOptionsGetArgs(
@@ -59,9 +60,9 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
     }
 
     private DomainAutoTuneOptionsGetArgs() {
-        this.desiredState = Output.empty();
-        this.maintenanceSchedules = Output.empty();
-        this.rollbackOnDisable = Output.empty();
+        this.desiredState = Codegen.empty();
+        this.maintenanceSchedules = Codegen.empty();
+        this.rollbackOnDisable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder maintenanceSchedules(@Nullable List<DomainAutoTuneOptionsMaintenanceScheduleGetArgs> maintenanceSchedules) {
-            this.maintenanceSchedules = Output.ofNullable(maintenanceSchedules);
+            this.maintenanceSchedules = Codegen.ofNullable(maintenanceSchedules);
             return this;
         }
         public Builder maintenanceSchedules(DomainAutoTuneOptionsMaintenanceScheduleGetArgs... maintenanceSchedules) {
@@ -112,7 +113,7 @@ public final class DomainAutoTuneOptionsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder rollbackOnDisable(@Nullable String rollbackOnDisable) {
-            this.rollbackOnDisable = Output.ofNullable(rollbackOnDisable);
+            this.rollbackOnDisable = Codegen.ofNullable(rollbackOnDisable);
             return this;
         }        public DomainAutoTuneOptionsGetArgs build() {
             return new DomainAutoTuneOptionsGetArgs(desiredState, maintenanceSchedules, rollbackOnDisable);

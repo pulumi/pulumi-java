@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class InsightFiltersProcessTerminatedAtDateRangeArgs extends io.pul
     @Import(name="unit", required=true)
       private final Output<String> unit;
 
-    public Output<String> getUnit() {
+    public Output<String> unit() {
         return this.unit;
     }
 
@@ -32,7 +33,7 @@ public final class InsightFiltersProcessTerminatedAtDateRangeArgs extends io.pul
     @Import(name="value", required=true)
       private final Output<Integer> value;
 
-    public Output<Integer> getValue() {
+    public Output<Integer> value() {
         return this.value;
     }
 
@@ -44,8 +45,8 @@ public final class InsightFiltersProcessTerminatedAtDateRangeArgs extends io.pul
     }
 
     private InsightFiltersProcessTerminatedAtDateRangeArgs() {
-        this.unit = Output.empty();
-        this.value = Output.empty();
+        this.unit = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1.enums.SslSettingsSslManagementType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
-    public Output<String> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+    public Output<String> certificateId() {
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sslManagementType")
       private final @Nullable Output<SslSettingsSslManagementType> sslManagementType;
 
-    public Output<SslSettingsSslManagementType> getSslManagementType() {
-        return this.sslManagementType == null ? Output.empty() : this.sslManagementType;
+    public Output<SslSettingsSslManagementType> sslManagementType() {
+        return this.sslManagementType == null ? Codegen.empty() : this.sslManagementType;
     }
 
     public SslSettingsArgs(
@@ -49,8 +50,8 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SslSettingsArgs() {
-        this.certificateId = Output.empty();
-        this.sslManagementType = Output.empty();
+        this.certificateId = Codegen.empty();
+        this.sslManagementType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }
         public Builder sslManagementType(@Nullable Output<SslSettingsSslManagementType> sslManagementType) {
@@ -88,7 +89,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sslManagementType(@Nullable SslSettingsSslManagementType sslManagementType) {
-            this.sslManagementType = Output.ofNullable(sslManagementType);
+            this.sslManagementType = Codegen.ofNullable(sslManagementType);
             return this;
         }        public SslSettingsArgs build() {
             return new SslSettingsArgs(certificateId, sslManagementType);

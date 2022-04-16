@@ -5,6 +5,7 @@ package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,8 +25,8 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterLogging")
       private final @Nullable Output<ClusterLoggingArgs> clusterLogging;
 
-    public Output<ClusterLoggingArgs> getClusterLogging() {
-        return this.clusterLogging == null ? Output.empty() : this.clusterLogging;
+    public Output<ClusterLoggingArgs> clusterLogging() {
+        return this.clusterLogging == null ? Codegen.empty() : this.clusterLogging;
     }
 
     public ClusterLoggingArgs(@Nullable Output<ClusterLoggingArgs> clusterLogging) {
@@ -33,7 +34,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterLoggingArgs() {
-        this.clusterLogging = Output.empty();
+        this.clusterLogging = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -61,7 +62,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterLogging(@Nullable ClusterLoggingArgs clusterLogging) {
-            this.clusterLogging = Output.ofNullable(clusterLogging);
+            this.clusterLogging = Codegen.ofNullable(clusterLogging);
             return this;
         }        public ClusterLoggingArgs build() {
             return new ClusterLoggingArgs(clusterLogging);

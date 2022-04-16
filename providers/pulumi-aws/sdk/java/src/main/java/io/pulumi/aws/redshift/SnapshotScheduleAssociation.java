@@ -9,6 +9,7 @@ import io.pulumi.aws.redshift.inputs.SnapshotScheduleAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -37,7 +38,7 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
      * @return The cluster identifier.
      * 
      */
-    public Output<String> getClusterIdentifier() {
+    public Output<String> clusterIdentifier() {
         return this.clusterIdentifier;
     }
     /**
@@ -51,7 +52,7 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
      * @return The snapshot schedule identifier.
      * 
      */
-    public Output<String> getScheduleIdentifier() {
+    public Output<String> scheduleIdentifier() {
         return this.scheduleIdentifier;
     }
 
@@ -77,7 +78,7 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public SnapshotScheduleAssociation(String name, SnapshotScheduleAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:redshift/snapshotScheduleAssociation:SnapshotScheduleAssociation", name, args == null ? SnapshotScheduleAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:redshift/snapshotScheduleAssociation:SnapshotScheduleAssociation", name, args == null ? SnapshotScheduleAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SnapshotScheduleAssociation(String name, Output<String> id, @Nullable SnapshotScheduleAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

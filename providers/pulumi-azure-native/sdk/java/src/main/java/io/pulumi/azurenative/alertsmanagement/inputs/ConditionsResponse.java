@@ -25,7 +25,7 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="alertContext")
       private final @Nullable ConditionResponse alertContext;
 
-    public Optional<ConditionResponse> getAlertContext() {
+    public Optional<ConditionResponse> alertContext() {
         return this.alertContext == null ? Optional.empty() : Optional.ofNullable(this.alertContext);
     }
 
@@ -36,7 +36,7 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="alertRuleId")
       private final @Nullable ConditionResponse alertRuleId;
 
-    public Optional<ConditionResponse> getAlertRuleId() {
+    public Optional<ConditionResponse> alertRuleId() {
         return this.alertRuleId == null ? Optional.empty() : Optional.ofNullable(this.alertRuleId);
     }
 
@@ -47,7 +47,7 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="description")
       private final @Nullable ConditionResponse description;
 
-    public Optional<ConditionResponse> getDescription() {
+    public Optional<ConditionResponse> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -58,7 +58,7 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="monitorCondition")
       private final @Nullable ConditionResponse monitorCondition;
 
-    public Optional<ConditionResponse> getMonitorCondition() {
+    public Optional<ConditionResponse> monitorCondition() {
         return this.monitorCondition == null ? Optional.empty() : Optional.ofNullable(this.monitorCondition);
     }
 
@@ -69,7 +69,7 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="monitorService")
       private final @Nullable ConditionResponse monitorService;
 
-    public Optional<ConditionResponse> getMonitorService() {
+    public Optional<ConditionResponse> monitorService() {
         return this.monitorService == null ? Optional.empty() : Optional.ofNullable(this.monitorService);
     }
 
@@ -80,7 +80,7 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="severity")
       private final @Nullable ConditionResponse severity;
 
-    public Optional<ConditionResponse> getSeverity() {
+    public Optional<ConditionResponse> severity() {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
     }
 
@@ -91,7 +91,7 @@ public final class ConditionsResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceType")
       private final @Nullable ConditionResponse targetResourceType;
 
-    public Optional<ConditionResponse> getTargetResourceType() {
+    public Optional<ConditionResponse> targetResourceType() {
         return this.targetResourceType == null ? Optional.empty() : Optional.ofNullable(this.targetResourceType);
     }
 

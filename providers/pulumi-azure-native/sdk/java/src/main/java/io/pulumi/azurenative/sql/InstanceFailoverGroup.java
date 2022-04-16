@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @return List of managed instance pairs in the failover group.
      * 
      */
-    public Output<List<ManagedInstancePairInfoResponse>> getManagedInstancePairs() {
+    public Output<List<ManagedInstancePairInfoResponse>> managedInstancePairs() {
         return this.managedInstancePairs;
     }
     /**
@@ -59,7 +60,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -73,7 +74,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Partner region information for the failover group.
      * 
      */
-    public Output<List<PartnerRegionInfoResponse>> getPartnerRegions() {
+    public Output<List<PartnerRegionInfoResponse>> partnerRegions() {
         return this.partnerRegions;
     }
     /**
@@ -87,7 +88,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Read-only endpoint of the failover group instance.
      * 
      */
-    public Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> getReadOnlyEndpoint() {
+    public Output</* @Nullable */ InstanceFailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint() {
         return this.readOnlyEndpoint;
     }
     /**
@@ -101,7 +102,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Read-write endpoint of the failover group instance.
      * 
      */
-    public Output<InstanceFailoverGroupReadWriteEndpointResponse> getReadWriteEndpoint() {
+    public Output<InstanceFailoverGroupReadWriteEndpointResponse> readWriteEndpoint() {
         return this.readWriteEndpoint;
     }
     /**
@@ -115,7 +116,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Local replication role of the failover group instance.
      * 
      */
-    public Output<String> getReplicationRole() {
+    public Output<String> replicationRole() {
         return this.replicationRole;
     }
     /**
@@ -129,7 +130,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Replication state of the failover group instance.
      * 
      */
-    public Output<String> getReplicationState() {
+    public Output<String> replicationState() {
         return this.replicationState;
     }
     /**
@@ -143,7 +144,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -169,7 +170,7 @@ public class InstanceFailoverGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceFailoverGroup(String name, InstanceFailoverGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:InstanceFailoverGroup", name, args == null ? InstanceFailoverGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:sql:InstanceFailoverGroup", name, args == null ? InstanceFailoverGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceFailoverGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

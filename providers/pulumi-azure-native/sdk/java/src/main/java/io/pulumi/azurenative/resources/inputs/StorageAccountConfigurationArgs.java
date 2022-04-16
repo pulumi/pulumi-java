@@ -5,6 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
     @Import(name="storageAccountKey")
       private final @Nullable Output<String> storageAccountKey;
 
-    public Output<String> getStorageAccountKey() {
-        return this.storageAccountKey == null ? Output.empty() : this.storageAccountKey;
+    public Output<String> storageAccountKey() {
+        return this.storageAccountKey == null ? Codegen.empty() : this.storageAccountKey;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
     @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
-    public Output<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
+    public Output<String> storageAccountName() {
+        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 
     public StorageAccountConfigurationArgs(
@@ -48,8 +49,8 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
     }
 
     private StorageAccountConfigurationArgs() {
-        this.storageAccountKey = Output.empty();
-        this.storageAccountName = Output.empty();
+        this.storageAccountKey = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
-            this.storageAccountKey = Output.ofNullable(storageAccountKey);
+            this.storageAccountKey = Codegen.ofNullable(storageAccountKey);
             return this;
         }
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
@@ -87,7 +88,7 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Output.ofNullable(storageAccountName);
+            this.storageAccountName = Codegen.ofNullable(storageAccountName);
             return this;
         }        public StorageAccountConfigurationArgs build() {
             return new StorageAccountConfigurationArgs(storageAccountKey, storageAccountName);

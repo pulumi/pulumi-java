@@ -6,6 +6,7 @@ package io.pulumi.aws.autoscaling;
 import io.pulumi.aws.autoscaling.inputs.TagTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoscalingGroupName", required=true)
       private final Output<String> autoscalingGroupName;
 
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
 
@@ -32,7 +33,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tag", required=true)
       private final Output<TagTagArgs> tag;
 
-    public Output<TagTagArgs> getTag() {
+    public Output<TagTagArgs> tag() {
         return this.tag;
     }
 
@@ -44,8 +45,8 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagArgs() {
-        this.autoscalingGroupName = Output.empty();
-        this.tag = Output.empty();
+        this.autoscalingGroupName = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {

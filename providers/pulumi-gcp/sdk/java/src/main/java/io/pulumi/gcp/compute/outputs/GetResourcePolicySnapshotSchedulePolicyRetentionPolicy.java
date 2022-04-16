@@ -21,10 +21,10 @@ public final class GetResourcePolicySnapshotSchedulePolicyRetentionPolicy {
         this.onSourceDiskDelete = onSourceDiskDelete;
     }
 
-    public Integer getMaxRetentionDays() {
+    public Integer maxRetentionDays() {
         return this.maxRetentionDays;
     }
-    public String getOnSourceDiskDelete() {
+    public String onSourceDiskDelete() {
         return this.onSourceDiskDelete;
     }
 

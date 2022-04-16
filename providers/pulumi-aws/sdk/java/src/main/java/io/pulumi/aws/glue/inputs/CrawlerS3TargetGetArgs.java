@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
-    public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+    public Output<String> connectionName() {
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="dlqEventQueueArn")
       private final @Nullable Output<String> dlqEventQueueArn;
 
-    public Output<String> getDlqEventQueueArn() {
-        return this.dlqEventQueueArn == null ? Output.empty() : this.dlqEventQueueArn;
+    public Output<String> dlqEventQueueArn() {
+        return this.dlqEventQueueArn == null ? Codegen.empty() : this.dlqEventQueueArn;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="eventQueueArn")
       private final @Nullable Output<String> eventQueueArn;
 
-    public Output<String> getEventQueueArn() {
-        return this.eventQueueArn == null ? Output.empty() : this.eventQueueArn;
+    public Output<String> eventQueueArn() {
+        return this.eventQueueArn == null ? Codegen.empty() : this.eventQueueArn;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="exclusions")
       private final @Nullable Output<List<String>> exclusions;
 
-    public Output<List<String>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+    public Output<List<String>> exclusions() {
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -78,8 +79,8 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
     @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
 
-    public Output<Integer> getSampleSize() {
-        return this.sampleSize == null ? Output.empty() : this.sampleSize;
+    public Output<Integer> sampleSize() {
+        return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
     }
 
     public CrawlerS3TargetGetArgs(
@@ -98,12 +99,12 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CrawlerS3TargetGetArgs() {
-        this.connectionName = Output.empty();
-        this.dlqEventQueueArn = Output.empty();
-        this.eventQueueArn = Output.empty();
-        this.exclusions = Output.empty();
-        this.path = Output.empty();
-        this.sampleSize = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.dlqEventQueueArn = Codegen.empty();
+        this.eventQueueArn = Codegen.empty();
+        this.exclusions = Codegen.empty();
+        this.path = Codegen.empty();
+        this.sampleSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder dlqEventQueueArn(@Nullable Output<String> dlqEventQueueArn) {
@@ -149,7 +150,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dlqEventQueueArn(@Nullable String dlqEventQueueArn) {
-            this.dlqEventQueueArn = Output.ofNullable(dlqEventQueueArn);
+            this.dlqEventQueueArn = Codegen.ofNullable(dlqEventQueueArn);
             return this;
         }
         public Builder eventQueueArn(@Nullable Output<String> eventQueueArn) {
@@ -157,7 +158,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder eventQueueArn(@Nullable String eventQueueArn) {
-            this.eventQueueArn = Output.ofNullable(eventQueueArn);
+            this.eventQueueArn = Codegen.ofNullable(eventQueueArn);
             return this;
         }
         public Builder exclusions(@Nullable Output<List<String>> exclusions) {
@@ -165,7 +166,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder exclusions(@Nullable List<String> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(String... exclusions) {
@@ -184,7 +185,7 @@ public final class CrawlerS3TargetGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = Output.ofNullable(sampleSize);
+            this.sampleSize = Codegen.ofNullable(sampleSize);
             return this;
         }        public CrawlerS3TargetGetArgs build() {
             return new CrawlerS3TargetGetArgs(connectionName, dlqEventQueueArn, eventQueueArn, exclusions, path, sampleSize);

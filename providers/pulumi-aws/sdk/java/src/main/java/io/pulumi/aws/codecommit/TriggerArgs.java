@@ -6,6 +6,7 @@ package io.pulumi.aws.codecommit;
 import io.pulumi.aws.codecommit.inputs.TriggerTriggerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +23,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
-    public Output<String> getRepositoryName() {
+    public Output<String> repositoryName() {
         return this.repositoryName;
     }
 
     @Import(name="triggers", required=true)
       private final Output<List<TriggerTriggerArgs>> triggers;
 
-    public Output<List<TriggerTriggerArgs>> getTriggers() {
+    public Output<List<TriggerTriggerArgs>> triggers() {
         return this.triggers;
     }
 
@@ -41,8 +42,8 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.repositoryName = Output.empty();
-        this.triggers = Output.empty();
+        this.repositoryName = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FilterArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<FilterArgs> filter;
 
-    public Output<FilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<FilterArgs> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectType")
       private final @Nullable Output<String> objectType;
 
-    public Output<String> getObjectType() {
-        return this.objectType == null ? Output.empty() : this.objectType;
+    public Output<String> objectType() {
+        return this.objectType == null ? Codegen.empty() : this.objectType;
     }
 
     public FilterOptionsArgs(
@@ -49,8 +50,8 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterOptionsArgs() {
-        this.filter = Output.empty();
-        this.objectType = Output.empty();
+        this.filter = Codegen.empty();
+        this.objectType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable FilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder objectType(@Nullable Output<String> objectType) {
@@ -88,7 +89,7 @@ public final class FilterOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectType(@Nullable String objectType) {
-            this.objectType = Output.ofNullable(objectType);
+            this.objectType = Codegen.ofNullable(objectType);
             return this;
         }        public FilterOptionsArgs build() {
             return new FilterOptionsArgs(filter, objectType);

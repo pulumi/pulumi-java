@@ -8,6 +8,7 @@ import io.pulumi.aws.apigateway.inputs.UsagePlanQuotaSettingsGetArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanThrottleSettingsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiStages")
       private final @Nullable Output<List<UsagePlanApiStageGetArgs>> apiStages;
 
-    public Output<List<UsagePlanApiStageGetArgs>> getApiStages() {
-        return this.apiStages == null ? Output.empty() : this.apiStages;
+    public Output<List<UsagePlanApiStageGetArgs>> apiStages() {
+        return this.apiStages == null ? Codegen.empty() : this.apiStages;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="productCode")
       private final @Nullable Output<String> productCode;
 
-    public Output<String> getProductCode() {
-        return this.productCode == null ? Output.empty() : this.productCode;
+    public Output<String> productCode() {
+        return this.productCode == null ? Codegen.empty() : this.productCode;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="quotaSettings")
       private final @Nullable Output<UsagePlanQuotaSettingsGetArgs> quotaSettings;
 
-    public Output<UsagePlanQuotaSettingsGetArgs> getQuotaSettings() {
-        return this.quotaSettings == null ? Output.empty() : this.quotaSettings;
+    public Output<UsagePlanQuotaSettingsGetArgs> quotaSettings() {
+        return this.quotaSettings == null ? Codegen.empty() : this.quotaSettings;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     @Import(name="throttleSettings")
       private final @Nullable Output<UsagePlanThrottleSettingsGetArgs> throttleSettings;
 
-    public Output<UsagePlanThrottleSettingsGetArgs> getThrottleSettings() {
-        return this.throttleSettings == null ? Output.empty() : this.throttleSettings;
+    public Output<UsagePlanThrottleSettingsGetArgs> throttleSettings() {
+        return this.throttleSettings == null ? Codegen.empty() : this.throttleSettings;
     }
 
     public UsagePlanState(
@@ -140,15 +141,15 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UsagePlanState() {
-        this.apiStages = Output.empty();
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.productCode = Output.empty();
-        this.quotaSettings = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.throttleSettings = Output.empty();
+        this.apiStages = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.productCode = Codegen.empty();
+        this.quotaSettings = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.throttleSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiStages(@Nullable List<UsagePlanApiStageGetArgs> apiStages) {
-            this.apiStages = Output.ofNullable(apiStages);
+            this.apiStages = Codegen.ofNullable(apiStages);
             return this;
         }
         public Builder apiStages(UsagePlanApiStageGetArgs... apiStages) {
@@ -203,7 +204,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -211,7 +212,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -219,7 +220,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder productCode(@Nullable Output<String> productCode) {
@@ -227,7 +228,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productCode(@Nullable String productCode) {
-            this.productCode = Output.ofNullable(productCode);
+            this.productCode = Codegen.ofNullable(productCode);
             return this;
         }
         public Builder quotaSettings(@Nullable Output<UsagePlanQuotaSettingsGetArgs> quotaSettings) {
@@ -235,7 +236,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quotaSettings(@Nullable UsagePlanQuotaSettingsGetArgs quotaSettings) {
-            this.quotaSettings = Output.ofNullable(quotaSettings);
+            this.quotaSettings = Codegen.ofNullable(quotaSettings);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -243,7 +244,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -251,7 +252,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder throttleSettings(@Nullable Output<UsagePlanThrottleSettingsGetArgs> throttleSettings) {
@@ -259,7 +260,7 @@ public final class UsagePlanState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throttleSettings(@Nullable UsagePlanThrottleSettingsGetArgs throttleSettings) {
-            this.throttleSettings = Output.ofNullable(throttleSettings);
+            this.throttleSettings = Codegen.ofNullable(throttleSettings);
             return this;
         }        public UsagePlanState build() {
             return new UsagePlanState(apiStages, arn, description, name, productCode, quotaSettings, tags, tagsAll, throttleSettings);

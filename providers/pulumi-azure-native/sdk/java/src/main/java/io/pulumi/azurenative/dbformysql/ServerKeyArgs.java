@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dbformysql.enums.ServerKeyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
-    public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+    public Output<String> keyName() {
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,7 +46,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverKeyType", required=true)
       private final Output<Either<String,ServerKeyType>> serverKeyType;
 
-    public Output<Either<String,ServerKeyType>> getServerKeyType() {
+    public Output<Either<String,ServerKeyType>> serverKeyType() {
         return this.serverKeyType;
     }
 
@@ -56,7 +57,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
-    public Output<String> getServerName() {
+    public Output<String> serverName() {
         return this.serverName;
     }
 
@@ -67,8 +68,8 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
-    public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+    public Output<String> uri() {
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public ServerKeyArgs(
@@ -85,11 +86,11 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServerKeyArgs() {
-        this.keyName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverKeyType = Output.empty();
-        this.serverName = Output.empty();
-        this.uri = Output.empty();
+        this.keyName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverKeyType = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -157,7 +158,7 @@ public final class ServerKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public ServerKeyArgs build() {
             return new ServerKeyArgs(keyName, resourceGroupName, serverKeyType, serverName, uri);

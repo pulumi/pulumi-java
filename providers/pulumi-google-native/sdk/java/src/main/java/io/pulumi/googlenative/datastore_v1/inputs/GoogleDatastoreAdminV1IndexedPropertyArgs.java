@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastore_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastore_v1.enums.GoogleDatastoreAdminV1IndexedPropertyDirection;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
     @Import(name="direction", required=true)
       private final Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction;
 
-    public Output<GoogleDatastoreAdminV1IndexedPropertyDirection> getDirection() {
+    public Output<GoogleDatastoreAdminV1IndexedPropertyDirection> direction() {
         return this.direction;
     }
 
@@ -36,7 +37,7 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -48,8 +49,8 @@ public final class GoogleDatastoreAdminV1IndexedPropertyArgs extends io.pulumi.r
     }
 
     private GoogleDatastoreAdminV1IndexedPropertyArgs() {
-        this.direction = Output.empty();
-        this.name = Output.empty();
+        this.direction = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

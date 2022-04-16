@@ -9,6 +9,7 @@ import io.pulumi.aws.elasticsearch.inputs.DomainPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -31,7 +32,7 @@ public class DomainPolicy extends io.pulumi.resources.CustomResource {
      * @return IAM policy document specifying the access policies for the domain
      * 
      */
-    public Output<String> getAccessPolicies() {
+    public Output<String> accessPolicies() {
         return this.accessPolicies;
     }
     /**
@@ -45,7 +46,7 @@ public class DomainPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -71,7 +72,7 @@ public class DomainPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainPolicy(String name, DomainPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticsearch/domainPolicy:DomainPolicy", name, args == null ? DomainPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticsearch/domainPolicy:DomainPolicy", name, args == null ? DomainPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainPolicy(String name, Output<String> id, @Nullable DomainPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

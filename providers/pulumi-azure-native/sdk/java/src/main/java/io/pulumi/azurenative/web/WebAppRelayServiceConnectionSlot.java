@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,25 +32,25 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
     @Export(name="biztalkUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> biztalkUri;
 
-    public Output</* @Nullable */ String> getBiztalkUri() {
+    public Output</* @Nullable */ String> biztalkUri() {
         return this.biztalkUri;
     }
     @Export(name="entityConnectionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityConnectionString;
 
-    public Output</* @Nullable */ String> getEntityConnectionString() {
+    public Output</* @Nullable */ String> entityConnectionString() {
         return this.entityConnectionString;
     }
     @Export(name="entityName", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityName;
 
-    public Output</* @Nullable */ String> getEntityName() {
+    public Output</* @Nullable */ String> entityName() {
         return this.entityName;
     }
     @Export(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
-    public Output</* @Nullable */ String> getHostname() {
+    public Output</* @Nullable */ String> hostname() {
         return this.hostname;
     }
     /**
@@ -63,7 +64,7 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -77,25 +78,25 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
-    public Output</* @Nullable */ Integer> getPort() {
+    public Output</* @Nullable */ Integer> port() {
         return this.port;
     }
     @Export(name="resourceConnectionString", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceConnectionString;
 
-    public Output</* @Nullable */ String> getResourceConnectionString() {
+    public Output</* @Nullable */ String> resourceConnectionString() {
         return this.resourceConnectionString;
     }
     @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
-    public Output</* @Nullable */ String> getPropResourceType() {
+    public Output</* @Nullable */ String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -109,7 +110,7 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -135,7 +136,7 @@ public class WebAppRelayServiceConnectionSlot extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppRelayServiceConnectionSlot(String name, WebAppRelayServiceConnectionSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppRelayServiceConnectionSlot", name, args == null ? WebAppRelayServiceConnectionSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppRelayServiceConnectionSlot", name, args == null ? WebAppRelayServiceConnectionSlotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppRelayServiceConnectionSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

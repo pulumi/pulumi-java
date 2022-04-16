@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="consumerGroupName")
       private final @Nullable Output<String> consumerGroupName;
 
-    public Output<String> getConsumerGroupName() {
-        return this.consumerGroupName == null ? Output.empty() : this.consumerGroupName;
+    public Output<String> consumerGroupName() {
+        return this.consumerGroupName == null ? Codegen.empty() : this.consumerGroupName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventHubName", required=true)
       private final Output<String> eventHubName;
 
-    public Output<String> getEventHubName() {
+    public Output<String> eventHubName() {
         return this.eventHubName;
     }
 
@@ -43,7 +44,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
-    public Output<String> getNamespaceName() {
+    public Output<String> namespaceName() {
         return this.namespaceName;
     }
 
@@ -54,7 +55,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,8 +66,8 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;
 
-    public Output<String> getUserMetadata() {
-        return this.userMetadata == null ? Output.empty() : this.userMetadata;
+    public Output<String> userMetadata() {
+        return this.userMetadata == null ? Codegen.empty() : this.userMetadata;
     }
 
     public ConsumerGroupArgs(
@@ -83,11 +84,11 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConsumerGroupArgs() {
-        this.consumerGroupName = Output.empty();
-        this.eventHubName = Output.empty();
-        this.namespaceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.userMetadata = Output.empty();
+        this.consumerGroupName = Codegen.empty();
+        this.eventHubName = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.userMetadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder consumerGroupName(@Nullable String consumerGroupName) {
-            this.consumerGroupName = Output.ofNullable(consumerGroupName);
+            this.consumerGroupName = Codegen.ofNullable(consumerGroupName);
             return this;
         }
         public Builder eventHubName(Output<String> eventHubName) {
@@ -155,7 +156,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Output.ofNullable(userMetadata);
+            this.userMetadata = Codegen.ofNullable(userMetadata);
             return this;
         }        public ConsumerGroupArgs build() {
             return new ConsumerGroupArgs(consumerGroupName, eventHubName, namespaceName, resourceGroupName, userMetadata);

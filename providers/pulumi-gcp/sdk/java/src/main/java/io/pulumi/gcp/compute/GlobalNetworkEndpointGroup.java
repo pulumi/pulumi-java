@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.GlobalNetworkEndpointGroupArgs;
 import io.pulumi.gcp.compute.inputs.GlobalNetworkEndpointGroupState;
@@ -61,7 +62,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * network endpoint.
      * 
      */
-    public Output</* @Nullable */ Integer> getDefaultPort() {
+    public Output</* @Nullable */ Integer> defaultPort() {
         return this.defaultPort;
     }
     /**
@@ -77,7 +78,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -103,7 +104,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +120,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Possible values are `INTERNET_IP_PORT` and `INTERNET_FQDN_PORT`.
      * 
      */
-    public Output<String> getNetworkEndpointType() {
+    public Output<String> networkEndpointType() {
         return this.networkEndpointType;
     }
     /**
@@ -135,7 +136,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -149,7 +150,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -175,7 +176,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public GlobalNetworkEndpointGroup(String name, GlobalNetworkEndpointGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup", name, args == null ? GlobalNetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/globalNetworkEndpointGroup:GlobalNetworkEndpointGroup", name, args == null ? GlobalNetworkEndpointGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GlobalNetworkEndpointGroup(String name, Output<String> id, @Nullable GlobalNetworkEndpointGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

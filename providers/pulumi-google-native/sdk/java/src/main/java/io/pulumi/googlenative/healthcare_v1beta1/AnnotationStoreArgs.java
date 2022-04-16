@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,14 +19,14 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="annotationStoreId")
       private final @Nullable Output<String> annotationStoreId;
 
-    public Output<String> getAnnotationStoreId() {
-        return this.annotationStoreId == null ? Output.empty() : this.annotationStoreId;
+    public Output<String> annotationStoreId() {
+        return this.annotationStoreId == null ? Codegen.empty() : this.annotationStoreId;
     }
 
     @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
 
@@ -36,15 +37,15 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -54,15 +55,15 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public AnnotationStoreArgs(
@@ -81,12 +82,12 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AnnotationStoreArgs() {
-        this.annotationStoreId = Output.empty();
-        this.datasetId = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.annotationStoreId = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder annotationStoreId(@Nullable String annotationStoreId) {
-            this.annotationStoreId = Output.ofNullable(annotationStoreId);
+            this.annotationStoreId = Codegen.ofNullable(annotationStoreId);
             return this;
         }
         public Builder datasetId(Output<String> datasetId) {
@@ -140,7 +141,7 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -148,7 +149,7 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -156,7 +157,7 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -164,7 +165,7 @@ public final class AnnotationStoreArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public AnnotationStoreArgs build() {
             return new AnnotationStoreArgs(annotationStoreId, datasetId, labels, location, name, project);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.avs.enums.DnsServiceLogLevelEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="defaultDnsZone")
       private final @Nullable Output<String> defaultDnsZone;
 
-    public Output<String> getDefaultDnsZone() {
-        return this.defaultDnsZone == null ? Output.empty() : this.defaultDnsZone;
+    public Output<String> defaultDnsZone() {
+        return this.defaultDnsZone == null ? Codegen.empty() : this.defaultDnsZone;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="dnsServiceId")
       private final @Nullable Output<String> dnsServiceId;
 
-    public Output<String> getDnsServiceId() {
-        return this.dnsServiceId == null ? Output.empty() : this.dnsServiceId;
+    public Output<String> dnsServiceId() {
+        return this.dnsServiceId == null ? Codegen.empty() : this.dnsServiceId;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="dnsServiceIp")
       private final @Nullable Output<String> dnsServiceIp;
 
-    public Output<String> getDnsServiceIp() {
-        return this.dnsServiceIp == null ? Output.empty() : this.dnsServiceIp;
+    public Output<String> dnsServiceIp() {
+        return this.dnsServiceIp == null ? Codegen.empty() : this.dnsServiceIp;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="fqdnZones")
       private final @Nullable Output<List<String>> fqdnZones;
 
-    public Output<List<String>> getFqdnZones() {
-        return this.fqdnZones == null ? Output.empty() : this.fqdnZones;
+    public Output<List<String>> fqdnZones() {
+        return this.fqdnZones == null ? Codegen.empty() : this.fqdnZones;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="logLevel")
       private final @Nullable Output<Either<String,DnsServiceLogLevelEnum>> logLevel;
 
-    public Output<Either<String,DnsServiceLogLevelEnum>> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+    public Output<Either<String,DnsServiceLogLevelEnum>> logLevel() {
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
-    public Output<String> getPrivateCloudName() {
+    public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
 
@@ -102,7 +103,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -113,8 +114,8 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
-    public Output<Double> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+    public Output<Double> revision() {
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     public WorkloadNetworkDnsServiceArgs(
@@ -139,15 +140,15 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
     }
 
     private WorkloadNetworkDnsServiceArgs() {
-        this.defaultDnsZone = Output.empty();
-        this.displayName = Output.empty();
-        this.dnsServiceId = Output.empty();
-        this.dnsServiceIp = Output.empty();
-        this.fqdnZones = Output.empty();
-        this.logLevel = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.revision = Output.empty();
+        this.defaultDnsZone = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.dnsServiceId = Codegen.empty();
+        this.dnsServiceIp = Codegen.empty();
+        this.fqdnZones = Codegen.empty();
+        this.logLevel = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder defaultDnsZone(@Nullable String defaultDnsZone) {
-            this.defaultDnsZone = Output.ofNullable(defaultDnsZone);
+            this.defaultDnsZone = Codegen.ofNullable(defaultDnsZone);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -199,7 +200,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder dnsServiceId(@Nullable Output<String> dnsServiceId) {
@@ -207,7 +208,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder dnsServiceId(@Nullable String dnsServiceId) {
-            this.dnsServiceId = Output.ofNullable(dnsServiceId);
+            this.dnsServiceId = Codegen.ofNullable(dnsServiceId);
             return this;
         }
         public Builder dnsServiceIp(@Nullable Output<String> dnsServiceIp) {
@@ -215,7 +216,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder dnsServiceIp(@Nullable String dnsServiceIp) {
-            this.dnsServiceIp = Output.ofNullable(dnsServiceIp);
+            this.dnsServiceIp = Codegen.ofNullable(dnsServiceIp);
             return this;
         }
         public Builder fqdnZones(@Nullable Output<List<String>> fqdnZones) {
@@ -223,7 +224,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder fqdnZones(@Nullable List<String> fqdnZones) {
-            this.fqdnZones = Output.ofNullable(fqdnZones);
+            this.fqdnZones = Codegen.ofNullable(fqdnZones);
             return this;
         }
         public Builder fqdnZones(String... fqdnZones) {
@@ -234,7 +235,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder logLevel(@Nullable Either<String,DnsServiceLogLevelEnum> logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {
@@ -258,7 +259,7 @@ public final class WorkloadNetworkDnsServiceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder revision(@Nullable Double revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }        public WorkloadNetworkDnsServiceArgs build() {
             return new WorkloadNetworkDnsServiceArgs(defaultDnsZone, displayName, dnsServiceId, dnsServiceIp, fqdnZones, logLevel, privateCloudName, resourceGroupName, revision);

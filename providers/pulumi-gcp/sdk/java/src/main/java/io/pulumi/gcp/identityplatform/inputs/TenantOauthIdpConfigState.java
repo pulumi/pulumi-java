@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
-    public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+    public Output<String> clientSecret() {
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
-    public Output<String> getIssuer() {
-        return this.issuer == null ? Output.empty() : this.issuer;
+    public Output<String> issuer() {
+        return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
-    public Output<String> getTenant() {
-        return this.tenant == null ? Output.empty() : this.tenant;
+    public Output<String> tenant() {
+        return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
     public TenantOauthIdpConfigState(
@@ -124,14 +125,14 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
     }
 
     private TenantOauthIdpConfigState() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.displayName = Output.empty();
-        this.enabled = Output.empty();
-        this.issuer = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.tenant = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.issuer = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tenant = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -181,7 +182,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -189,7 +190,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -197,7 +198,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder issuer(@Nullable Output<String> issuer) {
@@ -205,7 +206,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Output.ofNullable(issuer);
+            this.issuer = Codegen.ofNullable(issuer);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -213,7 +214,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -221,7 +222,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tenant(@Nullable Output<String> tenant) {
@@ -229,7 +230,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tenant(@Nullable String tenant) {
-            this.tenant = Output.ofNullable(tenant);
+            this.tenant = Codegen.ofNullable(tenant);
             return this;
         }        public TenantOauthIdpConfigState build() {
             return new TenantOauthIdpConfigState(clientId, clientSecret, displayName, enabled, issuer, name, project, tenant);

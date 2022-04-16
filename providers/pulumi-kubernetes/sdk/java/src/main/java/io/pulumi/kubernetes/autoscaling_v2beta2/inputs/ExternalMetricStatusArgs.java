@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricIdentifierArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricValueStatusArgs;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="current", required=true)
       private final Output<MetricValueStatusArgs> current;
 
-    public Output<MetricValueStatusArgs> getCurrent() {
+    public Output<MetricValueStatusArgs> current() {
         return this.current;
     }
 
@@ -36,7 +37,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;
 
-    public Output<MetricIdentifierArgs> getMetric() {
+    public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
 
@@ -48,8 +49,8 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
     }
 
     private ExternalMetricStatusArgs() {
-        this.current = Output.empty();
-        this.metric = Output.empty();
+        this.current = Codegen.empty();
+        this.metric = Codegen.empty();
     }
 
     public static Builder builder() {

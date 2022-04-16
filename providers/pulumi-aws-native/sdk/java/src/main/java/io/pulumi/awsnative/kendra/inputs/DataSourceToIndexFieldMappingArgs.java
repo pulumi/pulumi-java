@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,21 +18,21 @@ public final class DataSourceToIndexFieldMappingArgs extends io.pulumi.resources
     @Import(name="dataSourceFieldName", required=true)
       private final Output<String> dataSourceFieldName;
 
-    public Output<String> getDataSourceFieldName() {
+    public Output<String> dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @Import(name="dateFieldFormat")
       private final @Nullable Output<String> dateFieldFormat;
 
-    public Output<String> getDateFieldFormat() {
-        return this.dateFieldFormat == null ? Output.empty() : this.dateFieldFormat;
+    public Output<String> dateFieldFormat() {
+        return this.dateFieldFormat == null ? Codegen.empty() : this.dateFieldFormat;
     }
 
     @Import(name="indexFieldName", required=true)
       private final Output<String> indexFieldName;
 
-    public Output<String> getIndexFieldName() {
+    public Output<String> indexFieldName() {
         return this.indexFieldName;
     }
 
@@ -45,9 +46,9 @@ public final class DataSourceToIndexFieldMappingArgs extends io.pulumi.resources
     }
 
     private DataSourceToIndexFieldMappingArgs() {
-        this.dataSourceFieldName = Output.empty();
-        this.dateFieldFormat = Output.empty();
-        this.indexFieldName = Output.empty();
+        this.dataSourceFieldName = Codegen.empty();
+        this.dateFieldFormat = Codegen.empty();
+        this.indexFieldName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class DataSourceToIndexFieldMappingArgs extends io.pulumi.resources
             return this;
         }
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
-            this.dateFieldFormat = Output.ofNullable(dateFieldFormat);
+            this.dateFieldFormat = Codegen.ofNullable(dateFieldFormat);
             return this;
         }
         public Builder indexFieldName(Output<String> indexFieldName) {

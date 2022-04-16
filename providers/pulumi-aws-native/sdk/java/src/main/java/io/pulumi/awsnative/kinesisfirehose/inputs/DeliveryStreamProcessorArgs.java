@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamProcessorType;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessorParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
     @Import(name="parameters")
       private final @Nullable Output<List<DeliveryStreamProcessorParameterArgs>> parameters;
 
-    public Output<List<DeliveryStreamProcessorParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<DeliveryStreamProcessorParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="type", required=true)
       private final Output<DeliveryStreamProcessorType> type;
 
-    public Output<DeliveryStreamProcessorType> getType() {
+    public Output<DeliveryStreamProcessorType> type() {
         return this.type;
     }
 
@@ -38,8 +39,8 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
     }
 
     private DeliveryStreamProcessorArgs() {
-        this.parameters = Output.empty();
-        this.type = Output.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class DeliveryStreamProcessorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder parameters(@Nullable List<DeliveryStreamProcessorParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(DeliveryStreamProcessorParameterArgs... parameters) {

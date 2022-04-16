@@ -7,6 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.enums.AccessPolicyRsaAlgo;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="alg", required=true)
       private final Output<Either<String,AccessPolicyRsaAlgo>> alg;
 
-    public Output<Either<String,AccessPolicyRsaAlgo>> getAlg() {
+    public Output<Either<String,AccessPolicyRsaAlgo>> alg() {
         return this.alg;
     }
 
@@ -37,7 +38,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="e", required=true)
       private final Output<String> e;
 
-    public Output<String> getE() {
+    public Output<String> e() {
         return this.e;
     }
 
@@ -48,7 +49,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kid", required=true)
       private final Output<String> kid;
 
-    public Output<String> getKid() {
+    public Output<String> kid() {
         return this.kid;
     }
 
@@ -59,7 +60,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="n", required=true)
       private final Output<String> n;
 
-    public Output<String> getN() {
+    public Output<String> n() {
         return this.n;
     }
 
@@ -71,7 +72,7 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -89,11 +90,11 @@ public final class RsaTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RsaTokenKeyArgs() {
-        this.alg = Output.empty();
-        this.e = Output.empty();
-        this.kid = Output.empty();
-        this.n = Output.empty();
-        this.type = Output.empty();
+        this.alg = Codegen.empty();
+        this.e = Codegen.empty();
+        this.kid = Codegen.empty();
+        this.n = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

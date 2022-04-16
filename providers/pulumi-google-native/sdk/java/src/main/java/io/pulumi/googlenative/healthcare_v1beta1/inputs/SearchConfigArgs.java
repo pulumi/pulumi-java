@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SearchParameterArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="searchParameters")
       private final @Nullable Output<List<SearchParameterArgs>> searchParameters;
 
-    public Output<List<SearchParameterArgs>> getSearchParameters() {
-        return this.searchParameters == null ? Output.empty() : this.searchParameters;
+    public Output<List<SearchParameterArgs>> searchParameters() {
+        return this.searchParameters == null ? Codegen.empty() : this.searchParameters;
     }
 
     public SearchConfigArgs(@Nullable Output<List<SearchParameterArgs>> searchParameters) {
@@ -35,7 +36,7 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SearchConfigArgs() {
-        this.searchParameters = Output.empty();
+        this.searchParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SearchConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder searchParameters(@Nullable List<SearchParameterArgs> searchParameters) {
-            this.searchParameters = Output.ofNullable(searchParameters);
+            this.searchParameters = Codegen.ofNullable(searchParameters);
             return this;
         }
         public Builder searchParameters(SearchParameterArgs... searchParameters) {

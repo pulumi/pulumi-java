@@ -6,6 +6,7 @@ package io.pulumi.awsnative.resiliencehub.inputs;
 import io.pulumi.awsnative.resiliencehub.inputs.AppPhysicalResourceIdArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,29 +23,29 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     @Import(name="logicalStackName")
       private final @Nullable Output<String> logicalStackName;
 
-    public Output<String> getLogicalStackName() {
-        return this.logicalStackName == null ? Output.empty() : this.logicalStackName;
+    public Output<String> logicalStackName() {
+        return this.logicalStackName == null ? Codegen.empty() : this.logicalStackName;
     }
 
     @Import(name="mappingType", required=true)
       private final Output<String> mappingType;
 
-    public Output<String> getMappingType() {
+    public Output<String> mappingType() {
         return this.mappingType;
     }
 
     @Import(name="physicalResourceId", required=true)
       private final Output<AppPhysicalResourceIdArgs> physicalResourceId;
 
-    public Output<AppPhysicalResourceIdArgs> getPhysicalResourceId() {
+    public Output<AppPhysicalResourceIdArgs> physicalResourceId() {
         return this.physicalResourceId;
     }
 
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     public AppResourceMappingArgs(
@@ -59,10 +60,10 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AppResourceMappingArgs() {
-        this.logicalStackName = Output.empty();
-        this.mappingType = Output.empty();
-        this.physicalResourceId = Output.empty();
-        this.resourceName = Output.empty();
+        this.logicalStackName = Codegen.empty();
+        this.mappingType = Codegen.empty();
+        this.physicalResourceId = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder logicalStackName(@Nullable String logicalStackName) {
-            this.logicalStackName = Output.ofNullable(logicalStackName);
+            this.logicalStackName = Codegen.ofNullable(logicalStackName);
             return this;
         }
         public Builder mappingType(Output<String> mappingType) {
@@ -120,7 +121,7 @@ public final class AppResourceMappingArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }        public AppResourceMappingArgs build() {
             return new AppResourceMappingArgs(logicalStackName, mappingType, physicalResourceId, resourceName);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -36,7 +37,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
     @Import(name="minAcceptableMeanAveragePrecision", required=true)
       private final Output<Double> minAcceptableMeanAveragePrecision;
 
-    public Output<Double> getMinAcceptableMeanAveragePrecision() {
+    public Output<Double> minAcceptableMeanAveragePrecision() {
         return this.minAcceptableMeanAveragePrecision;
     }
 
@@ -48,8 +49,8 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs ex
     }
 
     private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigArgs() {
-        this.email = Output.empty();
-        this.minAcceptableMeanAveragePrecision = Output.empty();
+        this.email = Codegen.empty();
+        this.minAcceptableMeanAveragePrecision = Codegen.empty();
     }
 
     public static Builder builder() {

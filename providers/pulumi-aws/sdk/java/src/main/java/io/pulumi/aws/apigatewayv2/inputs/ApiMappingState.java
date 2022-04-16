@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+    public Output<String> apiId() {
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiMappingKey")
       private final @Nullable Output<String> apiMappingKey;
 
-    public Output<String> getApiMappingKey() {
-        return this.apiMappingKey == null ? Output.empty() : this.apiMappingKey;
+    public Output<String> apiMappingKey() {
+        return this.apiMappingKey == null ? Codegen.empty() : this.apiMappingKey;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
     @Import(name="stage")
       private final @Nullable Output<String> stage;
 
-    public Output<String> getStage() {
-        return this.stage == null ? Output.empty() : this.stage;
+    public Output<String> stage() {
+        return this.stage == null ? Codegen.empty() : this.stage;
     }
 
     public ApiMappingState(
@@ -70,10 +71,10 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiMappingState() {
-        this.apiId = Output.empty();
-        this.apiMappingKey = Output.empty();
-        this.domainName = Output.empty();
-        this.stage = Output.empty();
+        this.apiId = Codegen.empty();
+        this.apiMappingKey = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.stage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder apiMappingKey(@Nullable Output<String> apiMappingKey) {
@@ -115,7 +116,7 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiMappingKey(@Nullable String apiMappingKey) {
-            this.apiMappingKey = Output.ofNullable(apiMappingKey);
+            this.apiMappingKey = Codegen.ofNullable(apiMappingKey);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -123,7 +124,7 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder stage(@Nullable Output<String> stage) {
@@ -131,7 +132,7 @@ public final class ApiMappingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stage(@Nullable String stage) {
-            this.stage = Output.ofNullable(stage);
+            this.stage = Codegen.ofNullable(stage);
             return this;
         }        public ApiMappingState build() {
             return new ApiMappingState(apiId, apiMappingKey, domainName, stage);

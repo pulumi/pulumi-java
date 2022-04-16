@@ -28,16 +28,16 @@ public final class GetTargetGroupStickiness {
         this.type = type;
     }
 
-    public Integer getCookieDuration() {
+    public Integer cookieDuration() {
         return this.cookieDuration;
     }
-    public String getCookieName() {
+    public String cookieName() {
         return this.cookieName;
     }
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

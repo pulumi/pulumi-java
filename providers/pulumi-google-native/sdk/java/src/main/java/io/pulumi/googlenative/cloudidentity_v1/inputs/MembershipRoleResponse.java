@@ -25,7 +25,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="expiryDetail", required=true)
       private final ExpiryDetailResponse expiryDetail;
 
-    public ExpiryDetailResponse getExpiryDetail() {
+    public ExpiryDetailResponse expiryDetail() {
         return this.expiryDetail;
     }
 
@@ -36,7 +36,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -47,7 +47,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="restrictionEvaluations", required=true)
       private final RestrictionEvaluationsResponse restrictionEvaluations;
 
-    public RestrictionEvaluationsResponse getRestrictionEvaluations() {
+    public RestrictionEvaluationsResponse restrictionEvaluations() {
         return this.restrictionEvaluations;
     }
 

@@ -6,6 +6,7 @@ package io.pulumi.aws.gamelift.inputs;
 import io.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
     @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
-    public Output<List<String>> getDestinations() {
-        return this.destinations == null ? Output.empty() : this.destinations;
+    public Output<List<String>> destinations() {
+        return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
     @Import(name="playerLatencyPolicies")
       private final @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies;
 
-    public Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> getPlayerLatencyPolicies() {
-        return this.playerLatencyPolicies == null ? Output.empty() : this.playerLatencyPolicies;
+    public Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies() {
+        return this.playerLatencyPolicies == null ? Codegen.empty() : this.playerLatencyPolicies;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
     @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
-    public Output<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
+    public Output<Integer> timeoutInSeconds() {
+        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
     public GameSessionQueueState(
@@ -113,13 +114,13 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
     }
 
     private GameSessionQueueState() {
-        this.arn = Output.empty();
-        this.destinations = Output.empty();
-        this.name = Output.empty();
-        this.playerLatencyPolicies = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.timeoutInSeconds = Output.empty();
+        this.arn = Codegen.empty();
+        this.destinations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.playerLatencyPolicies = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.timeoutInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder destinations(@Nullable Output<List<String>> destinations) {
@@ -167,7 +168,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Output.ofNullable(destinations);
+            this.destinations = Codegen.ofNullable(destinations);
             return this;
         }
         public Builder destinations(String... destinations) {
@@ -178,7 +179,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder playerLatencyPolicies(@Nullable Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies) {
@@ -186,7 +187,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder playerLatencyPolicies(@Nullable List<GameSessionQueuePlayerLatencyPolicyGetArgs> playerLatencyPolicies) {
-            this.playerLatencyPolicies = Output.ofNullable(playerLatencyPolicies);
+            this.playerLatencyPolicies = Codegen.ofNullable(playerLatencyPolicies);
             return this;
         }
         public Builder playerLatencyPolicies(GameSessionQueuePlayerLatencyPolicyGetArgs... playerLatencyPolicies) {
@@ -197,7 +198,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -205,7 +206,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
@@ -213,7 +214,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
             return this;
         }        public GameSessionQueueState build() {
             return new GameSessionQueueState(arn, destinations, name, playerLatencyPolicies, tags, tagsAll, timeoutInSeconds);

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.cloudfront.outputs.FunctionMetadata;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,43 +24,43 @@ public class Function extends io.pulumi.resources.CustomResource {
     @Export(name="autoPublish", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoPublish;
 
-    public Output</* @Nullable */ Boolean> getAutoPublish() {
+    public Output</* @Nullable */ Boolean> autoPublish() {
         return this.autoPublish;
     }
     @Export(name="functionARN", type=String.class, parameters={})
     private Output<String> functionARN;
 
-    public Output<String> getFunctionARN() {
+    public Output<String> functionARN() {
         return this.functionARN;
     }
     @Export(name="functionCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionCode;
 
-    public Output</* @Nullable */ String> getFunctionCode() {
+    public Output</* @Nullable */ String> functionCode() {
         return this.functionCode;
     }
     @Export(name="functionConfig", type=FunctionConfig.class, parameters={})
     private Output</* @Nullable */ FunctionConfig> functionConfig;
 
-    public Output</* @Nullable */ FunctionConfig> getFunctionConfig() {
+    public Output</* @Nullable */ FunctionConfig> functionConfig() {
         return this.functionConfig;
     }
     @Export(name="functionMetadata", type=FunctionMetadata.class, parameters={})
     private Output</* @Nullable */ FunctionMetadata> functionMetadata;
 
-    public Output</* @Nullable */ FunctionMetadata> getFunctionMetadata() {
+    public Output</* @Nullable */ FunctionMetadata> functionMetadata() {
         return this.functionMetadata;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="stage", type=String.class, parameters={})
     private Output<String> stage;
 
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 
@@ -85,7 +86,7 @@ public class Function extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Function(String name, @Nullable FunctionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudfront:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudfront:Function", name, args == null ? FunctionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Function(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

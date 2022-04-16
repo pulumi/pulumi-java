@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__AcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
     @Import(name="count")
       private final @Nullable Output<String> count;
 
-    public Output<String> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<String> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
     @Import(name="type")
       private final @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type;
 
-    public Output<GoogleCloudMlV1__AcceleratorConfigType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<GoogleCloudMlV1__AcceleratorConfigType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GoogleCloudMlV1__AcceleratorConfigArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
     }
 
     private GoogleCloudMlV1__AcceleratorConfigArgs() {
-        this.count = Output.empty();
-        this.type = Output.empty();
+        this.count = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder count(@Nullable String count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder type(@Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type) {
@@ -88,7 +89,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder type(@Nullable GoogleCloudMlV1__AcceleratorConfigType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GoogleCloudMlV1__AcceleratorConfigArgs build() {
             return new GoogleCloudMlV1__AcceleratorConfigArgs(count, type);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudkms_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.CryptoKeyArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CryptoKeyVersionResponse;
@@ -35,7 +36,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return The time at which this CryptoKey was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -49,7 +50,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
      * 
      */
-    public Output<String> getCryptoKeyBackend() {
+    public Output<String> cryptoKeyBackend() {
         return this.cryptoKeyBackend;
     }
     /**
@@ -63,7 +64,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.
      * 
      */
-    public Output<String> getDestroyScheduledDuration() {
+    public Output<String> destroyScheduledDuration() {
         return this.destroyScheduledDuration;
     }
     /**
@@ -77,7 +78,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return Immutable. Whether this key may contain imported versions only.
      * 
      */
-    public Output<Boolean> getImportOnly() {
+    public Output<Boolean> importOnly() {
         return this.importOnly;
     }
     /**
@@ -91,7 +92,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return Labels with user-defined metadata. For more information, see [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -105,7 +106,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return The resource name for this CryptoKey in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -119,7 +120,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return At next_rotation_time, the Key Management Service will automatically: 1. Create a new version of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
      * 
      */
-    public Output<String> getNextRotationTime() {
+    public Output<String> nextRotationTime() {
         return this.nextRotationTime;
     }
     /**
@@ -133,7 +134,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return A copy of the "primary" CryptoKeyVersion that will be used by Encrypt when this CryptoKey is given in EncryptRequest.name. The CryptoKey's primary version can be updated via UpdateCryptoKeyPrimaryVersion. Keys with purpose ENCRYPT_DECRYPT may have a primary. For other keys, this field will be omitted.
      * 
      */
-    public Output<CryptoKeyVersionResponse> getPrimary() {
+    public Output<CryptoKeyVersionResponse> primary() {
         return this.primary;
     }
     /**
@@ -147,7 +148,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return Immutable. The immutable purpose of this CryptoKey.
      * 
      */
-    public Output<String> getPurpose() {
+    public Output<String> purpose() {
         return this.purpose;
     }
     /**
@@ -161,7 +162,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return next_rotation_time will be advanced by this period when the service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set, next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
      * 
      */
-    public Output<String> getRotationPeriod() {
+    public Output<String> rotationPeriod() {
         return this.rotationPeriod;
     }
     /**
@@ -175,7 +176,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @return A template describing settings for new CryptoKeyVersion instances. The properties of new CryptoKeyVersion instances created by either CreateCryptoKeyVersion or auto-rotation are controlled by this template.
      * 
      */
-    public Output<CryptoKeyVersionTemplateResponse> getVersionTemplate() {
+    public Output<CryptoKeyVersionTemplateResponse> versionTemplate() {
         return this.versionTemplate;
     }
 
@@ -201,7 +202,7 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CryptoKey(String name, CryptoKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudkms/v1:CryptoKey", name, args == null ? CryptoKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudkms/v1:CryptoKey", name, args == null ? CryptoKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CryptoKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.CreateNetworkMappingInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="fabricName", required=true)
       private final Output<String> fabricName;
 
-    public Output<String> getFabricName() {
+    public Output<String> fabricName() {
         return this.fabricName;
     }
 
@@ -33,8 +34,8 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="networkMappingName")
       private final @Nullable Output<String> networkMappingName;
 
-    public Output<String> getNetworkMappingName() {
-        return this.networkMappingName == null ? Output.empty() : this.networkMappingName;
+    public Output<String> networkMappingName() {
+        return this.networkMappingName == null ? Codegen.empty() : this.networkMappingName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="networkName", required=true)
       private final Output<String> networkName;
 
-    public Output<String> getNetworkName() {
+    public Output<String> networkName() {
         return this.networkName;
     }
 
@@ -55,8 +56,8 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="properties")
       private final @Nullable Output<CreateNetworkMappingInputPropertiesArgs> properties;
 
-    public Output<CreateNetworkMappingInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<CreateNetworkMappingInputPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
+    public Output<String> resourceName() {
         return this.resourceName;
     }
 
@@ -97,12 +98,12 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
     }
 
     private ReplicationNetworkMappingArgs() {
-        this.fabricName = Output.empty();
-        this.networkMappingName = Output.empty();
-        this.networkName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.fabricName = Codegen.empty();
+        this.networkMappingName = Codegen.empty();
+        this.networkName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder networkMappingName(@Nullable String networkMappingName) {
-            this.networkMappingName = Output.ofNullable(networkMappingName);
+            this.networkMappingName = Codegen.ofNullable(networkMappingName);
             return this;
         }
         public Builder networkName(Output<String> networkName) {
@@ -164,7 +165,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder properties(@Nullable CreateNetworkMappingInputPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

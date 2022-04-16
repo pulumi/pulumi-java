@@ -11,6 +11,7 @@ import io.pulumi.awsnative.wafv2.outputs.IPSetTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,43 +33,43 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * @return List of IPAddresses.
      * 
      */
-    public Output<List<String>> getAddresses() {
+    public Output<List<String>> addresses() {
         return this.addresses;
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="iPAddressVersion", type=IPSetIPAddressVersion.class, parameters={})
     private Output<IPSetIPAddressVersion> iPAddressVersion;
 
-    public Output<IPSetIPAddressVersion> getIPAddressVersion() {
+    public Output<IPSetIPAddressVersion> iPAddressVersion() {
         return this.iPAddressVersion;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="scope", type=IPSetScope.class, parameters={})
     private Output<IPSetScope> scope;
 
-    public Output<IPSetScope> getScope() {
+    public Output<IPSetScope> scope() {
         return this.scope;
     }
     @Export(name="tags", type=List.class, parameters={IPSetTag.class})
     private Output</* @Nullable */ List<IPSetTag>> tags;
 
-    public Output</* @Nullable */ List<IPSetTag>> getTags() {
+    public Output</* @Nullable */ List<IPSetTag>> tags() {
         return this.tags;
     }
 
@@ -94,7 +95,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IPSet(String name, IPSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:wafv2:IPSet", name, args == null ? IPSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:wafv2:IPSet", name, args == null ? IPSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IPSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.cloudformation.inputs.StackSetDeploymentTargetsArgs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     @Import(name="deploymentTargets", required=true)
       private final Output<StackSetDeploymentTargetsArgs> deploymentTargets;
 
-    public Output<StackSetDeploymentTargetsArgs> getDeploymentTargets() {
+    public Output<StackSetDeploymentTargetsArgs> deploymentTargets() {
         return this.deploymentTargets;
     }
 
@@ -35,8 +36,8 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     @Import(name="parameterOverrides")
       private final @Nullable Output<List<StackSetParameterArgs>> parameterOverrides;
 
-    public Output<List<StackSetParameterArgs>> getParameterOverrides() {
-        return this.parameterOverrides == null ? Output.empty() : this.parameterOverrides;
+    public Output<List<StackSetParameterArgs>> parameterOverrides() {
+        return this.parameterOverrides == null ? Codegen.empty() : this.parameterOverrides;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     @Import(name="regions", required=true)
       private final Output<List<String>> regions;
 
-    public Output<List<String>> getRegions() {
+    public Output<List<String>> regions() {
         return this.regions;
     }
 
@@ -60,9 +61,9 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
     }
 
     private StackSetStackInstancesArgs() {
-        this.deploymentTargets = Output.empty();
-        this.parameterOverrides = Output.empty();
-        this.regions = Output.empty();
+        this.deploymentTargets = Codegen.empty();
+        this.parameterOverrides = Codegen.empty();
+        this.regions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class StackSetStackInstancesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder parameterOverrides(@Nullable List<StackSetParameterArgs> parameterOverrides) {
-            this.parameterOverrides = Output.ofNullable(parameterOverrides);
+            this.parameterOverrides = Codegen.ofNullable(parameterOverrides);
             return this;
         }
         public Builder parameterOverrides(StackSetParameterArgs... parameterOverrides) {

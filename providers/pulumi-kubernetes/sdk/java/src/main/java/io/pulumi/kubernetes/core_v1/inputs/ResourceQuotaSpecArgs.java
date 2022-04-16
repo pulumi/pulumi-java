@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ScopeSelectorArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="hard")
       private final @Nullable Output<Map<String,String>> hard;
 
-    public Output<Map<String,String>> getHard() {
-        return this.hard == null ? Output.empty() : this.hard;
+    public Output<Map<String,String>> hard() {
+        return this.hard == null ? Codegen.empty() : this.hard;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scopeSelector")
       private final @Nullable Output<ScopeSelectorArgs> scopeSelector;
 
-    public Output<ScopeSelectorArgs> getScopeSelector() {
-        return this.scopeSelector == null ? Output.empty() : this.scopeSelector;
+    public Output<ScopeSelectorArgs> scopeSelector() {
+        return this.scopeSelector == null ? Codegen.empty() : this.scopeSelector;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+    public Output<List<String>> scopes() {
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     public ResourceQuotaSpecArgs(
@@ -64,9 +65,9 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ResourceQuotaSpecArgs() {
-        this.hard = Output.empty();
-        this.scopeSelector = Output.empty();
-        this.scopes = Output.empty();
+        this.hard = Codegen.empty();
+        this.scopeSelector = Codegen.empty();
+        this.scopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hard(@Nullable Map<String,String> hard) {
-            this.hard = Output.ofNullable(hard);
+            this.hard = Codegen.ofNullable(hard);
             return this;
         }
         public Builder scopeSelector(@Nullable Output<ScopeSelectorArgs> scopeSelector) {
@@ -106,7 +107,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder scopeSelector(@Nullable ScopeSelectorArgs scopeSelector) {
-            this.scopeSelector = Output.ofNullable(scopeSelector);
+            this.scopeSelector = Codegen.ofNullable(scopeSelector);
             return this;
         }
         public Builder scopes(@Nullable Output<List<String>> scopes) {
@@ -114,7 +115,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(String... scopes) {

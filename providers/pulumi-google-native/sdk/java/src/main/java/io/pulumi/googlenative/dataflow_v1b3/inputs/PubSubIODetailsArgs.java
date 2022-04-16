@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
-    public Output<String> getSubscription() {
-        return this.subscription == null ? Output.empty() : this.subscription;
+    public Output<String> subscription() {
+        return this.subscription == null ? Codegen.empty() : this.subscription;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="topic")
       private final @Nullable Output<String> topic;
 
-    public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+    public Output<String> topic() {
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public PubSubIODetailsArgs(
@@ -48,8 +49,8 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PubSubIODetailsArgs() {
-        this.subscription = Output.empty();
-        this.topic = Output.empty();
+        this.subscription = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subscription(@Nullable String subscription) {
-            this.subscription = Output.ofNullable(subscription);
+            this.subscription = Codegen.ofNullable(subscription);
             return this;
         }
         public Builder topic(@Nullable Output<String> topic) {
@@ -87,7 +88,7 @@ public final class PubSubIODetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public PubSubIODetailsArgs build() {
             return new PubSubIODetailsArgs(subscription, topic);

@@ -15,7 +15,7 @@ public final class GetStudioComponentArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="studioComponentId", required=true)
       private final String studioComponentId;
 
-    public String getStudioComponentId() {
+    public String studioComponentId() {
         return this.studioComponentId;
     }
 
@@ -26,7 +26,7 @@ public final class GetStudioComponentArgs extends io.pulumi.resources.InvokeArgs
     @Import(name="studioId", required=true)
       private final String studioId;
 
-    public String getStudioId() {
+    public String studioId() {
         return this.studioId;
     }
 

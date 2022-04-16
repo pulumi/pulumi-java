@@ -9,6 +9,7 @@ import io.pulumi.awsnative.servicecatalogappregistry.outputs.AttributeGroupTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,13 +23,13 @@ public class AttributeGroup extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="attributes", type=Object.class, parameters={})
     private Output<Object> attributes;
 
-    public Output<Object> getAttributes() {
+    public Output<Object> attributes() {
         return this.attributes;
     }
     /**
@@ -42,7 +43,7 @@ public class AttributeGroup extends io.pulumi.resources.CustomResource {
      * @return The description of the attribute group.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -56,13 +57,13 @@ public class AttributeGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the attribute group.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=AttributeGroupTags.class, parameters={})
     private Output</* @Nullable */ AttributeGroupTags> tags;
 
-    public Output</* @Nullable */ AttributeGroupTags> getTags() {
+    public Output</* @Nullable */ AttributeGroupTags> tags() {
         return this.tags;
     }
 
@@ -88,7 +89,7 @@ public class AttributeGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AttributeGroup(String name, AttributeGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:servicecatalogappregistry:AttributeGroup", name, args == null ? AttributeGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:servicecatalogappregistry:AttributeGroup", name, args == null ? AttributeGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AttributeGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

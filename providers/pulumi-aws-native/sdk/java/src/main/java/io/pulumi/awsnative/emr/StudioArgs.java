@@ -7,6 +7,7 @@ import io.pulumi.awsnative.emr.enums.StudioAuthMode;
 import io.pulumi.awsnative.emr.inputs.StudioTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authMode", required=true)
       private final Output<StudioAuthMode> authMode;
 
-    public Output<StudioAuthMode> getAuthMode() {
+    public Output<StudioAuthMode> authMode() {
         return this.authMode;
     }
 
@@ -35,7 +36,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultS3Location", required=true)
       private final Output<String> defaultS3Location;
 
-    public Output<String> getDefaultS3Location() {
+    public Output<String> defaultS3Location() {
         return this.defaultS3Location;
     }
 
@@ -46,8 +47,8 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="engineSecurityGroupId", required=true)
       private final Output<String> engineSecurityGroupId;
 
-    public Output<String> getEngineSecurityGroupId() {
+    public Output<String> engineSecurityGroupId() {
         return this.engineSecurityGroupId;
     }
 
@@ -68,8 +69,8 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idpAuthUrl")
       private final @Nullable Output<String> idpAuthUrl;
 
-    public Output<String> getIdpAuthUrl() {
-        return this.idpAuthUrl == null ? Output.empty() : this.idpAuthUrl;
+    public Output<String> idpAuthUrl() {
+        return this.idpAuthUrl == null ? Codegen.empty() : this.idpAuthUrl;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="idpRelayStateParameterName")
       private final @Nullable Output<String> idpRelayStateParameterName;
 
-    public Output<String> getIdpRelayStateParameterName() {
-        return this.idpRelayStateParameterName == null ? Output.empty() : this.idpRelayStateParameterName;
+    public Output<String> idpRelayStateParameterName() {
+        return this.idpRelayStateParameterName == null ? Codegen.empty() : this.idpRelayStateParameterName;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceRole", required=true)
       private final Output<String> serviceRole;
 
-    public Output<String> getServiceRole() {
+    public Output<String> serviceRole() {
         return this.serviceRole;
     }
 
@@ -112,7 +113,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
+    public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
 
@@ -123,8 +124,8 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<StudioTagArgs>> tags;
 
-    public Output<List<StudioTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<StudioTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userRole")
       private final @Nullable Output<String> userRole;
 
-    public Output<String> getUserRole() {
-        return this.userRole == null ? Output.empty() : this.userRole;
+    public Output<String> userRole() {
+        return this.userRole == null ? Codegen.empty() : this.userRole;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -156,7 +157,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceSecurityGroupId", required=true)
       private final Output<String> workspaceSecurityGroupId;
 
-    public Output<String> getWorkspaceSecurityGroupId() {
+    public Output<String> workspaceSecurityGroupId() {
         return this.workspaceSecurityGroupId;
     }
 
@@ -190,19 +191,19 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StudioArgs() {
-        this.authMode = Output.empty();
-        this.defaultS3Location = Output.empty();
-        this.description = Output.empty();
-        this.engineSecurityGroupId = Output.empty();
-        this.idpAuthUrl = Output.empty();
-        this.idpRelayStateParameterName = Output.empty();
-        this.name = Output.empty();
-        this.serviceRole = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.userRole = Output.empty();
-        this.vpcId = Output.empty();
-        this.workspaceSecurityGroupId = Output.empty();
+        this.authMode = Codegen.empty();
+        this.defaultS3Location = Codegen.empty();
+        this.description = Codegen.empty();
+        this.engineSecurityGroupId = Codegen.empty();
+        this.idpAuthUrl = Codegen.empty();
+        this.idpRelayStateParameterName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.serviceRole = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userRole = Codegen.empty();
+        this.vpcId = Codegen.empty();
+        this.workspaceSecurityGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -270,7 +271,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder engineSecurityGroupId(Output<String> engineSecurityGroupId) {
@@ -286,7 +287,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
-            this.idpAuthUrl = Output.ofNullable(idpAuthUrl);
+            this.idpAuthUrl = Codegen.ofNullable(idpAuthUrl);
             return this;
         }
         public Builder idpRelayStateParameterName(@Nullable Output<String> idpRelayStateParameterName) {
@@ -294,7 +295,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
-            this.idpRelayStateParameterName = Output.ofNullable(idpRelayStateParameterName);
+            this.idpRelayStateParameterName = Codegen.ofNullable(idpRelayStateParameterName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -302,7 +303,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder serviceRole(Output<String> serviceRole) {
@@ -329,7 +330,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<StudioTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(StudioTagArgs... tags) {
@@ -340,7 +341,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userRole(@Nullable String userRole) {
-            this.userRole = Output.ofNullable(userRole);
+            this.userRole = Codegen.ofNullable(userRole);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

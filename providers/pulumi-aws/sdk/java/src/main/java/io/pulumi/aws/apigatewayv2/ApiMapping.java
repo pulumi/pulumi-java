@@ -9,6 +9,7 @@ import io.pulumi.aws.apigatewayv2.inputs.ApiMappingState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class ApiMapping extends io.pulumi.resources.CustomResource {
      * @return The API identifier.
      * 
      */
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
     /**
@@ -54,7 +55,7 @@ public class ApiMapping extends io.pulumi.resources.CustomResource {
      * @return The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
      * 
      */
-    public Output</* @Nullable */ String> getApiMappingKey() {
+    public Output</* @Nullable */ String> apiMappingKey() {
         return this.apiMappingKey;
     }
     /**
@@ -68,7 +69,7 @@ public class ApiMapping extends io.pulumi.resources.CustomResource {
      * @return The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -82,7 +83,7 @@ public class ApiMapping extends io.pulumi.resources.CustomResource {
      * @return The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
      * 
      */
-    public Output<String> getStage() {
+    public Output<String> stage() {
         return this.stage;
     }
 
@@ -108,7 +109,7 @@ public class ApiMapping extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiMapping(String name, ApiMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/apiMapping:ApiMapping", name, args == null ? ApiMappingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigatewayv2/apiMapping:ApiMapping", name, args == null ? ApiMappingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiMapping(String name, Output<String> id, @Nullable ApiMappingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

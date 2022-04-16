@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VersionSourceArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,8 +29,8 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="messageSchemaConfigs")
       private final @Nullable Output<Map<String,String>> messageSchemaConfigs;
 
-    public Output<Map<String,String>> getMessageSchemaConfigs() {
-        return this.messageSchemaConfigs == null ? Output.empty() : this.messageSchemaConfigs;
+    public Output<Map<String,String>> messageSchemaConfigs() {
+        return this.messageSchemaConfigs == null ? Codegen.empty() : this.messageSchemaConfigs;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="version")
       private final @Nullable Output<List<VersionSourceArgs>> version;
 
-    public Output<List<VersionSourceArgs>> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<List<VersionSourceArgs>> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public Hl7SchemaConfigArgs(
@@ -51,8 +52,8 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private Hl7SchemaConfigArgs() {
-        this.messageSchemaConfigs = Output.empty();
-        this.version = Output.empty();
+        this.messageSchemaConfigs = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder messageSchemaConfigs(@Nullable Map<String,String> messageSchemaConfigs) {
-            this.messageSchemaConfigs = Output.ofNullable(messageSchemaConfigs);
+            this.messageSchemaConfigs = Codegen.ofNullable(messageSchemaConfigs);
             return this;
         }
         public Builder version(@Nullable Output<List<VersionSourceArgs>> version) {
@@ -90,7 +91,7 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder version(@Nullable List<VersionSourceArgs> version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder version(VersionSourceArgs... version) {

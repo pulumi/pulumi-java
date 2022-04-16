@@ -7,6 +7,7 @@ import io.pulumi.aws.applicationloadbalancing.inputs.TargetGroupHealthCheckGetAr
 import io.pulumi.aws.applicationloadbalancing.inputs.TargetGroupStickinessGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arnSuffix")
       private final @Nullable Output<String> arnSuffix;
 
-    public Output<String> getArnSuffix() {
-        return this.arnSuffix == null ? Output.empty() : this.arnSuffix;
+    public Output<String> arnSuffix() {
+        return this.arnSuffix == null ? Codegen.empty() : this.arnSuffix;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="connectionTermination")
       private final @Nullable Output<Boolean> connectionTermination;
 
-    public Output<Boolean> getConnectionTermination() {
-        return this.connectionTermination == null ? Output.empty() : this.connectionTermination;
+    public Output<Boolean> connectionTermination() {
+        return this.connectionTermination == null ? Codegen.empty() : this.connectionTermination;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deregistrationDelay")
       private final @Nullable Output<Integer> deregistrationDelay;
 
-    public Output<Integer> getDeregistrationDelay() {
-        return this.deregistrationDelay == null ? Output.empty() : this.deregistrationDelay;
+    public Output<Integer> deregistrationDelay() {
+        return this.deregistrationDelay == null ? Codegen.empty() : this.deregistrationDelay;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthCheck")
       private final @Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck;
 
-    public Output<TargetGroupHealthCheckGetArgs> getHealthCheck() {
-        return this.healthCheck == null ? Output.empty() : this.healthCheck;
+    public Output<TargetGroupHealthCheckGetArgs> healthCheck() {
+        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lambdaMultiValueHeadersEnabled")
       private final @Nullable Output<Boolean> lambdaMultiValueHeadersEnabled;
 
-    public Output<Boolean> getLambdaMultiValueHeadersEnabled() {
-        return this.lambdaMultiValueHeadersEnabled == null ? Output.empty() : this.lambdaMultiValueHeadersEnabled;
+    public Output<Boolean> lambdaMultiValueHeadersEnabled() {
+        return this.lambdaMultiValueHeadersEnabled == null ? Codegen.empty() : this.lambdaMultiValueHeadersEnabled;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingAlgorithmType")
       private final @Nullable Output<String> loadBalancingAlgorithmType;
 
-    public Output<String> getLoadBalancingAlgorithmType() {
-        return this.loadBalancingAlgorithmType == null ? Output.empty() : this.loadBalancingAlgorithmType;
+    public Output<String> loadBalancingAlgorithmType() {
+        return this.loadBalancingAlgorithmType == null ? Codegen.empty() : this.loadBalancingAlgorithmType;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -125,8 +126,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -136,8 +137,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="preserveClientIp")
       private final @Nullable Output<String> preserveClientIp;
 
-    public Output<String> getPreserveClientIp() {
-        return this.preserveClientIp == null ? Output.empty() : this.preserveClientIp;
+    public Output<String> preserveClientIp() {
+        return this.preserveClientIp == null ? Codegen.empty() : this.preserveClientIp;
     }
 
     /**
@@ -147,8 +148,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
-    public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+    public Output<String> protocol() {
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -158,8 +159,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocolVersion")
       private final @Nullable Output<String> protocolVersion;
 
-    public Output<String> getProtocolVersion() {
-        return this.protocolVersion == null ? Output.empty() : this.protocolVersion;
+    public Output<String> protocolVersion() {
+        return this.protocolVersion == null ? Codegen.empty() : this.protocolVersion;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="proxyProtocolV2")
       private final @Nullable Output<Boolean> proxyProtocolV2;
 
-    public Output<Boolean> getProxyProtocolV2() {
-        return this.proxyProtocolV2 == null ? Output.empty() : this.proxyProtocolV2;
+    public Output<Boolean> proxyProtocolV2() {
+        return this.proxyProtocolV2 == null ? Codegen.empty() : this.proxyProtocolV2;
     }
 
     /**
@@ -180,8 +181,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="slowStart")
       private final @Nullable Output<Integer> slowStart;
 
-    public Output<Integer> getSlowStart() {
-        return this.slowStart == null ? Output.empty() : this.slowStart;
+    public Output<Integer> slowStart() {
+        return this.slowStart == null ? Codegen.empty() : this.slowStart;
     }
 
     /**
@@ -191,8 +192,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="stickiness")
       private final @Nullable Output<TargetGroupStickinessGetArgs> stickiness;
 
-    public Output<TargetGroupStickinessGetArgs> getStickiness() {
-        return this.stickiness == null ? Output.empty() : this.stickiness;
+    public Output<TargetGroupStickinessGetArgs> stickiness() {
+        return this.stickiness == null ? Codegen.empty() : this.stickiness;
     }
 
     /**
@@ -202,8 +203,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -213,8 +214,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -224,8 +225,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
-        return this.targetType == null ? Output.empty() : this.targetType;
+    public Output<String> targetType() {
+        return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
     /**
@@ -235,8 +236,8 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public TargetGroupState(
@@ -283,26 +284,26 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetGroupState() {
-        this.arn = Output.empty();
-        this.arnSuffix = Output.empty();
-        this.connectionTermination = Output.empty();
-        this.deregistrationDelay = Output.empty();
-        this.healthCheck = Output.empty();
-        this.lambdaMultiValueHeadersEnabled = Output.empty();
-        this.loadBalancingAlgorithmType = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.port = Output.empty();
-        this.preserveClientIp = Output.empty();
-        this.protocol = Output.empty();
-        this.protocolVersion = Output.empty();
-        this.proxyProtocolV2 = Output.empty();
-        this.slowStart = Output.empty();
-        this.stickiness = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.targetType = Output.empty();
-        this.vpcId = Output.empty();
+        this.arn = Codegen.empty();
+        this.arnSuffix = Codegen.empty();
+        this.connectionTermination = Codegen.empty();
+        this.deregistrationDelay = Codegen.empty();
+        this.healthCheck = Codegen.empty();
+        this.lambdaMultiValueHeadersEnabled = Codegen.empty();
+        this.loadBalancingAlgorithmType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.port = Codegen.empty();
+        this.preserveClientIp = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.protocolVersion = Codegen.empty();
+        this.proxyProtocolV2 = Codegen.empty();
+        this.slowStart = Codegen.empty();
+        this.stickiness = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.targetType = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -368,7 +369,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder arnSuffix(@Nullable Output<String> arnSuffix) {
@@ -376,7 +377,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arnSuffix(@Nullable String arnSuffix) {
-            this.arnSuffix = Output.ofNullable(arnSuffix);
+            this.arnSuffix = Codegen.ofNullable(arnSuffix);
             return this;
         }
         public Builder connectionTermination(@Nullable Output<Boolean> connectionTermination) {
@@ -384,7 +385,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionTermination(@Nullable Boolean connectionTermination) {
-            this.connectionTermination = Output.ofNullable(connectionTermination);
+            this.connectionTermination = Codegen.ofNullable(connectionTermination);
             return this;
         }
         public Builder deregistrationDelay(@Nullable Output<Integer> deregistrationDelay) {
@@ -392,7 +393,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deregistrationDelay(@Nullable Integer deregistrationDelay) {
-            this.deregistrationDelay = Output.ofNullable(deregistrationDelay);
+            this.deregistrationDelay = Codegen.ofNullable(deregistrationDelay);
             return this;
         }
         public Builder healthCheck(@Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck) {
@@ -400,7 +401,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheck(@Nullable TargetGroupHealthCheckGetArgs healthCheck) {
-            this.healthCheck = Output.ofNullable(healthCheck);
+            this.healthCheck = Codegen.ofNullable(healthCheck);
             return this;
         }
         public Builder lambdaMultiValueHeadersEnabled(@Nullable Output<Boolean> lambdaMultiValueHeadersEnabled) {
@@ -408,7 +409,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaMultiValueHeadersEnabled(@Nullable Boolean lambdaMultiValueHeadersEnabled) {
-            this.lambdaMultiValueHeadersEnabled = Output.ofNullable(lambdaMultiValueHeadersEnabled);
+            this.lambdaMultiValueHeadersEnabled = Codegen.ofNullable(lambdaMultiValueHeadersEnabled);
             return this;
         }
         public Builder loadBalancingAlgorithmType(@Nullable Output<String> loadBalancingAlgorithmType) {
@@ -416,7 +417,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancingAlgorithmType(@Nullable String loadBalancingAlgorithmType) {
-            this.loadBalancingAlgorithmType = Output.ofNullable(loadBalancingAlgorithmType);
+            this.loadBalancingAlgorithmType = Codegen.ofNullable(loadBalancingAlgorithmType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -424,7 +425,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -432,7 +433,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -440,7 +441,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder preserveClientIp(@Nullable Output<String> preserveClientIp) {
@@ -448,7 +449,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preserveClientIp(@Nullable String preserveClientIp) {
-            this.preserveClientIp = Output.ofNullable(preserveClientIp);
+            this.preserveClientIp = Codegen.ofNullable(preserveClientIp);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -456,7 +457,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder protocolVersion(@Nullable Output<String> protocolVersion) {
@@ -464,7 +465,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocolVersion(@Nullable String protocolVersion) {
-            this.protocolVersion = Output.ofNullable(protocolVersion);
+            this.protocolVersion = Codegen.ofNullable(protocolVersion);
             return this;
         }
         public Builder proxyProtocolV2(@Nullable Output<Boolean> proxyProtocolV2) {
@@ -472,7 +473,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder proxyProtocolV2(@Nullable Boolean proxyProtocolV2) {
-            this.proxyProtocolV2 = Output.ofNullable(proxyProtocolV2);
+            this.proxyProtocolV2 = Codegen.ofNullable(proxyProtocolV2);
             return this;
         }
         public Builder slowStart(@Nullable Output<Integer> slowStart) {
@@ -480,7 +481,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slowStart(@Nullable Integer slowStart) {
-            this.slowStart = Output.ofNullable(slowStart);
+            this.slowStart = Codegen.ofNullable(slowStart);
             return this;
         }
         public Builder stickiness(@Nullable Output<TargetGroupStickinessGetArgs> stickiness) {
@@ -488,7 +489,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stickiness(@Nullable TargetGroupStickinessGetArgs stickiness) {
-            this.stickiness = Output.ofNullable(stickiness);
+            this.stickiness = Codegen.ofNullable(stickiness);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -496,7 +497,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -504,7 +505,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder targetType(@Nullable Output<String> targetType) {
@@ -512,7 +513,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Output.ofNullable(targetType);
+            this.targetType = Codegen.ofNullable(targetType);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -520,7 +521,7 @@ public final class TargetGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public TargetGroupState build() {
             return new TargetGroupState(arn, arnSuffix, connectionTermination, deregistrationDelay, healthCheck, lambdaMultiValueHeadersEnabled, loadBalancingAlgorithmType, name, namePrefix, port, preserveClientIp, protocol, protocolVersion, proxyProtocolV2, slowStart, stickiness, tags, tagsAll, targetType, vpcId);

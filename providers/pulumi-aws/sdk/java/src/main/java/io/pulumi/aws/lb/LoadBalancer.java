@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -48,7 +49,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return An Access Logs block. Access Logs documented below.
      * 
      */
-    public Output</* @Nullable */ LoadBalancerAccessLogs> getAccessLogs() {
+    public Output</* @Nullable */ LoadBalancerAccessLogs> accessLogs() {
         return this.accessLogs;
     }
     /**
@@ -62,7 +63,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The ARN of the load balancer (matches `id`).
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -76,7 +77,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The ARN suffix for use with CloudWatch Metrics.
      * 
      */
-    public Output<String> getArnSuffix() {
+    public Output<String> arnSuffix() {
         return this.arnSuffix;
     }
     /**
@@ -90,7 +91,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The ID of the customer owned ipv4 pool to use for this load balancer.
      * 
      */
-    public Output</* @Nullable */ String> getCustomerOwnedIpv4Pool() {
+    public Output</* @Nullable */ String> customerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
     /**
@@ -104,7 +105,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
      * 
      */
-    public Output</* @Nullable */ String> getDesyncMitigationMode() {
+    public Output</* @Nullable */ String> desyncMitigationMode() {
         return this.desyncMitigationMode;
     }
     /**
@@ -118,7 +119,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The DNS name of the load balancer.
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     /**
@@ -132,7 +133,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDropInvalidHeaderFields() {
+    public Output</* @Nullable */ Boolean> dropInvalidHeaderFields() {
         return this.dropInvalidHeaderFields;
     }
     /**
@@ -148,7 +149,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * This is a `network` load balancer feature. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableCrossZoneLoadBalancing() {
+    public Output</* @Nullable */ Boolean> enableCrossZoneLoadBalancing() {
         return this.enableCrossZoneLoadBalancing;
     }
     /**
@@ -164,7 +165,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDeletionProtection() {
+    public Output</* @Nullable */ Boolean> enableDeletionProtection() {
         return this.enableDeletionProtection;
     }
     /**
@@ -178,7 +179,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableHttp2() {
+    public Output</* @Nullable */ Boolean> enableHttp2() {
         return this.enableHttp2;
     }
     /**
@@ -192,7 +193,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableWafFailOpen() {
+    public Output</* @Nullable */ Boolean> enableWafFailOpen() {
         return this.enableWafFailOpen;
     }
     /**
@@ -206,7 +207,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
      * 
      */
-    public Output</* @Nullable */ Integer> getIdleTimeout() {
+    public Output</* @Nullable */ Integer> idleTimeout() {
         return this.idleTimeout;
     }
     /**
@@ -220,7 +221,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return If true, the LB will be internal.
      * 
      */
-    public Output<Boolean> getInternal() {
+    public Output<Boolean> internal() {
         return this.internal;
     }
     /**
@@ -234,7 +235,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
      * 
      */
-    public Output<String> getIpAddressType() {
+    public Output<String> ipAddressType() {
         return this.ipAddressType;
     }
     /**
@@ -248,7 +249,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
      * 
      */
-    public Output</* @Nullable */ String> getLoadBalancerType() {
+    public Output</* @Nullable */ String> loadBalancerType() {
         return this.loadBalancerType;
     }
     /**
@@ -266,7 +267,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * this provider will autogenerate a name beginning with `tf-lb`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -280,7 +281,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> getNamePrefix() {
+    public Output</* @Nullable */ String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -294,7 +295,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
      * 
      */
-    public Output<List<String>> getSecurityGroups() {
+    public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
     /**
@@ -308,7 +309,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A subnet mapping block as documented below.
      * 
      */
-    public Output<List<LoadBalancerSubnetMapping>> getSubnetMappings() {
+    public Output<List<LoadBalancerSubnetMapping>> subnetMappings() {
         return this.subnetMappings;
     }
     /**
@@ -326,7 +327,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * for load balancers of type `network` will force a recreation of the resource.
      * 
      */
-    public Output<List<String>> getSubnets() {
+    public Output<List<String>> subnets() {
         return this.subnets;
     }
     /**
@@ -340,7 +341,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -354,13 +355,13 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
     /**
@@ -376,7 +377,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
      * 
      */
-    public Output<String> getZoneId() {
+    public Output<String> zoneId() {
         return this.zoneId;
     }
 
@@ -402,7 +403,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LoadBalancer(String name, @Nullable LoadBalancerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lb/loadBalancer:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lb/loadBalancer:LoadBalancer", name, args == null ? LoadBalancerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LoadBalancer(String name, Output<String> id, @Nullable LoadBalancerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

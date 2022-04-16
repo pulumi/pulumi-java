@@ -39,21 +39,21 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse {
      * Time at which the API proxy was created, in milliseconds since epoch.
      * 
     */
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
     /**
      * Time at which the API proxy was most recently modified, in milliseconds since epoch.
      * 
     */
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
     /**
      * The type of entity described
      * 
     */
-    public String getSubType() {
+    public String subType() {
         return this.subType;
     }
 

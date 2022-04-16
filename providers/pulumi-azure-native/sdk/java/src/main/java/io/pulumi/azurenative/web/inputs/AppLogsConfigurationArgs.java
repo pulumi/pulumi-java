@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.LogAnalyticsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
     @Import(name="destination")
       private final @Nullable Output<String> destination;
 
-    public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+    public Output<String> destination() {
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     @Import(name="logAnalyticsConfiguration")
       private final @Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration;
 
-    public Output<LogAnalyticsConfigurationArgs> getLogAnalyticsConfiguration() {
-        return this.logAnalyticsConfiguration == null ? Output.empty() : this.logAnalyticsConfiguration;
+    public Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration() {
+        return this.logAnalyticsConfiguration == null ? Codegen.empty() : this.logAnalyticsConfiguration;
     }
 
     public AppLogsConfigurationArgs(
@@ -37,8 +38,8 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private AppLogsConfigurationArgs() {
-        this.destination = Output.empty();
-        this.logAnalyticsConfiguration = Output.empty();
+        this.destination = Codegen.empty();
+        this.logAnalyticsConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder logAnalyticsConfiguration(@Nullable Output<LogAnalyticsConfigurationArgs> logAnalyticsConfiguration) {
@@ -76,7 +77,7 @@ public final class AppLogsConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationArgs logAnalyticsConfiguration) {
-            this.logAnalyticsConfiguration = Output.ofNullable(logAnalyticsConfiguration);
+            this.logAnalyticsConfiguration = Codegen.ofNullable(logAnalyticsConfiguration);
             return this;
         }        public AppLogsConfigurationArgs build() {
             return new AppLogsConfigurationArgs(destination, logAnalyticsConfiguration);

@@ -50,28 +50,28 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse {
      * Name of the API proxy endpoint or remote service with which the GraphQL operation and quota are associated.
      * 
     */
-    public String getApiSource() {
+    public String apiSource() {
         return this.apiSource;
     }
     /**
      * Custom attributes associated with the operation.
      * 
     */
-    public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
+    public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
     }
     /**
      * List of GraphQL name/operation type pairs for the proxy or remote service to which quota will be applied. If only operation types are specified, the quota will be applied to all GraphQL requests irrespective of the GraphQL name. **Note**: Currently, you can specify only a single GraphQLOperation. Specifying more than one will cause the operation to fail.
      * 
     */
-    public List<GoogleCloudApigeeV1GraphQLOperationResponse> getOperations() {
+    public List<GoogleCloudApigeeV1GraphQLOperationResponse> operations() {
         return this.operations;
     }
     /**
      * Quota parameters to be enforced for the resources, methods, and API source combination. If none are specified, quota enforcement will not be done.
      * 
     */
-    public GoogleCloudApigeeV1QuotaResponse getQuota() {
+    public GoogleCloudApigeeV1QuotaResponse quota() {
         return this.quota;
     }
 

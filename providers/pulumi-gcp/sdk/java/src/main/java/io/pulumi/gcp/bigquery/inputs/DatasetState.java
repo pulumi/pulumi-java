@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessGetArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationGetArgs;
 import java.lang.Boolean;
@@ -28,8 +29,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="accesses")
       private final @Nullable Output<List<DatasetAccessGetArgs>> accesses;
 
-    public Output<List<DatasetAccessGetArgs>> getAccesses() {
-        return this.accesses == null ? Output.empty() : this.accesses;
+    public Output<List<DatasetAccessGetArgs>> accesses() {
+        return this.accesses == null ? Codegen.empty() : this.accesses;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTime")
       private final @Nullable Output<Integer> creationTime;
 
-    public Output<Integer> getCreationTime() {
-        return this.creationTime == null ? Output.empty() : this.creationTime;
+    public Output<Integer> creationTime() {
+        return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+    public Output<String> datasetId() {
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultEncryptionConfiguration")
       private final @Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
 
-    public Output<DatasetDefaultEncryptionConfigurationGetArgs> getDefaultEncryptionConfiguration() {
-        return this.defaultEncryptionConfiguration == null ? Output.empty() : this.defaultEncryptionConfiguration;
+    public Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration() {
+        return this.defaultEncryptionConfiguration == null ? Codegen.empty() : this.defaultEncryptionConfiguration;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultPartitionExpirationMs")
       private final @Nullable Output<Integer> defaultPartitionExpirationMs;
 
-    public Output<Integer> getDefaultPartitionExpirationMs() {
-        return this.defaultPartitionExpirationMs == null ? Output.empty() : this.defaultPartitionExpirationMs;
+    public Output<Integer> defaultPartitionExpirationMs() {
+        return this.defaultPartitionExpirationMs == null ? Codegen.empty() : this.defaultPartitionExpirationMs;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultTableExpirationMs")
       private final @Nullable Output<Integer> defaultTableExpirationMs;
 
-    public Output<Integer> getDefaultTableExpirationMs() {
-        return this.defaultTableExpirationMs == null ? Output.empty() : this.defaultTableExpirationMs;
+    public Output<Integer> defaultTableExpirationMs() {
+        return this.defaultTableExpirationMs == null ? Codegen.empty() : this.defaultTableExpirationMs;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleteContentsOnDestroy")
       private final @Nullable Output<Boolean> deleteContentsOnDestroy;
 
-    public Output<Boolean> getDeleteContentsOnDestroy() {
-        return this.deleteContentsOnDestroy == null ? Output.empty() : this.deleteContentsOnDestroy;
+    public Output<Boolean> deleteContentsOnDestroy() {
+        return this.deleteContentsOnDestroy == null ? Codegen.empty() : this.deleteContentsOnDestroy;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
-    public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+    public Output<String> friendlyName() {
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedTime")
       private final @Nullable Output<Integer> lastModifiedTime;
 
-    public Output<Integer> getLastModifiedTime() {
-        return this.lastModifiedTime == null ? Output.empty() : this.lastModifiedTime;
+    public Output<Integer> lastModifiedTime() {
+        return this.lastModifiedTime == null ? Codegen.empty() : this.lastModifiedTime;
     }
 
     /**
@@ -169,8 +170,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -192,8 +193,8 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     public DatasetState(
@@ -230,21 +231,21 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetState() {
-        this.accesses = Output.empty();
-        this.creationTime = Output.empty();
-        this.datasetId = Output.empty();
-        this.defaultEncryptionConfiguration = Output.empty();
-        this.defaultPartitionExpirationMs = Output.empty();
-        this.defaultTableExpirationMs = Output.empty();
-        this.deleteContentsOnDestroy = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.friendlyName = Output.empty();
-        this.labels = Output.empty();
-        this.lastModifiedTime = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
+        this.accesses = Codegen.empty();
+        this.creationTime = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.defaultEncryptionConfiguration = Codegen.empty();
+        this.defaultPartitionExpirationMs = Codegen.empty();
+        this.defaultTableExpirationMs = Codegen.empty();
+        this.deleteContentsOnDestroy = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.lastModifiedTime = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -300,7 +301,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accesses(@Nullable List<DatasetAccessGetArgs> accesses) {
-            this.accesses = Output.ofNullable(accesses);
+            this.accesses = Codegen.ofNullable(accesses);
             return this;
         }
         public Builder accesses(DatasetAccessGetArgs... accesses) {
@@ -311,7 +312,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTime(@Nullable Integer creationTime) {
-            this.creationTime = Output.ofNullable(creationTime);
+            this.creationTime = Codegen.ofNullable(creationTime);
             return this;
         }
         public Builder datasetId(@Nullable Output<String> datasetId) {
@@ -319,7 +320,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }
         public Builder defaultEncryptionConfiguration(@Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration) {
@@ -327,7 +328,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultEncryptionConfiguration(@Nullable DatasetDefaultEncryptionConfigurationGetArgs defaultEncryptionConfiguration) {
-            this.defaultEncryptionConfiguration = Output.ofNullable(defaultEncryptionConfiguration);
+            this.defaultEncryptionConfiguration = Codegen.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
         public Builder defaultPartitionExpirationMs(@Nullable Output<Integer> defaultPartitionExpirationMs) {
@@ -335,7 +336,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultPartitionExpirationMs(@Nullable Integer defaultPartitionExpirationMs) {
-            this.defaultPartitionExpirationMs = Output.ofNullable(defaultPartitionExpirationMs);
+            this.defaultPartitionExpirationMs = Codegen.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
         public Builder defaultTableExpirationMs(@Nullable Output<Integer> defaultTableExpirationMs) {
@@ -343,7 +344,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultTableExpirationMs(@Nullable Integer defaultTableExpirationMs) {
-            this.defaultTableExpirationMs = Output.ofNullable(defaultTableExpirationMs);
+            this.defaultTableExpirationMs = Codegen.ofNullable(defaultTableExpirationMs);
             return this;
         }
         public Builder deleteContentsOnDestroy(@Nullable Output<Boolean> deleteContentsOnDestroy) {
@@ -351,7 +352,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteContentsOnDestroy(@Nullable Boolean deleteContentsOnDestroy) {
-            this.deleteContentsOnDestroy = Output.ofNullable(deleteContentsOnDestroy);
+            this.deleteContentsOnDestroy = Codegen.ofNullable(deleteContentsOnDestroy);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -359,7 +360,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -367,7 +368,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -375,7 +376,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -383,7 +384,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder lastModifiedTime(@Nullable Output<Integer> lastModifiedTime) {
@@ -391,7 +392,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedTime(@Nullable Integer lastModifiedTime) {
-            this.lastModifiedTime = Output.ofNullable(lastModifiedTime);
+            this.lastModifiedTime = Codegen.ofNullable(lastModifiedTime);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -399,7 +400,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -407,7 +408,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -415,7 +416,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }        public DatasetState build() {
             return new DatasetState(accesses, creationTime, datasetId, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, deleteContentsOnDestroy, description, etag, friendlyName, labels, lastModifiedTime, location, project, selfLink);

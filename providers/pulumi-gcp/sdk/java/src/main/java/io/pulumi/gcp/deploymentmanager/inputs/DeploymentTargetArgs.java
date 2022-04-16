@@ -5,6 +5,7 @@ package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetConfigArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetImportArgs;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="config", required=true)
       private final Output<DeploymentTargetConfigArgs> config;
 
-    public Output<DeploymentTargetConfigArgs> getConfig() {
+    public Output<DeploymentTargetConfigArgs> config() {
         return this.config;
     }
 
@@ -38,8 +39,8 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="imports")
       private final @Nullable Output<List<DeploymentTargetImportArgs>> imports;
 
-    public Output<List<DeploymentTargetImportArgs>> getImports() {
-        return this.imports == null ? Output.empty() : this.imports;
+    public Output<List<DeploymentTargetImportArgs>> imports() {
+        return this.imports == null ? Codegen.empty() : this.imports;
     }
 
     public DeploymentTargetArgs(
@@ -50,8 +51,8 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeploymentTargetArgs() {
-        this.config = Output.empty();
-        this.imports = Output.empty();
+        this.config = Codegen.empty();
+        this.imports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder imports(@Nullable List<DeploymentTargetImportArgs> imports) {
-            this.imports = Output.ofNullable(imports);
+            this.imports = Codegen.ofNullable(imports);
             return this;
         }
         public Builder imports(DeploymentTargetImportArgs... imports) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.enums.InventoryType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inventoryItemName")
       private final @Nullable Output<String> inventoryItemName;
 
-    public Output<String> getInventoryItemName() {
-        return this.inventoryItemName == null ? Output.empty() : this.inventoryItemName;
+    public Output<String> inventoryItemName() {
+        return this.inventoryItemName == null ? Codegen.empty() : this.inventoryItemName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inventoryType", required=true)
       private final Output<Either<String,InventoryType>> inventoryType;
 
-    public Output<Either<String,InventoryType>> getInventoryType() {
+    public Output<Either<String,InventoryType>> inventoryType() {
         return this.inventoryType;
     }
 
@@ -45,8 +46,8 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedResourceId")
       private final @Nullable Output<String> managedResourceId;
 
-    public Output<String> getManagedResourceId() {
-        return this.managedResourceId == null ? Output.empty() : this.managedResourceId;
+    public Output<String> managedResourceId() {
+        return this.managedResourceId == null ? Codegen.empty() : this.managedResourceId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moName")
       private final @Nullable Output<String> moName;
 
-    public Output<String> getMoName() {
-        return this.moName == null ? Output.empty() : this.moName;
+    public Output<String> moName() {
+        return this.moName == null ? Codegen.empty() : this.moName;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moRefId")
       private final @Nullable Output<String> moRefId;
 
-    public Output<String> getMoRefId() {
-        return this.moRefId == null ? Output.empty() : this.moRefId;
+    public Output<String> moRefId() {
+        return this.moRefId == null ? Codegen.empty() : this.moRefId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -100,7 +101,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="vcenterName", required=true)
       private final Output<String> vcenterName;
 
-    public Output<String> getVcenterName() {
+    public Output<String> vcenterName() {
         return this.vcenterName;
     }
 
@@ -124,14 +125,14 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InventoryItemArgs() {
-        this.inventoryItemName = Output.empty();
-        this.inventoryType = Output.empty();
-        this.kind = Output.empty();
-        this.managedResourceId = Output.empty();
-        this.moName = Output.empty();
-        this.moRefId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.vcenterName = Output.empty();
+        this.inventoryItemName = Codegen.empty();
+        this.inventoryType = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managedResourceId = Codegen.empty();
+        this.moName = Codegen.empty();
+        this.moRefId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.vcenterName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inventoryItemName(@Nullable String inventoryItemName) {
-            this.inventoryItemName = Output.ofNullable(inventoryItemName);
+            this.inventoryItemName = Codegen.ofNullable(inventoryItemName);
             return this;
         }
         public Builder inventoryType(Output<Either<String,InventoryType>> inventoryType) {
@@ -189,7 +190,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managedResourceId(@Nullable Output<String> managedResourceId) {
@@ -197,7 +198,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedResourceId(@Nullable String managedResourceId) {
-            this.managedResourceId = Output.ofNullable(managedResourceId);
+            this.managedResourceId = Codegen.ofNullable(managedResourceId);
             return this;
         }
         public Builder moName(@Nullable Output<String> moName) {
@@ -205,7 +206,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder moName(@Nullable String moName) {
-            this.moName = Output.ofNullable(moName);
+            this.moName = Codegen.ofNullable(moName);
             return this;
         }
         public Builder moRefId(@Nullable Output<String> moRefId) {
@@ -213,7 +214,7 @@ public final class InventoryItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder moRefId(@Nullable String moRefId) {
-            this.moRefId = Output.ofNullable(moRefId);
+            this.moRefId = Codegen.ofNullable(moRefId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

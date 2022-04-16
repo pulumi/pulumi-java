@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyticsRegion")
       private final @Nullable Output<String> analyticsRegion;
 
-    public Output<String> getAnalyticsRegion() {
-        return this.analyticsRegion == null ? Output.empty() : this.analyticsRegion;
+    public Output<String> analyticsRegion() {
+        return this.analyticsRegion == null ? Codegen.empty() : this.analyticsRegion;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
+    public Output<String> authorizedNetwork() {
+        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
-    public Output<String> getCaCertificate() {
-        return this.caCertificate == null ? Output.empty() : this.caCertificate;
+    public Output<String> caCertificate() {
+        return this.caCertificate == null ? Codegen.empty() : this.caCertificate;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+    public Output<String> projectId() {
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeDatabaseEncryptionKeyName")
       private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Output<String> getRuntimeDatabaseEncryptionKeyName() {
-        return this.runtimeDatabaseEncryptionKeyName == null ? Output.empty() : this.runtimeDatabaseEncryptionKeyName;
+    public Output<String> runtimeDatabaseEncryptionKeyName() {
+        return this.runtimeDatabaseEncryptionKeyName == null ? Codegen.empty() : this.runtimeDatabaseEncryptionKeyName;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeType")
       private final @Nullable Output<String> runtimeType;
 
-    public Output<String> getRuntimeType() {
-        return this.runtimeType == null ? Output.empty() : this.runtimeType;
+    public Output<String> runtimeType() {
+        return this.runtimeType == null ? Codegen.empty() : this.runtimeType;
     }
 
     /**
@@ -129,8 +130,8 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionType")
       private final @Nullable Output<String> subscriptionType;
 
-    public Output<String> getSubscriptionType() {
-        return this.subscriptionType == null ? Output.empty() : this.subscriptionType;
+    public Output<String> subscriptionType() {
+        return this.subscriptionType == null ? Codegen.empty() : this.subscriptionType;
     }
 
     public OrganizationState(
@@ -157,16 +158,16 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrganizationState() {
-        this.analyticsRegion = Output.empty();
-        this.authorizedNetwork = Output.empty();
-        this.caCertificate = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.projectId = Output.empty();
-        this.runtimeDatabaseEncryptionKeyName = Output.empty();
-        this.runtimeType = Output.empty();
-        this.subscriptionType = Output.empty();
+        this.analyticsRegion = Codegen.empty();
+        this.authorizedNetwork = Codegen.empty();
+        this.caCertificate = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.runtimeDatabaseEncryptionKeyName = Codegen.empty();
+        this.runtimeType = Codegen.empty();
+        this.subscriptionType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -212,7 +213,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder analyticsRegion(@Nullable String analyticsRegion) {
-            this.analyticsRegion = Output.ofNullable(analyticsRegion);
+            this.analyticsRegion = Codegen.ofNullable(analyticsRegion);
             return this;
         }
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
@@ -220,7 +221,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
             return this;
         }
         public Builder caCertificate(@Nullable Output<String> caCertificate) {
@@ -228,7 +229,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caCertificate(@Nullable String caCertificate) {
-            this.caCertificate = Output.ofNullable(caCertificate);
+            this.caCertificate = Codegen.ofNullable(caCertificate);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -236,7 +237,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -244,7 +245,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -252,7 +253,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -260,7 +261,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
@@ -268,7 +269,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = Output.ofNullable(runtimeDatabaseEncryptionKeyName);
+            this.runtimeDatabaseEncryptionKeyName = Codegen.ofNullable(runtimeDatabaseEncryptionKeyName);
             return this;
         }
         public Builder runtimeType(@Nullable Output<String> runtimeType) {
@@ -276,7 +277,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeType(@Nullable String runtimeType) {
-            this.runtimeType = Output.ofNullable(runtimeType);
+            this.runtimeType = Codegen.ofNullable(runtimeType);
             return this;
         }
         public Builder subscriptionType(@Nullable Output<String> subscriptionType) {
@@ -284,7 +285,7 @@ public final class OrganizationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionType(@Nullable String subscriptionType) {
-            this.subscriptionType = Output.ofNullable(subscriptionType);
+            this.subscriptionType = Codegen.ofNullable(subscriptionType);
             return this;
         }        public OrganizationState build() {
             return new OrganizationState(analyticsRegion, authorizedNetwork, caCertificate, description, displayName, name, projectId, runtimeDatabaseEncryptionKeyName, runtimeType, subscriptionType);

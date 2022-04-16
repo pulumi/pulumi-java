@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="event", required=true)
       private final Output<String> event;
 
-    public Output<String> getEvent() {
+    public Output<String> event() {
         return this.event;
     }
 
@@ -37,8 +38,8 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="filter")
       private final @Nullable Output<BucketNotificationFilterArgs> filter;
 
-    public Output<BucketNotificationFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<BucketNotificationFilterArgs> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="queue", required=true)
       private final Output<String> queue;
 
-    public Output<String> getQueue() {
+    public Output<String> queue() {
         return this.queue;
     }
 
@@ -62,9 +63,9 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private BucketQueueConfigurationArgs() {
-        this.event = Output.empty();
-        this.filter = Output.empty();
-        this.queue = Output.empty();
+        this.event = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.queue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class BucketQueueConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder filter(@Nullable BucketNotificationFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder queue(Output<String> queue) {

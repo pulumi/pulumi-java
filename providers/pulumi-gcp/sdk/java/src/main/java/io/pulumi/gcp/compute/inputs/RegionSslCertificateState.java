@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
-    public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+    public Output<String> certificate() {
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="certificateId")
       private final @Nullable Output<Integer> certificateId;
 
-    public Output<Integer> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+    public Output<Integer> certificateId() {
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
-    public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+    public Output<String> namePrefix() {
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+    public Output<String> privateKey() {
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     public RegionSslCertificateState(
@@ -162,16 +163,16 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
     }
 
     private RegionSslCertificateState() {
-        this.certificate = Output.empty();
-        this.certificateId = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.privateKey = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.selfLink = Output.empty();
+        this.certificate = Codegen.empty();
+        this.certificateId = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.selfLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -217,7 +218,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder certificateId(@Nullable Output<Integer> certificateId) {
@@ -225,7 +226,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificateId(@Nullable Integer certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -233,7 +234,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -241,7 +242,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -249,7 +250,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -257,7 +258,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder privateKey(@Nullable Output<String> privateKey) {
@@ -265,7 +266,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -273,7 +274,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -281,7 +282,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -289,7 +290,7 @@ public final class RegionSslCertificateState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }        public RegionSslCertificateState build() {
             return new RegionSslCertificateState(certificate, certificateId, creationTimestamp, description, name, namePrefix, privateKey, project, region, selfLink);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.TransitGatewayMulticastGroupMemberArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The IP address assigned to the transit gateway multicast group.
      * 
      */
-    public Output<String> getGroupIpAddress() {
+    public Output<String> groupIpAddress() {
         return this.groupIpAddress;
     }
     /**
@@ -43,7 +44,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return Indicates that the resource is a transit gateway multicast group member.
      * 
      */
-    public Output<Boolean> getGroupMember() {
+    public Output<Boolean> groupMember() {
         return this.groupMember;
     }
     /**
@@ -57,7 +58,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return Indicates that the resource is a transit gateway multicast group member.
      * 
      */
-    public Output<Boolean> getGroupSource() {
+    public Output<Boolean> groupSource() {
         return this.groupSource;
     }
     /**
@@ -71,7 +72,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The member type (for example, static).
      * 
      */
-    public Output<String> getMemberType() {
+    public Output<String> memberType() {
         return this.memberType;
     }
     /**
@@ -85,7 +86,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The ID of the transit gateway attachment.
      * 
      */
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
     /**
@@ -99,7 +100,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The ID of the resource.
      * 
      */
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -113,7 +114,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The type of resource, for example a VPC attachment.
      * 
      */
-    public Output<String> getPropResourceType() {
+    public Output<String> resourceType() {
         return this.resourceType;
     }
     /**
@@ -127,7 +128,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The source type.
      * 
      */
-    public Output<String> getSourceType() {
+    public Output<String> sourceType() {
         return this.sourceType;
     }
     /**
@@ -141,7 +142,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The ID of the subnet.
      * 
      */
-    public Output<String> getSubnetId() {
+    public Output<String> subnetId() {
         return this.subnetId;
     }
     /**
@@ -155,7 +156,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The ID of the transit gateway attachment.
      * 
      */
-    public Output<String> getTransitGatewayAttachmentId() {
+    public Output<String> transitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
     }
     /**
@@ -169,7 +170,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @return The ID of the transit gateway multicast domain.
      * 
      */
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
@@ -195,7 +196,7 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
      * @param options A bag of options that control this resource's behavior.
      */
     public TransitGatewayMulticastGroupMember(String name, TransitGatewayMulticastGroupMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:TransitGatewayMulticastGroupMember", name, args == null ? TransitGatewayMulticastGroupMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:TransitGatewayMulticastGroupMember", name, args == null ? TransitGatewayMulticastGroupMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransitGatewayMulticastGroupMember(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

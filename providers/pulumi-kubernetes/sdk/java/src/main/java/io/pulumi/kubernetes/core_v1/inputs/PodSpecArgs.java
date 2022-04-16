@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.AffinityArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EphemeralContainerArgs;
@@ -41,8 +42,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="activeDeadlineSeconds")
       private final @Nullable Output<Integer> activeDeadlineSeconds;
 
-    public Output<Integer> getActiveDeadlineSeconds() {
-        return this.activeDeadlineSeconds == null ? Output.empty() : this.activeDeadlineSeconds;
+    public Output<Integer> activeDeadlineSeconds() {
+        return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="affinity")
       private final @Nullable Output<AffinityArgs> affinity;
 
-    public Output<AffinityArgs> getAffinity() {
-        return this.affinity == null ? Output.empty() : this.affinity;
+    public Output<AffinityArgs> affinity() {
+        return this.affinity == null ? Codegen.empty() : this.affinity;
     }
 
     /**
@@ -63,8 +64,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automountServiceAccountToken")
       private final @Nullable Output<Boolean> automountServiceAccountToken;
 
-    public Output<Boolean> getAutomountServiceAccountToken() {
-        return this.automountServiceAccountToken == null ? Output.empty() : this.automountServiceAccountToken;
+    public Output<Boolean> automountServiceAccountToken() {
+        return this.automountServiceAccountToken == null ? Codegen.empty() : this.automountServiceAccountToken;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="containers", required=true)
       private final Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> getContainers() {
+    public Output<List<ContainerArgs>> containers() {
         return this.containers;
     }
 
@@ -85,8 +86,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsConfig")
       private final @Nullable Output<PodDNSConfigArgs> dnsConfig;
 
-    public Output<PodDNSConfigArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
+    public Output<PodDNSConfigArgs> dnsConfig() {
+        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dnsPolicy")
       private final @Nullable Output<String> dnsPolicy;
 
-    public Output<String> getDnsPolicy() {
-        return this.dnsPolicy == null ? Output.empty() : this.dnsPolicy;
+    public Output<String> dnsPolicy() {
+        return this.dnsPolicy == null ? Codegen.empty() : this.dnsPolicy;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableServiceLinks")
       private final @Nullable Output<Boolean> enableServiceLinks;
 
-    public Output<Boolean> getEnableServiceLinks() {
-        return this.enableServiceLinks == null ? Output.empty() : this.enableServiceLinks;
+    public Output<Boolean> enableServiceLinks() {
+        return this.enableServiceLinks == null ? Codegen.empty() : this.enableServiceLinks;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ephemeralContainers")
       private final @Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers;
 
-    public Output<List<EphemeralContainerArgs>> getEphemeralContainers() {
-        return this.ephemeralContainers == null ? Output.empty() : this.ephemeralContainers;
+    public Output<List<EphemeralContainerArgs>> ephemeralContainers() {
+        return this.ephemeralContainers == null ? Codegen.empty() : this.ephemeralContainers;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostAliases")
       private final @Nullable Output<List<HostAliasArgs>> hostAliases;
 
-    public Output<List<HostAliasArgs>> getHostAliases() {
-        return this.hostAliases == null ? Output.empty() : this.hostAliases;
+    public Output<List<HostAliasArgs>> hostAliases() {
+        return this.hostAliases == null ? Codegen.empty() : this.hostAliases;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostIPC")
       private final @Nullable Output<Boolean> hostIPC;
 
-    public Output<Boolean> getHostIPC() {
-        return this.hostIPC == null ? Output.empty() : this.hostIPC;
+    public Output<Boolean> hostIPC() {
+        return this.hostIPC == null ? Codegen.empty() : this.hostIPC;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostNetwork")
       private final @Nullable Output<Boolean> hostNetwork;
 
-    public Output<Boolean> getHostNetwork() {
-        return this.hostNetwork == null ? Output.empty() : this.hostNetwork;
+    public Output<Boolean> hostNetwork() {
+        return this.hostNetwork == null ? Codegen.empty() : this.hostNetwork;
     }
 
     /**
@@ -168,8 +169,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostPID")
       private final @Nullable Output<Boolean> hostPID;
 
-    public Output<Boolean> getHostPID() {
-        return this.hostPID == null ? Output.empty() : this.hostPID;
+    public Output<Boolean> hostPID() {
+        return this.hostPID == null ? Codegen.empty() : this.hostPID;
     }
 
     /**
@@ -179,8 +180,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
-    public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+    public Output<String> hostname() {
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -190,8 +191,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imagePullSecrets")
       private final @Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
-    public Output<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
-        return this.imagePullSecrets == null ? Output.empty() : this.imagePullSecrets;
+    public Output<List<LocalObjectReferenceArgs>> imagePullSecrets() {
+        return this.imagePullSecrets == null ? Codegen.empty() : this.imagePullSecrets;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="initContainers")
       private final @Nullable Output<List<ContainerArgs>> initContainers;
 
-    public Output<List<ContainerArgs>> getInitContainers() {
-        return this.initContainers == null ? Output.empty() : this.initContainers;
+    public Output<List<ContainerArgs>> initContainers() {
+        return this.initContainers == null ? Codegen.empty() : this.initContainers;
     }
 
     /**
@@ -212,8 +213,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
 
-    public Output<String> getNodeName() {
-        return this.nodeName == null ? Output.empty() : this.nodeName;
+    public Output<String> nodeName() {
+        return this.nodeName == null ? Codegen.empty() : this.nodeName;
     }
 
     /**
@@ -223,8 +224,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nodeSelector")
       private final @Nullable Output<Map<String,String>> nodeSelector;
 
-    public Output<Map<String,String>> getNodeSelector() {
-        return this.nodeSelector == null ? Output.empty() : this.nodeSelector;
+    public Output<Map<String,String>> nodeSelector() {
+        return this.nodeSelector == null ? Codegen.empty() : this.nodeSelector;
     }
 
     /**
@@ -238,8 +239,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="os")
       private final @Nullable Output<PodOSArgs> os;
 
-    public Output<PodOSArgs> getOs() {
-        return this.os == null ? Output.empty() : this.os;
+    public Output<PodOSArgs> os() {
+        return this.os == null ? Codegen.empty() : this.os;
     }
 
     /**
@@ -249,8 +250,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overhead")
       private final @Nullable Output<Map<String,String>> overhead;
 
-    public Output<Map<String,String>> getOverhead() {
-        return this.overhead == null ? Output.empty() : this.overhead;
+    public Output<Map<String,String>> overhead() {
+        return this.overhead == null ? Codegen.empty() : this.overhead;
     }
 
     /**
@@ -260,8 +261,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="preemptionPolicy")
       private final @Nullable Output<String> preemptionPolicy;
 
-    public Output<String> getPreemptionPolicy() {
-        return this.preemptionPolicy == null ? Output.empty() : this.preemptionPolicy;
+    public Output<String> preemptionPolicy() {
+        return this.preemptionPolicy == null ? Codegen.empty() : this.preemptionPolicy;
     }
 
     /**
@@ -271,8 +272,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -282,8 +283,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priorityClassName")
       private final @Nullable Output<String> priorityClassName;
 
-    public Output<String> getPriorityClassName() {
-        return this.priorityClassName == null ? Output.empty() : this.priorityClassName;
+    public Output<String> priorityClassName() {
+        return this.priorityClassName == null ? Codegen.empty() : this.priorityClassName;
     }
 
     /**
@@ -293,8 +294,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="readinessGates")
       private final @Nullable Output<List<PodReadinessGateArgs>> readinessGates;
 
-    public Output<List<PodReadinessGateArgs>> getReadinessGates() {
-        return this.readinessGates == null ? Output.empty() : this.readinessGates;
+    public Output<List<PodReadinessGateArgs>> readinessGates() {
+        return this.readinessGates == null ? Codegen.empty() : this.readinessGates;
     }
 
     /**
@@ -309,8 +310,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restartPolicy")
       private final @Nullable Output<String> restartPolicy;
 
-    public Output<String> getRestartPolicy() {
-        return this.restartPolicy == null ? Output.empty() : this.restartPolicy;
+    public Output<String> restartPolicy() {
+        return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
     }
 
     /**
@@ -320,8 +321,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="runtimeClassName")
       private final @Nullable Output<String> runtimeClassName;
 
-    public Output<String> getRuntimeClassName() {
-        return this.runtimeClassName == null ? Output.empty() : this.runtimeClassName;
+    public Output<String> runtimeClassName() {
+        return this.runtimeClassName == null ? Codegen.empty() : this.runtimeClassName;
     }
 
     /**
@@ -331,8 +332,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="schedulerName")
       private final @Nullable Output<String> schedulerName;
 
-    public Output<String> getSchedulerName() {
-        return this.schedulerName == null ? Output.empty() : this.schedulerName;
+    public Output<String> schedulerName() {
+        return this.schedulerName == null ? Codegen.empty() : this.schedulerName;
     }
 
     /**
@@ -342,8 +343,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityContext")
       private final @Nullable Output<PodSecurityContextArgs> securityContext;
 
-    public Output<PodSecurityContextArgs> getSecurityContext() {
-        return this.securityContext == null ? Output.empty() : this.securityContext;
+    public Output<PodSecurityContextArgs> securityContext() {
+        return this.securityContext == null ? Codegen.empty() : this.securityContext;
     }
 
     /**
@@ -353,8 +354,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
-    public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+    public Output<String> serviceAccount() {
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -364,8 +365,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
-    public Output<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
+    public Output<String> serviceAccountName() {
+        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 
     /**
@@ -375,8 +376,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="setHostnameAsFQDN")
       private final @Nullable Output<Boolean> setHostnameAsFQDN;
 
-    public Output<Boolean> getSetHostnameAsFQDN() {
-        return this.setHostnameAsFQDN == null ? Output.empty() : this.setHostnameAsFQDN;
+    public Output<Boolean> setHostnameAsFQDN() {
+        return this.setHostnameAsFQDN == null ? Codegen.empty() : this.setHostnameAsFQDN;
     }
 
     /**
@@ -386,8 +387,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shareProcessNamespace")
       private final @Nullable Output<Boolean> shareProcessNamespace;
 
-    public Output<Boolean> getShareProcessNamespace() {
-        return this.shareProcessNamespace == null ? Output.empty() : this.shareProcessNamespace;
+    public Output<Boolean> shareProcessNamespace() {
+        return this.shareProcessNamespace == null ? Codegen.empty() : this.shareProcessNamespace;
     }
 
     /**
@@ -397,8 +398,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subdomain")
       private final @Nullable Output<String> subdomain;
 
-    public Output<String> getSubdomain() {
-        return this.subdomain == null ? Output.empty() : this.subdomain;
+    public Output<String> subdomain() {
+        return this.subdomain == null ? Codegen.empty() : this.subdomain;
     }
 
     /**
@@ -408,8 +409,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="terminationGracePeriodSeconds")
       private final @Nullable Output<Integer> terminationGracePeriodSeconds;
 
-    public Output<Integer> getTerminationGracePeriodSeconds() {
-        return this.terminationGracePeriodSeconds == null ? Output.empty() : this.terminationGracePeriodSeconds;
+    public Output<Integer> terminationGracePeriodSeconds() {
+        return this.terminationGracePeriodSeconds == null ? Codegen.empty() : this.terminationGracePeriodSeconds;
     }
 
     /**
@@ -419,8 +420,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tolerations")
       private final @Nullable Output<List<TolerationArgs>> tolerations;
 
-    public Output<List<TolerationArgs>> getTolerations() {
-        return this.tolerations == null ? Output.empty() : this.tolerations;
+    public Output<List<TolerationArgs>> tolerations() {
+        return this.tolerations == null ? Codegen.empty() : this.tolerations;
     }
 
     /**
@@ -430,8 +431,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="topologySpreadConstraints")
       private final @Nullable Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints;
 
-    public Output<List<TopologySpreadConstraintArgs>> getTopologySpreadConstraints() {
-        return this.topologySpreadConstraints == null ? Output.empty() : this.topologySpreadConstraints;
+    public Output<List<TopologySpreadConstraintArgs>> topologySpreadConstraints() {
+        return this.topologySpreadConstraints == null ? Codegen.empty() : this.topologySpreadConstraints;
     }
 
     /**
@@ -441,8 +442,8 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+    public Output<List<VolumeArgs>> volumes() {
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public PodSpecArgs(
@@ -521,42 +522,42 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PodSpecArgs() {
-        this.activeDeadlineSeconds = Output.empty();
-        this.affinity = Output.empty();
-        this.automountServiceAccountToken = Output.empty();
-        this.containers = Output.empty();
-        this.dnsConfig = Output.empty();
-        this.dnsPolicy = Output.empty();
-        this.enableServiceLinks = Output.empty();
-        this.ephemeralContainers = Output.empty();
-        this.hostAliases = Output.empty();
-        this.hostIPC = Output.empty();
-        this.hostNetwork = Output.empty();
-        this.hostPID = Output.empty();
-        this.hostname = Output.empty();
-        this.imagePullSecrets = Output.empty();
-        this.initContainers = Output.empty();
-        this.nodeName = Output.empty();
-        this.nodeSelector = Output.empty();
-        this.os = Output.empty();
-        this.overhead = Output.empty();
-        this.preemptionPolicy = Output.empty();
-        this.priority = Output.empty();
-        this.priorityClassName = Output.empty();
-        this.readinessGates = Output.empty();
-        this.restartPolicy = Output.empty();
-        this.runtimeClassName = Output.empty();
-        this.schedulerName = Output.empty();
-        this.securityContext = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.serviceAccountName = Output.empty();
-        this.setHostnameAsFQDN = Output.empty();
-        this.shareProcessNamespace = Output.empty();
-        this.subdomain = Output.empty();
-        this.terminationGracePeriodSeconds = Output.empty();
-        this.tolerations = Output.empty();
-        this.topologySpreadConstraints = Output.empty();
-        this.volumes = Output.empty();
+        this.activeDeadlineSeconds = Codegen.empty();
+        this.affinity = Codegen.empty();
+        this.automountServiceAccountToken = Codegen.empty();
+        this.containers = Codegen.empty();
+        this.dnsConfig = Codegen.empty();
+        this.dnsPolicy = Codegen.empty();
+        this.enableServiceLinks = Codegen.empty();
+        this.ephemeralContainers = Codegen.empty();
+        this.hostAliases = Codegen.empty();
+        this.hostIPC = Codegen.empty();
+        this.hostNetwork = Codegen.empty();
+        this.hostPID = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.imagePullSecrets = Codegen.empty();
+        this.initContainers = Codegen.empty();
+        this.nodeName = Codegen.empty();
+        this.nodeSelector = Codegen.empty();
+        this.os = Codegen.empty();
+        this.overhead = Codegen.empty();
+        this.preemptionPolicy = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.priorityClassName = Codegen.empty();
+        this.readinessGates = Codegen.empty();
+        this.restartPolicy = Codegen.empty();
+        this.runtimeClassName = Codegen.empty();
+        this.schedulerName = Codegen.empty();
+        this.securityContext = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.serviceAccountName = Codegen.empty();
+        this.setHostnameAsFQDN = Codegen.empty();
+        this.shareProcessNamespace = Codegen.empty();
+        this.subdomain = Codegen.empty();
+        this.terminationGracePeriodSeconds = Codegen.empty();
+        this.tolerations = Codegen.empty();
+        this.topologySpreadConstraints = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -654,7 +655,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Output.ofNullable(activeDeadlineSeconds);
+            this.activeDeadlineSeconds = Codegen.ofNullable(activeDeadlineSeconds);
             return this;
         }
         public Builder affinity(@Nullable Output<AffinityArgs> affinity) {
@@ -662,7 +663,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder affinity(@Nullable AffinityArgs affinity) {
-            this.affinity = Output.ofNullable(affinity);
+            this.affinity = Codegen.ofNullable(affinity);
             return this;
         }
         public Builder automountServiceAccountToken(@Nullable Output<Boolean> automountServiceAccountToken) {
@@ -670,7 +671,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
-            this.automountServiceAccountToken = Output.ofNullable(automountServiceAccountToken);
+            this.automountServiceAccountToken = Codegen.ofNullable(automountServiceAccountToken);
             return this;
         }
         public Builder containers(Output<List<ContainerArgs>> containers) {
@@ -689,7 +690,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsConfig(@Nullable PodDNSConfigArgs dnsConfig) {
-            this.dnsConfig = Output.ofNullable(dnsConfig);
+            this.dnsConfig = Codegen.ofNullable(dnsConfig);
             return this;
         }
         public Builder dnsPolicy(@Nullable Output<String> dnsPolicy) {
@@ -697,7 +698,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsPolicy(@Nullable String dnsPolicy) {
-            this.dnsPolicy = Output.ofNullable(dnsPolicy);
+            this.dnsPolicy = Codegen.ofNullable(dnsPolicy);
             return this;
         }
         public Builder enableServiceLinks(@Nullable Output<Boolean> enableServiceLinks) {
@@ -705,7 +706,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
-            this.enableServiceLinks = Output.ofNullable(enableServiceLinks);
+            this.enableServiceLinks = Codegen.ofNullable(enableServiceLinks);
             return this;
         }
         public Builder ephemeralContainers(@Nullable Output<List<EphemeralContainerArgs>> ephemeralContainers) {
@@ -713,7 +714,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ephemeralContainers(@Nullable List<EphemeralContainerArgs> ephemeralContainers) {
-            this.ephemeralContainers = Output.ofNullable(ephemeralContainers);
+            this.ephemeralContainers = Codegen.ofNullable(ephemeralContainers);
             return this;
         }
         public Builder ephemeralContainers(EphemeralContainerArgs... ephemeralContainers) {
@@ -724,7 +725,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostAliases(@Nullable List<HostAliasArgs> hostAliases) {
-            this.hostAliases = Output.ofNullable(hostAliases);
+            this.hostAliases = Codegen.ofNullable(hostAliases);
             return this;
         }
         public Builder hostAliases(HostAliasArgs... hostAliases) {
@@ -735,7 +736,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostIPC(@Nullable Boolean hostIPC) {
-            this.hostIPC = Output.ofNullable(hostIPC);
+            this.hostIPC = Codegen.ofNullable(hostIPC);
             return this;
         }
         public Builder hostNetwork(@Nullable Output<Boolean> hostNetwork) {
@@ -743,7 +744,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostNetwork(@Nullable Boolean hostNetwork) {
-            this.hostNetwork = Output.ofNullable(hostNetwork);
+            this.hostNetwork = Codegen.ofNullable(hostNetwork);
             return this;
         }
         public Builder hostPID(@Nullable Output<Boolean> hostPID) {
@@ -751,7 +752,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostPID(@Nullable Boolean hostPID) {
-            this.hostPID = Output.ofNullable(hostPID);
+            this.hostPID = Codegen.ofNullable(hostPID);
             return this;
         }
         public Builder hostname(@Nullable Output<String> hostname) {
@@ -759,7 +760,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder imagePullSecrets(@Nullable Output<List<LocalObjectReferenceArgs>> imagePullSecrets) {
@@ -767,7 +768,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
-            this.imagePullSecrets = Output.ofNullable(imagePullSecrets);
+            this.imagePullSecrets = Codegen.ofNullable(imagePullSecrets);
             return this;
         }
         public Builder imagePullSecrets(LocalObjectReferenceArgs... imagePullSecrets) {
@@ -778,7 +779,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initContainers(@Nullable List<ContainerArgs> initContainers) {
-            this.initContainers = Output.ofNullable(initContainers);
+            this.initContainers = Codegen.ofNullable(initContainers);
             return this;
         }
         public Builder initContainers(ContainerArgs... initContainers) {
@@ -789,7 +790,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Output.ofNullable(nodeName);
+            this.nodeName = Codegen.ofNullable(nodeName);
             return this;
         }
         public Builder nodeSelector(@Nullable Output<Map<String,String>> nodeSelector) {
@@ -797,7 +798,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
-            this.nodeSelector = Output.ofNullable(nodeSelector);
+            this.nodeSelector = Codegen.ofNullable(nodeSelector);
             return this;
         }
         public Builder os(@Nullable Output<PodOSArgs> os) {
@@ -805,7 +806,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder os(@Nullable PodOSArgs os) {
-            this.os = Output.ofNullable(os);
+            this.os = Codegen.ofNullable(os);
             return this;
         }
         public Builder overhead(@Nullable Output<Map<String,String>> overhead) {
@@ -813,7 +814,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overhead(@Nullable Map<String,String> overhead) {
-            this.overhead = Output.ofNullable(overhead);
+            this.overhead = Codegen.ofNullable(overhead);
             return this;
         }
         public Builder preemptionPolicy(@Nullable Output<String> preemptionPolicy) {
@@ -821,7 +822,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
-            this.preemptionPolicy = Output.ofNullable(preemptionPolicy);
+            this.preemptionPolicy = Codegen.ofNullable(preemptionPolicy);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -829,7 +830,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder priorityClassName(@Nullable Output<String> priorityClassName) {
@@ -837,7 +838,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priorityClassName(@Nullable String priorityClassName) {
-            this.priorityClassName = Output.ofNullable(priorityClassName);
+            this.priorityClassName = Codegen.ofNullable(priorityClassName);
             return this;
         }
         public Builder readinessGates(@Nullable Output<List<PodReadinessGateArgs>> readinessGates) {
@@ -845,7 +846,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readinessGates(@Nullable List<PodReadinessGateArgs> readinessGates) {
-            this.readinessGates = Output.ofNullable(readinessGates);
+            this.readinessGates = Codegen.ofNullable(readinessGates);
             return this;
         }
         public Builder readinessGates(PodReadinessGateArgs... readinessGates) {
@@ -856,7 +857,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restartPolicy(@Nullable String restartPolicy) {
-            this.restartPolicy = Output.ofNullable(restartPolicy);
+            this.restartPolicy = Codegen.ofNullable(restartPolicy);
             return this;
         }
         public Builder runtimeClassName(@Nullable Output<String> runtimeClassName) {
@@ -864,7 +865,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeClassName(@Nullable String runtimeClassName) {
-            this.runtimeClassName = Output.ofNullable(runtimeClassName);
+            this.runtimeClassName = Codegen.ofNullable(runtimeClassName);
             return this;
         }
         public Builder schedulerName(@Nullable Output<String> schedulerName) {
@@ -872,7 +873,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedulerName(@Nullable String schedulerName) {
-            this.schedulerName = Output.ofNullable(schedulerName);
+            this.schedulerName = Codegen.ofNullable(schedulerName);
             return this;
         }
         public Builder securityContext(@Nullable Output<PodSecurityContextArgs> securityContext) {
@@ -880,7 +881,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityContext(@Nullable PodSecurityContextArgs securityContext) {
-            this.securityContext = Output.ofNullable(securityContext);
+            this.securityContext = Codegen.ofNullable(securityContext);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -888,7 +889,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
@@ -896,7 +897,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Output.ofNullable(serviceAccountName);
+            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
             return this;
         }
         public Builder setHostnameAsFQDN(@Nullable Output<Boolean> setHostnameAsFQDN) {
@@ -904,7 +905,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder setHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
-            this.setHostnameAsFQDN = Output.ofNullable(setHostnameAsFQDN);
+            this.setHostnameAsFQDN = Codegen.ofNullable(setHostnameAsFQDN);
             return this;
         }
         public Builder shareProcessNamespace(@Nullable Output<Boolean> shareProcessNamespace) {
@@ -912,7 +913,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
-            this.shareProcessNamespace = Output.ofNullable(shareProcessNamespace);
+            this.shareProcessNamespace = Codegen.ofNullable(shareProcessNamespace);
             return this;
         }
         public Builder subdomain(@Nullable Output<String> subdomain) {
@@ -920,7 +921,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Output.ofNullable(subdomain);
+            this.subdomain = Codegen.ofNullable(subdomain);
             return this;
         }
         public Builder terminationGracePeriodSeconds(@Nullable Output<Integer> terminationGracePeriodSeconds) {
@@ -928,7 +929,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = Output.ofNullable(terminationGracePeriodSeconds);
+            this.terminationGracePeriodSeconds = Codegen.ofNullable(terminationGracePeriodSeconds);
             return this;
         }
         public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
@@ -936,7 +937,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
-            this.tolerations = Output.ofNullable(tolerations);
+            this.tolerations = Codegen.ofNullable(tolerations);
             return this;
         }
         public Builder tolerations(TolerationArgs... tolerations) {
@@ -947,7 +948,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topologySpreadConstraints(@Nullable List<TopologySpreadConstraintArgs> topologySpreadConstraints) {
-            this.topologySpreadConstraints = Output.ofNullable(topologySpreadConstraints);
+            this.topologySpreadConstraints = Codegen.ofNullable(topologySpreadConstraints);
             return this;
         }
         public Builder topologySpreadConstraints(TopologySpreadConstraintArgs... topologySpreadConstraints) {
@@ -958,7 +959,7 @@ public final class PodSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(VolumeArgs... volumes) {

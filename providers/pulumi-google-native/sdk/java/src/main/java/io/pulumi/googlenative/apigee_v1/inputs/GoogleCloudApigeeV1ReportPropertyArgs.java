@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
     @Import(name="property")
       private final @Nullable Output<String> property;
 
-    public Output<String> getProperty() {
-        return this.property == null ? Output.empty() : this.property;
+    public Output<String> property() {
+        return this.property == null ? Codegen.empty() : this.property;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
     @Import(name="value")
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<List<GoogleCloudApigeeV1AttributeArgs>> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public GoogleCloudApigeeV1ReportPropertyArgs(
@@ -46,8 +47,8 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
     }
 
     private GoogleCloudApigeeV1ReportPropertyArgs() {
-        this.property = Output.empty();
-        this.value = Output.empty();
+        this.property = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
             return this;
         }
         public Builder property(@Nullable String property) {
-            this.property = Output.ofNullable(property);
+            this.property = Codegen.ofNullable(property);
             return this;
         }
         public Builder value(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value) {
@@ -85,7 +86,7 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
             return this;
         }
         public Builder value(@Nullable List<GoogleCloudApigeeV1AttributeArgs> value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder value(GoogleCloudApigeeV1AttributeArgs... value) {

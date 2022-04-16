@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.ConnectionArgs;
 import io.pulumi.gcp.bigquery.inputs.ConnectionState;
@@ -60,7 +61,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<ConnectionCloudSql> getCloudSql() {
+    public Output<ConnectionCloudSql> cloudSql() {
         return this.cloudSql;
     }
     /**
@@ -74,7 +75,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return Optional connection id that should be assigned to the created connection.
      * 
      */
-    public Output<String> getConnectionId() {
+    public Output<String> connectionId() {
         return this.connectionId;
     }
     /**
@@ -88,7 +89,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return A descriptive description for the connection
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -102,7 +103,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return A descriptive name for the connection
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -116,7 +117,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @return True if the connection has credential assigned.
      * 
      */
-    public Output<Boolean> getHasCredential() {
+    public Output<Boolean> hasCredential() {
         return this.hasCredential;
     }
     /**
@@ -136,7 +137,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -152,7 +153,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -168,7 +169,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -194,7 +195,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connection(String name, ConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/connection:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/connection:Connection", name, args == null ? ConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Connection(String name, Output<String> id, @Nullable ConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

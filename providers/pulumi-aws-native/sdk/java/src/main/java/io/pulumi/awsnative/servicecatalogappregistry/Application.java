@@ -9,6 +9,7 @@ import io.pulumi.awsnative.servicecatalogappregistry.outputs.ApplicationTags;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -21,7 +22,7 @@ public class Application extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -35,7 +36,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The description of the application.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -49,13 +50,13 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @return The name of the application.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=ApplicationTags.class, parameters={})
     private Output</* @Nullable */ ApplicationTags> tags;
 
-    public Output</* @Nullable */ ApplicationTags> getTags() {
+    public Output</* @Nullable */ ApplicationTags> tags() {
         return this.tags;
     }
 
@@ -81,7 +82,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Application(String name, @Nullable ApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:servicecatalogappregistry:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:servicecatalogappregistry:Application", name, args == null ? ApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Application(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

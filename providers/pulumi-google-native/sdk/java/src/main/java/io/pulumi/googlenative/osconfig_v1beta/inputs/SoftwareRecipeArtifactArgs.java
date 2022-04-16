@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactGcsArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactRemoteArgs;
 import java.lang.Boolean;
@@ -28,8 +29,8 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
 
-    public Output<Boolean> getAllowInsecure() {
-        return this.allowInsecure == null ? Output.empty() : this.allowInsecure;
+    public Output<Boolean> allowInsecure() {
+        return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     @Import(name="gcs")
       private final @Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs;
 
-    public Output<SoftwareRecipeArtifactGcsArgs> getGcs() {
-        return this.gcs == null ? Output.empty() : this.gcs;
+    public Output<SoftwareRecipeArtifactGcsArgs> gcs() {
+        return this.gcs == null ? Codegen.empty() : this.gcs;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -61,8 +62,8 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     @Import(name="remote")
       private final @Nullable Output<SoftwareRecipeArtifactRemoteArgs> remote;
 
-    public Output<SoftwareRecipeArtifactRemoteArgs> getRemote() {
-        return this.remote == null ? Output.empty() : this.remote;
+    public Output<SoftwareRecipeArtifactRemoteArgs> remote() {
+        return this.remote == null ? Codegen.empty() : this.remote;
     }
 
     public SoftwareRecipeArtifactArgs(
@@ -77,10 +78,10 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
     }
 
     private SoftwareRecipeArtifactArgs() {
-        this.allowInsecure = Output.empty();
-        this.gcs = Output.empty();
-        this.id = Output.empty();
-        this.remote = Output.empty();
+        this.allowInsecure = Codegen.empty();
+        this.gcs = Codegen.empty();
+        this.id = Codegen.empty();
+        this.remote = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Output.ofNullable(allowInsecure);
+            this.allowInsecure = Codegen.ofNullable(allowInsecure);
             return this;
         }
         public Builder gcs(@Nullable Output<SoftwareRecipeArtifactGcsArgs> gcs) {
@@ -122,7 +123,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder gcs(@Nullable SoftwareRecipeArtifactGcsArgs gcs) {
-            this.gcs = Output.ofNullable(gcs);
+            this.gcs = Codegen.ofNullable(gcs);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -138,7 +139,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder remote(@Nullable SoftwareRecipeArtifactRemoteArgs remote) {
-            this.remote = Output.ofNullable(remote);
+            this.remote = Codegen.ofNullable(remote);
             return this;
         }        public SoftwareRecipeArtifactArgs build() {
             return new SoftwareRecipeArtifactArgs(allowInsecure, gcs, id, remote);

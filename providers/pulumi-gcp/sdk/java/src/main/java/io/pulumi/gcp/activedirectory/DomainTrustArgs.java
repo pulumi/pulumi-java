@@ -5,6 +5,7 @@ package io.pulumi.gcp.activedirectory;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
       private final Output<String> domain;
 
-    public Output<String> getDomain() {
+    public Output<String> domain() {
         return this.domain;
     }
 
@@ -36,8 +37,8 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="selectiveAuthentication")
       private final @Nullable Output<Boolean> selectiveAuthentication;
 
-    public Output<Boolean> getSelectiveAuthentication() {
-        return this.selectiveAuthentication == null ? Output.empty() : this.selectiveAuthentication;
+    public Output<Boolean> selectiveAuthentication() {
+        return this.selectiveAuthentication == null ? Codegen.empty() : this.selectiveAuthentication;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetDnsIpAddresses", required=true)
       private final Output<List<String>> targetDnsIpAddresses;
 
-    public Output<List<String>> getTargetDnsIpAddresses() {
+    public Output<List<String>> targetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
     }
 
@@ -69,7 +70,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetDomainName", required=true)
       private final Output<String> targetDomainName;
 
-    public Output<String> getTargetDomainName() {
+    public Output<String> targetDomainName() {
         return this.targetDomainName;
     }
 
@@ -81,7 +82,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustDirection", required=true)
       private final Output<String> trustDirection;
 
-    public Output<String> getTrustDirection() {
+    public Output<String> trustDirection() {
         return this.trustDirection;
     }
 
@@ -93,7 +94,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustHandshakeSecret", required=true)
       private final Output<String> trustHandshakeSecret;
 
-    public Output<String> getTrustHandshakeSecret() {
+    public Output<String> trustHandshakeSecret() {
         return this.trustHandshakeSecret;
     }
 
@@ -105,7 +106,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustType", required=true)
       private final Output<String> trustType;
 
-    public Output<String> getTrustType() {
+    public Output<String> trustType() {
         return this.trustType;
     }
 
@@ -129,14 +130,14 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainTrustArgs() {
-        this.domain = Output.empty();
-        this.project = Output.empty();
-        this.selectiveAuthentication = Output.empty();
-        this.targetDnsIpAddresses = Output.empty();
-        this.targetDomainName = Output.empty();
-        this.trustDirection = Output.empty();
-        this.trustHandshakeSecret = Output.empty();
-        this.trustType = Output.empty();
+        this.domain = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selectiveAuthentication = Codegen.empty();
+        this.targetDnsIpAddresses = Codegen.empty();
+        this.targetDomainName = Codegen.empty();
+        this.trustDirection = Codegen.empty();
+        this.trustHandshakeSecret = Codegen.empty();
+        this.trustType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selectiveAuthentication(@Nullable Output<Boolean> selectiveAuthentication) {
@@ -194,7 +195,7 @@ public final class DomainTrustArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selectiveAuthentication(@Nullable Boolean selectiveAuthentication) {
-            this.selectiveAuthentication = Output.ofNullable(selectiveAuthentication);
+            this.selectiveAuthentication = Codegen.ofNullable(selectiveAuthentication);
             return this;
         }
         public Builder targetDnsIpAddresses(Output<List<String>> targetDnsIpAddresses) {

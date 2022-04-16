@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.MangedSslCertificateManagedArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="certificateId")
       private final @Nullable Output<Integer> certificateId;
 
-    public Output<Integer> getCertificateId() {
-        return this.certificateId == null ? Output.empty() : this.certificateId;
+    public Output<Integer> certificateId() {
+        return this.certificateId == null ? Codegen.empty() : this.certificateId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="managed")
       private final @Nullable Output<MangedSslCertificateManagedArgs> managed;
 
-    public Output<MangedSslCertificateManagedArgs> getManaged() {
-        return this.managed == null ? Output.empty() : this.managed;
+    public Output<MangedSslCertificateManagedArgs> managed() {
+        return this.managed == null ? Codegen.empty() : this.managed;
     }
 
     /**
@@ -61,15 +62,15 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public MangedSslCertificateArgs(
@@ -100,12 +101,12 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
     }
 
     private MangedSslCertificateArgs() {
-        this.certificateId = Output.empty();
-        this.description = Output.empty();
-        this.managed = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.type = Output.empty();
+        this.certificateId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.managed = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder certificateId(@Nullable Integer certificateId) {
-            this.certificateId = Output.ofNullable(certificateId);
+            this.certificateId = Codegen.ofNullable(certificateId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -151,7 +152,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder managed(@Nullable Output<MangedSslCertificateManagedArgs> managed) {
@@ -159,7 +160,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder managed(@Nullable MangedSslCertificateManagedArgs managed) {
-            this.managed = Output.ofNullable(managed);
+            this.managed = Codegen.ofNullable(managed);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -167,7 +168,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -175,7 +176,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -183,7 +184,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public MangedSslCertificateArgs build() {
             return new MangedSslCertificateArgs(certificateId, description, managed, name, project, type);

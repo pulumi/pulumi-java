@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.enums.PullRequestFilterCommentControl;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
-        return this.branch == null ? Output.empty() : this.branch;
+    public Output<String> branch() {
+        return this.branch == null ? Codegen.empty() : this.branch;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="commentControl")
       private final @Nullable Output<PullRequestFilterCommentControl> commentControl;
 
-    public Output<PullRequestFilterCommentControl> getCommentControl() {
-        return this.commentControl == null ? Output.empty() : this.commentControl;
+    public Output<PullRequestFilterCommentControl> commentControl() {
+        return this.commentControl == null ? Codegen.empty() : this.commentControl;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> getInvertRegex() {
-        return this.invertRegex == null ? Output.empty() : this.invertRegex;
+    public Output<Boolean> invertRegex() {
+        return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
     }
 
     public PullRequestFilterArgs(
@@ -63,9 +64,9 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PullRequestFilterArgs() {
-        this.branch = Output.empty();
-        this.commentControl = Output.empty();
-        this.invertRegex = Output.empty();
+        this.branch = Codegen.empty();
+        this.commentControl = Codegen.empty();
+        this.invertRegex = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder branch(@Nullable String branch) {
-            this.branch = Output.ofNullable(branch);
+            this.branch = Codegen.ofNullable(branch);
             return this;
         }
         public Builder commentControl(@Nullable Output<PullRequestFilterCommentControl> commentControl) {
@@ -105,7 +106,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder commentControl(@Nullable PullRequestFilterCommentControl commentControl) {
-            this.commentControl = Output.ofNullable(commentControl);
+            this.commentControl = Codegen.ofNullable(commentControl);
             return this;
         }
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
@@ -113,7 +114,7 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Output.ofNullable(invertRegex);
+            this.invertRegex = Codegen.ofNullable(invertRegex);
             return this;
         }        public PullRequestFilterArgs build() {
             return new PullRequestFilterArgs(branch, commentControl, invertRegex);

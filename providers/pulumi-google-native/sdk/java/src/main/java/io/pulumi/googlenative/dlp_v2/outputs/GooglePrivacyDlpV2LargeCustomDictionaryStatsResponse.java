@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse {
      * Approximate number of distinct phrases in the dictionary.
      * 
     */
-    public String getApproxNumPhrases() {
+    public String approxNumPhrases() {
         return this.approxNumPhrases;
     }
 

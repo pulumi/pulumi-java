@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dns_v1beta2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.ResponsePolicyRuleArgs;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyRuleLocalDataResponse;
@@ -30,7 +31,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * @return Answer this query with a behavior rather than DNS data.
      * 
      */
-    public Output<String> getBehavior() {
+    public Output<String> behavior() {
         return this.behavior;
     }
     /**
@@ -44,13 +45,13 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * @return The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
      * 
      */
-    public Output<String> getDnsName() {
+    public Output<String> dnsName() {
         return this.dnsName;
     }
     @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -64,7 +65,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * @return Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
      * 
      */
-    public Output<ResponsePolicyRuleLocalDataResponse> getLocalData() {
+    public Output<ResponsePolicyRuleLocalDataResponse> localData() {
         return this.localData;
     }
     /**
@@ -78,7 +79,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * @return An identifier for this rule. Must be unique with the ResponsePolicy.
      * 
      */
-    public Output<String> getRuleName() {
+    public Output<String> ruleName() {
         return this.ruleName;
     }
 
@@ -104,7 +105,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResponsePolicyRule(String name, ResponsePolicyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dns/v1beta2:ResponsePolicyRule", name, args == null ? ResponsePolicyRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dns/v1beta2:ResponsePolicyRule", name, args == null ? ResponsePolicyRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResponsePolicyRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.ssmincidents.outputs.ReplicationSetReplicationRegion;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,13 +32,13 @@ public class ReplicationSet extends io.pulumi.resources.CustomResource {
      * @return The ARN of the ReplicationSet.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="deletionProtected", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtected;
 
-    public Output</* @Nullable */ Boolean> getDeletionProtected() {
+    public Output</* @Nullable */ Boolean> deletionProtected() {
         return this.deletionProtected;
     }
     /**
@@ -51,7 +52,7 @@ public class ReplicationSet extends io.pulumi.resources.CustomResource {
      * @return The ReplicationSet configuration.
      * 
      */
-    public Output<List<ReplicationSetReplicationRegion>> getRegions() {
+    public Output<List<ReplicationSetReplicationRegion>> regions() {
         return this.regions;
     }
 
@@ -77,7 +78,7 @@ public class ReplicationSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationSet(String name, ReplicationSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ssmincidents:ReplicationSet", name, args == null ? ReplicationSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ssmincidents:ReplicationSet", name, args == null ? ReplicationSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

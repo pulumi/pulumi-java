@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="appId", required=true)
       private final Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
 
@@ -33,7 +34,7 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -45,8 +46,8 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public WebTypeAppEngingIamPolicyArgs(
@@ -59,9 +60,9 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
     }
 
     private WebTypeAppEngingIamPolicyArgs() {
-        this.appId = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
+        this.appId = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class WebTypeAppEngingIamPolicyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public WebTypeAppEngingIamPolicyArgs build() {
             return new WebTypeAppEngingIamPolicyArgs(appId, policyData, project);

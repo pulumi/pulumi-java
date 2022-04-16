@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     @Import(name="entityType", required=true)
       private final Output<String> entityType;
 
-    public Output<String> getEntityType() {
+    public Output<String> entityType() {
         return this.entityType;
     }
 
@@ -34,7 +35,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -45,8 +46,8 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> getIsList() {
-        return this.isList == null ? Output.empty() : this.isList;
+    public Output<Boolean> isList() {
+        return this.isList == null ? Codegen.empty() : this.isList;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> getRedact() {
-        return this.redact == null ? Output.empty() : this.redact;
+    public Output<Boolean> redact() {
+        return this.redact == null ? Codegen.empty() : this.redact;
     }
 
     public CxIntentParameterGetArgs(
@@ -73,10 +74,10 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
     }
 
     private CxIntentParameterGetArgs() {
-        this.entityType = Output.empty();
-        this.id = Output.empty();
-        this.isList = Output.empty();
-        this.redact = Output.empty();
+        this.entityType = Codegen.empty();
+        this.id = Codegen.empty();
+        this.isList = Codegen.empty();
+        this.redact = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder isList(@Nullable Boolean isList) {
-            this.isList = Output.ofNullable(isList);
+            this.isList = Codegen.ofNullable(isList);
             return this;
         }
         public Builder redact(@Nullable Output<Boolean> redact) {
@@ -134,7 +135,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder redact(@Nullable Boolean redact) {
-            this.redact = Output.ofNullable(redact);
+            this.redact = Codegen.ofNullable(redact);
             return this;
         }        public CxIntentParameterGetArgs build() {
             return new CxIntentParameterGetArgs(entityType, id, isList, redact);

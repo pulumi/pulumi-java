@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class ClusterClusterConfigEncryptionConfigGetArgs extends io.pulumi
     @Import(name="kmsKeyName", required=true)
       private final Output<String> kmsKeyName;
 
-    public Output<String> getKmsKeyName() {
+    public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
 
@@ -30,7 +31,7 @@ public final class ClusterClusterConfigEncryptionConfigGetArgs extends io.pulumi
     }
 
     private ClusterClusterConfigEncryptionConfigGetArgs() {
-        this.kmsKeyName = Output.empty();
+        this.kmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {

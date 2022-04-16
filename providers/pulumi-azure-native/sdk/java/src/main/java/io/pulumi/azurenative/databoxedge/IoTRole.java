@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return Resource allocation
      * 
      */
-    public Output</* @Nullable */ ComputeResourceResponse> getComputeResource() {
+    public Output</* @Nullable */ ComputeResourceResponse> computeResource() {
         return this.computeResource;
     }
     /**
@@ -60,7 +61,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return Host OS supported by the IoT role.
      * 
      */
-    public Output<String> getHostPlatform() {
+    public Output<String> hostPlatform() {
         return this.hostPlatform;
     }
     /**
@@ -74,7 +75,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return Platform where the Iot runtime is hosted.
      * 
      */
-    public Output<String> getHostPlatformType() {
+    public Output<String> hostPlatformType() {
         return this.hostPlatformType;
     }
     /**
@@ -88,7 +89,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return IoT device metadata to which data box edge device needs to be connected.
      * 
      */
-    public Output<IoTDeviceInfoResponse> getIoTDeviceDetails() {
+    public Output<IoTDeviceInfoResponse> ioTDeviceDetails() {
         return this.ioTDeviceDetails;
     }
     /**
@@ -102,7 +103,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return Iot edge agent details to download the agent and bootstrap iot runtime.
      * 
      */
-    public Output</* @Nullable */ IoTEdgeAgentInfoResponse> getIoTEdgeAgentInfo() {
+    public Output</* @Nullable */ IoTEdgeAgentInfoResponse> ioTEdgeAgentInfo() {
         return this.ioTEdgeAgentInfo;
     }
     /**
@@ -116,7 +117,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return IoT edge device to which the IoT role needs to be configured.
      * 
      */
-    public Output<IoTDeviceInfoResponse> getIoTEdgeDeviceDetails() {
+    public Output<IoTDeviceInfoResponse> ioTEdgeDeviceDetails() {
         return this.ioTEdgeDeviceDetails;
     }
     /**
@@ -132,7 +133,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * Expected value is 'IOT'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -146,7 +147,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -160,7 +161,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return Role status.
      * 
      */
-    public Output<String> getRoleStatus() {
+    public Output<String> roleStatus() {
         return this.roleStatus;
     }
     /**
@@ -174,7 +175,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return Mount points of shares in role(s).
      * 
      */
-    public Output</* @Nullable */ List<MountPointMapResponse>> getShareMappings() {
+    public Output</* @Nullable */ List<MountPointMapResponse>> shareMappings() {
         return this.shareMappings;
     }
     /**
@@ -188,7 +189,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return Role configured on ASE resource
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -202,7 +203,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -228,7 +229,7 @@ public class IoTRole extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IoTRole(String name, IoTRoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:IoTRole", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:databoxedge:IoTRole", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private IoTRole(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

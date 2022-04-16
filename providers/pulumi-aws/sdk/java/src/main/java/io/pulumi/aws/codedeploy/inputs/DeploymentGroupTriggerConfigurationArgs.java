@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
     @Import(name="triggerEvents", required=true)
       private final Output<List<String>> triggerEvents;
 
-    public Output<List<String>> getTriggerEvents() {
+    public Output<List<String>> triggerEvents() {
         return this.triggerEvents;
     }
 
@@ -32,7 +33,7 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
     @Import(name="triggerName", required=true)
       private final Output<String> triggerName;
 
-    public Output<String> getTriggerName() {
+    public Output<String> triggerName() {
         return this.triggerName;
     }
 
@@ -43,7 +44,7 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
     @Import(name="triggerTargetArn", required=true)
       private final Output<String> triggerTargetArn;
 
-    public Output<String> getTriggerTargetArn() {
+    public Output<String> triggerTargetArn() {
         return this.triggerTargetArn;
     }
 
@@ -57,9 +58,9 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
     }
 
     private DeploymentGroupTriggerConfigurationArgs() {
-        this.triggerEvents = Output.empty();
-        this.triggerName = Output.empty();
-        this.triggerTargetArn = Output.empty();
+        this.triggerEvents = Codegen.empty();
+        this.triggerName = Codegen.empty();
+        this.triggerTargetArn = Codegen.empty();
     }
 
     public static Builder builder() {

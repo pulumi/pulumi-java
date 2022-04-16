@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password")
       private final @Nullable Output<SecretArgs> password;
 
-    public Output<SecretArgs> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<SecretArgs> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username")
       private final @Nullable Output<String> username;
 
-    public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+    public Output<String> username() {
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public UserPasswordArgs(
@@ -49,8 +50,8 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserPasswordArgs() {
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable SecretArgs password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -88,7 +89,7 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public UserPasswordArgs build() {
             return new UserPasswordArgs(password, username);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs
     @Import(name="cases")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> getCases() {
-        return this.cases == null ? Output.empty() : this.cases;
+    public Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases() {
+        return this.cases == null ? Codegen.empty() : this.cases;
     }
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases) {
@@ -35,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs
     }
 
     private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs() {
-        this.cases = Output.empty();
+        this.cases = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs
             return this;
         }
         public Builder cases(@Nullable List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs> cases) {
-            this.cases = Output.ofNullable(cases);
+            this.cases = Codegen.ofNullable(cases);
             return this;
         }
         public Builder cases(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs... cases) {

@@ -28,7 +28,7 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
     @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
-    public List<Object> getAnnotations() {
+    public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
 
@@ -39,7 +39,7 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
     @Import(name="description")
       private final @Nullable String description;
 
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
@@ -50,7 +50,7 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
     @Import(name="parentTrigger", required=true)
       private final Object parentTrigger;
 
-    public Object getParentTrigger() {
+    public Object parentTrigger() {
         return this.parentTrigger;
     }
 
@@ -61,7 +61,7 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
     @Import(name="requestedEndTime", required=true)
       private final String requestedEndTime;
 
-    public String getRequestedEndTime() {
+    public String requestedEndTime() {
         return this.requestedEndTime;
     }
 
@@ -72,7 +72,7 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
     @Import(name="requestedStartTime", required=true)
       private final String requestedStartTime;
 
-    public String getRequestedStartTime() {
+    public String requestedStartTime() {
         return this.requestedStartTime;
     }
 
@@ -83,7 +83,7 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
     @Import(name="rerunConcurrency", required=true)
       private final Integer rerunConcurrency;
 
-    public Integer getRerunConcurrency() {
+    public Integer rerunConcurrency() {
         return this.rerunConcurrency;
     }
 
@@ -94,7 +94,7 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
     @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
-    public String getRuntimeState() {
+    public String runtimeState() {
         return this.runtimeState;
     }
 
@@ -106,7 +106,7 @@ public final class RerunTumblingWindowTriggerResponse extends io.pulumi.resource
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.DeploymentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return The creation date of the deployment
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -53,7 +54,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Description of the deployment
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
      * 
      */
-    public Output<String> getExecutionArn() {
+    public Output<String> executionArn() {
         return this.executionArn;
     }
     /**
@@ -87,7 +88,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
      * 
      */
-    public Output<String> getInvokeUrl() {
+    public Output<String> invokeUrl() {
         return this.invokeUrl;
     }
     /**
@@ -101,7 +102,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return REST API identifier.
      * 
      */
-    public Output<String> getRestApi() {
+    public Output<String> restApi() {
         return this.restApi;
     }
     /**
@@ -115,7 +116,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Description to set on the stage managed by the `stage_name` argument.
      * 
      */
-    public Output</* @Nullable */ String> getStageDescription() {
+    public Output</* @Nullable */ String> stageDescription() {
         return this.stageDescription;
     }
     /**
@@ -129,7 +130,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
      * 
      */
-    public Output</* @Nullable */ String> getStageName() {
+    public Output</* @Nullable */ String> stageName() {
         return this.stageName;
     }
     /**
@@ -143,7 +144,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Map of arbitrary keys and values that, when changed, will trigger a redeployment.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTriggers() {
+    public Output</* @Nullable */ Map<String,String>> triggers() {
         return this.triggers;
     }
     /**
@@ -157,7 +158,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @return Map to set on the stage managed by the `stage_name` argument.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getVariables() {
+    public Output</* @Nullable */ Map<String,String>> variables() {
         return this.variables;
     }
 
@@ -183,7 +184,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Deployment(String name, DeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/deployment:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/deployment:Deployment", name, args == null ? DeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Deployment(String name, Output<String> id, @Nullable DeploymentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

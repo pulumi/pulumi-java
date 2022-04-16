@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterArgs;
 import io.pulumi.gcp.compute.inputs.RouterState;
@@ -61,7 +62,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RouterBgp> getBgp() {
+    public Output</* @Nullable */ RouterBgp> bgp() {
         return this.bgp;
     }
     /**
@@ -75,7 +76,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -89,7 +90,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return User-specified description for the IP range.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -107,7 +108,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * Not currently available publicly.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEncryptedInterconnectRouter() {
+    public Output</* @Nullable */ Boolean> encryptedInterconnectRouter() {
         return this.encryptedInterconnectRouter;
     }
     /**
@@ -131,7 +132,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -145,7 +146,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return A reference to the network to which this router belongs.
      * 
      */
-    public Output<String> getNetwork() {
+    public Output<String> network() {
         return this.network;
     }
     /**
@@ -161,7 +162,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -175,7 +176,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return Region where the router resides.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -189,7 +190,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
 
@@ -215,7 +216,7 @@ public class Router extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Router(String name, RouterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/router:Router", name, args == null ? RouterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/router:Router", name, args == null ? RouterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Router(String name, Output<String> id, @Nullable RouterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

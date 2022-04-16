@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.CertificateInformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="certificate")
       private final @Nullable Output<CertificateInformationArgs> certificate;
 
-    public Output<CertificateInformationArgs> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+    public Output<CertificateInformationArgs> certificate() {
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="certificatePassword")
       private final @Nullable Output<String> certificatePassword;
 
-    public Output<String> getCertificatePassword() {
-        return this.certificatePassword == null ? Output.empty() : this.certificatePassword;
+    public Output<String> certificatePassword() {
+        return this.certificatePassword == null ? Codegen.empty() : this.certificatePassword;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="encodedCertificate")
       private final @Nullable Output<String> encodedCertificate;
 
-    public Output<String> getEncodedCertificate() {
-        return this.encodedCertificate == null ? Output.empty() : this.encodedCertificate;
+    public Output<String> encodedCertificate() {
+        return this.encodedCertificate == null ? Codegen.empty() : this.encodedCertificate;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     @Import(name="storeName", required=true)
       private final Output<String> storeName;
 
-    public Output<String> getStoreName() {
+    public Output<String> storeName() {
         return this.storeName;
     }
 
@@ -75,10 +76,10 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private CertificateConfigurationArgs() {
-        this.certificate = Output.empty();
-        this.certificatePassword = Output.empty();
-        this.encodedCertificate = Output.empty();
-        this.storeName = Output.empty();
+        this.certificate = Codegen.empty();
+        this.certificatePassword = Codegen.empty();
+        this.encodedCertificate = Codegen.empty();
+        this.storeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder certificate(@Nullable CertificateInformationArgs certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder certificatePassword(@Nullable Output<String> certificatePassword) {
@@ -120,7 +121,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder certificatePassword(@Nullable String certificatePassword) {
-            this.certificatePassword = Output.ofNullable(certificatePassword);
+            this.certificatePassword = Codegen.ofNullable(certificatePassword);
             return this;
         }
         public Builder encodedCertificate(@Nullable Output<String> encodedCertificate) {
@@ -128,7 +129,7 @@ public final class CertificateConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder encodedCertificate(@Nullable String encodedCertificate) {
-            this.encodedCertificate = Output.ofNullable(encodedCertificate);
+            this.encodedCertificate = Codegen.ofNullable(encodedCertificate);
             return this;
         }
         public Builder storeName(Output<String> storeName) {

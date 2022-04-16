@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
     @Import(name="settings")
       private final @Nullable Output<ConfigurationServiceSettingsArgs> settings;
 
-    public Output<ConfigurationServiceSettingsArgs> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+    public Output<ConfigurationServiceSettingsArgs> settings() {
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     public ConfigurationServicePropertiesArgs(@Nullable Output<ConfigurationServiceSettingsArgs> settings) {
@@ -34,7 +35,7 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
     }
 
     private ConfigurationServicePropertiesArgs() {
-        this.settings = Output.empty();
+        this.settings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder settings(@Nullable ConfigurationServiceSettingsArgs settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }        public ConfigurationServicePropertiesArgs build() {
             return new ConfigurationServicePropertiesArgs(settings);

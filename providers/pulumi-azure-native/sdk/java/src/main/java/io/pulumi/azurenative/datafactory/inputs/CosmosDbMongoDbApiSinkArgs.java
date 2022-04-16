@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+    public Output<Object> disableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+    public Output<Object> maxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     @Import(name="sinkRetryCount")
       private final @Nullable Output<Object> sinkRetryCount;
 
-    public Output<Object> getSinkRetryCount() {
-        return this.sinkRetryCount == null ? Output.empty() : this.sinkRetryCount;
+    public Output<Object> sinkRetryCount() {
+        return this.sinkRetryCount == null ? Codegen.empty() : this.sinkRetryCount;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     @Import(name="sinkRetryWait")
       private final @Nullable Output<Object> sinkRetryWait;
 
-    public Output<Object> getSinkRetryWait() {
-        return this.sinkRetryWait == null ? Output.empty() : this.sinkRetryWait;
+    public Output<Object> sinkRetryWait() {
+        return this.sinkRetryWait == null ? Codegen.empty() : this.sinkRetryWait;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -82,8 +83,8 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     @Import(name="writeBatchSize")
       private final @Nullable Output<Object> writeBatchSize;
 
-    public Output<Object> getWriteBatchSize() {
-        return this.writeBatchSize == null ? Output.empty() : this.writeBatchSize;
+    public Output<Object> writeBatchSize() {
+        return this.writeBatchSize == null ? Codegen.empty() : this.writeBatchSize;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     @Import(name="writeBatchTimeout")
       private final @Nullable Output<Object> writeBatchTimeout;
 
-    public Output<Object> getWriteBatchTimeout() {
-        return this.writeBatchTimeout == null ? Output.empty() : this.writeBatchTimeout;
+    public Output<Object> writeBatchTimeout() {
+        return this.writeBatchTimeout == null ? Codegen.empty() : this.writeBatchTimeout;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     @Import(name="writeBehavior")
       private final @Nullable Output<Object> writeBehavior;
 
-    public Output<Object> getWriteBehavior() {
-        return this.writeBehavior == null ? Output.empty() : this.writeBehavior;
+    public Output<Object> writeBehavior() {
+        return this.writeBehavior == null ? Codegen.empty() : this.writeBehavior;
     }
 
     public CosmosDbMongoDbApiSinkArgs(
@@ -128,14 +129,14 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
     }
 
     private CosmosDbMongoDbApiSinkArgs() {
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.sinkRetryCount = Output.empty();
-        this.sinkRetryWait = Output.empty();
-        this.type = Output.empty();
-        this.writeBatchSize = Output.empty();
-        this.writeBatchTimeout = Output.empty();
-        this.writeBehavior = Output.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.sinkRetryCount = Codegen.empty();
+        this.sinkRetryWait = Codegen.empty();
+        this.type = Codegen.empty();
+        this.writeBatchSize = Codegen.empty();
+        this.writeBatchTimeout = Codegen.empty();
+        this.writeBehavior = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -185,7 +186,7 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder sinkRetryCount(@Nullable Output<Object> sinkRetryCount) {
@@ -193,7 +194,7 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
-            this.sinkRetryCount = Output.ofNullable(sinkRetryCount);
+            this.sinkRetryCount = Codegen.ofNullable(sinkRetryCount);
             return this;
         }
         public Builder sinkRetryWait(@Nullable Output<Object> sinkRetryWait) {
@@ -201,7 +202,7 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
-            this.sinkRetryWait = Output.ofNullable(sinkRetryWait);
+            this.sinkRetryWait = Codegen.ofNullable(sinkRetryWait);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -217,7 +218,7 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder writeBatchSize(@Nullable Object writeBatchSize) {
-            this.writeBatchSize = Output.ofNullable(writeBatchSize);
+            this.writeBatchSize = Codegen.ofNullable(writeBatchSize);
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Output<Object> writeBatchTimeout) {
@@ -225,7 +226,7 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
-            this.writeBatchTimeout = Output.ofNullable(writeBatchTimeout);
+            this.writeBatchTimeout = Codegen.ofNullable(writeBatchTimeout);
             return this;
         }
         public Builder writeBehavior(@Nullable Output<Object> writeBehavior) {
@@ -233,7 +234,7 @@ public final class CosmosDbMongoDbApiSinkArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder writeBehavior(@Nullable Object writeBehavior) {
-            this.writeBehavior = Output.ofNullable(writeBehavior);
+            this.writeBehavior = Codegen.ofNullable(writeBehavior);
             return this;
         }        public CosmosDbMongoDbApiSinkArgs build() {
             return new CosmosDbMongoDbApiSinkArgs(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);

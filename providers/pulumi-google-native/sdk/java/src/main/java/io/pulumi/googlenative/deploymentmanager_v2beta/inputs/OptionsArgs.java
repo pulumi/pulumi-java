@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.AsyncOptionsArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.InputMappingArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ValidationOptionsArgs;
@@ -29,8 +30,8 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="asyncOptions")
       private final @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
 
-    public Output<List<AsyncOptionsArgs>> getAsyncOptions() {
-        return this.asyncOptions == null ? Output.empty() : this.asyncOptions;
+    public Output<List<AsyncOptionsArgs>> asyncOptions() {
+        return this.asyncOptions == null ? Codegen.empty() : this.asyncOptions;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputMappings")
       private final @Nullable Output<List<InputMappingArgs>> inputMappings;
 
-    public Output<List<InputMappingArgs>> getInputMappings() {
-        return this.inputMappings == null ? Output.empty() : this.inputMappings;
+    public Output<List<InputMappingArgs>> inputMappings() {
+        return this.inputMappings == null ? Codegen.empty() : this.inputMappings;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validationOptions")
       private final @Nullable Output<ValidationOptionsArgs> validationOptions;
 
-    public Output<ValidationOptionsArgs> getValidationOptions() {
-        return this.validationOptions == null ? Output.empty() : this.validationOptions;
+    public Output<ValidationOptionsArgs> validationOptions() {
+        return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualProperties")
       private final @Nullable Output<String> virtualProperties;
 
-    public Output<String> getVirtualProperties() {
-        return this.virtualProperties == null ? Output.empty() : this.virtualProperties;
+    public Output<String> virtualProperties() {
+        return this.virtualProperties == null ? Codegen.empty() : this.virtualProperties;
     }
 
     public OptionsArgs(
@@ -78,10 +79,10 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OptionsArgs() {
-        this.asyncOptions = Output.empty();
-        this.inputMappings = Output.empty();
-        this.validationOptions = Output.empty();
-        this.virtualProperties = Output.empty();
+        this.asyncOptions = Codegen.empty();
+        this.inputMappings = Codegen.empty();
+        this.validationOptions = Codegen.empty();
+        this.virtualProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder asyncOptions(@Nullable List<AsyncOptionsArgs> asyncOptions) {
-            this.asyncOptions = Output.ofNullable(asyncOptions);
+            this.asyncOptions = Codegen.ofNullable(asyncOptions);
             return this;
         }
         public Builder asyncOptions(AsyncOptionsArgs... asyncOptions) {
@@ -126,7 +127,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputMappings(@Nullable List<InputMappingArgs> inputMappings) {
-            this.inputMappings = Output.ofNullable(inputMappings);
+            this.inputMappings = Codegen.ofNullable(inputMappings);
             return this;
         }
         public Builder inputMappings(InputMappingArgs... inputMappings) {
@@ -137,7 +138,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validationOptions(@Nullable ValidationOptionsArgs validationOptions) {
-            this.validationOptions = Output.ofNullable(validationOptions);
+            this.validationOptions = Codegen.ofNullable(validationOptions);
             return this;
         }
         public Builder virtualProperties(@Nullable Output<String> virtualProperties) {
@@ -145,7 +146,7 @@ public final class OptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualProperties(@Nullable String virtualProperties) {
-            this.virtualProperties = Output.ofNullable(virtualProperties);
+            this.virtualProperties = Codegen.ofNullable(virtualProperties);
             return this;
         }        public OptionsArgs build() {
             return new OptionsArgs(asyncOptions, inputMappings, validationOptions, virtualProperties);

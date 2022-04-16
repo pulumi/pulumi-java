@@ -60,7 +60,7 @@ public final class BucketIamPolicyBindingsItemResponse {
      * The condition that is associated with this binding. NOTE: an unsatisfied condition will not allow user access via current binding. Different bindings, including their conditions, are examined independently.
      * 
     */
-    public ExprResponse getCondition() {
+    public ExprResponse condition() {
         return this.condition;
     }
     /**
@@ -76,7 +76,7 @@ public final class BucketIamPolicyBindingsItemResponse {
      * - projectViewer:projectid — Viewers of the given project. For example, projectViewer:my-example-project
      * 
     */
-    public List<String> getMembers() {
+    public List<String> members() {
         return this.members;
     }
     /**
@@ -93,7 +93,7 @@ public final class BucketIamPolicyBindingsItemResponse {
      * - roles/storage.legacyBucketOwner — Read and write access to existing buckets with object listing/creation/deletion. Equivalent to an ACL entry on a bucket with the OWNER role.
      * 
     */
-    public String getRole() {
+    public String role() {
         return this.role;
     }
 

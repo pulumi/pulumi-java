@@ -6,6 +6,7 @@ package io.pulumi.aws.lambda.inputs;
 import io.pulumi.aws.lambda.inputs.AliasRoutingConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
-    public Output<String> getFunctionName() {
-        return this.functionName == null ? Output.empty() : this.functionName;
+    public Output<String> functionName() {
+        return this.functionName == null ? Codegen.empty() : this.functionName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionVersion")
       private final @Nullable Output<String> functionVersion;
 
-    public Output<String> getFunctionVersion() {
-        return this.functionVersion == null ? Output.empty() : this.functionVersion;
+    public Output<String> functionVersion() {
+        return this.functionVersion == null ? Codegen.empty() : this.functionVersion;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="invokeArn")
       private final @Nullable Output<String> invokeArn;
 
-    public Output<String> getInvokeArn() {
-        return this.invokeArn == null ? Output.empty() : this.invokeArn;
+    public Output<String> invokeArn() {
+        return this.invokeArn == null ? Codegen.empty() : this.invokeArn;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingConfig")
       private final @Nullable Output<AliasRoutingConfigGetArgs> routingConfig;
 
-    public Output<AliasRoutingConfigGetArgs> getRoutingConfig() {
-        return this.routingConfig == null ? Output.empty() : this.routingConfig;
+    public Output<AliasRoutingConfigGetArgs> routingConfig() {
+        return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
     }
 
     public AliasState(
@@ -110,13 +111,13 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AliasState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.functionName = Output.empty();
-        this.functionVersion = Output.empty();
-        this.invokeArn = Output.empty();
-        this.name = Output.empty();
-        this.routingConfig = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.functionName = Codegen.empty();
+        this.functionVersion = Codegen.empty();
+        this.invokeArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.routingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -164,7 +165,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder functionName(@Nullable Output<String> functionName) {
@@ -172,7 +173,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Output.ofNullable(functionName);
+            this.functionName = Codegen.ofNullable(functionName);
             return this;
         }
         public Builder functionVersion(@Nullable Output<String> functionVersion) {
@@ -180,7 +181,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionVersion(@Nullable String functionVersion) {
-            this.functionVersion = Output.ofNullable(functionVersion);
+            this.functionVersion = Codegen.ofNullable(functionVersion);
             return this;
         }
         public Builder invokeArn(@Nullable Output<String> invokeArn) {
@@ -188,7 +189,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invokeArn(@Nullable String invokeArn) {
-            this.invokeArn = Output.ofNullable(invokeArn);
+            this.invokeArn = Codegen.ofNullable(invokeArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -196,7 +197,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder routingConfig(@Nullable Output<AliasRoutingConfigGetArgs> routingConfig) {
@@ -204,7 +205,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingConfig(@Nullable AliasRoutingConfigGetArgs routingConfig) {
-            this.routingConfig = Output.ofNullable(routingConfig);
+            this.routingConfig = Codegen.ofNullable(routingConfig);
             return this;
         }        public AliasState build() {
             return new AliasState(arn, description, functionName, functionVersion, invokeArn, name, routingConfig);

@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encoding", required=true)
       private final Output<String> encoding;
 
-    public Output<String> getEncoding() {
+    public Output<String> encoding() {
         return this.encoding;
     }
 
@@ -32,7 +33,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publicKey", required=true)
       private final Output<String> publicKey;
 
-    public Output<String> getPublicKey() {
+    public Output<String> publicKey() {
         return this.publicKey;
     }
 
@@ -43,8 +44,8 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -70,10 +71,10 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshKeyArgs() {
-        this.encoding = Output.empty();
-        this.publicKey = Output.empty();
-        this.status = Output.empty();
-        this.username = Output.empty();
+        this.encoding = Codegen.empty();
+        this.publicKey = Codegen.empty();
+        this.status = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder username(Output<String> username) {

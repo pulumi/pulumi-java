@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -57,7 +58,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -85,7 +86,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the frequency at which the watcher is invoked.
      * 
      */
-    public Output</* @Nullable */ Double> getExecutionFrequencyInSeconds() {
+    public Output</* @Nullable */ Double> executionFrequencyInSeconds() {
         return this.executionFrequencyInSeconds;
     }
     /**
@@ -99,7 +100,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Details of the user who last modified the watcher.
      * 
      */
-    public Output<String> getLastModifiedBy() {
+    public Output<String> lastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
@@ -113,7 +114,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output<String> getLastModifiedTime() {
+    public Output<String> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -127,7 +128,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -141,7 +142,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -155,7 +156,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
      * 
      */
-    public Output</* @Nullable */ String> getScriptName() {
+    public Output</* @Nullable */ String> scriptName() {
         return this.scriptName;
     }
     /**
@@ -169,7 +170,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the parameters of the script.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getScriptParameters() {
+    public Output</* @Nullable */ Map<String,String>> scriptParameters() {
         return this.scriptParameters;
     }
     /**
@@ -183,7 +184,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the name of the hybrid worker group the watcher will run on.
      * 
      */
-    public Output</* @Nullable */ String> getScriptRunOn() {
+    public Output</* @Nullable */ String> scriptRunOn() {
         return this.scriptRunOn;
     }
     /**
@@ -197,7 +198,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Gets the current status of the watcher.
      * 
      */
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
     /**
@@ -211,7 +212,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -225,7 +226,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -251,7 +252,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Watcher(String name, WatcherArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:Watcher", name, args == null ? WatcherArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:automation:Watcher", name, args == null ? WatcherArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Watcher(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

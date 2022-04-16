@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
     @Import(name="equivalenceClassSize", required=true)
       private final String equivalenceClassSize;
 
-    public String getEquivalenceClassSize() {
+    public String equivalenceClassSize() {
         return this.equivalenceClassSize;
     }
 
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
     @Import(name="numDistinctSensitiveValues", required=true)
       private final String numDistinctSensitiveValues;
 
-    public String getNumDistinctSensitiveValues() {
+    public String numDistinctSensitiveValues() {
         return this.numDistinctSensitiveValues;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
     @Import(name="quasiIdsValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    public List<GooglePrivacyDlpV2ValueResponse> getQuasiIdsValues() {
+    public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
     }
 
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
     @Import(name="topSensitiveValues", required=true)
       private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
 
-    public List<GooglePrivacyDlpV2ValueFrequencyResponse> getTopSensitiveValues() {
+    public List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues() {
         return this.topSensitiveValues;
     }
 

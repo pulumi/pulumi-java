@@ -5,6 +5,7 @@ package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +24,7 @@ public final class PolicyAdmissionWhitelistPatternGetArgs extends io.pulumi.reso
     @Import(name="namePattern", required=true)
       private final Output<String> namePattern;
 
-    public Output<String> getNamePattern() {
+    public Output<String> namePattern() {
         return this.namePattern;
     }
 
@@ -32,7 +33,7 @@ public final class PolicyAdmissionWhitelistPatternGetArgs extends io.pulumi.reso
     }
 
     private PolicyAdmissionWhitelistPatternGetArgs() {
-        this.namePattern = Output.empty();
+        this.namePattern = Codegen.empty();
     }
 
     public static Builder builder() {

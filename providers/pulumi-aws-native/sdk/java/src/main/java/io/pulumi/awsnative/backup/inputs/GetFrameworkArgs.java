@@ -19,7 +19,7 @@ public final class GetFrameworkArgs extends io.pulumi.resources.InvokeArgs {
     @Import(name="frameworkArn", required=true)
       private final String frameworkArn;
 
-    public String getFrameworkArn() {
+    public String frameworkArn() {
         return this.frameworkArn;
     }
 

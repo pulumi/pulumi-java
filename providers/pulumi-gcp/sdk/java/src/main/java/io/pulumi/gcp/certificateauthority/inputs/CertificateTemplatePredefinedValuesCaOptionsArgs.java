@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class CertificateTemplatePredefinedValuesCaOptionsArgs extends io.p
     @Import(name="isCa")
       private final @Nullable Output<Boolean> isCa;
 
-    public Output<Boolean> getIsCa() {
-        return this.isCa == null ? Output.empty() : this.isCa;
+    public Output<Boolean> isCa() {
+        return this.isCa == null ? Codegen.empty() : this.isCa;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class CertificateTemplatePredefinedValuesCaOptionsArgs extends io.p
     @Import(name="maxIssuerPathLength")
       private final @Nullable Output<Integer> maxIssuerPathLength;
 
-    public Output<Integer> getMaxIssuerPathLength() {
-        return this.maxIssuerPathLength == null ? Output.empty() : this.maxIssuerPathLength;
+    public Output<Integer> maxIssuerPathLength() {
+        return this.maxIssuerPathLength == null ? Codegen.empty() : this.maxIssuerPathLength;
     }
 
     public CertificateTemplatePredefinedValuesCaOptionsArgs(
@@ -45,8 +46,8 @@ public final class CertificateTemplatePredefinedValuesCaOptionsArgs extends io.p
     }
 
     private CertificateTemplatePredefinedValuesCaOptionsArgs() {
-        this.isCa = Output.empty();
-        this.maxIssuerPathLength = Output.empty();
+        this.isCa = Codegen.empty();
+        this.maxIssuerPathLength = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class CertificateTemplatePredefinedValuesCaOptionsArgs extends io.p
             return this;
         }
         public Builder isCa(@Nullable Boolean isCa) {
-            this.isCa = Output.ofNullable(isCa);
+            this.isCa = Codegen.ofNullable(isCa);
             return this;
         }
         public Builder maxIssuerPathLength(@Nullable Output<Integer> maxIssuerPathLength) {
@@ -84,7 +85,7 @@ public final class CertificateTemplatePredefinedValuesCaOptionsArgs extends io.p
             return this;
         }
         public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
-            this.maxIssuerPathLength = Output.ofNullable(maxIssuerPathLength);
+            this.maxIssuerPathLength = Codegen.ofNullable(maxIssuerPathLength);
             return this;
         }        public CertificateTemplatePredefinedValuesCaOptionsArgs build() {
             return new CertificateTemplatePredefinedValuesCaOptionsArgs(isCa, maxIssuerPathLength);

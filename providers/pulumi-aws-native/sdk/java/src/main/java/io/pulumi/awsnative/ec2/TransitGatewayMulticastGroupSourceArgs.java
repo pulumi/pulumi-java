@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class TransitGatewayMulticastGroupSourceArgs extends io.pulumi.reso
     @Import(name="groupIpAddress", required=true)
       private final Output<String> groupIpAddress;
 
-    public Output<String> getGroupIpAddress() {
+    public Output<String> groupIpAddress() {
         return this.groupIpAddress;
     }
 
@@ -31,7 +32,7 @@ public final class TransitGatewayMulticastGroupSourceArgs extends io.pulumi.reso
     @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
+    public Output<String> networkInterfaceId() {
         return this.networkInterfaceId;
     }
 
@@ -42,7 +43,7 @@ public final class TransitGatewayMulticastGroupSourceArgs extends io.pulumi.reso
     @Import(name="transitGatewayMulticastDomainId", required=true)
       private final Output<String> transitGatewayMulticastDomainId;
 
-    public Output<String> getTransitGatewayMulticastDomainId() {
+    public Output<String> transitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
     }
 
@@ -56,9 +57,9 @@ public final class TransitGatewayMulticastGroupSourceArgs extends io.pulumi.reso
     }
 
     private TransitGatewayMulticastGroupSourceArgs() {
-        this.groupIpAddress = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.transitGatewayMulticastDomainId = Output.empty();
+        this.groupIpAddress = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.transitGatewayMulticastDomainId = Codegen.empty();
     }
 
     public static Builder builder() {

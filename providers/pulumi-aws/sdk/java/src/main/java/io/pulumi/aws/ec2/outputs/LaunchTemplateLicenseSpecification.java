@@ -24,7 +24,7 @@ public final class LaunchTemplateLicenseSpecification {
      * ARN of the license configuration.
      * 
     */
-    public String getLicenseConfigurationArn() {
+    public String licenseConfigurationArn() {
         return this.licenseConfigurationArn;
     }
 

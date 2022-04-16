@@ -6,6 +6,7 @@ package io.pulumi.googlenative.remotebuildexecution_v1alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.WorkerPoolArgs;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse;
@@ -30,7 +31,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return The autoscale policy to apply on a pool.
      * 
      */
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse> getAutoscale() {
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse> autoscale() {
         return this.autoscale;
     }
     /**
@@ -44,7 +45,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Channel specifies the release channel of the pool.
      * 
      */
-    public Output<String> getChannel() {
+    public Output<String> channel() {
         return this.channel;
     }
     /**
@@ -58,7 +59,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return State of the worker pool.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -86,7 +87,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return Specifies the properties, such as machine type and disk size, used for creating workers in a worker pool.
      * 
      */
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse> getWorkerConfig() {
+    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse> workerConfig() {
         return this.workerConfig;
     }
     /**
@@ -100,7 +101,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @return The desired number of workers in the worker pool. Must be a value between 0 and 15000.
      * 
      */
-    public Output<String> getWorkerCount() {
+    public Output<String> workerCount() {
         return this.workerCount;
     }
 
@@ -126,7 +127,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkerPool(String name, WorkerPoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:remotebuildexecution/v1alpha:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:remotebuildexecution/v1alpha:WorkerPool", name, args == null ? WorkerPoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkerPool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

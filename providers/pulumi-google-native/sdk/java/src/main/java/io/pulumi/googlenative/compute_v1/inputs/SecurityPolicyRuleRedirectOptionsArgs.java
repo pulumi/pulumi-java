@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.SecurityPolicyRuleRedirectOptionsType;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
     @Import(name="target")
       private final @Nullable Output<String> target;
 
-    public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+    public Output<String> target() {
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
     @Import(name="type")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
 
-    public Output<SecurityPolicyRuleRedirectOptionsType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<SecurityPolicyRuleRedirectOptionsType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SecurityPolicyRuleRedirectOptionsArgs(
@@ -45,8 +46,8 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
     }
 
     private SecurityPolicyRuleRedirectOptionsArgs() {
-        this.target = Output.empty();
-        this.type = Output.empty();
+        this.target = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder type(@Nullable Output<SecurityPolicyRuleRedirectOptionsType> type) {
@@ -84,7 +85,7 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
             return this;
         }
         public Builder type(@Nullable SecurityPolicyRuleRedirectOptionsType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SecurityPolicyRuleRedirectOptionsArgs build() {
             return new SecurityPolicyRuleRedirectOptionsArgs(target, type);

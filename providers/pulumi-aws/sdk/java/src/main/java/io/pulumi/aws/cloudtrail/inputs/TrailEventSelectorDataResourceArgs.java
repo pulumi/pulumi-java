@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -32,7 +33,7 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
     @Import(name="values", required=true)
       private final Output<List<String>> values;
 
-    public Output<List<String>> getValues() {
+    public Output<List<String>> values() {
         return this.values;
     }
 
@@ -44,8 +45,8 @@ public final class TrailEventSelectorDataResourceArgs extends io.pulumi.resource
     }
 
     private TrailEventSelectorDataResourceArgs() {
-        this.type = Output.empty();
-        this.values = Output.empty();
+        this.type = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

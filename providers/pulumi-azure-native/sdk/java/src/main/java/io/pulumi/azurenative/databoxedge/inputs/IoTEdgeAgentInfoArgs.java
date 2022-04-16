@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.ImageRepositoryCredentialArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
-    public Output<String> getImageName() {
+    public Output<String> imageName() {
         return this.imageName;
     }
 
@@ -37,8 +38,8 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="imageRepository")
       private final @Nullable Output<ImageRepositoryCredentialArgs> imageRepository;
 
-    public Output<ImageRepositoryCredentialArgs> getImageRepository() {
-        return this.imageRepository == null ? Output.empty() : this.imageRepository;
+    public Output<ImageRepositoryCredentialArgs> imageRepository() {
+        return this.imageRepository == null ? Codegen.empty() : this.imageRepository;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tag", required=true)
       private final Output<String> tag;
 
-    public Output<String> getTag() {
+    public Output<String> tag() {
         return this.tag;
     }
 
@@ -62,9 +63,9 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IoTEdgeAgentInfoArgs() {
-        this.imageName = Output.empty();
-        this.imageRepository = Output.empty();
-        this.tag = Output.empty();
+        this.imageName = Codegen.empty();
+        this.imageRepository = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class IoTEdgeAgentInfoArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder imageRepository(@Nullable ImageRepositoryCredentialArgs imageRepository) {
-            this.imageRepository = Output.ofNullable(imageRepository);
+            this.imageRepository = Codegen.ofNullable(imageRepository);
             return this;
         }
         public Builder tag(Output<String> tag) {

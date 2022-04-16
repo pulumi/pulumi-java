@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
-    public Output<String> getEmailAddress() {
+    public Output<String> emailAddress() {
         return this.emailAddress;
     }
 
@@ -37,7 +38,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -48,8 +49,8 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     public EmailChannelPropertiesArgs(
@@ -62,9 +63,9 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private EmailChannelPropertiesArgs() {
-        this.emailAddress = Output.empty();
-        this.isEnabled = Output.empty();
-        this.password = Output.empty();
+        this.emailAddress = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.password = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }        public EmailChannelPropertiesArgs build() {
             return new EmailChannelPropertiesArgs(emailAddress, isEnabled, password);

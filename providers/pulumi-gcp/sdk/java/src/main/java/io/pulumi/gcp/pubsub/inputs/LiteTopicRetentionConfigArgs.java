@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class LiteTopicRetentionConfigArgs extends io.pulumi.resources.Reso
     @Import(name="perPartitionBytes", required=true)
       private final Output<String> perPartitionBytes;
 
-    public Output<String> getPerPartitionBytes() {
+    public Output<String> perPartitionBytes() {
         return this.perPartitionBytes;
     }
 
@@ -37,8 +38,8 @@ public final class LiteTopicRetentionConfigArgs extends io.pulumi.resources.Reso
     @Import(name="period")
       private final @Nullable Output<String> period;
 
-    public Output<String> getPeriod() {
-        return this.period == null ? Output.empty() : this.period;
+    public Output<String> period() {
+        return this.period == null ? Codegen.empty() : this.period;
     }
 
     public LiteTopicRetentionConfigArgs(
@@ -49,8 +50,8 @@ public final class LiteTopicRetentionConfigArgs extends io.pulumi.resources.Reso
     }
 
     private LiteTopicRetentionConfigArgs() {
-        this.perPartitionBytes = Output.empty();
-        this.period = Output.empty();
+        this.perPartitionBytes = Codegen.empty();
+        this.period = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class LiteTopicRetentionConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder period(@Nullable String period) {
-            this.period = Output.ofNullable(period);
+            this.period = Codegen.ofNullable(period);
             return this;
         }        public LiteTopicRetentionConfigArgs build() {
             return new LiteTopicRetentionConfigArgs(perPartitionBytes, period);

@@ -12,6 +12,7 @@ import io.pulumi.aws.datapipeline.outputs.PipelineDefinitionPipelineObject;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the parameter objects used in the pipeline definition. See below
      * 
      */
-    public Output</* @Nullable */ List<PipelineDefinitionParameterObject>> getParameterObjects() {
+    public Output</* @Nullable */ List<PipelineDefinitionParameterObject>> parameterObjects() {
         return this.parameterObjects;
     }
     /**
@@ -57,7 +58,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the parameter values used in the pipeline definition. See below
      * 
      */
-    public Output</* @Nullable */ List<PipelineDefinitionParameterValue>> getParameterValues() {
+    public Output</* @Nullable */ List<PipelineDefinitionParameterValue>> parameterValues() {
         return this.parameterValues;
     }
     /**
@@ -71,7 +72,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * @return ID of the pipeline.
      * 
      */
-    public Output<String> getPipelineId() {
+    public Output<String> pipelineId() {
         return this.pipelineId;
     }
     /**
@@ -85,7 +86,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * @return Configuration block for the objects that define the pipeline. See below
      * 
      */
-    public Output<List<PipelineDefinitionPipelineObject>> getPipelineObjects() {
+    public Output<List<PipelineDefinitionPipelineObject>> pipelineObjects() {
         return this.pipelineObjects;
     }
 
@@ -111,7 +112,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PipelineDefinition(String name, PipelineDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datapipeline/pipelineDefinition:PipelineDefinition", name, args == null ? PipelineDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:datapipeline/pipelineDefinition:PipelineDefinition", name, args == null ? PipelineDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PipelineDefinition(String name, Output<String> id, @Nullable PipelineDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
-    public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+    public Output<String> availabilityZone() {
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="regionName")
       private final @Nullable Output<String> regionName;
 
-    public Output<String> getRegionName() {
-        return this.regionName == null ? Output.empty() : this.regionName;
+    public Output<String> regionName() {
+        return this.regionName == null ? Codegen.empty() : this.regionName;
     }
 
     public InstanceLocationArgs(
@@ -48,8 +49,8 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private InstanceLocationArgs() {
-        this.availabilityZone = Output.empty();
-        this.regionName = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.regionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder regionName(@Nullable Output<String> regionName) {
@@ -87,7 +88,7 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder regionName(@Nullable String regionName) {
-            this.regionName = Output.ofNullable(regionName);
+            this.regionName = Codegen.ofNullable(regionName);
             return this;
         }        public InstanceLocationArgs build() {
             return new InstanceLocationArgs(availabilityZone, regionName);

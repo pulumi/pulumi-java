@@ -10,6 +10,7 @@ import io.pulumi.awsnative.sso.enums.AssignmentTargetType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The sso instance that the permission set is owned.
      * 
      */
-    public Output<String> getInstanceArn() {
+    public Output<String> instanceArn() {
         return this.instanceArn;
     }
     /**
@@ -44,7 +45,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The permission set that the assignemt will be assigned
      * 
      */
-    public Output<String> getPermissionSetArn() {
+    public Output<String> permissionSetArn() {
         return this.permissionSetArn;
     }
     /**
@@ -58,7 +59,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The assignee's identifier, user id/group id
      * 
      */
-    public Output<String> getPrincipalId() {
+    public Output<String> principalId() {
         return this.principalId;
     }
     /**
@@ -72,7 +73,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The assignee's type, user/group
      * 
      */
-    public Output<AssignmentPrincipalType> getPrincipalType() {
+    public Output<AssignmentPrincipalType> principalType() {
         return this.principalType;
     }
     /**
@@ -86,7 +87,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The account id to be provisioned.
      * 
      */
-    public Output<String> getTargetId() {
+    public Output<String> targetId() {
         return this.targetId;
     }
     /**
@@ -100,7 +101,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @return The type of resource to be provsioned to, only aws account now
      * 
      */
-    public Output<AssignmentTargetType> getTargetType() {
+    public Output<AssignmentTargetType> targetType() {
         return this.targetType;
     }
 
@@ -126,7 +127,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Assignment(String name, AssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sso:Assignment", name, args == null ? AssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sso:Assignment", name, args == null ? AssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Assignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

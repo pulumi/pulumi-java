@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storagepool;
 import io.pulumi.azurenative.storagepool.inputs.TargetPortalGroupCreateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskPoolName", required=true)
       private final Output<String> diskPoolName;
 
-    public Output<String> getDiskPoolName() {
+    public Output<String> diskPoolName() {
         return this.diskPoolName;
     }
 
@@ -34,8 +35,8 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iscsiTargetName")
       private final @Nullable Output<String> iscsiTargetName;
 
-    public Output<String> getIscsiTargetName() {
-        return this.iscsiTargetName == null ? Output.empty() : this.iscsiTargetName;
+    public Output<String> iscsiTargetName() {
+        return this.iscsiTargetName == null ? Codegen.empty() : this.iscsiTargetName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -56,8 +57,8 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetIqn")
       private final @Nullable Output<String> targetIqn;
 
-    public Output<String> getTargetIqn() {
-        return this.targetIqn == null ? Output.empty() : this.targetIqn;
+    public Output<String> targetIqn() {
+        return this.targetIqn == null ? Codegen.empty() : this.targetIqn;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tpgs", required=true)
       private final Output<List<TargetPortalGroupCreateArgs>> tpgs;
 
-    public Output<List<TargetPortalGroupCreateArgs>> getTpgs() {
+    public Output<List<TargetPortalGroupCreateArgs>> tpgs() {
         return this.tpgs;
     }
 
@@ -85,11 +86,11 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IscsiTargetArgs() {
-        this.diskPoolName = Output.empty();
-        this.iscsiTargetName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.targetIqn = Output.empty();
-        this.tpgs = Output.empty();
+        this.diskPoolName = Codegen.empty();
+        this.iscsiTargetName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.targetIqn = Codegen.empty();
+        this.tpgs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iscsiTargetName(@Nullable String iscsiTargetName) {
-            this.iscsiTargetName = Output.ofNullable(iscsiTargetName);
+            this.iscsiTargetName = Codegen.ofNullable(iscsiTargetName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -149,7 +150,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetIqn(@Nullable String targetIqn) {
-            this.targetIqn = Output.ofNullable(targetIqn);
+            this.targetIqn = Codegen.ofNullable(targetIqn);
             return this;
         }
         public Builder tpgs(Output<List<TargetPortalGroupCreateArgs>> tpgs) {

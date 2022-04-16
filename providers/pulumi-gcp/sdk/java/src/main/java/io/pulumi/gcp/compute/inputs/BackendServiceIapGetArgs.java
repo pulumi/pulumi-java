@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
     @Import(name="oauth2ClientId", required=true)
       private final Output<String> oauth2ClientId;
 
-    public Output<String> getOauth2ClientId() {
+    public Output<String> oauth2ClientId() {
         return this.oauth2ClientId;
     }
 
@@ -33,7 +34,7 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
     @Import(name="oauth2ClientSecret", required=true)
       private final Output<String> oauth2ClientSecret;
 
-    public Output<String> getOauth2ClientSecret() {
+    public Output<String> oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
 
@@ -46,8 +47,8 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
     @Import(name="oauth2ClientSecretSha256")
       private final @Nullable Output<String> oauth2ClientSecretSha256;
 
-    public Output<String> getOauth2ClientSecretSha256() {
-        return this.oauth2ClientSecretSha256 == null ? Output.empty() : this.oauth2ClientSecretSha256;
+    public Output<String> oauth2ClientSecretSha256() {
+        return this.oauth2ClientSecretSha256 == null ? Codegen.empty() : this.oauth2ClientSecretSha256;
     }
 
     public BackendServiceIapGetArgs(
@@ -60,9 +61,9 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
     }
 
     private BackendServiceIapGetArgs() {
-        this.oauth2ClientId = Output.empty();
-        this.oauth2ClientSecret = Output.empty();
-        this.oauth2ClientSecretSha256 = Output.empty();
+        this.oauth2ClientId = Codegen.empty();
+        this.oauth2ClientSecret = Codegen.empty();
+        this.oauth2ClientSecretSha256 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class BackendServiceIapGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder oauth2ClientSecretSha256(@Nullable String oauth2ClientSecretSha256) {
-            this.oauth2ClientSecretSha256 = Output.ofNullable(oauth2ClientSecretSha256);
+            this.oauth2ClientSecretSha256 = Codegen.ofNullable(oauth2ClientSecretSha256);
             return this;
         }        public BackendServiceIapGetArgs build() {
             return new BackendServiceIapGetArgs(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);

@@ -5,6 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
     @Import(name="eventSource")
       private final @Nullable Output<String> eventSource;
 
-    public Output<String> getEventSource() {
-        return this.eventSource == null ? Output.empty() : this.eventSource;
+    public Output<String> eventSource() {
+        return this.eventSource == null ? Codegen.empty() : this.eventSource;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
     @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> getMaximumExecutionFrequency() {
-        return this.maximumExecutionFrequency == null ? Output.empty() : this.maximumExecutionFrequency;
+    public Output<String> maximumExecutionFrequency() {
+        return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
     @Import(name="messageType")
       private final @Nullable Output<String> messageType;
 
-    public Output<String> getMessageType() {
-        return this.messageType == null ? Output.empty() : this.messageType;
+    public Output<String> messageType() {
+        return this.messageType == null ? Codegen.empty() : this.messageType;
     }
 
     public RuleSourceSourceDetailGetArgs(
@@ -57,9 +58,9 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
     }
 
     private RuleSourceSourceDetailGetArgs() {
-        this.eventSource = Output.empty();
-        this.maximumExecutionFrequency = Output.empty();
-        this.messageType = Output.empty();
+        this.eventSource = Codegen.empty();
+        this.maximumExecutionFrequency = Codegen.empty();
+        this.messageType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder eventSource(@Nullable String eventSource) {
-            this.eventSource = Output.ofNullable(eventSource);
+            this.eventSource = Codegen.ofNullable(eventSource);
             return this;
         }
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
@@ -99,7 +100,7 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
+            this.maximumExecutionFrequency = Codegen.ofNullable(maximumExecutionFrequency);
             return this;
         }
         public Builder messageType(@Nullable Output<String> messageType) {
@@ -107,7 +108,7 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder messageType(@Nullable String messageType) {
-            this.messageType = Output.ofNullable(messageType);
+            this.messageType = Codegen.ofNullable(messageType);
             return this;
         }        public RuleSourceSourceDetailGetArgs build() {
             return new RuleSourceSourceDetailGetArgs(eventSource, maximumExecutionFrequency, messageType);

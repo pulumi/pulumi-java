@@ -10,6 +10,7 @@ import io.pulumi.aws.elasticsearch.outputs.DomainSamlOptionsSamlOptions;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -40,7 +41,7 @@ public class DomainSamlOptions extends io.pulumi.resources.CustomResource {
      * @return Name of the domain.
      * 
      */
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
     /**
@@ -54,7 +55,7 @@ public class DomainSamlOptions extends io.pulumi.resources.CustomResource {
      * @return The SAML authentication options for an AWS Elasticsearch Domain.
      * 
      */
-    public Output</* @Nullable */ DomainSamlOptionsSamlOptions> getSamlOptions() {
+    public Output</* @Nullable */ DomainSamlOptionsSamlOptions> samlOptions() {
         return this.samlOptions;
     }
 
@@ -80,7 +81,7 @@ public class DomainSamlOptions extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainSamlOptions(String name, DomainSamlOptionsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elasticsearch/domainSamlOptions:DomainSamlOptions", name, args == null ? DomainSamlOptionsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elasticsearch/domainSamlOptions:DomainSamlOptions", name, args == null ? DomainSamlOptionsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainSamlOptions(String name, Output<String> id, @Nullable DomainSamlOptionsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.sql.enums.JobStepActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="source")
       private final @Nullable Output<Either<String,JobStepActionSource>> source;
 
-    public Output<Either<String,JobStepActionSource>> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+    public Output<Either<String,JobStepActionSource>> source() {
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<Either<String,JobStepActionType>> type;
 
-    public Output<Either<String,JobStepActionType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<Either<String,JobStepActionType>> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -64,9 +65,9 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobStepActionArgs() {
-        this.source = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.source = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable Either<String,JobStepActionSource> source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,JobStepActionType>> type) {
@@ -106,7 +107,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,JobStepActionType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(Output<String> value) {

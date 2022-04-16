@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
     @Import(name="certificateUrl")
       private final @Nullable Output<String> certificateUrl;
 
-    public Output<String> getCertificateUrl() {
-        return this.certificateUrl == null ? Output.empty() : this.certificateUrl;
+    public Output<String> certificateUrl() {
+        return this.certificateUrl == null ? Codegen.empty() : this.certificateUrl;
     }
 
     public CloudServiceVaultCertificateArgs(@Nullable Output<String> certificateUrl) {
@@ -34,7 +35,7 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
     }
 
     private CloudServiceVaultCertificateArgs() {
-        this.certificateUrl = Output.empty();
+        this.certificateUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
             return this;
         }
         public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = Output.ofNullable(certificateUrl);
+            this.certificateUrl = Codegen.ofNullable(certificateUrl);
             return this;
         }        public CloudServiceVaultCertificateArgs build() {
             return new CloudServiceVaultCertificateArgs(certificateUrl);

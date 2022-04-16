@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ReplicationControllerConditionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
 
-    public Output<Integer> getAvailableReplicas() {
-        return this.availableReplicas == null ? Output.empty() : this.availableReplicas;
+    public Output<Integer> availableReplicas() {
+        return this.availableReplicas == null ? Codegen.empty() : this.availableReplicas;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="conditions")
       private final @Nullable Output<List<ReplicationControllerConditionArgs>> conditions;
 
-    public Output<List<ReplicationControllerConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+    public Output<List<ReplicationControllerConditionArgs>> conditions() {
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="fullyLabeledReplicas")
       private final @Nullable Output<Integer> fullyLabeledReplicas;
 
-    public Output<Integer> getFullyLabeledReplicas() {
-        return this.fullyLabeledReplicas == null ? Output.empty() : this.fullyLabeledReplicas;
+    public Output<Integer> fullyLabeledReplicas() {
+        return this.fullyLabeledReplicas == null ? Codegen.empty() : this.fullyLabeledReplicas;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+    public Output<Integer> observedGeneration() {
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
 
-    public Output<Integer> getReadyReplicas() {
-        return this.readyReplicas == null ? Output.empty() : this.readyReplicas;
+    public Output<Integer> readyReplicas() {
+        return this.readyReplicas == null ? Codegen.empty() : this.readyReplicas;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     @Import(name="replicas", required=true)
       private final Output<Integer> replicas;
 
-    public Output<Integer> getReplicas() {
+    public Output<Integer> replicas() {
         return this.replicas;
     }
 
@@ -102,12 +103,12 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
     }
 
     private ReplicationControllerStatusArgs() {
-        this.availableReplicas = Output.empty();
-        this.conditions = Output.empty();
-        this.fullyLabeledReplicas = Output.empty();
-        this.observedGeneration = Output.empty();
-        this.readyReplicas = Output.empty();
-        this.replicas = Output.empty();
+        this.availableReplicas = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.fullyLabeledReplicas = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
+        this.readyReplicas = Codegen.empty();
+        this.replicas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder availableReplicas(@Nullable Integer availableReplicas) {
-            this.availableReplicas = Output.ofNullable(availableReplicas);
+            this.availableReplicas = Codegen.ofNullable(availableReplicas);
             return this;
         }
         public Builder conditions(@Nullable Output<List<ReplicationControllerConditionArgs>> conditions) {
@@ -153,7 +154,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder conditions(@Nullable List<ReplicationControllerConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(ReplicationControllerConditionArgs... conditions) {
@@ -164,7 +165,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder fullyLabeledReplicas(@Nullable Integer fullyLabeledReplicas) {
-            this.fullyLabeledReplicas = Output.ofNullable(fullyLabeledReplicas);
+            this.fullyLabeledReplicas = Codegen.ofNullable(fullyLabeledReplicas);
             return this;
         }
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
@@ -172,7 +173,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
@@ -180,7 +181,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Output.ofNullable(readyReplicas);
+            this.readyReplicas = Codegen.ofNullable(readyReplicas);
             return this;
         }
         public Builder replicas(Output<Integer> replicas) {

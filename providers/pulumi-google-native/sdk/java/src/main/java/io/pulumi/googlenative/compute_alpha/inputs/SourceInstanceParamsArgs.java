@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.DiskInstantiationConfigArgs;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
     @Import(name="diskConfigs")
       private final @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
 
-    public Output<List<DiskInstantiationConfigArgs>> getDiskConfigs() {
-        return this.diskConfigs == null ? Output.empty() : this.diskConfigs;
+    public Output<List<DiskInstantiationConfigArgs>> diskConfigs() {
+        return this.diskConfigs == null ? Codegen.empty() : this.diskConfigs;
     }
 
     public SourceInstanceParamsArgs(@Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs) {
@@ -35,7 +36,7 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
     }
 
     private SourceInstanceParamsArgs() {
-        this.diskConfigs = Output.empty();
+        this.diskConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder diskConfigs(@Nullable List<DiskInstantiationConfigArgs> diskConfigs) {
-            this.diskConfigs = Output.ofNullable(diskConfigs);
+            this.diskConfigs = Codegen.ofNullable(diskConfigs);
             return this;
         }
         public Builder diskConfigs(DiskInstantiationConfigArgs... diskConfigs) {

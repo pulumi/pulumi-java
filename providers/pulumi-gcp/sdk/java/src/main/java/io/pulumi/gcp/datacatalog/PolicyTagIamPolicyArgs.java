@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class PolicyTagIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -32,7 +33,7 @@ public final class PolicyTagIamPolicyArgs extends io.pulumi.resources.ResourceAr
     @Import(name="policyTag", required=true)
       private final Output<String> policyTag;
 
-    public Output<String> getPolicyTag() {
+    public Output<String> policyTag() {
         return this.policyTag;
     }
 
@@ -44,8 +45,8 @@ public final class PolicyTagIamPolicyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PolicyTagIamPolicyArgs() {
-        this.policyData = Output.empty();
-        this.policyTag = Output.empty();
+        this.policyData = Codegen.empty();
+        this.policyTag = Codegen.empty();
     }
 
     public static Builder builder() {

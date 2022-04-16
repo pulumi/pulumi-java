@@ -10,6 +10,7 @@ import io.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigPermissionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="awsKmsKeyArn")
       private final @Nullable Output<String> awsKmsKeyArn;
 
-    public Output<String> getAwsKmsKeyArn() {
-        return this.awsKmsKeyArn == null ? Output.empty() : this.awsKmsKeyArn;
+    public Output<String> awsKmsKeyArn() {
+        return this.awsKmsKeyArn == null ? Codegen.empty() : this.awsKmsKeyArn;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentConfig")
       private final @Nullable Output<PipelineContentConfigArgs> contentConfig;
 
-    public Output<PipelineContentConfigArgs> getContentConfig() {
-        return this.contentConfig == null ? Output.empty() : this.contentConfig;
+    public Output<PipelineContentConfigArgs> contentConfig() {
+        return this.contentConfig == null ? Codegen.empty() : this.contentConfig;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="contentConfigPermissions")
       private final @Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions;
 
-    public Output<List<PipelineContentConfigPermissionArgs>> getContentConfigPermissions() {
-        return this.contentConfigPermissions == null ? Output.empty() : this.contentConfigPermissions;
+    public Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions() {
+        return this.contentConfigPermissions == null ? Codegen.empty() : this.contentConfigPermissions;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputBucket", required=true)
       private final Output<String> inputBucket;
 
-    public Output<String> getInputBucket() {
+    public Output<String> inputBucket() {
         return this.inputBucket;
     }
 
@@ -71,8 +72,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notifications")
       private final @Nullable Output<PipelineNotificationsArgs> notifications;
 
-    public Output<PipelineNotificationsArgs> getNotifications() {
-        return this.notifications == null ? Output.empty() : this.notifications;
+    public Output<PipelineNotificationsArgs> notifications() {
+        return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputBucket")
       private final @Nullable Output<String> outputBucket;
 
-    public Output<String> getOutputBucket() {
-        return this.outputBucket == null ? Output.empty() : this.outputBucket;
+    public Output<String> outputBucket() {
+        return this.outputBucket == null ? Codegen.empty() : this.outputBucket;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -115,8 +116,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thumbnailConfig")
       private final @Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig;
 
-    public Output<PipelineThumbnailConfigArgs> getThumbnailConfig() {
-        return this.thumbnailConfig == null ? Output.empty() : this.thumbnailConfig;
+    public Output<PipelineThumbnailConfigArgs> thumbnailConfig() {
+        return this.thumbnailConfig == null ? Codegen.empty() : this.thumbnailConfig;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="thumbnailConfigPermissions")
       private final @Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions;
 
-    public Output<List<PipelineThumbnailConfigPermissionArgs>> getThumbnailConfigPermissions() {
-        return this.thumbnailConfigPermissions == null ? Output.empty() : this.thumbnailConfigPermissions;
+    public Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions() {
+        return this.thumbnailConfigPermissions == null ? Codegen.empty() : this.thumbnailConfigPermissions;
     }
 
     public PipelineArgs(
@@ -154,16 +155,16 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.awsKmsKeyArn = Output.empty();
-        this.contentConfig = Output.empty();
-        this.contentConfigPermissions = Output.empty();
-        this.inputBucket = Output.empty();
-        this.name = Output.empty();
-        this.notifications = Output.empty();
-        this.outputBucket = Output.empty();
-        this.role = Output.empty();
-        this.thumbnailConfig = Output.empty();
-        this.thumbnailConfigPermissions = Output.empty();
+        this.awsKmsKeyArn = Codegen.empty();
+        this.contentConfig = Codegen.empty();
+        this.contentConfigPermissions = Codegen.empty();
+        this.inputBucket = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notifications = Codegen.empty();
+        this.outputBucket = Codegen.empty();
+        this.role = Codegen.empty();
+        this.thumbnailConfig = Codegen.empty();
+        this.thumbnailConfigPermissions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsKmsKeyArn(@Nullable String awsKmsKeyArn) {
-            this.awsKmsKeyArn = Output.ofNullable(awsKmsKeyArn);
+            this.awsKmsKeyArn = Codegen.ofNullable(awsKmsKeyArn);
             return this;
         }
         public Builder contentConfig(@Nullable Output<PipelineContentConfigArgs> contentConfig) {
@@ -217,7 +218,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentConfig(@Nullable PipelineContentConfigArgs contentConfig) {
-            this.contentConfig = Output.ofNullable(contentConfig);
+            this.contentConfig = Codegen.ofNullable(contentConfig);
             return this;
         }
         public Builder contentConfigPermissions(@Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions) {
@@ -225,7 +226,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentConfigPermissions(@Nullable List<PipelineContentConfigPermissionArgs> contentConfigPermissions) {
-            this.contentConfigPermissions = Output.ofNullable(contentConfigPermissions);
+            this.contentConfigPermissions = Codegen.ofNullable(contentConfigPermissions);
             return this;
         }
         public Builder contentConfigPermissions(PipelineContentConfigPermissionArgs... contentConfigPermissions) {
@@ -244,7 +245,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notifications(@Nullable Output<PipelineNotificationsArgs> notifications) {
@@ -252,7 +253,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notifications(@Nullable PipelineNotificationsArgs notifications) {
-            this.notifications = Output.ofNullable(notifications);
+            this.notifications = Codegen.ofNullable(notifications);
             return this;
         }
         public Builder outputBucket(@Nullable Output<String> outputBucket) {
@@ -260,7 +261,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputBucket(@Nullable String outputBucket) {
-            this.outputBucket = Output.ofNullable(outputBucket);
+            this.outputBucket = Codegen.ofNullable(outputBucket);
             return this;
         }
         public Builder role(Output<String> role) {
@@ -276,7 +277,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thumbnailConfig(@Nullable PipelineThumbnailConfigArgs thumbnailConfig) {
-            this.thumbnailConfig = Output.ofNullable(thumbnailConfig);
+            this.thumbnailConfig = Codegen.ofNullable(thumbnailConfig);
             return this;
         }
         public Builder thumbnailConfigPermissions(@Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions) {
@@ -284,7 +285,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thumbnailConfigPermissions(@Nullable List<PipelineThumbnailConfigPermissionArgs> thumbnailConfigPermissions) {
-            this.thumbnailConfigPermissions = Output.ofNullable(thumbnailConfigPermissions);
+            this.thumbnailConfigPermissions = Codegen.ofNullable(thumbnailConfigPermissions);
             return this;
         }
         public Builder thumbnailConfigPermissions(PipelineThumbnailConfigPermissionArgs... thumbnailConfigPermissions) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class RuntimeMetricArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemMetrics")
       private final @Nullable Output<Map<String,String>> systemMetrics;
 
-    public Output<Map<String,String>> getSystemMetrics() {
-        return this.systemMetrics == null ? Output.empty() : this.systemMetrics;
+    public Output<Map<String,String>> systemMetrics() {
+        return this.systemMetrics == null ? Codegen.empty() : this.systemMetrics;
     }
 
     public RuntimeMetricArgs(@Nullable Output<Map<String,String>> systemMetrics) {
@@ -27,7 +28,7 @@ public final class RuntimeMetricArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuntimeMetricArgs() {
-        this.systemMetrics = Output.empty();
+        this.systemMetrics = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class RuntimeMetricArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemMetrics(@Nullable Map<String,String> systemMetrics) {
-            this.systemMetrics = Output.ofNullable(systemMetrics);
+            this.systemMetrics = Codegen.ofNullable(systemMetrics);
             return this;
         }        public RuntimeMetricArgs build() {
             return new RuntimeMetricArgs(systemMetrics);

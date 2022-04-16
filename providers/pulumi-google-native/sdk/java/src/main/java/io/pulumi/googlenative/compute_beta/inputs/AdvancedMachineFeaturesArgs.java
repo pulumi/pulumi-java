@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="enableNestedVirtualization")
       private final @Nullable Output<Boolean> enableNestedVirtualization;
 
-    public Output<Boolean> getEnableNestedVirtualization() {
-        return this.enableNestedVirtualization == null ? Output.empty() : this.enableNestedVirtualization;
+    public Output<Boolean> enableNestedVirtualization() {
+        return this.enableNestedVirtualization == null ? Codegen.empty() : this.enableNestedVirtualization;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="enableUefiNetworking")
       private final @Nullable Output<Boolean> enableUefiNetworking;
 
-    public Output<Boolean> getEnableUefiNetworking() {
-        return this.enableUefiNetworking == null ? Output.empty() : this.enableUefiNetworking;
+    public Output<Boolean> enableUefiNetworking() {
+        return this.enableUefiNetworking == null ? Codegen.empty() : this.enableUefiNetworking;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
-    public Output<Integer> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
+    public Output<Integer> threadsPerCore() {
+        return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 
     public AdvancedMachineFeaturesArgs(
@@ -62,9 +63,9 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     }
 
     private AdvancedMachineFeaturesArgs() {
-        this.enableNestedVirtualization = Output.empty();
-        this.enableUefiNetworking = Output.empty();
-        this.threadsPerCore = Output.empty();
+        this.enableNestedVirtualization = Codegen.empty();
+        this.enableUefiNetworking = Codegen.empty();
+        this.threadsPerCore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
-            this.enableNestedVirtualization = Output.ofNullable(enableNestedVirtualization);
+            this.enableNestedVirtualization = Codegen.ofNullable(enableNestedVirtualization);
             return this;
         }
         public Builder enableUefiNetworking(@Nullable Output<Boolean> enableUefiNetworking) {
@@ -104,7 +105,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableUefiNetworking(@Nullable Boolean enableUefiNetworking) {
-            this.enableUefiNetworking = Output.ofNullable(enableUefiNetworking);
+            this.enableUefiNetworking = Codegen.ofNullable(enableUefiNetworking);
             return this;
         }
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
@@ -112,7 +113,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Output.ofNullable(threadsPerCore);
+            this.threadsPerCore = Codegen.ofNullable(threadsPerCore);
             return this;
         }        public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(enableNestedVirtualization, enableUefiNetworking, threadsPerCore);

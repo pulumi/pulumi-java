@@ -26,7 +26,7 @@ public final class FeatureMembershipConfigmanagementBinauthz {
      * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
      * 
     */
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
 

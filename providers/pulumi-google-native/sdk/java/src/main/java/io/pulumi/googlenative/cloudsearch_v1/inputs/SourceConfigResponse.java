@@ -25,7 +25,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="crowdingConfig", required=true)
       private final SourceCrowdingConfigResponse crowdingConfig;
 
-    public SourceCrowdingConfigResponse getCrowdingConfig() {
+    public SourceCrowdingConfigResponse crowdingConfig() {
         return this.crowdingConfig;
     }
 
@@ -36,7 +36,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="scoringConfig", required=true)
       private final SourceScoringConfigResponse scoringConfig;
 
-    public SourceScoringConfigResponse getScoringConfig() {
+    public SourceScoringConfigResponse scoringConfig() {
         return this.scoringConfig;
     }
 
@@ -47,7 +47,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
       private final SourceResponse source;
 
-    public SourceResponse getSource() {
+    public SourceResponse source() {
         return this.source;
     }
 

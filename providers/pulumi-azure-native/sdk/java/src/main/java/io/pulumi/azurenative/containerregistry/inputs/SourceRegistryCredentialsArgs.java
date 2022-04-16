@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.SourceRegistryLoginMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
     @Import(name="loginMode")
       private final @Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode;
 
-    public Output<Either<String,SourceRegistryLoginMode>> getLoginMode() {
-        return this.loginMode == null ? Output.empty() : this.loginMode;
+    public Output<Either<String,SourceRegistryLoginMode>> loginMode() {
+        return this.loginMode == null ? Codegen.empty() : this.loginMode;
     }
 
     public SourceRegistryCredentialsArgs(@Nullable Output<Either<String,SourceRegistryLoginMode>> loginMode) {
@@ -38,7 +39,7 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
     }
 
     private SourceRegistryCredentialsArgs() {
-        this.loginMode = Output.empty();
+        this.loginMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -66,7 +67,7 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder loginMode(@Nullable Either<String,SourceRegistryLoginMode> loginMode) {
-            this.loginMode = Output.ofNullable(loginMode);
+            this.loginMode = Codegen.ofNullable(loginMode);
             return this;
         }        public SourceRegistryCredentialsArgs build() {
             return new SourceRegistryCredentialsArgs(loginMode);

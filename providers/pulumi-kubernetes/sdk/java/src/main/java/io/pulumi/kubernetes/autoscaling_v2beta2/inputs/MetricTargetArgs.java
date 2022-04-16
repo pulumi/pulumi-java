@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="averageUtilization")
       private final @Nullable Output<Integer> averageUtilization;
 
-    public Output<Integer> getAverageUtilization() {
-        return this.averageUtilization == null ? Output.empty() : this.averageUtilization;
+    public Output<Integer> averageUtilization() {
+        return this.averageUtilization == null ? Codegen.empty() : this.averageUtilization;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="averageValue")
       private final @Nullable Output<String> averageValue;
 
-    public Output<String> getAverageValue() {
-        return this.averageValue == null ? Output.empty() : this.averageValue;
+    public Output<String> averageValue() {
+        return this.averageValue == null ? Codegen.empty() : this.averageValue;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -59,8 +60,8 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public MetricTargetArgs(
@@ -75,10 +76,10 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricTargetArgs() {
-        this.averageUtilization = Output.empty();
-        this.averageValue = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.averageUtilization = Codegen.empty();
+        this.averageValue = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder averageUtilization(@Nullable Integer averageUtilization) {
-            this.averageUtilization = Output.ofNullable(averageUtilization);
+            this.averageUtilization = Codegen.ofNullable(averageUtilization);
             return this;
         }
         public Builder averageValue(@Nullable Output<String> averageValue) {
@@ -120,7 +121,7 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder averageValue(@Nullable String averageValue) {
-            this.averageValue = Output.ofNullable(averageValue);
+            this.averageValue = Codegen.ofNullable(averageValue);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -136,7 +137,7 @@ public final class MetricTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public MetricTargetArgs build() {
             return new MetricTargetArgs(averageUtilization, averageValue, type, value);

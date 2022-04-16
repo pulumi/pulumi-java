@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="healthChecks", required=true)
       private final Output<List<RestHealthCheckArgs>> healthChecks;
 
-    public Output<List<RestHealthCheckArgs>> getHealthChecks() {
+    public Output<List<RestHealthCheckArgs>> healthChecks() {
         return this.healthChecks;
     }
 
@@ -38,7 +39,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="healthyStateDuration", required=true)
       private final Output<String> healthyStateDuration;
 
-    public Output<String> getHealthyStateDuration() {
+    public Output<String> healthyStateDuration() {
         return this.healthyStateDuration;
     }
 
@@ -49,8 +50,8 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="maxElasticDuration")
       private final @Nullable Output<String> maxElasticDuration;
 
-    public Output<String> getMaxElasticDuration() {
-        return this.maxElasticDuration == null ? Output.empty() : this.maxElasticDuration;
+    public Output<String> maxElasticDuration() {
+        return this.maxElasticDuration == null ? Codegen.empty() : this.maxElasticDuration;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -72,8 +73,8 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     @Import(name="waitDuration")
       private final @Nullable Output<String> waitDuration;
 
-    public Output<String> getWaitDuration() {
-        return this.waitDuration == null ? Output.empty() : this.waitDuration;
+    public Output<String> waitDuration() {
+        return this.waitDuration == null ? Codegen.empty() : this.waitDuration;
     }
 
     public RestHealthCheckStepAttributesArgs(
@@ -90,11 +91,11 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
     }
 
     private RestHealthCheckStepAttributesArgs() {
-        this.healthChecks = Output.empty();
-        this.healthyStateDuration = Output.empty();
-        this.maxElasticDuration = Output.empty();
-        this.type = Output.empty();
-        this.waitDuration = Output.empty();
+        this.healthChecks = Codegen.empty();
+        this.healthyStateDuration = Codegen.empty();
+        this.maxElasticDuration = Codegen.empty();
+        this.type = Codegen.empty();
+        this.waitDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
             return this;
         }
         public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
-            this.maxElasticDuration = Output.ofNullable(maxElasticDuration);
+            this.maxElasticDuration = Codegen.ofNullable(maxElasticDuration);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -165,7 +166,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
             return this;
         }
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = Output.ofNullable(waitDuration);
+            this.waitDuration = Codegen.ofNullable(waitDuration);
             return this;
         }        public RestHealthCheckStepAttributesArgs build() {
             return new RestHealthCheckStepAttributesArgs(healthChecks, healthyStateDuration, maxElasticDuration, type, waitDuration);

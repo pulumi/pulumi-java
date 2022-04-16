@@ -25,7 +25,7 @@ public final class DistcpSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="distcpOptions")
       private final @Nullable Object distcpOptions;
 
-    public Optional<Object> getDistcpOptions() {
+    public Optional<Object> distcpOptions() {
         return this.distcpOptions == null ? Optional.empty() : Optional.ofNullable(this.distcpOptions);
     }
 
@@ -36,7 +36,7 @@ public final class DistcpSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="resourceManagerEndpoint", required=true)
       private final Object resourceManagerEndpoint;
 
-    public Object getResourceManagerEndpoint() {
+    public Object resourceManagerEndpoint() {
         return this.resourceManagerEndpoint;
     }
 
@@ -47,7 +47,7 @@ public final class DistcpSettingsResponse extends io.pulumi.resources.InvokeArgs
     @Import(name="tempScriptPath", required=true)
       private final Object tempScriptPath;
 
-    public Object getTempScriptPath() {
+    public Object tempScriptPath() {
         return this.tempScriptPath;
     }
 

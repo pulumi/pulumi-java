@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.PolicyStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="days")
       private final @Nullable Output<Integer> days;
 
-    public Output<Integer> getDays() {
-        return this.days == null ? Output.empty() : this.days;
+    public Output<Integer> days() {
+        return this.days == null ? Codegen.empty() : this.days;
     }
 
     /**
@@ -39,20 +40,20 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Output<Either<String,PolicyStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,PolicyStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public RetentionPolicyArgs(
         @Nullable Output<Integer> days,
         @Nullable Output<Either<String,PolicyStatus>> status) {
-        this.days = days == null ? Output.ofNullable(7) : days;
+        this.days = days == null ? Codegen.ofNullable(7) : days;
         this.status = status == null ? Output.ofLeft("disabled") : status;
     }
 
     private RetentionPolicyArgs() {
-        this.days = Output.empty();
-        this.status = Output.empty();
+        this.days = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder days(@Nullable Integer days) {
-            this.days = Output.ofNullable(days);
+            this.days = Codegen.ofNullable(days);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
@@ -90,7 +91,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public RetentionPolicyArgs build() {
             return new RetentionPolicyArgs(days, status);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.TableArgs;
 import io.pulumi.gcp.bigquery.inputs.TableState;
@@ -59,7 +60,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * descending priority order.
      * 
      */
-    public Output</* @Nullable */ List<String>> getClusterings() {
+    public Output</* @Nullable */ List<String>> clusterings() {
         return this.clusterings;
     }
     /**
@@ -73,7 +74,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The time when this table was created, in milliseconds since the epoch.
      * 
      */
-    public Output<Integer> getCreationTime() {
+    public Output<Integer> creationTime() {
         return this.creationTime;
     }
     /**
@@ -89,7 +90,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getDatasetId() {
+    public Output<String> datasetId() {
         return this.datasetId;
     }
     /**
@@ -105,7 +106,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * in state, a `=destroy` or `=update` that would delete the instance will fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeletionProtection() {
+    public Output</* @Nullable */ Boolean> deletionProtection() {
         return this.deletionProtection;
     }
     /**
@@ -119,7 +120,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The field description.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -137,7 +138,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * is transparent to the user.  Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableEncryptionConfiguration> getEncryptionConfiguration() {
+    public Output</* @Nullable */ TableEncryptionConfiguration> encryptionConfiguration() {
         return this.encryptionConfiguration;
     }
     /**
@@ -151,7 +152,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A hash of the resource.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -171,7 +172,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * reclaimed.
      * 
      */
-    public Output<Integer> getExpirationTime() {
+    public Output<Integer> expirationTime() {
         return this.expirationTime;
     }
     /**
@@ -191,7 +192,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * if it were a standard BigQuery table. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableExternalDataConfiguration> getExternalDataConfiguration() {
+    public Output</* @Nullable */ TableExternalDataConfiguration> externalDataConfiguration() {
         return this.externalDataConfiguration;
     }
     /**
@@ -205,7 +206,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A descriptive name for the table.
      * 
      */
-    public Output</* @Nullable */ String> getFriendlyName() {
+    public Output</* @Nullable */ String> friendlyName() {
         return this.friendlyName;
     }
     /**
@@ -219,7 +220,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return A mapping of labels to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -233,7 +234,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The time when this table was last modified, in milliseconds since the epoch.
      * 
      */
-    public Output<Integer> getLastModifiedTime() {
+    public Output<Integer> lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
@@ -247,7 +248,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The geographic location where the table resides. This value is inherited from the dataset.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -263,7 +264,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableMaterializedView> getMaterializedView() {
+    public Output</* @Nullable */ TableMaterializedView> materializedView() {
         return this.materializedView;
     }
     /**
@@ -277,7 +278,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The size of this table in bytes, excluding any data in the streaming buffer.
      * 
      */
-    public Output<Integer> getNumBytes() {
+    public Output<Integer> numBytes() {
         return this.numBytes;
     }
     /**
@@ -291,7 +292,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The number of bytes in the table that are considered "long-term storage".
      * 
      */
-    public Output<Integer> getNumLongTermBytes() {
+    public Output<Integer> numLongTermBytes() {
         return this.numLongTermBytes;
     }
     /**
@@ -305,7 +306,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The number of rows of data in this table, excluding any data in the streaming buffer.
      * 
      */
-    public Output<Integer> getNumRows() {
+    public Output<Integer> numRows() {
         return this.numRows;
     }
     /**
@@ -321,7 +322,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -337,7 +338,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableRangePartitioning> getRangePartitioning() {
+    public Output</* @Nullable */ TableRangePartitioning> rangePartitioning() {
         return this.rangePartitioning;
     }
     /**
@@ -371,7 +372,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * `google_bigquery_table.schema`
      * 
      */
-    public Output<String> getSchema() {
+    public Output<String> schema() {
         return this.schema;
     }
     /**
@@ -385,7 +386,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -401,7 +402,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Changing this forces a new resource to be created.
      * 
      */
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
     /**
@@ -417,7 +418,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableTimePartitioning> getTimePartitioning() {
+    public Output</* @Nullable */ TableTimePartitioning> timePartitioning() {
         return this.timePartitioning;
     }
     /**
@@ -433,7 +434,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * which will generate one partition per day, hour, month, and year, respectively.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -449,7 +450,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ TableView> getView() {
+    public Output</* @Nullable */ TableView> view() {
         return this.view;
     }
 
@@ -475,7 +476,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Table(String name, TableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/table:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/table:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Table(String name, Output<String> id, @Nullable TableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

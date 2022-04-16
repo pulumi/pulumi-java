@@ -27,7 +27,7 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.reso
     @Import(name="databasesToSourceTables", required=true)
       private final Map<String,List<DatabaseTableResponse>> databasesToSourceTables;
 
-    public Map<String,List<DatabaseTableResponse>> getDatabasesToSourceTables() {
+    public Map<String,List<DatabaseTableResponse>> databasesToSourceTables() {
         return this.databasesToSourceTables;
     }
 
@@ -38,7 +38,7 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.reso
     @Import(name="databasesToTargetTables", required=true)
       private final Map<String,List<DatabaseTableResponse>> databasesToTargetTables;
 
-    public Map<String,List<DatabaseTableResponse>> getDatabasesToTargetTables() {
+    public Map<String,List<DatabaseTableResponse>> databasesToTargetTables() {
         return this.databasesToTargetTables;
     }
 
@@ -49,7 +49,7 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.reso
     @Import(name="tableValidationErrors", required=true)
       private final Map<String,List<String>> tableValidationErrors;
 
-    public Map<String,List<String>> getTableValidationErrors() {
+    public Map<String,List<String>> tableValidationErrors() {
         return this.tableValidationErrors;
     }
 
@@ -60,7 +60,7 @@ public final class GetUserTablesSqlSyncTaskOutputResponse extends io.pulumi.reso
     @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
-    public List<ReportableExceptionResponse> getValidationErrors() {
+    public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
 

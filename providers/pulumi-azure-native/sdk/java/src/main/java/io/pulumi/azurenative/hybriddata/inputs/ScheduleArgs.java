@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hybriddata.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyList")
       private final @Nullable Output<List<String>> policyList;
 
-    public Output<List<String>> getPolicyList() {
-        return this.policyList == null ? Output.empty() : this.policyList;
+    public Output<List<String>> policyList() {
+        return this.policyList == null ? Codegen.empty() : this.policyList;
     }
 
     public ScheduleArgs(
@@ -49,8 +50,8 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.name = Output.empty();
-        this.policyList = Output.empty();
+        this.name = Codegen.empty();
+        this.policyList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policyList(@Nullable Output<List<String>> policyList) {
@@ -88,7 +89,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyList(@Nullable List<String> policyList) {
-            this.policyList = Output.ofNullable(policyList);
+            this.policyList = Codegen.ofNullable(policyList);
             return this;
         }
         public Builder policyList(String... policyList) {

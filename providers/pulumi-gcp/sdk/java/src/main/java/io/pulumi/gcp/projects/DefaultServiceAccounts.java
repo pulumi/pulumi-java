@@ -6,6 +6,7 @@ package io.pulumi.gcp.projects;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.DefaultServiceAccountsArgs;
 import io.pulumi.gcp.projects.inputs.DefaultServiceAccountsState;
@@ -50,7 +51,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * @return The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -64,7 +65,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * @return The project ID where service accounts are created.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -84,7 +85,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
      * 
      */
-    public Output</* @Nullable */ String> getRestorePolicy() {
+    public Output</* @Nullable */ String> restorePolicy() {
         return this.restorePolicy;
     }
     /**
@@ -98,7 +99,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * @return The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
      * 
      */
-    public Output<Map<String,Object>> getServiceAccounts() {
+    public Output<Map<String,Object>> serviceAccounts() {
         return this.serviceAccounts;
     }
 
@@ -124,7 +125,7 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultServiceAccounts(String name, DefaultServiceAccountsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:projects/defaultServiceAccounts:DefaultServiceAccounts", name, args == null ? DefaultServiceAccountsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:projects/defaultServiceAccounts:DefaultServiceAccounts", name, args == null ? DefaultServiceAccountsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DefaultServiceAccounts(String name, Output<String> id, @Nullable DefaultServiceAccountsState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

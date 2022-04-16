@@ -23,7 +23,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="countryCode", required=true)
       private final String countryCode;
 
-    public String getCountryCode() {
+    public String countryCode() {
         return this.countryCode;
     }
 
@@ -34,7 +34,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -45,7 +45,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="phoneNumber", required=true)
       private final String phoneNumber;
 
-    public String getPhoneNumber() {
+    public String phoneNumber() {
         return this.phoneNumber;
     }
 
@@ -56,7 +56,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
       private final String status;
 
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
 

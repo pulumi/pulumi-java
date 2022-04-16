@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.MembershipRoleRestrictionEvaluationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
     @Import(name="memberRestrictionEvaluation")
       private final @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
 
-    public Output<MembershipRoleRestrictionEvaluationArgs> getMemberRestrictionEvaluation() {
-        return this.memberRestrictionEvaluation == null ? Output.empty() : this.memberRestrictionEvaluation;
+    public Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation() {
+        return this.memberRestrictionEvaluation == null ? Codegen.empty() : this.memberRestrictionEvaluation;
     }
 
     public RestrictionEvaluationsArgs(@Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation) {
@@ -34,7 +35,7 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
     }
 
     private RestrictionEvaluationsArgs() {
-        this.memberRestrictionEvaluation = Output.empty();
+        this.memberRestrictionEvaluation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class RestrictionEvaluationsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder memberRestrictionEvaluation(@Nullable MembershipRoleRestrictionEvaluationArgs memberRestrictionEvaluation) {
-            this.memberRestrictionEvaluation = Output.ofNullable(memberRestrictionEvaluation);
+            this.memberRestrictionEvaluation = Codegen.ofNullable(memberRestrictionEvaluation);
             return this;
         }        public RestrictionEvaluationsArgs build() {
             return new RestrictionEvaluationsArgs(memberRestrictionEvaluation);

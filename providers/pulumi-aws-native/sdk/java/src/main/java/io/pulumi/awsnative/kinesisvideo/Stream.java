@@ -9,6 +9,7 @@ import io.pulumi.awsnative.kinesisvideo.outputs.StreamTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Kinesis Video stream.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -45,7 +46,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The number of hours till which Kinesis Video will retain the data in the stream
      * 
      */
-    public Output</* @Nullable */ Integer> getDataRetentionInHours() {
+    public Output</* @Nullable */ Integer> dataRetentionInHours() {
         return this.dataRetentionInHours;
     }
     /**
@@ -59,7 +60,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The name of the device that is writing to the stream.
      * 
      */
-    public Output</* @Nullable */ String> getDeviceName() {
+    public Output</* @Nullable */ String> deviceName() {
         return this.deviceName;
     }
     /**
@@ -73,7 +74,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
      * 
      */
-    public Output</* @Nullable */ String> getKmsKeyId() {
+    public Output</* @Nullable */ String> kmsKeyId() {
         return this.kmsKeyId;
     }
     /**
@@ -87,7 +88,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The media type of the stream. Consumers of the stream can use this information when processing the stream.
      * 
      */
-    public Output</* @Nullable */ String> getMediaType() {
+    public Output</* @Nullable */ String> mediaType() {
         return this.mediaType;
     }
     /**
@@ -101,7 +102,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return The name of the Kinesis Video stream.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs associated with the Kinesis Video Stream.
      * 
      */
-    public Output</* @Nullable */ List<StreamTag>> getTags() {
+    public Output</* @Nullable */ List<StreamTag>> tags() {
         return this.tags;
     }
 
@@ -141,7 +142,7 @@ public class Stream extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Stream(String name, @Nullable StreamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:kinesisvideo:Stream", name, args == null ? StreamArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:kinesisvideo:Stream", name, args == null ? StreamArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Stream(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

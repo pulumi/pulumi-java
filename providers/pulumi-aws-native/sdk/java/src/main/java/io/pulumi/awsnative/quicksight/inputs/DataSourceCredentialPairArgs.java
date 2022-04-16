@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,8 +36,8 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
     @Import(name="alternateDataSourceParameters")
       private final @Nullable Output<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
-    public Output<List<DataSourceParametersArgs>> getAlternateDataSourceParameters() {
-        return this.alternateDataSourceParameters == null ? Output.empty() : this.alternateDataSourceParameters;
+    public Output<List<DataSourceParametersArgs>> alternateDataSourceParameters() {
+        return this.alternateDataSourceParameters == null ? Codegen.empty() : this.alternateDataSourceParameters;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -57,7 +58,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -71,9 +72,9 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
     }
 
     private DataSourceCredentialPairArgs() {
-        this.alternateDataSourceParameters = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.alternateDataSourceParameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder alternateDataSourceParameters(@Nullable List<DataSourceParametersArgs> alternateDataSourceParameters) {
-            this.alternateDataSourceParameters = Output.ofNullable(alternateDataSourceParameters);
+            this.alternateDataSourceParameters = Codegen.ofNullable(alternateDataSourceParameters);
             return this;
         }
         public Builder alternateDataSourceParameters(DataSourceParametersArgs... alternateDataSourceParameters) {

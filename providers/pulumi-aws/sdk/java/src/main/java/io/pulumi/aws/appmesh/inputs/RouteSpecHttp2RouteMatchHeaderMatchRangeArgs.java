@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeArgs extends io.pulum
     @Import(name="end", required=true)
       private final Output<Integer> end;
 
-    public Output<Integer> getEnd() {
+    public Output<Integer> end() {
         return this.end;
     }
 
@@ -31,7 +32,7 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeArgs extends io.pulum
     @Import(name="start", required=true)
       private final Output<Integer> start;
 
-    public Output<Integer> getStart() {
+    public Output<Integer> start() {
         return this.start;
     }
 
@@ -43,8 +44,8 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRangeArgs extends io.pulum
     }
 
     private RouteSpecHttp2RouteMatchHeaderMatchRangeArgs() {
-        this.end = Output.empty();
-        this.start = Output.empty();
+        this.end = Codegen.empty();
+        this.start = Codegen.empty();
     }
 
     public static Builder builder() {

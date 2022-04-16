@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="authenticationType")
       private final @Nullable Output<String> authenticationType;
 
-    public Output<String> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+    public Output<String> authenticationType() {
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+    public Output<String> createdTime() {
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
-    public Output<String> getFirstName() {
-        return this.firstName == null ? Output.empty() : this.firstName;
+    public Output<String> firstName() {
+        return this.firstName == null ? Codegen.empty() : this.firstName;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
-    public Output<String> getLastName() {
-        return this.lastName == null ? Output.empty() : this.lastName;
+    public Output<String> lastName() {
+        return this.lastName == null ? Codegen.empty() : this.lastName;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> getSendEmailNotification() {
-        return this.sendEmailNotification == null ? Output.empty() : this.sendEmailNotification;
+    public Output<Boolean> sendEmailNotification() {
+        return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName")
       private final @Nullable Output<String> userName;
 
-    public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<String> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public UserState(
@@ -123,14 +124,14 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserState() {
-        this.arn = Output.empty();
-        this.authenticationType = Output.empty();
-        this.createdTime = Output.empty();
-        this.enabled = Output.empty();
-        this.firstName = Output.empty();
-        this.lastName = Output.empty();
-        this.sendEmailNotification = Output.empty();
-        this.userName = Output.empty();
+        this.arn = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.firstName = Codegen.empty();
+        this.lastName = Codegen.empty();
+        this.sendEmailNotification = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authenticationType(@Nullable Output<String> authenticationType) {
@@ -180,7 +181,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -188,7 +189,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -196,7 +197,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder firstName(@Nullable Output<String> firstName) {
@@ -204,7 +205,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firstName(@Nullable String firstName) {
-            this.firstName = Output.ofNullable(firstName);
+            this.firstName = Codegen.ofNullable(firstName);
             return this;
         }
         public Builder lastName(@Nullable Output<String> lastName) {
@@ -212,7 +213,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastName(@Nullable String lastName) {
-            this.lastName = Output.ofNullable(lastName);
+            this.lastName = Codegen.ofNullable(lastName);
             return this;
         }
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
@@ -220,7 +221,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Output.ofNullable(sendEmailNotification);
+            this.sendEmailNotification = Codegen.ofNullable(sendEmailNotification);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -228,7 +229,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public UserState build() {
             return new UserState(arn, authenticationType, createdTime, enabled, firstName, lastName, sendEmailNotification, userName);

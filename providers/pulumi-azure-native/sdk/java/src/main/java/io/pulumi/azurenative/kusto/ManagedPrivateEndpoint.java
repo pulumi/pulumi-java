@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The groupId in which the managed private endpoint is created.
      * 
      */
-    public Output<String> getGroupId() {
+    public Output<String> groupId() {
         return this.groupId;
     }
     /**
@@ -56,7 +57,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The ARM resource ID of the resource for which the managed private endpoint is created.
      * 
      */
-    public Output<String> getPrivateLinkResourceId() {
+    public Output<String> privateLinkResourceId() {
         return this.privateLinkResourceId;
     }
     /**
@@ -84,7 +85,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The region of the resource to which the managed private endpoint is created.
      * 
      */
-    public Output</* @Nullable */ String> getPrivateLinkResourceRegion() {
+    public Output</* @Nullable */ String> privateLinkResourceRegion() {
         return this.privateLinkResourceRegion;
     }
     /**
@@ -98,7 +99,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The provisioned state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -112,7 +113,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The user request message.
      * 
      */
-    public Output</* @Nullable */ String> getRequestMessage() {
+    public Output</* @Nullable */ String> requestMessage() {
         return this.requestMessage;
     }
     /**
@@ -126,7 +127,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -140,7 +141,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -166,7 +167,7 @@ public class ManagedPrivateEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedPrivateEndpoint(String name, ManagedPrivateEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:kusto:ManagedPrivateEndpoint", name, args == null ? ManagedPrivateEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:kusto:ManagedPrivateEndpoint", name, args == null ? ManagedPrivateEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagedPrivateEndpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

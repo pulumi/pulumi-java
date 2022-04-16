@@ -34,14 +34,14 @@ public final class ListClusterStreamingJobsResult {
      * The URL to fetch the next set of streaming jobs.
      * 
     */
-    public String getNextLink() {
+    public String nextLink() {
         return this.nextLink;
     }
     /**
      * A list of streaming jobs.
      * 
     */
-    public List<ClusterJobResponse> getValue() {
+    public List<ClusterJobResponse> value() {
         return this.value;
     }
 

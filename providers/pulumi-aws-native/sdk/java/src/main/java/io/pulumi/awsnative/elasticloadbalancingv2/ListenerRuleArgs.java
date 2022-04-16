@@ -7,6 +7,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleActionArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleRuleConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,28 +21,28 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actions", required=true)
       private final Output<List<ListenerRuleActionArgs>> actions;
 
-    public Output<List<ListenerRuleActionArgs>> getActions() {
+    public Output<List<ListenerRuleActionArgs>> actions() {
         return this.actions;
     }
 
     @Import(name="conditions", required=true)
       private final Output<List<ListenerRuleRuleConditionArgs>> conditions;
 
-    public Output<List<ListenerRuleRuleConditionArgs>> getConditions() {
+    public Output<List<ListenerRuleRuleConditionArgs>> conditions() {
         return this.conditions;
     }
 
     @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
-    public Output<String> getListenerArn() {
+    public Output<String> listenerArn() {
         return this.listenerArn;
     }
 
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -57,10 +58,10 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerRuleArgs() {
-        this.actions = Output.empty();
-        this.conditions = Output.empty();
-        this.listenerArn = Output.empty();
-        this.priority = Output.empty();
+        this.actions = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.listenerArn = Codegen.empty();
+        this.priority = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.azuredata;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     @Import(name="propertyBag")
       private final @Nullable Output<String> propertyBag;
 
-    public Output<String> getPropertyBag() {
-        return this.propertyBag == null ? Output.empty() : this.propertyBag;
+    public Output<String> propertyBag() {
+        return this.propertyBag == null ? Codegen.empty() : this.propertyBag;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
-    public Output<String> getResourceGroup() {
-        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
+    public Output<String> resourceGroup() {
+        return this.resourceGroup == null ? Codegen.empty() : this.resourceGroup;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,8 +67,8 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     @Import(name="sqlServerRegistrationName")
       private final @Nullable Output<String> sqlServerRegistrationName;
 
-    public Output<String> getSqlServerRegistrationName() {
-        return this.sqlServerRegistrationName == null ? Output.empty() : this.sqlServerRegistrationName;
+    public Output<String> sqlServerRegistrationName() {
+        return this.sqlServerRegistrationName == null ? Codegen.empty() : this.sqlServerRegistrationName;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
-    public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+    public Output<String> subscriptionId() {
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SqlServerRegistrationArgs(
@@ -110,13 +111,13 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     }
 
     private SqlServerRegistrationArgs() {
-        this.location = Output.empty();
-        this.propertyBag = Output.empty();
-        this.resourceGroup = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sqlServerRegistrationName = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.propertyBag = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sqlServerRegistrationName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder propertyBag(@Nullable Output<String> propertyBag) {
@@ -164,7 +165,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder propertyBag(@Nullable String propertyBag) {
-            this.propertyBag = Output.ofNullable(propertyBag);
+            this.propertyBag = Codegen.ofNullable(propertyBag);
             return this;
         }
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
@@ -172,7 +173,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Output.ofNullable(resourceGroup);
+            this.resourceGroup = Codegen.ofNullable(resourceGroup);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -188,7 +189,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sqlServerRegistrationName(@Nullable String sqlServerRegistrationName) {
-            this.sqlServerRegistrationName = Output.ofNullable(sqlServerRegistrationName);
+            this.sqlServerRegistrationName = Codegen.ofNullable(sqlServerRegistrationName);
             return this;
         }
         public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
@@ -196,7 +197,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -204,7 +205,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SqlServerRegistrationArgs build() {
             return new SqlServerRegistrationArgs(location, propertyBag, resourceGroup, resourceGroupName, sqlServerRegistrationName, subscriptionId, tags);

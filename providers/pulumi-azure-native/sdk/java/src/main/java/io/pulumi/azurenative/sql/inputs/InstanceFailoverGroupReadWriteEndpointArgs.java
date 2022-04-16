@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.ReadWriteEndpointFailoverPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class InstanceFailoverGroupReadWriteEndpointArgs extends io.pulumi.
     @Import(name="failoverPolicy", required=true)
       private final Output<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy;
 
-    public Output<Either<String,ReadWriteEndpointFailoverPolicy>> getFailoverPolicy() {
+    public Output<Either<String,ReadWriteEndpointFailoverPolicy>> failoverPolicy() {
         return this.failoverPolicy;
     }
 
@@ -39,8 +40,8 @@ public final class InstanceFailoverGroupReadWriteEndpointArgs extends io.pulumi.
     @Import(name="failoverWithDataLossGracePeriodMinutes")
       private final @Nullable Output<Integer> failoverWithDataLossGracePeriodMinutes;
 
-    public Output<Integer> getFailoverWithDataLossGracePeriodMinutes() {
-        return this.failoverWithDataLossGracePeriodMinutes == null ? Output.empty() : this.failoverWithDataLossGracePeriodMinutes;
+    public Output<Integer> failoverWithDataLossGracePeriodMinutes() {
+        return this.failoverWithDataLossGracePeriodMinutes == null ? Codegen.empty() : this.failoverWithDataLossGracePeriodMinutes;
     }
 
     public InstanceFailoverGroupReadWriteEndpointArgs(
@@ -51,8 +52,8 @@ public final class InstanceFailoverGroupReadWriteEndpointArgs extends io.pulumi.
     }
 
     private InstanceFailoverGroupReadWriteEndpointArgs() {
-        this.failoverPolicy = Output.empty();
-        this.failoverWithDataLossGracePeriodMinutes = Output.empty();
+        this.failoverPolicy = Codegen.empty();
+        this.failoverWithDataLossGracePeriodMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class InstanceFailoverGroupReadWriteEndpointArgs extends io.pulumi.
             return this;
         }
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
-            this.failoverWithDataLossGracePeriodMinutes = Output.ofNullable(failoverWithDataLossGracePeriodMinutes);
+            this.failoverWithDataLossGracePeriodMinutes = Codegen.ofNullable(failoverWithDataLossGracePeriodMinutes);
             return this;
         }        public InstanceFailoverGroupReadWriteEndpointArgs build() {
             return new InstanceFailoverGroupReadWriteEndpointArgs(failoverPolicy, failoverWithDataLossGracePeriodMinutes);

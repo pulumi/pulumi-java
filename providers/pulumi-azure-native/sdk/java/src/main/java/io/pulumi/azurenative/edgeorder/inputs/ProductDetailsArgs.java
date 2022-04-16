@@ -6,6 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.inputs.HierarchyInformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hierarchyInformation", required=true)
       private final Output<HierarchyInformationArgs> hierarchyInformation;
 
-    public Output<HierarchyInformationArgs> getHierarchyInformation() {
+    public Output<HierarchyInformationArgs> hierarchyInformation() {
         return this.hierarchyInformation;
     }
 
@@ -33,7 +34,7 @@ public final class ProductDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductDetailsArgs() {
-        this.hierarchyInformation = Output.empty();
+        this.hierarchyInformation = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Endpoint for the topic.
      * 
      */
-    public Output<String> getEndpoint() {
+    public Output<String> endpoint() {
         return this.endpoint;
     }
     /**
@@ -60,7 +61,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    public Output</* @Nullable */ List<InboundIpRuleResponse>> getInboundIpRules() {
+    public Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules() {
         return this.inboundIpRules;
     }
     /**
@@ -74,7 +75,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return This determines the format that Event Grid should expect for incoming events published to the topic.
      * 
      */
-    public Output</* @Nullable */ String> getInputSchema() {
+    public Output</* @Nullable */ String> inputSchema() {
         return this.inputSchema;
     }
     /**
@@ -88,7 +89,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
      * 
      */
-    public Output</* @Nullable */ JsonInputSchemaMappingResponse> getInputSchemaMapping() {
+    public Output</* @Nullable */ JsonInputSchemaMappingResponse> inputSchemaMapping() {
         return this.inputSchemaMapping;
     }
     /**
@@ -102,7 +103,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Location of the resource.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -116,7 +117,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Metric resource id for the topic.
      * 
      */
-    public Output<String> getMetricResourceId() {
+    public Output<String> metricResourceId() {
         return this.metricResourceId;
     }
     /**
@@ -130,13 +131,13 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -150,7 +151,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the topic.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -166,7 +167,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -180,7 +181,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to Topic resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -194,7 +195,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -208,7 +209,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -234,7 +235,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Topic(String name, TopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventgrid:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventgrid:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Topic(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

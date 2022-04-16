@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends io.pulumi.res
     @Import(name="resourceGroupId", required=true)
       private final Output<String> resourceGroupId;
 
-    public Output<String> getResourceGroupId() {
+    public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
 
@@ -31,7 +32,7 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends io.pulumi.res
     @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
-    public Output<String> getSecretId() {
+    public Output<String> secretId() {
         return this.secretId;
     }
 
@@ -43,8 +44,8 @@ public final class AzureClusterControlPlaneProxyConfigArgs extends io.pulumi.res
     }
 
     private AzureClusterControlPlaneProxyConfigArgs() {
-        this.resourceGroupId = Output.empty();
-        this.secretId = Output.empty();
+        this.resourceGroupId = Codegen.empty();
+        this.secretId = Codegen.empty();
     }
 
     public static Builder builder() {

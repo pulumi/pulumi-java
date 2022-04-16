@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.inputs.SharedPublicIpAddressConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
-    public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+    public Output<String> dnsName() {
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
-    public Output<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
+    public Output<String> privateIpAddress() {
+        return this.privateIpAddress == null ? Codegen.empty() : this.privateIpAddress;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
-    public Output<String> getPublicIpAddress() {
-        return this.publicIpAddress == null ? Output.empty() : this.publicIpAddress;
+    public Output<String> publicIpAddress() {
+        return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="publicIpAddressId")
       private final @Nullable Output<String> publicIpAddressId;
 
-    public Output<String> getPublicIpAddressId() {
-        return this.publicIpAddressId == null ? Output.empty() : this.publicIpAddressId;
+    public Output<String> publicIpAddressId() {
+        return this.publicIpAddressId == null ? Codegen.empty() : this.publicIpAddressId;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="rdpAuthority")
       private final @Nullable Output<String> rdpAuthority;
 
-    public Output<String> getRdpAuthority() {
-        return this.rdpAuthority == null ? Output.empty() : this.rdpAuthority;
+    public Output<String> rdpAuthority() {
+        return this.rdpAuthority == null ? Codegen.empty() : this.rdpAuthority;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="sharedPublicIpAddressConfiguration")
       private final @Nullable Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration;
 
-    public Output<SharedPublicIpAddressConfigurationArgs> getSharedPublicIpAddressConfiguration() {
-        return this.sharedPublicIpAddressConfiguration == null ? Output.empty() : this.sharedPublicIpAddressConfiguration;
+    public Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration() {
+        return this.sharedPublicIpAddressConfiguration == null ? Codegen.empty() : this.sharedPublicIpAddressConfiguration;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="sshAuthority")
       private final @Nullable Output<String> sshAuthority;
 
-    public Output<String> getSshAuthority() {
-        return this.sshAuthority == null ? Output.empty() : this.sshAuthority;
+    public Output<String> sshAuthority() {
+        return this.sshAuthority == null ? Codegen.empty() : this.sshAuthority;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     @Import(name="virtualNetworkId")
       private final @Nullable Output<String> virtualNetworkId;
 
-    public Output<String> getVirtualNetworkId() {
-        return this.virtualNetworkId == null ? Output.empty() : this.virtualNetworkId;
+    public Output<String> virtualNetworkId() {
+        return this.virtualNetworkId == null ? Codegen.empty() : this.virtualNetworkId;
     }
 
     public NetworkInterfacePropertiesArgs(
@@ -140,15 +141,15 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
     }
 
     private NetworkInterfacePropertiesArgs() {
-        this.dnsName = Output.empty();
-        this.privateIpAddress = Output.empty();
-        this.publicIpAddress = Output.empty();
-        this.publicIpAddressId = Output.empty();
-        this.rdpAuthority = Output.empty();
-        this.sharedPublicIpAddressConfiguration = Output.empty();
-        this.sshAuthority = Output.empty();
-        this.subnetId = Output.empty();
-        this.virtualNetworkId = Output.empty();
+        this.dnsName = Codegen.empty();
+        this.privateIpAddress = Codegen.empty();
+        this.publicIpAddress = Codegen.empty();
+        this.publicIpAddressId = Codegen.empty();
+        this.rdpAuthority = Codegen.empty();
+        this.sharedPublicIpAddressConfiguration = Codegen.empty();
+        this.sshAuthority = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.virtualNetworkId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
@@ -200,7 +201,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Output.ofNullable(privateIpAddress);
+            this.privateIpAddress = Codegen.ofNullable(privateIpAddress);
             return this;
         }
         public Builder publicIpAddress(@Nullable Output<String> publicIpAddress) {
@@ -208,7 +209,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Output.ofNullable(publicIpAddress);
+            this.publicIpAddress = Codegen.ofNullable(publicIpAddress);
             return this;
         }
         public Builder publicIpAddressId(@Nullable Output<String> publicIpAddressId) {
@@ -216,7 +217,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
-            this.publicIpAddressId = Output.ofNullable(publicIpAddressId);
+            this.publicIpAddressId = Codegen.ofNullable(publicIpAddressId);
             return this;
         }
         public Builder rdpAuthority(@Nullable Output<String> rdpAuthority) {
@@ -224,7 +225,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder rdpAuthority(@Nullable String rdpAuthority) {
-            this.rdpAuthority = Output.ofNullable(rdpAuthority);
+            this.rdpAuthority = Codegen.ofNullable(rdpAuthority);
             return this;
         }
         public Builder sharedPublicIpAddressConfiguration(@Nullable Output<SharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
@@ -232,7 +233,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sharedPublicIpAddressConfiguration(@Nullable SharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
-            this.sharedPublicIpAddressConfiguration = Output.ofNullable(sharedPublicIpAddressConfiguration);
+            this.sharedPublicIpAddressConfiguration = Codegen.ofNullable(sharedPublicIpAddressConfiguration);
             return this;
         }
         public Builder sshAuthority(@Nullable Output<String> sshAuthority) {
@@ -240,7 +241,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sshAuthority(@Nullable String sshAuthority) {
-            this.sshAuthority = Output.ofNullable(sshAuthority);
+            this.sshAuthority = Codegen.ofNullable(sshAuthority);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -248,7 +249,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder virtualNetworkId(@Nullable Output<String> virtualNetworkId) {
@@ -256,7 +257,7 @@ public final class NetworkInterfacePropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder virtualNetworkId(@Nullable String virtualNetworkId) {
-            this.virtualNetworkId = Output.ofNullable(virtualNetworkId);
+            this.virtualNetworkId = Codegen.ofNullable(virtualNetworkId);
             return this;
         }        public NetworkInterfacePropertiesArgs build() {
             return new NetworkInterfacePropertiesArgs(dnsName, privateIpAddress, publicIpAddress, publicIpAddressId, rdpAuthority, sharedPublicIpAddressConfiguration, sshAuthority, subnetId, virtualNetworkId);

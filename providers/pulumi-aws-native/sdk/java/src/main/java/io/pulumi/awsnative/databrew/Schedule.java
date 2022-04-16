@@ -9,6 +9,7 @@ import io.pulumi.awsnative.databrew.outputs.ScheduleTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -32,13 +33,13 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Schedule cron
      * 
      */
-    public Output<String> getCronExpression() {
+    public Output<String> cronExpression() {
         return this.cronExpression;
     }
     @Export(name="jobNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> jobNames;
 
-    public Output</* @Nullable */ List<String>> getJobNames() {
+    public Output</* @Nullable */ List<String>> jobNames() {
         return this.jobNames;
     }
     /**
@@ -52,13 +53,13 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @return Schedule Name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={ScheduleTag.class})
     private Output</* @Nullable */ List<ScheduleTag>> tags;
 
-    public Output</* @Nullable */ List<ScheduleTag>> getTags() {
+    public Output</* @Nullable */ List<ScheduleTag>> tags() {
         return this.tags;
     }
 
@@ -84,7 +85,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Schedule(String name, ScheduleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:databrew:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:databrew:Schedule", name, args == null ? ScheduleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Schedule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloud9;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     @Import(name="automaticStopTimeMinutes")
       private final @Nullable Output<Integer> automaticStopTimeMinutes;
 
-    public Output<Integer> getAutomaticStopTimeMinutes() {
-        return this.automaticStopTimeMinutes == null ? Output.empty() : this.automaticStopTimeMinutes;
+    public Output<Integer> automaticStopTimeMinutes() {
+        return this.automaticStopTimeMinutes == null ? Codegen.empty() : this.automaticStopTimeMinutes;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
@@ -56,8 +57,8 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     @Import(name="ownerArn")
       private final @Nullable Output<String> ownerArn;
 
-    public Output<String> getOwnerArn() {
-        return this.ownerArn == null ? Output.empty() : this.ownerArn;
+    public Output<String> ownerArn() {
+        return this.ownerArn == null ? Codegen.empty() : this.ownerArn;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EnvironmentEC2Args(
@@ -111,13 +112,13 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentEC2Args() {
-        this.automaticStopTimeMinutes = Output.empty();
-        this.description = Output.empty();
-        this.instanceType = Output.empty();
-        this.name = Output.empty();
-        this.ownerArn = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
+        this.automaticStopTimeMinutes = Codegen.empty();
+        this.description = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerArn = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automaticStopTimeMinutes(@Nullable Integer automaticStopTimeMinutes) {
-            this.automaticStopTimeMinutes = Output.ofNullable(automaticStopTimeMinutes);
+            this.automaticStopTimeMinutes = Codegen.ofNullable(automaticStopTimeMinutes);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -165,7 +166,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instanceType(Output<String> instanceType) {
@@ -181,7 +182,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerArn(@Nullable Output<String> ownerArn) {
@@ -189,7 +190,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerArn(@Nullable String ownerArn) {
-            this.ownerArn = Output.ofNullable(ownerArn);
+            this.ownerArn = Codegen.ofNullable(ownerArn);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -197,7 +198,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -205,7 +206,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public EnvironmentEC2Args build() {
             return new EnvironmentEC2Args(automaticStopTimeMinutes, description, instanceType, name, ownerArn, subnetId, tags);

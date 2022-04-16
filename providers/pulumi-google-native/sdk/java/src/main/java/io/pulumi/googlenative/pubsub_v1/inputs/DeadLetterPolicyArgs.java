@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="deadLetterTopic")
       private final @Nullable Output<String> deadLetterTopic;
 
-    public Output<String> getDeadLetterTopic() {
-        return this.deadLetterTopic == null ? Output.empty() : this.deadLetterTopic;
+    public Output<String> deadLetterTopic() {
+        return this.deadLetterTopic == null ? Codegen.empty() : this.deadLetterTopic;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="maxDeliveryAttempts")
       private final @Nullable Output<Integer> maxDeliveryAttempts;
 
-    public Output<Integer> getMaxDeliveryAttempts() {
-        return this.maxDeliveryAttempts == null ? Output.empty() : this.maxDeliveryAttempts;
+    public Output<Integer> maxDeliveryAttempts() {
+        return this.maxDeliveryAttempts == null ? Codegen.empty() : this.maxDeliveryAttempts;
     }
 
     public DeadLetterPolicyArgs(
@@ -49,8 +50,8 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeadLetterPolicyArgs() {
-        this.deadLetterTopic = Output.empty();
-        this.maxDeliveryAttempts = Output.empty();
+        this.deadLetterTopic = Codegen.empty();
+        this.maxDeliveryAttempts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deadLetterTopic(@Nullable String deadLetterTopic) {
-            this.deadLetterTopic = Output.ofNullable(deadLetterTopic);
+            this.deadLetterTopic = Codegen.ofNullable(deadLetterTopic);
             return this;
         }
         public Builder maxDeliveryAttempts(@Nullable Output<Integer> maxDeliveryAttempts) {
@@ -88,7 +89,7 @@ public final class DeadLetterPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
-            this.maxDeliveryAttempts = Output.ofNullable(maxDeliveryAttempts);
+            this.maxDeliveryAttempts = Codegen.ofNullable(maxDeliveryAttempts);
             return this;
         }        public DeadLetterPolicyArgs build() {
             return new DeadLetterPolicyArgs(deadLetterTopic, maxDeliveryAttempts);

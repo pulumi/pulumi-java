@@ -8,6 +8,7 @@ import io.pulumi.azurenative.customproviders.inputs.CustomRPResourceTypeRouteDef
 import io.pulumi.azurenative.customproviders.inputs.CustomRPValidationsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +27,8 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="actions")
       private final @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
 
-    public Output<List<CustomRPActionRouteDefinitionArgs>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+    public Output<List<CustomRPActionRouteDefinitionArgs>> actions() {
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -59,8 +60,8 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="resourceProviderName")
       private final @Nullable Output<String> resourceProviderName;
 
-    public Output<String> getResourceProviderName() {
-        return this.resourceProviderName == null ? Output.empty() : this.resourceProviderName;
+    public Output<String> resourceProviderName() {
+        return this.resourceProviderName == null ? Codegen.empty() : this.resourceProviderName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="resourceTypes")
       private final @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
 
-    public Output<List<CustomRPResourceTypeRouteDefinitionArgs>> getResourceTypes() {
-        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
+    public Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes() {
+        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     @Import(name="validations")
       private final @Nullable Output<List<CustomRPValidationsArgs>> validations;
 
-    public Output<List<CustomRPValidationsArgs>> getValidations() {
-        return this.validations == null ? Output.empty() : this.validations;
+    public Output<List<CustomRPValidationsArgs>> validations() {
+        return this.validations == null ? Codegen.empty() : this.validations;
     }
 
     public CustomResourceProviderArgs(
@@ -114,13 +115,13 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     }
 
     private CustomResourceProviderArgs() {
-        this.actions = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceProviderName = Output.empty();
-        this.resourceTypes = Output.empty();
-        this.tags = Output.empty();
-        this.validations = Output.empty();
+        this.actions = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceProviderName = Codegen.empty();
+        this.resourceTypes = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.validations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder actions(@Nullable List<CustomRPActionRouteDefinitionArgs> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(CustomRPActionRouteDefinitionArgs... actions) {
@@ -171,7 +172,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -187,7 +188,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resourceProviderName(@Nullable String resourceProviderName) {
-            this.resourceProviderName = Output.ofNullable(resourceProviderName);
+            this.resourceProviderName = Codegen.ofNullable(resourceProviderName);
             return this;
         }
         public Builder resourceTypes(@Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes) {
@@ -195,7 +196,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resourceTypes(@Nullable List<CustomRPResourceTypeRouteDefinitionArgs> resourceTypes) {
-            this.resourceTypes = Output.ofNullable(resourceTypes);
+            this.resourceTypes = Codegen.ofNullable(resourceTypes);
             return this;
         }
         public Builder resourceTypes(CustomRPResourceTypeRouteDefinitionArgs... resourceTypes) {
@@ -206,7 +207,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder validations(@Nullable Output<List<CustomRPValidationsArgs>> validations) {
@@ -214,7 +215,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder validations(@Nullable List<CustomRPValidationsArgs> validations) {
-            this.validations = Output.ofNullable(validations);
+            this.validations = Codegen.ofNullable(validations);
             return this;
         }
         public Builder validations(CustomRPValidationsArgs... validations) {

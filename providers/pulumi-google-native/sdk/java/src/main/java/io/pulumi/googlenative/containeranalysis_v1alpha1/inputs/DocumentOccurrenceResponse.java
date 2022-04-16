@@ -24,7 +24,7 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="createTime", required=true)
       private final String createTime;
 
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
 
@@ -35,7 +35,7 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="creatorComment", required=true)
       private final String creatorComment;
 
-    public String getCreatorComment() {
+    public String creatorComment() {
         return this.creatorComment;
     }
 
@@ -46,7 +46,7 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="creators", required=true)
       private final List<String> creators;
 
-    public List<String> getCreators() {
+    public List<String> creators() {
         return this.creators;
     }
 
@@ -57,7 +57,7 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="documentComment", required=true)
       private final String documentComment;
 
-    public String getDocumentComment() {
+    public String documentComment() {
         return this.documentComment;
     }
 
@@ -68,7 +68,7 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="externalDocumentRefs", required=true)
       private final List<String> externalDocumentRefs;
 
-    public List<String> getExternalDocumentRefs() {
+    public List<String> externalDocumentRefs() {
         return this.externalDocumentRefs;
     }
 
@@ -79,7 +79,7 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="licenseListVersion", required=true)
       private final String licenseListVersion;
 
-    public String getLicenseListVersion() {
+    public String licenseListVersion() {
         return this.licenseListVersion;
     }
 
@@ -90,7 +90,7 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="namespace", required=true)
       private final String namespace;
 
-    public String getNamespace() {
+    public String namespace() {
         return this.namespace;
     }
 
@@ -101,7 +101,7 @@ public final class DocumentOccurrenceResponse extends io.pulumi.resources.Invoke
     @Import(name="title", required=true)
       private final String title;
 
-    public String getTitle() {
+    public String title() {
         return this.title;
     }
 

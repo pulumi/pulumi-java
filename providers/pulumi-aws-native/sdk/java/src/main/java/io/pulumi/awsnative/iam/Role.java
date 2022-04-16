@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iam.outputs.RoleTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +36,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for the role.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -49,7 +50,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return The trust policy that is associated with this role.
      * 
      */
-    public Output<Object> getAssumeRolePolicyDocument() {
+    public Output<Object> assumeRolePolicyDocument() {
         return this.assumeRolePolicyDocument;
     }
     /**
@@ -63,7 +64,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return A description of the role that you provide.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -77,7 +78,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
      * 
      */
-    public Output</* @Nullable */ List<String>> getManagedPolicyArns() {
+    public Output</* @Nullable */ List<String>> managedPolicyArns() {
         return this.managedPolicyArns;
     }
     /**
@@ -91,7 +92,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxSessionDuration() {
+    public Output</* @Nullable */ Integer> maxSessionDuration() {
         return this.maxSessionDuration;
     }
     /**
@@ -105,7 +106,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return The path to the role.
      * 
      */
-    public Output</* @Nullable */ String> getPath() {
+    public Output</* @Nullable */ String> path() {
         return this.path;
     }
     /**
@@ -119,7 +120,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return The ARN of the policy used to set the permissions boundary for the role.
      * 
      */
-    public Output</* @Nullable */ String> getPermissionsBoundary() {
+    public Output</* @Nullable */ String> permissionsBoundary() {
         return this.permissionsBoundary;
     }
     /**
@@ -133,7 +134,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Adds or updates an inline policy document that is embedded in the specified IAM role.
      * 
      */
-    public Output</* @Nullable */ List<RolePolicy>> getPolicies() {
+    public Output</* @Nullable */ List<RolePolicy>> policies() {
         return this.policies;
     }
     /**
@@ -147,7 +148,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return The stable and unique string identifying the role.
      * 
      */
-    public Output<String> getRoleId() {
+    public Output<String> roleId() {
         return this.roleId;
     }
     /**
@@ -161,7 +162,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return A name for the IAM role, up to 64 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getRoleName() {
+    public Output</* @Nullable */ String> roleName() {
         return this.roleName;
     }
     /**
@@ -175,7 +176,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return A list of tags that are attached to the role.
      * 
      */
-    public Output</* @Nullable */ List<RoleTag>> getTags() {
+    public Output</* @Nullable */ List<RoleTag>> tags() {
         return this.tags;
     }
 
@@ -201,7 +202,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Role(String name, RoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iam:Role", name, args == null ? RoleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iam:Role", name, args == null ? RoleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Role(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

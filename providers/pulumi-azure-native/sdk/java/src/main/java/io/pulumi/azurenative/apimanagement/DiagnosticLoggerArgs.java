@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="diagnosticId", required=true)
       private final Output<String> diagnosticId;
 
-    public Output<String> getDiagnosticId() {
+    public Output<String> diagnosticId() {
         return this.diagnosticId;
     }
 
@@ -32,8 +33,8 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="loggerid")
       private final @Nullable Output<String> loggerid;
 
-    public Output<String> getLoggerid() {
-        return this.loggerid == null ? Output.empty() : this.loggerid;
+    public Output<String> loggerid() {
+        return this.loggerid == null ? Codegen.empty() : this.loggerid;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,7 +55,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -70,10 +71,10 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DiagnosticLoggerArgs() {
-        this.diagnosticId = Output.empty();
-        this.loggerid = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.diagnosticId = Codegen.empty();
+        this.loggerid = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder loggerid(@Nullable String loggerid) {
-            this.loggerid = Output.ofNullable(loggerid);
+            this.loggerid = Codegen.ofNullable(loggerid);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

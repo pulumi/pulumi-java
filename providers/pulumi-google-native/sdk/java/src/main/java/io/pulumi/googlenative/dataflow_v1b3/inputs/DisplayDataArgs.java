@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> getBoolValue() {
-        return this.boolValue == null ? Output.empty() : this.boolValue;
+    public Output<Boolean> boolValue() {
+        return this.boolValue == null ? Codegen.empty() : this.boolValue;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="durationValue")
       private final @Nullable Output<String> durationValue;
 
-    public Output<String> getDurationValue() {
-        return this.durationValue == null ? Output.empty() : this.durationValue;
+    public Output<String> durationValue() {
+        return this.durationValue == null ? Codegen.empty() : this.durationValue;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
-    public Output<Double> getFloatValue() {
-        return this.floatValue == null ? Output.empty() : this.floatValue;
+    public Output<Double> floatValue() {
+        return this.floatValue == null ? Codegen.empty() : this.floatValue;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="int64Value")
       private final @Nullable Output<String> int64Value;
 
-    public Output<String> getInt64Value() {
-        return this.int64Value == null ? Output.empty() : this.int64Value;
+    public Output<String> int64Value() {
+        return this.int64Value == null ? Codegen.empty() : this.int64Value;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="javaClassValue")
       private final @Nullable Output<String> javaClassValue;
 
-    public Output<String> getJavaClassValue() {
-        return this.javaClassValue == null ? Output.empty() : this.javaClassValue;
+    public Output<String> javaClassValue() {
+        return this.javaClassValue == null ? Codegen.empty() : this.javaClassValue;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="label")
       private final @Nullable Output<String> label;
 
-    public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+    public Output<String> label() {
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
-    public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+    public Output<String> namespace() {
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortStrValue")
       private final @Nullable Output<String> shortStrValue;
 
-    public Output<String> getShortStrValue() {
-        return this.shortStrValue == null ? Output.empty() : this.shortStrValue;
+    public Output<String> shortStrValue() {
+        return this.shortStrValue == null ? Codegen.empty() : this.shortStrValue;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="strValue")
       private final @Nullable Output<String> strValue;
 
-    public Output<String> getStrValue() {
-        return this.strValue == null ? Output.empty() : this.strValue;
+    public Output<String> strValue() {
+        return this.strValue == null ? Codegen.empty() : this.strValue;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
-    public Output<String> getTimestampValue() {
-        return this.timestampValue == null ? Output.empty() : this.timestampValue;
+    public Output<String> timestampValue() {
+        return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public DisplayDataArgs(
@@ -180,18 +181,18 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DisplayDataArgs() {
-        this.boolValue = Output.empty();
-        this.durationValue = Output.empty();
-        this.floatValue = Output.empty();
-        this.int64Value = Output.empty();
-        this.javaClassValue = Output.empty();
-        this.key = Output.empty();
-        this.label = Output.empty();
-        this.namespace = Output.empty();
-        this.shortStrValue = Output.empty();
-        this.strValue = Output.empty();
-        this.timestampValue = Output.empty();
-        this.url = Output.empty();
+        this.boolValue = Codegen.empty();
+        this.durationValue = Codegen.empty();
+        this.floatValue = Codegen.empty();
+        this.int64Value = Codegen.empty();
+        this.javaClassValue = Codegen.empty();
+        this.key = Codegen.empty();
+        this.label = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.shortStrValue = Codegen.empty();
+        this.strValue = Codegen.empty();
+        this.timestampValue = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Output.ofNullable(boolValue);
+            this.boolValue = Codegen.ofNullable(boolValue);
             return this;
         }
         public Builder durationValue(@Nullable Output<String> durationValue) {
@@ -249,7 +250,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder durationValue(@Nullable String durationValue) {
-            this.durationValue = Output.ofNullable(durationValue);
+            this.durationValue = Codegen.ofNullable(durationValue);
             return this;
         }
         public Builder floatValue(@Nullable Output<Double> floatValue) {
@@ -257,7 +258,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder floatValue(@Nullable Double floatValue) {
-            this.floatValue = Output.ofNullable(floatValue);
+            this.floatValue = Codegen.ofNullable(floatValue);
             return this;
         }
         public Builder int64Value(@Nullable Output<String> int64Value) {
@@ -265,7 +266,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder int64Value(@Nullable String int64Value) {
-            this.int64Value = Output.ofNullable(int64Value);
+            this.int64Value = Codegen.ofNullable(int64Value);
             return this;
         }
         public Builder javaClassValue(@Nullable Output<String> javaClassValue) {
@@ -273,7 +274,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder javaClassValue(@Nullable String javaClassValue) {
-            this.javaClassValue = Output.ofNullable(javaClassValue);
+            this.javaClassValue = Codegen.ofNullable(javaClassValue);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -281,7 +282,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -289,7 +290,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -297,7 +298,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder shortStrValue(@Nullable Output<String> shortStrValue) {
@@ -305,7 +306,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shortStrValue(@Nullable String shortStrValue) {
-            this.shortStrValue = Output.ofNullable(shortStrValue);
+            this.shortStrValue = Codegen.ofNullable(shortStrValue);
             return this;
         }
         public Builder strValue(@Nullable Output<String> strValue) {
@@ -313,7 +314,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder strValue(@Nullable String strValue) {
-            this.strValue = Output.ofNullable(strValue);
+            this.strValue = Codegen.ofNullable(strValue);
             return this;
         }
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
@@ -321,7 +322,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Output.ofNullable(timestampValue);
+            this.timestampValue = Codegen.ofNullable(timestampValue);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -329,7 +330,7 @@ public final class DisplayDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public DisplayDataArgs build() {
             return new DisplayDataArgs(boolValue, durationValue, floatValue, int64Value, javaClassValue, key, label, namespace, shortStrValue, strValue, timestampValue, url);

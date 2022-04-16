@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @return The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    public Output<String> getEndIpAddress() {
+    public Output<String> endIpAddress() {
         return this.endIpAddress;
     }
     /**
@@ -55,7 +56,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -69,7 +70,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @return The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    public Output<String> getStartIpAddress() {
+    public Output<String> startIpAddress() {
         return this.startIpAddress;
     }
     /**
@@ -83,7 +84,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -109,7 +110,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FirewallRule(String name, FirewallRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datalakeanalytics:FirewallRule", name, args == null ? FirewallRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:datalakeanalytics:FirewallRule", name, args == null ? FirewallRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirewallRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -12,6 +12,7 @@ import io.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="classification")
       private final @Nullable Output<Either<String,IncidentClassification>> classification;
 
-    public Output<Either<String,IncidentClassification>> getClassification() {
-        return this.classification == null ? Output.empty() : this.classification;
+    public Output<Either<String,IncidentClassification>> classification() {
+        return this.classification == null ? Codegen.empty() : this.classification;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="classificationComment")
       private final @Nullable Output<String> classificationComment;
 
-    public Output<String> getClassificationComment() {
-        return this.classificationComment == null ? Output.empty() : this.classificationComment;
+    public Output<String> classificationComment() {
+        return this.classificationComment == null ? Codegen.empty() : this.classificationComment;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="classificationReason")
       private final @Nullable Output<Either<String,IncidentClassificationReason>> classificationReason;
 
-    public Output<Either<String,IncidentClassificationReason>> getClassificationReason() {
-        return this.classificationReason == null ? Output.empty() : this.classificationReason;
+    public Output<Either<String,IncidentClassificationReason>> classificationReason() {
+        return this.classificationReason == null ? Codegen.empty() : this.classificationReason;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firstActivityTimeUtc")
       private final @Nullable Output<String> firstActivityTimeUtc;
 
-    public Output<String> getFirstActivityTimeUtc() {
-        return this.firstActivityTimeUtc == null ? Output.empty() : this.firstActivityTimeUtc;
+    public Output<String> firstActivityTimeUtc() {
+        return this.firstActivityTimeUtc == null ? Codegen.empty() : this.firstActivityTimeUtc;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="incidentId")
       private final @Nullable Output<String> incidentId;
 
-    public Output<String> getIncidentId() {
-        return this.incidentId == null ? Output.empty() : this.incidentId;
+    public Output<String> incidentId() {
+        return this.incidentId == null ? Codegen.empty() : this.incidentId;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<List<IncidentLabelArgs>> labels;
 
-    public Output<List<IncidentLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<List<IncidentLabelArgs>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastActivityTimeUtc")
       private final @Nullable Output<String> lastActivityTimeUtc;
 
-    public Output<String> getLastActivityTimeUtc() {
-        return this.lastActivityTimeUtc == null ? Output.empty() : this.lastActivityTimeUtc;
+    public Output<String> lastActivityTimeUtc() {
+        return this.lastActivityTimeUtc == null ? Codegen.empty() : this.lastActivityTimeUtc;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<IncidentOwnerInfoArgs> owner;
 
-    public Output<IncidentOwnerInfoArgs> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+    public Output<IncidentOwnerInfoArgs> owner() {
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -139,7 +140,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="severity", required=true)
       private final Output<Either<String,IncidentSeverity>> severity;
 
-    public Output<Either<String,IncidentSeverity>> getSeverity() {
+    public Output<Either<String,IncidentSeverity>> severity() {
         return this.severity;
     }
 
@@ -150,7 +151,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
       private final Output<Either<String,IncidentStatus>> status;
 
-    public Output<Either<String,IncidentStatus>> getStatus() {
+    public Output<Either<String,IncidentStatus>> status() {
         return this.status;
     }
 
@@ -161,7 +162,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title", required=true)
       private final Output<String> title;
 
-    public Output<String> getTitle() {
+    public Output<String> title() {
         return this.title;
     }
 
@@ -172,7 +173,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -208,20 +209,20 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IncidentArgs() {
-        this.classification = Output.empty();
-        this.classificationComment = Output.empty();
-        this.classificationReason = Output.empty();
-        this.description = Output.empty();
-        this.firstActivityTimeUtc = Output.empty();
-        this.incidentId = Output.empty();
-        this.labels = Output.empty();
-        this.lastActivityTimeUtc = Output.empty();
-        this.owner = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.severity = Output.empty();
-        this.status = Output.empty();
-        this.title = Output.empty();
-        this.workspaceName = Output.empty();
+        this.classification = Codegen.empty();
+        this.classificationComment = Codegen.empty();
+        this.classificationReason = Codegen.empty();
+        this.description = Codegen.empty();
+        this.firstActivityTimeUtc = Codegen.empty();
+        this.incidentId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.lastActivityTimeUtc = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.status = Codegen.empty();
+        this.title = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -275,7 +276,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
-            this.classification = Output.ofNullable(classification);
+            this.classification = Codegen.ofNullable(classification);
             return this;
         }
         public Builder classificationComment(@Nullable Output<String> classificationComment) {
@@ -283,7 +284,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder classificationComment(@Nullable String classificationComment) {
-            this.classificationComment = Output.ofNullable(classificationComment);
+            this.classificationComment = Codegen.ofNullable(classificationComment);
             return this;
         }
         public Builder classificationReason(@Nullable Output<Either<String,IncidentClassificationReason>> classificationReason) {
@@ -291,7 +292,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
-            this.classificationReason = Output.ofNullable(classificationReason);
+            this.classificationReason = Codegen.ofNullable(classificationReason);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -299,7 +300,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder firstActivityTimeUtc(@Nullable Output<String> firstActivityTimeUtc) {
@@ -307,7 +308,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
-            this.firstActivityTimeUtc = Output.ofNullable(firstActivityTimeUtc);
+            this.firstActivityTimeUtc = Codegen.ofNullable(firstActivityTimeUtc);
             return this;
         }
         public Builder incidentId(@Nullable Output<String> incidentId) {
@@ -315,7 +316,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incidentId(@Nullable String incidentId) {
-            this.incidentId = Output.ofNullable(incidentId);
+            this.incidentId = Codegen.ofNullable(incidentId);
             return this;
         }
         public Builder labels(@Nullable Output<List<IncidentLabelArgs>> labels) {
@@ -323,7 +324,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(IncidentLabelArgs... labels) {
@@ -334,7 +335,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
-            this.lastActivityTimeUtc = Output.ofNullable(lastActivityTimeUtc);
+            this.lastActivityTimeUtc = Codegen.ofNullable(lastActivityTimeUtc);
             return this;
         }
         public Builder owner(@Nullable Output<IncidentOwnerInfoArgs> owner) {
@@ -342,7 +343,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

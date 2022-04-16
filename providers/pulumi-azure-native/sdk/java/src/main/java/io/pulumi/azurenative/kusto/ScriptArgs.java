@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -33,8 +34,8 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="continueOnErrors")
       private final @Nullable Output<Boolean> continueOnErrors;
 
-    public Output<Boolean> getContinueOnErrors() {
-        return this.continueOnErrors == null ? Output.empty() : this.continueOnErrors;
+    public Output<Boolean> continueOnErrors() {
+        return this.continueOnErrors == null ? Codegen.empty() : this.continueOnErrors;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
 
@@ -55,8 +56,8 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
+    public Output<String> forceUpdateTag() {
+        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,8 +78,8 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
-    public Output<String> getScriptName() {
-        return this.scriptName == null ? Output.empty() : this.scriptName;
+    public Output<String> scriptName() {
+        return this.scriptName == null ? Codegen.empty() : this.scriptName;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptUrl", required=true)
       private final Output<String> scriptUrl;
 
-    public Output<String> getScriptUrl() {
+    public Output<String> scriptUrl() {
         return this.scriptUrl;
     }
 
@@ -99,7 +100,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scriptUrlSasToken", required=true)
       private final Output<String> scriptUrlSasToken;
 
-    public Output<String> getScriptUrlSasToken() {
+    public Output<String> scriptUrlSasToken() {
         return this.scriptUrlSasToken;
     }
 
@@ -113,7 +114,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
         Output<String> scriptUrl,
         Output<String> scriptUrlSasToken) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.continueOnErrors = continueOnErrors == null ? Output.ofNullable(false) : continueOnErrors;
+        this.continueOnErrors = continueOnErrors == null ? Codegen.ofNullable(false) : continueOnErrors;
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.forceUpdateTag = forceUpdateTag;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -123,14 +124,14 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScriptArgs() {
-        this.clusterName = Output.empty();
-        this.continueOnErrors = Output.empty();
-        this.databaseName = Output.empty();
-        this.forceUpdateTag = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scriptName = Output.empty();
-        this.scriptUrl = Output.empty();
-        this.scriptUrlSasToken = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.continueOnErrors = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.forceUpdateTag = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scriptName = Codegen.empty();
+        this.scriptUrl = Codegen.empty();
+        this.scriptUrlSasToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder continueOnErrors(@Nullable Boolean continueOnErrors) {
-            this.continueOnErrors = Output.ofNullable(continueOnErrors);
+            this.continueOnErrors = Codegen.ofNullable(continueOnErrors);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -196,7 +197,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -212,7 +213,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptName(@Nullable String scriptName) {
-            this.scriptName = Output.ofNullable(scriptName);
+            this.scriptName = Codegen.ofNullable(scriptName);
             return this;
         }
         public Builder scriptUrl(Output<String> scriptUrl) {

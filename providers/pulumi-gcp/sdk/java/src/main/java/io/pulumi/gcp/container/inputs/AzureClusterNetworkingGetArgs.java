@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
     @Import(name="podAddressCidrBlocks", required=true)
       private final Output<List<String>> podAddressCidrBlocks;
 
-    public Output<List<String>> getPodAddressCidrBlocks() {
+    public Output<List<String>> podAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
     }
 
@@ -32,7 +33,7 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
     @Import(name="serviceAddressCidrBlocks", required=true)
       private final Output<List<String>> serviceAddressCidrBlocks;
 
-    public Output<List<String>> getServiceAddressCidrBlocks() {
+    public Output<List<String>> serviceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
     }
 
@@ -43,7 +44,7 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
     @Import(name="virtualNetworkId", required=true)
       private final Output<String> virtualNetworkId;
 
-    public Output<String> getVirtualNetworkId() {
+    public Output<String> virtualNetworkId() {
         return this.virtualNetworkId;
     }
 
@@ -57,9 +58,9 @@ public final class AzureClusterNetworkingGetArgs extends io.pulumi.resources.Res
     }
 
     private AzureClusterNetworkingGetArgs() {
-        this.podAddressCidrBlocks = Output.empty();
-        this.serviceAddressCidrBlocks = Output.empty();
-        this.virtualNetworkId = Output.empty();
+        this.podAddressCidrBlocks = Codegen.empty();
+        this.serviceAddressCidrBlocks = Codegen.empty();
+        this.virtualNetworkId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendServiceArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceState;
@@ -77,7 +78,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * When the load balancing scheme is INTERNAL, this field is not used.
      * 
      */
-    public Output</* @Nullable */ Integer> getAffinityCookieTtlSec() {
+    public Output</* @Nullable */ Integer> affinityCookieTtlSec() {
         return this.affinityCookieTtlSec;
     }
     /**
@@ -93,7 +94,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<BackendServiceBackend>> getBackends() {
+    public Output</* @Nullable */ List<BackendServiceBackend>> backends() {
         return this.backends;
     }
     /**
@@ -109,7 +110,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<BackendServiceCdnPolicy> getCdnPolicy() {
+    public Output<BackendServiceCdnPolicy> cdnPolicy() {
         return this.cdnPolicy;
     }
     /**
@@ -127,7 +128,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceCircuitBreakers> getCircuitBreakers() {
+    public Output</* @Nullable */ BackendServiceCircuitBreakers> circuitBreakers() {
         return this.circuitBreakers;
     }
     /**
@@ -143,7 +144,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * connections, but still work to finish started).
      * 
      */
-    public Output</* @Nullable */ Integer> getConnectionDrainingTimeoutSec() {
+    public Output</* @Nullable */ Integer> connectionDrainingTimeoutSec() {
         return this.connectionDrainingTimeoutSec;
     }
     /**
@@ -173,7 +174,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceConsistentHash> getConsistentHash() {
+    public Output</* @Nullable */ BackendServiceConsistentHash> consistentHash() {
         return this.consistentHash;
     }
     /**
@@ -187,7 +188,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -203,7 +204,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * requests.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomRequestHeaders() {
+    public Output</* @Nullable */ List<String>> customRequestHeaders() {
         return this.customRequestHeaders;
     }
     /**
@@ -219,7 +220,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * responses.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCustomResponseHeaders() {
+    public Output</* @Nullable */ List<String>> customResponseHeaders() {
         return this.customResponseHeaders;
     }
     /**
@@ -235,7 +236,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Provide this property when you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -249,7 +250,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * @return If true, enable Cloud CDN for this BackendService.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableCdn() {
+    public Output</* @Nullable */ Boolean> enableCdn() {
         return this.enableCdn;
     }
     /**
@@ -263,7 +264,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -287,7 +288,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
      * 
      */
-    public Output</* @Nullable */ String> getHealthChecks() {
+    public Output</* @Nullable */ String> healthChecks() {
         return this.healthChecks;
     }
     /**
@@ -303,7 +304,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceIap> getIap() {
+    public Output</* @Nullable */ BackendServiceIap> iap() {
         return this.iap;
     }
     /**
@@ -327,7 +328,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `INTERNAL_SELF_MANAGED`, and `EXTERNAL_MANAGED`.
      * 
      */
-    public Output</* @Nullable */ String> getLoadBalancingScheme() {
+    public Output</* @Nullable */ String> loadBalancingScheme() {
         return this.loadBalancingScheme;
     }
     /**
@@ -379,7 +380,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      *   Maglev, refer to https://ai.google/research/pubs/pub44824
      * 
      */
-    public Output</* @Nullable */ String> getLocalityLbPolicy() {
+    public Output</* @Nullable */ String> localityLbPolicy() {
         return this.localityLbPolicy;
     }
     /**
@@ -397,7 +398,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<BackendServiceLogConfig> getLogConfig() {
+    public Output<BackendServiceLogConfig> logConfig() {
         return this.logConfig;
     }
     /**
@@ -411,7 +412,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * @return Name of the cookie.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -431,7 +432,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceOutlierDetection> getOutlierDetection() {
+    public Output</* @Nullable */ BackendServiceOutlierDetection> outlierDetection() {
         return this.outlierDetection;
     }
     /**
@@ -449,7 +450,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * scheme is EXTERNAL.
      * 
      */
-    public Output<String> getPortName() {
+    public Output<String> portName() {
         return this.portName;
     }
     /**
@@ -465,7 +466,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -485,7 +486,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -499,7 +500,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * @return The security policy associated with this backend service.
      * 
      */
-    public Output</* @Nullable */ String> getSecurityPolicy() {
+    public Output</* @Nullable */ String> securityPolicy() {
         return this.securityPolicy;
     }
     /**
@@ -521,7 +522,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ BackendServiceSecuritySettings> getSecuritySettings() {
+    public Output</* @Nullable */ BackendServiceSecuritySettings> securitySettings() {
         return this.securitySettings;
     }
     /**
@@ -535,7 +536,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -553,7 +554,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
      * 
      */
-    public Output<String> getSessionAffinity() {
+    public Output<String> sessionAffinity() {
         return this.sessionAffinity;
     }
     /**
@@ -569,7 +570,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * failed request. Default is 30 seconds. Valid range is [1, 86400].
      * 
      */
-    public Output<Integer> getTimeoutSec() {
+    public Output<Integer> timeoutSec() {
         return this.timeoutSec;
     }
 
@@ -595,7 +596,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendService(String name, @Nullable BackendServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/backendService:BackendService", name, args == null ? BackendServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/backendService:BackendService", name, args == null ? BackendServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendService(String name, Output<String> id, @Nullable BackendServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

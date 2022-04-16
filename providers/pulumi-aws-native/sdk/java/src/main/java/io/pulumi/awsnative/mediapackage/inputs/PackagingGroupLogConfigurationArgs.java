@@ -5,6 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PackagingGroupLogConfigurationArgs extends io.pulumi.resource
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
-        return this.logGroupName == null ? Output.empty() : this.logGroupName;
+    public Output<String> logGroupName() {
+        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     public PackagingGroupLogConfigurationArgs(@Nullable Output<String> logGroupName) {
@@ -30,7 +31,7 @@ public final class PackagingGroupLogConfigurationArgs extends io.pulumi.resource
     }
 
     private PackagingGroupLogConfigurationArgs() {
-        this.logGroupName = Output.empty();
+        this.logGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class PackagingGroupLogConfigurationArgs extends io.pulumi.resource
             return this;
         }
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Output.ofNullable(logGroupName);
+            this.logGroupName = Codegen.ofNullable(logGroupName);
             return this;
         }        public PackagingGroupLogConfigurationArgs build() {
             return new PackagingGroupLogConfigurationArgs(logGroupName);

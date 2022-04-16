@@ -6,6 +6,7 @@ package io.pulumi.aws.appsync.inputs;
 import io.pulumi.aws.appsync.inputs.FunctionSyncConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
-    public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+    public Output<String> apiId() {
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataSource")
       private final @Nullable Output<String> dataSource;
 
-    public Output<String> getDataSource() {
-        return this.dataSource == null ? Output.empty() : this.dataSource;
+    public Output<String> dataSource() {
+        return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionId")
       private final @Nullable Output<String> functionId;
 
-    public Output<String> getFunctionId() {
-        return this.functionId == null ? Output.empty() : this.functionId;
+    public Output<String> functionId() {
+        return this.functionId == null ? Codegen.empty() : this.functionId;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="functionVersion")
       private final @Nullable Output<String> functionVersion;
 
-    public Output<String> getFunctionVersion() {
-        return this.functionVersion == null ? Output.empty() : this.functionVersion;
+    public Output<String> functionVersion() {
+        return this.functionVersion == null ? Codegen.empty() : this.functionVersion;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="maxBatchSize")
       private final @Nullable Output<Integer> maxBatchSize;
 
-    public Output<Integer> getMaxBatchSize() {
-        return this.maxBatchSize == null ? Output.empty() : this.maxBatchSize;
+    public Output<Integer> maxBatchSize() {
+        return this.maxBatchSize == null ? Codegen.empty() : this.maxBatchSize;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestMappingTemplate")
       private final @Nullable Output<String> requestMappingTemplate;
 
-    public Output<String> getRequestMappingTemplate() {
-        return this.requestMappingTemplate == null ? Output.empty() : this.requestMappingTemplate;
+    public Output<String> requestMappingTemplate() {
+        return this.requestMappingTemplate == null ? Codegen.empty() : this.requestMappingTemplate;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseMappingTemplate")
       private final @Nullable Output<String> responseMappingTemplate;
 
-    public Output<String> getResponseMappingTemplate() {
-        return this.responseMappingTemplate == null ? Output.empty() : this.responseMappingTemplate;
+    public Output<String> responseMappingTemplate() {
+        return this.responseMappingTemplate == null ? Codegen.empty() : this.responseMappingTemplate;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="syncConfig")
       private final @Nullable Output<FunctionSyncConfigGetArgs> syncConfig;
 
-    public Output<FunctionSyncConfigGetArgs> getSyncConfig() {
-        return this.syncConfig == null ? Output.empty() : this.syncConfig;
+    public Output<FunctionSyncConfigGetArgs> syncConfig() {
+        return this.syncConfig == null ? Codegen.empty() : this.syncConfig;
     }
 
     public FunctionState(
@@ -163,17 +164,17 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionState() {
-        this.apiId = Output.empty();
-        this.arn = Output.empty();
-        this.dataSource = Output.empty();
-        this.description = Output.empty();
-        this.functionId = Output.empty();
-        this.functionVersion = Output.empty();
-        this.maxBatchSize = Output.empty();
-        this.name = Output.empty();
-        this.requestMappingTemplate = Output.empty();
-        this.responseMappingTemplate = Output.empty();
-        this.syncConfig = Output.empty();
+        this.apiId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.dataSource = Codegen.empty();
+        this.description = Codegen.empty();
+        this.functionId = Codegen.empty();
+        this.functionVersion = Codegen.empty();
+        this.maxBatchSize = Codegen.empty();
+        this.name = Codegen.empty();
+        this.requestMappingTemplate = Codegen.empty();
+        this.responseMappingTemplate = Codegen.empty();
+        this.syncConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -221,7 +222,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -229,7 +230,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder dataSource(@Nullable Output<String> dataSource) {
@@ -237,7 +238,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSource(@Nullable String dataSource) {
-            this.dataSource = Output.ofNullable(dataSource);
+            this.dataSource = Codegen.ofNullable(dataSource);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -245,7 +246,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder functionId(@Nullable Output<String> functionId) {
@@ -253,7 +254,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionId(@Nullable String functionId) {
-            this.functionId = Output.ofNullable(functionId);
+            this.functionId = Codegen.ofNullable(functionId);
             return this;
         }
         public Builder functionVersion(@Nullable Output<String> functionVersion) {
@@ -261,7 +262,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionVersion(@Nullable String functionVersion) {
-            this.functionVersion = Output.ofNullable(functionVersion);
+            this.functionVersion = Codegen.ofNullable(functionVersion);
             return this;
         }
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
@@ -269,7 +270,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
-            this.maxBatchSize = Output.ofNullable(maxBatchSize);
+            this.maxBatchSize = Codegen.ofNullable(maxBatchSize);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -277,7 +278,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder requestMappingTemplate(@Nullable Output<String> requestMappingTemplate) {
@@ -285,7 +286,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestMappingTemplate(@Nullable String requestMappingTemplate) {
-            this.requestMappingTemplate = Output.ofNullable(requestMappingTemplate);
+            this.requestMappingTemplate = Codegen.ofNullable(requestMappingTemplate);
             return this;
         }
         public Builder responseMappingTemplate(@Nullable Output<String> responseMappingTemplate) {
@@ -293,7 +294,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseMappingTemplate(@Nullable String responseMappingTemplate) {
-            this.responseMappingTemplate = Output.ofNullable(responseMappingTemplate);
+            this.responseMappingTemplate = Codegen.ofNullable(responseMappingTemplate);
             return this;
         }
         public Builder syncConfig(@Nullable Output<FunctionSyncConfigGetArgs> syncConfig) {
@@ -301,7 +302,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncConfig(@Nullable FunctionSyncConfigGetArgs syncConfig) {
-            this.syncConfig = Output.ofNullable(syncConfig);
+            this.syncConfig = Codegen.ofNullable(syncConfig);
             return this;
         }        public FunctionState build() {
             return new FunctionState(apiId, arn, dataSource, description, functionId, functionVersion, maxBatchSize, name, requestMappingTemplate, responseMappingTemplate, syncConfig);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.billing;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="billingAccountName", required=true)
       private final Output<String> billingAccountName;
 
-    public Output<String> getBillingAccountName() {
+    public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
 
@@ -32,8 +33,8 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="billingRoleAssignmentName")
       private final @Nullable Output<String> billingRoleAssignmentName;
 
-    public Output<String> getBillingRoleAssignmentName() {
-        return this.billingRoleAssignmentName == null ? Output.empty() : this.billingRoleAssignmentName;
+    public Output<String> billingRoleAssignmentName() {
+        return this.billingRoleAssignmentName == null ? Codegen.empty() : this.billingRoleAssignmentName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
-    public Output<String> getPrincipalId() {
-        return this.principalId == null ? Output.empty() : this.principalId;
+    public Output<String> principalId() {
+        return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="principalTenantId")
       private final @Nullable Output<String> principalTenantId;
 
-    public Output<String> getPrincipalTenantId() {
-        return this.principalTenantId == null ? Output.empty() : this.principalTenantId;
+    public Output<String> principalTenantId() {
+        return this.principalTenantId == null ? Codegen.empty() : this.principalTenantId;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
+    public Output<String> roleDefinitionId() {
+        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="userAuthenticationType")
       private final @Nullable Output<String> userAuthenticationType;
 
-    public Output<String> getUserAuthenticationType() {
-        return this.userAuthenticationType == null ? Output.empty() : this.userAuthenticationType;
+    public Output<String> userAuthenticationType() {
+        return this.userAuthenticationType == null ? Codegen.empty() : this.userAuthenticationType;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     @Import(name="userEmailAddress")
       private final @Nullable Output<String> userEmailAddress;
 
-    public Output<String> getUserEmailAddress() {
-        return this.userEmailAddress == null ? Output.empty() : this.userEmailAddress;
+    public Output<String> userEmailAddress() {
+        return this.userEmailAddress == null ? Codegen.empty() : this.userEmailAddress;
     }
 
     public BillingRoleAssignmentByBillingAccountArgs(
@@ -109,13 +110,13 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     }
 
     private BillingRoleAssignmentByBillingAccountArgs() {
-        this.billingAccountName = Output.empty();
-        this.billingRoleAssignmentName = Output.empty();
-        this.principalId = Output.empty();
-        this.principalTenantId = Output.empty();
-        this.roleDefinitionId = Output.empty();
-        this.userAuthenticationType = Output.empty();
-        this.userEmailAddress = Output.empty();
+        this.billingAccountName = Codegen.empty();
+        this.billingRoleAssignmentName = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalTenantId = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
+        this.userAuthenticationType = Codegen.empty();
+        this.userEmailAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
             return this;
         }
         public Builder billingRoleAssignmentName(@Nullable String billingRoleAssignmentName) {
-            this.billingRoleAssignmentName = Output.ofNullable(billingRoleAssignmentName);
+            this.billingRoleAssignmentName = Codegen.ofNullable(billingRoleAssignmentName);
             return this;
         }
         public Builder principalId(@Nullable Output<String> principalId) {
@@ -171,7 +172,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
             return this;
         }
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Output.ofNullable(principalId);
+            this.principalId = Codegen.ofNullable(principalId);
             return this;
         }
         public Builder principalTenantId(@Nullable Output<String> principalTenantId) {
@@ -179,7 +180,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
             return this;
         }
         public Builder principalTenantId(@Nullable String principalTenantId) {
-            this.principalTenantId = Output.ofNullable(principalTenantId);
+            this.principalTenantId = Codegen.ofNullable(principalTenantId);
             return this;
         }
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
@@ -187,7 +188,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
             return this;
         }
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
             return this;
         }
         public Builder userAuthenticationType(@Nullable Output<String> userAuthenticationType) {
@@ -195,7 +196,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
             return this;
         }
         public Builder userAuthenticationType(@Nullable String userAuthenticationType) {
-            this.userAuthenticationType = Output.ofNullable(userAuthenticationType);
+            this.userAuthenticationType = Codegen.ofNullable(userAuthenticationType);
             return this;
         }
         public Builder userEmailAddress(@Nullable Output<String> userEmailAddress) {
@@ -203,7 +204,7 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
             return this;
         }
         public Builder userEmailAddress(@Nullable String userEmailAddress) {
-            this.userEmailAddress = Output.ofNullable(userEmailAddress);
+            this.userEmailAddress = Codegen.ofNullable(userEmailAddress);
             return this;
         }        public BillingRoleAssignmentByBillingAccountArgs build() {
             return new BillingRoleAssignmentByBillingAccountArgs(billingAccountName, billingRoleAssignmentName, principalId, principalTenantId, roleDefinitionId, userAuthenticationType, userEmailAddress);

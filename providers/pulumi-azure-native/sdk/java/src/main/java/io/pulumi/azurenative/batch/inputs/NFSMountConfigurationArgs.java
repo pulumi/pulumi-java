@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="mountOptions")
       private final @Nullable Output<String> mountOptions;
 
-    public Output<String> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+    public Output<String> mountOptions() {
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     /**
@@ -32,14 +33,14 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="relativeMountPath", required=true)
       private final Output<String> relativeMountPath;
 
-    public Output<String> getRelativeMountPath() {
+    public Output<String> relativeMountPath() {
         return this.relativeMountPath;
     }
 
     @Import(name="source", required=true)
       private final Output<String> source;
 
-    public Output<String> getSource() {
+    public Output<String> source() {
         return this.source;
     }
 
@@ -53,9 +54,9 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private NFSMountConfigurationArgs() {
-        this.mountOptions = Output.empty();
-        this.relativeMountPath = Output.empty();
-        this.source = Output.empty();
+        this.mountOptions = Codegen.empty();
+        this.relativeMountPath = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder relativeMountPath(Output<String> relativeMountPath) {

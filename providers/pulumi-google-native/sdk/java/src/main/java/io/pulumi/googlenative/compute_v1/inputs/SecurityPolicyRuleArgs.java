@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleHttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleMatcherArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleRateLimitOptionsArgs;
@@ -31,8 +32,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="headerAction")
       private final @Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction;
 
-    public Output<SecurityPolicyRuleHttpHeaderActionArgs> getHeaderAction() {
-        return this.headerAction == null ? Output.empty() : this.headerAction;
+    public Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction() {
+        return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="match")
       private final @Nullable Output<SecurityPolicyRuleMatcherArgs> match;
 
-    public Output<SecurityPolicyRuleMatcherArgs> getMatch() {
-        return this.match == null ? Output.empty() : this.match;
+    public Output<SecurityPolicyRuleMatcherArgs> match() {
+        return this.match == null ? Codegen.empty() : this.match;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> getPreview() {
-        return this.preview == null ? Output.empty() : this.preview;
+    public Output<Boolean> preview() {
+        return this.preview == null ? Codegen.empty() : this.preview;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="rateLimitOptions")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsArgs> getRateLimitOptions() {
-        return this.rateLimitOptions == null ? Output.empty() : this.rateLimitOptions;
+    public Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions() {
+        return this.rateLimitOptions == null ? Codegen.empty() : this.rateLimitOptions;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="redirectOptions")
       private final @Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions;
 
-    public Output<SecurityPolicyRuleRedirectOptionsArgs> getRedirectOptions() {
-        return this.redirectOptions == null ? Output.empty() : this.redirectOptions;
+    public Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions() {
+        return this.redirectOptions == null ? Codegen.empty() : this.redirectOptions;
     }
 
     public SecurityPolicyRuleArgs(
@@ -132,14 +133,14 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SecurityPolicyRuleArgs() {
-        this.action = Output.empty();
-        this.description = Output.empty();
-        this.headerAction = Output.empty();
-        this.match = Output.empty();
-        this.preview = Output.empty();
-        this.priority = Output.empty();
-        this.rateLimitOptions = Output.empty();
-        this.redirectOptions = Output.empty();
+        this.action = Codegen.empty();
+        this.description = Codegen.empty();
+        this.headerAction = Codegen.empty();
+        this.match = Codegen.empty();
+        this.preview = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.rateLimitOptions = Codegen.empty();
+        this.redirectOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -189,7 +190,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder headerAction(@Nullable Output<SecurityPolicyRuleHttpHeaderActionArgs> headerAction) {
@@ -197,7 +198,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder headerAction(@Nullable SecurityPolicyRuleHttpHeaderActionArgs headerAction) {
-            this.headerAction = Output.ofNullable(headerAction);
+            this.headerAction = Codegen.ofNullable(headerAction);
             return this;
         }
         public Builder match(@Nullable Output<SecurityPolicyRuleMatcherArgs> match) {
@@ -205,7 +206,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder match(@Nullable SecurityPolicyRuleMatcherArgs match) {
-            this.match = Output.ofNullable(match);
+            this.match = Codegen.ofNullable(match);
             return this;
         }
         public Builder preview(@Nullable Output<Boolean> preview) {
@@ -213,7 +214,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder preview(@Nullable Boolean preview) {
-            this.preview = Output.ofNullable(preview);
+            this.preview = Codegen.ofNullable(preview);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -221,7 +222,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder rateLimitOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsArgs> rateLimitOptions) {
@@ -229,7 +230,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsArgs rateLimitOptions) {
-            this.rateLimitOptions = Output.ofNullable(rateLimitOptions);
+            this.rateLimitOptions = Codegen.ofNullable(rateLimitOptions);
             return this;
         }
         public Builder redirectOptions(@Nullable Output<SecurityPolicyRuleRedirectOptionsArgs> redirectOptions) {
@@ -237,7 +238,7 @@ public final class SecurityPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder redirectOptions(@Nullable SecurityPolicyRuleRedirectOptionsArgs redirectOptions) {
-            this.redirectOptions = Output.ofNullable(redirectOptions);
+            this.redirectOptions = Codegen.ofNullable(redirectOptions);
             return this;
         }        public SecurityPolicyRuleArgs build() {
             return new SecurityPolicyRuleArgs(action, description, headerAction, match, preview, priority, rateLimitOptions, redirectOptions);

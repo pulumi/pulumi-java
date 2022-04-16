@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfigItemGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
     @Import(name="items")
       private final @Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items;
 
-    public Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+    public Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items() {
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     public ResponseHeadersPolicyCustomHeadersConfigGetArgs(@Nullable Output<List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs>> items) {
@@ -27,7 +28,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
     }
 
     private ResponseHeadersPolicyCustomHeadersConfigGetArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigGetArgs extends io.pu
             return this;
         }
         public Builder items(@Nullable List<ResponseHeadersPolicyCustomHeadersConfigItemGetArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(ResponseHeadersPolicyCustomHeadersConfigItemGetArgs... items) {

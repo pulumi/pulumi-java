@@ -7,6 +7,7 @@ import io.pulumi.azurenative.azurestackhci.enums.CreatedByType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arcSettingName", required=true)
       private final Output<String> arcSettingName;
 
-    public Output<String> getArcSettingName() {
+    public Output<String> arcSettingName() {
         return this.arcSettingName;
     }
 
@@ -36,8 +37,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
-    public Output<Boolean> getAutoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion == null ? Output.empty() : this.autoUpgradeMinorVersion;
+    public Output<Boolean> autoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion == null ? Codegen.empty() : this.autoUpgradeMinorVersion;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -58,8 +59,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+    public Output<String> createdAt() {
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
-    public Output<String> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+    public Output<String> createdBy() {
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Output<Either<String,CreatedByType>> getCreatedByType() {
-        return this.createdByType == null ? Output.empty() : this.createdByType;
+    public Output<Either<String,CreatedByType>> createdByType() {
+        return this.createdByType == null ? Codegen.empty() : this.createdByType;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extensionName")
       private final @Nullable Output<String> extensionName;
 
-    public Output<String> getExtensionName() {
-        return this.extensionName == null ? Output.empty() : this.extensionName;
+    public Output<String> extensionName() {
+        return this.extensionName == null ? Codegen.empty() : this.extensionName;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
+    public Output<String> forceUpdateTag() {
+        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
-    public Output<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
+    public Output<String> lastModifiedAt() {
+        return this.lastModifiedAt == null ? Codegen.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
-    public Output<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
+    public Output<String> lastModifiedBy() {
+        return this.lastModifiedBy == null ? Codegen.empty() : this.lastModifiedBy;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
+    public Output<Either<String,CreatedByType>> lastModifiedByType() {
+        return this.lastModifiedByType == null ? Codegen.empty() : this.lastModifiedByType;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
 
-    public Output<Object> getProtectedSettings() {
-        return this.protectedSettings == null ? Output.empty() : this.protectedSettings;
+    public Output<Object> protectedSettings() {
+        return this.protectedSettings == null ? Codegen.empty() : this.protectedSettings;
     }
 
     /**
@@ -157,8 +158,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
-        return this.publisher == null ? Output.empty() : this.publisher;
+    public Output<String> publisher() {
+        return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -179,8 +180,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="settings")
       private final @Nullable Output<Object> settings;
 
-    public Output<Object> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+    public Output<Object> settings() {
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     /**
@@ -190,8 +191,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -201,8 +202,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
-    public Output<String> getTypeHandlerVersion() {
-        return this.typeHandlerVersion == null ? Output.empty() : this.typeHandlerVersion;
+    public Output<String> typeHandlerVersion() {
+        return this.typeHandlerVersion == null ? Codegen.empty() : this.typeHandlerVersion;
     }
 
     public ExtensionArgs(
@@ -243,23 +244,23 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExtensionArgs() {
-        this.arcSettingName = Output.empty();
-        this.autoUpgradeMinorVersion = Output.empty();
-        this.clusterName = Output.empty();
-        this.createdAt = Output.empty();
-        this.createdBy = Output.empty();
-        this.createdByType = Output.empty();
-        this.extensionName = Output.empty();
-        this.forceUpdateTag = Output.empty();
-        this.lastModifiedAt = Output.empty();
-        this.lastModifiedBy = Output.empty();
-        this.lastModifiedByType = Output.empty();
-        this.protectedSettings = Output.empty();
-        this.publisher = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.settings = Output.empty();
-        this.type = Output.empty();
-        this.typeHandlerVersion = Output.empty();
+        this.arcSettingName = Codegen.empty();
+        this.autoUpgradeMinorVersion = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.createdAt = Codegen.empty();
+        this.createdBy = Codegen.empty();
+        this.createdByType = Codegen.empty();
+        this.extensionName = Codegen.empty();
+        this.forceUpdateTag = Codegen.empty();
+        this.lastModifiedAt = Codegen.empty();
+        this.lastModifiedBy = Codegen.empty();
+        this.lastModifiedByType = Codegen.empty();
+        this.protectedSettings = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.type = Codegen.empty();
+        this.typeHandlerVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -327,7 +328,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
-            this.autoUpgradeMinorVersion = Output.ofNullable(autoUpgradeMinorVersion);
+            this.autoUpgradeMinorVersion = Codegen.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -343,7 +344,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder createdBy(@Nullable Output<String> createdBy) {
@@ -351,7 +352,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
@@ -359,7 +360,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Output.ofNullable(createdByType);
+            this.createdByType = Codegen.ofNullable(createdByType);
             return this;
         }
         public Builder extensionName(@Nullable Output<String> extensionName) {
@@ -367,7 +368,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extensionName(@Nullable String extensionName) {
-            this.extensionName = Output.ofNullable(extensionName);
+            this.extensionName = Codegen.ofNullable(extensionName);
             return this;
         }
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
@@ -375,7 +376,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
             return this;
         }
         public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
@@ -383,7 +384,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Codegen.ofNullable(lastModifiedAt);
             return this;
         }
         public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
@@ -391,7 +392,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Codegen.ofNullable(lastModifiedBy);
             return this;
         }
         public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
@@ -399,7 +400,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Codegen.ofNullable(lastModifiedByType);
             return this;
         }
         public Builder protectedSettings(@Nullable Output<Object> protectedSettings) {
@@ -407,7 +408,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protectedSettings(@Nullable Object protectedSettings) {
-            this.protectedSettings = Output.ofNullable(protectedSettings);
+            this.protectedSettings = Codegen.ofNullable(protectedSettings);
             return this;
         }
         public Builder publisher(@Nullable Output<String> publisher) {
@@ -415,7 +416,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Output.ofNullable(publisher);
+            this.publisher = Codegen.ofNullable(publisher);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -431,7 +432,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder settings(@Nullable Object settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -439,7 +440,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder typeHandlerVersion(@Nullable Output<String> typeHandlerVersion) {
@@ -447,7 +448,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
-            this.typeHandlerVersion = Output.ofNullable(typeHandlerVersion);
+            this.typeHandlerVersion = Codegen.ofNullable(typeHandlerVersion);
             return this;
         }        public ExtensionArgs build() {
             return new ExtensionArgs(arcSettingName, autoUpgradeMinorVersion, clusterName, createdAt, createdBy, createdByType, extensionName, forceUpdateTag, lastModifiedAt, lastModifiedBy, lastModifiedByType, protectedSettings, publisher, resourceGroupName, settings, type, typeHandlerVersion);

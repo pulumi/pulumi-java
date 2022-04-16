@@ -10,6 +10,7 @@ import io.pulumi.awsnative.groundstation.outputs.MissionProfileTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -40,7 +41,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * @return Post-pass time needed after the contact.
      * 
      */
-    public Output</* @Nullable */ Integer> getContactPostPassDurationSeconds() {
+    public Output</* @Nullable */ Integer> contactPostPassDurationSeconds() {
         return this.contactPostPassDurationSeconds;
     }
     /**
@@ -54,13 +55,13 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * @return Pre-pass time needed before the contact.
      * 
      */
-    public Output</* @Nullable */ Integer> getContactPrePassDurationSeconds() {
+    public Output</* @Nullable */ Integer> contactPrePassDurationSeconds() {
         return this.contactPrePassDurationSeconds;
     }
     @Export(name="dataflowEdges", type=List.class, parameters={MissionProfileDataflowEdge.class})
     private Output<List<MissionProfileDataflowEdge>> dataflowEdges;
 
-    public Output<List<MissionProfileDataflowEdge>> getDataflowEdges() {
+    public Output<List<MissionProfileDataflowEdge>> dataflowEdges() {
         return this.dataflowEdges;
     }
     /**
@@ -74,7 +75,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * @return Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
      * 
      */
-    public Output<Integer> getMinimumViableContactDurationSeconds() {
+    public Output<Integer> minimumViableContactDurationSeconds() {
         return this.minimumViableContactDurationSeconds;
     }
     /**
@@ -88,25 +89,25 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * @return A name used to identify a mission profile.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     @Export(name="tags", type=List.class, parameters={MissionProfileTag.class})
     private Output</* @Nullable */ List<MissionProfileTag>> tags;
 
-    public Output</* @Nullable */ List<MissionProfileTag>> getTags() {
+    public Output</* @Nullable */ List<MissionProfileTag>> tags() {
         return this.tags;
     }
     @Export(name="trackingConfigArn", type=String.class, parameters={})
     private Output<String> trackingConfigArn;
 
-    public Output<String> getTrackingConfigArn() {
+    public Output<String> trackingConfigArn() {
         return this.trackingConfigArn;
     }
 
@@ -132,7 +133,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MissionProfile(String name, MissionProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:groundstation:MissionProfile", name, args == null ? MissionProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:groundstation:MissionProfile", name, args == null ? MissionProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MissionProfile(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

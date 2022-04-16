@@ -24,7 +24,7 @@ public final class PrivateClusterMasterGlobalAccessConfigResponse {
      * Whenever master is accessible globally or not.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

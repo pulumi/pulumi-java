@@ -9,6 +9,7 @@ import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringExecutio
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
-    public Output<String> getEndpointName() {
-        return this.endpointName == null ? Output.empty() : this.endpointName;
+    public Output<String> endpointName() {
+        return this.endpointName == null ? Codegen.empty() : this.endpointName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
-    public Output<String> getFailureReason() {
-        return this.failureReason == null ? Output.empty() : this.failureReason;
+    public Output<String> failureReason() {
+        return this.failureReason == null ? Codegen.empty() : this.failureReason;
     }
 
     /**
@@ -44,22 +45,22 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="lastMonitoringExecutionSummary")
       private final @Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
 
-    public Output<MonitoringScheduleMonitoringExecutionSummaryArgs> getLastMonitoringExecutionSummary() {
-        return this.lastMonitoringExecutionSummary == null ? Output.empty() : this.lastMonitoringExecutionSummary;
+    public Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary() {
+        return this.lastMonitoringExecutionSummary == null ? Codegen.empty() : this.lastMonitoringExecutionSummary;
     }
 
     @Import(name="monitoringScheduleConfig", required=true)
       private final Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
 
-    public Output<MonitoringScheduleConfigArgs> getMonitoringScheduleConfig() {
+    public Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig() {
         return this.monitoringScheduleConfig;
     }
 
     @Import(name="monitoringScheduleName")
       private final @Nullable Output<String> monitoringScheduleName;
 
-    public Output<String> getMonitoringScheduleName() {
-        return this.monitoringScheduleName == null ? Output.empty() : this.monitoringScheduleName;
+    public Output<String> monitoringScheduleName() {
+        return this.monitoringScheduleName == null ? Codegen.empty() : this.monitoringScheduleName;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="monitoringScheduleStatus")
       private final @Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus;
 
-    public Output<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
-        return this.monitoringScheduleStatus == null ? Output.empty() : this.monitoringScheduleStatus;
+    public Output<MonitoringScheduleStatus> monitoringScheduleStatus() {
+        return this.monitoringScheduleStatus == null ? Codegen.empty() : this.monitoringScheduleStatus;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tags")
       private final @Nullable Output<List<MonitoringScheduleTagArgs>> tags;
 
-    public Output<List<MonitoringScheduleTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<MonitoringScheduleTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MonitoringScheduleArgs(
@@ -102,13 +103,13 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private MonitoringScheduleArgs() {
-        this.endpointName = Output.empty();
-        this.failureReason = Output.empty();
-        this.lastMonitoringExecutionSummary = Output.empty();
-        this.monitoringScheduleConfig = Output.empty();
-        this.monitoringScheduleName = Output.empty();
-        this.monitoringScheduleStatus = Output.empty();
-        this.tags = Output.empty();
+        this.endpointName = Codegen.empty();
+        this.failureReason = Codegen.empty();
+        this.lastMonitoringExecutionSummary = Codegen.empty();
+        this.monitoringScheduleConfig = Codegen.empty();
+        this.monitoringScheduleName = Codegen.empty();
+        this.monitoringScheduleStatus = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Output.ofNullable(endpointName);
+            this.endpointName = Codegen.ofNullable(endpointName);
             return this;
         }
         public Builder failureReason(@Nullable Output<String> failureReason) {
@@ -156,7 +157,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Output.ofNullable(failureReason);
+            this.failureReason = Codegen.ofNullable(failureReason);
             return this;
         }
         public Builder lastMonitoringExecutionSummary(@Nullable Output<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary) {
@@ -164,7 +165,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lastMonitoringExecutionSummary(@Nullable MonitoringScheduleMonitoringExecutionSummaryArgs lastMonitoringExecutionSummary) {
-            this.lastMonitoringExecutionSummary = Output.ofNullable(lastMonitoringExecutionSummary);
+            this.lastMonitoringExecutionSummary = Codegen.ofNullable(lastMonitoringExecutionSummary);
             return this;
         }
         public Builder monitoringScheduleConfig(Output<MonitoringScheduleConfigArgs> monitoringScheduleConfig) {
@@ -180,7 +181,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder monitoringScheduleName(@Nullable String monitoringScheduleName) {
-            this.monitoringScheduleName = Output.ofNullable(monitoringScheduleName);
+            this.monitoringScheduleName = Codegen.ofNullable(monitoringScheduleName);
             return this;
         }
         public Builder monitoringScheduleStatus(@Nullable Output<MonitoringScheduleStatus> monitoringScheduleStatus) {
@@ -188,7 +189,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder monitoringScheduleStatus(@Nullable MonitoringScheduleStatus monitoringScheduleStatus) {
-            this.monitoringScheduleStatus = Output.ofNullable(monitoringScheduleStatus);
+            this.monitoringScheduleStatus = Codegen.ofNullable(monitoringScheduleStatus);
             return this;
         }
         public Builder tags(@Nullable Output<List<MonitoringScheduleTagArgs>> tags) {
@@ -196,7 +197,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable List<MonitoringScheduleTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(MonitoringScheduleTagArgs... tags) {

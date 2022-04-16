@@ -13,6 +13,7 @@ import io.pulumi.awsnative.glue.outputs.SchemaVersion;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -34,13 +35,13 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name for the Schema.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="checkpointVersion", type=SchemaVersion.class, parameters={})
     private Output</* @Nullable */ SchemaVersion> checkpointVersion;
 
-    public Output</* @Nullable */ SchemaVersion> getCheckpointVersion() {
+    public Output</* @Nullable */ SchemaVersion> checkpointVersion() {
         return this.checkpointVersion;
     }
     /**
@@ -54,7 +55,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Compatibility setting for the schema.
      * 
      */
-    public Output<SchemaCompatibility> getCompatibility() {
+    public Output<SchemaCompatibility> compatibility() {
         return this.compatibility;
     }
     /**
@@ -68,7 +69,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Data format name to use for the schema. Accepted values: 'AVRO', 'JSON', 'PROTOBUF'
      * 
      */
-    public Output<SchemaDataFormat> getDataFormat() {
+    public Output<SchemaDataFormat> dataFormat() {
         return this.dataFormat;
     }
     /**
@@ -82,7 +83,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return A description of the schema. If description is not provided, there will not be any default value for this.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -96,7 +97,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Represents the version ID associated with the initial schema version.
      * 
      */
-    public Output<String> getInitialSchemaVersionId() {
+    public Output<String> initialSchemaVersionId() {
         return this.initialSchemaVersionId;
     }
     /**
@@ -110,13 +111,13 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Name of the schema.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="registry", type=SchemaRegistry.class, parameters={})
     private Output</* @Nullable */ SchemaRegistry> registry;
 
-    public Output</* @Nullable */ SchemaRegistry> getRegistry() {
+    public Output</* @Nullable */ SchemaRegistry> registry() {
         return this.registry;
     }
     /**
@@ -130,7 +131,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return Definition for the initial schema version in plain-text.
      * 
      */
-    public Output<String> getSchemaDefinition() {
+    public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
     /**
@@ -144,7 +145,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @return List of tags to tag the schema
      * 
      */
-    public Output</* @Nullable */ List<SchemaTag>> getTags() {
+    public Output</* @Nullable */ List<SchemaTag>> tags() {
         return this.tags;
     }
 
@@ -170,7 +171,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Schema(String name, SchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:glue:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:glue:Schema", name, args == null ? SchemaArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Schema(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

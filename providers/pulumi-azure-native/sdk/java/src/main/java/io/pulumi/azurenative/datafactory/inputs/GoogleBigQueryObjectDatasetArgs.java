@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,8 +32,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="dataset")
       private final @Nullable Output<Object> dataset;
 
-    public Output<Object> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+    public Output<Object> dataset() {
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Output<DatasetFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+    public Output<DatasetFolderArgs> folder() {
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -86,8 +87,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
-    public Output<Object> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+    public Output<Object> schema() {
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
-    public Output<Object> getStructure() {
-        return this.structure == null ? Output.empty() : this.structure;
+    public Output<Object> structure() {
+        return this.structure == null ? Codegen.empty() : this.structure;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="table")
       private final @Nullable Output<Object> table;
 
-    public Output<Object> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+    public Output<Object> table() {
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="tableName")
       private final @Nullable Output<Object> tableName;
 
-    public Output<Object> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+    public Output<Object> tableName() {
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -172,17 +173,17 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
     }
 
     private GoogleBigQueryObjectDatasetArgs() {
-        this.annotations = Output.empty();
-        this.dataset = Output.empty();
-        this.description = Output.empty();
-        this.folder = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.parameters = Output.empty();
-        this.schema = Output.empty();
-        this.structure = Output.empty();
-        this.table = Output.empty();
-        this.tableName = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.description = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.structure = Codegen.empty();
+        this.table = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -230,7 +231,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -241,7 +242,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder dataset(@Nullable Object dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -249,7 +250,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
@@ -257,7 +258,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -273,7 +274,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder schema(@Nullable Output<Object> schema) {
@@ -281,7 +282,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder schema(@Nullable Object schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder structure(@Nullable Output<Object> structure) {
@@ -289,7 +290,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder structure(@Nullable Object structure) {
-            this.structure = Output.ofNullable(structure);
+            this.structure = Codegen.ofNullable(structure);
             return this;
         }
         public Builder table(@Nullable Output<Object> table) {
@@ -297,7 +298,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder table(@Nullable Object table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }
         public Builder tableName(@Nullable Output<Object> tableName) {
@@ -305,7 +306,7 @@ public final class GoogleBigQueryObjectDatasetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tableName(@Nullable Object tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder type(Output<String> type) {

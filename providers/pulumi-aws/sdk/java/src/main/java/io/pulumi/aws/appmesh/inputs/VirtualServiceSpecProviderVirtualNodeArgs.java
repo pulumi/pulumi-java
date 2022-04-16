@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class VirtualServiceSpecProviderVirtualNodeArgs extends io.pulumi.r
     @Import(name="virtualNodeName", required=true)
       private final Output<String> virtualNodeName;
 
-    public Output<String> getVirtualNodeName() {
+    public Output<String> virtualNodeName() {
         return this.virtualNodeName;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualServiceSpecProviderVirtualNodeArgs extends io.pulumi.r
     }
 
     private VirtualServiceSpecProviderVirtualNodeArgs() {
-        this.virtualNodeName = Output.empty();
+        this.virtualNodeName = Codegen.empty();
     }
 
     public static Builder builder() {

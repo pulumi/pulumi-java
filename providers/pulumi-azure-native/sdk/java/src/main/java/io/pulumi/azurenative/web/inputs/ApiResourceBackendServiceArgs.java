@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
     @Import(name="serviceUrl")
       private final @Nullable Output<String> serviceUrl;
 
-    public Output<String> getServiceUrl() {
-        return this.serviceUrl == null ? Output.empty() : this.serviceUrl;
+    public Output<String> serviceUrl() {
+        return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
     }
 
     public ApiResourceBackendServiceArgs(@Nullable Output<String> serviceUrl) {
@@ -34,7 +35,7 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
     }
 
     private ApiResourceBackendServiceArgs() {
-        this.serviceUrl = Output.empty();
+        this.serviceUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder serviceUrl(@Nullable String serviceUrl) {
-            this.serviceUrl = Output.ofNullable(serviceUrl);
+            this.serviceUrl = Codegen.ofNullable(serviceUrl);
             return this;
         }        public ApiResourceBackendServiceArgs build() {
             return new ApiResourceBackendServiceArgs(serviceUrl);

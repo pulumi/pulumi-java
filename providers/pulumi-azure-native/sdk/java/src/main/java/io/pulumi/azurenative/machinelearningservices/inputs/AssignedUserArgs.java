@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
-    public Output<String> getObjectId() {
+    public Output<String> objectId() {
         return this.objectId;
     }
 
@@ -35,7 +36,7 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -47,8 +48,8 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssignedUserArgs() {
-        this.objectId = Output.empty();
-        this.tenantId = Output.empty();
+        this.objectId = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {

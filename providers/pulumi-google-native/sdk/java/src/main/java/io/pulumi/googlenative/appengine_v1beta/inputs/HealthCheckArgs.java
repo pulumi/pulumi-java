@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="checkInterval")
       private final @Nullable Output<String> checkInterval;
 
-    public Output<String> getCheckInterval() {
-        return this.checkInterval == null ? Output.empty() : this.checkInterval;
+    public Output<String> checkInterval() {
+        return this.checkInterval == null ? Codegen.empty() : this.checkInterval;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="disableHealthCheck")
       private final @Nullable Output<Boolean> disableHealthCheck;
 
-    public Output<Boolean> getDisableHealthCheck() {
-        return this.disableHealthCheck == null ? Output.empty() : this.disableHealthCheck;
+    public Output<Boolean> disableHealthCheck() {
+        return this.disableHealthCheck == null ? Codegen.empty() : this.disableHealthCheck;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
-    public Output<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
+    public Output<Integer> healthyThreshold() {
+        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+    public Output<String> host() {
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restartThreshold")
       private final @Nullable Output<Integer> restartThreshold;
 
-    public Output<Integer> getRestartThreshold() {
-        return this.restartThreshold == null ? Output.empty() : this.restartThreshold;
+    public Output<Integer> restartThreshold() {
+        return this.restartThreshold == null ? Codegen.empty() : this.restartThreshold;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
-    public Output<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
+    public Output<Integer> unhealthyThreshold() {
+        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 
     public HealthCheckArgs(
@@ -115,13 +116,13 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthCheckArgs() {
-        this.checkInterval = Output.empty();
-        this.disableHealthCheck = Output.empty();
-        this.healthyThreshold = Output.empty();
-        this.host = Output.empty();
-        this.restartThreshold = Output.empty();
-        this.timeout = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.checkInterval = Codegen.empty();
+        this.disableHealthCheck = Codegen.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.host = Codegen.empty();
+        this.restartThreshold = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder checkInterval(@Nullable String checkInterval) {
-            this.checkInterval = Output.ofNullable(checkInterval);
+            this.checkInterval = Codegen.ofNullable(checkInterval);
             return this;
         }
         public Builder disableHealthCheck(@Nullable Output<Boolean> disableHealthCheck) {
@@ -169,7 +170,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableHealthCheck(@Nullable Boolean disableHealthCheck) {
-            this.disableHealthCheck = Output.ofNullable(disableHealthCheck);
+            this.disableHealthCheck = Codegen.ofNullable(disableHealthCheck);
             return this;
         }
         public Builder healthyThreshold(@Nullable Output<Integer> healthyThreshold) {
@@ -177,7 +178,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Output.ofNullable(healthyThreshold);
+            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
             return this;
         }
         public Builder host(@Nullable Output<String> host) {
@@ -185,7 +186,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder restartThreshold(@Nullable Output<Integer> restartThreshold) {
@@ -193,7 +194,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restartThreshold(@Nullable Integer restartThreshold) {
-            this.restartThreshold = Output.ofNullable(restartThreshold);
+            this.restartThreshold = Codegen.ofNullable(restartThreshold);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -201,7 +202,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
@@ -209,7 +210,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
             return this;
         }        public HealthCheckArgs build() {
             return new HealthCheckArgs(checkInterval, disableHealthCheck, healthyThreshold, host, restartThreshold, timeout, unhealthyThreshold);

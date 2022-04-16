@@ -5,6 +5,7 @@ package io.pulumi.foobar.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="buzz")
       private final @Nullable Output<String> buzz;
 
-    public Output<String> getBuzz() {
-        return this.buzz == null ? Output.empty() : this.buzz;
+    public Output<String> buzz() {
+        return this.buzz == null ? Codegen.empty() : this.buzz;
     }
 
     public TopLevelArgs(@Nullable Output<String> buzz) {
@@ -26,7 +27,7 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopLevelArgs() {
-        this.buzz = Output.empty();
+        this.buzz = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buzz(@Nullable String buzz) {
-            this.buzz = Output.ofNullable(buzz);
+            this.buzz = Codegen.ofNullable(buzz);
             return this;
         }        public TopLevelArgs build() {
             return new TopLevelArgs(buzz);

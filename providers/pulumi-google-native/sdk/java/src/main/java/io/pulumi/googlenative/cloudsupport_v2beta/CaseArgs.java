@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsupport_v2beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsupport_v2beta.enums.CasePriority;
 import io.pulumi.googlenative.cloudsupport_v2beta.inputs.ActorArgs;
 import io.pulumi.googlenative.cloudsupport_v2beta.inputs.CaseClassificationArgs;
@@ -26,8 +27,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="classification")
       private final @Nullable Output<CaseClassificationArgs> classification;
 
-    public Output<CaseClassificationArgs> getClassification() {
-        return this.classification == null ? Output.empty() : this.classification;
+    public Output<CaseClassificationArgs> classification() {
+        return this.classification == null ? Codegen.empty() : this.classification;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="creator")
       private final @Nullable Output<ActorArgs> creator;
 
-    public Output<ActorArgs> getCreator() {
-        return this.creator == null ? Output.empty() : this.creator;
+    public Output<ActorArgs> creator() {
+        return this.creator == null ? Codegen.empty() : this.creator;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="escalated")
       private final @Nullable Output<Boolean> escalated;
 
-    public Output<Boolean> getEscalated() {
-        return this.escalated == null ? Output.empty() : this.escalated;
+    public Output<Boolean> escalated() {
+        return this.escalated == null ? Codegen.empty() : this.escalated;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<CasePriority> priority;
 
-    public Output<CasePriority> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<CasePriority> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="subscriberEmailAddresses")
       private final @Nullable Output<List<String>> subscriberEmailAddresses;
 
-    public Output<List<String>> getSubscriberEmailAddresses() {
-        return this.subscriberEmailAddresses == null ? Output.empty() : this.subscriberEmailAddresses;
+    public Output<List<String>> subscriberEmailAddresses() {
+        return this.subscriberEmailAddresses == null ? Codegen.empty() : this.subscriberEmailAddresses;
     }
 
     /**
@@ -114,8 +115,8 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="testCase")
       private final @Nullable Output<Boolean> testCase;
 
-    public Output<Boolean> getTestCase() {
-        return this.testCase == null ? Output.empty() : this.testCase;
+    public Output<Boolean> testCase() {
+        return this.testCase == null ? Codegen.empty() : this.testCase;
     }
 
     /**
@@ -125,21 +126,21 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
-    public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+    public Output<String> timeZone() {
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     @Import(name="v2betaId1", required=true)
       private final Output<String> v2betaId1;
 
-    public Output<String> getV2betaId1() {
+    public Output<String> v2betaId1() {
         return this.v2betaId1;
     }
 
     @Import(name="v2betumId", required=true)
       private final Output<String> v2betumId;
 
-    public Output<String> getV2betumId() {
+    public Output<String> v2betumId() {
         return this.v2betumId;
     }
 
@@ -171,18 +172,18 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CaseArgs() {
-        this.classification = Output.empty();
-        this.creator = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.escalated = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.subscriberEmailAddresses = Output.empty();
-        this.testCase = Output.empty();
-        this.timeZone = Output.empty();
-        this.v2betaId1 = Output.empty();
-        this.v2betumId = Output.empty();
+        this.classification = Codegen.empty();
+        this.creator = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.escalated = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.subscriberEmailAddresses = Codegen.empty();
+        this.testCase = Codegen.empty();
+        this.timeZone = Codegen.empty();
+        this.v2betaId1 = Codegen.empty();
+        this.v2betumId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -232,7 +233,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder classification(@Nullable CaseClassificationArgs classification) {
-            this.classification = Output.ofNullable(classification);
+            this.classification = Codegen.ofNullable(classification);
             return this;
         }
         public Builder creator(@Nullable Output<ActorArgs> creator) {
@@ -240,7 +241,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creator(@Nullable ActorArgs creator) {
-            this.creator = Output.ofNullable(creator);
+            this.creator = Codegen.ofNullable(creator);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -248,7 +249,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -256,7 +257,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder escalated(@Nullable Output<Boolean> escalated) {
@@ -264,7 +265,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder escalated(@Nullable Boolean escalated) {
-            this.escalated = Output.ofNullable(escalated);
+            this.escalated = Codegen.ofNullable(escalated);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -272,7 +273,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(@Nullable Output<CasePriority> priority) {
@@ -280,7 +281,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable CasePriority priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder subscriberEmailAddresses(@Nullable Output<List<String>> subscriberEmailAddresses) {
@@ -288,7 +289,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
-            this.subscriberEmailAddresses = Output.ofNullable(subscriberEmailAddresses);
+            this.subscriberEmailAddresses = Codegen.ofNullable(subscriberEmailAddresses);
             return this;
         }
         public Builder subscriberEmailAddresses(String... subscriberEmailAddresses) {
@@ -299,7 +300,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testCase(@Nullable Boolean testCase) {
-            this.testCase = Output.ofNullable(testCase);
+            this.testCase = Codegen.ofNullable(testCase);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -307,7 +308,7 @@ public final class CaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }
         public Builder v2betaId1(Output<String> v2betaId1) {

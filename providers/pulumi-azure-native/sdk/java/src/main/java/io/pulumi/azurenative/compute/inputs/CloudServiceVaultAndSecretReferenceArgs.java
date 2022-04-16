@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
     @Import(name="secretUrl")
       private final @Nullable Output<String> secretUrl;
 
-    public Output<String> getSecretUrl() {
-        return this.secretUrl == null ? Output.empty() : this.secretUrl;
+    public Output<String> secretUrl() {
+        return this.secretUrl == null ? Codegen.empty() : this.secretUrl;
     }
 
     @Import(name="sourceVault")
       private final @Nullable Output<SubResourceArgs> sourceVault;
 
-    public Output<SubResourceArgs> getSourceVault() {
-        return this.sourceVault == null ? Output.empty() : this.sourceVault;
+    public Output<SubResourceArgs> sourceVault() {
+        return this.sourceVault == null ? Codegen.empty() : this.sourceVault;
     }
 
     public CloudServiceVaultAndSecretReferenceArgs(
@@ -37,8 +38,8 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
     }
 
     private CloudServiceVaultAndSecretReferenceArgs() {
-        this.secretUrl = Output.empty();
-        this.sourceVault = Output.empty();
+        this.secretUrl = Codegen.empty();
+        this.sourceVault = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
             return this;
         }
         public Builder secretUrl(@Nullable String secretUrl) {
-            this.secretUrl = Output.ofNullable(secretUrl);
+            this.secretUrl = Codegen.ofNullable(secretUrl);
             return this;
         }
         public Builder sourceVault(@Nullable Output<SubResourceArgs> sourceVault) {
@@ -76,7 +77,7 @@ public final class CloudServiceVaultAndSecretReferenceArgs extends io.pulumi.res
             return this;
         }
         public Builder sourceVault(@Nullable SubResourceArgs sourceVault) {
-            this.sourceVault = Output.ofNullable(sourceVault);
+            this.sourceVault = Codegen.ofNullable(sourceVault);
             return this;
         }        public CloudServiceVaultAndSecretReferenceArgs build() {
             return new CloudServiceVaultAndSecretReferenceArgs(secretUrl, sourceVault);

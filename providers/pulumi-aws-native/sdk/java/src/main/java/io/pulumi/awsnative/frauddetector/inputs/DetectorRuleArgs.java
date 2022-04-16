@@ -8,6 +8,7 @@ import io.pulumi.awsnative.frauddetector.inputs.DetectorOutcomeArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,8 +22,8 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
-    public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+    public Output<String> createdTime() {
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -43,29 +44,29 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
-    public Output<String> getDetectorId() {
-        return this.detectorId == null ? Output.empty() : this.detectorId;
+    public Output<String> detectorId() {
+        return this.detectorId == null ? Codegen.empty() : this.detectorId;
     }
 
     @Import(name="expression")
       private final @Nullable Output<String> expression;
 
-    public Output<String> getExpression() {
-        return this.expression == null ? Output.empty() : this.expression;
+    public Output<String> expression() {
+        return this.expression == null ? Codegen.empty() : this.expression;
     }
 
     @Import(name="language")
       private final @Nullable Output<DetectorRuleLanguage> language;
 
-    public Output<DetectorRuleLanguage> getLanguage() {
-        return this.language == null ? Output.empty() : this.language;
+    public Output<DetectorRuleLanguage> language() {
+        return this.language == null ? Codegen.empty() : this.language;
     }
 
     /**
@@ -75,29 +76,29 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
-    public Output<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
+    public Output<String> lastUpdatedTime() {
+        return this.lastUpdatedTime == null ? Codegen.empty() : this.lastUpdatedTime;
     }
 
     @Import(name="outcomes")
       private final @Nullable Output<List<DetectorOutcomeArgs>> outcomes;
 
-    public Output<List<DetectorOutcomeArgs>> getOutcomes() {
-        return this.outcomes == null ? Output.empty() : this.outcomes;
+    public Output<List<DetectorOutcomeArgs>> outcomes() {
+        return this.outcomes == null ? Codegen.empty() : this.outcomes;
     }
 
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
-    public Output<String> getRuleId() {
-        return this.ruleId == null ? Output.empty() : this.ruleId;
+    public Output<String> ruleId() {
+        return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
     @Import(name="ruleVersion")
       private final @Nullable Output<String> ruleVersion;
 
-    public Output<String> getRuleVersion() {
-        return this.ruleVersion == null ? Output.empty() : this.ruleVersion;
+    public Output<String> ruleVersion() {
+        return this.ruleVersion == null ? Codegen.empty() : this.ruleVersion;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
-    public Output<List<DetectorTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<DetectorTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DetectorRuleArgs(
@@ -137,17 +138,17 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorRuleArgs() {
-        this.arn = Output.empty();
-        this.createdTime = Output.empty();
-        this.description = Output.empty();
-        this.detectorId = Output.empty();
-        this.expression = Output.empty();
-        this.language = Output.empty();
-        this.lastUpdatedTime = Output.empty();
-        this.outcomes = Output.empty();
-        this.ruleId = Output.empty();
-        this.ruleVersion = Output.empty();
-        this.tags = Output.empty();
+        this.arn = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.language = Codegen.empty();
+        this.lastUpdatedTime = Codegen.empty();
+        this.outcomes = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.ruleVersion = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -203,7 +204,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -211,7 +212,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder detectorId(@Nullable Output<String> detectorId) {
@@ -219,7 +220,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detectorId(@Nullable String detectorId) {
-            this.detectorId = Output.ofNullable(detectorId);
+            this.detectorId = Codegen.ofNullable(detectorId);
             return this;
         }
         public Builder expression(@Nullable Output<String> expression) {
@@ -227,7 +228,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expression(@Nullable String expression) {
-            this.expression = Output.ofNullable(expression);
+            this.expression = Codegen.ofNullable(expression);
             return this;
         }
         public Builder language(@Nullable Output<DetectorRuleLanguage> language) {
@@ -235,7 +236,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder language(@Nullable DetectorRuleLanguage language) {
-            this.language = Output.ofNullable(language);
+            this.language = Codegen.ofNullable(language);
             return this;
         }
         public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
@@ -243,7 +244,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Codegen.ofNullable(lastUpdatedTime);
             return this;
         }
         public Builder outcomes(@Nullable Output<List<DetectorOutcomeArgs>> outcomes) {
@@ -251,7 +252,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outcomes(@Nullable List<DetectorOutcomeArgs> outcomes) {
-            this.outcomes = Output.ofNullable(outcomes);
+            this.outcomes = Codegen.ofNullable(outcomes);
             return this;
         }
         public Builder outcomes(DetectorOutcomeArgs... outcomes) {
@@ -262,7 +263,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Output.ofNullable(ruleId);
+            this.ruleId = Codegen.ofNullable(ruleId);
             return this;
         }
         public Builder ruleVersion(@Nullable Output<String> ruleVersion) {
@@ -270,7 +271,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleVersion(@Nullable String ruleVersion) {
-            this.ruleVersion = Output.ofNullable(ruleVersion);
+            this.ruleVersion = Codegen.ofNullable(ruleVersion);
             return this;
         }
         public Builder tags(@Nullable Output<List<DetectorTagArgs>> tags) {
@@ -278,7 +279,7 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DetectorTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DetectorTagArgs... tags) {

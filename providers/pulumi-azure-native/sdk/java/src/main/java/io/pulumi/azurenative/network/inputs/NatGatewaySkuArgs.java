@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.NatGatewaySkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<Either<String,NatGatewaySkuName>> name;
 
-    public Output<Either<String,NatGatewaySkuName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<Either<String,NatGatewaySkuName>> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public NatGatewaySkuArgs(@Nullable Output<Either<String,NatGatewaySkuName>> name) {
@@ -36,7 +37,7 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NatGatewaySkuArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable Either<String,NatGatewaySkuName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public NatGatewaySkuArgs build() {
             return new NatGatewaySkuArgs(name);

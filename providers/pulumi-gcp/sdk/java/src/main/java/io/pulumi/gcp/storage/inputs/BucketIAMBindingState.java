@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.BucketIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
-    public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+    public Output<String> bucket() {
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="condition")
       private final @Nullable Output<BucketIAMBindingConditionGetArgs> condition;
 
-    public Output<BucketIAMBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<BucketIAMBindingConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public BucketIAMBindingState(
@@ -98,11 +99,11 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
     }
 
     private BucketIAMBindingState() {
-        this.bucket = Output.empty();
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.members = Output.empty();
-        this.role = Output.empty();
+        this.bucket = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.members = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder condition(@Nullable Output<BucketIAMBindingConditionGetArgs> condition) {
@@ -146,7 +147,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder condition(@Nullable BucketIAMBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -154,7 +155,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -162,7 +163,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -173,7 +174,7 @@ public final class BucketIAMBindingState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public BucketIAMBindingState build() {
             return new BucketIAMBindingState(bucket, condition, etag, members, role);

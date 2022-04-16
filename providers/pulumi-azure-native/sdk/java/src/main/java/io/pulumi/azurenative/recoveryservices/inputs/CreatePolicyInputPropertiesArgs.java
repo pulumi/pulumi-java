@@ -13,6 +13,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmPolicyCreationInpu
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtPolicyCreationInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,8 +34,8 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
     @Import(name="providerSpecificInput")
       private final @Nullable Output<Object> providerSpecificInput;
 
-    public Output<Object> getProviderSpecificInput() {
-        return this.providerSpecificInput == null ? Output.empty() : this.providerSpecificInput;
+    public Output<Object> providerSpecificInput() {
+        return this.providerSpecificInput == null ? Codegen.empty() : this.providerSpecificInput;
     }
 
     public CreatePolicyInputPropertiesArgs(@Nullable Output<Object> providerSpecificInput) {
@@ -42,7 +43,7 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
     }
 
     private CreatePolicyInputPropertiesArgs() {
-        this.providerSpecificInput = Output.empty();
+        this.providerSpecificInput = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -70,7 +71,7 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder providerSpecificInput(@Nullable Object providerSpecificInput) {
-            this.providerSpecificInput = Output.ofNullable(providerSpecificInput);
+            this.providerSpecificInput = Codegen.ofNullable(providerSpecificInput);
             return this;
         }        public CreatePolicyInputPropertiesArgs build() {
             return new CreatePolicyInputPropertiesArgs(providerSpecificInput);

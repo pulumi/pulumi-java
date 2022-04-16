@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="fileNamePrefix")
       private final @Nullable Output<Object> fileNamePrefix;
 
-    public Output<Object> getFileNamePrefix() {
-        return this.fileNamePrefix == null ? Output.empty() : this.fileNamePrefix;
+    public Output<Object> fileNamePrefix() {
+        return this.fileNamePrefix == null ? Codegen.empty() : this.fileNamePrefix;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="maxRowsPerFile")
       private final @Nullable Output<Object> maxRowsPerFile;
 
-    public Output<Object> getMaxRowsPerFile() {
-        return this.maxRowsPerFile == null ? Output.empty() : this.maxRowsPerFile;
+    public Output<Object> maxRowsPerFile() {
+        return this.maxRowsPerFile == null ? Codegen.empty() : this.maxRowsPerFile;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recordName")
       private final @Nullable Output<String> recordName;
 
-    public Output<String> getRecordName() {
-        return this.recordName == null ? Output.empty() : this.recordName;
+    public Output<String> recordName() {
+        return this.recordName == null ? Codegen.empty() : this.recordName;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="recordNamespace")
       private final @Nullable Output<String> recordNamespace;
 
-    public Output<String> getRecordNamespace() {
-        return this.recordNamespace == null ? Output.empty() : this.recordNamespace;
+    public Output<String> recordNamespace() {
+        return this.recordNamespace == null ? Codegen.empty() : this.recordNamespace;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -89,11 +90,11 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AvroWriteSettingsArgs() {
-        this.fileNamePrefix = Output.empty();
-        this.maxRowsPerFile = Output.empty();
-        this.recordName = Output.empty();
-        this.recordNamespace = Output.empty();
-        this.type = Output.empty();
+        this.fileNamePrefix = Codegen.empty();
+        this.maxRowsPerFile = Codegen.empty();
+        this.recordName = Codegen.empty();
+        this.recordNamespace = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
-            this.fileNamePrefix = Output.ofNullable(fileNamePrefix);
+            this.fileNamePrefix = Codegen.ofNullable(fileNamePrefix);
             return this;
         }
         public Builder maxRowsPerFile(@Nullable Output<Object> maxRowsPerFile) {
@@ -137,7 +138,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
-            this.maxRowsPerFile = Output.ofNullable(maxRowsPerFile);
+            this.maxRowsPerFile = Codegen.ofNullable(maxRowsPerFile);
             return this;
         }
         public Builder recordName(@Nullable Output<String> recordName) {
@@ -145,7 +146,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder recordName(@Nullable String recordName) {
-            this.recordName = Output.ofNullable(recordName);
+            this.recordName = Codegen.ofNullable(recordName);
             return this;
         }
         public Builder recordNamespace(@Nullable Output<String> recordNamespace) {
@@ -153,7 +154,7 @@ public final class AvroWriteSettingsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder recordNamespace(@Nullable String recordNamespace) {
-            this.recordNamespace = Output.ofNullable(recordNamespace);
+            this.recordNamespace = Codegen.ofNullable(recordNamespace);
             return this;
         }
         public Builder type(Output<String> type) {

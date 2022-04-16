@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +19,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
-    public Output<String> getApiId() {
+    public Output<String> apiId() {
         return this.apiId;
     }
 
@@ -29,14 +30,14 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="count")
       private final @Nullable Output<Integer> count;
 
-    public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+    public Output<Integer> count() {
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
-    public Output<String> getEnvironmentId() {
+    public Output<String> environmentId() {
         return this.environmentId;
     }
 
@@ -47,8 +48,8 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -58,21 +59,21 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="revisionId", required=true)
       private final Output<String> revisionId;
 
-    public Output<String> getRevisionId() {
+    public Output<String> revisionId() {
         return this.revisionId;
     }
 
@@ -83,8 +84,8 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -94,8 +95,8 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tracesize")
       private final @Nullable Output<Integer> tracesize;
 
-    public Output<Integer> getTracesize() {
-        return this.tracesize == null ? Output.empty() : this.tracesize;
+    public Output<Integer> tracesize() {
+        return this.tracesize == null ? Codegen.empty() : this.tracesize;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="validity")
       private final @Nullable Output<Integer> validity;
 
-    public Output<Integer> getValidity() {
-        return this.validity == null ? Output.empty() : this.validity;
+    public Output<Integer> validity() {
+        return this.validity == null ? Codegen.empty() : this.validity;
     }
 
     public DebugSessionArgs(
@@ -133,16 +134,16 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DebugSessionArgs() {
-        this.apiId = Output.empty();
-        this.count = Output.empty();
-        this.environmentId = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.revisionId = Output.empty();
-        this.timeout = Output.empty();
-        this.tracesize = Output.empty();
-        this.validity = Output.empty();
+        this.apiId = Codegen.empty();
+        this.count = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.revisionId = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.tracesize = Codegen.empty();
+        this.validity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder environmentId(Output<String> environmentId) {
@@ -212,7 +213,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -220,7 +221,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -244,7 +245,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder tracesize(@Nullable Output<Integer> tracesize) {
@@ -252,7 +253,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tracesize(@Nullable Integer tracesize) {
-            this.tracesize = Output.ofNullable(tracesize);
+            this.tracesize = Codegen.ofNullable(tracesize);
             return this;
         }
         public Builder validity(@Nullable Output<Integer> validity) {
@@ -260,7 +261,7 @@ public final class DebugSessionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validity(@Nullable Integer validity) {
-            this.validity = Output.ofNullable(validity);
+            this.validity = Codegen.ofNullable(validity);
             return this;
         }        public DebugSessionArgs build() {
             return new DebugSessionArgs(apiId, count, environmentId, filter, name, organizationId, revisionId, timeout, tracesize, validity);

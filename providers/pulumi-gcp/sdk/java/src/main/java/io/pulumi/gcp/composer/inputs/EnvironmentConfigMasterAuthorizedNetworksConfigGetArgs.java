@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -19,14 +20,14 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs extend
     @Import(name="cidrBlocks")
       private final @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
 
-    public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
+    public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks() {
+        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -38,8 +39,8 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs extend
     }
 
     private EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs() {
-        this.cidrBlocks = Output.empty();
-        this.enabled = Output.empty();
+        this.cidrBlocks = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs extend
             return this;
         }
         public Builder cidrBlocks(@Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs> cidrBlocks) {
-            this.cidrBlocks = Output.ofNullable(cidrBlocks);
+            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
             return this;
         }
         public Builder cidrBlocks(EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs... cidrBlocks) {

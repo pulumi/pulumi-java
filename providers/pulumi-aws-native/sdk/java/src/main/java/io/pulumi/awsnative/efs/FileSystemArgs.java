@@ -8,6 +8,7 @@ import io.pulumi.awsnative.efs.inputs.FileSystemElasticFileSystemTagArgs;
 import io.pulumi.awsnative.efs.inputs.FileSystemLifecyclePolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -24,15 +25,15 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
-    public Output<String> getAvailabilityZoneName() {
-        return this.availabilityZoneName == null ? Output.empty() : this.availabilityZoneName;
+    public Output<String> availabilityZoneName() {
+        return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
     }
 
     @Import(name="backupPolicy")
       private final @Nullable Output<FileSystemBackupPolicyArgs> backupPolicy;
 
-    public Output<FileSystemBackupPolicyArgs> getBackupPolicy() {
-        return this.backupPolicy == null ? Output.empty() : this.backupPolicy;
+    public Output<FileSystemBackupPolicyArgs> backupPolicy() {
+        return this.backupPolicy == null ? Codegen.empty() : this.backupPolicy;
     }
 
     /**
@@ -42,64 +43,64 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
-    public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Output.empty() : this.bypassPolicyLockoutSafetyCheck;
+    public Output<Boolean> bypassPolicyLockoutSafetyCheck() {
+        return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
     @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+    public Output<Boolean> encrypted() {
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     @Import(name="fileSystemPolicy")
       private final @Nullable Output<Object> fileSystemPolicy;
 
-    public Output<Object> getFileSystemPolicy() {
-        return this.fileSystemPolicy == null ? Output.empty() : this.fileSystemPolicy;
+    public Output<Object> fileSystemPolicy() {
+        return this.fileSystemPolicy == null ? Codegen.empty() : this.fileSystemPolicy;
     }
 
     @Import(name="fileSystemTags")
       private final @Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags;
 
-    public Output<List<FileSystemElasticFileSystemTagArgs>> getFileSystemTags() {
-        return this.fileSystemTags == null ? Output.empty() : this.fileSystemTags;
+    public Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags() {
+        return this.fileSystemTags == null ? Codegen.empty() : this.fileSystemTags;
     }
 
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     @Import(name="lifecyclePolicies")
       private final @Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies;
 
-    public Output<List<FileSystemLifecyclePolicyArgs>> getLifecyclePolicies() {
-        return this.lifecyclePolicies == null ? Output.empty() : this.lifecyclePolicies;
+    public Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies() {
+        return this.lifecyclePolicies == null ? Codegen.empty() : this.lifecyclePolicies;
     }
 
     @Import(name="performanceMode")
       private final @Nullable Output<String> performanceMode;
 
-    public Output<String> getPerformanceMode() {
-        return this.performanceMode == null ? Output.empty() : this.performanceMode;
+    public Output<String> performanceMode() {
+        return this.performanceMode == null ? Codegen.empty() : this.performanceMode;
     }
 
     @Import(name="provisionedThroughputInMibps")
       private final @Nullable Output<Double> provisionedThroughputInMibps;
 
-    public Output<Double> getProvisionedThroughputInMibps() {
-        return this.provisionedThroughputInMibps == null ? Output.empty() : this.provisionedThroughputInMibps;
+    public Output<Double> provisionedThroughputInMibps() {
+        return this.provisionedThroughputInMibps == null ? Codegen.empty() : this.provisionedThroughputInMibps;
     }
 
     @Import(name="throughputMode")
       private final @Nullable Output<String> throughputMode;
 
-    public Output<String> getThroughputMode() {
-        return this.throughputMode == null ? Output.empty() : this.throughputMode;
+    public Output<String> throughputMode() {
+        return this.throughputMode == null ? Codegen.empty() : this.throughputMode;
     }
 
     public FileSystemArgs(
@@ -128,17 +129,17 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileSystemArgs() {
-        this.availabilityZoneName = Output.empty();
-        this.backupPolicy = Output.empty();
-        this.bypassPolicyLockoutSafetyCheck = Output.empty();
-        this.encrypted = Output.empty();
-        this.fileSystemPolicy = Output.empty();
-        this.fileSystemTags = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.lifecyclePolicies = Output.empty();
-        this.performanceMode = Output.empty();
-        this.provisionedThroughputInMibps = Output.empty();
-        this.throughputMode = Output.empty();
+        this.availabilityZoneName = Codegen.empty();
+        this.backupPolicy = Codegen.empty();
+        this.bypassPolicyLockoutSafetyCheck = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.fileSystemPolicy = Codegen.empty();
+        this.fileSystemTags = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.lifecyclePolicies = Codegen.empty();
+        this.performanceMode = Codegen.empty();
+        this.provisionedThroughputInMibps = Codegen.empty();
+        this.throughputMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
-            this.availabilityZoneName = Output.ofNullable(availabilityZoneName);
+            this.availabilityZoneName = Codegen.ofNullable(availabilityZoneName);
             return this;
         }
         public Builder backupPolicy(@Nullable Output<FileSystemBackupPolicyArgs> backupPolicy) {
@@ -194,7 +195,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupPolicy(@Nullable FileSystemBackupPolicyArgs backupPolicy) {
-            this.backupPolicy = Output.ofNullable(backupPolicy);
+            this.backupPolicy = Codegen.ofNullable(backupPolicy);
             return this;
         }
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
@@ -202,7 +203,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
+            this.bypassPolicyLockoutSafetyCheck = Codegen.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
@@ -210,7 +211,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder fileSystemPolicy(@Nullable Output<Object> fileSystemPolicy) {
@@ -218,7 +219,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemPolicy(@Nullable Object fileSystemPolicy) {
-            this.fileSystemPolicy = Output.ofNullable(fileSystemPolicy);
+            this.fileSystemPolicy = Codegen.ofNullable(fileSystemPolicy);
             return this;
         }
         public Builder fileSystemTags(@Nullable Output<List<FileSystemElasticFileSystemTagArgs>> fileSystemTags) {
@@ -226,7 +227,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemTags(@Nullable List<FileSystemElasticFileSystemTagArgs> fileSystemTags) {
-            this.fileSystemTags = Output.ofNullable(fileSystemTags);
+            this.fileSystemTags = Codegen.ofNullable(fileSystemTags);
             return this;
         }
         public Builder fileSystemTags(FileSystemElasticFileSystemTagArgs... fileSystemTags) {
@@ -237,7 +238,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder lifecyclePolicies(@Nullable Output<List<FileSystemLifecyclePolicyArgs>> lifecyclePolicies) {
@@ -245,7 +246,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecyclePolicies(@Nullable List<FileSystemLifecyclePolicyArgs> lifecyclePolicies) {
-            this.lifecyclePolicies = Output.ofNullable(lifecyclePolicies);
+            this.lifecyclePolicies = Codegen.ofNullable(lifecyclePolicies);
             return this;
         }
         public Builder lifecyclePolicies(FileSystemLifecyclePolicyArgs... lifecyclePolicies) {
@@ -256,7 +257,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder performanceMode(@Nullable String performanceMode) {
-            this.performanceMode = Output.ofNullable(performanceMode);
+            this.performanceMode = Codegen.ofNullable(performanceMode);
             return this;
         }
         public Builder provisionedThroughputInMibps(@Nullable Output<Double> provisionedThroughputInMibps) {
@@ -264,7 +265,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisionedThroughputInMibps(@Nullable Double provisionedThroughputInMibps) {
-            this.provisionedThroughputInMibps = Output.ofNullable(provisionedThroughputInMibps);
+            this.provisionedThroughputInMibps = Codegen.ofNullable(provisionedThroughputInMibps);
             return this;
         }
         public Builder throughputMode(@Nullable Output<String> throughputMode) {
@@ -272,7 +273,7 @@ public final class FileSystemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder throughputMode(@Nullable String throughputMode) {
-            this.throughputMode = Output.ofNullable(throughputMode);
+            this.throughputMode = Codegen.ofNullable(throughputMode);
             return this;
         }        public FileSystemArgs build() {
             return new FileSystemArgs(availabilityZoneName, backupPolicy, bypassPolicyLockoutSafetyCheck, encrypted, fileSystemPolicy, fileSystemTags, kmsKeyId, lifecyclePolicies, performanceMode, provisionedThroughputInMibps, throughputMode);

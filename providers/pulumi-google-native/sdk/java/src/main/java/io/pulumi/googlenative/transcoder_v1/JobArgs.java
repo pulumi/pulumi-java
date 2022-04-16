@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.JobConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="config")
       private final @Nullable Output<JobConfigArgs> config;
 
-    public Output<JobConfigArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+    public Output<JobConfigArgs> config() {
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -34,15 +35,15 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputUri")
       private final @Nullable Output<String> inputUri;
 
-    public Output<String> getInputUri() {
-        return this.inputUri == null ? Output.empty() : this.inputUri;
+    public Output<String> inputUri() {
+        return this.inputUri == null ? Codegen.empty() : this.inputUri;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -52,8 +53,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -63,15 +64,15 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputUri")
       private final @Nullable Output<String> outputUri;
 
-    public Output<String> getOutputUri() {
-        return this.outputUri == null ? Output.empty() : this.outputUri;
+    public Output<String> outputUri() {
+        return this.outputUri == null ? Codegen.empty() : this.outputUri;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="templateId")
       private final @Nullable Output<String> templateId;
 
-    public Output<String> getTemplateId() {
-        return this.templateId == null ? Output.empty() : this.templateId;
+    public Output<String> templateId() {
+        return this.templateId == null ? Codegen.empty() : this.templateId;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ttlAfterCompletionDays")
       private final @Nullable Output<Integer> ttlAfterCompletionDays;
 
-    public Output<Integer> getTtlAfterCompletionDays() {
-        return this.ttlAfterCompletionDays == null ? Output.empty() : this.ttlAfterCompletionDays;
+    public Output<Integer> ttlAfterCompletionDays() {
+        return this.ttlAfterCompletionDays == null ? Codegen.empty() : this.ttlAfterCompletionDays;
     }
 
     public JobArgs(
@@ -116,14 +117,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.config = Output.empty();
-        this.inputUri = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.outputUri = Output.empty();
-        this.project = Output.empty();
-        this.templateId = Output.empty();
-        this.ttlAfterCompletionDays = Output.empty();
+        this.config = Codegen.empty();
+        this.inputUri = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputUri = Codegen.empty();
+        this.project = Codegen.empty();
+        this.templateId = Codegen.empty();
+        this.ttlAfterCompletionDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable JobConfigArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder inputUri(@Nullable Output<String> inputUri) {
@@ -173,7 +174,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputUri(@Nullable String inputUri) {
-            this.inputUri = Output.ofNullable(inputUri);
+            this.inputUri = Codegen.ofNullable(inputUri);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -181,7 +182,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -189,7 +190,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputUri(@Nullable Output<String> outputUri) {
@@ -197,7 +198,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputUri(@Nullable String outputUri) {
-            this.outputUri = Output.ofNullable(outputUri);
+            this.outputUri = Codegen.ofNullable(outputUri);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -205,7 +206,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder templateId(@Nullable Output<String> templateId) {
@@ -213,7 +214,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateId(@Nullable String templateId) {
-            this.templateId = Output.ofNullable(templateId);
+            this.templateId = Codegen.ofNullable(templateId);
             return this;
         }
         public Builder ttlAfterCompletionDays(@Nullable Output<Integer> ttlAfterCompletionDays) {
@@ -221,7 +222,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttlAfterCompletionDays(@Nullable Integer ttlAfterCompletionDays) {
-            this.ttlAfterCompletionDays = Output.ofNullable(ttlAfterCompletionDays);
+            this.ttlAfterCompletionDays = Codegen.ofNullable(ttlAfterCompletionDays);
             return this;
         }        public JobArgs build() {
             return new JobArgs(config, inputUri, location, name, outputUri, project, templateId, ttlAfterCompletionDays);

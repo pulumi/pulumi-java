@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemActionArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemConditionArgs;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
     @Import(name="action")
       private final @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
 
-    public Output<BucketLifecycleRuleItemActionArgs> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<BucketLifecycleRuleItemActionArgs> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
     @Import(name="condition")
       private final @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;
 
-    public Output<BucketLifecycleRuleItemConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<BucketLifecycleRuleItemConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     public BucketLifecycleRuleItemArgs(
@@ -45,8 +46,8 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
     }
 
     private BucketLifecycleRuleItemArgs() {
-        this.action = Output.empty();
-        this.condition = Output.empty();
+        this.action = Codegen.empty();
+        this.condition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder action(@Nullable BucketLifecycleRuleItemActionArgs action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder condition(@Nullable Output<BucketLifecycleRuleItemConditionArgs> condition) {
@@ -84,7 +85,7 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder condition(@Nullable BucketLifecycleRuleItemConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }        public BucketLifecycleRuleItemArgs build() {
             return new BucketLifecycleRuleItemArgs(action, condition);

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.amplifyuibuilder.outputs.ThemeValues;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -23,49 +24,49 @@ public class Theme extends io.pulumi.resources.CustomResource {
     @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
-    public Output<String> getAppId() {
+    public Output<String> appId() {
         return this.appId;
     }
     @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     @Export(name="environmentName", type=String.class, parameters={})
     private Output<String> environmentName;
 
-    public Output<String> getEnvironmentName() {
+    public Output<String> environmentName() {
         return this.environmentName;
     }
     @Export(name="modifiedAt", type=String.class, parameters={})
     private Output<String> modifiedAt;
 
-    public Output<String> getModifiedAt() {
+    public Output<String> modifiedAt() {
         return this.modifiedAt;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="overrides", type=List.class, parameters={ThemeValues.class})
     private Output</* @Nullable */ List<ThemeValues>> overrides;
 
-    public Output</* @Nullable */ List<ThemeValues>> getOverrides() {
+    public Output</* @Nullable */ List<ThemeValues>> overrides() {
         return this.overrides;
     }
     @Export(name="tags", type=ThemeTags.class, parameters={})
     private Output</* @Nullable */ ThemeTags> tags;
 
-    public Output</* @Nullable */ ThemeTags> getTags() {
+    public Output</* @Nullable */ ThemeTags> tags() {
         return this.tags;
     }
     @Export(name="values", type=List.class, parameters={ThemeValues.class})
     private Output<List<ThemeValues>> values;
 
-    public Output<List<ThemeValues>> getValues() {
+    public Output<List<ThemeValues>> values() {
         return this.values;
     }
 
@@ -91,7 +92,7 @@ public class Theme extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Theme(String name, ThemeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:amplifyuibuilder:Theme", name, args == null ? ThemeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:amplifyuibuilder:Theme", name, args == null ? ThemeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Theme(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

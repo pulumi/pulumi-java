@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.ExtendedKeyUsageOptionsArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.KeyUsageOptionsArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
@@ -28,8 +29,8 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="baseKeyUsage")
       private final @Nullable Output<KeyUsageOptionsArgs> baseKeyUsage;
 
-    public Output<KeyUsageOptionsArgs> getBaseKeyUsage() {
-        return this.baseKeyUsage == null ? Output.empty() : this.baseKeyUsage;
+    public Output<KeyUsageOptionsArgs> baseKeyUsage() {
+        return this.baseKeyUsage == null ? Codegen.empty() : this.baseKeyUsage;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="extendedKeyUsage")
       private final @Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage;
 
-    public Output<ExtendedKeyUsageOptionsArgs> getExtendedKeyUsage() {
-        return this.extendedKeyUsage == null ? Output.empty() : this.extendedKeyUsage;
+    public Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage() {
+        return this.extendedKeyUsage == null ? Codegen.empty() : this.extendedKeyUsage;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages;
 
-    public Output<List<ObjectIdArgs>> getUnknownExtendedKeyUsages() {
-        return this.unknownExtendedKeyUsages == null ? Output.empty() : this.unknownExtendedKeyUsages;
+    public Output<List<ObjectIdArgs>> unknownExtendedKeyUsages() {
+        return this.unknownExtendedKeyUsages == null ? Codegen.empty() : this.unknownExtendedKeyUsages;
     }
 
     public KeyUsageArgs(
@@ -64,9 +65,9 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyUsageArgs() {
-        this.baseKeyUsage = Output.empty();
-        this.extendedKeyUsage = Output.empty();
-        this.unknownExtendedKeyUsages = Output.empty();
+        this.baseKeyUsage = Codegen.empty();
+        this.extendedKeyUsage = Codegen.empty();
+        this.unknownExtendedKeyUsages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder baseKeyUsage(@Nullable KeyUsageOptionsArgs baseKeyUsage) {
-            this.baseKeyUsage = Output.ofNullable(baseKeyUsage);
+            this.baseKeyUsage = Codegen.ofNullable(baseKeyUsage);
             return this;
         }
         public Builder extendedKeyUsage(@Nullable Output<ExtendedKeyUsageOptionsArgs> extendedKeyUsage) {
@@ -106,7 +107,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedKeyUsage(@Nullable ExtendedKeyUsageOptionsArgs extendedKeyUsage) {
-            this.extendedKeyUsage = Output.ofNullable(extendedKeyUsage);
+            this.extendedKeyUsage = Codegen.ofNullable(extendedKeyUsage);
             return this;
         }
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<ObjectIdArgs>> unknownExtendedKeyUsages) {
@@ -114,7 +115,7 @@ public final class KeyUsageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unknownExtendedKeyUsages(@Nullable List<ObjectIdArgs> unknownExtendedKeyUsages) {
-            this.unknownExtendedKeyUsages = Output.ofNullable(unknownExtendedKeyUsages);
+            this.unknownExtendedKeyUsages = Codegen.ofNullable(unknownExtendedKeyUsages);
             return this;
         }
         public Builder unknownExtendedKeyUsages(ObjectIdArgs... unknownExtendedKeyUsages) {

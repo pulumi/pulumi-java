@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.ClusterArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.ClusterConfigResponse;
@@ -31,7 +32,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Configuration for this cluster.
      * 
      */
-    public Output<ClusterConfigResponse> getClusterConfig() {
+    public Output<ClusterConfigResponse> clusterConfig() {
         return this.clusterConfig;
     }
     /**
@@ -45,7 +46,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
      * 
      */
-    public Output<String> getDefaultStorageType() {
+    public Output<String> defaultStorageType() {
         return this.defaultStorageType;
     }
     /**
@@ -59,7 +60,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Immutable. The encryption configuration for CMEK-protected clusters.
      * 
      */
-    public Output<EncryptionConfigResponse> getEncryptionConfig() {
+    public Output<EncryptionConfigResponse> encryptionConfig() {
         return this.encryptionConfig;
     }
     /**
@@ -73,7 +74,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -87,7 +88,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
      * 
      */
-    public Output<Integer> getServeNodes() {
+    public Output<Integer> serveNodes() {
         return this.serveNodes;
     }
     /**
@@ -115,7 +116,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @return The current state of the cluster.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
 
@@ -141,7 +142,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, ClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigtableadmin/v2:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigtableadmin/v2:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

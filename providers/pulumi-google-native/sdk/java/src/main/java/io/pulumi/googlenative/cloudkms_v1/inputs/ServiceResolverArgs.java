@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudkms_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudkms_v1.inputs.CertificateArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="endpointFilter")
       private final @Nullable Output<String> endpointFilter;
 
-    public Output<String> getEndpointFilter() {
-        return this.endpointFilter == null ? Output.empty() : this.endpointFilter;
+    public Output<String> endpointFilter() {
+        return this.endpointFilter == null ? Codegen.empty() : this.endpointFilter;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -49,7 +50,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serverCertificates", required=true)
       private final Output<List<CertificateArgs>> serverCertificates;
 
-    public Output<List<CertificateArgs>> getServerCertificates() {
+    public Output<List<CertificateArgs>> serverCertificates() {
         return this.serverCertificates;
     }
 
@@ -60,7 +61,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serviceDirectoryService", required=true)
       private final Output<String> serviceDirectoryService;
 
-    public Output<String> getServiceDirectoryService() {
+    public Output<String> serviceDirectoryService() {
         return this.serviceDirectoryService;
     }
 
@@ -76,10 +77,10 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceResolverArgs() {
-        this.endpointFilter = Output.empty();
-        this.hostname = Output.empty();
-        this.serverCertificates = Output.empty();
-        this.serviceDirectoryService = Output.empty();
+        this.endpointFilter = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.serverCertificates = Codegen.empty();
+        this.serviceDirectoryService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder endpointFilter(@Nullable String endpointFilter) {
-            this.endpointFilter = Output.ofNullable(endpointFilter);
+            this.endpointFilter = Codegen.ofNullable(endpointFilter);
             return this;
         }
         public Builder hostname(Output<String> hostname) {

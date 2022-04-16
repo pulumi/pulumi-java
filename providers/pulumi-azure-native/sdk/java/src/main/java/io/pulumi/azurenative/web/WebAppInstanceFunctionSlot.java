@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -41,7 +42,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Config information.
      * 
      */
-    public Output</* @Nullable */ Object> getConfig() {
+    public Output</* @Nullable */ Object> config() {
         return this.config;
     }
     /**
@@ -55,7 +56,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Config URI.
      * 
      */
-    public Output</* @Nullable */ String> getConfigHref() {
+    public Output</* @Nullable */ String> configHref() {
         return this.configHref;
     }
     /**
@@ -69,7 +70,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return File list.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getFiles() {
+    public Output</* @Nullable */ Map<String,String>> files() {
         return this.files;
     }
     /**
@@ -83,7 +84,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Function App ID.
      * 
      */
-    public Output</* @Nullable */ String> getFunctionAppId() {
+    public Output</* @Nullable */ String> functionAppId() {
         return this.functionAppId;
     }
     /**
@@ -97,7 +98,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Function URI.
      * 
      */
-    public Output</* @Nullable */ String> getHref() {
+    public Output</* @Nullable */ String> href() {
         return this.href;
     }
     /**
@@ -111,7 +112,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return The invocation URL
      * 
      */
-    public Output</* @Nullable */ String> getInvokeUrlTemplate() {
+    public Output</* @Nullable */ String> invokeUrlTemplate() {
         return this.invokeUrlTemplate;
     }
     /**
@@ -125,7 +126,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Gets or sets a value indicating whether the function is disabled
      * 
      */
-    public Output</* @Nullable */ Boolean> getIsDisabled() {
+    public Output</* @Nullable */ Boolean> isDisabled() {
         return this.isDisabled;
     }
     /**
@@ -139,7 +140,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -153,7 +154,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return The function language
      * 
      */
-    public Output</* @Nullable */ String> getLanguage() {
+    public Output</* @Nullable */ String> language() {
         return this.language;
     }
     /**
@@ -167,7 +168,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Resource Name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -181,7 +182,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Script URI.
      * 
      */
-    public Output</* @Nullable */ String> getScriptHref() {
+    public Output</* @Nullable */ String> scriptHref() {
         return this.scriptHref;
     }
     /**
@@ -195,7 +196,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Script root path URI.
      * 
      */
-    public Output</* @Nullable */ String> getScriptRootPathHref() {
+    public Output</* @Nullable */ String> scriptRootPathHref() {
         return this.scriptRootPathHref;
     }
     /**
@@ -209,7 +210,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Secrets file URI.
      * 
      */
-    public Output</* @Nullable */ String> getSecretsFileHref() {
+    public Output</* @Nullable */ String> secretsFileHref() {
         return this.secretsFileHref;
     }
     /**
@@ -223,7 +224,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Test data used when testing via the Azure Portal.
      * 
      */
-    public Output</* @Nullable */ String> getTestData() {
+    public Output</* @Nullable */ String> testData() {
         return this.testData;
     }
     /**
@@ -237,7 +238,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Test data URI.
      * 
      */
-    public Output</* @Nullable */ String> getTestDataHref() {
+    public Output</* @Nullable */ String> testDataHref() {
         return this.testDataHref;
     }
     /**
@@ -251,7 +252,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -277,7 +278,7 @@ public class WebAppInstanceFunctionSlot extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppInstanceFunctionSlot(String name, WebAppInstanceFunctionSlotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppInstanceFunctionSlot", name, args == null ? WebAppInstanceFunctionSlotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppInstanceFunctionSlot", name, args == null ? WebAppInstanceFunctionSlotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppInstanceFunctionSlot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

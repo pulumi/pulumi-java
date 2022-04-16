@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends io.pulum
     @Import(name="text")
       private final @Nullable Output<List<String>> text;
 
-    public Output<List<String>> getText() {
-        return this.text == null ? Output.empty() : this.text;
+    public Output<List<String>> text() {
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public GoogleCloudDialogflowV2IntentMessageTextArgs(@Nullable Output<List<String>> text) {
@@ -35,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends io.pulum
     }
 
     private GoogleCloudDialogflowV2IntentMessageTextArgs() {
-        this.text = Output.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends io.pulum
             return this;
         }
         public Builder text(@Nullable List<String> text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }
         public Builder text(String... text) {

@@ -17,7 +17,7 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControl {
         this.allowedIpRanges = allowedIpRanges;
     }
 
-    public List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> getAllowedIpRanges() {
+    public List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges() {
         return this.allowedIpRanges;
     }
 

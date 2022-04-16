@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactProtocolSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -25,7 +26,7 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
     @Import(name="protocolSettings", required=true)
       private final Output<EdifactProtocolSettingsArgs> protocolSettings;
 
-    public Output<EdifactProtocolSettingsArgs> getProtocolSettings() {
+    public Output<EdifactProtocolSettingsArgs> protocolSettings() {
         return this.protocolSettings;
     }
 
@@ -36,7 +37,7 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
     @Import(name="receiverBusinessIdentity", required=true)
       private final Output<BusinessIdentityArgs> receiverBusinessIdentity;
 
-    public Output<BusinessIdentityArgs> getReceiverBusinessIdentity() {
+    public Output<BusinessIdentityArgs> receiverBusinessIdentity() {
         return this.receiverBusinessIdentity;
     }
 
@@ -47,7 +48,7 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
     @Import(name="senderBusinessIdentity", required=true)
       private final Output<BusinessIdentityArgs> senderBusinessIdentity;
 
-    public Output<BusinessIdentityArgs> getSenderBusinessIdentity() {
+    public Output<BusinessIdentityArgs> senderBusinessIdentity() {
         return this.senderBusinessIdentity;
     }
 
@@ -61,9 +62,9 @@ public final class EdifactOneWayAgreementArgs extends io.pulumi.resources.Resour
     }
 
     private EdifactOneWayAgreementArgs() {
-        this.protocolSettings = Output.empty();
-        this.receiverBusinessIdentity = Output.empty();
-        this.senderBusinessIdentity = Output.empty();
+        this.protocolSettings = Codegen.empty();
+        this.receiverBusinessIdentity = Codegen.empty();
+        this.senderBusinessIdentity = Codegen.empty();
     }
 
     public static Builder builder() {

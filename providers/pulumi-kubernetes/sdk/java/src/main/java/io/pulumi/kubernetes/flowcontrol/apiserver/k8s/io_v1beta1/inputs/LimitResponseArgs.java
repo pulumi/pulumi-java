@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs.QueuingConfigurationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="queuing")
       private final @Nullable Output<QueuingConfigurationArgs> queuing;
 
-    public Output<QueuingConfigurationArgs> getQueuing() {
-        return this.queuing == null ? Output.empty() : this.queuing;
+    public Output<QueuingConfigurationArgs> queuing() {
+        return this.queuing == null ? Codegen.empty() : this.queuing;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -49,8 +50,8 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LimitResponseArgs() {
-        this.queuing = Output.empty();
-        this.type = Output.empty();
+        this.queuing = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queuing(@Nullable QueuingConfigurationArgs queuing) {
-            this.queuing = Output.ofNullable(queuing);
+            this.queuing = Codegen.ofNullable(queuing);
             return this;
         }
         public Builder type(Output<String> type) {

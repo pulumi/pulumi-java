@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorFileFormatDescriptorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,29 +20,29 @@ public final class AnomalyDetectorS3SourceConfigArgs extends io.pulumi.resources
     @Import(name="fileFormatDescriptor", required=true)
       private final Output<AnomalyDetectorFileFormatDescriptorArgs> fileFormatDescriptor;
 
-    public Output<AnomalyDetectorFileFormatDescriptorArgs> getFileFormatDescriptor() {
+    public Output<AnomalyDetectorFileFormatDescriptorArgs> fileFormatDescriptor() {
         return this.fileFormatDescriptor;
     }
 
     @Import(name="historicalDataPathList")
       private final @Nullable Output<List<String>> historicalDataPathList;
 
-    public Output<List<String>> getHistoricalDataPathList() {
-        return this.historicalDataPathList == null ? Output.empty() : this.historicalDataPathList;
+    public Output<List<String>> historicalDataPathList() {
+        return this.historicalDataPathList == null ? Codegen.empty() : this.historicalDataPathList;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="templatedPathList")
       private final @Nullable Output<List<String>> templatedPathList;
 
-    public Output<List<String>> getTemplatedPathList() {
-        return this.templatedPathList == null ? Output.empty() : this.templatedPathList;
+    public Output<List<String>> templatedPathList() {
+        return this.templatedPathList == null ? Codegen.empty() : this.templatedPathList;
     }
 
     public AnomalyDetectorS3SourceConfigArgs(
@@ -56,10 +57,10 @@ public final class AnomalyDetectorS3SourceConfigArgs extends io.pulumi.resources
     }
 
     private AnomalyDetectorS3SourceConfigArgs() {
-        this.fileFormatDescriptor = Output.empty();
-        this.historicalDataPathList = Output.empty();
-        this.roleArn = Output.empty();
-        this.templatedPathList = Output.empty();
+        this.fileFormatDescriptor = Codegen.empty();
+        this.historicalDataPathList = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.templatedPathList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class AnomalyDetectorS3SourceConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder historicalDataPathList(@Nullable List<String> historicalDataPathList) {
-            this.historicalDataPathList = Output.ofNullable(historicalDataPathList);
+            this.historicalDataPathList = Codegen.ofNullable(historicalDataPathList);
             return this;
         }
         public Builder historicalDataPathList(String... historicalDataPathList) {
@@ -120,7 +121,7 @@ public final class AnomalyDetectorS3SourceConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder templatedPathList(@Nullable List<String> templatedPathList) {
-            this.templatedPathList = Output.ofNullable(templatedPathList);
+            this.templatedPathList = Codegen.ofNullable(templatedPathList);
             return this;
         }
         public Builder templatedPathList(String... templatedPathList) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoArgs extends i
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public PacketMirroringMirroredResourceInfoInstanceInfoArgs(@Nullable Output<String> url) {
@@ -30,7 +31,7 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoArgs extends i
     }
 
     private PacketMirroringMirroredResourceInfoInstanceInfoArgs() {
-        this.url = Output.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoArgs extends i
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public PacketMirroringMirroredResourceInfoInstanceInfoArgs build() {
             return new PacketMirroringMirroredResourceInfoInstanceInfoArgs(url);

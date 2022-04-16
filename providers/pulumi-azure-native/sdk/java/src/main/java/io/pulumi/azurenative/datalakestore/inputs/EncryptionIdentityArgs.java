@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 import io.pulumi.azurenative.datalakestore.enums.EncryptionIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -24,7 +25,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<EncryptionIdentityType> type;
 
-    public Output<EncryptionIdentityType> getType() {
+    public Output<EncryptionIdentityType> type() {
         return this.type;
     }
 
@@ -33,7 +34,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EncryptionIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
     @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
-    public Output<String> getClientId() {
+    public Output<String> clientId() {
         return this.clientId;
     }
 
@@ -31,7 +32,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
     @Import(name="userGroup", required=true)
       private final Output<String> userGroup;
 
-    public Output<String> getUserGroup() {
+    public Output<String> userGroup() {
         return this.userGroup;
     }
 
@@ -42,7 +43,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
     @Import(name="userPool", required=true)
       private final Output<String> userPool;
 
-    public Output<String> getUserPool() {
+    public Output<String> userPool() {
         return this.userPool;
     }
 
@@ -56,9 +57,9 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
     }
 
     private WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs() {
-        this.clientId = Output.empty();
-        this.userGroup = Output.empty();
-        this.userPool = Output.empty();
+        this.clientId = Codegen.empty();
+        this.userGroup = Codegen.empty();
+        this.userPool = Codegen.empty();
     }
 
     public static Builder builder() {

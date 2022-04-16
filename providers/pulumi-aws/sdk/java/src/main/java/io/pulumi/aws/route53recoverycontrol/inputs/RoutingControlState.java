@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
-    public Output<String> getClusterArn() {
-        return this.clusterArn == null ? Output.empty() : this.clusterArn;
+    public Output<String> clusterArn() {
+        return this.clusterArn == null ? Codegen.empty() : this.clusterArn;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
 
-    public Output<String> getControlPanelArn() {
-        return this.controlPanelArn == null ? Output.empty() : this.controlPanelArn;
+    public Output<String> controlPanelArn() {
+        return this.controlPanelArn == null ? Codegen.empty() : this.controlPanelArn;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public RoutingControlState(
@@ -83,11 +84,11 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     }
 
     private RoutingControlState() {
-        this.arn = Output.empty();
-        this.clusterArn = Output.empty();
-        this.controlPanelArn = Output.empty();
-        this.name = Output.empty();
-        this.status = Output.empty();
+        this.arn = Codegen.empty();
+        this.clusterArn = Codegen.empty();
+        this.controlPanelArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder clusterArn(@Nullable Output<String> clusterArn) {
@@ -131,7 +132,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clusterArn(@Nullable String clusterArn) {
-            this.clusterArn = Output.ofNullable(clusterArn);
+            this.clusterArn = Codegen.ofNullable(clusterArn);
             return this;
         }
         public Builder controlPanelArn(@Nullable Output<String> controlPanelArn) {
@@ -139,7 +140,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder controlPanelArn(@Nullable String controlPanelArn) {
-            this.controlPanelArn = Output.ofNullable(controlPanelArn);
+            this.controlPanelArn = Codegen.ofNullable(controlPanelArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -147,7 +148,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -155,7 +156,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public RoutingControlState build() {
             return new RoutingControlState(arn, clusterArn, controlPanelArn, name, status);

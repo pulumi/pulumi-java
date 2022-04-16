@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Entity Tag
      * 
      */
-    public Output</* @Nullable */ String> getEtag() {
+    public Output</* @Nullable */ String> etag() {
         return this.etag;
     }
     /**
@@ -58,7 +59,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Required. Gets or sets the Kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +73,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Specifies the location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -86,7 +87,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Specifies the name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return The set of properties specific to an Enterprise Channel resource.
      * 
      */
-    public Output<EnterpriseChannelPropertiesResponse> getProperties() {
+    public Output<EnterpriseChannelPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -114,7 +115,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Gets or sets the SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> getSku() {
+    public Output</* @Nullable */ SkuResponse> sku() {
         return this.sku;
     }
     /**
@@ -128,7 +129,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Contains resource tags defined as key/value pairs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @return Specifies the type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +169,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnterpriseChannel(String name, EnterpriseChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:botservice:EnterpriseChannel", name, args == null ? EnterpriseChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:botservice:EnterpriseChannel", name, args == null ? EnterpriseChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnterpriseChannel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

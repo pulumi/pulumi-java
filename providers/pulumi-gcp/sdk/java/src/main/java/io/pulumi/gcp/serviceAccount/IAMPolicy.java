@@ -6,6 +6,7 @@ package io.pulumi.gcp.serviceAccount;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.IAMPolicyArgs;
 import io.pulumi.gcp.serviceAccount.inputs.IAMPolicyState;
@@ -75,7 +76,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the service account IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -91,7 +92,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
     /**
@@ -105,7 +106,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @return The fully-qualified name of the service account to apply policy to.
      * 
      */
-    public Output<String> getServiceAccountId() {
+    public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 
@@ -131,7 +132,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IAMPolicy(String name, IAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:serviceAccount/iAMPolicy:IAMPolicy", name, args == null ? IAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:serviceAccount/iAMPolicy:IAMPolicy", name, args == null ? IAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IAMPolicy(String name, Output<String> id, @Nullable IAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

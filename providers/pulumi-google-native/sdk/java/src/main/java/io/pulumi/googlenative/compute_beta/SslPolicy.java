@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.SslPolicyArgs;
 import io.pulumi.googlenative.compute_beta.outputs.SslPolicyWarningsItemResponse;
@@ -30,7 +31,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -44,7 +45,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
      * 
      */
-    public Output<List<String>> getCustomFeatures() {
+    public Output<List<String>> customFeatures() {
         return this.customFeatures;
     }
     /**
@@ -58,7 +59,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -72,7 +73,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return The list of features enabled in the SSL policy.
      * 
      */
-    public Output<List<String>> getEnabledFeatures() {
+    public Output<List<String>> enabledFeatures() {
         return this.enabledFeatures;
     }
     /**
@@ -86,7 +87,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
      * 
      */
-    public Output<String> getFingerprint() {
+    public Output<String> fingerprint() {
         return this.fingerprint;
     }
     /**
@@ -100,7 +101,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return [Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -114,7 +115,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2.
      * 
      */
-    public Output<String> getMinTlsVersion() {
+    public Output<String> minTlsVersion() {
         return this.minTlsVersion;
     }
     /**
@@ -128,7 +129,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +143,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field.
      * 
      */
-    public Output<String> getProfile() {
+    public Output<String> profile() {
         return this.profile;
     }
     /**
@@ -156,7 +157,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -170,7 +171,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @return If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.
      * 
      */
-    public Output<List<SslPolicyWarningsItemResponse>> getWarnings() {
+    public Output<List<SslPolicyWarningsItemResponse>> warnings() {
         return this.warnings;
     }
 
@@ -196,7 +197,7 @@ public class SslPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SslPolicy(String name, @Nullable SslPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:SslPolicy", name, args == null ? SslPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:SslPolicy", name, args == null ? SslPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SslPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

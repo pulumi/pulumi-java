@@ -6,6 +6,7 @@ package io.pulumi.gcp.networkconnectivity;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkconnectivity.SpokeArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeState;
@@ -51,7 +52,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Output only. The time the spoke was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -65,7 +66,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return An optional description of the spoke.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -79,7 +80,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Immutable. The URI of the hub that this spoke is attached to.
      * 
      */
-    public Output<String> getHub() {
+    public Output<String> hub() {
         return this.hub;
     }
     /**
@@ -93,7 +94,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Optional labels in key:value format. For more information about labels, see [Requirements for labels](https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -107,7 +108,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
      * 
      */
-    public Output</* @Nullable */ SpokeLinkedInterconnectAttachments> getLinkedInterconnectAttachments() {
+    public Output</* @Nullable */ SpokeLinkedInterconnectAttachments> linkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments;
     }
     /**
@@ -121,7 +122,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The URIs of linked Router appliance resources
      * 
      */
-    public Output</* @Nullable */ SpokeLinkedRouterApplianceInstances> getLinkedRouterApplianceInstances() {
+    public Output</* @Nullable */ SpokeLinkedRouterApplianceInstances> linkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances;
     }
     /**
@@ -135,7 +136,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The URIs of linked VPN tunnel resources
      * 
      */
-    public Output</* @Nullable */ SpokeLinkedVpnTunnels> getLinkedVpnTunnels() {
+    public Output</* @Nullable */ SpokeLinkedVpnTunnels> linkedVpnTunnels() {
         return this.linkedVpnTunnels;
     }
     /**
@@ -149,7 +150,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The location for the resource
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -163,7 +164,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Immutable. The name of the spoke. Spoke names must be unique.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -177,7 +178,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return The project for the resource
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -191,7 +192,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Output only. The current lifecycle state of this spoke. Possible values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -207,7 +208,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * deleted and another with the same name is created, the new spoke is assigned a different unique_id.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
     /**
@@ -221,7 +222,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @return Output only. The time the spoke was last updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -247,7 +248,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Spoke(String name, SpokeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:networkconnectivity/spoke:Spoke", name, args == null ? SpokeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:networkconnectivity/spoke:Spoke", name, args == null ? SpokeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Spoke(String name, Output<String> id, @Nullable SpokeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.AnalysisArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnalysisResultResponse;
@@ -29,7 +30,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * @return The result of the analysis, which is populated when the analysis finishes.
      * 
      */
-    public Output<GoogleCloudContactcenterinsightsV1AnalysisResultResponse> getAnalysisResult() {
+    public Output<GoogleCloudContactcenterinsightsV1AnalysisResultResponse> analysisResult() {
         return this.analysisResult;
     }
     /**
@@ -43,7 +44,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * @return The time at which the analysis was created, which occurs when the long-running operation completes.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -57,7 +58,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the analysis. Format: projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * @return The time at which the analysis was requested.
      * 
      */
-    public Output<String> getRequestTime() {
+    public Output<String> requestTime() {
         return this.requestTime;
     }
 
@@ -97,7 +98,7 @@ public class Analysis extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Analysis(String name, AnalysisArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:contactcenterinsights/v1:Analysis", name, args == null ? AnalysisArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:contactcenterinsights/v1:Analysis", name, args == null ? AnalysisArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Analysis(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

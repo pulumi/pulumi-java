@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +18,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="api", required=true)
       private final Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
 
@@ -29,7 +30,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
-    public Output<String> getPolicyData() {
+    public Output<String> policyData() {
         return this.policyData;
     }
 
@@ -41,8 +42,8 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ApiIamPolicyArgs(
@@ -55,9 +56,9 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiIamPolicyArgs() {
-        this.api = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
+        this.api = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ApiIamPolicyArgs build() {
             return new ApiIamPolicyArgs(api, policyData, project);

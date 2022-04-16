@@ -27,7 +27,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
     @Import(name="definition", required=true)
       private final ManagementPolicyDefinitionResponse definition;
 
-    public ManagementPolicyDefinitionResponse getDefinition() {
+    public ManagementPolicyDefinitionResponse definition() {
         return this.definition;
     }
 
@@ -38,7 +38,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
     @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
-    public Optional<Boolean> getEnabled() {
+    public Optional<Boolean> enabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
@@ -49,7 +49,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -60,7 +60,7 @@ public final class ManagementPolicyRuleResponse extends io.pulumi.resources.Invo
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

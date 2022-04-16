@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class NodeGroupUpdateConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="maxUnavailable")
       private final @Nullable Output<Integer> maxUnavailable;
 
-    public Output<Integer> getMaxUnavailable() {
-        return this.maxUnavailable == null ? Output.empty() : this.maxUnavailable;
+    public Output<Integer> maxUnavailable() {
+        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class NodeGroupUpdateConfigArgs extends io.pulumi.resources.Resourc
     @Import(name="maxUnavailablePercentage")
       private final @Nullable Output<Integer> maxUnavailablePercentage;
 
-    public Output<Integer> getMaxUnavailablePercentage() {
-        return this.maxUnavailablePercentage == null ? Output.empty() : this.maxUnavailablePercentage;
+    public Output<Integer> maxUnavailablePercentage() {
+        return this.maxUnavailablePercentage == null ? Codegen.empty() : this.maxUnavailablePercentage;
     }
 
     public NodeGroupUpdateConfigArgs(
@@ -44,8 +45,8 @@ public final class NodeGroupUpdateConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private NodeGroupUpdateConfigArgs() {
-        this.maxUnavailable = Output.empty();
-        this.maxUnavailablePercentage = Output.empty();
+        this.maxUnavailable = Codegen.empty();
+        this.maxUnavailablePercentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class NodeGroupUpdateConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder maxUnavailable(@Nullable Integer maxUnavailable) {
-            this.maxUnavailable = Output.ofNullable(maxUnavailable);
+            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
             return this;
         }
         public Builder maxUnavailablePercentage(@Nullable Output<Integer> maxUnavailablePercentage) {
@@ -83,7 +84,7 @@ public final class NodeGroupUpdateConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder maxUnavailablePercentage(@Nullable Integer maxUnavailablePercentage) {
-            this.maxUnavailablePercentage = Output.ofNullable(maxUnavailablePercentage);
+            this.maxUnavailablePercentage = Codegen.ofNullable(maxUnavailablePercentage);
             return this;
         }        public NodeGroupUpdateConfigArgs build() {
             return new NodeGroupUpdateConfigArgs(maxUnavailable, maxUnavailablePercentage);

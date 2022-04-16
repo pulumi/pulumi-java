@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
     @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
 
-    public Output<String> getAttachmentId() {
-        return this.attachmentId == null ? Output.empty() : this.attachmentId;
+    public Output<String> attachmentId() {
+        return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SecurityPolicyAssociationArgs(
@@ -44,8 +45,8 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
     }
 
     private SecurityPolicyAssociationArgs() {
-        this.attachmentId = Output.empty();
-        this.name = Output.empty();
+        this.attachmentId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Output.ofNullable(attachmentId);
+            this.attachmentId = Codegen.ofNullable(attachmentId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -83,7 +84,7 @@ public final class SecurityPolicyAssociationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SecurityPolicyAssociationArgs build() {
             return new SecurityPolicyAssociationArgs(attachmentId, name);

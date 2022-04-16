@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
     @Import(name="dnsNames")
       private final @Nullable Output<List<String>> dnsNames;
 
-    public Output<List<String>> getDnsNames() {
-        return this.dnsNames == null ? Output.empty() : this.dnsNames;
+    public Output<List<String>> dnsNames() {
+        return this.dnsNames == null ? Codegen.empty() : this.dnsNames;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
     @Import(name="emailAddresses")
       private final @Nullable Output<List<String>> emailAddresses;
 
-    public Output<List<String>> getEmailAddresses() {
-        return this.emailAddresses == null ? Output.empty() : this.emailAddresses;
+    public Output<List<String>> emailAddresses() {
+        return this.emailAddresses == null ? Codegen.empty() : this.emailAddresses;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
     @Import(name="ipAddresses")
       private final @Nullable Output<List<String>> ipAddresses;
 
-    public Output<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
+    public Output<List<String>> ipAddresses() {
+        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
     @Import(name="uris")
       private final @Nullable Output<List<String>> uris;
 
-    public Output<List<String>> getUris() {
-        return this.uris == null ? Output.empty() : this.uris;
+    public Output<List<String>> uris() {
+        return this.uris == null ? Codegen.empty() : this.uris;
     }
 
     public CertificateConfigSubjectConfigSubjectAltNameGetArgs(
@@ -71,10 +72,10 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
     }
 
     private CertificateConfigSubjectConfigSubjectAltNameGetArgs() {
-        this.dnsNames = Output.empty();
-        this.emailAddresses = Output.empty();
-        this.ipAddresses = Output.empty();
-        this.uris = Output.empty();
+        this.dnsNames = Codegen.empty();
+        this.emailAddresses = Codegen.empty();
+        this.ipAddresses = Codegen.empty();
+        this.uris = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
             return this;
         }
         public Builder dnsNames(@Nullable List<String> dnsNames) {
-            this.dnsNames = Output.ofNullable(dnsNames);
+            this.dnsNames = Codegen.ofNullable(dnsNames);
             return this;
         }
         public Builder dnsNames(String... dnsNames) {
@@ -119,7 +120,7 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
             return this;
         }
         public Builder emailAddresses(@Nullable List<String> emailAddresses) {
-            this.emailAddresses = Output.ofNullable(emailAddresses);
+            this.emailAddresses = Codegen.ofNullable(emailAddresses);
             return this;
         }
         public Builder emailAddresses(String... emailAddresses) {
@@ -130,7 +131,7 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
             return this;
         }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Output.ofNullable(ipAddresses);
+            this.ipAddresses = Codegen.ofNullable(ipAddresses);
             return this;
         }
         public Builder ipAddresses(String... ipAddresses) {
@@ -141,7 +142,7 @@ public final class CertificateConfigSubjectConfigSubjectAltNameGetArgs extends i
             return this;
         }
         public Builder uris(@Nullable List<String> uris) {
-            this.uris = Output.ofNullable(uris);
+            this.uris = Codegen.ofNullable(uris);
             return this;
         }
         public Builder uris(String... uris) {

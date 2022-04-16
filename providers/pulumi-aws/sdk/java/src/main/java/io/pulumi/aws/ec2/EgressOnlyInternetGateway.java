@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.EgressOnlyInternetGatewayState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResourc
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -57,7 +58,7 @@ public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResourc
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -71,7 +72,7 @@ public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResourc
      * @return The VPC ID to create in.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -97,7 +98,7 @@ public class EgressOnlyInternetGateway extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public EgressOnlyInternetGateway(String name, EgressOnlyInternetGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/egressOnlyInternetGateway:EgressOnlyInternetGateway", name, args == null ? EgressOnlyInternetGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/egressOnlyInternetGateway:EgressOnlyInternetGateway", name, args == null ? EgressOnlyInternetGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EgressOnlyInternetGateway(String name, Output<String> id, @Nullable EgressOnlyInternetGatewayState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

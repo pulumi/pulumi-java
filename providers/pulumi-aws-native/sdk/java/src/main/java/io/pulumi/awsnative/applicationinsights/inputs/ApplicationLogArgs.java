@@ -6,6 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
       private final @Nullable Output<ApplicationLogEncoding> encoding;
 
-    public Output<ApplicationLogEncoding> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+    public Output<ApplicationLogEncoding> encoding() {
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
-    public Output<String> getLogGroupName() {
-        return this.logGroupName == null ? Output.empty() : this.logGroupName;
+    public Output<String> logGroupName() {
+        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logPath")
       private final @Nullable Output<String> logPath;
 
-    public Output<String> getLogPath() {
-        return this.logPath == null ? Output.empty() : this.logPath;
+    public Output<String> logPath() {
+        return this.logPath == null ? Codegen.empty() : this.logPath;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logType", required=true)
       private final Output<String> logType;
 
-    public Output<String> getLogType() {
+    public Output<String> logType() {
         return this.logType;
     }
 
@@ -70,8 +71,8 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="patternSet")
       private final @Nullable Output<String> patternSet;
 
-    public Output<String> getPatternSet() {
-        return this.patternSet == null ? Output.empty() : this.patternSet;
+    public Output<String> patternSet() {
+        return this.patternSet == null ? Codegen.empty() : this.patternSet;
     }
 
     public ApplicationLogArgs(
@@ -88,11 +89,11 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationLogArgs() {
-        this.encoding = Output.empty();
-        this.logGroupName = Output.empty();
-        this.logPath = Output.empty();
-        this.logType = Output.empty();
-        this.patternSet = Output.empty();
+        this.encoding = Codegen.empty();
+        this.logGroupName = Codegen.empty();
+        this.logPath = Codegen.empty();
+        this.logType = Codegen.empty();
+        this.patternSet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encoding(@Nullable ApplicationLogEncoding encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
@@ -136,7 +137,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Output.ofNullable(logGroupName);
+            this.logGroupName = Codegen.ofNullable(logGroupName);
             return this;
         }
         public Builder logPath(@Nullable Output<String> logPath) {
@@ -144,7 +145,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logPath(@Nullable String logPath) {
-            this.logPath = Output.ofNullable(logPath);
+            this.logPath = Codegen.ofNullable(logPath);
             return this;
         }
         public Builder logType(Output<String> logType) {
@@ -160,7 +161,7 @@ public final class ApplicationLogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder patternSet(@Nullable String patternSet) {
-            this.patternSet = Output.ofNullable(patternSet);
+            this.patternSet = Codegen.ofNullable(patternSet);
             return this;
         }        public ApplicationLogArgs build() {
             return new ApplicationLogArgs(encoding, logGroupName, logPath, logType, patternSet);

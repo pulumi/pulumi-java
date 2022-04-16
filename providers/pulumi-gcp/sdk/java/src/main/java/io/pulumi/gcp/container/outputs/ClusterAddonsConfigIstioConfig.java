@@ -36,7 +36,7 @@ public final class ClusterAddonsConfigIstioConfig {
      * The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
      * 
     */
-    public Optional<String> getAuth() {
+    public Optional<String> auth() {
         return Optional.ofNullable(this.auth);
     }
     /**
@@ -44,7 +44,7 @@ public final class ClusterAddonsConfigIstioConfig {
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
     */
-    public Boolean getDisabled() {
+    public Boolean disabled() {
         return this.disabled;
     }
 

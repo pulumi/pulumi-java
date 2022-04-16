@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.migrate.inputs.CollectorPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+    public Output<String> eTag() {
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -29,15 +30,15 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
-    public Output<String> getProjectName() {
+    public Output<String> projectName() {
         return this.projectName;
     }
 
     @Import(name="properties")
       private final @Nullable Output<CollectorPropertiesArgs> properties;
 
-    public Output<CollectorPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<CollectorPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -58,8 +59,8 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="serverCollectorName")
       private final @Nullable Output<String> serverCollectorName;
 
-    public Output<String> getServerCollectorName() {
-        return this.serverCollectorName == null ? Output.empty() : this.serverCollectorName;
+    public Output<String> serverCollectorName() {
+        return this.serverCollectorName == null ? Codegen.empty() : this.serverCollectorName;
     }
 
     public ServerCollectorArgs(
@@ -76,11 +77,11 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServerCollectorArgs() {
-        this.eTag = Output.empty();
-        this.projectName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverCollectorName = Output.empty();
+        this.eTag = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverCollectorName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder projectName(Output<String> projectName) {
@@ -132,7 +133,7 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder properties(@Nullable CollectorPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -148,7 +149,7 @@ public final class ServerCollectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serverCollectorName(@Nullable String serverCollectorName) {
-            this.serverCollectorName = Output.ofNullable(serverCollectorName);
+            this.serverCollectorName = Codegen.ofNullable(serverCollectorName);
             return this;
         }        public ServerCollectorArgs build() {
             return new ServerCollectorArgs(eTag, projectName, properties, resourceGroupName, serverCollectorName);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudsearch_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsearch_v1.SearchApplicationArgs;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.DataSourceRestrictionResponse;
@@ -36,7 +37,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return Retrictions applied to the configurations. The maximum number of elements is 10.
      * 
      */
-    public Output<List<DataSourceRestrictionResponse>> getDataSourceRestrictions() {
+    public Output<List<DataSourceRestrictionResponse>> dataSourceRestrictions() {
         return this.dataSourceRestrictions;
     }
     /**
@@ -50,7 +51,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
      * 
      */
-    public Output<List<FacetOptionsResponse>> getDefaultFacetOptions() {
+    public Output<List<FacetOptionsResponse>> defaultFacetOptions() {
         return this.defaultFacetOptions;
     }
     /**
@@ -64,7 +65,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return The default options for sorting the search results
      * 
      */
-    public Output<SortOptionsResponse> getDefaultSortOptions() {
+    public Output<SortOptionsResponse> defaultSortOptions() {
         return this.defaultSortOptions;
     }
     /**
@@ -78,7 +79,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return Display name of the Search Application. The maximum length is 300 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -92,7 +93,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return Indicates whether audit logging is on/off for requests made for the search application in query APIs.
      * 
      */
-    public Output<Boolean> getEnableAuditLog() {
+    public Output<Boolean> enableAuditLog() {
         return this.enableAuditLog;
     }
     /**
@@ -106,7 +107,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return Name of the Search Application. Format: searchapplications/{application_id}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -120,7 +121,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return IDs of the Long Running Operations (LROs) currently running for this schema. Output only field.
      * 
      */
-    public Output<List<String>> getOperationIds() {
+    public Output<List<String>> operationIds() {
         return this.operationIds;
     }
     /**
@@ -134,7 +135,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return The default options for query interpretation
      * 
      */
-    public Output<QueryInterpretationConfigResponse> getQueryInterpretationConfig() {
+    public Output<QueryInterpretationConfigResponse> queryInterpretationConfig() {
         return this.queryInterpretationConfig;
     }
     /**
@@ -148,7 +149,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return With each result we should return the URI for its thumbnail (when applicable)
      * 
      */
-    public Output<Boolean> getReturnResultThumbnailUrls() {
+    public Output<Boolean> returnResultThumbnailUrls() {
         return this.returnResultThumbnailUrls;
     }
     /**
@@ -162,7 +163,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return Configuration for ranking results.
      * 
      */
-    public Output<ScoringConfigResponse> getScoringConfig() {
+    public Output<ScoringConfigResponse> scoringConfig() {
         return this.scoringConfig;
     }
     /**
@@ -176,7 +177,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @return Configuration for a sources specified in data_source_restrictions.
      * 
      */
-    public Output<List<SourceConfigResponse>> getSourceConfig() {
+    public Output<List<SourceConfigResponse>> sourceConfig() {
         return this.sourceConfig;
     }
 
@@ -202,7 +203,7 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SearchApplication(String name, @Nullable SearchApplicationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudsearch/v1:SearchApplication", name, args == null ? SearchApplicationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudsearch/v1:SearchApplication", name, args == null ? SearchApplicationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SearchApplication(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

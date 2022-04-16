@@ -5,6 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
     @Import(name="dependencyName")
       private final @Nullable Output<String> dependencyName;
 
-    public Output<String> getDependencyName() {
-        return this.dependencyName == null ? Output.empty() : this.dependencyName;
+    public Output<String> dependencyName() {
+        return this.dependencyName == null ? Codegen.empty() : this.dependencyName;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
     @Import(name="minVersion")
       private final @Nullable Output<String> minVersion;
 
-    public Output<String> getMinVersion() {
-        return this.minVersion == null ? Output.empty() : this.minVersion;
+    public Output<String> minVersion() {
+        return this.minVersion == null ? Codegen.empty() : this.minVersion;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
-        return this.publisher == null ? Output.empty() : this.publisher;
+    public Output<String> publisher() {
+        return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
     public MsixPackageDependenciesArgs(
@@ -61,9 +62,9 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
     }
 
     private MsixPackageDependenciesArgs() {
-        this.dependencyName = Output.empty();
-        this.minVersion = Output.empty();
-        this.publisher = Output.empty();
+        this.dependencyName = Codegen.empty();
+        this.minVersion = Codegen.empty();
+        this.publisher = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dependencyName(@Nullable String dependencyName) {
-            this.dependencyName = Output.ofNullable(dependencyName);
+            this.dependencyName = Codegen.ofNullable(dependencyName);
             return this;
         }
         public Builder minVersion(@Nullable Output<String> minVersion) {
@@ -103,7 +104,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder minVersion(@Nullable String minVersion) {
-            this.minVersion = Output.ofNullable(minVersion);
+            this.minVersion = Codegen.ofNullable(minVersion);
             return this;
         }
         public Builder publisher(@Nullable Output<String> publisher) {
@@ -111,7 +112,7 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Output.ofNullable(publisher);
+            this.publisher = Codegen.ofNullable(publisher);
             return this;
         }        public MsixPackageDependenciesArgs build() {
             return new MsixPackageDependenciesArgs(dependencyName, minVersion, publisher);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.cdn.inputs.MatchConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
       private final Output<Either<String,ActionType>> action;
 
-    public Output<Either<String,ActionType>> getAction() {
+    public Output<Either<String,ActionType>> action() {
         return this.action;
     }
 
@@ -42,8 +43,8 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabledState")
       private final @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
 
-    public Output<Either<String,CustomRuleEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+    public Output<Either<String,CustomRuleEnabledState>> enabledState() {
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="matchConditions", required=true)
       private final Output<List<MatchConditionArgs>> matchConditions;
 
-    public Output<List<MatchConditionArgs>> getMatchConditions() {
+    public Output<List<MatchConditionArgs>> matchConditions() {
         return this.matchConditions;
     }
 
@@ -64,7 +65,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -75,7 +76,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -93,11 +94,11 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomRuleArgs() {
-        this.action = Output.empty();
-        this.enabledState = Output.empty();
-        this.matchConditions = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
+        this.action = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.matchConditions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledState(@Nullable Either<String,CustomRuleEnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {

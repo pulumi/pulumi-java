@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs
     @Import(name="allocationStrategy", required=true)
       private final Output<String> allocationStrategy;
 
-    public Output<String> getAllocationStrategy() {
+    public Output<String> allocationStrategy() {
         return this.allocationStrategy;
     }
 
@@ -29,7 +30,7 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs
     }
 
     private InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs() {
-        this.allocationStrategy = Output.empty();
+        this.allocationStrategy = Codegen.empty();
     }
 
     public static Builder builder() {

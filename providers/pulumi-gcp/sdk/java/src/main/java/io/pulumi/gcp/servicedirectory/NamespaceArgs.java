@@ -5,6 +5,7 @@ package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -49,7 +50,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="namespaceId", required=true)
       private final Output<String> namespaceId;
 
-    public Output<String> getNamespaceId() {
+    public Output<String> namespaceId() {
         return this.namespaceId;
     }
 
@@ -61,8 +62,8 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public NamespaceArgs(
@@ -77,10 +78,10 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamespaceArgs() {
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.namespaceId = Output.empty();
-        this.project = Output.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.namespaceId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -138,7 +139,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public NamespaceArgs build() {
             return new NamespaceArgs(labels, location, namespaceId, project);

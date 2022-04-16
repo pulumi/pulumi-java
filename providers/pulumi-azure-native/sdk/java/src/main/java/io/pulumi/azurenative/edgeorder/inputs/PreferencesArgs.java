@@ -9,6 +9,7 @@ import io.pulumi.azurenative.edgeorder.inputs.NotificationPreferenceArgs;
 import io.pulumi.azurenative.edgeorder.inputs.TransportPreferencesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionPreferences")
       private final @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
-    public Output<EncryptionPreferencesArgs> getEncryptionPreferences() {
-        return this.encryptionPreferences == null ? Output.empty() : this.encryptionPreferences;
+    public Output<EncryptionPreferencesArgs> encryptionPreferences() {
+        return this.encryptionPreferences == null ? Codegen.empty() : this.encryptionPreferences;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managementResourcePreferences")
       private final @Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences;
 
-    public Output<ManagementResourcePreferencesArgs> getManagementResourcePreferences() {
-        return this.managementResourcePreferences == null ? Output.empty() : this.managementResourcePreferences;
+    public Output<ManagementResourcePreferencesArgs> managementResourcePreferences() {
+        return this.managementResourcePreferences == null ? Codegen.empty() : this.managementResourcePreferences;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationPreferences")
       private final @Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences;
 
-    public Output<List<NotificationPreferenceArgs>> getNotificationPreferences() {
-        return this.notificationPreferences == null ? Output.empty() : this.notificationPreferences;
+    public Output<List<NotificationPreferenceArgs>> notificationPreferences() {
+        return this.notificationPreferences == null ? Codegen.empty() : this.notificationPreferences;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="transportPreferences")
       private final @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
-    public Output<TransportPreferencesArgs> getTransportPreferences() {
-        return this.transportPreferences == null ? Output.empty() : this.transportPreferences;
+    public Output<TransportPreferencesArgs> transportPreferences() {
+        return this.transportPreferences == null ? Codegen.empty() : this.transportPreferences;
     }
 
     public PreferencesArgs(
@@ -78,10 +79,10 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PreferencesArgs() {
-        this.encryptionPreferences = Output.empty();
-        this.managementResourcePreferences = Output.empty();
-        this.notificationPreferences = Output.empty();
-        this.transportPreferences = Output.empty();
+        this.encryptionPreferences = Codegen.empty();
+        this.managementResourcePreferences = Codegen.empty();
+        this.notificationPreferences = Codegen.empty();
+        this.transportPreferences = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
-            this.encryptionPreferences = Output.ofNullable(encryptionPreferences);
+            this.encryptionPreferences = Codegen.ofNullable(encryptionPreferences);
             return this;
         }
         public Builder managementResourcePreferences(@Nullable Output<ManagementResourcePreferencesArgs> managementResourcePreferences) {
@@ -123,7 +124,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesArgs managementResourcePreferences) {
-            this.managementResourcePreferences = Output.ofNullable(managementResourcePreferences);
+            this.managementResourcePreferences = Codegen.ofNullable(managementResourcePreferences);
             return this;
         }
         public Builder notificationPreferences(@Nullable Output<List<NotificationPreferenceArgs>> notificationPreferences) {
@@ -131,7 +132,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationPreferences(@Nullable List<NotificationPreferenceArgs> notificationPreferences) {
-            this.notificationPreferences = Output.ofNullable(notificationPreferences);
+            this.notificationPreferences = Codegen.ofNullable(notificationPreferences);
             return this;
         }
         public Builder notificationPreferences(NotificationPreferenceArgs... notificationPreferences) {
@@ -142,7 +143,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
-            this.transportPreferences = Output.ofNullable(transportPreferences);
+            this.transportPreferences = Codegen.ofNullable(transportPreferences);
             return this;
         }        public PreferencesArgs build() {
             return new PreferencesArgs(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);

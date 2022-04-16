@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.ProjectBucketConfigArgs;
 import io.pulumi.gcp.logging.inputs.ProjectBucketConfigState;
@@ -44,7 +45,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
      * 
      */
-    public Output<String> getBucketId() {
+    public Output<String> bucketId() {
         return this.bucketId;
     }
     /**
@@ -58,7 +59,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @return Describes this bucket.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -72,7 +73,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The bucket's lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
      * 
      */
-    public Output<String> getLifecycleState() {
+    public Output<String> lifecycleState() {
         return this.lifecycleState;
     }
     /**
@@ -86,7 +87,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The location of the bucket.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -100,7 +101,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The resource name of the bucket. For example: "projects/my-project-id/locations/my-location/buckets/my-bucket-id"
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @return The parent resource that contains the logging bucket.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -128,7 +129,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @return Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
      * 
      */
-    public Output</* @Nullable */ Integer> getRetentionDays() {
+    public Output</* @Nullable */ Integer> retentionDays() {
         return this.retentionDays;
     }
 
@@ -154,7 +155,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectBucketConfig(String name, ProjectBucketConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/projectBucketConfig:ProjectBucketConfig", name, args == null ? ProjectBucketConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/projectBucketConfig:ProjectBucketConfig", name, args == null ? ProjectBucketConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectBucketConfig(String name, Output<String> id, @Nullable ProjectBucketConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

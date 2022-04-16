@@ -10,6 +10,7 @@ import io.pulumi.azurenative.keyvault.enums.StoragePermissions;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,8 +32,8 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="certificates")
       private final @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
 
-    public Output<List<Either<String,CertificatePermissions>>> getCertificates() {
-        return this.certificates == null ? Output.empty() : this.certificates;
+    public Output<List<Either<String,CertificatePermissions>>> certificates() {
+        return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keys")
       private final @Nullable Output<List<Either<String,KeyPermissions>>> keys;
 
-    public Output<List<Either<String,KeyPermissions>>> getKeys() {
-        return this.keys == null ? Output.empty() : this.keys;
+    public Output<List<Either<String,KeyPermissions>>> keys() {
+        return this.keys == null ? Codegen.empty() : this.keys;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secrets")
       private final @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
 
-    public Output<List<Either<String,SecretPermissions>>> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+    public Output<List<Either<String,SecretPermissions>>> secrets() {
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="storage")
       private final @Nullable Output<List<Either<String,StoragePermissions>>> storage;
 
-    public Output<List<Either<String,StoragePermissions>>> getStorage() {
-        return this.storage == null ? Output.empty() : this.storage;
+    public Output<List<Either<String,StoragePermissions>>> storage() {
+        return this.storage == null ? Codegen.empty() : this.storage;
     }
 
     public PermissionsArgs(
@@ -80,10 +81,10 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionsArgs() {
-        this.certificates = Output.empty();
-        this.keys = Output.empty();
-        this.secrets = Output.empty();
-        this.storage = Output.empty();
+        this.certificates = Codegen.empty();
+        this.keys = Codegen.empty();
+        this.secrets = Codegen.empty();
+        this.storage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificates(@Nullable List<Either<String,CertificatePermissions>> certificates) {
-            this.certificates = Output.ofNullable(certificates);
+            this.certificates = Codegen.ofNullable(certificates);
             return this;
         }
         public Builder certificates(Either<String,CertificatePermissions>... certificates) {
@@ -128,7 +129,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keys(@Nullable List<Either<String,KeyPermissions>> keys) {
-            this.keys = Output.ofNullable(keys);
+            this.keys = Codegen.ofNullable(keys);
             return this;
         }
         public Builder keys(Either<String,KeyPermissions>... keys) {
@@ -139,7 +140,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secrets(@Nullable List<Either<String,SecretPermissions>> secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }
         public Builder secrets(Either<String,SecretPermissions>... secrets) {
@@ -150,7 +151,7 @@ public final class PermissionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storage(@Nullable List<Either<String,StoragePermissions>> storage) {
-            this.storage = Output.ofNullable(storage);
+            this.storage = Codegen.ofNullable(storage);
             return this;
         }
         public Builder storage(Either<String,StoragePermissions>... storage) {

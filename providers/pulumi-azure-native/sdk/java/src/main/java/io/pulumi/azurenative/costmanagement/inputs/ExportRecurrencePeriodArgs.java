@@ -5,6 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
     @Import(name="from", required=true)
       private final Output<String> from;
 
-    public Output<String> getFrom() {
+    public Output<String> from() {
         return this.from;
     }
 
@@ -36,8 +37,8 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
     @Import(name="to")
       private final @Nullable Output<String> to;
 
-    public Output<String> getTo() {
-        return this.to == null ? Output.empty() : this.to;
+    public Output<String> to() {
+        return this.to == null ? Codegen.empty() : this.to;
     }
 
     public ExportRecurrencePeriodArgs(
@@ -48,8 +49,8 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
     }
 
     private ExportRecurrencePeriodArgs() {
-        this.from = Output.empty();
-        this.to = Output.empty();
+        this.from = Codegen.empty();
+        this.to = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ExportRecurrencePeriodArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder to(@Nullable String to) {
-            this.to = Output.ofNullable(to);
+            this.to = Codegen.ofNullable(to);
             return this;
         }        public ExportRecurrencePeriodArgs build() {
             return new ExportRecurrencePeriodArgs(from, to);

@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.RuntimeClassArgs;
@@ -32,7 +33,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -46,7 +47,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -60,7 +61,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * @return More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -74,7 +75,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * @return Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    public Output<RuntimeClassSpec> getSpec() {
+    public Output<RuntimeClassSpec> spec() {
         return this.spec;
     }
 
@@ -100,7 +101,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuntimeClass(String name, RuntimeClassArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:node.k8s.io/v1alpha1:RuntimeClass", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:node.k8s.io/v1alpha1:RuntimeClass", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private RuntimeClass(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

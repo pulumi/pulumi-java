@@ -22,10 +22,10 @@ public final class CertificateAuthorityAccessMethod {
         this.customObjectIdentifier = customObjectIdentifier;
     }
 
-    public Optional<String> getAccessMethodType() {
+    public Optional<String> accessMethodType() {
         return Optional.ofNullable(this.accessMethodType);
     }
-    public Optional<String> getCustomObjectIdentifier() {
+    public Optional<String> customObjectIdentifier() {
         return Optional.ofNullable(this.customObjectIdentifier);
     }
 

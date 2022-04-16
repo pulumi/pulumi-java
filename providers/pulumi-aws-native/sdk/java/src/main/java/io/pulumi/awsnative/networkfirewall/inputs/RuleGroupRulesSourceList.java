@@ -18,21 +18,21 @@ public final class RuleGroupRulesSourceList extends io.pulumi.resources.InvokeAr
     @Import(name="generatedRulesType", required=true)
       private final RuleGroupGeneratedRulesType generatedRulesType;
 
-    public RuleGroupGeneratedRulesType getGeneratedRulesType() {
+    public RuleGroupGeneratedRulesType generatedRulesType() {
         return this.generatedRulesType;
     }
 
     @Import(name="targetTypes", required=true)
       private final List<RuleGroupTargetType> targetTypes;
 
-    public List<RuleGroupTargetType> getTargetTypes() {
+    public List<RuleGroupTargetType> targetTypes() {
         return this.targetTypes;
     }
 
     @Import(name="targets", required=true)
       private final List<String> targets;
 
-    public List<String> getTargets() {
+    public List<String> targets() {
         return this.targets;
     }
 

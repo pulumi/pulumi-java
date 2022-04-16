@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceAccessControlListConfiguratio
 import io.pulumi.awsnative.kendra.inputs.DataSourceDocumentsMetadataConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,43 +25,43 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
     @Import(name="accessControlListConfiguration")
       private final @Nullable Output<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration;
 
-    public Output<DataSourceAccessControlListConfigurationArgs> getAccessControlListConfiguration() {
-        return this.accessControlListConfiguration == null ? Output.empty() : this.accessControlListConfiguration;
+    public Output<DataSourceAccessControlListConfigurationArgs> accessControlListConfiguration() {
+        return this.accessControlListConfiguration == null ? Codegen.empty() : this.accessControlListConfiguration;
     }
 
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="documentsMetadataConfiguration")
       private final @Nullable Output<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration;
 
-    public Output<DataSourceDocumentsMetadataConfigurationArgs> getDocumentsMetadataConfiguration() {
-        return this.documentsMetadataConfiguration == null ? Output.empty() : this.documentsMetadataConfiguration;
+    public Output<DataSourceDocumentsMetadataConfigurationArgs> documentsMetadataConfiguration() {
+        return this.documentsMetadataConfiguration == null ? Codegen.empty() : this.documentsMetadataConfiguration;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> getExclusionPatterns() {
-        return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
+    public Output<List<String>> exclusionPatterns() {
+        return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> getInclusionPatterns() {
-        return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
+    public Output<List<String>> inclusionPatterns() {
+        return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="inclusionPrefixes")
       private final @Nullable Output<List<String>> inclusionPrefixes;
 
-    public Output<List<String>> getInclusionPrefixes() {
-        return this.inclusionPrefixes == null ? Output.empty() : this.inclusionPrefixes;
+    public Output<List<String>> inclusionPrefixes() {
+        return this.inclusionPrefixes == null ? Codegen.empty() : this.inclusionPrefixes;
     }
 
     public DataSourceS3DataSourceConfigurationArgs(
@@ -79,12 +80,12 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
     }
 
     private DataSourceS3DataSourceConfigurationArgs() {
-        this.accessControlListConfiguration = Output.empty();
-        this.bucketName = Output.empty();
-        this.documentsMetadataConfiguration = Output.empty();
-        this.exclusionPatterns = Output.empty();
-        this.inclusionPatterns = Output.empty();
-        this.inclusionPrefixes = Output.empty();
+        this.accessControlListConfiguration = Codegen.empty();
+        this.bucketName = Codegen.empty();
+        this.documentsMetadataConfiguration = Codegen.empty();
+        this.exclusionPatterns = Codegen.empty();
+        this.inclusionPatterns = Codegen.empty();
+        this.inclusionPrefixes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder accessControlListConfiguration(@Nullable DataSourceAccessControlListConfigurationArgs accessControlListConfiguration) {
-            this.accessControlListConfiguration = Output.ofNullable(accessControlListConfiguration);
+            this.accessControlListConfiguration = Codegen.ofNullable(accessControlListConfiguration);
             return this;
         }
         public Builder bucketName(Output<String> bucketName) {
@@ -138,7 +139,7 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder documentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfigurationArgs documentsMetadataConfiguration) {
-            this.documentsMetadataConfiguration = Output.ofNullable(documentsMetadataConfiguration);
+            this.documentsMetadataConfiguration = Codegen.ofNullable(documentsMetadataConfiguration);
             return this;
         }
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
@@ -146,7 +147,7 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
+            this.exclusionPatterns = Codegen.ofNullable(exclusionPatterns);
             return this;
         }
         public Builder exclusionPatterns(String... exclusionPatterns) {
@@ -157,7 +158,7 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
+            this.inclusionPatterns = Codegen.ofNullable(inclusionPatterns);
             return this;
         }
         public Builder inclusionPatterns(String... inclusionPatterns) {
@@ -168,7 +169,7 @@ public final class DataSourceS3DataSourceConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder inclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
-            this.inclusionPrefixes = Output.ofNullable(inclusionPrefixes);
+            this.inclusionPrefixes = Codegen.ofNullable(inclusionPrefixes);
             return this;
         }
         public Builder inclusionPrefixes(String... inclusionPrefixes) {

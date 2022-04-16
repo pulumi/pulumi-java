@@ -12,6 +12,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -58,7 +59,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    public Output<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> getProperties() {
+    public Output<Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse>> properties() {
         return this.properties;
     }
     /**
@@ -72,7 +73,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -98,7 +99,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Input(String name, InputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:streamanalytics:Input", name, args == null ? InputArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:streamanalytics:Input", name, args == null ? InputArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Input(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

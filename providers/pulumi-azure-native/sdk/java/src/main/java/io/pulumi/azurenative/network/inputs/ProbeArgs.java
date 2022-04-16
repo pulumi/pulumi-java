@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.ProbeProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="intervalInSeconds")
       private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Output<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
+    public Output<Integer> intervalInSeconds() {
+        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="numberOfProbes")
       private final @Nullable Output<Integer> numberOfProbes;
 
-    public Output<Integer> getNumberOfProbes() {
-        return this.numberOfProbes == null ? Output.empty() : this.numberOfProbes;
+    public Output<Integer> numberOfProbes() {
+        return this.numberOfProbes == null ? Codegen.empty() : this.numberOfProbes;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
       private final Output<Integer> port;
 
-    public Output<Integer> getPort() {
+    public Output<Integer> port() {
         return this.port;
     }
 
@@ -83,7 +84,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
       private final Output<Either<String,ProbeProtocol>> protocol;
 
-    public Output<Either<String,ProbeProtocol>> getProtocol() {
+    public Output<Either<String,ProbeProtocol>> protocol() {
         return this.protocol;
     }
 
@@ -94,8 +95,8 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="requestPath")
       private final @Nullable Output<String> requestPath;
 
-    public Output<String> getRequestPath() {
-        return this.requestPath == null ? Output.empty() : this.requestPath;
+    public Output<String> requestPath() {
+        return this.requestPath == null ? Codegen.empty() : this.requestPath;
     }
 
     public ProbeArgs(
@@ -116,13 +117,13 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProbeArgs() {
-        this.id = Output.empty();
-        this.intervalInSeconds = Output.empty();
-        this.name = Output.empty();
-        this.numberOfProbes = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.requestPath = Output.empty();
+        this.id = Codegen.empty();
+        this.intervalInSeconds = Codegen.empty();
+        this.name = Codegen.empty();
+        this.numberOfProbes = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.requestPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
@@ -170,7 +171,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -178,7 +179,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder numberOfProbes(@Nullable Output<Integer> numberOfProbes) {
@@ -186,7 +187,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
-            this.numberOfProbes = Output.ofNullable(numberOfProbes);
+            this.numberOfProbes = Codegen.ofNullable(numberOfProbes);
             return this;
         }
         public Builder port(Output<Integer> port) {
@@ -210,7 +211,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = Output.ofNullable(requestPath);
+            this.requestPath = Codegen.ofNullable(requestPath);
             return this;
         }        public ProbeArgs build() {
             return new ProbeArgs(id, intervalInSeconds, name, numberOfProbes, port, protocol, requestPath);

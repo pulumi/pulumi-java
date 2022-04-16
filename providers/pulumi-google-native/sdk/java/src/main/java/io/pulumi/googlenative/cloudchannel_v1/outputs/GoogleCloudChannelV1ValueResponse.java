@@ -56,35 +56,35 @@ public final class GoogleCloudChannelV1ValueResponse {
      * Represents a boolean value.
      * 
     */
-    public Boolean getBoolValue() {
+    public Boolean boolValue() {
         return this.boolValue;
     }
     /**
      * Represents a double value.
      * 
     */
-    public Double getDoubleValue() {
+    public Double doubleValue() {
         return this.doubleValue;
     }
     /**
      * Represents an int64 value.
      * 
     */
-    public String getInt64Value() {
+    public String int64Value() {
         return this.int64Value;
     }
     /**
      * Represents an 'Any' proto value.
      * 
     */
-    public Map<String,String> getProtoValue() {
+    public Map<String,String> protoValue() {
         return this.protoValue;
     }
     /**
      * Represents a string value.
      * 
     */
-    public String getStringValue() {
+    public String stringValue() {
         return this.stringValue;
     }
 

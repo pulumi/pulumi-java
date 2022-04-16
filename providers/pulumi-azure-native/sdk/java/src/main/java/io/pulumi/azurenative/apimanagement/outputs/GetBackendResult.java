@@ -108,84 +108,84 @@ public final class GetBackendResult {
      * Backend Credentials Contract Properties
      * 
     */
-    public Optional<BackendCredentialsContractResponse> getCredentials() {
+    public Optional<BackendCredentialsContractResponse> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
      * Backend Description.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Backend Properties contract
      * 
     */
-    public BackendPropertiesResponse getProperties() {
+    public BackendPropertiesResponse properties() {
         return this.properties;
     }
     /**
      * Backend communication protocol.
      * 
     */
-    public String getProtocol() {
+    public String protocol() {
         return this.protocol;
     }
     /**
      * Backend Proxy Contract Properties
      * 
     */
-    public Optional<BackendProxyContractResponse> getProxy() {
+    public Optional<BackendProxyContractResponse> proxy() {
         return Optional.ofNullable(this.proxy);
     }
     /**
      * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
      * 
     */
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
     /**
      * Backend Title.
      * 
     */
-    public Optional<String> getTitle() {
+    public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
      * Backend TLS Properties
      * 
     */
-    public Optional<BackendTlsPropertiesResponse> getTls() {
+    public Optional<BackendTlsPropertiesResponse> tls() {
         return Optional.ofNullable(this.tls);
     }
     /**
      * Resource type for API Management resource.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
     /**
      * Runtime Url of the Backend.
      * 
     */
-    public String getUrl() {
+    public String url() {
         return this.url;
     }
 

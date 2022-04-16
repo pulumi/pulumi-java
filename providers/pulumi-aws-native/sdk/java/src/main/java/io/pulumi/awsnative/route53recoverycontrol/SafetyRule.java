@@ -13,6 +13,7 @@ import io.pulumi.awsnative.route53recoverycontrol.outputs.SafetyRuleTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
     @Export(name="assertionRule", type=SafetyRuleAssertionRule.class, parameters={})
     private Output</* @Nullable */ SafetyRuleAssertionRule> assertionRule;
 
-    public Output</* @Nullable */ SafetyRuleAssertionRule> getAssertionRule() {
+    public Output</* @Nullable */ SafetyRuleAssertionRule> assertionRule() {
         return this.assertionRule;
     }
     /**
@@ -40,25 +41,25 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the control panel.
      * 
      */
-    public Output</* @Nullable */ String> getControlPanelArn() {
+    public Output</* @Nullable */ String> controlPanelArn() {
         return this.controlPanelArn;
     }
     @Export(name="gatingRule", type=SafetyRuleGatingRule.class, parameters={})
     private Output</* @Nullable */ SafetyRuleGatingRule> gatingRule;
 
-    public Output</* @Nullable */ SafetyRuleGatingRule> getGatingRule() {
+    public Output</* @Nullable */ SafetyRuleGatingRule> gatingRule() {
         return this.gatingRule;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     @Export(name="ruleConfig", type=SafetyRuleRuleConfig.class, parameters={})
     private Output</* @Nullable */ SafetyRuleRuleConfig> ruleConfig;
 
-    public Output</* @Nullable */ SafetyRuleRuleConfig> getRuleConfig() {
+    public Output</* @Nullable */ SafetyRuleRuleConfig> ruleConfig() {
         return this.ruleConfig;
     }
     /**
@@ -72,7 +73,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the safety rule.
      * 
      */
-    public Output<String> getSafetyRuleArn() {
+    public Output<String> safetyRuleArn() {
         return this.safetyRuleArn;
     }
     /**
@@ -86,7 +87,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    public Output<SafetyRuleStatus> getStatus() {
+    public Output<SafetyRuleStatus> status() {
         return this.status;
     }
     /**
@@ -100,7 +101,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<SafetyRuleTag>> getTags() {
+    public Output</* @Nullable */ List<SafetyRuleTag>> tags() {
         return this.tags;
     }
 
@@ -126,7 +127,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SafetyRule(String name, @Nullable SafetyRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoverycontrol:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53recoverycontrol:SafetyRule", name, args == null ? SafetyRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SafetyRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.devtestlab.inputs.WeekDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dailyRecurrence")
       private final @Nullable Output<DayDetailsArgs> dailyRecurrence;
 
-    public Output<DayDetailsArgs> getDailyRecurrence() {
-        return this.dailyRecurrence == null ? Output.empty() : this.dailyRecurrence;
+    public Output<DayDetailsArgs> dailyRecurrence() {
+        return this.dailyRecurrence == null ? Codegen.empty() : this.dailyRecurrence;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hourlyRecurrence")
       private final @Nullable Output<HourDetailsArgs> hourlyRecurrence;
 
-    public Output<HourDetailsArgs> getHourlyRecurrence() {
-        return this.hourlyRecurrence == null ? Output.empty() : this.hourlyRecurrence;
+    public Output<HourDetailsArgs> hourlyRecurrence() {
+        return this.hourlyRecurrence == null ? Codegen.empty() : this.hourlyRecurrence;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationSettings")
       private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
-    public Output<NotificationSettingsArgs> getNotificationSettings() {
-        return this.notificationSettings == null ? Output.empty() : this.notificationSettings;
+    public Output<NotificationSettingsArgs> notificationSettings() {
+        return this.notificationSettings == null ? Codegen.empty() : this.notificationSettings;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -94,8 +95,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<Either<String,EnableStatus>> status;
 
-    public Output<Either<String,EnableStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,EnableStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetResourceId")
       private final @Nullable Output<String> targetResourceId;
 
-    public Output<String> getTargetResourceId() {
-        return this.targetResourceId == null ? Output.empty() : this.targetResourceId;
+    public Output<String> targetResourceId() {
+        return this.targetResourceId == null ? Codegen.empty() : this.targetResourceId;
     }
 
     /**
@@ -127,8 +128,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="taskType")
       private final @Nullable Output<String> taskType;
 
-    public Output<String> getTaskType() {
-        return this.taskType == null ? Output.empty() : this.taskType;
+    public Output<String> taskType() {
+        return this.taskType == null ? Codegen.empty() : this.taskType;
     }
 
     /**
@@ -138,8 +139,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeZoneId")
       private final @Nullable Output<String> timeZoneId;
 
-    public Output<String> getTimeZoneId() {
-        return this.timeZoneId == null ? Output.empty() : this.timeZoneId;
+    public Output<String> timeZoneId() {
+        return this.timeZoneId == null ? Codegen.empty() : this.timeZoneId;
     }
 
     /**
@@ -149,8 +150,8 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="weeklyRecurrence")
       private final @Nullable Output<WeekDetailsArgs> weeklyRecurrence;
 
-    public Output<WeekDetailsArgs> getWeeklyRecurrence() {
-        return this.weeklyRecurrence == null ? Output.empty() : this.weeklyRecurrence;
+    public Output<WeekDetailsArgs> weeklyRecurrence() {
+        return this.weeklyRecurrence == null ? Codegen.empty() : this.weeklyRecurrence;
     }
 
     public GlobalScheduleArgs(
@@ -181,18 +182,18 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GlobalScheduleArgs() {
-        this.dailyRecurrence = Output.empty();
-        this.hourlyRecurrence = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.notificationSettings = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.targetResourceId = Output.empty();
-        this.taskType = Output.empty();
-        this.timeZoneId = Output.empty();
-        this.weeklyRecurrence = Output.empty();
+        this.dailyRecurrence = Codegen.empty();
+        this.hourlyRecurrence = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationSettings = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetResourceId = Codegen.empty();
+        this.taskType = Codegen.empty();
+        this.timeZoneId = Codegen.empty();
+        this.weeklyRecurrence = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -242,7 +243,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dailyRecurrence(@Nullable DayDetailsArgs dailyRecurrence) {
-            this.dailyRecurrence = Output.ofNullable(dailyRecurrence);
+            this.dailyRecurrence = Codegen.ofNullable(dailyRecurrence);
             return this;
         }
         public Builder hourlyRecurrence(@Nullable Output<HourDetailsArgs> hourlyRecurrence) {
@@ -250,7 +251,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hourlyRecurrence(@Nullable HourDetailsArgs hourlyRecurrence) {
-            this.hourlyRecurrence = Output.ofNullable(hourlyRecurrence);
+            this.hourlyRecurrence = Codegen.ofNullable(hourlyRecurrence);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -258,7 +259,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -266,7 +267,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationSettings(@Nullable Output<NotificationSettingsArgs> notificationSettings) {
@@ -274,7 +275,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
-            this.notificationSettings = Output.ofNullable(notificationSettings);
+            this.notificationSettings = Codegen.ofNullable(notificationSettings);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -290,7 +291,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,EnableStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -298,7 +299,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
@@ -306,7 +307,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = Output.ofNullable(targetResourceId);
+            this.targetResourceId = Codegen.ofNullable(targetResourceId);
             return this;
         }
         public Builder taskType(@Nullable Output<String> taskType) {
@@ -314,7 +315,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskType(@Nullable String taskType) {
-            this.taskType = Output.ofNullable(taskType);
+            this.taskType = Codegen.ofNullable(taskType);
             return this;
         }
         public Builder timeZoneId(@Nullable Output<String> timeZoneId) {
@@ -322,7 +323,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZoneId(@Nullable String timeZoneId) {
-            this.timeZoneId = Output.ofNullable(timeZoneId);
+            this.timeZoneId = Codegen.ofNullable(timeZoneId);
             return this;
         }
         public Builder weeklyRecurrence(@Nullable Output<WeekDetailsArgs> weeklyRecurrence) {
@@ -330,7 +331,7 @@ public final class GlobalScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder weeklyRecurrence(@Nullable WeekDetailsArgs weeklyRecurrence) {
-            this.weeklyRecurrence = Output.ofNullable(weeklyRecurrence);
+            this.weeklyRecurrence = Codegen.ofNullable(weeklyRecurrence);
             return this;
         }        public GlobalScheduleArgs build() {
             return new GlobalScheduleArgs(dailyRecurrence, hourlyRecurrence, location, name, notificationSettings, resourceGroupName, status, tags, targetResourceId, taskType, timeZoneId, weeklyRecurrence);

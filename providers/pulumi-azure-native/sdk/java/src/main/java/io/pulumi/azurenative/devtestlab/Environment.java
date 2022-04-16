@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The display name of the Azure Resource Manager template that produced the environment.
      * 
      */
-    public Output</* @Nullable */ String> getArmTemplateDisplayName() {
+    public Output</* @Nullable */ String> armTemplateDisplayName() {
         return this.armTemplateDisplayName;
     }
     /**
@@ -57,7 +58,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The creator of the environment.
      * 
      */
-    public Output<String> getCreatedByUser() {
+    public Output<String> createdByUser() {
         return this.createdByUser;
     }
     /**
@@ -71,7 +72,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The deployment properties of the environment.
      * 
      */
-    public Output</* @Nullable */ EnvironmentDeploymentPropertiesResponse> getDeploymentProperties() {
+    public Output</* @Nullable */ EnvironmentDeploymentPropertiesResponse> deploymentProperties() {
         return this.deploymentProperties;
     }
     /**
@@ -85,7 +86,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -99,7 +100,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -113,7 +114,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -127,7 +128,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The identifier of the resource group containing the environment's resources.
      * 
      */
-    public Output<String> getResourceGroupId() {
+    public Output<String> resourceGroupId() {
         return this.resourceGroupId;
     }
     /**
@@ -141,7 +142,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -155,7 +156,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -169,7 +170,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
 
@@ -195,7 +196,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Environment(String name, EnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devtestlab:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devtestlab:Environment", name, args == null ? EnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Environment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

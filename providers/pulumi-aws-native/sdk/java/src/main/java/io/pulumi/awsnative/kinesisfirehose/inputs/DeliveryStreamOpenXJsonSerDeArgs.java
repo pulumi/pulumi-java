@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
     @Import(name="caseInsensitive")
       private final @Nullable Output<Boolean> caseInsensitive;
 
-    public Output<Boolean> getCaseInsensitive() {
-        return this.caseInsensitive == null ? Output.empty() : this.caseInsensitive;
+    public Output<Boolean> caseInsensitive() {
+        return this.caseInsensitive == null ? Codegen.empty() : this.caseInsensitive;
     }
 
     @Import(name="columnToJsonKeyMappings")
       private final @Nullable Output<Object> columnToJsonKeyMappings;
 
-    public Output<Object> getColumnToJsonKeyMappings() {
-        return this.columnToJsonKeyMappings == null ? Output.empty() : this.columnToJsonKeyMappings;
+    public Output<Object> columnToJsonKeyMappings() {
+        return this.columnToJsonKeyMappings == null ? Codegen.empty() : this.columnToJsonKeyMappings;
     }
 
     @Import(name="convertDotsInJsonKeysToUnderscores")
       private final @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
 
-    public Output<Boolean> getConvertDotsInJsonKeysToUnderscores() {
-        return this.convertDotsInJsonKeysToUnderscores == null ? Output.empty() : this.convertDotsInJsonKeysToUnderscores;
+    public Output<Boolean> convertDotsInJsonKeysToUnderscores() {
+        return this.convertDotsInJsonKeysToUnderscores == null ? Codegen.empty() : this.convertDotsInJsonKeysToUnderscores;
     }
 
     public DeliveryStreamOpenXJsonSerDeArgs(
@@ -46,9 +47,9 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
     }
 
     private DeliveryStreamOpenXJsonSerDeArgs() {
-        this.caseInsensitive = Output.empty();
-        this.columnToJsonKeyMappings = Output.empty();
-        this.convertDotsInJsonKeysToUnderscores = Output.empty();
+        this.caseInsensitive = Codegen.empty();
+        this.columnToJsonKeyMappings = Codegen.empty();
+        this.convertDotsInJsonKeysToUnderscores = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
-            this.caseInsensitive = Output.ofNullable(caseInsensitive);
+            this.caseInsensitive = Codegen.ofNullable(caseInsensitive);
             return this;
         }
         public Builder columnToJsonKeyMappings(@Nullable Output<Object> columnToJsonKeyMappings) {
@@ -88,7 +89,7 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder columnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
-            this.columnToJsonKeyMappings = Output.ofNullable(columnToJsonKeyMappings);
+            this.columnToJsonKeyMappings = Codegen.ofNullable(columnToJsonKeyMappings);
             return this;
         }
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores) {
@@ -96,7 +97,7 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
             return this;
         }
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
-            this.convertDotsInJsonKeysToUnderscores = Output.ofNullable(convertDotsInJsonKeysToUnderscores);
+            this.convertDotsInJsonKeysToUnderscores = Codegen.ofNullable(convertDotsInJsonKeysToUnderscores);
             return this;
         }        public DeliveryStreamOpenXJsonSerDeArgs build() {
             return new DeliveryStreamOpenXJsonSerDeArgs(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);

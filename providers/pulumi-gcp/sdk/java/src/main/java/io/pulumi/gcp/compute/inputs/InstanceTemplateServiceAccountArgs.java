@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class InstanceTemplateServiceAccountArgs extends io.pulumi.resource
     @Import(name="email")
       private final @Nullable Output<String> email;
 
-    public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+    public Output<String> email() {
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class InstanceTemplateServiceAccountArgs extends io.pulumi.resource
     @Import(name="scopes", required=true)
       private final Output<List<String>> scopes;
 
-    public Output<List<String>> getScopes() {
+    public Output<List<String>> scopes() {
         return this.scopes;
     }
 
@@ -48,8 +49,8 @@ public final class InstanceTemplateServiceAccountArgs extends io.pulumi.resource
     }
 
     private InstanceTemplateServiceAccountArgs() {
-        this.email = Output.empty();
-        this.scopes = Output.empty();
+        this.email = Codegen.empty();
+        this.scopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class InstanceTemplateServiceAccountArgs extends io.pulumi.resource
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder scopes(Output<List<String>> scopes) {

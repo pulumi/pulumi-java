@@ -33,14 +33,14 @@ public final class OSPolicyResourcePackageResourceDebResponse {
      * Whether dependencies should also be installed. - install when false: `dpkg -i package` - install when true: `apt-get update && apt-get -y install package.deb`
      * 
     */
-    public Boolean getPullDeps() {
+    public Boolean pullDeps() {
         return this.pullDeps;
     }
     /**
      * A deb package.
      * 
     */
-    public OSPolicyResourceFileResponse getSource() {
+    public OSPolicyResourceFileResponse source() {
         return this.source;
     }
 

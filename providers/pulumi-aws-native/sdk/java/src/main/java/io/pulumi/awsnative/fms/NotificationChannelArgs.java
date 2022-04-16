@@ -5,6 +5,7 @@ package io.pulumi.awsnative.fms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     @Import(name="snsRoleName", required=true)
       private final Output<String> snsRoleName;
 
-    public Output<String> getSnsRoleName() {
+    public Output<String> snsRoleName() {
         return this.snsRoleName;
     }
 
     @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
-    public Output<String> getSnsTopicArn() {
+    public Output<String> snsTopicArn() {
         return this.snsTopicArn;
     }
 
@@ -35,8 +36,8 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
     }
 
     private NotificationChannelArgs() {
-        this.snsRoleName = Output.empty();
-        this.snsTopicArn = Output.empty();
+        this.snsRoleName = Codegen.empty();
+        this.snsTopicArn = Codegen.empty();
     }
 
     public static Builder builder() {

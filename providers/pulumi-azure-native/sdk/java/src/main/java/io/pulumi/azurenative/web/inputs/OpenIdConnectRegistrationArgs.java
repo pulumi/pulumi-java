@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.OpenIdConnectClientCredentialArgs;
 import io.pulumi.azurenative.web.inputs.OpenIdConnectConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
     @Import(name="clientCredential")
       private final @Nullable Output<OpenIdConnectClientCredentialArgs> clientCredential;
 
-    public Output<OpenIdConnectClientCredentialArgs> getClientCredential() {
-        return this.clientCredential == null ? Output.empty() : this.clientCredential;
+    public Output<OpenIdConnectClientCredentialArgs> clientCredential() {
+        return this.clientCredential == null ? Codegen.empty() : this.clientCredential;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
     @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
-    public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<String> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
     @Import(name="openIdConnectConfiguration")
       private final @Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration;
 
-    public Output<OpenIdConnectConfigArgs> getOpenIdConnectConfiguration() {
-        return this.openIdConnectConfiguration == null ? Output.empty() : this.openIdConnectConfiguration;
+    public Output<OpenIdConnectConfigArgs> openIdConnectConfiguration() {
+        return this.openIdConnectConfiguration == null ? Codegen.empty() : this.openIdConnectConfiguration;
     }
 
     public OpenIdConnectRegistrationArgs(
@@ -63,9 +64,9 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
     }
 
     private OpenIdConnectRegistrationArgs() {
-        this.clientCredential = Output.empty();
-        this.clientId = Output.empty();
-        this.openIdConnectConfiguration = Output.empty();
+        this.clientCredential = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.openIdConnectConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder clientCredential(@Nullable OpenIdConnectClientCredentialArgs clientCredential) {
-            this.clientCredential = Output.ofNullable(clientCredential);
+            this.clientCredential = Codegen.ofNullable(clientCredential);
             return this;
         }
         public Builder clientId(@Nullable Output<String> clientId) {
@@ -105,7 +106,7 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder openIdConnectConfiguration(@Nullable Output<OpenIdConnectConfigArgs> openIdConnectConfiguration) {
@@ -113,7 +114,7 @@ public final class OpenIdConnectRegistrationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder openIdConnectConfiguration(@Nullable OpenIdConnectConfigArgs openIdConnectConfiguration) {
-            this.openIdConnectConfiguration = Output.ofNullable(openIdConnectConfiguration);
+            this.openIdConnectConfiguration = Codegen.ofNullable(openIdConnectConfiguration);
             return this;
         }        public OpenIdConnectRegistrationArgs build() {
             return new OpenIdConnectRegistrationArgs(clientCredential, clientId, openIdConnectConfiguration);

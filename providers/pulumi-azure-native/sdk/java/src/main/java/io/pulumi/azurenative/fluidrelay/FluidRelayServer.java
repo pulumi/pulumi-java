@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @return The Fluid Relay Service endpoints for this server.
      * 
      */
-    public Output<FluidRelayEndpointsResponse> getFluidRelayEndpoints() {
+    public Output<FluidRelayEndpointsResponse> fluidRelayEndpoints() {
         return this.fluidRelayEndpoints;
     }
     /**
@@ -58,7 +59,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @return The Fluid tenantId for this server
      * 
      */
-    public Output<String> getFrsTenantId() {
+    public Output<String> frsTenantId() {
         return this.frsTenantId;
     }
     /**
@@ -72,7 +73,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -86,7 +87,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @return Provision states for FluidRelay RP
      * 
      */
-    public Output</* @Nullable */ String> getProvisioningState() {
+    public Output</* @Nullable */ String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +115,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @return System meta data for this resource, including creation and modification information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -128,7 +129,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +169,7 @@ public class FluidRelayServer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FluidRelayServer(String name, FluidRelayServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:fluidrelay:FluidRelayServer", name, args == null ? FluidRelayServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:fluidrelay:FluidRelayServer", name, args == null ? FluidRelayServerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FluidRelayServer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

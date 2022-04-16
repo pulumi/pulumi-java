@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.enums.ArgumentArgumentKind;
 import io.pulumi.googlenative.bigquery_v2.enums.ArgumentMode;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
@@ -28,8 +29,8 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="argumentKind")
       private final @Nullable Output<ArgumentArgumentKind> argumentKind;
 
-    public Output<ArgumentArgumentKind> getArgumentKind() {
-        return this.argumentKind == null ? Output.empty() : this.argumentKind;
+    public Output<ArgumentArgumentKind> argumentKind() {
+        return this.argumentKind == null ? Codegen.empty() : this.argumentKind;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataType")
       private final @Nullable Output<StandardSqlDataTypeArgs> dataType;
 
-    public Output<StandardSqlDataTypeArgs> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+    public Output<StandardSqlDataTypeArgs> dataType() {
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<ArgumentMode> mode;
 
-    public Output<ArgumentMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<ArgumentMode> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ArgumentArgs(
@@ -77,10 +78,10 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArgumentArgs() {
-        this.argumentKind = Output.empty();
-        this.dataType = Output.empty();
-        this.mode = Output.empty();
-        this.name = Output.empty();
+        this.argumentKind = Codegen.empty();
+        this.dataType = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder argumentKind(@Nullable ArgumentArgumentKind argumentKind) {
-            this.argumentKind = Output.ofNullable(argumentKind);
+            this.argumentKind = Codegen.ofNullable(argumentKind);
             return this;
         }
         public Builder dataType(@Nullable Output<StandardSqlDataTypeArgs> dataType) {
@@ -122,7 +123,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataType(@Nullable StandardSqlDataTypeArgs dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder mode(@Nullable Output<ArgumentMode> mode) {
@@ -130,7 +131,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable ArgumentMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -138,7 +139,7 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ArgumentArgs build() {
             return new ArgumentArgs(argumentKind, dataType, mode, name);

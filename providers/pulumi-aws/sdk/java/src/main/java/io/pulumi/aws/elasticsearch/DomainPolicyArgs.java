@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DomainPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accessPolicies", required=true)
       private final Output<String> accessPolicies;
 
-    public Output<String> getAccessPolicies() {
+    public Output<String> accessPolicies() {
         return this.accessPolicies;
     }
 
@@ -31,7 +32,7 @@ public final class DomainPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -43,8 +44,8 @@ public final class DomainPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainPolicyArgs() {
-        this.accessPolicies = Output.empty();
-        this.domainName = Output.empty();
+        this.accessPolicies = Codegen.empty();
+        this.domainName = Codegen.empty();
     }
 
     public static Builder builder() {

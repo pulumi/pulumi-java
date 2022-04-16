@@ -6,6 +6,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 import io.pulumi.azurenative.notificationhubs.enums.AccessRights;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
     @Import(name="rights")
       private final @Nullable Output<List<AccessRights>> rights;
 
-    public Output<List<AccessRights>> getRights() {
-        return this.rights == null ? Output.empty() : this.rights;
+    public Output<List<AccessRights>> rights() {
+        return this.rights == null ? Codegen.empty() : this.rights;
     }
 
     public SharedAccessAuthorizationRulePropertiesArgs(@Nullable Output<List<AccessRights>> rights) {
@@ -35,7 +36,7 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
     }
 
     private SharedAccessAuthorizationRulePropertiesArgs() {
-        this.rights = Output.empty();
+        this.rights = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
             return this;
         }
         public Builder rights(@Nullable List<AccessRights> rights) {
-            this.rights = Output.ofNullable(rights);
+            this.rights = Codegen.ofNullable(rights);
             return this;
         }
         public Builder rights(AccessRights... rights) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SortOptionsSortOrder;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="operatorName")
       private final @Nullable Output<String> operatorName;
 
-    public Output<String> getOperatorName() {
-        return this.operatorName == null ? Output.empty() : this.operatorName;
+    public Output<String> operatorName() {
+        return this.operatorName == null ? Codegen.empty() : this.operatorName;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sortOrder")
       private final @Nullable Output<SortOptionsSortOrder> sortOrder;
 
-    public Output<SortOptionsSortOrder> getSortOrder() {
-        return this.sortOrder == null ? Output.empty() : this.sortOrder;
+    public Output<SortOptionsSortOrder> sortOrder() {
+        return this.sortOrder == null ? Codegen.empty() : this.sortOrder;
     }
 
     public SortOptionsArgs(
@@ -45,8 +46,8 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SortOptionsArgs() {
-        this.operatorName = Output.empty();
-        this.sortOrder = Output.empty();
+        this.operatorName = Codegen.empty();
+        this.sortOrder = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Output.ofNullable(operatorName);
+            this.operatorName = Codegen.ofNullable(operatorName);
             return this;
         }
         public Builder sortOrder(@Nullable Output<SortOptionsSortOrder> sortOrder) {
@@ -84,7 +85,7 @@ public final class SortOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sortOrder(@Nullable SortOptionsSortOrder sortOrder) {
-            this.sortOrder = Output.ofNullable(sortOrder);
+            this.sortOrder = Codegen.ofNullable(sortOrder);
             return this;
         }        public SortOptionsArgs build() {
             return new SortOptionsArgs(operatorName, sortOrder);

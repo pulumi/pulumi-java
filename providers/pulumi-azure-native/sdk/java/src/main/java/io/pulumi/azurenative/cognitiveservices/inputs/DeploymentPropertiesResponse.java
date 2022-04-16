@@ -27,7 +27,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="model")
       private final @Nullable DeploymentModelResponse model;
 
-    public Optional<DeploymentModelResponse> getModel() {
+    public Optional<DeploymentModelResponse> model() {
         return this.model == null ? Optional.empty() : Optional.ofNullable(this.model);
     }
 
@@ -38,7 +38,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
-    public String getProvisioningState() {
+    public String provisioningState() {
         return this.provisioningState;
     }
 
@@ -49,7 +49,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
     @Import(name="scaleSettings")
       private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
 
-    public Optional<DeploymentScaleSettingsResponse> getScaleSettings() {
+    public Optional<DeploymentScaleSettingsResponse> scaleSettings() {
         return this.scaleSettings == null ? Optional.empty() : Optional.ofNullable(this.scaleSettings);
     }
 

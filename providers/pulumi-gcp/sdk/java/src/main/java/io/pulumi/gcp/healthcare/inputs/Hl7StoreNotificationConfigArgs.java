@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class Hl7StoreNotificationConfigArgs extends io.pulumi.resources.Re
     @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
 
@@ -34,7 +35,7 @@ public final class Hl7StoreNotificationConfigArgs extends io.pulumi.resources.Re
     }
 
     private Hl7StoreNotificationConfigArgs() {
-        this.pubsubTopic = Output.empty();
+        this.pubsubTopic = Codegen.empty();
     }
 
     public static Builder builder() {

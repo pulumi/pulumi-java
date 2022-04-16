@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketDefaultRetentionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class BucketObjectLockRuleArgs extends io.pulumi.resources.Resource
     @Import(name="defaultRetention")
       private final @Nullable Output<BucketDefaultRetentionArgs> defaultRetention;
 
-    public Output<BucketDefaultRetentionArgs> getDefaultRetention() {
-        return this.defaultRetention == null ? Output.empty() : this.defaultRetention;
+    public Output<BucketDefaultRetentionArgs> defaultRetention() {
+        return this.defaultRetention == null ? Codegen.empty() : this.defaultRetention;
     }
 
     public BucketObjectLockRuleArgs(@Nullable Output<BucketDefaultRetentionArgs> defaultRetention) {
@@ -30,7 +31,7 @@ public final class BucketObjectLockRuleArgs extends io.pulumi.resources.Resource
     }
 
     private BucketObjectLockRuleArgs() {
-        this.defaultRetention = Output.empty();
+        this.defaultRetention = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class BucketObjectLockRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder defaultRetention(@Nullable BucketDefaultRetentionArgs defaultRetention) {
-            this.defaultRetention = Output.ofNullable(defaultRetention);
+            this.defaultRetention = Codegen.ofNullable(defaultRetention);
             return this;
         }        public BucketObjectLockRuleArgs build() {
             return new BucketObjectLockRuleArgs(defaultRetention);

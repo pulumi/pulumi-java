@@ -34,14 +34,14 @@ public final class DiagnosticsConfigurationResponse {
      * Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
      * 
     */
-    public Optional<String> getExpiry() {
+    public Optional<String> expiry() {
         return Optional.ofNullable(this.expiry);
     }
     /**
      * Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
      * 
     */
-    public String getLevel() {
+    public String level() {
         return this.level;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +17,14 @@ public final class ContainerHostArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
     @Import(name="ip", required=true)
       private final Output<String> ip;
 
-    public Output<String> getIp() {
+    public Output<String> ip() {
         return this.ip;
     }
 
@@ -35,8 +36,8 @@ public final class ContainerHostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerHostArgs() {
-        this.host = Output.empty();
-        this.ip = Output.empty();
+        this.host = Codegen.empty();
+        this.ip = Codegen.empty();
     }
 
     public static Builder builder() {

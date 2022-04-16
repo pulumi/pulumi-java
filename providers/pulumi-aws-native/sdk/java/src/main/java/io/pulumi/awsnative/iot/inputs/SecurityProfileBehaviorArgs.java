@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteriaArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     @Import(name="criteria")
       private final @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria;
 
-    public Output<SecurityProfileBehaviorCriteriaArgs> getCriteria() {
-        return this.criteria == null ? Output.empty() : this.criteria;
+    public Output<SecurityProfileBehaviorCriteriaArgs> criteria() {
+        return this.criteria == null ? Codegen.empty() : this.criteria;
     }
 
     /**
@@ -35,15 +36,15 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     @Import(name="metric")
       private final @Nullable Output<String> metric;
 
-    public Output<String> getMetric() {
-        return this.metric == null ? Output.empty() : this.metric;
+    public Output<String> metric() {
+        return this.metric == null ? Codegen.empty() : this.metric;
     }
 
     @Import(name="metricDimension")
       private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
-    public Output<SecurityProfileMetricDimensionArgs> getMetricDimension() {
-        return this.metricDimension == null ? Output.empty() : this.metricDimension;
+    public Output<SecurityProfileMetricDimensionArgs> metricDimension() {
+        return this.metricDimension == null ? Codegen.empty() : this.metricDimension;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -64,8 +65,8 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     @Import(name="suppressAlerts")
       private final @Nullable Output<Boolean> suppressAlerts;
 
-    public Output<Boolean> getSuppressAlerts() {
-        return this.suppressAlerts == null ? Output.empty() : this.suppressAlerts;
+    public Output<Boolean> suppressAlerts() {
+        return this.suppressAlerts == null ? Codegen.empty() : this.suppressAlerts;
     }
 
     public SecurityProfileBehaviorArgs(
@@ -82,11 +83,11 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     }
 
     private SecurityProfileBehaviorArgs() {
-        this.criteria = Output.empty();
-        this.metric = Output.empty();
-        this.metricDimension = Output.empty();
-        this.name = Output.empty();
-        this.suppressAlerts = Output.empty();
+        this.criteria = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.metricDimension = Codegen.empty();
+        this.name = Codegen.empty();
+        this.suppressAlerts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder criteria(@Nullable SecurityProfileBehaviorCriteriaArgs criteria) {
-            this.criteria = Output.ofNullable(criteria);
+            this.criteria = Codegen.ofNullable(criteria);
             return this;
         }
         public Builder metric(@Nullable Output<String> metric) {
@@ -130,7 +131,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder metric(@Nullable String metric) {
-            this.metric = Output.ofNullable(metric);
+            this.metric = Codegen.ofNullable(metric);
             return this;
         }
         public Builder metricDimension(@Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension) {
@@ -138,7 +139,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
-            this.metricDimension = Output.ofNullable(metricDimension);
+            this.metricDimension = Codegen.ofNullable(metricDimension);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -154,7 +155,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
-            this.suppressAlerts = Output.ofNullable(suppressAlerts);
+            this.suppressAlerts = Codegen.ofNullable(suppressAlerts);
             return this;
         }        public SecurityProfileBehaviorArgs build() {
             return new SecurityProfileBehaviorArgs(criteria, metric, metricDimension, name, suppressAlerts);

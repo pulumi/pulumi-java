@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
     @Import(name="ignoreTerms")
       private final @Nullable Output<List<String>> ignoreTerms;
 
-    public Output<List<String>> getIgnoreTerms() {
-        return this.ignoreTerms == null ? Output.empty() : this.ignoreTerms;
+    public Output<List<String>> ignoreTerms() {
+        return this.ignoreTerms == null ? Codegen.empty() : this.ignoreTerms;
     }
 
     public GoogleCloudRetailV2alphaRuleIgnoreActionArgs(@Nullable Output<List<String>> ignoreTerms) {
@@ -35,7 +36,7 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
     }
 
     private GoogleCloudRetailV2alphaRuleIgnoreActionArgs() {
-        this.ignoreTerms = Output.empty();
+        this.ignoreTerms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends io.pulum
             return this;
         }
         public Builder ignoreTerms(@Nullable List<String> ignoreTerms) {
-            this.ignoreTerms = Output.ofNullable(ignoreTerms);
+            this.ignoreTerms = Codegen.ofNullable(ignoreTerms);
             return this;
         }
         public Builder ignoreTerms(String... ignoreTerms) {

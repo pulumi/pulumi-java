@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs
     @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
-    public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+    public Output<String> kmsKey() {
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs(@Nullable Output<String> kmsKey) {
@@ -34,7 +35,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs
     }
 
     private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs() {
-        this.kmsKey = Output.empty();
+        this.kmsKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }        public RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs(kmsKey);

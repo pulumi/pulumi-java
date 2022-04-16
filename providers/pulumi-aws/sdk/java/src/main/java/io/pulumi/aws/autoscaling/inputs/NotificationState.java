@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="groupNames")
       private final @Nullable Output<List<String>> groupNames;
 
-    public Output<List<String>> getGroupNames() {
-        return this.groupNames == null ? Output.empty() : this.groupNames;
+    public Output<List<String>> groupNames() {
+        return this.groupNames == null ? Codegen.empty() : this.groupNames;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="notifications")
       private final @Nullable Output<List<String>> notifications;
 
-    public Output<List<String>> getNotifications() {
-        return this.notifications == null ? Output.empty() : this.notifications;
+    public Output<List<String>> notifications() {
+        return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+    public Output<String> topicArn() {
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public NotificationState(
@@ -59,9 +60,9 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotificationState() {
-        this.groupNames = Output.empty();
-        this.notifications = Output.empty();
-        this.topicArn = Output.empty();
+        this.groupNames = Codegen.empty();
+        this.notifications = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupNames(@Nullable List<String> groupNames) {
-            this.groupNames = Output.ofNullable(groupNames);
+            this.groupNames = Codegen.ofNullable(groupNames);
             return this;
         }
         public Builder groupNames(String... groupNames) {
@@ -104,7 +105,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notifications(@Nullable List<String> notifications) {
-            this.notifications = Output.ofNullable(notifications);
+            this.notifications = Codegen.ofNullable(notifications);
             return this;
         }
         public Builder notifications(String... notifications) {
@@ -115,7 +116,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public NotificationState build() {
             return new NotificationState(groupNames, notifications, topicArn);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="characterEncoding")
       private final @Nullable Output<String> characterEncoding;
 
-    public Output<String> getCharacterEncoding() {
-        return this.characterEncoding == null ? Output.empty() : this.characterEncoding;
+    public Output<String> characterEncoding() {
+        return this.characterEncoding == null ? Codegen.empty() : this.characterEncoding;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="characterSet", required=true)
       private final Output<Either<String,EdifactCharacterSet>> characterSet;
 
-    public Output<Either<String,EdifactCharacterSet>> getCharacterSet() {
+    public Output<Either<String,EdifactCharacterSet>> characterSet() {
         return this.characterSet;
     }
 
@@ -52,7 +53,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
 
-    public Output<Integer> getComponentSeparator() {
+    public Output<Integer> componentSeparator() {
         return this.componentSeparator;
     }
 
@@ -63,7 +64,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
 
-    public Output<Integer> getDataElementSeparator() {
+    public Output<Integer> dataElementSeparator() {
         return this.dataElementSeparator;
     }
 
@@ -74,7 +75,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="decimalPointIndicator", required=true)
       private final Output<EdifactDecimalIndicator> decimalPointIndicator;
 
-    public Output<EdifactDecimalIndicator> getDecimalPointIndicator() {
+    public Output<EdifactDecimalIndicator> decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
 
@@ -85,7 +86,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="protocolVersion", required=true)
       private final Output<Integer> protocolVersion;
 
-    public Output<Integer> getProtocolVersion() {
+    public Output<Integer> protocolVersion() {
         return this.protocolVersion;
     }
 
@@ -96,7 +97,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="releaseIndicator", required=true)
       private final Output<Integer> releaseIndicator;
 
-    public Output<Integer> getReleaseIndicator() {
+    public Output<Integer> releaseIndicator() {
         return this.releaseIndicator;
     }
 
@@ -107,7 +108,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="repetitionSeparator", required=true)
       private final Output<Integer> repetitionSeparator;
 
-    public Output<Integer> getRepetitionSeparator() {
+    public Output<Integer> repetitionSeparator() {
         return this.repetitionSeparator;
     }
 
@@ -118,7 +119,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
 
-    public Output<Integer> getSegmentTerminator() {
+    public Output<Integer> segmentTerminator() {
         return this.segmentTerminator;
     }
 
@@ -129,7 +130,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
-    public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
+    public Output<SegmentTerminatorSuffix> segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
 
@@ -140,8 +141,8 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     @Import(name="serviceCodeListDirectoryVersion")
       private final @Nullable Output<String> serviceCodeListDirectoryVersion;
 
-    public Output<String> getServiceCodeListDirectoryVersion() {
-        return this.serviceCodeListDirectoryVersion == null ? Output.empty() : this.serviceCodeListDirectoryVersion;
+    public Output<String> serviceCodeListDirectoryVersion() {
+        return this.serviceCodeListDirectoryVersion == null ? Codegen.empty() : this.serviceCodeListDirectoryVersion;
     }
 
     public EdifactFramingSettingsArgs(
@@ -170,17 +171,17 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private EdifactFramingSettingsArgs() {
-        this.characterEncoding = Output.empty();
-        this.characterSet = Output.empty();
-        this.componentSeparator = Output.empty();
-        this.dataElementSeparator = Output.empty();
-        this.decimalPointIndicator = Output.empty();
-        this.protocolVersion = Output.empty();
-        this.releaseIndicator = Output.empty();
-        this.repetitionSeparator = Output.empty();
-        this.segmentTerminator = Output.empty();
-        this.segmentTerminatorSuffix = Output.empty();
-        this.serviceCodeListDirectoryVersion = Output.empty();
+        this.characterEncoding = Codegen.empty();
+        this.characterSet = Codegen.empty();
+        this.componentSeparator = Codegen.empty();
+        this.dataElementSeparator = Codegen.empty();
+        this.decimalPointIndicator = Codegen.empty();
+        this.protocolVersion = Codegen.empty();
+        this.releaseIndicator = Codegen.empty();
+        this.repetitionSeparator = Codegen.empty();
+        this.segmentTerminator = Codegen.empty();
+        this.segmentTerminatorSuffix = Codegen.empty();
+        this.serviceCodeListDirectoryVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -228,7 +229,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder characterEncoding(@Nullable String characterEncoding) {
-            this.characterEncoding = Output.ofNullable(characterEncoding);
+            this.characterEncoding = Codegen.ofNullable(characterEncoding);
             return this;
         }
         public Builder characterSet(Output<Either<String,EdifactCharacterSet>> characterSet) {
@@ -308,7 +309,7 @@ public final class EdifactFramingSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder serviceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
-            this.serviceCodeListDirectoryVersion = Output.ofNullable(serviceCodeListDirectoryVersion);
+            this.serviceCodeListDirectoryVersion = Codegen.ofNullable(serviceCodeListDirectoryVersion);
             return this;
         }        public EdifactFramingSettingsArgs build() {
             return new EdifactFramingSettingsArgs(characterEncoding, characterSet, componentSeparator, dataElementSeparator, decimalPointIndicator, protocolVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, serviceCodeListDirectoryVersion);

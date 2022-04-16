@@ -9,6 +9,7 @@ import io.pulumi.aws.backup.inputs.VaultState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return The ARN of the vault.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return The server-side encryption key that is used to protect your backups.
      * 
      */
-    public Output<String> getKmsKeyArn() {
+    public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
     /**
@@ -69,7 +70,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Name of the backup vault to create.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return The number of recovery points that are stored in a backup vault.
      * 
      */
-    public Output<Integer> getRecoveryPoints() {
+    public Output<Integer> recoveryPoints() {
         return this.recoveryPoints;
     }
     /**
@@ -97,7 +98,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the resources that you create. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -111,7 +112,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -137,7 +138,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Vault(String name, @Nullable VaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:backup/vault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:backup/vault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Vault(String name, Output<String> id, @Nullable VaultState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

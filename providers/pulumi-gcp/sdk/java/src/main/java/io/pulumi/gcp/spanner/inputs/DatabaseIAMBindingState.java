@@ -5,6 +5,7 @@ package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,8 +20,8 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="condition")
       private final @Nullable Output<DatabaseIAMBindingConditionGetArgs> condition;
 
-    public Output<DatabaseIAMBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<DatabaseIAMBindingConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,8 +31,8 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="database")
       private final @Nullable Output<String> database;
 
-    public Output<String> getDatabase() {
-        return this.database == null ? Output.empty() : this.database;
+    public Output<String> database() {
+        return this.database == null ? Codegen.empty() : this.database;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -52,15 +53,15 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="instance")
       private final @Nullable Output<String> instance;
 
-    public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+    public Output<String> instance() {
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+    public Output<List<String>> members() {
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public DatabaseIAMBindingState(
@@ -106,13 +107,13 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
     }
 
     private DatabaseIAMBindingState() {
-        this.condition = Output.empty();
-        this.database = Output.empty();
-        this.etag = Output.empty();
-        this.instance = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.database = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder condition(@Nullable DatabaseIAMBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder database(@Nullable Output<String> database) {
@@ -160,7 +161,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder database(@Nullable String database) {
-            this.database = Output.ofNullable(database);
+            this.database = Codegen.ofNullable(database);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -168,7 +169,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -176,7 +177,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -184,7 +185,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -195,7 +196,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -203,7 +204,7 @@ public final class DatabaseIAMBindingState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public DatabaseIAMBindingState build() {
             return new DatabaseIAMBindingState(condition, database, etag, instance, members, project, role);

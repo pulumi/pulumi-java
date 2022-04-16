@@ -6,6 +6,7 @@ package io.pulumi.googlenative.baremetalsolution_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.baremetalsolution_v2.SnapshotArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The creation time of the storage volume snapshot.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -43,7 +44,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The description of the storage volume snapshot.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -57,7 +58,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The name of the storage volume snapshot.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The size of the storage volume snapshot, in bytes.
      * 
      */
-    public Output<String> getSizeBytes() {
+    public Output<String> sizeBytes() {
         return this.sizeBytes;
     }
     /**
@@ -85,7 +86,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @return The storage volume this snapshot belongs to.
      * 
      */
-    public Output<String> getStorageVolume() {
+    public Output<String> storageVolume() {
         return this.storageVolume;
     }
 
@@ -111,7 +112,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Snapshot(String name, SnapshotArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:baremetalsolution/v2:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:baremetalsolution/v2:Snapshot", name, args == null ? SnapshotArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Snapshot(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

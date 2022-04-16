@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
     @Import(name="filter")
       private final @Nullable Output<String> filter;
 
-    public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+    public Output<String> filter() {
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
     @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
-    public Output<String> getPubsubTopic() {
+    public Output<String> pubsubTopic() {
         return this.pubsubTopic;
     }
 
@@ -57,8 +58,8 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
     }
 
     private Hl7StoreNotificationConfigsGetArgs() {
-        this.filter = Output.empty();
-        this.pubsubTopic = Output.empty();
+        this.filter = Codegen.empty();
+        this.pubsubTopic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder pubsubTopic(Output<String> pubsubTopic) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
     @Import(name="lastProbeTime")
       private final @Nullable Output<String> lastProbeTime;
 
-    public Output<String> getLastProbeTime() {
-        return this.lastProbeTime == null ? Output.empty() : this.lastProbeTime;
+    public Output<String> lastProbeTime() {
+        return this.lastProbeTime == null ? Codegen.empty() : this.lastProbeTime;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
     @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
-    public Output<String> getLastTransitionTime() {
-        return this.lastTransitionTime == null ? Output.empty() : this.lastTransitionTime;
+    public Output<String> lastTransitionTime() {
+        return this.lastTransitionTime == null ? Codegen.empty() : this.lastTransitionTime;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -58,14 +59,14 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     @Import(name="status", required=true)
       private final Output<String> status;
 
-    public Output<String> getStatus() {
+    public Output<String> status() {
         return this.status;
     }
 
@@ -78,7 +79,7 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -98,12 +99,12 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
     }
 
     private PersistentVolumeClaimConditionArgs() {
-        this.lastProbeTime = Output.empty();
-        this.lastTransitionTime = Output.empty();
-        this.message = Output.empty();
-        this.reason = Output.empty();
-        this.status = Output.empty();
-        this.type = Output.empty();
+        this.lastProbeTime = Codegen.empty();
+        this.lastTransitionTime = Codegen.empty();
+        this.message = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
             return this;
         }
         public Builder lastProbeTime(@Nullable String lastProbeTime) {
-            this.lastProbeTime = Output.ofNullable(lastProbeTime);
+            this.lastProbeTime = Codegen.ofNullable(lastProbeTime);
             return this;
         }
         public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
@@ -149,7 +150,7 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
             return this;
         }
         public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
-            this.lastTransitionTime = Output.ofNullable(lastTransitionTime);
+            this.lastTransitionTime = Codegen.ofNullable(lastTransitionTime);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -157,7 +158,7 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -165,7 +166,7 @@ public final class PersistentVolumeClaimConditionArgs extends io.pulumi.resource
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }
         public Builder status(Output<String> status) {

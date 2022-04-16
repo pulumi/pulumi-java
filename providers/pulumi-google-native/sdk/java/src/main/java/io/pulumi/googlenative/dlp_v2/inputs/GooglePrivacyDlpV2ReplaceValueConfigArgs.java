@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.re
     @Import(name="newValue")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> getNewValue() {
-        return this.newValue == null ? Output.empty() : this.newValue;
+    public Output<GooglePrivacyDlpV2ValueArgs> newValue() {
+        return this.newValue == null ? Codegen.empty() : this.newValue;
     }
 
     public GooglePrivacyDlpV2ReplaceValueConfigArgs(@Nullable Output<GooglePrivacyDlpV2ValueArgs> newValue) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.re
     }
 
     private GooglePrivacyDlpV2ReplaceValueConfigArgs() {
-        this.newValue = Output.empty();
+        this.newValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder newValue(@Nullable GooglePrivacyDlpV2ValueArgs newValue) {
-            this.newValue = Output.ofNullable(newValue);
+            this.newValue = Codegen.ofNullable(newValue);
             return this;
         }        public GooglePrivacyDlpV2ReplaceValueConfigArgs build() {
             return new GooglePrivacyDlpV2ReplaceValueConfigArgs(newValue);

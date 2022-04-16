@@ -38,22 +38,22 @@ public final class DataSourceServiceNowConfiguration {
         this.serviceNowBuildVersion = serviceNowBuildVersion;
     }
 
-    public Optional<DataSourceServiceNowAuthenticationType> getAuthenticationType() {
+    public Optional<DataSourceServiceNowAuthenticationType> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
-    public String getHostUrl() {
+    public String hostUrl() {
         return this.hostUrl;
     }
-    public Optional<DataSourceServiceNowKnowledgeArticleConfiguration> getKnowledgeArticleConfiguration() {
+    public Optional<DataSourceServiceNowKnowledgeArticleConfiguration> knowledgeArticleConfiguration() {
         return Optional.ofNullable(this.knowledgeArticleConfiguration);
     }
-    public String getSecretArn() {
+    public String secretArn() {
         return this.secretArn;
     }
-    public Optional<DataSourceServiceNowServiceCatalogConfiguration> getServiceCatalogConfiguration() {
+    public Optional<DataSourceServiceNowServiceCatalogConfiguration> serviceCatalogConfiguration() {
         return Optional.ofNullable(this.serviceCatalogConfiguration);
     }
-    public DataSourceServiceNowBuildVersionType getServiceNowBuildVersion() {
+    public DataSourceServiceNowBuildVersionType serviceNowBuildVersion() {
         return this.serviceNowBuildVersion;
     }
 

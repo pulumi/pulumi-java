@@ -37,7 +37,7 @@ public final class BucketWebsite {
      * missing objects are treated as potential directories.
      * 
     */
-    public Optional<String> getMainPageSuffix() {
+    public Optional<String> mainPageSuffix() {
         return Optional.ofNullable(this.mainPageSuffix);
     }
     /**
@@ -45,7 +45,7 @@ public final class BucketWebsite {
      * resource is not found.
      * 
     */
-    public Optional<String> getNotFoundPage() {
+    public Optional<String> notFoundPage() {
         return Optional.ofNullable(this.notFoundPage);
     }
 

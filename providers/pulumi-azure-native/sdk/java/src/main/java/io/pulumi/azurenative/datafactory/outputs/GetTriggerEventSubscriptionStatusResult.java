@@ -32,14 +32,14 @@ public final class GetTriggerEventSubscriptionStatusResult {
      * Event Subscription Status.
      * 
     */
-    public String getStatus() {
+    public String status() {
         return this.status;
     }
     /**
      * Trigger name.
      * 
     */
-    public String getTriggerName() {
+    public String triggerName() {
         return this.triggerName;
     }
 

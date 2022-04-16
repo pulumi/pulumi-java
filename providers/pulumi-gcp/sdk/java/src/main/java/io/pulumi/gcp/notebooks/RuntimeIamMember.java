@@ -6,6 +6,7 @@ package io.pulumi.gcp.notebooks;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.RuntimeIamMemberArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeIamMemberState;
@@ -60,7 +61,7 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="condition", type=RuntimeIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ RuntimeIamMemberCondition> condition;
 
-    public Output</* @Nullable */ RuntimeIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ RuntimeIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -74,7 +75,7 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -88,13 +89,13 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
      * @return A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -110,7 +111,7 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -128,7 +129,7 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -142,7 +143,7 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
      * @return Used to find the parent resource to bind the IAM policy to
      * 
      */
-    public Output<String> getRuntimeName() {
+    public Output<String> runtimeName() {
         return this.runtimeName;
     }
 
@@ -168,7 +169,7 @@ public class RuntimeIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuntimeIamMember(String name, RuntimeIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:notebooks/runtimeIamMember:RuntimeIamMember", name, args == null ? RuntimeIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:notebooks/runtimeIamMember:RuntimeIamMember", name, args == null ? RuntimeIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RuntimeIamMember(String name, Output<String> id, @Nullable RuntimeIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

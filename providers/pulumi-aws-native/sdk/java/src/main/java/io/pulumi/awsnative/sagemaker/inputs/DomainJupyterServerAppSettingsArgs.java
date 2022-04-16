@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainResourceSpecArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,8 +22,8 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
     @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
-    public Output<DomainResourceSpecArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
+    public Output<DomainResourceSpecArgs> defaultResourceSpec() {
+        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 
     public DomainJupyterServerAppSettingsArgs(@Nullable Output<DomainResourceSpecArgs> defaultResourceSpec) {
@@ -30,7 +31,7 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
     }
 
     private DomainJupyterServerAppSettingsArgs() {
-        this.defaultResourceSpec = Output.empty();
+        this.defaultResourceSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DomainJupyterServerAppSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder defaultResourceSpec(@Nullable DomainResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
             return this;
         }        public DomainJupyterServerAppSettingsArgs build() {
             return new DomainJupyterServerAppSettingsArgs(defaultResourceSpec);

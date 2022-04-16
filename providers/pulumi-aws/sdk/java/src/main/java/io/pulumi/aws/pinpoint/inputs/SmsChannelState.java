@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,8 +24,8 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
-    public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+    public Output<String> applicationId() {
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="promotionalMessagesPerSecond")
       private final @Nullable Output<Integer> promotionalMessagesPerSecond;
 
-    public Output<Integer> getPromotionalMessagesPerSecond() {
-        return this.promotionalMessagesPerSecond == null ? Output.empty() : this.promotionalMessagesPerSecond;
+    public Output<Integer> promotionalMessagesPerSecond() {
+        return this.promotionalMessagesPerSecond == null ? Codegen.empty() : this.promotionalMessagesPerSecond;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="senderId")
       private final @Nullable Output<String> senderId;
 
-    public Output<String> getSenderId() {
-        return this.senderId == null ? Output.empty() : this.senderId;
+    public Output<String> senderId() {
+        return this.senderId == null ? Codegen.empty() : this.senderId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="shortCode")
       private final @Nullable Output<String> shortCode;
 
-    public Output<String> getShortCode() {
-        return this.shortCode == null ? Output.empty() : this.shortCode;
+    public Output<String> shortCode() {
+        return this.shortCode == null ? Codegen.empty() : this.shortCode;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transactionalMessagesPerSecond")
       private final @Nullable Output<Integer> transactionalMessagesPerSecond;
 
-    public Output<Integer> getTransactionalMessagesPerSecond() {
-        return this.transactionalMessagesPerSecond == null ? Output.empty() : this.transactionalMessagesPerSecond;
+    public Output<Integer> transactionalMessagesPerSecond() {
+        return this.transactionalMessagesPerSecond == null ? Codegen.empty() : this.transactionalMessagesPerSecond;
     }
 
     public SmsChannelState(
@@ -98,12 +99,12 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmsChannelState() {
-        this.applicationId = Output.empty();
-        this.enabled = Output.empty();
-        this.promotionalMessagesPerSecond = Output.empty();
-        this.senderId = Output.empty();
-        this.shortCode = Output.empty();
-        this.transactionalMessagesPerSecond = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.promotionalMessagesPerSecond = Codegen.empty();
+        this.senderId = Codegen.empty();
+        this.shortCode = Codegen.empty();
+        this.transactionalMessagesPerSecond = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -149,7 +150,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder promotionalMessagesPerSecond(@Nullable Output<Integer> promotionalMessagesPerSecond) {
@@ -157,7 +158,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder promotionalMessagesPerSecond(@Nullable Integer promotionalMessagesPerSecond) {
-            this.promotionalMessagesPerSecond = Output.ofNullable(promotionalMessagesPerSecond);
+            this.promotionalMessagesPerSecond = Codegen.ofNullable(promotionalMessagesPerSecond);
             return this;
         }
         public Builder senderId(@Nullable Output<String> senderId) {
@@ -165,7 +166,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder senderId(@Nullable String senderId) {
-            this.senderId = Output.ofNullable(senderId);
+            this.senderId = Codegen.ofNullable(senderId);
             return this;
         }
         public Builder shortCode(@Nullable Output<String> shortCode) {
@@ -173,7 +174,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shortCode(@Nullable String shortCode) {
-            this.shortCode = Output.ofNullable(shortCode);
+            this.shortCode = Codegen.ofNullable(shortCode);
             return this;
         }
         public Builder transactionalMessagesPerSecond(@Nullable Output<Integer> transactionalMessagesPerSecond) {
@@ -181,7 +182,7 @@ public final class SmsChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transactionalMessagesPerSecond(@Nullable Integer transactionalMessagesPerSecond) {
-            this.transactionalMessagesPerSecond = Output.ofNullable(transactionalMessagesPerSecond);
+            this.transactionalMessagesPerSecond = Codegen.ofNullable(transactionalMessagesPerSecond);
             return this;
         }        public SmsChannelState build() {
             return new SmsChannelState(applicationId, enabled, promotionalMessagesPerSecond, senderId, shortCode, transactionalMessagesPerSecond);

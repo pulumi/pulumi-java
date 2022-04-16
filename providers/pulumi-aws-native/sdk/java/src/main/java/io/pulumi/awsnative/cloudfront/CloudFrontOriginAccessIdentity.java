@@ -9,6 +9,7 @@ import io.pulumi.awsnative.cloudfront.outputs.CloudFrontOriginAccessIdentityConf
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -23,13 +24,13 @@ public class CloudFrontOriginAccessIdentity extends io.pulumi.resources.CustomRe
     @Export(name="cloudFrontOriginAccessIdentityConfig", type=CloudFrontOriginAccessIdentityConfig.class, parameters={})
     private Output<CloudFrontOriginAccessIdentityConfig> cloudFrontOriginAccessIdentityConfig;
 
-    public Output<CloudFrontOriginAccessIdentityConfig> getCloudFrontOriginAccessIdentityConfig() {
+    public Output<CloudFrontOriginAccessIdentityConfig> cloudFrontOriginAccessIdentityConfig() {
         return this.cloudFrontOriginAccessIdentityConfig;
     }
     @Export(name="s3CanonicalUserId", type=String.class, parameters={})
     private Output<String> s3CanonicalUserId;
 
-    public Output<String> getS3CanonicalUserId() {
+    public Output<String> s3CanonicalUserId() {
         return this.s3CanonicalUserId;
     }
 
@@ -55,7 +56,7 @@ public class CloudFrontOriginAccessIdentity extends io.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudFrontOriginAccessIdentity(String name, CloudFrontOriginAccessIdentityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudfront:CloudFrontOriginAccessIdentity", name, args == null ? CloudFrontOriginAccessIdentityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudfront:CloudFrontOriginAccessIdentity", name, args == null ? CloudFrontOriginAccessIdentityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CloudFrontOriginAccessIdentity(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

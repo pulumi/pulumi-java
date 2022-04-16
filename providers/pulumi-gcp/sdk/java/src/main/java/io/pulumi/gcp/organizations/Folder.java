@@ -6,6 +6,7 @@ package io.pulumi.gcp.organizations;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.FolderArgs;
 import io.pulumi.gcp.organizations.inputs.FolderState;
@@ -57,7 +58,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -73,7 +74,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -87,7 +88,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * @return The folder id from the name "folders/{folder_id}"
      * 
      */
-    public Output<String> getFolderId() {
+    public Output<String> folderId() {
         return this.folderId;
     }
     /**
@@ -101,7 +102,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * @return The lifecycle state of the folder such as `ACTIVE` or `DELETE_REQUESTED`.
      * 
      */
-    public Output<String> getLifecycleState() {
+    public Output<String> lifecycleState() {
         return this.lifecycleState;
     }
     /**
@@ -115,7 +116,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * @return The resource name of the Folder. Its format is folders/{folder_id}.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -131,7 +132,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
      * 
      */
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -157,7 +158,7 @@ public class Folder extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Folder(String name, FolderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:organizations/folder:Folder", name, args == null ? FolderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:organizations/folder:Folder", name, args == null ? FolderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Folder(String name, Output<String> id, @Nullable FolderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

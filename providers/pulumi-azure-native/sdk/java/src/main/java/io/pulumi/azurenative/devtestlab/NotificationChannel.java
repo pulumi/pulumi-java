@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The creation date of the notification channel.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -57,7 +58,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return Description of notification.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The email recipient to send notifications to (can be a list of semi-colon separated email addresses).
      * 
      */
-    public Output</* @Nullable */ String> getEmailRecipient() {
+    public Output</* @Nullable */ String> emailRecipient() {
         return this.emailRecipient;
     }
     /**
@@ -85,7 +86,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The list of event for which this notification is enabled.
      * 
      */
-    public Output</* @Nullable */ List<EventResponse>> getEvents() {
+    public Output</* @Nullable */ List<EventResponse>> events() {
         return this.events;
     }
     /**
@@ -99,7 +100,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -113,7 +114,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -127,7 +128,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The locale to use when sending a notification (fallback for unsupported languages is EN).
      * 
      */
-    public Output</* @Nullable */ String> getNotificationLocale() {
+    public Output</* @Nullable */ String> notificationLocale() {
         return this.notificationLocale;
     }
     /**
@@ -141,7 +142,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The provisioning status of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -155,7 +156,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -169,7 +170,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -183,7 +184,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The unique immutable identifier of a resource (Guid).
      * 
      */
-    public Output<String> getUniqueIdentifier() {
+    public Output<String> uniqueIdentifier() {
         return this.uniqueIdentifier;
     }
     /**
@@ -197,7 +198,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The webhook URL to send notifications to.
      * 
      */
-    public Output</* @Nullable */ String> getWebHookUrl() {
+    public Output</* @Nullable */ String> webHookUrl() {
         return this.webHookUrl;
     }
 
@@ -223,7 +224,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationChannel(String name, NotificationChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:devtestlab:NotificationChannel", name, args == null ? NotificationChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:devtestlab:NotificationChannel", name, args == null ? NotificationChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationChannel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

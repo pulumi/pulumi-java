@@ -5,6 +5,7 @@ package io.pulumi.aws.lakeformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastModified")
       private final @Nullable Output<String> lastModified;
 
-    public Output<String> getLastModified() {
-        return this.lastModified == null ? Output.empty() : this.lastModified;
+    public Output<String> lastModified() {
+        return this.lastModified == null ? Codegen.empty() : this.lastModified;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+    public Output<String> roleArn() {
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public ResourceState(
@@ -57,9 +58,9 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceState() {
-        this.arn = Output.empty();
-        this.lastModified = Output.empty();
-        this.roleArn = Output.empty();
+        this.arn = Codegen.empty();
+        this.lastModified = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder lastModified(@Nullable Output<String> lastModified) {
@@ -99,7 +100,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastModified(@Nullable String lastModified) {
-            this.lastModified = Output.ofNullable(lastModified);
+            this.lastModified = Codegen.ofNullable(lastModified);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -107,7 +108,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public ResourceState build() {
             return new ResourceState(arn, lastModified, roleArn);

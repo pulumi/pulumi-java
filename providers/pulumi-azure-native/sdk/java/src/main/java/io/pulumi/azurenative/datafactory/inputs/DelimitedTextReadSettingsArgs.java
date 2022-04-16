@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     @Import(name="compressionProperties")
       private final @Nullable Output<Object> compressionProperties;
 
-    public Output<Object> getCompressionProperties() {
-        return this.compressionProperties == null ? Output.empty() : this.compressionProperties;
+    public Output<Object> compressionProperties() {
+        return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     @Import(name="skipLineCount")
       private final @Nullable Output<Object> skipLineCount;
 
-    public Output<Object> getSkipLineCount() {
-        return this.skipLineCount == null ? Output.empty() : this.skipLineCount;
+    public Output<Object> skipLineCount() {
+        return this.skipLineCount == null ? Codegen.empty() : this.skipLineCount;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -66,9 +67,9 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     }
 
     private DelimitedTextReadSettingsArgs() {
-        this.compressionProperties = Output.empty();
-        this.skipLineCount = Output.empty();
-        this.type = Output.empty();
+        this.compressionProperties = Codegen.empty();
+        this.skipLineCount = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Output.ofNullable(compressionProperties);
+            this.compressionProperties = Codegen.ofNullable(compressionProperties);
             return this;
         }
         public Builder skipLineCount(@Nullable Output<Object> skipLineCount) {
@@ -108,7 +109,7 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder skipLineCount(@Nullable Object skipLineCount) {
-            this.skipLineCount = Output.ofNullable(skipLineCount);
+            this.skipLineCount = Codegen.ofNullable(skipLineCount);
             return this;
         }
         public Builder type(Output<String> type) {

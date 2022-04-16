@@ -155,126 +155,126 @@ public final class GetOccurrenceResult {
      * Describes an attestation of an artifact.
      * 
     */
-    public AttestationOccurrenceResponse getAttestation() {
+    public AttestationOccurrenceResponse attestation() {
         return this.attestation;
     }
     /**
      * Describes a verifiable build.
      * 
     */
-    public BuildOccurrenceResponse getBuild() {
+    public BuildOccurrenceResponse build() {
         return this.build;
     }
     /**
      * Describes a compliance violation on a linked resource.
      * 
     */
-    public ComplianceOccurrenceResponse getCompliance() {
+    public ComplianceOccurrenceResponse compliance() {
         return this.compliance;
     }
     /**
      * The time this occurrence was created.
      * 
     */
-    public String getCreateTime() {
+    public String createTime() {
         return this.createTime;
     }
     /**
      * Describes the deployment of an artifact on a runtime.
      * 
     */
-    public DeploymentOccurrenceResponse getDeployment() {
+    public DeploymentOccurrenceResponse deployment() {
         return this.deployment;
     }
     /**
      * Describes when a resource was discovered.
      * 
     */
-    public DiscoveryOccurrenceResponse getDiscovery() {
+    public DiscoveryOccurrenceResponse discovery() {
         return this.discovery;
     }
     /**
      * Describes an attestation of an artifact using dsse.
      * 
     */
-    public DSSEAttestationOccurrenceResponse getDsseAttestation() {
+    public DSSEAttestationOccurrenceResponse dsseAttestation() {
         return this.dsseAttestation;
     }
     /**
      * https://github.com/secure-systems-lab/dsse
      * 
     */
-    public EnvelopeResponse getEnvelope() {
+    public EnvelopeResponse envelope() {
         return this.envelope;
     }
     /**
      * Describes how this resource derives from the basis in the associated note.
      * 
     */
-    public ImageOccurrenceResponse getImage() {
+    public ImageOccurrenceResponse image() {
         return this.image;
     }
     /**
      * This explicitly denotes which of the occurrence details are specified. This field can be used as a filter in list requests.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * The name of the occurrence in the form of `projects/[PROJECT_ID]/occurrences/[OCCURRENCE_ID]`.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
     */
-    public String getNoteName() {
+    public String noteName() {
         return this.noteName;
     }
     /**
      * Describes the installation of a package on the linked resource.
      * 
     */
-    public PackageOccurrenceResponse getPackage_() {
+    public PackageOccurrenceResponse package_() {
         return this.package_;
     }
     /**
      * A description of actions that can be taken to remedy the note.
      * 
     */
-    public String getRemediation() {
+    public String remediation() {
         return this.remediation;
     }
     /**
      * Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
      * 
     */
-    public String getResourceUri() {
+    public String resourceUri() {
         return this.resourceUri;
     }
     /**
      * The time this occurrence was last updated.
      * 
     */
-    public String getUpdateTime() {
+    public String updateTime() {
         return this.updateTime;
     }
     /**
      * Describes an available package upgrade on the linked resource.
      * 
     */
-    public UpgradeOccurrenceResponse getUpgrade() {
+    public UpgradeOccurrenceResponse upgrade() {
         return this.upgrade;
     }
     /**
      * Describes a security vulnerability.
      * 
     */
-    public VulnerabilityOccurrenceResponse getVulnerability() {
+    public VulnerabilityOccurrenceResponse vulnerability() {
         return this.vulnerability;
     }
 

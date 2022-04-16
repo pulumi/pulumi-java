@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class VirtualMachineImageArgs extends io.pulumi.resources.ResourceA
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -33,7 +34,7 @@ public final class VirtualMachineImageArgs extends io.pulumi.resources.ResourceA
     }
 
     private VirtualMachineImageArgs() {
-        this.id = Output.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {

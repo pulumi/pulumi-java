@@ -5,6 +5,7 @@ package io.pulumi.aws.cur.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="additionalArtifacts")
       private final @Nullable Output<List<String>> additionalArtifacts;
 
-    public Output<List<String>> getAdditionalArtifacts() {
-        return this.additionalArtifacts == null ? Output.empty() : this.additionalArtifacts;
+    public Output<List<String>> additionalArtifacts() {
+        return this.additionalArtifacts == null ? Codegen.empty() : this.additionalArtifacts;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="additionalSchemaElements")
       private final @Nullable Output<List<String>> additionalSchemaElements;
 
-    public Output<List<String>> getAdditionalSchemaElements() {
-        return this.additionalSchemaElements == null ? Output.empty() : this.additionalSchemaElements;
+    public Output<List<String>> additionalSchemaElements() {
+        return this.additionalSchemaElements == null ? Codegen.empty() : this.additionalSchemaElements;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="compression")
       private final @Nullable Output<String> compression;
 
-    public Output<String> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+    public Output<String> compression() {
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<String> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="refreshClosedReports")
       private final @Nullable Output<Boolean> refreshClosedReports;
 
-    public Output<Boolean> getRefreshClosedReports() {
-        return this.refreshClosedReports == null ? Output.empty() : this.refreshClosedReports;
+    public Output<Boolean> refreshClosedReports() {
+        return this.refreshClosedReports == null ? Codegen.empty() : this.refreshClosedReports;
     }
 
     /**
@@ -89,8 +90,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="reportName")
       private final @Nullable Output<String> reportName;
 
-    public Output<String> getReportName() {
-        return this.reportName == null ? Output.empty() : this.reportName;
+    public Output<String> reportName() {
+        return this.reportName == null ? Codegen.empty() : this.reportName;
     }
 
     /**
@@ -100,8 +101,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="reportVersioning")
       private final @Nullable Output<String> reportVersioning;
 
-    public Output<String> getReportVersioning() {
-        return this.reportVersioning == null ? Output.empty() : this.reportVersioning;
+    public Output<String> reportVersioning() {
+        return this.reportVersioning == null ? Codegen.empty() : this.reportVersioning;
     }
 
     /**
@@ -111,8 +112,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
-    public Output<String> getS3Bucket() {
-        return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
+    public Output<String> s3Bucket() {
+        return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
     /**
@@ -122,8 +123,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="s3Prefix")
       private final @Nullable Output<String> s3Prefix;
 
-    public Output<String> getS3Prefix() {
-        return this.s3Prefix == null ? Output.empty() : this.s3Prefix;
+    public Output<String> s3Prefix() {
+        return this.s3Prefix == null ? Codegen.empty() : this.s3Prefix;
     }
 
     /**
@@ -133,8 +134,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="s3Region")
       private final @Nullable Output<String> s3Region;
 
-    public Output<String> getS3Region() {
-        return this.s3Region == null ? Output.empty() : this.s3Region;
+    public Output<String> s3Region() {
+        return this.s3Region == null ? Codegen.empty() : this.s3Region;
     }
 
     /**
@@ -144,8 +145,8 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     @Import(name="timeUnit")
       private final @Nullable Output<String> timeUnit;
 
-    public Output<String> getTimeUnit() {
-        return this.timeUnit == null ? Output.empty() : this.timeUnit;
+    public Output<String> timeUnit() {
+        return this.timeUnit == null ? Codegen.empty() : this.timeUnit;
     }
 
     public ReportDefinitionState(
@@ -176,18 +177,18 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     }
 
     private ReportDefinitionState() {
-        this.additionalArtifacts = Output.empty();
-        this.additionalSchemaElements = Output.empty();
-        this.arn = Output.empty();
-        this.compression = Output.empty();
-        this.format = Output.empty();
-        this.refreshClosedReports = Output.empty();
-        this.reportName = Output.empty();
-        this.reportVersioning = Output.empty();
-        this.s3Bucket = Output.empty();
-        this.s3Prefix = Output.empty();
-        this.s3Region = Output.empty();
-        this.timeUnit = Output.empty();
+        this.additionalArtifacts = Codegen.empty();
+        this.additionalSchemaElements = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.format = Codegen.empty();
+        this.refreshClosedReports = Codegen.empty();
+        this.reportName = Codegen.empty();
+        this.reportVersioning = Codegen.empty();
+        this.s3Bucket = Codegen.empty();
+        this.s3Prefix = Codegen.empty();
+        this.s3Region = Codegen.empty();
+        this.timeUnit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -237,7 +238,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder additionalArtifacts(@Nullable List<String> additionalArtifacts) {
-            this.additionalArtifacts = Output.ofNullable(additionalArtifacts);
+            this.additionalArtifacts = Codegen.ofNullable(additionalArtifacts);
             return this;
         }
         public Builder additionalArtifacts(String... additionalArtifacts) {
@@ -248,7 +249,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder additionalSchemaElements(@Nullable List<String> additionalSchemaElements) {
-            this.additionalSchemaElements = Output.ofNullable(additionalSchemaElements);
+            this.additionalSchemaElements = Codegen.ofNullable(additionalSchemaElements);
             return this;
         }
         public Builder additionalSchemaElements(String... additionalSchemaElements) {
@@ -259,7 +260,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder compression(@Nullable Output<String> compression) {
@@ -267,7 +268,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder compression(@Nullable String compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder format(@Nullable Output<String> format) {
@@ -275,7 +276,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder refreshClosedReports(@Nullable Output<Boolean> refreshClosedReports) {
@@ -283,7 +284,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder refreshClosedReports(@Nullable Boolean refreshClosedReports) {
-            this.refreshClosedReports = Output.ofNullable(refreshClosedReports);
+            this.refreshClosedReports = Codegen.ofNullable(refreshClosedReports);
             return this;
         }
         public Builder reportName(@Nullable Output<String> reportName) {
@@ -291,7 +292,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder reportName(@Nullable String reportName) {
-            this.reportName = Output.ofNullable(reportName);
+            this.reportName = Codegen.ofNullable(reportName);
             return this;
         }
         public Builder reportVersioning(@Nullable Output<String> reportVersioning) {
@@ -299,7 +300,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder reportVersioning(@Nullable String reportVersioning) {
-            this.reportVersioning = Output.ofNullable(reportVersioning);
+            this.reportVersioning = Codegen.ofNullable(reportVersioning);
             return this;
         }
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
@@ -307,7 +308,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Output.ofNullable(s3Bucket);
+            this.s3Bucket = Codegen.ofNullable(s3Bucket);
             return this;
         }
         public Builder s3Prefix(@Nullable Output<String> s3Prefix) {
@@ -315,7 +316,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder s3Prefix(@Nullable String s3Prefix) {
-            this.s3Prefix = Output.ofNullable(s3Prefix);
+            this.s3Prefix = Codegen.ofNullable(s3Prefix);
             return this;
         }
         public Builder s3Region(@Nullable Output<String> s3Region) {
@@ -323,7 +324,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder s3Region(@Nullable String s3Region) {
-            this.s3Region = Output.ofNullable(s3Region);
+            this.s3Region = Codegen.ofNullable(s3Region);
             return this;
         }
         public Builder timeUnit(@Nullable Output<String> timeUnit) {
@@ -331,7 +332,7 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder timeUnit(@Nullable String timeUnit) {
-            this.timeUnit = Output.ofNullable(timeUnit);
+            this.timeUnit = Codegen.ofNullable(timeUnit);
             return this;
         }        public ReportDefinitionState build() {
             return new ReportDefinitionState(additionalArtifacts, additionalSchemaElements, arn, compression, format, refreshClosedReports, reportName, reportVersioning, s3Bucket, s3Prefix, s3Region, timeUnit);

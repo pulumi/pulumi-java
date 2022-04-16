@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class GoogleCloudDatacatalogV1GcsFilesetSpecArgs extends io.pulumi.
     @Import(name="filePatterns", required=true)
       private final Output<List<String>> filePatterns;
 
-    public Output<List<String>> getFilePatterns() {
+    public Output<List<String>> filePatterns() {
         return this.filePatterns;
     }
 
@@ -34,7 +35,7 @@ public final class GoogleCloudDatacatalogV1GcsFilesetSpecArgs extends io.pulumi.
     }
 
     private GoogleCloudDatacatalogV1GcsFilesetSpecArgs() {
-        this.filePatterns = Output.empty();
+        this.filePatterns = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.billing;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.AccountIamBindingArgs;
 import io.pulumi.gcp.billing.inputs.AccountIamBindingState;
@@ -19,31 +20,31 @@ public class AccountIamBinding extends io.pulumi.resources.CustomResource {
     @Export(name="billingAccountId", type=String.class, parameters={})
     private Output<String> billingAccountId;
 
-    public Output<String> getBillingAccountId() {
+    public Output<String> billingAccountId() {
         return this.billingAccountId;
     }
     @Export(name="condition", type=AccountIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ AccountIamBindingCondition> condition;
 
-    public Output</* @Nullable */ AccountIamBindingCondition> getCondition() {
+    public Output</* @Nullable */ AccountIamBindingCondition> condition() {
         return this.condition;
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
     @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -69,7 +70,7 @@ public class AccountIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountIamBinding(String name, AccountIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/accountIamBinding:AccountIamBinding", name, args == null ? AccountIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:billing/accountIamBinding:AccountIamBinding", name, args == null ? AccountIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccountIamBinding(String name, Output<String> id, @Nullable AccountIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

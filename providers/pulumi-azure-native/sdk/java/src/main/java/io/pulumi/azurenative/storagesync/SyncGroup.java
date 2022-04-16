@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -55,7 +56,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Sync group status
      * 
      */
-    public Output<String> getSyncGroupStatus() {
+    public Output<String> syncGroupStatus() {
         return this.syncGroupStatus;
     }
     /**
@@ -69,7 +70,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -83,7 +84,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @return Unique Id
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 
@@ -109,7 +110,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SyncGroup(String name, SyncGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagesync:SyncGroup", name, args == null ? SyncGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storagesync:SyncGroup", name, args == null ? SyncGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SyncGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

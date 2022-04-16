@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.QueryDefinitionState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -40,7 +41,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return Specific log groups to use with the query.
      * 
      */
-    public Output</* @Nullable */ List<String>> getLogGroupNames() {
+    public Output</* @Nullable */ List<String>> logGroupNames() {
         return this.logGroupNames;
     }
     /**
@@ -54,7 +55,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return The name of the query.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -68,7 +69,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return The query definition ID.
      * 
      */
-    public Output<String> getQueryDefinitionId() {
+    public Output<String> queryDefinitionId() {
         return this.queryDefinitionId;
     }
     /**
@@ -82,7 +83,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @return The query to save. You can read more about CloudWatch Logs Query Syntax in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html).
      * 
      */
-    public Output<String> getQueryString() {
+    public Output<String> queryString() {
         return this.queryString;
     }
 
@@ -108,7 +109,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public QueryDefinition(String name, QueryDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/queryDefinition:QueryDefinition", name, args == null ? QueryDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/queryDefinition:QueryDefinition", name, args == null ? QueryDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private QueryDefinition(String name, Output<String> id, @Nullable QueryDefinitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

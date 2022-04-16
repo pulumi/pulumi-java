@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.enums.SparkChartViewSparkChartType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SparkChartViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minAlignmentPeriod")
       private final @Nullable Output<String> minAlignmentPeriod;
 
-    public Output<String> getMinAlignmentPeriod() {
-        return this.minAlignmentPeriod == null ? Output.empty() : this.minAlignmentPeriod;
+    public Output<String> minAlignmentPeriod() {
+        return this.minAlignmentPeriod == null ? Codegen.empty() : this.minAlignmentPeriod;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SparkChartViewArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sparkChartType", required=true)
       private final Output<SparkChartViewSparkChartType> sparkChartType;
 
-    public Output<SparkChartViewSparkChartType> getSparkChartType() {
+    public Output<SparkChartViewSparkChartType> sparkChartType() {
         return this.sparkChartType;
     }
 
@@ -49,8 +50,8 @@ public final class SparkChartViewArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SparkChartViewArgs() {
-        this.minAlignmentPeriod = Output.empty();
-        this.sparkChartType = Output.empty();
+        this.minAlignmentPeriod = Codegen.empty();
+        this.sparkChartType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SparkChartViewArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Output.ofNullable(minAlignmentPeriod);
+            this.minAlignmentPeriod = Codegen.ofNullable(minAlignmentPeriod);
             return this;
         }
         public Builder sparkChartType(Output<SparkChartViewSparkChartType> sparkChartType) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.ecs.inputs;
 import io.pulumi.aws.ecs.inputs.ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
-    public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+    public Output<String> kmsKeyId() {
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     @Import(name="logConfiguration")
       private final @Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration;
 
-    public Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> getLogConfiguration() {
-        return this.logConfiguration == null ? Output.empty() : this.logConfiguration;
+    public Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration() {
+        return this.logConfiguration == null ? Codegen.empty() : this.logConfiguration;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     @Import(name="logging")
       private final @Nullable Output<String> logging;
 
-    public Output<String> getLogging() {
-        return this.logging == null ? Output.empty() : this.logging;
+    public Output<String> logging() {
+        return this.logging == null ? Codegen.empty() : this.logging;
     }
 
     public ClusterConfigurationExecuteCommandConfigurationGetArgs(
@@ -58,9 +59,9 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
     }
 
     private ClusterConfigurationExecuteCommandConfigurationGetArgs() {
-        this.kmsKeyId = Output.empty();
-        this.logConfiguration = Output.empty();
-        this.logging = Output.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.logConfiguration = Codegen.empty();
+        this.logging = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder logConfiguration(@Nullable Output<ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs> logConfiguration) {
@@ -100,7 +101,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
             return this;
         }
         public Builder logConfiguration(@Nullable ClusterConfigurationExecuteCommandConfigurationLogConfigurationGetArgs logConfiguration) {
-            this.logConfiguration = Output.ofNullable(logConfiguration);
+            this.logConfiguration = Codegen.ofNullable(logConfiguration);
             return this;
         }
         public Builder logging(@Nullable Output<String> logging) {
@@ -108,7 +109,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationGetArgs extend
             return this;
         }
         public Builder logging(@Nullable String logging) {
-            this.logging = Output.ofNullable(logging);
+            this.logging = Codegen.ofNullable(logging);
             return this;
         }        public ClusterConfigurationExecuteCommandConfigurationGetArgs build() {
             return new ClusterConfigurationExecuteCommandConfigurationGetArgs(kmsKeyId, logConfiguration, logging);

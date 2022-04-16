@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     @Import(name="actions")
       private final @Nullable Output<List<DetectorModelActionArgs>> actions;
 
-    public Output<List<DetectorModelActionArgs>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+    public Output<List<DetectorModelActionArgs>> actions() {
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     @Import(name="condition", required=true)
       private final Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition;
     }
 
@@ -49,7 +50,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     @Import(name="eventName", required=true)
       private final Output<String> eventName;
 
-    public Output<String> getEventName() {
+    public Output<String> eventName() {
         return this.eventName;
     }
 
@@ -60,7 +61,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     @Import(name="nextState", required=true)
       private final Output<String> nextState;
 
-    public Output<String> getNextState() {
+    public Output<String> nextState() {
         return this.nextState;
     }
 
@@ -76,10 +77,10 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     }
 
     private DetectorModelTransitionEventArgs() {
-        this.actions = Output.empty();
-        this.condition = Output.empty();
-        this.eventName = Output.empty();
-        this.nextState = Output.empty();
+        this.actions = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.eventName = Codegen.empty();
+        this.nextState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
             return this;
         }
         public Builder actions(@Nullable List<DetectorModelActionArgs> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(DetectorModelActionArgs... actions) {

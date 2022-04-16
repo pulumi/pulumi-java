@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
     @Import(name="iam")
       private final @Nullable Output<Boolean> iam;
 
-    public Output<Boolean> getIam() {
-        return this.iam == null ? Output.empty() : this.iam;
+    public Output<Boolean> iam() {
+        return this.iam == null ? Codegen.empty() : this.iam;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
     @Import(name="scram")
       private final @Nullable Output<Boolean> scram;
 
-    public Output<Boolean> getScram() {
-        return this.scram == null ? Output.empty() : this.scram;
+    public Output<Boolean> scram() {
+        return this.scram == null ? Codegen.empty() : this.scram;
     }
 
     public ClusterClientAuthenticationSaslGetArgs(
@@ -44,8 +45,8 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
     }
 
     private ClusterClientAuthenticationSaslGetArgs() {
-        this.iam = Output.empty();
-        this.scram = Output.empty();
+        this.iam = Codegen.empty();
+        this.scram = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder iam(@Nullable Boolean iam) {
-            this.iam = Output.ofNullable(iam);
+            this.iam = Codegen.ofNullable(iam);
             return this;
         }
         public Builder scram(@Nullable Output<Boolean> scram) {
@@ -83,7 +84,7 @@ public final class ClusterClientAuthenticationSaslGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder scram(@Nullable Boolean scram) {
-            this.scram = Output.ofNullable(scram);
+            this.scram = Codegen.ofNullable(scram);
             return this;
         }        public ClusterClientAuthenticationSaslGetArgs build() {
             return new ClusterClientAuthenticationSaslGetArgs(iam, scram);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class GoogleCloudRetailV2alphaRatingArgs extends io.pulumi.resource
     @Import(name="averageRating")
       private final @Nullable Output<Double> averageRating;
 
-    public Output<Double> getAverageRating() {
-        return this.averageRating == null ? Output.empty() : this.averageRating;
+    public Output<Double> averageRating() {
+        return this.averageRating == null ? Codegen.empty() : this.averageRating;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GoogleCloudRetailV2alphaRatingArgs extends io.pulumi.resource
     @Import(name="ratingCount")
       private final @Nullable Output<Integer> ratingCount;
 
-    public Output<Integer> getRatingCount() {
-        return this.ratingCount == null ? Output.empty() : this.ratingCount;
+    public Output<Integer> ratingCount() {
+        return this.ratingCount == null ? Codegen.empty() : this.ratingCount;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GoogleCloudRetailV2alphaRatingArgs extends io.pulumi.resource
     @Import(name="ratingHistogram")
       private final @Nullable Output<List<Integer>> ratingHistogram;
 
-    public Output<List<Integer>> getRatingHistogram() {
-        return this.ratingHistogram == null ? Output.empty() : this.ratingHistogram;
+    public Output<List<Integer>> ratingHistogram() {
+        return this.ratingHistogram == null ? Codegen.empty() : this.ratingHistogram;
     }
 
     public GoogleCloudRetailV2alphaRatingArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudRetailV2alphaRatingArgs extends io.pulumi.resource
     }
 
     private GoogleCloudRetailV2alphaRatingArgs() {
-        this.averageRating = Output.empty();
-        this.ratingCount = Output.empty();
-        this.ratingHistogram = Output.empty();
+        this.averageRating = Codegen.empty();
+        this.ratingCount = Codegen.empty();
+        this.ratingHistogram = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GoogleCloudRetailV2alphaRatingArgs extends io.pulumi.resource
             return this;
         }
         public Builder averageRating(@Nullable Double averageRating) {
-            this.averageRating = Output.ofNullable(averageRating);
+            this.averageRating = Codegen.ofNullable(averageRating);
             return this;
         }
         public Builder ratingCount(@Nullable Output<Integer> ratingCount) {
@@ -105,7 +106,7 @@ public final class GoogleCloudRetailV2alphaRatingArgs extends io.pulumi.resource
             return this;
         }
         public Builder ratingCount(@Nullable Integer ratingCount) {
-            this.ratingCount = Output.ofNullable(ratingCount);
+            this.ratingCount = Codegen.ofNullable(ratingCount);
             return this;
         }
         public Builder ratingHistogram(@Nullable Output<List<Integer>> ratingHistogram) {
@@ -113,7 +114,7 @@ public final class GoogleCloudRetailV2alphaRatingArgs extends io.pulumi.resource
             return this;
         }
         public Builder ratingHistogram(@Nullable List<Integer> ratingHistogram) {
-            this.ratingHistogram = Output.ofNullable(ratingHistogram);
+            this.ratingHistogram = Codegen.ofNullable(ratingHistogram);
             return this;
         }
         public Builder ratingHistogram(Integer... ratingHistogram) {

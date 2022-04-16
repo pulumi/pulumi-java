@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigateway;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiIamMemberArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiIamMemberState;
@@ -60,13 +61,13 @@ public class ApiIamMember extends io.pulumi.resources.CustomResource {
     @Export(name="api", type=String.class, parameters={})
     private Output<String> api;
 
-    public Output<String> getApi() {
+    public Output<String> api() {
         return this.api;
     }
     @Export(name="condition", type=ApiIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ ApiIamMemberCondition> condition;
 
-    public Output</* @Nullable */ ApiIamMemberCondition> getCondition() {
+    public Output</* @Nullable */ ApiIamMemberCondition> condition() {
         return this.condition;
     }
     /**
@@ -80,13 +81,13 @@ public class ApiIamMember extends io.pulumi.resources.CustomResource {
      * @return (Computed) The etag of the IAM policy.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
     /**
@@ -102,7 +103,7 @@ public class ApiIamMember extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -120,7 +121,7 @@ public class ApiIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -146,7 +147,7 @@ public class ApiIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiIamMember(String name, ApiIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/apiIamMember:ApiIamMember", name, args == null ? ApiIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigateway/apiIamMember:ApiIamMember", name, args == null ? ApiIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiIamMember(String name, Output<String> id, @Nullable ApiIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

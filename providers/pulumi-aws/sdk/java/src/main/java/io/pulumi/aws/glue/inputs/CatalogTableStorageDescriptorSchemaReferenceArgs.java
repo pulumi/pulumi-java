@@ -6,6 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
     @Import(name="schemaId")
       private final @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs> schemaId;
 
-    public Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs> getSchemaId() {
-        return this.schemaId == null ? Output.empty() : this.schemaId;
+    public Output<CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs> schemaId() {
+        return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
     @Import(name="schemaVersionId")
       private final @Nullable Output<String> schemaVersionId;
 
-    public Output<String> getSchemaVersionId() {
-        return this.schemaVersionId == null ? Output.empty() : this.schemaVersionId;
+    public Output<String> schemaVersionId() {
+        return this.schemaVersionId == null ? Codegen.empty() : this.schemaVersionId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
     @Import(name="schemaVersionNumber", required=true)
       private final Output<Integer> schemaVersionNumber;
 
-    public Output<Integer> getSchemaVersionNumber() {
+    public Output<Integer> schemaVersionNumber() {
         return this.schemaVersionNumber;
     }
 
@@ -59,9 +60,9 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
     }
 
     private CatalogTableStorageDescriptorSchemaReferenceArgs() {
-        this.schemaId = Output.empty();
-        this.schemaVersionId = Output.empty();
-        this.schemaVersionNumber = Output.empty();
+        this.schemaId = Codegen.empty();
+        this.schemaVersionId = Codegen.empty();
+        this.schemaVersionNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
             return this;
         }
         public Builder schemaId(@Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs schemaId) {
-            this.schemaId = Output.ofNullable(schemaId);
+            this.schemaId = Codegen.ofNullable(schemaId);
             return this;
         }
         public Builder schemaVersionId(@Nullable Output<String> schemaVersionId) {
@@ -101,7 +102,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceArgs extends io.p
             return this;
         }
         public Builder schemaVersionId(@Nullable String schemaVersionId) {
-            this.schemaVersionId = Output.ofNullable(schemaVersionId);
+            this.schemaVersionId = Codegen.ofNullable(schemaVersionId);
             return this;
         }
         public Builder schemaVersionNumber(Output<Integer> schemaVersionNumber) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionForwardStic
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerRuleActionForwardTargetGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
     @Import(name="stickiness")
       private final @Nullable Output<ListenerRuleActionForwardStickinessArgs> stickiness;
 
-    public Output<ListenerRuleActionForwardStickinessArgs> getStickiness() {
-        return this.stickiness == null ? Output.empty() : this.stickiness;
+    public Output<ListenerRuleActionForwardStickinessArgs> stickiness() {
+        return this.stickiness == null ? Codegen.empty() : this.stickiness;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
     @Import(name="targetGroups", required=true)
       private final Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups;
 
-    public Output<List<ListenerRuleActionForwardTargetGroupArgs>> getTargetGroups() {
+    public Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups() {
         return this.targetGroups;
     }
 
@@ -46,8 +47,8 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
     }
 
     private ListenerRuleActionForwardArgs() {
-        this.stickiness = Output.empty();
-        this.targetGroups = Output.empty();
+        this.stickiness = Codegen.empty();
+        this.targetGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class ListenerRuleActionForwardArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder stickiness(@Nullable ListenerRuleActionForwardStickinessArgs stickiness) {
-            this.stickiness = Output.ofNullable(stickiness);
+            this.stickiness = Codegen.ofNullable(stickiness);
             return this;
         }
         public Builder targetGroups(Output<List<ListenerRuleActionForwardTargetGroupArgs>> targetGroups) {

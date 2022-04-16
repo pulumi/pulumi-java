@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudtrail.inputs;
 import io.pulumi.aws.cloudtrail.inputs.TrailEventSelectorDataResourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
     @Import(name="dataResources")
       private final @Nullable Output<List<TrailEventSelectorDataResourceGetArgs>> dataResources;
 
-    public Output<List<TrailEventSelectorDataResourceGetArgs>> getDataResources() {
-        return this.dataResources == null ? Output.empty() : this.dataResources;
+    public Output<List<TrailEventSelectorDataResourceGetArgs>> dataResources() {
+        return this.dataResources == null ? Codegen.empty() : this.dataResources;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
     @Import(name="excludeManagementEventSources")
       private final @Nullable Output<List<String>> excludeManagementEventSources;
 
-    public Output<List<String>> getExcludeManagementEventSources() {
-        return this.excludeManagementEventSources == null ? Output.empty() : this.excludeManagementEventSources;
+    public Output<List<String>> excludeManagementEventSources() {
+        return this.excludeManagementEventSources == null ? Codegen.empty() : this.excludeManagementEventSources;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
     @Import(name="includeManagementEvents")
       private final @Nullable Output<Boolean> includeManagementEvents;
 
-    public Output<Boolean> getIncludeManagementEvents() {
-        return this.includeManagementEvents == null ? Output.empty() : this.includeManagementEvents;
+    public Output<Boolean> includeManagementEvents() {
+        return this.includeManagementEvents == null ? Codegen.empty() : this.includeManagementEvents;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
     @Import(name="readWriteType")
       private final @Nullable Output<String> readWriteType;
 
-    public Output<String> getReadWriteType() {
-        return this.readWriteType == null ? Output.empty() : this.readWriteType;
+    public Output<String> readWriteType() {
+        return this.readWriteType == null ? Codegen.empty() : this.readWriteType;
     }
 
     public TrailEventSelectorGetArgs(
@@ -73,10 +74,10 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
     }
 
     private TrailEventSelectorGetArgs() {
-        this.dataResources = Output.empty();
-        this.excludeManagementEventSources = Output.empty();
-        this.includeManagementEvents = Output.empty();
-        this.readWriteType = Output.empty();
+        this.dataResources = Codegen.empty();
+        this.excludeManagementEventSources = Codegen.empty();
+        this.includeManagementEvents = Codegen.empty();
+        this.readWriteType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dataResources(@Nullable List<TrailEventSelectorDataResourceGetArgs> dataResources) {
-            this.dataResources = Output.ofNullable(dataResources);
+            this.dataResources = Codegen.ofNullable(dataResources);
             return this;
         }
         public Builder dataResources(TrailEventSelectorDataResourceGetArgs... dataResources) {
@@ -121,7 +122,7 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder excludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
-            this.excludeManagementEventSources = Output.ofNullable(excludeManagementEventSources);
+            this.excludeManagementEventSources = Codegen.ofNullable(excludeManagementEventSources);
             return this;
         }
         public Builder excludeManagementEventSources(String... excludeManagementEventSources) {
@@ -132,7 +133,7 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder includeManagementEvents(@Nullable Boolean includeManagementEvents) {
-            this.includeManagementEvents = Output.ofNullable(includeManagementEvents);
+            this.includeManagementEvents = Codegen.ofNullable(includeManagementEvents);
             return this;
         }
         public Builder readWriteType(@Nullable Output<String> readWriteType) {
@@ -140,7 +141,7 @@ public final class TrailEventSelectorGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder readWriteType(@Nullable String readWriteType) {
-            this.readWriteType = Output.ofNullable(readWriteType);
+            this.readWriteType = Codegen.ofNullable(readWriteType);
             return this;
         }        public TrailEventSelectorGetArgs build() {
             return new TrailEventSelectorGetArgs(dataResources, excludeManagementEventSources, includeManagementEvents, readWriteType);

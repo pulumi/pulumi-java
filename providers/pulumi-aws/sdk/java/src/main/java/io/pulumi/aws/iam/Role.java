@@ -10,6 +10,7 @@ import io.pulumi.aws.iam.outputs.RoleInlinePolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -48,7 +49,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) specifying the role.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -62,7 +63,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Policy that grants an entity permission to assume the role.
      * 
      */
-    public Output<String> getAssumeRolePolicy() {
+    public Output<String> assumeRolePolicy() {
         return this.assumeRolePolicy;
     }
     /**
@@ -76,7 +77,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Creation date of the IAM role.
      * 
      */
-    public Output<String> getCreateDate() {
+    public Output<String> createDate() {
         return this.createDate;
     }
     /**
@@ -90,7 +91,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Description of the role.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -104,7 +105,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getForceDetachPolicies() {
+    public Output</* @Nullable */ Boolean> forceDetachPolicies() {
         return this.forceDetachPolicies;
     }
     /**
@@ -118,7 +119,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. See below. If no blocks are configured, this provider will not manage any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies added out of band on `apply`.
      * 
      */
-    public Output<List<RoleInlinePolicy>> getInlinePolicies() {
+    public Output<List<RoleInlinePolicy>> inlinePolicies() {
         return this.inlinePolicies;
     }
     /**
@@ -132,7 +133,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, this provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
      * 
      */
-    public Output<List<String>> getManagedPolicyArns() {
+    public Output<List<String>> managedPolicyArns() {
         return this.managedPolicyArns;
     }
     /**
@@ -146,7 +147,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
      * 
      */
-    public Output</* @Nullable */ Integer> getMaxSessionDuration() {
+    public Output</* @Nullable */ Integer> maxSessionDuration() {
         return this.maxSessionDuration;
     }
     /**
@@ -160,7 +161,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Name of the role policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -174,7 +175,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -188,7 +189,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> getPath() {
+    public Output</* @Nullable */ String> path() {
         return this.path;
     }
     /**
@@ -202,7 +203,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return ARN of the policy that is used to set the permissions boundary for the role.
      * 
      */
-    public Output</* @Nullable */ String> getPermissionsBoundary() {
+    public Output</* @Nullable */ String> permissionsBoundary() {
         return this.permissionsBoundary;
     }
     /**
@@ -216,7 +217,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Key-value mapping of tags for the IAM role. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -230,7 +231,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -244,7 +245,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @return Stable and unique string identifying the role.
      * 
      */
-    public Output<String> getUniqueId() {
+    public Output<String> uniqueId() {
         return this.uniqueId;
     }
 
@@ -270,7 +271,7 @@ public class Role extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Role(String name, RoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/role:Role", name, args == null ? RoleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/role:Role", name, args == null ? RoleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Role(String name, Output<String> id, @Nullable RoleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

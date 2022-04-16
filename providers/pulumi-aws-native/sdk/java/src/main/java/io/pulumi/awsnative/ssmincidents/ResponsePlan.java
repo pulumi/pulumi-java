@@ -12,6 +12,7 @@ import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * @return The list of actions.
      * 
      */
-    public Output</* @Nullable */ List<ResponsePlanAction>> getActions() {
+    public Output</* @Nullable */ List<ResponsePlanAction>> actions() {
         return this.actions;
     }
     /**
@@ -47,13 +48,13 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * @return The ARN of the response plan.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="chatChannel", type=ResponsePlanChatChannel.class, parameters={})
     private Output</* @Nullable */ ResponsePlanChatChannel> chatChannel;
 
-    public Output</* @Nullable */ ResponsePlanChatChannel> getChatChannel() {
+    public Output</* @Nullable */ ResponsePlanChatChannel> chatChannel() {
         return this.chatChannel;
     }
     /**
@@ -67,7 +68,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * @return The display name of the response plan.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -81,13 +82,13 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * @return The list of engagements to use.
      * 
      */
-    public Output</* @Nullable */ List<String>> getEngagements() {
+    public Output</* @Nullable */ List<String>> engagements() {
         return this.engagements;
     }
     @Export(name="incidentTemplate", type=ResponsePlanIncidentTemplate.class, parameters={})
     private Output<ResponsePlanIncidentTemplate> incidentTemplate;
 
-    public Output<ResponsePlanIncidentTemplate> getIncidentTemplate() {
+    public Output<ResponsePlanIncidentTemplate> incidentTemplate() {
         return this.incidentTemplate;
     }
     /**
@@ -101,7 +102,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * @return The name of the response plan.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -115,7 +116,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * @return The tags to apply to the response plan.
      * 
      */
-    public Output</* @Nullable */ List<ResponsePlanTag>> getTags() {
+    public Output</* @Nullable */ List<ResponsePlanTag>> tags() {
         return this.tags;
     }
 
@@ -141,7 +142,7 @@ public class ResponsePlan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResponsePlan(String name, ResponsePlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ssmincidents:ResponsePlan", name, args == null ? ResponsePlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ssmincidents:ResponsePlan", name, args == null ? ResponsePlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResponsePlan(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

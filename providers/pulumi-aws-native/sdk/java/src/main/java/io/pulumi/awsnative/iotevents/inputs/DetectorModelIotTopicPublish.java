@@ -26,14 +26,14 @@ public final class DetectorModelIotTopicPublish extends io.pulumi.resources.Invo
     @Import(name="mqttTopic", required=true)
       private final String mqttTopic;
 
-    public String getMqttTopic() {
+    public String mqttTopic() {
         return this.mqttTopic;
     }
 
     @Import(name="payload")
       private final @Nullable DetectorModelPayload payload;
 
-    public Optional<DetectorModelPayload> getPayload() {
+    public Optional<DetectorModelPayload> payload() {
         return this.payload == null ? Optional.empty() : Optional.ofNullable(this.payload);
     }
 

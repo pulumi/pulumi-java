@@ -7,6 +7,7 @@ import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerArchiveRuleArgs;
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,15 +25,15 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="analyzerName")
       private final @Nullable Output<String> analyzerName;
 
-    public Output<String> getAnalyzerName() {
-        return this.analyzerName == null ? Output.empty() : this.analyzerName;
+    public Output<String> analyzerName() {
+        return this.analyzerName == null ? Codegen.empty() : this.analyzerName;
     }
 
     @Import(name="archiveRules")
       private final @Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules;
 
-    public Output<List<AnalyzerArchiveRuleArgs>> getArchiveRules() {
-        return this.archiveRules == null ? Output.empty() : this.archiveRules;
+    public Output<List<AnalyzerArchiveRuleArgs>> archiveRules() {
+        return this.archiveRules == null ? Codegen.empty() : this.archiveRules;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<AnalyzerTagArgs>> tags;
 
-    public Output<List<AnalyzerTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<AnalyzerTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -69,10 +70,10 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalyzerArgs() {
-        this.analyzerName = Output.empty();
-        this.archiveRules = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.analyzerName = Codegen.empty();
+        this.archiveRules = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder analyzerName(@Nullable String analyzerName) {
-            this.analyzerName = Output.ofNullable(analyzerName);
+            this.analyzerName = Codegen.ofNullable(analyzerName);
             return this;
         }
         public Builder archiveRules(@Nullable Output<List<AnalyzerArchiveRuleArgs>> archiveRules) {
@@ -114,7 +115,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder archiveRules(@Nullable List<AnalyzerArchiveRuleArgs> archiveRules) {
-            this.archiveRules = Output.ofNullable(archiveRules);
+            this.archiveRules = Codegen.ofNullable(archiveRules);
             return this;
         }
         public Builder archiveRules(AnalyzerArchiveRuleArgs... archiveRules) {
@@ -125,7 +126,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<AnalyzerTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AnalyzerTagArgs... tags) {

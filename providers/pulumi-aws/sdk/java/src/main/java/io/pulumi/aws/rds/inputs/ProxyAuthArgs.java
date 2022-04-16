@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authScheme")
       private final @Nullable Output<String> authScheme;
 
-    public Output<String> getAuthScheme() {
-        return this.authScheme == null ? Output.empty() : this.authScheme;
+    public Output<String> authScheme() {
+        return this.authScheme == null ? Codegen.empty() : this.authScheme;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="iamAuth")
       private final @Nullable Output<String> iamAuth;
 
-    public Output<String> getIamAuth() {
-        return this.iamAuth == null ? Output.empty() : this.iamAuth;
+    public Output<String> iamAuth() {
+        return this.iamAuth == null ? Codegen.empty() : this.iamAuth;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
-        return this.secretArn == null ? Output.empty() : this.secretArn;
+    public Output<String> secretArn() {
+        return this.secretArn == null ? Codegen.empty() : this.secretArn;
     }
 
     public ProxyAuthArgs(
@@ -70,10 +71,10 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyAuthArgs() {
-        this.authScheme = Output.empty();
-        this.description = Output.empty();
-        this.iamAuth = Output.empty();
-        this.secretArn = Output.empty();
+        this.authScheme = Codegen.empty();
+        this.description = Codegen.empty();
+        this.iamAuth = Codegen.empty();
+        this.secretArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authScheme(@Nullable String authScheme) {
-            this.authScheme = Output.ofNullable(authScheme);
+            this.authScheme = Codegen.ofNullable(authScheme);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -115,7 +116,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder iamAuth(@Nullable Output<String> iamAuth) {
@@ -123,7 +124,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamAuth(@Nullable String iamAuth) {
-            this.iamAuth = Output.ofNullable(iamAuth);
+            this.iamAuth = Codegen.ofNullable(iamAuth);
             return this;
         }
         public Builder secretArn(@Nullable Output<String> secretArn) {
@@ -131,7 +132,7 @@ public final class ProxyAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretArn(@Nullable String secretArn) {
-            this.secretArn = Output.ofNullable(secretArn);
+            this.secretArn = Codegen.ofNullable(secretArn);
             return this;
         }        public ProxyAuthArgs build() {
             return new ProxyAuthArgs(authScheme, description, iamAuth, secretArn);

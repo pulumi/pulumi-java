@@ -5,6 +5,7 @@ package io.pulumi.gcp.ml;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.ml.inputs.EngineModelDefaultVersionArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,8 +27,8 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
       private final @Nullable Output<EngineModelDefaultVersionArgs> defaultVersion;
 
-    public Output<EngineModelDefaultVersionArgs> getDefaultVersion() {
-        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
+    public Output<EngineModelDefaultVersionArgs> defaultVersion() {
+        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onlinePredictionConsoleLogging")
       private final @Nullable Output<Boolean> onlinePredictionConsoleLogging;
 
-    public Output<Boolean> getOnlinePredictionConsoleLogging() {
-        return this.onlinePredictionConsoleLogging == null ? Output.empty() : this.onlinePredictionConsoleLogging;
+    public Output<Boolean> onlinePredictionConsoleLogging() {
+        return this.onlinePredictionConsoleLogging == null ? Codegen.empty() : this.onlinePredictionConsoleLogging;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="onlinePredictionLogging")
       private final @Nullable Output<Boolean> onlinePredictionLogging;
 
-    public Output<Boolean> getOnlinePredictionLogging() {
-        return this.onlinePredictionLogging == null ? Output.empty() : this.onlinePredictionLogging;
+    public Output<Boolean> onlinePredictionLogging() {
+        return this.onlinePredictionLogging == null ? Codegen.empty() : this.onlinePredictionLogging;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -105,8 +106,8 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regions")
       private final @Nullable Output<String> regions;
 
-    public Output<String> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+    public Output<String> regions() {
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     public EngineModelArgs(
@@ -129,14 +130,14 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EngineModelArgs() {
-        this.defaultVersion = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.onlinePredictionConsoleLogging = Output.empty();
-        this.onlinePredictionLogging = Output.empty();
-        this.project = Output.empty();
-        this.regions = Output.empty();
+        this.defaultVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.onlinePredictionConsoleLogging = Codegen.empty();
+        this.onlinePredictionLogging = Codegen.empty();
+        this.project = Codegen.empty();
+        this.regions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultVersion(@Nullable EngineModelDefaultVersionArgs defaultVersion) {
-            this.defaultVersion = Output.ofNullable(defaultVersion);
+            this.defaultVersion = Codegen.ofNullable(defaultVersion);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -186,7 +187,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -194,7 +195,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -202,7 +203,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder onlinePredictionConsoleLogging(@Nullable Output<Boolean> onlinePredictionConsoleLogging) {
@@ -210,7 +211,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onlinePredictionConsoleLogging(@Nullable Boolean onlinePredictionConsoleLogging) {
-            this.onlinePredictionConsoleLogging = Output.ofNullable(onlinePredictionConsoleLogging);
+            this.onlinePredictionConsoleLogging = Codegen.ofNullable(onlinePredictionConsoleLogging);
             return this;
         }
         public Builder onlinePredictionLogging(@Nullable Output<Boolean> onlinePredictionLogging) {
@@ -218,7 +219,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onlinePredictionLogging(@Nullable Boolean onlinePredictionLogging) {
-            this.onlinePredictionLogging = Output.ofNullable(onlinePredictionLogging);
+            this.onlinePredictionLogging = Codegen.ofNullable(onlinePredictionLogging);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -226,7 +227,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder regions(@Nullable Output<String> regions) {
@@ -234,7 +235,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regions(@Nullable String regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }        public EngineModelArgs build() {
             return new EngineModelArgs(defaultVersion, description, labels, name, onlinePredictionConsoleLogging, onlinePredictionLogging, project, regions);

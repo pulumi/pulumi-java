@@ -33,14 +33,14 @@ public final class NetworkEndpointResponse {
      * The IP address of this network endpoint.
      * 
     */
-    public String getIpAddress() {
+    public String ipAddress() {
         return this.ipAddress;
     }
     /**
      * The port of this network endpoint.
      * 
     */
-    public Integer getPort() {
+    public Integer port() {
         return this.port;
     }
 

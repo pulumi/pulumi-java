@@ -43,14 +43,14 @@ public final class AutoHealActionsResponse {
      * Predefined action to be taken.
      * 
     */
-    public Optional<String> getActionType() {
+    public Optional<String> actionType() {
         return Optional.ofNullable(this.actionType);
     }
     /**
      * Custom action to be taken.
      * 
     */
-    public Optional<AutoHealCustomActionResponse> getCustomAction() {
+    public Optional<AutoHealCustomActionResponse> customAction() {
         return Optional.ofNullable(this.customAction);
     }
     /**
@@ -58,7 +58,7 @@ public final class AutoHealActionsResponse {
      * before taking the action
      * 
     */
-    public Optional<String> getMinProcessExecutionTime() {
+    public Optional<String> minProcessExecutionTime() {
         return Optional.ofNullable(this.minProcessExecutionTime);
     }
 

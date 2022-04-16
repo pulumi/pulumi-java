@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
-    public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+    public Output<String> groupName() {
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
     @Import(name="optInStatus")
       private final @Nullable Output<String> optInStatus;
 
-    public Output<String> getOptInStatus() {
-        return this.optInStatus == null ? Output.empty() : this.optInStatus;
+    public Output<String> optInStatus() {
+        return this.optInStatus == null ? Codegen.empty() : this.optInStatus;
     }
 
     public AvailabilityZoneGroupState(
@@ -44,8 +45,8 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
     }
 
     private AvailabilityZoneGroupState() {
-        this.groupName = Output.empty();
-        this.optInStatus = Output.empty();
+        this.groupName = Codegen.empty();
+        this.optInStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder optInStatus(@Nullable Output<String> optInStatus) {
@@ -83,7 +84,7 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder optInStatus(@Nullable String optInStatus) {
-            this.optInStatus = Output.ofNullable(optInStatus);
+            this.optInStatus = Codegen.ofNullable(optInStatus);
             return this;
         }        public AvailabilityZoneGroupState build() {
             return new AvailabilityZoneGroupState(groupName, optInStatus);

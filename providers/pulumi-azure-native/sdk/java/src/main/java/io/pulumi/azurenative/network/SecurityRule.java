@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The network traffic is allowed or denied.
      * 
      */
-    public Output<String> getAccess() {
+    public Output<String> access() {
         return this.access;
     }
     /**
@@ -57,7 +58,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return A description for this rule. Restricted to 140 chars.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -71,7 +72,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The destination address prefix. CIDR or destination IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used.
      * 
      */
-    public Output</* @Nullable */ String> getDestinationAddressPrefix() {
+    public Output</* @Nullable */ String> destinationAddressPrefix() {
         return this.destinationAddressPrefix;
     }
     /**
@@ -85,7 +86,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The destination address prefixes. CIDR or destination IP ranges.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDestinationAddressPrefixes() {
+    public Output</* @Nullable */ List<String>> destinationAddressPrefixes() {
         return this.destinationAddressPrefixes;
     }
     /**
@@ -99,7 +100,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The application security group specified as destination.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> getDestinationApplicationSecurityGroups() {
+    public Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> destinationApplicationSecurityGroups() {
         return this.destinationApplicationSecurityGroups;
     }
     /**
@@ -113,7 +114,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The destination port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
      * 
      */
-    public Output</* @Nullable */ String> getDestinationPortRange() {
+    public Output</* @Nullable */ String> destinationPortRange() {
         return this.destinationPortRange;
     }
     /**
@@ -127,7 +128,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The destination port ranges.
      * 
      */
-    public Output</* @Nullable */ List<String>> getDestinationPortRanges() {
+    public Output</* @Nullable */ List<String>> destinationPortRanges() {
         return this.destinationPortRanges;
     }
     /**
@@ -141,7 +142,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
      * 
      */
-    public Output<String> getDirection() {
+    public Output<String> direction() {
         return this.direction;
     }
     /**
@@ -155,7 +156,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -169,7 +170,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> getName() {
+    public Output</* @Nullable */ String> name() {
         return this.name;
     }
     /**
@@ -183,7 +184,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
      */
-    public Output</* @Nullable */ Integer> getPriority() {
+    public Output</* @Nullable */ Integer> priority() {
         return this.priority;
     }
     /**
@@ -197,7 +198,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return Network protocol this rule applies to.
      * 
      */
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
     /**
@@ -211,7 +212,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The provisioning state of the security rule resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -225,7 +226,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The CIDR or source IP range. Asterisk '*' can also be used to match all source IPs. Default tags such as 'VirtualNetwork', 'AzureLoadBalancer' and 'Internet' can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
      */
-    public Output</* @Nullable */ String> getSourceAddressPrefix() {
+    public Output</* @Nullable */ String> sourceAddressPrefix() {
         return this.sourceAddressPrefix;
     }
     /**
@@ -239,7 +240,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The CIDR or source IP ranges.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSourceAddressPrefixes() {
+    public Output</* @Nullable */ List<String>> sourceAddressPrefixes() {
         return this.sourceAddressPrefixes;
     }
     /**
@@ -253,7 +254,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The application security group specified as source.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> getSourceApplicationSecurityGroups() {
+    public Output</* @Nullable */ List<ApplicationSecurityGroupResponse>> sourceApplicationSecurityGroups() {
         return this.sourceApplicationSecurityGroups;
     }
     /**
@@ -267,7 +268,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The source port or range. Integer or range between 0 and 65535. Asterisk '*' can also be used to match all ports.
      * 
      */
-    public Output</* @Nullable */ String> getSourcePortRange() {
+    public Output</* @Nullable */ String> sourcePortRange() {
         return this.sourcePortRange;
     }
     /**
@@ -281,7 +282,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The source port ranges.
      * 
      */
-    public Output</* @Nullable */ List<String>> getSourcePortRanges() {
+    public Output</* @Nullable */ List<String>> sourcePortRanges() {
         return this.sourcePortRanges;
     }
     /**
@@ -295,7 +296,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output</* @Nullable */ String> getType() {
+    public Output</* @Nullable */ String> type() {
         return this.type;
     }
 
@@ -321,7 +322,7 @@ public class SecurityRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityRule(String name, SecurityRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:SecurityRule", name, args == null ? SecurityRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:SecurityRule", name, args == null ? SecurityRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecurityRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
      * @return Unique id for identifying a data set resource
      * 
      */
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
     /**
@@ -58,7 +59,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -72,7 +73,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
      * @return Name of the azure resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
      * @return Resource id of the Synapse Workspace SQL Pool Table
      * 
      */
-    public Output<String> getSynapseWorkspaceSqlPoolTableResourceId() {
+    public Output<String> synapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
     /**
@@ -100,7 +101,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
      * @return System Data of the Azure resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -114,7 +115,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
      * @return Type of the azure resource
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -140,7 +141,7 @@ public class SynapseWorkspaceSqlPoolTableDataSet extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public SynapseWorkspaceSqlPoolTableDataSet(String name, SynapseWorkspaceSqlPoolTableDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:SynapseWorkspaceSqlPoolTableDataSet", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("azure-native:datashare:SynapseWorkspaceSqlPoolTableDataSet", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SynapseWorkspaceSqlPoolTableDataSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.aws.macie.outputs.FindingsFilterFindingCriteria;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return The action to perform on findings that meet the filter criteria (`finding_criteria`). Valid values are: `ARCHIVE`, suppress (automatically archive) the findings; and, `NOOP`, don't perform any action on the findings.
      * 
      */
-    public Output<String> getAction() {
+    public Output<String> action() {
         return this.action;
     }
     /**
@@ -56,7 +57,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Findings Filter.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -70,7 +71,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return A custom description of the filter. The description can contain as many as 512 characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -84,13 +85,13 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return The criteria to use to filter findings.
      * 
      */
-    public Output<FindingsFilterFindingCriteria> getFindingCriteria() {
+    public Output<FindingsFilterFindingCriteria> findingCriteria() {
         return this.findingCriteria;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -104,7 +105,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    public Output<String> getNamePrefix() {
+    public Output<String> namePrefix() {
         return this.namePrefix;
     }
     /**
@@ -118,7 +119,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return The position of the filter in the list of saved filters on the Amazon Macie console. This value also determines the order in which the filter is applied to findings, relative to other filters that are also applied to the findings.
      * 
      */
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
     /**
@@ -132,13 +133,13 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @return A map of key-value pairs that specifies the tags to associate with the filter.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -164,7 +165,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FindingsFilter(String name, FindingsFilterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:macie/findingsFilter:FindingsFilter", name, args == null ? FindingsFilterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:macie/findingsFilter:FindingsFilter", name, args == null ? FindingsFilterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FindingsFilter(String name, Output<String> id, @Nullable FindingsFilterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

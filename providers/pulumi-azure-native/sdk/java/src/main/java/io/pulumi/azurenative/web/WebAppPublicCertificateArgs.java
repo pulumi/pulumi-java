@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.enums.PublicCertificateLocation;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     @Import(name="blob")
       private final @Nullable Output<String> blob;
 
-    public Output<String> getBlob() {
-        return this.blob == null ? Output.empty() : this.blob;
+    public Output<String> blob() {
+        return this.blob == null ? Codegen.empty() : this.blob;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -55,8 +56,8 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     @Import(name="publicCertificateLocation")
       private final @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
 
-    public Output<PublicCertificateLocation> getPublicCertificateLocation() {
-        return this.publicCertificateLocation == null ? Output.empty() : this.publicCertificateLocation;
+    public Output<PublicCertificateLocation> publicCertificateLocation() {
+        return this.publicCertificateLocation == null ? Codegen.empty() : this.publicCertificateLocation;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     @Import(name="publicCertificateName")
       private final @Nullable Output<String> publicCertificateName;
 
-    public Output<String> getPublicCertificateName() {
-        return this.publicCertificateName == null ? Output.empty() : this.publicCertificateName;
+    public Output<String> publicCertificateName() {
+        return this.publicCertificateName == null ? Codegen.empty() : this.publicCertificateName;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -97,12 +98,12 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
     }
 
     private WebAppPublicCertificateArgs() {
-        this.blob = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.publicCertificateLocation = Output.empty();
-        this.publicCertificateName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.blob = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.publicCertificateLocation = Codegen.empty();
+        this.publicCertificateName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder blob(@Nullable String blob) {
-            this.blob = Output.ofNullable(blob);
+            this.blob = Codegen.ofNullable(blob);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -148,7 +149,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -164,7 +165,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder publicCertificateLocation(@Nullable PublicCertificateLocation publicCertificateLocation) {
-            this.publicCertificateLocation = Output.ofNullable(publicCertificateLocation);
+            this.publicCertificateLocation = Codegen.ofNullable(publicCertificateLocation);
             return this;
         }
         public Builder publicCertificateName(@Nullable Output<String> publicCertificateName) {
@@ -172,7 +173,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder publicCertificateName(@Nullable String publicCertificateName) {
-            this.publicCertificateName = Output.ofNullable(publicCertificateName);
+            this.publicCertificateName = Codegen.ofNullable(publicCertificateName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

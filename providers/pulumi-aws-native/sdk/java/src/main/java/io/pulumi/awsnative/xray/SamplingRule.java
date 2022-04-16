@@ -11,6 +11,7 @@ import io.pulumi.awsnative.xray.outputs.TagsItemProperties;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -26,37 +27,37 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
     @Export(name="ruleARN", type=String.class, parameters={})
     private Output<String> ruleARN;
 
-    public Output<String> getRuleARN() {
+    public Output<String> ruleARN() {
         return this.ruleARN;
     }
     @Export(name="ruleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ruleName;
 
-    public Output</* @Nullable */ String> getRuleName() {
+    public Output</* @Nullable */ String> ruleName() {
         return this.ruleName;
     }
     @Export(name="samplingRule", type=io.pulumi.awsnative.xray.outputs.SamplingRule.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.xray.outputs.SamplingRule> samplingRule;
 
-    public Output</* @Nullable */ io.pulumi.awsnative.xray.outputs.SamplingRule> getSamplingRule() {
+    public Output</* @Nullable */ io.pulumi.awsnative.xray.outputs.SamplingRule> samplingRule() {
         return this.samplingRule;
     }
     @Export(name="samplingRuleRecord", type=SamplingRuleRecord.class, parameters={})
     private Output</* @Nullable */ SamplingRuleRecord> samplingRuleRecord;
 
-    public Output</* @Nullable */ SamplingRuleRecord> getSamplingRuleRecord() {
+    public Output</* @Nullable */ SamplingRuleRecord> samplingRuleRecord() {
         return this.samplingRuleRecord;
     }
     @Export(name="samplingRuleUpdate", type=SamplingRuleUpdate.class, parameters={})
     private Output</* @Nullable */ SamplingRuleUpdate> samplingRuleUpdate;
 
-    public Output</* @Nullable */ SamplingRuleUpdate> getSamplingRuleUpdate() {
+    public Output</* @Nullable */ SamplingRuleUpdate> samplingRuleUpdate() {
         return this.samplingRuleUpdate;
     }
     @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
-    public Output</* @Nullable */ List<TagsItemProperties>> getTags() {
+    public Output</* @Nullable */ List<TagsItemProperties>> tags() {
         return this.tags;
     }
 
@@ -82,7 +83,7 @@ public class SamplingRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SamplingRule(String name, @Nullable SamplingRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:xray:SamplingRule", name, args == null ? SamplingRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:xray:SamplingRule", name, args == null ? SamplingRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SamplingRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

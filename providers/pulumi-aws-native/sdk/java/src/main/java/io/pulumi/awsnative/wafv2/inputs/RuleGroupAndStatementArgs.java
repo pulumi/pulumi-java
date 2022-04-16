@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupStatementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +18,7 @@ public final class RuleGroupAndStatementArgs extends io.pulumi.resources.Resourc
     @Import(name="statements", required=true)
       private final Output<List<RuleGroupStatementArgs>> statements;
 
-    public Output<List<RuleGroupStatementArgs>> getStatements() {
+    public Output<List<RuleGroupStatementArgs>> statements() {
         return this.statements;
     }
 
@@ -26,7 +27,7 @@ public final class RuleGroupAndStatementArgs extends io.pulumi.resources.Resourc
     }
 
     private RuleGroupAndStatementArgs() {
-        this.statements = Output.empty();
+        this.statements = Codegen.empty();
     }
 
     public static Builder builder() {

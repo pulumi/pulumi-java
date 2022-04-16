@@ -5,6 +5,7 @@ package io.pulumi.aws.resourcegroups.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -32,8 +33,8 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GroupResourceQueryGetArgs(
@@ -44,8 +45,8 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
     }
 
     private GroupResourceQueryGetArgs() {
-        this.query = Output.empty();
-        this.type = Output.empty();
+        this.query = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GroupResourceQueryGetArgs build() {
             return new GroupResourceQueryGetArgs(query, type);

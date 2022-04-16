@@ -24,7 +24,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     @Import(name="enable", required=true)
       private final Boolean enable;
 
-    public Boolean getEnable() {
+    public Boolean enable() {
         return this.enable;
     }
 
@@ -35,7 +35,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     @Import(name="ruleVisibility", required=true)
       private final String ruleVisibility;
 
-    public String getRuleVisibility() {
+    public String ruleVisibility() {
         return this.ruleVisibility;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ciphertextBlob")
       private final @Nullable Output<String> ciphertextBlob;
 
-    public Output<String> getCiphertextBlob() {
-        return this.ciphertextBlob == null ? Output.empty() : this.ciphertextBlob;
+    public Output<String> ciphertextBlob() {
+        return this.ciphertextBlob == null ? Codegen.empty() : this.ciphertextBlob;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<Map<String,String>> context;
 
-    public Output<Map<String,String>> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+    public Output<Map<String,String>> context() {
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
-    public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+    public Output<String> keyId() {
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     @Import(name="plaintext")
       private final @Nullable Output<String> plaintext;
 
-    public Output<String> getPlaintext() {
-        return this.plaintext == null ? Output.empty() : this.plaintext;
+    public Output<String> plaintext() {
+        return this.plaintext == null ? Codegen.empty() : this.plaintext;
     }
 
     public CiphertextState(
@@ -71,10 +72,10 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CiphertextState() {
-        this.ciphertextBlob = Output.empty();
-        this.context = Output.empty();
-        this.keyId = Output.empty();
-        this.plaintext = Output.empty();
+        this.ciphertextBlob = Codegen.empty();
+        this.context = Codegen.empty();
+        this.keyId = Codegen.empty();
+        this.plaintext = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ciphertextBlob(@Nullable String ciphertextBlob) {
-            this.ciphertextBlob = Output.ofNullable(ciphertextBlob);
+            this.ciphertextBlob = Codegen.ofNullable(ciphertextBlob);
             return this;
         }
         public Builder context(@Nullable Output<Map<String,String>> context) {
@@ -116,7 +117,7 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder context(@Nullable Map<String,String> context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder keyId(@Nullable Output<String> keyId) {
@@ -124,7 +125,7 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder plaintext(@Nullable Output<String> plaintext) {
@@ -132,7 +133,7 @@ public final class CiphertextState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder plaintext(@Nullable String plaintext) {
-            this.plaintext = Output.ofNullable(plaintext);
+            this.plaintext = Codegen.ofNullable(plaintext);
             return this;
         }        public CiphertextState build() {
             return new CiphertextState(ciphertextBlob, context, keyId, plaintext);

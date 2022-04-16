@@ -5,6 +5,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eventHubConnectionString")
       private final @Nullable Output<String> eventHubConnectionString;
 
-    public Output<String> getEventHubConnectionString() {
-        return this.eventHubConnectionString == null ? Output.empty() : this.eventHubConnectionString;
+    public Output<String> eventHubConnectionString() {
+        return this.eventHubConnectionString == null ? Codegen.empty() : this.eventHubConnectionString;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ioTHubConnectionString")
       private final @Nullable Output<String> ioTHubConnectionString;
 
-    public Output<String> getIoTHubConnectionString() {
-        return this.ioTHubConnectionString == null ? Output.empty() : this.ioTHubConnectionString;
+    public Output<String> ioTHubConnectionString() {
+        return this.ioTHubConnectionString == null ? Codegen.empty() : this.ioTHubConnectionString;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
-    public Output<String> getResourceId() {
+    public Output<String> resourceId() {
         return this.resourceId;
     }
 
@@ -61,9 +62,9 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IotHubSettingsArgs() {
-        this.eventHubConnectionString = Output.empty();
-        this.ioTHubConnectionString = Output.empty();
-        this.resourceId = Output.empty();
+        this.eventHubConnectionString = Codegen.empty();
+        this.ioTHubConnectionString = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
-            this.eventHubConnectionString = Output.ofNullable(eventHubConnectionString);
+            this.eventHubConnectionString = Codegen.ofNullable(eventHubConnectionString);
             return this;
         }
         public Builder ioTHubConnectionString(@Nullable Output<String> ioTHubConnectionString) {
@@ -103,7 +104,7 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ioTHubConnectionString(@Nullable String ioTHubConnectionString) {
-            this.ioTHubConnectionString = Output.ofNullable(ioTHubConnectionString);
+            this.ioTHubConnectionString = Codegen.ofNullable(ioTHubConnectionString);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {

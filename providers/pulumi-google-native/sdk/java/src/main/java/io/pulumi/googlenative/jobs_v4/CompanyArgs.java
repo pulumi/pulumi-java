@@ -5,6 +5,7 @@ package io.pulumi.googlenative.jobs_v4;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.jobs_v4.enums.CompanySize;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="careerSiteUri")
       private final @Nullable Output<String> careerSiteUri;
 
-    public Output<String> getCareerSiteUri() {
-        return this.careerSiteUri == null ? Output.empty() : this.careerSiteUri;
+    public Output<String> careerSiteUri() {
+        return this.careerSiteUri == null ? Codegen.empty() : this.careerSiteUri;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -46,8 +47,8 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="eeoText")
       private final @Nullable Output<String> eeoText;
 
-    public Output<String> getEeoText() {
-        return this.eeoText == null ? Output.empty() : this.eeoText;
+    public Output<String> eeoText() {
+        return this.eeoText == null ? Codegen.empty() : this.eeoText;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="externalId", required=true)
       private final Output<String> externalId;
 
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId;
     }
 
@@ -68,8 +69,8 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="headquartersAddress")
       private final @Nullable Output<String> headquartersAddress;
 
-    public Output<String> getHeadquartersAddress() {
-        return this.headquartersAddress == null ? Output.empty() : this.headquartersAddress;
+    public Output<String> headquartersAddress() {
+        return this.headquartersAddress == null ? Codegen.empty() : this.headquartersAddress;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="hiringAgency")
       private final @Nullable Output<Boolean> hiringAgency;
 
-    public Output<Boolean> getHiringAgency() {
-        return this.hiringAgency == null ? Output.empty() : this.hiringAgency;
+    public Output<Boolean> hiringAgency() {
+        return this.hiringAgency == null ? Codegen.empty() : this.hiringAgency;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
-    public Output<String> getImageUri() {
-        return this.imageUri == null ? Output.empty() : this.imageUri;
+    public Output<String> imageUri() {
+        return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="keywordSearchableJobCustomAttributes")
       private final @Nullable Output<List<String>> keywordSearchableJobCustomAttributes;
 
-    public Output<List<String>> getKeywordSearchableJobCustomAttributes() {
-        return this.keywordSearchableJobCustomAttributes == null ? Output.empty() : this.keywordSearchableJobCustomAttributes;
+    public Output<List<String>> keywordSearchableJobCustomAttributes() {
+        return this.keywordSearchableJobCustomAttributes == null ? Codegen.empty() : this.keywordSearchableJobCustomAttributes;
     }
 
     /**
@@ -112,15 +113,15 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -130,14 +131,14 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<CompanySize> size;
 
-    public Output<CompanySize> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<CompanySize> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
-    public Output<String> getTenantId() {
+    public Output<String> tenantId() {
         return this.tenantId;
     }
 
@@ -148,8 +149,8 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="websiteUri")
       private final @Nullable Output<String> websiteUri;
 
-    public Output<String> getWebsiteUri() {
-        return this.websiteUri == null ? Output.empty() : this.websiteUri;
+    public Output<String> websiteUri() {
+        return this.websiteUri == null ? Codegen.empty() : this.websiteUri;
     }
 
     public CompanyArgs(
@@ -182,19 +183,19 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CompanyArgs() {
-        this.careerSiteUri = Output.empty();
-        this.displayName = Output.empty();
-        this.eeoText = Output.empty();
-        this.externalId = Output.empty();
-        this.headquartersAddress = Output.empty();
-        this.hiringAgency = Output.empty();
-        this.imageUri = Output.empty();
-        this.keywordSearchableJobCustomAttributes = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.size = Output.empty();
-        this.tenantId = Output.empty();
-        this.websiteUri = Output.empty();
+        this.careerSiteUri = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.eeoText = Codegen.empty();
+        this.externalId = Codegen.empty();
+        this.headquartersAddress = Codegen.empty();
+        this.hiringAgency = Codegen.empty();
+        this.imageUri = Codegen.empty();
+        this.keywordSearchableJobCustomAttributes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.size = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.websiteUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -246,7 +247,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder careerSiteUri(@Nullable String careerSiteUri) {
-            this.careerSiteUri = Output.ofNullable(careerSiteUri);
+            this.careerSiteUri = Codegen.ofNullable(careerSiteUri);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -262,7 +263,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eeoText(@Nullable String eeoText) {
-            this.eeoText = Output.ofNullable(eeoText);
+            this.eeoText = Codegen.ofNullable(eeoText);
             return this;
         }
         public Builder externalId(Output<String> externalId) {
@@ -278,7 +279,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder headquartersAddress(@Nullable String headquartersAddress) {
-            this.headquartersAddress = Output.ofNullable(headquartersAddress);
+            this.headquartersAddress = Codegen.ofNullable(headquartersAddress);
             return this;
         }
         public Builder hiringAgency(@Nullable Output<Boolean> hiringAgency) {
@@ -286,7 +287,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hiringAgency(@Nullable Boolean hiringAgency) {
-            this.hiringAgency = Output.ofNullable(hiringAgency);
+            this.hiringAgency = Codegen.ofNullable(hiringAgency);
             return this;
         }
         public Builder imageUri(@Nullable Output<String> imageUri) {
@@ -294,7 +295,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Output.ofNullable(imageUri);
+            this.imageUri = Codegen.ofNullable(imageUri);
             return this;
         }
         public Builder keywordSearchableJobCustomAttributes(@Nullable Output<List<String>> keywordSearchableJobCustomAttributes) {
@@ -302,7 +303,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keywordSearchableJobCustomAttributes(@Nullable List<String> keywordSearchableJobCustomAttributes) {
-            this.keywordSearchableJobCustomAttributes = Output.ofNullable(keywordSearchableJobCustomAttributes);
+            this.keywordSearchableJobCustomAttributes = Codegen.ofNullable(keywordSearchableJobCustomAttributes);
             return this;
         }
         public Builder keywordSearchableJobCustomAttributes(String... keywordSearchableJobCustomAttributes) {
@@ -313,7 +314,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -321,7 +322,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder size(@Nullable Output<CompanySize> size) {
@@ -329,7 +330,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable CompanySize size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder tenantId(Output<String> tenantId) {
@@ -345,7 +346,7 @@ public final class CompanyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder websiteUri(@Nullable String websiteUri) {
-            this.websiteUri = Output.ofNullable(websiteUri);
+            this.websiteUri = Codegen.ofNullable(websiteUri);
             return this;
         }        public CompanyArgs build() {
             return new CompanyArgs(careerSiteUri, displayName, eeoText, externalId, headquartersAddress, hiringAgency, imageUri, keywordSearchableJobCustomAttributes, name, project, size, tenantId, websiteUri);

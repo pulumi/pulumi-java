@@ -10,6 +10,7 @@ import io.pulumi.aws.wafregional.outputs.SizeConstraintSetSizeConstraint;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -47,7 +48,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * @return The name or description of the Size Constraint Set.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -61,7 +62,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * @return Specifies the parts of web requests that you want to inspect the size of.
      * 
      */
-    public Output</* @Nullable */ List<SizeConstraintSetSizeConstraint>> getSizeConstraints() {
+    public Output</* @Nullable */ List<SizeConstraintSetSizeConstraint>> sizeConstraints() {
         return this.sizeConstraints;
     }
 
@@ -87,7 +88,7 @@ public class SizeConstraintSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SizeConstraintSet(String name, @Nullable SizeConstraintSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafregional/sizeConstraintSet:SizeConstraintSet", name, args == null ? SizeConstraintSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafregional/sizeConstraintSet:SizeConstraintSet", name, args == null ? SizeConstraintSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SizeConstraintSet(String name, Output<String> id, @Nullable SizeConstraintSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

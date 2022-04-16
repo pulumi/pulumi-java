@@ -16,7 +16,7 @@ public final class GetInstanceTemplateConfidentialInstanceConfig {
         this.enableConfidentialCompute = enableConfidentialCompute;
     }
 
-    public Boolean getEnableConfidentialCompute() {
+    public Boolean enableConfidentialCompute() {
         return this.enableConfidentialCompute;
     }
 

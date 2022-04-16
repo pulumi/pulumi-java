@@ -35,14 +35,14 @@ public final class ConnectionMonitorOutputResponse {
      * Connection monitor output destination type. Currently, only "Workspace" is supported.
      * 
     */
-    public Optional<String> getType() {
+    public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
     /**
      * Describes the settings for producing output into a log analytics workspace.
      * 
     */
-    public Optional<ConnectionMonitorWorkspaceSettingsResponse> getWorkspaceSettings() {
+    public Optional<ConnectionMonitorWorkspaceSettingsResponse> workspaceSettings() {
         return Optional.ofNullable(this.workspaceSettings);
     }
 

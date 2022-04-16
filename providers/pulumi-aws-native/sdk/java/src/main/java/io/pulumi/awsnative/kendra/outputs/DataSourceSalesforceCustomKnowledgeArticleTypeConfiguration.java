@@ -30,16 +30,16 @@ public final class DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration {
         this.name = name;
     }
 
-    public String getDocumentDataFieldName() {
+    public String documentDataFieldName() {
         return this.documentDataFieldName;
     }
-    public Optional<String> getDocumentTitleFieldName() {
+    public Optional<String> documentTitleFieldName() {
         return Optional.ofNullable(this.documentTitleFieldName);
     }
-    public List<DataSourceToIndexFieldMapping> getFieldMappings() {
+    public List<DataSourceToIndexFieldMapping> fieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

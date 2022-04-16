@@ -5,6 +5,7 @@ package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
     @Import(name="allowAllPackageNames")
       private final @Nullable Output<Boolean> allowAllPackageNames;
 
-    public Output<Boolean> getAllowAllPackageNames() {
-        return this.allowAllPackageNames == null ? Output.empty() : this.allowAllPackageNames;
+    public Output<Boolean> allowAllPackageNames() {
+        return this.allowAllPackageNames == null ? Codegen.empty() : this.allowAllPackageNames;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
     @Import(name="allowedPackageNames")
       private final @Nullable Output<List<String>> allowedPackageNames;
 
-    public Output<List<String>> getAllowedPackageNames() {
-        return this.allowedPackageNames == null ? Output.empty() : this.allowedPackageNames;
+    public Output<List<String>> allowedPackageNames() {
+        return this.allowedPackageNames == null ? Codegen.empty() : this.allowedPackageNames;
     }
 
     public EnterpriseKeyAndroidSettingsArgs(
@@ -46,8 +47,8 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
     }
 
     private EnterpriseKeyAndroidSettingsArgs() {
-        this.allowAllPackageNames = Output.empty();
-        this.allowedPackageNames = Output.empty();
+        this.allowAllPackageNames = Codegen.empty();
+        this.allowedPackageNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder allowAllPackageNames(@Nullable Boolean allowAllPackageNames) {
-            this.allowAllPackageNames = Output.ofNullable(allowAllPackageNames);
+            this.allowAllPackageNames = Codegen.ofNullable(allowAllPackageNames);
             return this;
         }
         public Builder allowedPackageNames(@Nullable Output<List<String>> allowedPackageNames) {
@@ -85,7 +86,7 @@ public final class EnterpriseKeyAndroidSettingsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder allowedPackageNames(@Nullable List<String> allowedPackageNames) {
-            this.allowedPackageNames = Output.ofNullable(allowedPackageNames);
+            this.allowedPackageNames = Codegen.ofNullable(allowedPackageNames);
             return this;
         }
         public Builder allowedPackageNames(String... allowedPackageNames) {

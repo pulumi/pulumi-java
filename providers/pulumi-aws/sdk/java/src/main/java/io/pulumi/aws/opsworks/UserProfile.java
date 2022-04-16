@@ -9,6 +9,7 @@ import io.pulumi.aws.opsworks.inputs.UserProfileState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @return Whether users can specify their own SSH public key through the My Settings page
      * 
      */
-    public Output</* @Nullable */ Boolean> getAllowSelfManagement() {
+    public Output</* @Nullable */ Boolean> allowSelfManagement() {
         return this.allowSelfManagement;
     }
     /**
@@ -46,7 +47,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @return The users public key
      * 
      */
-    public Output</* @Nullable */ String> getSshPublicKey() {
+    public Output</* @Nullable */ String> sshPublicKey() {
         return this.sshPublicKey;
     }
     /**
@@ -60,7 +61,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @return The ssh username, with witch this user wants to log in
      * 
      */
-    public Output<String> getSshUsername() {
+    public Output<String> sshUsername() {
         return this.sshUsername;
     }
     /**
@@ -74,7 +75,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @return The user's IAM ARN
      * 
      */
-    public Output<String> getUserArn() {
+    public Output<String> userArn() {
         return this.userArn;
     }
 
@@ -100,7 +101,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UserProfile(String name, UserProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/userProfile:UserProfile", name, args == null ? UserProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:opsworks/userProfile:UserProfile", name, args == null ? UserProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UserProfile(String name, Output<String> id, @Nullable UserProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

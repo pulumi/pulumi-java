@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsEncryptionEncrypt
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,8 +30,8 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     @Import(name="constantInitializationVector")
       private final @Nullable Output<String> constantInitializationVector;
 
-    public Output<String> getConstantInitializationVector() {
-        return this.constantInitializationVector == null ? Output.empty() : this.constantInitializationVector;
+    public Output<String> constantInitializationVector() {
+        return this.constantInitializationVector == null ? Codegen.empty() : this.constantInitializationVector;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     @Import(name="encryptionMethod")
       private final @Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod;
 
-    public Output<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
-        return this.encryptionMethod == null ? Output.empty() : this.encryptionMethod;
+    public Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod() {
+        return this.encryptionMethod == null ? Codegen.empty() : this.encryptionMethod;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     @Import(name="keyRotationIntervalSeconds")
       private final @Nullable Output<Integer> keyRotationIntervalSeconds;
 
-    public Output<Integer> getKeyRotationIntervalSeconds() {
-        return this.keyRotationIntervalSeconds == null ? Output.empty() : this.keyRotationIntervalSeconds;
+    public Output<Integer> keyRotationIntervalSeconds() {
+        return this.keyRotationIntervalSeconds == null ? Codegen.empty() : this.keyRotationIntervalSeconds;
     }
 
     /**
@@ -62,14 +63,14 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     @Import(name="repeatExtXKey")
       private final @Nullable Output<Boolean> repeatExtXKey;
 
-    public Output<Boolean> getRepeatExtXKey() {
-        return this.repeatExtXKey == null ? Output.empty() : this.repeatExtXKey;
+    public Output<Boolean> repeatExtXKey() {
+        return this.repeatExtXKey == null ? Codegen.empty() : this.repeatExtXKey;
     }
 
     @Import(name="spekeKeyProvider", required=true)
       private final Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider;
 
-    public Output<OriginEndpointSpekeKeyProviderArgs> getSpekeKeyProvider() {
+    public Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
@@ -87,11 +88,11 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
     }
 
     private OriginEndpointHlsEncryptionArgs() {
-        this.constantInitializationVector = Output.empty();
-        this.encryptionMethod = Output.empty();
-        this.keyRotationIntervalSeconds = Output.empty();
-        this.repeatExtXKey = Output.empty();
-        this.spekeKeyProvider = Output.empty();
+        this.constantInitializationVector = Codegen.empty();
+        this.encryptionMethod = Codegen.empty();
+        this.keyRotationIntervalSeconds = Codegen.empty();
+        this.repeatExtXKey = Codegen.empty();
+        this.spekeKeyProvider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
-            this.constantInitializationVector = Output.ofNullable(constantInitializationVector);
+            this.constantInitializationVector = Codegen.ofNullable(constantInitializationVector);
             return this;
         }
         public Builder encryptionMethod(@Nullable Output<OriginEndpointHlsEncryptionEncryptionMethod> encryptionMethod) {
@@ -135,7 +136,7 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder encryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
-            this.encryptionMethod = Output.ofNullable(encryptionMethod);
+            this.encryptionMethod = Codegen.ofNullable(encryptionMethod);
             return this;
         }
         public Builder keyRotationIntervalSeconds(@Nullable Output<Integer> keyRotationIntervalSeconds) {
@@ -143,7 +144,7 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = Output.ofNullable(keyRotationIntervalSeconds);
+            this.keyRotationIntervalSeconds = Codegen.ofNullable(keyRotationIntervalSeconds);
             return this;
         }
         public Builder repeatExtXKey(@Nullable Output<Boolean> repeatExtXKey) {
@@ -151,7 +152,7 @@ public final class OriginEndpointHlsEncryptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
-            this.repeatExtXKey = Output.ofNullable(repeatExtXKey);
+            this.repeatExtXKey = Codegen.ofNullable(repeatExtXKey);
             return this;
         }
         public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {

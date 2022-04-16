@@ -5,6 +5,7 @@ package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleCloudBillingBudgetsV1LastPeriodAmountArgs;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleTypeMoneyArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
     @Import(name="lastPeriodAmount")
       private final @Nullable Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount;
 
-    public Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> getLastPeriodAmount() {
-        return this.lastPeriodAmount == null ? Output.empty() : this.lastPeriodAmount;
+    public Output<GoogleCloudBillingBudgetsV1LastPeriodAmountArgs> lastPeriodAmount() {
+        return this.lastPeriodAmount == null ? Codegen.empty() : this.lastPeriodAmount;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
     @Import(name="specifiedAmount")
       private final @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
 
-    public Output<GoogleTypeMoneyArgs> getSpecifiedAmount() {
-        return this.specifiedAmount == null ? Output.empty() : this.specifiedAmount;
+    public Output<GoogleTypeMoneyArgs> specifiedAmount() {
+        return this.specifiedAmount == null ? Codegen.empty() : this.specifiedAmount;
     }
 
     public GoogleCloudBillingBudgetsV1BudgetAmountArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
     }
 
     private GoogleCloudBillingBudgetsV1BudgetAmountArgs() {
-        this.lastPeriodAmount = Output.empty();
-        this.specifiedAmount = Output.empty();
+        this.lastPeriodAmount = Codegen.empty();
+        this.specifiedAmount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
             return this;
         }
         public Builder lastPeriodAmount(@Nullable GoogleCloudBillingBudgetsV1LastPeriodAmountArgs lastPeriodAmount) {
-            this.lastPeriodAmount = Output.ofNullable(lastPeriodAmount);
+            this.lastPeriodAmount = Codegen.ofNullable(lastPeriodAmount);
             return this;
         }
         public Builder specifiedAmount(@Nullable Output<GoogleTypeMoneyArgs> specifiedAmount) {
@@ -88,7 +89,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmountArgs extends io.pulumi
             return this;
         }
         public Builder specifiedAmount(@Nullable GoogleTypeMoneyArgs specifiedAmount) {
-            this.specifiedAmount = Output.ofNullable(specifiedAmount);
+            this.specifiedAmount = Codegen.ofNullable(specifiedAmount);
             return this;
         }        public GoogleCloudBillingBudgetsV1BudgetAmountArgs build() {
             return new GoogleCloudBillingBudgetsV1BudgetAmountArgs(lastPeriodAmount, specifiedAmount);

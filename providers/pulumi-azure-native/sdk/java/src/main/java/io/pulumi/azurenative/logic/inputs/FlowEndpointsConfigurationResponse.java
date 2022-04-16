@@ -25,7 +25,7 @@ public final class FlowEndpointsConfigurationResponse extends io.pulumi.resource
     @Import(name="connector")
       private final @Nullable FlowEndpointsResponse connector;
 
-    public Optional<FlowEndpointsResponse> getConnector() {
+    public Optional<FlowEndpointsResponse> connector() {
         return this.connector == null ? Optional.empty() : Optional.ofNullable(this.connector);
     }
 
@@ -36,7 +36,7 @@ public final class FlowEndpointsConfigurationResponse extends io.pulumi.resource
     @Import(name="workflow")
       private final @Nullable FlowEndpointsResponse workflow;
 
-    public Optional<FlowEndpointsResponse> getWorkflow() {
+    public Optional<FlowEndpointsResponse> workflow() {
         return this.workflow == null ? Optional.empty() : Optional.ofNullable(this.workflow);
     }
 

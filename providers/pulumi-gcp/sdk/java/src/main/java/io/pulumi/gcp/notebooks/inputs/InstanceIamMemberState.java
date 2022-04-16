@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.notebooks.inputs.InstanceIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="condition")
       private final @Nullable Output<InstanceIamMemberConditionGetArgs> condition;
 
-    public Output<InstanceIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<InstanceIamMemberConditionGetArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
-    public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+    public Output<String> instanceName() {
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -51,15 +52,15 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
-    public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+    public Output<String> member() {
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -83,8 +84,8 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     @Import(name="role")
       private final @Nullable Output<String> role;
 
-    public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+    public Output<String> role() {
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public InstanceIamMemberState(
@@ -105,13 +106,13 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceIamMemberState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.instanceName = Output.empty();
-        this.location = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable InstanceIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -159,7 +160,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder instanceName(@Nullable Output<String> instanceName) {
@@ -167,7 +168,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -175,7 +176,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -183,7 +184,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -191,7 +192,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -199,7 +200,7 @@ public final class InstanceIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public InstanceIamMemberState build() {
             return new InstanceIamMemberState(condition, etag, instanceName, location, member, project, role);

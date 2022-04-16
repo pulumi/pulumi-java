@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSuggestionsResponse exten
     @Import(name="suggestions", required=true)
       private final List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions;
 
-    public List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> getSuggestions() {
+    public List<GoogleCloudDialogflowV2IntentMessageSuggestionResponse> suggestions() {
         return this.suggestions;
     }
 

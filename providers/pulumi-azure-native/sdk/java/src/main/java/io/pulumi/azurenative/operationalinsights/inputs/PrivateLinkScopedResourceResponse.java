@@ -25,7 +25,7 @@ public final class PrivateLinkScopedResourceResponse extends io.pulumi.resources
     @Import(name="resourceId")
       private final @Nullable String resourceId;
 
-    public Optional<String> getResourceId() {
+    public Optional<String> resourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
     }
 
@@ -36,7 +36,7 @@ public final class PrivateLinkScopedResourceResponse extends io.pulumi.resources
     @Import(name="scopeId")
       private final @Nullable String scopeId;
 
-    public Optional<String> getScopeId() {
+    public Optional<String> scopeId() {
         return this.scopeId == null ? Optional.empty() : Optional.ofNullable(this.scopeId);
     }
 

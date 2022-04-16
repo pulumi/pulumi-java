@@ -7,6 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationLoggingFilterProperti
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="defaultBehavior", required=true)
       private final Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
 
-    public Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> getDefaultBehavior() {
+    public Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior() {
         return this.defaultBehavior;
     }
 
@@ -37,7 +38,7 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="filters", required=true)
       private final Output<List<LoggingConfigurationFilterArgs>> filters;
 
-    public Output<List<LoggingConfigurationFilterArgs>> getFilters() {
+    public Output<List<LoggingConfigurationFilterArgs>> filters() {
         return this.filters;
     }
 
@@ -49,8 +50,8 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private LoggingFilterPropertiesArgs() {
-        this.defaultBehavior = Output.empty();
-        this.filters = Output.empty();
+        this.defaultBehavior = Codegen.empty();
+        this.filters = Codegen.empty();
     }
 
     public static Builder builder() {

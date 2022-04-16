@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class TriggerActionNotificationPropertyArgs extends io.pulumi.resou
     @Import(name="notifyDelayAfter")
       private final @Nullable Output<Integer> notifyDelayAfter;
 
-    public Output<Integer> getNotifyDelayAfter() {
-        return this.notifyDelayAfter == null ? Output.empty() : this.notifyDelayAfter;
+    public Output<Integer> notifyDelayAfter() {
+        return this.notifyDelayAfter == null ? Codegen.empty() : this.notifyDelayAfter;
     }
 
     public TriggerActionNotificationPropertyArgs(@Nullable Output<Integer> notifyDelayAfter) {
@@ -30,7 +31,7 @@ public final class TriggerActionNotificationPropertyArgs extends io.pulumi.resou
     }
 
     private TriggerActionNotificationPropertyArgs() {
-        this.notifyDelayAfter = Output.empty();
+        this.notifyDelayAfter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class TriggerActionNotificationPropertyArgs extends io.pulumi.resou
             return this;
         }
         public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
-            this.notifyDelayAfter = Output.ofNullable(notifyDelayAfter);
+            this.notifyDelayAfter = Codegen.ofNullable(notifyDelayAfter);
             return this;
         }        public TriggerActionNotificationPropertyArgs build() {
             return new TriggerActionNotificationPropertyArgs(notifyDelayAfter);

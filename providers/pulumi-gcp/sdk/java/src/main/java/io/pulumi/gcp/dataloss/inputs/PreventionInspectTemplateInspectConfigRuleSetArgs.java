@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleArgs;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
     @Import(name="infoTypes", required=true)
       private final Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes;
 
-    public Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> getInfoTypes() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeArgs>> infoTypes() {
         return this.infoTypes;
     }
 
@@ -35,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
     @Import(name="rules", required=true)
       private final Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules;
 
-    public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> getRules() {
+    public Output<List<PreventionInspectTemplateInspectConfigRuleSetRuleArgs>> rules() {
         return this.rules;
     }
 
@@ -47,8 +48,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetArgs extends io.
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetArgs() {
-        this.infoTypes = Output.empty();
-        this.rules = Output.empty();
+        this.infoTypes = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

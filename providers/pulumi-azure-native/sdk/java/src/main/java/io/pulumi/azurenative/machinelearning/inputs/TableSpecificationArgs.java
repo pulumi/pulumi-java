@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.inputs.ColumnSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="format")
       private final @Nullable Output<String> format;
 
-    public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+    public Output<String> format() {
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="properties")
       private final @Nullable Output<Map<String,ColumnSpecificationArgs>> properties;
 
-    public Output<Map<String,ColumnSpecificationArgs>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<Map<String,ColumnSpecificationArgs>> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -85,15 +86,15 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
         this.format = format;
         this.properties = properties;
         this.title = title;
-        this.type = type == null ? Output.ofNullable("object") : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = type == null ? Codegen.ofNullable("object") : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private TableSpecificationArgs() {
-        this.description = Output.empty();
-        this.format = Output.empty();
-        this.properties = Output.empty();
-        this.title = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.format = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.title = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder format(@Nullable Output<String> format) {
@@ -137,7 +138,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,ColumnSpecificationArgs>> properties) {
@@ -145,7 +146,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder properties(@Nullable Map<String,ColumnSpecificationArgs> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -153,7 +154,7 @@ public final class TableSpecificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder type(Output<String> type) {

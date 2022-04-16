@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1alpha.enums.OSPolicyResourceExecResourceExecInterpreter;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
-    public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+    public Output<List<String>> args() {
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileArgs> file;
 
-    public Output<OSPolicyResourceFileArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+    public Output<OSPolicyResourceFileArgs> file() {
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="interpreter", required=true)
       private final Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
 
-    public Output<OSPolicyResourceExecResourceExecInterpreter> getInterpreter() {
+    public Output<OSPolicyResourceExecResourceExecInterpreter> interpreter() {
         return this.interpreter;
     }
 
@@ -61,8 +62,8 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="outputFilePath")
       private final @Nullable Output<String> outputFilePath;
 
-    public Output<String> getOutputFilePath() {
-        return this.outputFilePath == null ? Output.empty() : this.outputFilePath;
+    public Output<String> outputFilePath() {
+        return this.outputFilePath == null ? Codegen.empty() : this.outputFilePath;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     @Import(name="script")
       private final @Nullable Output<String> script;
 
-    public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+    public Output<String> script() {
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     public OSPolicyResourceExecResourceExecArgs(
@@ -90,11 +91,11 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
     }
 
     private OSPolicyResourceExecResourceExecArgs() {
-        this.args = Output.empty();
-        this.file = Output.empty();
-        this.interpreter = Output.empty();
-        this.outputFilePath = Output.empty();
-        this.script = Output.empty();
+        this.args = Codegen.empty();
+        this.file = Codegen.empty();
+        this.interpreter = Codegen.empty();
+        this.outputFilePath = Codegen.empty();
+        this.script = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -141,7 +142,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
             return this;
         }
         public Builder file(@Nullable OSPolicyResourceFileArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder interpreter(Output<OSPolicyResourceExecResourceExecInterpreter> interpreter) {
@@ -157,7 +158,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
             return this;
         }
         public Builder outputFilePath(@Nullable String outputFilePath) {
-            this.outputFilePath = Output.ofNullable(outputFilePath);
+            this.outputFilePath = Codegen.ofNullable(outputFilePath);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -165,7 +166,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends io.pulumi.resour
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }        public OSPolicyResourceExecResourceExecArgs build() {
             return new OSPolicyResourceExecResourceExecArgs(args, file, interpreter, outputFilePath, script);

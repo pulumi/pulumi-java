@@ -27,7 +27,7 @@ public final class StreamingPolicyContentKeysResponse extends io.pulumi.resource
     @Import(name="defaultKey")
       private final @Nullable DefaultKeyResponse defaultKey;
 
-    public Optional<DefaultKeyResponse> getDefaultKey() {
+    public Optional<DefaultKeyResponse> defaultKey() {
         return this.defaultKey == null ? Optional.empty() : Optional.ofNullable(this.defaultKey);
     }
 
@@ -38,7 +38,7 @@ public final class StreamingPolicyContentKeysResponse extends io.pulumi.resource
     @Import(name="keyToTrackMappings")
       private final @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;
 
-    public List<StreamingPolicyContentKeyResponse> getKeyToTrackMappings() {
+    public List<StreamingPolicyContentKeyResponse> keyToTrackMappings() {
         return this.keyToTrackMappings == null ? List.of() : this.keyToTrackMappings;
     }
 

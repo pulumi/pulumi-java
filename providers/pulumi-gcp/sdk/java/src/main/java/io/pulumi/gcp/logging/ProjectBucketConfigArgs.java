@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="bucketId", required=true)
       private final Output<String> bucketId;
 
-    public Output<String> getBucketId() {
+    public Output<String> bucketId() {
         return this.bucketId;
     }
 
@@ -33,8 +34,8 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="location", required=true)
       private final Output<String> location;
 
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
 
@@ -55,7 +56,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="project", required=true)
       private final Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
 
@@ -66,8 +67,8 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
     @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
-    public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+    public Output<Integer> retentionDays() {
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     public ProjectBucketConfigArgs(
@@ -84,11 +85,11 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private ProjectBucketConfigArgs() {
-        this.bucketId = Output.empty();
-        this.description = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.retentionDays = Output.empty();
+        this.bucketId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.retentionDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -156,7 +157,7 @@ public final class ProjectBucketConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }        public ProjectBucketConfigArgs build() {
             return new ProjectBucketConfigArgs(bucketId, description, location, project, retentionDays);

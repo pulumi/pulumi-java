@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,21 +19,21 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
     @Import(name="count", required=true)
       private final Output<Integer> count;
 
-    public Output<Integer> getCount() {
+    public Output<Integer> count() {
         return this.count;
     }
 
     @Import(name="gpuPartitionSize")
       private final @Nullable Output<String> gpuPartitionSize;
 
-    public Output<String> getGpuPartitionSize() {
-        return this.gpuPartitionSize == null ? Output.empty() : this.gpuPartitionSize;
+    public Output<String> gpuPartitionSize() {
+        return this.gpuPartitionSize == null ? Codegen.empty() : this.gpuPartitionSize;
     }
 
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -46,9 +47,9 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
     }
 
     private NodePoolNodeConfigGuestAcceleratorGetArgs() {
-        this.count = Output.empty();
-        this.gpuPartitionSize = Output.empty();
-        this.type = Output.empty();
+        this.count = Codegen.empty();
+        this.gpuPartitionSize = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
             return this;
         }
         public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
-            this.gpuPartitionSize = Output.ofNullable(gpuPartitionSize);
+            this.gpuPartitionSize = Codegen.ofNullable(gpuPartitionSize);
             return this;
         }
         public Builder type(Output<String> type) {

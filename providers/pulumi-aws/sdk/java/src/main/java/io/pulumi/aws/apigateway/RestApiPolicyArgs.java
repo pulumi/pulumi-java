@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy", required=true)
       private final Output<String> policy;
 
-    public Output<String> getPolicy() {
+    public Output<String> policy() {
         return this.policy;
     }
 
@@ -31,7 +32,7 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
+    public Output<String> restApiId() {
         return this.restApiId;
     }
 
@@ -43,8 +44,8 @@ public final class RestApiPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestApiPolicyArgs() {
-        this.policy = Output.empty();
-        this.restApiId = Output.empty();
+        this.policy = Codegen.empty();
+        this.restApiId = Codegen.empty();
     }
 
     public static Builder builder() {

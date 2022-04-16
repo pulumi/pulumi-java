@@ -5,6 +5,7 @@ package io.pulumi.gcp.essentialcontacts;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="email", required=true)
       private final Output<String> email;
 
-    public Output<String> getEmail() {
+    public Output<String> email() {
         return this.email;
     }
 
@@ -32,7 +33,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="languageTag", required=true)
       private final Output<String> languageTag;
 
-    public Output<String> getLanguageTag() {
+    public Output<String> languageTag() {
         return this.languageTag;
     }
 
@@ -43,7 +44,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationCategorySubscriptions", required=true)
       private final Output<List<String>> notificationCategorySubscriptions;
 
-    public Output<List<String>> getNotificationCategorySubscriptions() {
+    public Output<List<String>> notificationCategorySubscriptions() {
         return this.notificationCategorySubscriptions;
     }
 
@@ -54,7 +55,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
       private final Output<String> parent;
 
-    public Output<String> getParent() {
+    public Output<String> parent() {
         return this.parent;
     }
 
@@ -70,10 +71,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.email = Output.empty();
-        this.languageTag = Output.empty();
-        this.notificationCategorySubscriptions = Output.empty();
-        this.parent = Output.empty();
+        this.email = Codegen.empty();
+        this.languageTag = Codegen.empty();
+        this.notificationCategorySubscriptions = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {

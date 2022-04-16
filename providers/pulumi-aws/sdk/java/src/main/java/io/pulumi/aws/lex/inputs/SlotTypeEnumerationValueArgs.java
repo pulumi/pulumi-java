@@ -5,6 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class SlotTypeEnumerationValueArgs extends io.pulumi.resources.Reso
     @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
-    public Output<List<String>> getSynonyms() {
-        return this.synonyms == null ? Output.empty() : this.synonyms;
+    public Output<List<String>> synonyms() {
+        return this.synonyms == null ? Codegen.empty() : this.synonyms;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SlotTypeEnumerationValueArgs extends io.pulumi.resources.Reso
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -45,8 +46,8 @@ public final class SlotTypeEnumerationValueArgs extends io.pulumi.resources.Reso
     }
 
     private SlotTypeEnumerationValueArgs() {
-        this.synonyms = Output.empty();
-        this.value = Output.empty();
+        this.synonyms = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class SlotTypeEnumerationValueArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder synonyms(@Nullable List<String> synonyms) {
-            this.synonyms = Output.ofNullable(synonyms);
+            this.synonyms = Codegen.ofNullable(synonyms);
             return this;
         }
         public Builder synonyms(String... synonyms) {

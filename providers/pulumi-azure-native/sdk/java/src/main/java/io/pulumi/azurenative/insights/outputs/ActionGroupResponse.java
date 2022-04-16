@@ -34,14 +34,14 @@ public final class ActionGroupResponse {
      * The resource ID of the Action Group. This cannot be null or empty.
      * 
     */
-    public String getActionGroupId() {
+    public String actionGroupId() {
         return this.actionGroupId;
     }
     /**
      * the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
      * 
     */
-    public Map<String,String> getWebhookProperties() {
+    public Map<String,String> webhookProperties() {
         return this.webhookProperties == null ? Map.of() : this.webhookProperties;
     }
 

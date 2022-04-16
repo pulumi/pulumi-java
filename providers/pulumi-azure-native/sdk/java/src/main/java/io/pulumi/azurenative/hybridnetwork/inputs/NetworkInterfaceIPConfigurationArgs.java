@@ -8,6 +8,7 @@ import io.pulumi.azurenative.hybridnetwork.enums.IPVersion;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,8 +30,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
-    public Output<List<String>> getDnsServers() {
-        return this.dnsServers == null ? Output.empty() : this.dnsServers;
+    public Output<List<String>> dnsServers() {
+        return this.dnsServers == null ? Codegen.empty() : this.dnsServers;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="gateway")
       private final @Nullable Output<String> gateway;
 
-    public Output<String> getGateway() {
-        return this.gateway == null ? Output.empty() : this.gateway;
+    public Output<String> gateway() {
+        return this.gateway == null ? Codegen.empty() : this.gateway;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
-    public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+    public Output<String> ipAddress() {
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="ipAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> ipAllocationMethod;
 
-    public Output<Either<String,IPAllocationMethod>> getIpAllocationMethod() {
-        return this.ipAllocationMethod == null ? Output.empty() : this.ipAllocationMethod;
+    public Output<Either<String,IPAllocationMethod>> ipAllocationMethod() {
+        return this.ipAllocationMethod == null ? Codegen.empty() : this.ipAllocationMethod;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="ipVersion")
       private final @Nullable Output<Either<String,IPVersion>> ipVersion;
 
-    public Output<Either<String,IPVersion>> getIpVersion() {
-        return this.ipVersion == null ? Output.empty() : this.ipVersion;
+    public Output<Either<String,IPVersion>> ipVersion() {
+        return this.ipVersion == null ? Codegen.empty() : this.ipVersion;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
-    public Output<String> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<String> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public NetworkInterfaceIPConfigurationArgs(
@@ -104,12 +105,12 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     }
 
     private NetworkInterfaceIPConfigurationArgs() {
-        this.dnsServers = Output.empty();
-        this.gateway = Output.empty();
-        this.ipAddress = Output.empty();
-        this.ipAllocationMethod = Output.empty();
-        this.ipVersion = Output.empty();
-        this.subnet = Output.empty();
+        this.dnsServers = Codegen.empty();
+        this.gateway = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.ipAllocationMethod = Codegen.empty();
+        this.ipVersion = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder dnsServers(@Nullable List<String> dnsServers) {
-            this.dnsServers = Output.ofNullable(dnsServers);
+            this.dnsServers = Codegen.ofNullable(dnsServers);
             return this;
         }
         public Builder dnsServers(String... dnsServers) {
@@ -158,7 +159,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder gateway(@Nullable String gateway) {
-            this.gateway = Output.ofNullable(gateway);
+            this.gateway = Codegen.ofNullable(gateway);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -166,7 +167,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder ipAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> ipAllocationMethod) {
@@ -174,7 +175,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ipAllocationMethod(@Nullable Either<String,IPAllocationMethod> ipAllocationMethod) {
-            this.ipAllocationMethod = Output.ofNullable(ipAllocationMethod);
+            this.ipAllocationMethod = Codegen.ofNullable(ipAllocationMethod);
             return this;
         }
         public Builder ipVersion(@Nullable Output<Either<String,IPVersion>> ipVersion) {
@@ -182,7 +183,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ipVersion(@Nullable Either<String,IPVersion> ipVersion) {
-            this.ipVersion = Output.ofNullable(ipVersion);
+            this.ipVersion = Codegen.ofNullable(ipVersion);
             return this;
         }
         public Builder subnet(@Nullable Output<String> subnet) {
@@ -190,7 +191,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public NetworkInterfaceIPConfigurationArgs build() {
             return new NetworkInterfaceIPConfigurationArgs(dnsServers, gateway, ipAddress, ipAllocationMethod, ipVersion, subnet);

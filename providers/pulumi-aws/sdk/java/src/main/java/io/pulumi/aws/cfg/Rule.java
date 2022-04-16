@@ -11,6 +11,7 @@ import io.pulumi.aws.cfg.outputs.RuleSource;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The ARN of the config rule
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Description of the rule
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -72,7 +73,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return A string in JSON format that is passed to the AWS Config rule Lambda function.
      * 
      */
-    public Output</* @Nullable */ String> getInputParameters() {
+    public Output</* @Nullable */ String> inputParameters() {
         return this.inputParameters;
     }
     /**
@@ -86,7 +87,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
-    public Output</* @Nullable */ String> getMaximumExecutionFrequency() {
+    public Output</* @Nullable */ String> maximumExecutionFrequency() {
         return this.maximumExecutionFrequency;
     }
     /**
@@ -100,7 +101,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The name of the rule
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -114,7 +115,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return The ID of the config rule
      * 
      */
-    public Output<String> getRuleId() {
+    public Output<String> ruleId() {
         return this.ruleId;
     }
     /**
@@ -128,7 +129,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Scope defines which resources can trigger an evaluation for the rule as documented below.
      * 
      */
-    public Output</* @Nullable */ RuleScope> getScope() {
+    public Output</* @Nullable */ RuleScope> scope() {
         return this.scope;
     }
     /**
@@ -142,7 +143,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
      * 
      */
-    public Output<RuleSource> getSource() {
+    public Output<RuleSource> source() {
         return this.source;
     }
     /**
@@ -156,7 +157,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -170,7 +171,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -196,7 +197,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Rule(String name, RuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/rule:Rule", name, args == null ? RuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cfg/rule:Rule", name, args == null ? RuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Rule(String name, Output<String> id, @Nullable RuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

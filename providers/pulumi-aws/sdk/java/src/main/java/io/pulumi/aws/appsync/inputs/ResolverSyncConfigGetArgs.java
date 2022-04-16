@@ -6,6 +6,7 @@ package io.pulumi.aws.appsync.inputs;
 import io.pulumi.aws.appsync.inputs.ResolverSyncConfigLambdaConflictHandlerConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
     @Import(name="conflictDetection")
       private final @Nullable Output<String> conflictDetection;
 
-    public Output<String> getConflictDetection() {
-        return this.conflictDetection == null ? Output.empty() : this.conflictDetection;
+    public Output<String> conflictDetection() {
+        return this.conflictDetection == null ? Codegen.empty() : this.conflictDetection;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
     @Import(name="conflictHandler")
       private final @Nullable Output<String> conflictHandler;
 
-    public Output<String> getConflictHandler() {
-        return this.conflictHandler == null ? Output.empty() : this.conflictHandler;
+    public Output<String> conflictHandler() {
+        return this.conflictHandler == null ? Codegen.empty() : this.conflictHandler;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
     @Import(name="lambdaConflictHandlerConfig")
       private final @Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigGetArgs> lambdaConflictHandlerConfig;
 
-    public Output<ResolverSyncConfigLambdaConflictHandlerConfigGetArgs> getLambdaConflictHandlerConfig() {
-        return this.lambdaConflictHandlerConfig == null ? Output.empty() : this.lambdaConflictHandlerConfig;
+    public Output<ResolverSyncConfigLambdaConflictHandlerConfigGetArgs> lambdaConflictHandlerConfig() {
+        return this.lambdaConflictHandlerConfig == null ? Codegen.empty() : this.lambdaConflictHandlerConfig;
     }
 
     public ResolverSyncConfigGetArgs(
@@ -58,9 +59,9 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
     }
 
     private ResolverSyncConfigGetArgs() {
-        this.conflictDetection = Output.empty();
-        this.conflictHandler = Output.empty();
-        this.lambdaConflictHandlerConfig = Output.empty();
+        this.conflictDetection = Codegen.empty();
+        this.conflictHandler = Codegen.empty();
+        this.lambdaConflictHandlerConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder conflictDetection(@Nullable String conflictDetection) {
-            this.conflictDetection = Output.ofNullable(conflictDetection);
+            this.conflictDetection = Codegen.ofNullable(conflictDetection);
             return this;
         }
         public Builder conflictHandler(@Nullable Output<String> conflictHandler) {
@@ -100,7 +101,7 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder conflictHandler(@Nullable String conflictHandler) {
-            this.conflictHandler = Output.ofNullable(conflictHandler);
+            this.conflictHandler = Codegen.ofNullable(conflictHandler);
             return this;
         }
         public Builder lambdaConflictHandlerConfig(@Nullable Output<ResolverSyncConfigLambdaConflictHandlerConfigGetArgs> lambdaConflictHandlerConfig) {
@@ -108,7 +109,7 @@ public final class ResolverSyncConfigGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder lambdaConflictHandlerConfig(@Nullable ResolverSyncConfigLambdaConflictHandlerConfigGetArgs lambdaConflictHandlerConfig) {
-            this.lambdaConflictHandlerConfig = Output.ofNullable(lambdaConflictHandlerConfig);
+            this.lambdaConflictHandlerConfig = Codegen.ofNullable(lambdaConflictHandlerConfig);
             return this;
         }        public ResolverSyncConfigGetArgs build() {
             return new ResolverSyncConfigGetArgs(conflictDetection, conflictHandler, lambdaConflictHandlerConfig);

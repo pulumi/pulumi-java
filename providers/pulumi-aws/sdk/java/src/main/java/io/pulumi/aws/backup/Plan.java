@@ -11,6 +11,7 @@ import io.pulumi.aws.backup.outputs.PlanRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -43,7 +44,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @return An object that specifies backup options for each resource type.
      * 
      */
-    public Output</* @Nullable */ List<PlanAdvancedBackupSetting>> getAdvancedBackupSettings() {
+    public Output</* @Nullable */ List<PlanAdvancedBackupSetting>> advancedBackupSettings() {
         return this.advancedBackupSettings;
     }
     /**
@@ -57,7 +58,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @return The ARN of the backup plan.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -71,7 +72,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @return The display name of a backup plan.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -85,7 +86,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @return A rule object that specifies a scheduled task that is used to back up a selection of resources.
      * 
      */
-    public Output<List<PlanRule>> getRules() {
+    public Output<List<PlanRule>> rules() {
         return this.rules;
     }
     /**
@@ -99,7 +100,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the plans you create. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -113,7 +114,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -127,7 +128,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @return Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
      * 
      */
-    public Output<String> getVersion() {
+    public Output<String> version() {
         return this.version;
     }
 
@@ -153,7 +154,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Plan(String name, PlanArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:backup/plan:Plan", name, args == null ? PlanArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:backup/plan:Plan", name, args == null ? PlanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Plan(String name, Output<String> id, @Nullable PlanState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

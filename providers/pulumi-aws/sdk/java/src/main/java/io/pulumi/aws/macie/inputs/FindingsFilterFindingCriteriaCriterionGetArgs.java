@@ -5,6 +5,7 @@ package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     @Import(name="eqExactMatches")
       private final @Nullable Output<List<String>> eqExactMatches;
 
-    public Output<List<String>> getEqExactMatches() {
-        return this.eqExactMatches == null ? Output.empty() : this.eqExactMatches;
+    public Output<List<String>> eqExactMatches() {
+        return this.eqExactMatches == null ? Codegen.empty() : this.eqExactMatches;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     @Import(name="eqs")
       private final @Nullable Output<List<String>> eqs;
 
-    public Output<List<String>> getEqs() {
-        return this.eqs == null ? Output.empty() : this.eqs;
+    public Output<List<String>> eqs() {
+        return this.eqs == null ? Codegen.empty() : this.eqs;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     @Import(name="field", required=true)
       private final Output<String> field;
 
-    public Output<String> getField() {
+    public Output<String> field() {
         return this.field;
     }
 
@@ -55,8 +56,8 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     @Import(name="gt")
       private final @Nullable Output<String> gt;
 
-    public Output<String> getGt() {
-        return this.gt == null ? Output.empty() : this.gt;
+    public Output<String> gt() {
+        return this.gt == null ? Codegen.empty() : this.gt;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     @Import(name="gte")
       private final @Nullable Output<String> gte;
 
-    public Output<String> getGte() {
-        return this.gte == null ? Output.empty() : this.gte;
+    public Output<String> gte() {
+        return this.gte == null ? Codegen.empty() : this.gte;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     @Import(name="lt")
       private final @Nullable Output<String> lt;
 
-    public Output<String> getLt() {
-        return this.lt == null ? Output.empty() : this.lt;
+    public Output<String> lt() {
+        return this.lt == null ? Codegen.empty() : this.lt;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     @Import(name="lte")
       private final @Nullable Output<String> lte;
 
-    public Output<String> getLte() {
-        return this.lte == null ? Output.empty() : this.lte;
+    public Output<String> lte() {
+        return this.lte == null ? Codegen.empty() : this.lte;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     @Import(name="neqs")
       private final @Nullable Output<List<String>> neqs;
 
-    public Output<List<String>> getNeqs() {
-        return this.neqs == null ? Output.empty() : this.neqs;
+    public Output<List<String>> neqs() {
+        return this.neqs == null ? Codegen.empty() : this.neqs;
     }
 
     public FindingsFilterFindingCriteriaCriterionGetArgs(
@@ -123,14 +124,14 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
     }
 
     private FindingsFilterFindingCriteriaCriterionGetArgs() {
-        this.eqExactMatches = Output.empty();
-        this.eqs = Output.empty();
-        this.field = Output.empty();
-        this.gt = Output.empty();
-        this.gte = Output.empty();
-        this.lt = Output.empty();
-        this.lte = Output.empty();
-        this.neqs = Output.empty();
+        this.eqExactMatches = Codegen.empty();
+        this.eqs = Codegen.empty();
+        this.field = Codegen.empty();
+        this.gt = Codegen.empty();
+        this.gte = Codegen.empty();
+        this.lt = Codegen.empty();
+        this.lte = Codegen.empty();
+        this.neqs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
             return this;
         }
         public Builder eqExactMatches(@Nullable List<String> eqExactMatches) {
-            this.eqExactMatches = Output.ofNullable(eqExactMatches);
+            this.eqExactMatches = Codegen.ofNullable(eqExactMatches);
             return this;
         }
         public Builder eqExactMatches(String... eqExactMatches) {
@@ -183,7 +184,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
             return this;
         }
         public Builder eqs(@Nullable List<String> eqs) {
-            this.eqs = Output.ofNullable(eqs);
+            this.eqs = Codegen.ofNullable(eqs);
             return this;
         }
         public Builder eqs(String... eqs) {
@@ -202,7 +203,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
             return this;
         }
         public Builder gt(@Nullable String gt) {
-            this.gt = Output.ofNullable(gt);
+            this.gt = Codegen.ofNullable(gt);
             return this;
         }
         public Builder gte(@Nullable Output<String> gte) {
@@ -210,7 +211,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
             return this;
         }
         public Builder gte(@Nullable String gte) {
-            this.gte = Output.ofNullable(gte);
+            this.gte = Codegen.ofNullable(gte);
             return this;
         }
         public Builder lt(@Nullable Output<String> lt) {
@@ -218,7 +219,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
             return this;
         }
         public Builder lt(@Nullable String lt) {
-            this.lt = Output.ofNullable(lt);
+            this.lt = Codegen.ofNullable(lt);
             return this;
         }
         public Builder lte(@Nullable Output<String> lte) {
@@ -226,7 +227,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
             return this;
         }
         public Builder lte(@Nullable String lte) {
-            this.lte = Output.ofNullable(lte);
+            this.lte = Codegen.ofNullable(lte);
             return this;
         }
         public Builder neqs(@Nullable Output<List<String>> neqs) {
@@ -234,7 +235,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends io.pulu
             return this;
         }
         public Builder neqs(@Nullable List<String> neqs) {
-            this.neqs = Output.ofNullable(neqs);
+            this.neqs = Codegen.ofNullable(neqs);
             return this;
         }
         public Builder neqs(String... neqs) {

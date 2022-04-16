@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.metastore_v1beta.enums.DatabaseDumpDatabaseType;
 import io.pulumi.googlenative.metastore_v1beta.enums.DatabaseDumpType;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
       private final @Nullable Output<DatabaseDumpDatabaseType> databaseType;
 
-    public Output<DatabaseDumpDatabaseType> getDatabaseType() {
-        return this.databaseType == null ? Output.empty() : this.databaseType;
+    public Output<DatabaseDumpDatabaseType> databaseType() {
+        return this.databaseType == null ? Codegen.empty() : this.databaseType;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gcsUri")
       private final @Nullable Output<String> gcsUri;
 
-    public Output<String> getGcsUri() {
-        return this.gcsUri == null ? Output.empty() : this.gcsUri;
+    public Output<String> gcsUri() {
+        return this.gcsUri == null ? Codegen.empty() : this.gcsUri;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceDatabase")
       private final @Nullable Output<String> sourceDatabase;
 
-    public Output<String> getSourceDatabase() {
-        return this.sourceDatabase == null ? Output.empty() : this.sourceDatabase;
+    public Output<String> sourceDatabase() {
+        return this.sourceDatabase == null ? Codegen.empty() : this.sourceDatabase;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<DatabaseDumpType> type;
 
-    public Output<DatabaseDumpType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<DatabaseDumpType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DatabaseDumpArgs(
@@ -76,10 +77,10 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseDumpArgs() {
-        this.databaseType = Output.empty();
-        this.gcsUri = Output.empty();
-        this.sourceDatabase = Output.empty();
-        this.type = Output.empty();
+        this.databaseType = Codegen.empty();
+        this.gcsUri = Codegen.empty();
+        this.sourceDatabase = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseType(@Nullable DatabaseDumpDatabaseType databaseType) {
-            this.databaseType = Output.ofNullable(databaseType);
+            this.databaseType = Codegen.ofNullable(databaseType);
             return this;
         }
         public Builder gcsUri(@Nullable Output<String> gcsUri) {
@@ -121,7 +122,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Output.ofNullable(gcsUri);
+            this.gcsUri = Codegen.ofNullable(gcsUri);
             return this;
         }
         public Builder sourceDatabase(@Nullable Output<String> sourceDatabase) {
@@ -129,7 +130,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDatabase(@Nullable String sourceDatabase) {
-            this.sourceDatabase = Output.ofNullable(sourceDatabase);
+            this.sourceDatabase = Codegen.ofNullable(sourceDatabase);
             return this;
         }
         public Builder type(@Nullable Output<DatabaseDumpType> type) {
@@ -137,7 +138,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable DatabaseDumpType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DatabaseDumpArgs build() {
             return new DatabaseDumpArgs(databaseType, gcsUri, sourceDatabase, type);

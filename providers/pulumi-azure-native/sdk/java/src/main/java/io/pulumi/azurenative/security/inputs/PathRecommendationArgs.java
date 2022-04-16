@@ -7,6 +7,7 @@ import io.pulumi.azurenative.security.inputs.PublisherInfoArgs;
 import io.pulumi.azurenative.security.inputs.UserRecommendationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="action")
       private final @Nullable Output<String> action;
 
-    public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+    public Output<String> action() {
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="common")
       private final @Nullable Output<Boolean> common;
 
-    public Output<Boolean> getCommon() {
-        return this.common == null ? Output.empty() : this.common;
+    public Output<Boolean> common() {
+        return this.common == null ? Codegen.empty() : this.common;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="configurationStatus")
       private final @Nullable Output<String> configurationStatus;
 
-    public Output<String> getConfigurationStatus() {
-        return this.configurationStatus == null ? Output.empty() : this.configurationStatus;
+    public Output<String> configurationStatus() {
+        return this.configurationStatus == null ? Codegen.empty() : this.configurationStatus;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="fileType")
       private final @Nullable Output<String> fileType;
 
-    public Output<String> getFileType() {
-        return this.fileType == null ? Output.empty() : this.fileType;
+    public Output<String> fileType() {
+        return this.fileType == null ? Codegen.empty() : this.fileType;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="publisherInfo")
       private final @Nullable Output<PublisherInfoArgs> publisherInfo;
 
-    public Output<PublisherInfoArgs> getPublisherInfo() {
-        return this.publisherInfo == null ? Output.empty() : this.publisherInfo;
+    public Output<PublisherInfoArgs> publisherInfo() {
+        return this.publisherInfo == null ? Codegen.empty() : this.publisherInfo;
     }
 
     /**
@@ -95,22 +96,22 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="userSids")
       private final @Nullable Output<List<String>> userSids;
 
-    public Output<List<String>> getUserSids() {
-        return this.userSids == null ? Output.empty() : this.userSids;
+    public Output<List<String>> userSids() {
+        return this.userSids == null ? Codegen.empty() : this.userSids;
     }
 
     @Import(name="usernames")
       private final @Nullable Output<List<UserRecommendationArgs>> usernames;
 
-    public Output<List<UserRecommendationArgs>> getUsernames() {
-        return this.usernames == null ? Output.empty() : this.usernames;
+    public Output<List<UserRecommendationArgs>> usernames() {
+        return this.usernames == null ? Codegen.empty() : this.usernames;
     }
 
     public PathRecommendationArgs(
@@ -135,15 +136,15 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PathRecommendationArgs() {
-        this.action = Output.empty();
-        this.common = Output.empty();
-        this.configurationStatus = Output.empty();
-        this.fileType = Output.empty();
-        this.path = Output.empty();
-        this.publisherInfo = Output.empty();
-        this.type = Output.empty();
-        this.userSids = Output.empty();
-        this.usernames = Output.empty();
+        this.action = Codegen.empty();
+        this.common = Codegen.empty();
+        this.configurationStatus = Codegen.empty();
+        this.fileType = Codegen.empty();
+        this.path = Codegen.empty();
+        this.publisherInfo = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userSids = Codegen.empty();
+        this.usernames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -187,7 +188,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder common(@Nullable Output<Boolean> common) {
@@ -195,7 +196,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder common(@Nullable Boolean common) {
-            this.common = Output.ofNullable(common);
+            this.common = Codegen.ofNullable(common);
             return this;
         }
         public Builder configurationStatus(@Nullable Output<String> configurationStatus) {
@@ -203,7 +204,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder configurationStatus(@Nullable String configurationStatus) {
-            this.configurationStatus = Output.ofNullable(configurationStatus);
+            this.configurationStatus = Codegen.ofNullable(configurationStatus);
             return this;
         }
         public Builder fileType(@Nullable Output<String> fileType) {
@@ -211,7 +212,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder fileType(@Nullable String fileType) {
-            this.fileType = Output.ofNullable(fileType);
+            this.fileType = Codegen.ofNullable(fileType);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -219,7 +220,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder publisherInfo(@Nullable Output<PublisherInfoArgs> publisherInfo) {
@@ -227,7 +228,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder publisherInfo(@Nullable PublisherInfoArgs publisherInfo) {
-            this.publisherInfo = Output.ofNullable(publisherInfo);
+            this.publisherInfo = Codegen.ofNullable(publisherInfo);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -235,7 +236,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userSids(@Nullable Output<List<String>> userSids) {
@@ -243,7 +244,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder userSids(@Nullable List<String> userSids) {
-            this.userSids = Output.ofNullable(userSids);
+            this.userSids = Codegen.ofNullable(userSids);
             return this;
         }
         public Builder userSids(String... userSids) {
@@ -254,7 +255,7 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder usernames(@Nullable List<UserRecommendationArgs> usernames) {
-            this.usernames = Output.ofNullable(usernames);
+            this.usernames = Codegen.ofNullable(usernames);
             return this;
         }
         public Builder usernames(UserRecommendationArgs... usernames) {

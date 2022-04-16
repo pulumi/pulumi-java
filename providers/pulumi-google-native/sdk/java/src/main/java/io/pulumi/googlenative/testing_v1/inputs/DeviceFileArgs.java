@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.ObbFileArgs;
 import io.pulumi.googlenative.testing_v1.inputs.RegularFileArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="obbFile")
       private final @Nullable Output<ObbFileArgs> obbFile;
 
-    public Output<ObbFileArgs> getObbFile() {
-        return this.obbFile == null ? Output.empty() : this.obbFile;
+    public Output<ObbFileArgs> obbFile() {
+        return this.obbFile == null ? Codegen.empty() : this.obbFile;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="regularFile")
       private final @Nullable Output<RegularFileArgs> regularFile;
 
-    public Output<RegularFileArgs> getRegularFile() {
-        return this.regularFile == null ? Output.empty() : this.regularFile;
+    public Output<RegularFileArgs> regularFile() {
+        return this.regularFile == null ? Codegen.empty() : this.regularFile;
     }
 
     public DeviceFileArgs(
@@ -49,8 +50,8 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceFileArgs() {
-        this.obbFile = Output.empty();
-        this.regularFile = Output.empty();
+        this.obbFile = Codegen.empty();
+        this.regularFile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder obbFile(@Nullable ObbFileArgs obbFile) {
-            this.obbFile = Output.ofNullable(obbFile);
+            this.obbFile = Codegen.ofNullable(obbFile);
             return this;
         }
         public Builder regularFile(@Nullable Output<RegularFileArgs> regularFile) {
@@ -88,7 +89,7 @@ public final class DeviceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regularFile(@Nullable RegularFileArgs regularFile) {
-            this.regularFile = Output.ofNullable(regularFile);
+            this.regularFile = Codegen.ofNullable(regularFile);
             return this;
         }        public DeviceFileArgs build() {
             return new DeviceFileArgs(obbFile, regularFile);

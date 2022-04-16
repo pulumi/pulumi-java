@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
     @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
-    public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+    public Output<String> networkInterfaceId() {
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
     @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
-        return this.securityGroupId == null ? Output.empty() : this.securityGroupId;
+    public Output<String> securityGroupId() {
+        return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
     }
 
     public NetworkInterfaceSecurityGroupAttachmentState(
@@ -44,8 +45,8 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
     }
 
     private NetworkInterfaceSecurityGroupAttachmentState() {
-        this.networkInterfaceId = Output.empty();
-        this.securityGroupId = Output.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.securityGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
@@ -83,7 +84,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
             return this;
         }
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Output.ofNullable(securityGroupId);
+            this.securityGroupId = Codegen.ofNullable(securityGroupId);
             return this;
         }        public NetworkInterfaceSecurityGroupAttachmentState build() {
             return new NetworkInterfaceSecurityGroupAttachmentState(networkInterfaceId, securityGroupId);

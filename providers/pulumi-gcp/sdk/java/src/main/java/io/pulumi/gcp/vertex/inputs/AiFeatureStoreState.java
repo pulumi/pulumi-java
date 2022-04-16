@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
-    public Output<Boolean> getForceDestroy() {
-        return this.forceDestroy == null ? Output.empty() : this.forceDestroy;
+    public Output<Boolean> forceDestroy() {
+        return this.forceDestroy == null ? Codegen.empty() : this.forceDestroy;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="onlineServingConfig")
       private final @Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
 
-    public Output<AiFeatureStoreOnlineServingConfigGetArgs> getOnlineServingConfig() {
-        return this.onlineServingConfig == null ? Output.empty() : this.onlineServingConfig;
+    public Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig() {
+        return this.onlineServingConfig == null ? Codegen.empty() : this.onlineServingConfig;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -116,8 +117,8 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
-    public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+    public Output<String> updateTime() {
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public AiFeatureStoreState(
@@ -142,15 +143,15 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
     }
 
     private AiFeatureStoreState() {
-        this.createTime = Output.empty();
-        this.etag = Output.empty();
-        this.forceDestroy = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.onlineServingConfig = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.forceDestroy = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.onlineServingConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -202,7 +203,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder forceDestroy(@Nullable Output<Boolean> forceDestroy) {
@@ -210,7 +211,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder forceDestroy(@Nullable Boolean forceDestroy) {
-            this.forceDestroy = Output.ofNullable(forceDestroy);
+            this.forceDestroy = Codegen.ofNullable(forceDestroy);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -218,7 +219,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -226,7 +227,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder onlineServingConfig(@Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig) {
@@ -234,7 +235,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder onlineServingConfig(@Nullable AiFeatureStoreOnlineServingConfigGetArgs onlineServingConfig) {
-            this.onlineServingConfig = Output.ofNullable(onlineServingConfig);
+            this.onlineServingConfig = Codegen.ofNullable(onlineServingConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -242,7 +243,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -250,7 +251,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -258,7 +259,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public AiFeatureStoreState build() {
             return new AiFeatureStoreState(createTime, etag, forceDestroy, labels, name, onlineServingConfig, project, region, updateTime);

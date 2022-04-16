@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="functionAlias")
       private final @Nullable Output<String> functionAlias;
 
-    public Output<String> getFunctionAlias() {
-        return this.functionAlias == null ? Output.empty() : this.functionAlias;
+    public Output<String> functionAlias() {
+        return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
     @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
-    public Output<String> getWorkspaceId() {
-        return this.workspaceId == null ? Output.empty() : this.workspaceId;
+    public Output<String> workspaceId() {
+        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 
     public NonAzureQueryPropertiesArgs(
@@ -48,8 +49,8 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private NonAzureQueryPropertiesArgs() {
-        this.functionAlias = Output.empty();
-        this.workspaceId = Output.empty();
+        this.functionAlias = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = Output.ofNullable(functionAlias);
+            this.functionAlias = Codegen.ofNullable(functionAlias);
             return this;
         }
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
@@ -87,7 +88,7 @@ public final class NonAzureQueryPropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Output.ofNullable(workspaceId);
+            this.workspaceId = Codegen.ofNullable(workspaceId);
             return this;
         }        public NonAzureQueryPropertiesArgs build() {
             return new NonAzureQueryPropertiesArgs(functionAlias, workspaceId);

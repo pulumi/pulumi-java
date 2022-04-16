@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.FlowS3OutputFormatConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,22 +19,22 @@ public final class FlowS3DestinationPropertiesArgs extends io.pulumi.resources.R
     @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
-    public Output<String> getBucketName() {
+    public Output<String> bucketName() {
         return this.bucketName;
     }
 
     @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
-    public Output<String> getBucketPrefix() {
-        return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
+    public Output<String> bucketPrefix() {
+        return this.bucketPrefix == null ? Codegen.empty() : this.bucketPrefix;
     }
 
     @Import(name="s3OutputFormatConfig")
       private final @Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig;
 
-    public Output<FlowS3OutputFormatConfigArgs> getS3OutputFormatConfig() {
-        return this.s3OutputFormatConfig == null ? Output.empty() : this.s3OutputFormatConfig;
+    public Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig() {
+        return this.s3OutputFormatConfig == null ? Codegen.empty() : this.s3OutputFormatConfig;
     }
 
     public FlowS3DestinationPropertiesArgs(
@@ -46,9 +47,9 @@ public final class FlowS3DestinationPropertiesArgs extends io.pulumi.resources.R
     }
 
     private FlowS3DestinationPropertiesArgs() {
-        this.bucketName = Output.empty();
-        this.bucketPrefix = Output.empty();
-        this.s3OutputFormatConfig = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.bucketPrefix = Codegen.empty();
+        this.s3OutputFormatConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class FlowS3DestinationPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = Output.ofNullable(bucketPrefix);
+            this.bucketPrefix = Codegen.ofNullable(bucketPrefix);
             return this;
         }
         public Builder s3OutputFormatConfig(@Nullable Output<FlowS3OutputFormatConfigArgs> s3OutputFormatConfig) {
@@ -96,7 +97,7 @@ public final class FlowS3DestinationPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder s3OutputFormatConfig(@Nullable FlowS3OutputFormatConfigArgs s3OutputFormatConfig) {
-            this.s3OutputFormatConfig = Output.ofNullable(s3OutputFormatConfig);
+            this.s3OutputFormatConfig = Codegen.ofNullable(s3OutputFormatConfig);
             return this;
         }        public FlowS3DestinationPropertiesArgs build() {
             return new FlowS3DestinationPropertiesArgs(bucketName, bucketPrefix, s3OutputFormatConfig);

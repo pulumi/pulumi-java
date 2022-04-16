@@ -36,7 +36,7 @@ public final class EdgeCacheServiceLogConfig {
      * Specifies whether to enable logging for traffic served by this service.
      * 
     */
-    public Optional<Boolean> getEnable() {
+    public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
@@ -44,7 +44,7 @@ public final class EdgeCacheServiceLogConfig {
      * This field can only be specified if logging is enabled for this service.
      * 
     */
-    public Optional<Double> getSampleRate() {
+    public Optional<Double> sampleRate() {
         return Optional.ofNullable(this.sampleRate);
     }
 

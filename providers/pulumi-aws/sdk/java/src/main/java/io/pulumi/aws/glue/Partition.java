@@ -10,6 +10,7 @@ import io.pulumi.aws.glue.outputs.PartitionStorageDescriptor;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @return ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
      * 
      */
-    public Output<String> getCatalogId() {
+    public Output<String> catalogId() {
         return this.catalogId;
     }
     /**
@@ -56,7 +57,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @return The time at which the partition was created.
      * 
      */
-    public Output<String> getCreationTime() {
+    public Output<String> creationTime() {
         return this.creationTime;
     }
     /**
@@ -70,7 +71,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @return Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     /**
@@ -84,7 +85,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @return The last time at which the partition was accessed.
      * 
      */
-    public Output<String> getLastAccessedTime() {
+    public Output<String> lastAccessedTime() {
         return this.lastAccessedTime;
     }
     /**
@@ -98,7 +99,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @return The last time at which column statistics were computed for this partition.
      * 
      */
-    public Output<String> getLastAnalyzedTime() {
+    public Output<String> lastAnalyzedTime() {
         return this.lastAnalyzedTime;
     }
     /**
@@ -112,7 +113,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @return A map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getParameters() {
+    public Output</* @Nullable */ Map<String,String>> parameters() {
         return this.parameters;
     }
     /**
@@ -126,7 +127,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @return The values that define the partition.
      * 
      */
-    public Output<List<String>> getPartitionValues() {
+    public Output<List<String>> partitionValues() {
         return this.partitionValues;
     }
     /**
@@ -140,13 +141,13 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @return A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
      * 
      */
-    public Output</* @Nullable */ PartitionStorageDescriptor> getStorageDescriptor() {
+    public Output</* @Nullable */ PartitionStorageDescriptor> storageDescriptor() {
         return this.storageDescriptor;
     }
     @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -172,7 +173,7 @@ public class Partition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Partition(String name, PartitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/partition:Partition", name, args == null ? PartitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/partition:Partition", name, args == null ? PartitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Partition(String name, Output<String> id, @Nullable PartitionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

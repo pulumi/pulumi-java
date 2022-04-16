@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.node.k8s.io_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1beta1.inputs.OverheadArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1beta1.inputs.SchedulingArgs;
@@ -24,8 +25,8 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
-    public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+    public Output<String> apiVersion() {
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="handler", required=true)
       private final Output<String> handler;
 
-    public Output<String> getHandler() {
+    public Output<String> handler() {
         return this.handler;
     }
 
@@ -46,8 +47,8 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+    public Output<ObjectMetaArgs> metadata() {
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="overhead")
       private final @Nullable Output<OverheadArgs> overhead;
 
-    public Output<OverheadArgs> getOverhead() {
-        return this.overhead == null ? Output.empty() : this.overhead;
+    public Output<OverheadArgs> overhead() {
+        return this.overhead == null ? Codegen.empty() : this.overhead;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="scheduling")
       private final @Nullable Output<SchedulingArgs> scheduling;
 
-    public Output<SchedulingArgs> getScheduling() {
-        return this.scheduling == null ? Output.empty() : this.scheduling;
+    public Output<SchedulingArgs> scheduling() {
+        return this.scheduling == null ? Codegen.empty() : this.scheduling;
     }
 
     public RuntimeClassArgs(
@@ -99,12 +100,12 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuntimeClassArgs() {
-        this.apiVersion = Output.empty();
-        this.handler = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
-        this.overhead = Output.empty();
-        this.scheduling = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.handler = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.overhead = Codegen.empty();
+        this.scheduling = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder handler(Output<String> handler) {
@@ -158,7 +159,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -166,7 +167,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder overhead(@Nullable Output<OverheadArgs> overhead) {
@@ -174,7 +175,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overhead(@Nullable OverheadArgs overhead) {
-            this.overhead = Output.ofNullable(overhead);
+            this.overhead = Codegen.ofNullable(overhead);
             return this;
         }
         public Builder scheduling(@Nullable Output<SchedulingArgs> scheduling) {
@@ -182,7 +183,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduling(@Nullable SchedulingArgs scheduling) {
-            this.scheduling = Output.ofNullable(scheduling);
+            this.scheduling = Codegen.ofNullable(scheduling);
             return this;
         }        public RuntimeClassArgs build() {
             return new RuntimeClassArgs(apiVersion, handler, kind, metadata, overhead, scheduling);

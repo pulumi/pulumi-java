@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
     @Import(name="connectionLimit", required=true)
       private final Output<Integer> connectionLimit;
 
-    public Output<Integer> getConnectionLimit() {
+    public Output<Integer> connectionLimit() {
         return this.connectionLimit;
     }
 
@@ -33,7 +34,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
     @Import(name="projectIdOrNum", required=true)
       private final Output<String> projectIdOrNum;
 
-    public Output<String> getProjectIdOrNum() {
+    public Output<String> projectIdOrNum() {
         return this.projectIdOrNum;
     }
 
@@ -45,8 +46,8 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
     }
 
     private ServiceAttachmentConsumerAcceptListGetArgs() {
-        this.connectionLimit = Output.empty();
-        this.projectIdOrNum = Output.empty();
+        this.connectionLimit = Codegen.empty();
+        this.projectIdOrNum = Codegen.empty();
     }
 
     public static Builder builder() {

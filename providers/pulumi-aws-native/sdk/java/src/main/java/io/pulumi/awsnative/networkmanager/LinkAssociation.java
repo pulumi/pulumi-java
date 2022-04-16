@@ -8,6 +8,7 @@ import io.pulumi.awsnative.networkmanager.LinkAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class LinkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the device
      * 
      */
-    public Output<String> getDeviceId() {
+    public Output<String> deviceId() {
         return this.deviceId;
     }
     /**
@@ -42,7 +43,7 @@ public class LinkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the global network.
      * 
      */
-    public Output<String> getGlobalNetworkId() {
+    public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
     /**
@@ -56,7 +57,7 @@ public class LinkAssociation extends io.pulumi.resources.CustomResource {
      * @return The ID of the link
      * 
      */
-    public Output<String> getLinkId() {
+    public Output<String> linkId() {
         return this.linkId;
     }
 
@@ -82,7 +83,7 @@ public class LinkAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LinkAssociation(String name, LinkAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:networkmanager:LinkAssociation", name, args == null ? LinkAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:networkmanager:LinkAssociation", name, args == null ? LinkAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LinkAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

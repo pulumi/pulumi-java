@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowSsh")
       private final @Nullable Output<Boolean> allowSsh;
 
-    public Output<Boolean> getAllowSsh() {
-        return this.allowSsh == null ? Output.empty() : this.allowSsh;
+    public Output<Boolean> allowSsh() {
+        return this.allowSsh == null ? Codegen.empty() : this.allowSsh;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowSudo")
       private final @Nullable Output<Boolean> allowSudo;
 
-    public Output<Boolean> getAllowSudo() {
-        return this.allowSudo == null ? Output.empty() : this.allowSudo;
+    public Output<Boolean> allowSudo() {
+        return this.allowSudo == null ? Codegen.empty() : this.allowSudo;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="level")
       private final @Nullable Output<String> level;
 
-    public Output<String> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+    public Output<String> level() {
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
-    public Output<String> getStackId() {
-        return this.stackId == null ? Output.empty() : this.stackId;
+    public Output<String> stackId() {
+        return this.stackId == null ? Codegen.empty() : this.stackId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userArn")
       private final @Nullable Output<String> userArn;
 
-    public Output<String> getUserArn() {
-        return this.userArn == null ? Output.empty() : this.userArn;
+    public Output<String> userArn() {
+        return this.userArn == null ? Codegen.empty() : this.userArn;
     }
 
     public PermissionState(
@@ -84,11 +85,11 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionState() {
-        this.allowSsh = Output.empty();
-        this.allowSudo = Output.empty();
-        this.level = Output.empty();
-        this.stackId = Output.empty();
-        this.userArn = Output.empty();
+        this.allowSsh = Codegen.empty();
+        this.allowSudo = Codegen.empty();
+        this.level = Codegen.empty();
+        this.stackId = Codegen.empty();
+        this.userArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowSsh(@Nullable Boolean allowSsh) {
-            this.allowSsh = Output.ofNullable(allowSsh);
+            this.allowSsh = Codegen.ofNullable(allowSsh);
             return this;
         }
         public Builder allowSudo(@Nullable Output<Boolean> allowSudo) {
@@ -132,7 +133,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowSudo(@Nullable Boolean allowSudo) {
-            this.allowSudo = Output.ofNullable(allowSudo);
+            this.allowSudo = Codegen.ofNullable(allowSudo);
             return this;
         }
         public Builder level(@Nullable Output<String> level) {
@@ -140,7 +141,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder level(@Nullable String level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }
         public Builder stackId(@Nullable Output<String> stackId) {
@@ -148,7 +149,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stackId(@Nullable String stackId) {
-            this.stackId = Output.ofNullable(stackId);
+            this.stackId = Codegen.ofNullable(stackId);
             return this;
         }
         public Builder userArn(@Nullable Output<String> userArn) {
@@ -156,7 +157,7 @@ public final class PermissionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userArn(@Nullable String userArn) {
-            this.userArn = Output.ofNullable(userArn);
+            this.userArn = Codegen.ofNullable(userArn);
             return this;
         }        public PermissionState build() {
             return new PermissionState(allowSsh, allowSudo, level, stackId, userArn);

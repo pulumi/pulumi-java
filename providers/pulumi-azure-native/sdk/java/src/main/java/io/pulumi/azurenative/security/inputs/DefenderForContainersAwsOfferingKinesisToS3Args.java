@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class DefenderForContainersAwsOfferingKinesisToS3Args extends io.pu
     @Import(name="cloudRoleArn")
       private final @Nullable Output<String> cloudRoleArn;
 
-    public Output<String> getCloudRoleArn() {
-        return this.cloudRoleArn == null ? Output.empty() : this.cloudRoleArn;
+    public Output<String> cloudRoleArn() {
+        return this.cloudRoleArn == null ? Codegen.empty() : this.cloudRoleArn;
     }
 
     public DefenderForContainersAwsOfferingKinesisToS3Args(@Nullable Output<String> cloudRoleArn) {
@@ -34,7 +35,7 @@ public final class DefenderForContainersAwsOfferingKinesisToS3Args extends io.pu
     }
 
     private DefenderForContainersAwsOfferingKinesisToS3Args() {
-        this.cloudRoleArn = Output.empty();
+        this.cloudRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DefenderForContainersAwsOfferingKinesisToS3Args extends io.pu
             return this;
         }
         public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
-            this.cloudRoleArn = Output.ofNullable(cloudRoleArn);
+            this.cloudRoleArn = Codegen.ofNullable(cloudRoleArn);
             return this;
         }        public DefenderForContainersAwsOfferingKinesisToS3Args build() {
             return new DefenderForContainersAwsOfferingKinesisToS3Args(cloudRoleArn);

@@ -24,7 +24,7 @@ public final class SecurityConfigResponse {
      * Optional. Kerberos related configuration.
      * 
     */
-    public KerberosConfigResponse getKerberosConfig() {
+    public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
     }
 

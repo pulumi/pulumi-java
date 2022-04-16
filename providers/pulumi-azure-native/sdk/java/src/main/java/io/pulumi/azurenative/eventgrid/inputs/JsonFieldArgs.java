@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceField")
       private final @Nullable Output<String> sourceField;
 
-    public Output<String> getSourceField() {
-        return this.sourceField == null ? Output.empty() : this.sourceField;
+    public Output<String> sourceField() {
+        return this.sourceField == null ? Codegen.empty() : this.sourceField;
     }
 
     public JsonFieldArgs(@Nullable Output<String> sourceField) {
@@ -34,7 +35,7 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JsonFieldArgs() {
-        this.sourceField = Output.empty();
+        this.sourceField = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceField(@Nullable String sourceField) {
-            this.sourceField = Output.ofNullable(sourceField);
+            this.sourceField = Codegen.ofNullable(sourceField);
             return this;
         }        public JsonFieldArgs build() {
             return new JsonFieldArgs(sourceField);

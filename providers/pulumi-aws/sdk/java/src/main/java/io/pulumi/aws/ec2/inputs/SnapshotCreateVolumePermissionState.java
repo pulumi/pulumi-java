@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
     @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
-    public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+    public Output<String> accountId() {
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
-    public Output<String> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+    public Output<String> snapshotId() {
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     public SnapshotCreateVolumePermissionState(
@@ -44,8 +45,8 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
     }
 
     private SnapshotCreateVolumePermissionState() {
-        this.accountId = Output.empty();
-        this.snapshotId = Output.empty();
+        this.accountId = Codegen.empty();
+        this.snapshotId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
@@ -83,7 +84,7 @@ public final class SnapshotCreateVolumePermissionState extends io.pulumi.resourc
             return this;
         }
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }        public SnapshotCreateVolumePermissionState build() {
             return new SnapshotCreateVolumePermissionState(accountId, snapshotId);

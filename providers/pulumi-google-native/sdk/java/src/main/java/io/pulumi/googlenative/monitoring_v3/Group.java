@@ -6,6 +6,7 @@ package io.pulumi.googlenative.monitoring_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v3.GroupArgs;
 import java.lang.Boolean;
@@ -30,7 +31,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return A user-assigned name for this group, used only for display purposes.
      * 
      */
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
     /**
@@ -44,7 +45,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The filter used to determine which monitored resources belong to this group.
      * 
      */
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
     /**
@@ -58,7 +59,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
      * 
      */
-    public Output<Boolean> getIsCluster() {
+    public Output<Boolean> isCluster() {
         return this.isCluster;
     }
     /**
@@ -72,7 +73,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The name of this group. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is ignored and a new name is created consisting of the project specified in the call to CreateGroup and a unique [GROUP_ID] that is generated automatically.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @return The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
      * 
      */
-    public Output<String> getParentName() {
+    public Output<String> parentName() {
         return this.parentName;
     }
 
@@ -112,7 +113,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Group(String name, @Nullable GroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:monitoring/v3:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:monitoring/v3:Group", name, args == null ? GroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Group(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

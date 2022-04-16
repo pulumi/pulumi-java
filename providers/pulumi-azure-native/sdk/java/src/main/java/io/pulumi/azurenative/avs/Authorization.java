@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return The ID of the ExpressRoute Circuit Authorization
      * 
      */
-    public Output<String> getExpressRouteAuthorizationId() {
+    public Output<String> expressRouteAuthorizationId() {
         return this.expressRouteAuthorizationId;
     }
     /**
@@ -55,7 +56,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return The key of the ExpressRoute Circuit Authorization
      * 
      */
-    public Output<String> getExpressRouteAuthorizationKey() {
+    public Output<String> expressRouteAuthorizationKey() {
         return this.expressRouteAuthorizationKey;
     }
     /**
@@ -69,7 +70,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return The state of the  ExpressRoute Circuit Authorization provisioning
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -97,7 +98,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -123,7 +124,7 @@ public class Authorization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Authorization(String name, AuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:avs:Authorization", name, args == null ? AuthorizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:avs:Authorization", name, args == null ? AuthorizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Authorization(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

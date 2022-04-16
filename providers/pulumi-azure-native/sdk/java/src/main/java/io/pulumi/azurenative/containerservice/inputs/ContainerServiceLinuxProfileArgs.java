@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.inputs.ContainerServiceSshConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
     @Import(name="adminUsername", required=true)
       private final Output<String> adminUsername;
 
-    public Output<String> getAdminUsername() {
+    public Output<String> adminUsername() {
         return this.adminUsername;
     }
 
@@ -36,7 +37,7 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
     @Import(name="ssh", required=true)
       private final Output<ContainerServiceSshConfigurationArgs> ssh;
 
-    public Output<ContainerServiceSshConfigurationArgs> getSsh() {
+    public Output<ContainerServiceSshConfigurationArgs> ssh() {
         return this.ssh;
     }
 
@@ -48,8 +49,8 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
     }
 
     private ContainerServiceLinuxProfileArgs() {
-        this.adminUsername = Output.empty();
-        this.ssh = Output.empty();
+        this.adminUsername = Codegen.empty();
+        this.ssh = Codegen.empty();
     }
 
     public static Builder builder() {

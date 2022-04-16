@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.InputMappingLocation;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fieldName")
       private final @Nullable Output<String> fieldName;
 
-    public Output<String> getFieldName() {
-        return this.fieldName == null ? Output.empty() : this.fieldName;
+    public Output<String> fieldName() {
+        return this.fieldName == null ? Codegen.empty() : this.fieldName;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<InputMappingLocation> location;
 
-    public Output<InputMappingLocation> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<InputMappingLocation> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methodMatch")
       private final @Nullable Output<String> methodMatch;
 
-    public Output<String> getMethodMatch() {
-        return this.methodMatch == null ? Output.empty() : this.methodMatch;
+    public Output<String> methodMatch() {
+        return this.methodMatch == null ? Codegen.empty() : this.methodMatch;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public InputMappingArgs(
@@ -75,10 +76,10 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InputMappingArgs() {
-        this.fieldName = Output.empty();
-        this.location = Output.empty();
-        this.methodMatch = Output.empty();
-        this.value = Output.empty();
+        this.fieldName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.methodMatch = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Output.ofNullable(fieldName);
+            this.fieldName = Codegen.ofNullable(fieldName);
             return this;
         }
         public Builder location(@Nullable Output<InputMappingLocation> location) {
@@ -120,7 +121,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable InputMappingLocation location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder methodMatch(@Nullable Output<String> methodMatch) {
@@ -128,7 +129,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder methodMatch(@Nullable String methodMatch) {
-            this.methodMatch = Output.ofNullable(methodMatch);
+            this.methodMatch = Codegen.ofNullable(methodMatch);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -136,7 +137,7 @@ public final class InputMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public InputMappingArgs build() {
             return new InputMappingArgs(fieldName, location, methodMatch, value);

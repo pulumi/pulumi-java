@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
     @Import(name="virtualInterfaceId", required=true)
       private final Output<String> virtualInterfaceId;
 
-    public Output<String> getVirtualInterfaceId() {
+    public Output<String> virtualInterfaceId() {
         return this.virtualInterfaceId;
     }
 
@@ -45,8 +46,8 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
     }
 
     private HostedPublicVirtualInterfaceAccepterArgs() {
-        this.tags = Output.empty();
-        this.virtualInterfaceId = Output.empty();
+        this.tags = Codegen.empty();
+        this.virtualInterfaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -24,28 +25,28 @@ public final class RuleGroupSizeConstraintStatementArgs extends io.pulumi.resour
     @Import(name="comparisonOperator", required=true)
       private final Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator;
 
-    public Output<RuleGroupSizeConstraintStatementComparisonOperator> getComparisonOperator() {
+    public Output<RuleGroupSizeConstraintStatementComparisonOperator> comparisonOperator() {
         return this.comparisonOperator;
     }
 
     @Import(name="fieldToMatch", required=true)
       private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
-    public Output<RuleGroupFieldToMatchArgs> getFieldToMatch() {
+    public Output<RuleGroupFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="size", required=true)
       private final Output<Double> size;
 
-    public Output<Double> getSize() {
+    public Output<Double> size() {
         return this.size;
     }
 
     @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
-    public Output<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
+    public Output<List<RuleGroupTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
@@ -61,10 +62,10 @@ public final class RuleGroupSizeConstraintStatementArgs extends io.pulumi.resour
     }
 
     private RuleGroupSizeConstraintStatementArgs() {
-        this.comparisonOperator = Output.empty();
-        this.fieldToMatch = Output.empty();
-        this.size = Output.empty();
-        this.textTransformations = Output.empty();
+        this.comparisonOperator = Codegen.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.size = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {

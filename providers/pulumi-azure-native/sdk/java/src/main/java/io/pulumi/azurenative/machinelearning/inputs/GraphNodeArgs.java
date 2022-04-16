@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="assetId")
       private final @Nullable Output<String> assetId;
 
-    public Output<String> getAssetId() {
-        return this.assetId == null ? Output.empty() : this.assetId;
+    public Output<String> assetId() {
+        return this.assetId == null ? Codegen.empty() : this.assetId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="inputId")
       private final @Nullable Output<String> inputId;
 
-    public Output<String> getInputId() {
-        return this.inputId == null ? Output.empty() : this.inputId;
+    public Output<String> inputId() {
+        return this.inputId == null ? Codegen.empty() : this.inputId;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="outputId")
       private final @Nullable Output<String> outputId;
 
-    public Output<String> getOutputId() {
-        return this.outputId == null ? Output.empty() : this.outputId;
+    public Output<String> outputId() {
+        return this.outputId == null ? Codegen.empty() : this.outputId;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
       private final @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
 
-    public Output<Map<String,WebServiceParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,WebServiceParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public GraphNodeArgs(
@@ -76,10 +77,10 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GraphNodeArgs() {
-        this.assetId = Output.empty();
-        this.inputId = Output.empty();
-        this.outputId = Output.empty();
-        this.parameters = Output.empty();
+        this.assetId = Codegen.empty();
+        this.inputId = Codegen.empty();
+        this.outputId = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetId(@Nullable String assetId) {
-            this.assetId = Output.ofNullable(assetId);
+            this.assetId = Codegen.ofNullable(assetId);
             return this;
         }
         public Builder inputId(@Nullable Output<String> inputId) {
@@ -121,7 +122,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputId(@Nullable String inputId) {
-            this.inputId = Output.ofNullable(inputId);
+            this.inputId = Codegen.ofNullable(inputId);
             return this;
         }
         public Builder outputId(@Nullable Output<String> outputId) {
@@ -129,7 +130,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputId(@Nullable String outputId) {
-            this.outputId = Output.ofNullable(outputId);
+            this.outputId = Codegen.ofNullable(outputId);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,WebServiceParameterArgs>> parameters) {
@@ -137,7 +138,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }        public GraphNodeArgs build() {
             return new GraphNodeArgs(assetId, inputId, outputId, parameters);

@@ -34,7 +34,7 @@ public final class HealthCheckStepPropertiesResponse {
      * The health check step attributes
      * 
     */
-    public RestHealthCheckStepAttributesResponse getAttributes() {
+    public RestHealthCheckStepAttributesResponse attributes() {
         return this.attributes;
     }
     /**
@@ -42,7 +42,7 @@ public final class HealthCheckStepPropertiesResponse {
      * Expected value is 'HealthCheck'.
      * 
     */
-    public String getStepType() {
+    public String stepType() {
         return this.stepType;
     }
 

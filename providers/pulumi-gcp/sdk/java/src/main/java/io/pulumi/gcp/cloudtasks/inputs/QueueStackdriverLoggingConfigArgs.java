@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudtasks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -22,7 +23,7 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
     @Import(name="samplingRatio", required=true)
       private final Output<Double> samplingRatio;
 
-    public Output<Double> getSamplingRatio() {
+    public Output<Double> samplingRatio() {
         return this.samplingRatio;
     }
 
@@ -31,7 +32,7 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
     }
 
     private QueueStackdriverLoggingConfigArgs() {
-        this.samplingRatio = Output.empty();
+        this.samplingRatio = Codegen.empty();
     }
 
     public static Builder builder() {

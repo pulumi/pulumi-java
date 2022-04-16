@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionDiskDiskEncryptionKeyGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionDiskSourceSnapshotEncryptionKeyGetArgs;
 import java.lang.Integer;
@@ -26,8 +27,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
-    public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+    public Output<String> creationTimestamp() {
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="diskEncryptionKey")
       private final @Nullable Output<RegionDiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
-    public Output<RegionDiskDiskEncryptionKeyGetArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
+    public Output<RegionDiskDiskEncryptionKeyGetArgs> diskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> interface_;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    public Output<String> getInterface_() {
-        return this.interface_ == null ? Output.empty() : this.interface_;
+    public Output<String> interface_() {
+        return this.interface_ == null ? Codegen.empty() : this.interface_;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
-    public Output<String> getLabelFingerprint() {
-        return this.labelFingerprint == null ? Output.empty() : this.labelFingerprint;
+    public Output<String> labelFingerprint() {
+        return this.labelFingerprint == null ? Codegen.empty() : this.labelFingerprint;
     }
 
     /**
@@ -96,8 +97,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -107,8 +108,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastAttachTimestamp")
       private final @Nullable Output<String> lastAttachTimestamp;
 
-    public Output<String> getLastAttachTimestamp() {
-        return this.lastAttachTimestamp == null ? Output.empty() : this.lastAttachTimestamp;
+    public Output<String> lastAttachTimestamp() {
+        return this.lastAttachTimestamp == null ? Codegen.empty() : this.lastAttachTimestamp;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="lastDetachTimestamp")
       private final @Nullable Output<String> lastDetachTimestamp;
 
-    public Output<String> getLastDetachTimestamp() {
-        return this.lastDetachTimestamp == null ? Output.empty() : this.lastDetachTimestamp;
+    public Output<String> lastDetachTimestamp() {
+        return this.lastDetachTimestamp == null ? Codegen.empty() : this.lastDetachTimestamp;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -150,8 +151,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="physicalBlockSizeBytes")
       private final @Nullable Output<Integer> physicalBlockSizeBytes;
 
-    public Output<Integer> getPhysicalBlockSizeBytes() {
-        return this.physicalBlockSizeBytes == null ? Output.empty() : this.physicalBlockSizeBytes;
+    public Output<Integer> physicalBlockSizeBytes() {
+        return this.physicalBlockSizeBytes == null ? Codegen.empty() : this.physicalBlockSizeBytes;
     }
 
     /**
@@ -162,8 +163,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -173,8 +174,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -184,8 +185,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="replicaZones")
       private final @Nullable Output<List<String>> replicaZones;
 
-    public Output<List<String>> getReplicaZones() {
-        return this.replicaZones == null ? Output.empty() : this.replicaZones;
+    public Output<List<String>> replicaZones() {
+        return this.replicaZones == null ? Codegen.empty() : this.replicaZones;
     }
 
     /**
@@ -195,8 +196,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
-    public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+    public Output<String> selfLink() {
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -212,8 +213,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="size")
       private final @Nullable Output<Integer> size;
 
-    public Output<Integer> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<Integer> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -229,8 +230,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="snapshot")
       private final @Nullable Output<String> snapshot;
 
-    public Output<String> getSnapshot() {
-        return this.snapshot == null ? Output.empty() : this.snapshot;
+    public Output<String> snapshot() {
+        return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 
     /**
@@ -243,8 +244,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotEncryptionKey")
       private final @Nullable Output<RegionDiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
 
-    public Output<RegionDiskSourceSnapshotEncryptionKeyGetArgs> getSourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Output.empty() : this.sourceSnapshotEncryptionKey;
+    public Output<RegionDiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey() {
+        return this.sourceSnapshotEncryptionKey == null ? Codegen.empty() : this.sourceSnapshotEncryptionKey;
     }
 
     /**
@@ -256,8 +257,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceSnapshotId")
       private final @Nullable Output<String> sourceSnapshotId;
 
-    public Output<String> getSourceSnapshotId() {
-        return this.sourceSnapshotId == null ? Output.empty() : this.sourceSnapshotId;
+    public Output<String> sourceSnapshotId() {
+        return this.sourceSnapshotId == null ? Codegen.empty() : this.sourceSnapshotId;
     }
 
     /**
@@ -268,8 +269,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -279,8 +280,8 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     @Import(name="users")
       private final @Nullable Output<List<String>> users;
 
-    public Output<List<String>> getUsers() {
-        return this.users == null ? Output.empty() : this.users;
+    public Output<List<String>> users() {
+        return this.users == null ? Codegen.empty() : this.users;
     }
 
     public RegionDiskState(
@@ -327,26 +328,26 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegionDiskState() {
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.diskEncryptionKey = Output.empty();
-        this.interface_ = Output.empty();
-        this.labelFingerprint = Output.empty();
-        this.labels = Output.empty();
-        this.lastAttachTimestamp = Output.empty();
-        this.lastDetachTimestamp = Output.empty();
-        this.name = Output.empty();
-        this.physicalBlockSizeBytes = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.replicaZones = Output.empty();
-        this.selfLink = Output.empty();
-        this.size = Output.empty();
-        this.snapshot = Output.empty();
-        this.sourceSnapshotEncryptionKey = Output.empty();
-        this.sourceSnapshotId = Output.empty();
-        this.type = Output.empty();
-        this.users = Output.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.diskEncryptionKey = Codegen.empty();
+        this.interface_ = Codegen.empty();
+        this.labelFingerprint = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.lastAttachTimestamp = Codegen.empty();
+        this.lastDetachTimestamp = Codegen.empty();
+        this.name = Codegen.empty();
+        this.physicalBlockSizeBytes = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.replicaZones = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.size = Codegen.empty();
+        this.snapshot = Codegen.empty();
+        this.sourceSnapshotEncryptionKey = Codegen.empty();
+        this.sourceSnapshotId = Codegen.empty();
+        this.type = Codegen.empty();
+        this.users = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -412,7 +413,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -420,7 +421,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diskEncryptionKey(@Nullable Output<RegionDiskDiskEncryptionKeyGetArgs> diskEncryptionKey) {
@@ -428,7 +429,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskEncryptionKey(@Nullable RegionDiskDiskEncryptionKeyGetArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
             return this;
         }
         public Builder interface_(@Nullable Output<String> interface_) {
@@ -436,7 +437,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interface_(@Nullable String interface_) {
-            this.interface_ = Output.ofNullable(interface_);
+            this.interface_ = Codegen.ofNullable(interface_);
             return this;
         }
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
@@ -444,7 +445,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labelFingerprint(@Nullable String labelFingerprint) {
-            this.labelFingerprint = Output.ofNullable(labelFingerprint);
+            this.labelFingerprint = Codegen.ofNullable(labelFingerprint);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -452,7 +453,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder lastAttachTimestamp(@Nullable Output<String> lastAttachTimestamp) {
@@ -460,7 +461,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastAttachTimestamp(@Nullable String lastAttachTimestamp) {
-            this.lastAttachTimestamp = Output.ofNullable(lastAttachTimestamp);
+            this.lastAttachTimestamp = Codegen.ofNullable(lastAttachTimestamp);
             return this;
         }
         public Builder lastDetachTimestamp(@Nullable Output<String> lastDetachTimestamp) {
@@ -468,7 +469,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastDetachTimestamp(@Nullable String lastDetachTimestamp) {
-            this.lastDetachTimestamp = Output.ofNullable(lastDetachTimestamp);
+            this.lastDetachTimestamp = Codegen.ofNullable(lastDetachTimestamp);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -476,7 +477,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder physicalBlockSizeBytes(@Nullable Output<Integer> physicalBlockSizeBytes) {
@@ -484,7 +485,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder physicalBlockSizeBytes(@Nullable Integer physicalBlockSizeBytes) {
-            this.physicalBlockSizeBytes = Output.ofNullable(physicalBlockSizeBytes);
+            this.physicalBlockSizeBytes = Codegen.ofNullable(physicalBlockSizeBytes);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -492,7 +493,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -500,7 +501,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder replicaZones(@Nullable Output<List<String>> replicaZones) {
@@ -508,7 +509,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicaZones(@Nullable List<String> replicaZones) {
-            this.replicaZones = Output.ofNullable(replicaZones);
+            this.replicaZones = Codegen.ofNullable(replicaZones);
             return this;
         }
         public Builder replicaZones(String... replicaZones) {
@@ -519,7 +520,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder size(@Nullable Output<Integer> size) {
@@ -527,7 +528,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable Integer size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder snapshot(@Nullable Output<String> snapshot) {
@@ -535,7 +536,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshot(@Nullable String snapshot) {
-            this.snapshot = Output.ofNullable(snapshot);
+            this.snapshot = Codegen.ofNullable(snapshot);
             return this;
         }
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<RegionDiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey) {
@@ -543,7 +544,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceSnapshotEncryptionKey(@Nullable RegionDiskSourceSnapshotEncryptionKeyGetArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
+            this.sourceSnapshotEncryptionKey = Codegen.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }
         public Builder sourceSnapshotId(@Nullable Output<String> sourceSnapshotId) {
@@ -551,7 +552,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceSnapshotId(@Nullable String sourceSnapshotId) {
-            this.sourceSnapshotId = Output.ofNullable(sourceSnapshotId);
+            this.sourceSnapshotId = Codegen.ofNullable(sourceSnapshotId);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -559,7 +560,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder users(@Nullable Output<List<String>> users) {
@@ -567,7 +568,7 @@ public final class RegionDiskState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder users(@Nullable List<String> users) {
-            this.users = Output.ofNullable(users);
+            this.users = Codegen.ofNullable(users);
             return this;
         }
         public Builder users(String... users) {

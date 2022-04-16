@@ -51,7 +51,7 @@ public final class CxIntentTrainingPhrase {
      * The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
      * 
     */
-    public Optional<String> getId() {
+    public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
@@ -65,14 +65,14 @@ public final class CxIntentTrainingPhrase {
      * Structure is documented below.
      * 
     */
-    public List<CxIntentTrainingPhrasePart> getParts() {
+    public List<CxIntentTrainingPhrasePart> parts() {
         return this.parts;
     }
     /**
      * Indicates how many times this example was added to the intent.
      * 
     */
-    public Optional<Integer> getRepeatCount() {
+    public Optional<Integer> repeatCount() {
         return Optional.ofNullable(this.repeatCount);
     }
 

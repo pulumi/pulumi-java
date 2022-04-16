@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -32,7 +33,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
-    public Output<String> getDataSetId() {
+    public Output<String> dataSetId() {
         return this.dataSetId;
     }
 
@@ -43,8 +44,8 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
-    public Output<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
+    public Output<String> dataSetMappingName() {
+        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -66,7 +67,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
-    public Output<String> getShareSubscriptionName() {
+    public Output<String> shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -88,7 +89,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     @Import(name="synapseWorkspaceSqlPoolTableResourceId", required=true)
       private final Output<String> synapseWorkspaceSqlPoolTableResourceId;
 
-    public Output<String> getSynapseWorkspaceSqlPoolTableResourceId() {
+    public Output<String> synapseWorkspaceSqlPoolTableResourceId() {
         return this.synapseWorkspaceSqlPoolTableResourceId;
     }
 
@@ -110,13 +111,13 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
     }
 
     private SynapseWorkspaceSqlPoolTableDataSetMappingArgs() {
-        this.accountName = Output.empty();
-        this.dataSetId = Output.empty();
-        this.dataSetMappingName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
-        this.synapseWorkspaceSqlPoolTableResourceId = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetId = Codegen.empty();
+        this.dataSetMappingName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
+        this.synapseWorkspaceSqlPoolTableResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class SynapseWorkspaceSqlPoolTableDataSetMappingArgs extends io.pul
             return this;
         }
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
             return this;
         }
         public Builder kind(Output<String> kind) {

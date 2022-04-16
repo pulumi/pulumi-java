@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
-    public Output<List<String>> getPaths() {
-        return this.paths == null ? Output.empty() : this.paths;
+    public Output<List<String>> paths() {
+        return this.paths == null ? Codegen.empty() : this.paths;
     }
 
     public UniqueKeyArgs(@Nullable Output<List<String>> paths) {
@@ -35,7 +36,7 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UniqueKeyArgs() {
-        this.paths = Output.empty();
+        this.paths = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class UniqueKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Output.ofNullable(paths);
+            this.paths = Codegen.ofNullable(paths);
             return this;
         }
         public Builder paths(String... paths) {

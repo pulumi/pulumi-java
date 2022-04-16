@@ -9,6 +9,7 @@ import io.pulumi.azurenative.documentdb.inputs.IndexingPolicyArgs;
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,8 +31,8 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
     @Import(name="conflictResolutionPolicy")
       private final @Nullable Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
 
-    public Output<ConflictResolutionPolicyArgs> getConflictResolutionPolicy() {
-        return this.conflictResolutionPolicy == null ? Output.empty() : this.conflictResolutionPolicy;
+    public Output<ConflictResolutionPolicyArgs> conflictResolutionPolicy() {
+        return this.conflictResolutionPolicy == null ? Codegen.empty() : this.conflictResolutionPolicy;
     }
 
     /**
@@ -41,8 +42,8 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
     @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
-    public Output<Integer> getDefaultTtl() {
-        return this.defaultTtl == null ? Output.empty() : this.defaultTtl;
+    public Output<Integer> defaultTtl() {
+        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -63,8 +64,8 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
     @Import(name="indexingPolicy")
       private final @Nullable Output<IndexingPolicyArgs> indexingPolicy;
 
-    public Output<IndexingPolicyArgs> getIndexingPolicy() {
-        return this.indexingPolicy == null ? Output.empty() : this.indexingPolicy;
+    public Output<IndexingPolicyArgs> indexingPolicy() {
+        return this.indexingPolicy == null ? Codegen.empty() : this.indexingPolicy;
     }
 
     /**
@@ -74,8 +75,8 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
     @Import(name="partitionKey")
       private final @Nullable Output<ContainerPartitionKeyArgs> partitionKey;
 
-    public Output<ContainerPartitionKeyArgs> getPartitionKey() {
-        return this.partitionKey == null ? Output.empty() : this.partitionKey;
+    public Output<ContainerPartitionKeyArgs> partitionKey() {
+        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
     /**
@@ -85,8 +86,8 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
     @Import(name="uniqueKeyPolicy")
       private final @Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy;
 
-    public Output<UniqueKeyPolicyArgs> getUniqueKeyPolicy() {
-        return this.uniqueKeyPolicy == null ? Output.empty() : this.uniqueKeyPolicy;
+    public Output<UniqueKeyPolicyArgs> uniqueKeyPolicy() {
+        return this.uniqueKeyPolicy == null ? Codegen.empty() : this.uniqueKeyPolicy;
     }
 
     public GremlinGraphResourceArgs(
@@ -105,12 +106,12 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
     }
 
     private GremlinGraphResourceArgs() {
-        this.conflictResolutionPolicy = Output.empty();
-        this.defaultTtl = Output.empty();
-        this.id = Output.empty();
-        this.indexingPolicy = Output.empty();
-        this.partitionKey = Output.empty();
-        this.uniqueKeyPolicy = Output.empty();
+        this.conflictResolutionPolicy = Codegen.empty();
+        this.defaultTtl = Codegen.empty();
+        this.id = Codegen.empty();
+        this.indexingPolicy = Codegen.empty();
+        this.partitionKey = Codegen.empty();
+        this.uniqueKeyPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder conflictResolutionPolicy(@Nullable ConflictResolutionPolicyArgs conflictResolutionPolicy) {
-            this.conflictResolutionPolicy = Output.ofNullable(conflictResolutionPolicy);
+            this.conflictResolutionPolicy = Codegen.ofNullable(conflictResolutionPolicy);
             return this;
         }
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
@@ -156,7 +157,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Output.ofNullable(defaultTtl);
+            this.defaultTtl = Codegen.ofNullable(defaultTtl);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -172,7 +173,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder indexingPolicy(@Nullable IndexingPolicyArgs indexingPolicy) {
-            this.indexingPolicy = Output.ofNullable(indexingPolicy);
+            this.indexingPolicy = Codegen.ofNullable(indexingPolicy);
             return this;
         }
         public Builder partitionKey(@Nullable Output<ContainerPartitionKeyArgs> partitionKey) {
@@ -180,7 +181,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder partitionKey(@Nullable ContainerPartitionKeyArgs partitionKey) {
-            this.partitionKey = Output.ofNullable(partitionKey);
+            this.partitionKey = Codegen.ofNullable(partitionKey);
             return this;
         }
         public Builder uniqueKeyPolicy(@Nullable Output<UniqueKeyPolicyArgs> uniqueKeyPolicy) {
@@ -188,7 +189,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder uniqueKeyPolicy(@Nullable UniqueKeyPolicyArgs uniqueKeyPolicy) {
-            this.uniqueKeyPolicy = Output.ofNullable(uniqueKeyPolicy);
+            this.uniqueKeyPolicy = Codegen.ofNullable(uniqueKeyPolicy);
             return this;
         }        public GremlinGraphResourceArgs build() {
             return new GremlinGraphResourceArgs(conflictResolutionPolicy, defaultTtl, id, indexingPolicy, partitionKey, uniqueKeyPolicy);

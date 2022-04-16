@@ -29,7 +29,7 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="compressionProperties")
       private final @Nullable Object compressionProperties;
 
-    public Object getCompressionProperties() {
+    public Object compressionProperties() {
         return this.compressionProperties == null ? null : this.compressionProperties;
     }
 
@@ -41,7 +41,7 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
       private final String type;
 
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.glue.outputs.RegistryTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name for the created Registry.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -44,7 +45,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return A description of the registry. If description is not provided, there will not be any default value for this.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -72,7 +73,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @return List of tags to tag the Registry
      * 
      */
-    public Output</* @Nullable */ List<RegistryTag>> getTags() {
+    public Output</* @Nullable */ List<RegistryTag>> tags() {
         return this.tags;
     }
 
@@ -98,7 +99,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Registry(String name, @Nullable RegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:glue:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:glue:Registry", name, args == null ? RegistryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Registry(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

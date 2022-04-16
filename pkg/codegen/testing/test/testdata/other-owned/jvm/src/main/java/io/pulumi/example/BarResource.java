@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.BarResourceArgs;
 import io.pulumi.example.Resource;
 import io.pulumi.example.Utilities;
@@ -16,7 +17,7 @@ public class BarResource extends io.pulumi.resources.ComponentResource {
     @Export(name="foo", type=Resource.class, parameters={})
     private Output</* @Nullable */ Resource> foo;
 
-    public Output</* @Nullable */ Resource> getFoo() {
+    public Output</* @Nullable */ Resource> foo() {
         return this.foo;
     }
 
@@ -42,7 +43,7 @@ public class BarResource extends io.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BarResource(String name, @Nullable BarResourceArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("bar::BarResource", name, args == null ? BarResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()), true);
+        super("bar::BarResource", name, args == null ? BarResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

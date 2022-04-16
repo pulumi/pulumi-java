@@ -9,6 +9,7 @@ import io.pulumi.azurenative.databox.inputs.TransferConfigurationTransferFilterD
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,8 +30,8 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="transferAllDetails")
       private final @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
 
-    public Output<TransferConfigurationTransferAllDetailsArgs> getTransferAllDetails() {
-        return this.transferAllDetails == null ? Output.empty() : this.transferAllDetails;
+    public Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails() {
+        return this.transferAllDetails == null ? Codegen.empty() : this.transferAllDetails;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="transferConfigurationType", required=true)
       private final Output<Either<String,TransferConfigurationType>> transferConfigurationType;
 
-    public Output<Either<String,TransferConfigurationType>> getTransferConfigurationType() {
+    public Output<Either<String,TransferConfigurationType>> transferConfigurationType() {
         return this.transferConfigurationType;
     }
 
@@ -51,8 +52,8 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     @Import(name="transferFilterDetails")
       private final @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
 
-    public Output<TransferConfigurationTransferFilterDetailsArgs> getTransferFilterDetails() {
-        return this.transferFilterDetails == null ? Output.empty() : this.transferFilterDetails;
+    public Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails() {
+        return this.transferFilterDetails == null ? Codegen.empty() : this.transferFilterDetails;
     }
 
     public TransferConfigurationArgs(
@@ -65,9 +66,9 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private TransferConfigurationArgs() {
-        this.transferAllDetails = Output.empty();
-        this.transferConfigurationType = Output.empty();
-        this.transferFilterDetails = Output.empty();
+        this.transferAllDetails = Codegen.empty();
+        this.transferConfigurationType = Codegen.empty();
+        this.transferFilterDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder transferAllDetails(@Nullable TransferConfigurationTransferAllDetailsArgs transferAllDetails) {
-            this.transferAllDetails = Output.ofNullable(transferAllDetails);
+            this.transferAllDetails = Codegen.ofNullable(transferAllDetails);
             return this;
         }
         public Builder transferConfigurationType(Output<Either<String,TransferConfigurationType>> transferConfigurationType) {
@@ -115,7 +116,7 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder transferFilterDetails(@Nullable TransferConfigurationTransferFilterDetailsArgs transferFilterDetails) {
-            this.transferFilterDetails = Output.ofNullable(transferFilterDetails);
+            this.transferFilterDetails = Codegen.ofNullable(transferFilterDetails);
             return this;
         }        public TransferConfigurationArgs build() {
             return new TransferConfigurationArgs(transferAllDetails, transferConfigurationType, transferFilterDetails);

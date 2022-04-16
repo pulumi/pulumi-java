@@ -6,6 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.inputs.ScopeElementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
     @Import(name="allOf", required=true)
       private final Output<List<ScopeElementArgs>> allOf;
 
-    public Output<List<ScopeElementArgs>> getAllOf() {
+    public Output<List<ScopeElementArgs>> allOf() {
         return this.allOf;
     }
 
@@ -30,7 +31,7 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
     }
 
     private SuppressionAlertsScopeArgs() {
-        this.allOf = Output.empty();
+        this.allOf = Codegen.empty();
     }
 
     public static Builder builder() {

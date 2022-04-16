@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigsArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreParserConfigArgs;
@@ -27,7 +28,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
@@ -45,8 +46,8 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Hl7StoreNotificationConfigArgs> notificationConfig;
 
     @Deprecated /* This field has been replaced by notificationConfigs */
-    public Output<Hl7StoreNotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+    public Output<Hl7StoreNotificationConfigArgs> notificationConfig() {
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="notificationConfigs")
       private final @Nullable Output<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs;
 
-    public Output<List<Hl7StoreNotificationConfigsArgs>> getNotificationConfigs() {
-        return this.notificationConfigs == null ? Output.empty() : this.notificationConfigs;
+    public Output<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs() {
+        return this.notificationConfigs == null ? Codegen.empty() : this.notificationConfigs;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="parserConfig")
       private final @Nullable Output<Hl7StoreParserConfigArgs> parserConfig;
 
-    public Output<Hl7StoreParserConfigArgs> getParserConfig() {
-        return this.parserConfig == null ? Output.empty() : this.parserConfig;
+    public Output<Hl7StoreParserConfigArgs> parserConfig() {
+        return this.parserConfig == null ? Codegen.empty() : this.parserConfig;
     }
 
     public Hl7StoreArgs(
@@ -122,12 +123,12 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private Hl7StoreArgs() {
-        this.dataset = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.notificationConfigs = Output.empty();
-        this.parserConfig = Output.empty();
+        this.dataset = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.notificationConfigs = Codegen.empty();
+        this.parserConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -181,7 +182,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<Hl7StoreNotificationConfigArgs> notificationConfig) {
@@ -189,7 +190,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfig(@Nullable Hl7StoreNotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder notificationConfigs(@Nullable Output<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs) {
@@ -197,7 +198,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfigs(@Nullable List<Hl7StoreNotificationConfigsArgs> notificationConfigs) {
-            this.notificationConfigs = Output.ofNullable(notificationConfigs);
+            this.notificationConfigs = Codegen.ofNullable(notificationConfigs);
             return this;
         }
         public Builder notificationConfigs(Hl7StoreNotificationConfigsArgs... notificationConfigs) {
@@ -208,7 +209,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parserConfig(@Nullable Hl7StoreParserConfigArgs parserConfig) {
-            this.parserConfig = Output.ofNullable(parserConfig);
+            this.parserConfig = Codegen.ofNullable(parserConfig);
             return this;
         }        public Hl7StoreArgs build() {
             return new Hl7StoreArgs(dataset, labels, name, notificationConfig, notificationConfigs, parserConfig);

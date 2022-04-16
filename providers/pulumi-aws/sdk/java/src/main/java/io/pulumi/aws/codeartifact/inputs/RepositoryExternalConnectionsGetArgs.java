@@ -5,6 +5,7 @@ package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,22 +22,22 @@ public final class RepositoryExternalConnectionsGetArgs extends io.pulumi.resour
     @Import(name="externalConnectionName", required=true)
       private final Output<String> externalConnectionName;
 
-    public Output<String> getExternalConnectionName() {
+    public Output<String> externalConnectionName() {
         return this.externalConnectionName;
     }
 
     @Import(name="packageFormat")
       private final @Nullable Output<String> packageFormat;
 
-    public Output<String> getPackageFormat() {
-        return this.packageFormat == null ? Output.empty() : this.packageFormat;
+    public Output<String> packageFormat() {
+        return this.packageFormat == null ? Codegen.empty() : this.packageFormat;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public RepositoryExternalConnectionsGetArgs(
@@ -49,9 +50,9 @@ public final class RepositoryExternalConnectionsGetArgs extends io.pulumi.resour
     }
 
     private RepositoryExternalConnectionsGetArgs() {
-        this.externalConnectionName = Output.empty();
-        this.packageFormat = Output.empty();
-        this.status = Output.empty();
+        this.externalConnectionName = Codegen.empty();
+        this.packageFormat = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RepositoryExternalConnectionsGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder packageFormat(@Nullable String packageFormat) {
-            this.packageFormat = Output.ofNullable(packageFormat);
+            this.packageFormat = Codegen.ofNullable(packageFormat);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -99,7 +100,7 @@ public final class RepositoryExternalConnectionsGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public RepositoryExternalConnectionsGetArgs build() {
             return new RepositoryExternalConnectionsGetArgs(externalConnectionName, packageFormat, status);

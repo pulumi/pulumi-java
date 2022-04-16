@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.VpcEndpointConnectionNotificationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class VpcEndpointConnectionNotification extends io.pulumi.resources.Custo
      * @return One or more endpoint [events](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters) for which to receive notifications.
      * 
      */
-    public Output<List<String>> getConnectionEvents() {
+    public Output<List<String>> connectionEvents() {
         return this.connectionEvents;
     }
     /**
@@ -55,7 +56,7 @@ public class VpcEndpointConnectionNotification extends io.pulumi.resources.Custo
      * @return The ARN of the SNS topic for the notifications.
      * 
      */
-    public Output<String> getConnectionNotificationArn() {
+    public Output<String> connectionNotificationArn() {
         return this.connectionNotificationArn;
     }
     /**
@@ -69,7 +70,7 @@ public class VpcEndpointConnectionNotification extends io.pulumi.resources.Custo
      * @return The type of notification.
      * 
      */
-    public Output<String> getNotificationType() {
+    public Output<String> notificationType() {
         return this.notificationType;
     }
     /**
@@ -83,7 +84,7 @@ public class VpcEndpointConnectionNotification extends io.pulumi.resources.Custo
      * @return The state of the notification.
      * 
      */
-    public Output<String> getState() {
+    public Output<String> state() {
         return this.state;
     }
     /**
@@ -97,7 +98,7 @@ public class VpcEndpointConnectionNotification extends io.pulumi.resources.Custo
      * @return The ID of the VPC Endpoint to receive notifications for.
      * 
      */
-    public Output</* @Nullable */ String> getVpcEndpointId() {
+    public Output</* @Nullable */ String> vpcEndpointId() {
         return this.vpcEndpointId;
     }
     /**
@@ -111,7 +112,7 @@ public class VpcEndpointConnectionNotification extends io.pulumi.resources.Custo
      * @return The ID of the VPC Endpoint Service to receive notifications for.
      * 
      */
-    public Output</* @Nullable */ String> getVpcEndpointServiceId() {
+    public Output</* @Nullable */ String> vpcEndpointServiceId() {
         return this.vpcEndpointServiceId;
     }
 
@@ -137,7 +138,7 @@ public class VpcEndpointConnectionNotification extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public VpcEndpointConnectionNotification(String name, VpcEndpointConnectionNotificationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/vpcEndpointConnectionNotification:VpcEndpointConnectionNotification", name, args == null ? VpcEndpointConnectionNotificationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/vpcEndpointConnectionNotification:VpcEndpointConnectionNotification", name, args == null ? VpcEndpointConnectionNotificationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpcEndpointConnectionNotification(String name, Output<String> id, @Nullable VpcEndpointConnectionNotificationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

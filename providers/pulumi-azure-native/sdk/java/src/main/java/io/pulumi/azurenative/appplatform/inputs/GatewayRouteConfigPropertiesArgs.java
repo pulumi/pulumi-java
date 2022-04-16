@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.GatewayApiRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
     @Import(name="appResourceId")
       private final @Nullable Output<String> appResourceId;
 
-    public Output<String> getAppResourceId() {
-        return this.appResourceId == null ? Output.empty() : this.appResourceId;
+    public Output<String> appResourceId() {
+        return this.appResourceId == null ? Codegen.empty() : this.appResourceId;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
     @Import(name="routes")
       private final @Nullable Output<List<GatewayApiRouteArgs>> routes;
 
-    public Output<List<GatewayApiRouteArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+    public Output<List<GatewayApiRouteArgs>> routes() {
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     public GatewayRouteConfigPropertiesArgs(
@@ -50,8 +51,8 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
     }
 
     private GatewayRouteConfigPropertiesArgs() {
-        this.appResourceId = Output.empty();
-        this.routes = Output.empty();
+        this.appResourceId = Codegen.empty();
+        this.routes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder appResourceId(@Nullable String appResourceId) {
-            this.appResourceId = Output.ofNullable(appResourceId);
+            this.appResourceId = Codegen.ofNullable(appResourceId);
             return this;
         }
         public Builder routes(@Nullable Output<List<GatewayApiRouteArgs>> routes) {
@@ -89,7 +90,7 @@ public final class GatewayRouteConfigPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder routes(@Nullable List<GatewayApiRouteArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(GatewayApiRouteArgs... routes) {

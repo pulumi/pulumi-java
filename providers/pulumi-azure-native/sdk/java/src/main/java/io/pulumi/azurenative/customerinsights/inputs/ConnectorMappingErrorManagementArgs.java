@@ -6,6 +6,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 import io.pulumi.azurenative.customerinsights.enums.ErrorManagementTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,8 +27,8 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
     @Import(name="errorLimit")
       private final @Nullable Output<Integer> errorLimit;
 
-    public Output<Integer> getErrorLimit() {
-        return this.errorLimit == null ? Output.empty() : this.errorLimit;
+    public Output<Integer> errorLimit() {
+        return this.errorLimit == null ? Codegen.empty() : this.errorLimit;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
     @Import(name="errorManagementType", required=true)
       private final Output<ErrorManagementTypes> errorManagementType;
 
-    public Output<ErrorManagementTypes> getErrorManagementType() {
+    public Output<ErrorManagementTypes> errorManagementType() {
         return this.errorManagementType;
     }
 
@@ -49,8 +50,8 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
     }
 
     private ConnectorMappingErrorManagementArgs() {
-        this.errorLimit = Output.empty();
-        this.errorManagementType = Output.empty();
+        this.errorLimit = Codegen.empty();
+        this.errorManagementType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectorMappingErrorManagementArgs extends io.pulumi.resourc
             return this;
         }
         public Builder errorLimit(@Nullable Integer errorLimit) {
-            this.errorLimit = Output.ofNullable(errorLimit);
+            this.errorLimit = Codegen.ofNullable(errorLimit);
             return this;
         }
         public Builder errorManagementType(Output<ErrorManagementTypes> errorManagementType) {

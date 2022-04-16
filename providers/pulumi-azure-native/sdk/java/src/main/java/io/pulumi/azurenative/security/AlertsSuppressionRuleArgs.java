@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.inputs.SuppressionAlertsScopeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="alertType", required=true)
       private final Output<String> alertType;
 
-    public Output<String> getAlertType() {
+    public Output<String> alertType() {
         return this.alertType;
     }
 
@@ -35,8 +36,8 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="alertsSuppressionRuleName")
       private final @Nullable Output<String> alertsSuppressionRuleName;
 
-    public Output<String> getAlertsSuppressionRuleName() {
-        return this.alertsSuppressionRuleName == null ? Output.empty() : this.alertsSuppressionRuleName;
+    public Output<String> alertsSuppressionRuleName() {
+        return this.alertsSuppressionRuleName == null ? Codegen.empty() : this.alertsSuppressionRuleName;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="comment")
       private final @Nullable Output<String> comment;
 
-    public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+    public Output<String> comment() {
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="expirationDateUtc")
       private final @Nullable Output<String> expirationDateUtc;
 
-    public Output<String> getExpirationDateUtc() {
-        return this.expirationDateUtc == null ? Output.empty() : this.expirationDateUtc;
+    public Output<String> expirationDateUtc() {
+        return this.expirationDateUtc == null ? Codegen.empty() : this.expirationDateUtc;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="reason", required=true)
       private final Output<String> reason;
 
-    public Output<String> getReason() {
+    public Output<String> reason() {
         return this.reason;
     }
 
@@ -79,7 +80,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="state", required=true)
       private final Output<Either<String,RuleState>> state;
 
-    public Output<Either<String,RuleState>> getState() {
+    public Output<Either<String,RuleState>> state() {
         return this.state;
     }
 
@@ -90,8 +91,8 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     @Import(name="suppressionAlertsScope")
       private final @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
 
-    public Output<SuppressionAlertsScopeArgs> getSuppressionAlertsScope() {
-        return this.suppressionAlertsScope == null ? Output.empty() : this.suppressionAlertsScope;
+    public Output<SuppressionAlertsScopeArgs> suppressionAlertsScope() {
+        return this.suppressionAlertsScope == null ? Codegen.empty() : this.suppressionAlertsScope;
     }
 
     public AlertsSuppressionRuleArgs(
@@ -112,13 +113,13 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private AlertsSuppressionRuleArgs() {
-        this.alertType = Output.empty();
-        this.alertsSuppressionRuleName = Output.empty();
-        this.comment = Output.empty();
-        this.expirationDateUtc = Output.empty();
-        this.reason = Output.empty();
-        this.state = Output.empty();
-        this.suppressionAlertsScope = Output.empty();
+        this.alertType = Codegen.empty();
+        this.alertsSuppressionRuleName = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.expirationDateUtc = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.state = Codegen.empty();
+        this.suppressionAlertsScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder alertsSuppressionRuleName(@Nullable String alertsSuppressionRuleName) {
-            this.alertsSuppressionRuleName = Output.ofNullable(alertsSuppressionRuleName);
+            this.alertsSuppressionRuleName = Codegen.ofNullable(alertsSuppressionRuleName);
             return this;
         }
         public Builder comment(@Nullable Output<String> comment) {
@@ -174,7 +175,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder expirationDateUtc(@Nullable Output<String> expirationDateUtc) {
@@ -182,7 +183,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder expirationDateUtc(@Nullable String expirationDateUtc) {
-            this.expirationDateUtc = Output.ofNullable(expirationDateUtc);
+            this.expirationDateUtc = Codegen.ofNullable(expirationDateUtc);
             return this;
         }
         public Builder reason(Output<String> reason) {
@@ -206,7 +207,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder suppressionAlertsScope(@Nullable SuppressionAlertsScopeArgs suppressionAlertsScope) {
-            this.suppressionAlertsScope = Output.ofNullable(suppressionAlertsScope);
+            this.suppressionAlertsScope = Codegen.ofNullable(suppressionAlertsScope);
             return this;
         }        public AlertsSuppressionRuleArgs build() {
             return new AlertsSuppressionRuleArgs(alertType, alertsSuppressionRuleName, comment, expirationDateUtc, reason, state, suppressionAlertsScope);

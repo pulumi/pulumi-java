@@ -24,7 +24,7 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaSseK
      * Boolean which indicates if this criteria is enabled.
      * 
     */
-    public Boolean getEnabled() {
+    public Boolean enabled() {
         return this.enabled;
     }
 

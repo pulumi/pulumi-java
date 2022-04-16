@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.enums.JobDatabaseOutputDatabaseOutputMode;
 import io.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     @Import(name="databaseOptions", required=true)
       private final Output<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
-    public Output<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
+    public Output<JobDatabaseTableOutputOptionsArgs> databaseOptions() {
         return this.databaseOptions;
     }
 
@@ -30,8 +31,8 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     @Import(name="databaseOutputMode")
       private final @Nullable Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
 
-    public Output<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
-        return this.databaseOutputMode == null ? Output.empty() : this.databaseOutputMode;
+    public Output<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode() {
+        return this.databaseOutputMode == null ? Codegen.empty() : this.databaseOutputMode;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     @Import(name="glueConnectionName", required=true)
       private final Output<String> glueConnectionName;
 
-    public Output<String> getGlueConnectionName() {
+    public Output<String> glueConnectionName() {
         return this.glueConnectionName;
     }
 
@@ -55,9 +56,9 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     }
 
     private JobDatabaseOutputArgs() {
-        this.databaseOptions = Output.empty();
-        this.databaseOutputMode = Output.empty();
-        this.glueConnectionName = Output.empty();
+        this.databaseOptions = Codegen.empty();
+        this.databaseOutputMode = Codegen.empty();
+        this.glueConnectionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder databaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
-            this.databaseOutputMode = Output.ofNullable(databaseOutputMode);
+            this.databaseOutputMode = Codegen.ofNullable(databaseOutputMode);
             return this;
         }
         public Builder glueConnectionName(Output<String> glueConnectionName) {

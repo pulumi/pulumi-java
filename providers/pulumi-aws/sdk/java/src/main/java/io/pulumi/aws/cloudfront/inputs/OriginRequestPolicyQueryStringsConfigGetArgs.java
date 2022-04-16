@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,15 +19,15 @@ public final class OriginRequestPolicyQueryStringsConfigGetArgs extends io.pulum
     @Import(name="queryStringBehavior", required=true)
       private final Output<String> queryStringBehavior;
 
-    public Output<String> getQueryStringBehavior() {
+    public Output<String> queryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @Import(name="queryStrings")
       private final @Nullable Output<OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs> queryStrings;
 
-    public Output<OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs> getQueryStrings() {
-        return this.queryStrings == null ? Output.empty() : this.queryStrings;
+    public Output<OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs> queryStrings() {
+        return this.queryStrings == null ? Codegen.empty() : this.queryStrings;
     }
 
     public OriginRequestPolicyQueryStringsConfigGetArgs(
@@ -37,8 +38,8 @@ public final class OriginRequestPolicyQueryStringsConfigGetArgs extends io.pulum
     }
 
     private OriginRequestPolicyQueryStringsConfigGetArgs() {
-        this.queryStringBehavior = Output.empty();
-        this.queryStrings = Output.empty();
+        this.queryStringBehavior = Codegen.empty();
+        this.queryStrings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OriginRequestPolicyQueryStringsConfigGetArgs extends io.pulum
             return this;
         }
         public Builder queryStrings(@Nullable OriginRequestPolicyQueryStringsConfigQueryStringsGetArgs queryStrings) {
-            this.queryStrings = Output.ofNullable(queryStrings);
+            this.queryStrings = Codegen.ofNullable(queryStrings);
             return this;
         }        public OriginRequestPolicyQueryStringsConfigGetArgs build() {
             return new OriginRequestPolicyQueryStringsConfigGetArgs(queryStringBehavior, queryStrings);

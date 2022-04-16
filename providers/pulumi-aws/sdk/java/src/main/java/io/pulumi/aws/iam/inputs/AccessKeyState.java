@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,22 +22,22 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createDate")
       private final @Nullable Output<String> createDate;
 
-    public Output<String> getCreateDate() {
-        return this.createDate == null ? Output.empty() : this.createDate;
+    public Output<String> createDate() {
+        return this.createDate == null ? Codegen.empty() : this.createDate;
     }
 
     @Import(name="encryptedSecret")
       private final @Nullable Output<String> encryptedSecret;
 
-    public Output<String> getEncryptedSecret() {
-        return this.encryptedSecret == null ? Output.empty() : this.encryptedSecret;
+    public Output<String> encryptedSecret() {
+        return this.encryptedSecret == null ? Codegen.empty() : this.encryptedSecret;
     }
 
     @Import(name="encryptedSesSmtpPasswordV4")
       private final @Nullable Output<String> encryptedSesSmtpPasswordV4;
 
-    public Output<String> getEncryptedSesSmtpPasswordV4() {
-        return this.encryptedSesSmtpPasswordV4 == null ? Output.empty() : this.encryptedSesSmtpPasswordV4;
+    public Output<String> encryptedSesSmtpPasswordV4() {
+        return this.encryptedSesSmtpPasswordV4 == null ? Codegen.empty() : this.encryptedSesSmtpPasswordV4;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="keyFingerprint")
       private final @Nullable Output<String> keyFingerprint;
 
-    public Output<String> getKeyFingerprint() {
-        return this.keyFingerprint == null ? Output.empty() : this.keyFingerprint;
+    public Output<String> keyFingerprint() {
+        return this.keyFingerprint == null ? Codegen.empty() : this.keyFingerprint;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="pgpKey")
       private final @Nullable Output<String> pgpKey;
 
-    public Output<String> getPgpKey() {
-        return this.pgpKey == null ? Output.empty() : this.pgpKey;
+    public Output<String> pgpKey() {
+        return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="secret")
       private final @Nullable Output<String> secret;
 
-    public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+    public Output<String> secret() {
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sesSmtpPasswordV4")
       private final @Nullable Output<String> sesSmtpPasswordV4;
 
-    public Output<String> getSesSmtpPasswordV4() {
-        return this.sesSmtpPasswordV4 == null ? Output.empty() : this.sesSmtpPasswordV4;
+    public Output<String> sesSmtpPasswordV4() {
+        return this.sesSmtpPasswordV4 == null ? Codegen.empty() : this.sesSmtpPasswordV4;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<String> status;
 
-    public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<String> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -101,8 +102,8 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="user")
       private final @Nullable Output<String> user;
 
-    public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+    public Output<String> user() {
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public AccessKeyState(
@@ -127,15 +128,15 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessKeyState() {
-        this.createDate = Output.empty();
-        this.encryptedSecret = Output.empty();
-        this.encryptedSesSmtpPasswordV4 = Output.empty();
-        this.keyFingerprint = Output.empty();
-        this.pgpKey = Output.empty();
-        this.secret = Output.empty();
-        this.sesSmtpPasswordV4 = Output.empty();
-        this.status = Output.empty();
-        this.user = Output.empty();
+        this.createDate = Codegen.empty();
+        this.encryptedSecret = Codegen.empty();
+        this.encryptedSesSmtpPasswordV4 = Codegen.empty();
+        this.keyFingerprint = Codegen.empty();
+        this.pgpKey = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.sesSmtpPasswordV4 = Codegen.empty();
+        this.status = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createDate(@Nullable String createDate) {
-            this.createDate = Output.ofNullable(createDate);
+            this.createDate = Codegen.ofNullable(createDate);
             return this;
         }
         public Builder encryptedSecret(@Nullable Output<String> encryptedSecret) {
@@ -187,7 +188,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptedSecret(@Nullable String encryptedSecret) {
-            this.encryptedSecret = Output.ofNullable(encryptedSecret);
+            this.encryptedSecret = Codegen.ofNullable(encryptedSecret);
             return this;
         }
         public Builder encryptedSesSmtpPasswordV4(@Nullable Output<String> encryptedSesSmtpPasswordV4) {
@@ -195,7 +196,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptedSesSmtpPasswordV4(@Nullable String encryptedSesSmtpPasswordV4) {
-            this.encryptedSesSmtpPasswordV4 = Output.ofNullable(encryptedSesSmtpPasswordV4);
+            this.encryptedSesSmtpPasswordV4 = Codegen.ofNullable(encryptedSesSmtpPasswordV4);
             return this;
         }
         public Builder keyFingerprint(@Nullable Output<String> keyFingerprint) {
@@ -203,7 +204,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyFingerprint(@Nullable String keyFingerprint) {
-            this.keyFingerprint = Output.ofNullable(keyFingerprint);
+            this.keyFingerprint = Codegen.ofNullable(keyFingerprint);
             return this;
         }
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
@@ -211,7 +212,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Output.ofNullable(pgpKey);
+            this.pgpKey = Codegen.ofNullable(pgpKey);
             return this;
         }
         public Builder secret(@Nullable Output<String> secret) {
@@ -219,7 +220,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder sesSmtpPasswordV4(@Nullable Output<String> sesSmtpPasswordV4) {
@@ -227,7 +228,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sesSmtpPasswordV4(@Nullable String sesSmtpPasswordV4) {
-            this.sesSmtpPasswordV4 = Output.ofNullable(sesSmtpPasswordV4);
+            this.sesSmtpPasswordV4 = Codegen.ofNullable(sesSmtpPasswordV4);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -235,7 +236,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -243,7 +244,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public AccessKeyState build() {
             return new AccessKeyState(createDate, encryptedSecret, encryptedSesSmtpPasswordV4, keyFingerprint, pgpKey, secret, sesSmtpPasswordV4, status, user);

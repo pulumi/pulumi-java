@@ -34,14 +34,14 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
      * If set to true, allowed_bundle_ids are not enforced.
      * 
     */
-    public Boolean getAllowAllBundleIds() {
+    public Boolean allowAllBundleIds() {
         return this.allowAllBundleIds;
     }
     /**
      * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
      * 
     */
-    public List<String> getAllowedBundleIds() {
+    public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }
 

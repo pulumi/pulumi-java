@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     @Import(name="recordRowPath", required=true)
       private final Output<String> recordRowPath;
 
-    public Output<String> getRecordRowPath() {
+    public Output<String> recordRowPath() {
         return this.recordRowPath;
     }
 
@@ -29,7 +30,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs() {
-        this.recordRowPath = Output.empty();
+        this.recordRowPath = Codegen.empty();
     }
 
     public static Builder builder() {

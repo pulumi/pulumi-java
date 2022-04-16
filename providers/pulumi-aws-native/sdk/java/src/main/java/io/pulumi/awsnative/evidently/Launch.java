@@ -12,6 +12,7 @@ import io.pulumi.awsnative.evidently.outputs.LaunchTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -25,49 +26,49 @@ public class Launch extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     @Export(name="groups", type=List.class, parameters={LaunchGroupObject.class})
     private Output<List<LaunchGroupObject>> groups;
 
-    public Output<List<LaunchGroupObject>> getGroups() {
+    public Output<List<LaunchGroupObject>> groups() {
         return this.groups;
     }
     @Export(name="metricMonitors", type=List.class, parameters={LaunchMetricDefinitionObject.class})
     private Output</* @Nullable */ List<LaunchMetricDefinitionObject>> metricMonitors;
 
-    public Output</* @Nullable */ List<LaunchMetricDefinitionObject>> getMetricMonitors() {
+    public Output</* @Nullable */ List<LaunchMetricDefinitionObject>> metricMonitors() {
         return this.metricMonitors;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     @Export(name="randomizationSalt", type=String.class, parameters={})
     private Output</* @Nullable */ String> randomizationSalt;
 
-    public Output</* @Nullable */ String> getRandomizationSalt() {
+    public Output</* @Nullable */ String> randomizationSalt() {
         return this.randomizationSalt;
     }
     @Export(name="scheduledSplitsConfig", type=List.class, parameters={LaunchStepConfig.class})
     private Output<List<LaunchStepConfig>> scheduledSplitsConfig;
 
-    public Output<List<LaunchStepConfig>> getScheduledSplitsConfig() {
+    public Output<List<LaunchStepConfig>> scheduledSplitsConfig() {
         return this.scheduledSplitsConfig;
     }
     /**
@@ -81,7 +82,7 @@ public class Launch extends io.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LaunchTag>> getTags() {
+    public Output</* @Nullable */ List<LaunchTag>> tags() {
         return this.tags;
     }
 
@@ -107,7 +108,7 @@ public class Launch extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Launch(String name, LaunchArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:evidently:Launch", name, args == null ? LaunchArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:evidently:Launch", name, args == null ? LaunchArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Launch(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

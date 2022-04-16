@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.inputs.MonitoringComponentConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="componentConfig")
       private final @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
-    public Output<MonitoringComponentConfigArgs> getComponentConfig() {
-        return this.componentConfig == null ? Output.empty() : this.componentConfig;
+    public Output<MonitoringComponentConfigArgs> componentConfig() {
+        return this.componentConfig == null ? Codegen.empty() : this.componentConfig;
     }
 
     public MonitoringConfigArgs(@Nullable Output<MonitoringComponentConfigArgs> componentConfig) {
@@ -34,7 +35,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MonitoringConfigArgs() {
-        this.componentConfig = Output.empty();
+        this.componentConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder componentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
-            this.componentConfig = Output.ofNullable(componentConfig);
+            this.componentConfig = Codegen.ofNullable(componentConfig);
             return this;
         }        public MonitoringConfigArgs build() {
             return new MonitoringConfigArgs(componentConfig);

@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -44,8 +45,8 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
     }
 
     private AppImageConfigKernelGatewayImageConfigKernelSpecArgs() {
-        this.displayName = Output.empty();
-        this.name = Output.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AppImageConfigKernelGatewayImageConfigKernelSpecArgs extends 
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(Output<String> name) {

@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Parent Device Update Account name which Instance belongs to.
      * 
      */
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
     /**
@@ -60,7 +61,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Customer-initiated diagnostic log collection storage properties
      * 
      */
-    public Output</* @Nullable */ DiagnosticStoragePropertiesResponse> getDiagnosticStorageProperties() {
+    public Output</* @Nullable */ DiagnosticStoragePropertiesResponse> diagnosticStorageProperties() {
         return this.diagnosticStorageProperties;
     }
     /**
@@ -74,7 +75,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Enables or Disables the diagnostic logs collection
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnableDiagnostics() {
+    public Output</* @Nullable */ Boolean> enableDiagnostics() {
         return this.enableDiagnostics;
     }
     /**
@@ -88,7 +89,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return List of IoT Hubs associated with the account.
      * 
      */
-    public Output</* @Nullable */ List<IotHubSettingsResponse>> getIotHubs() {
+    public Output</* @Nullable */ List<IotHubSettingsResponse>> iotHubs() {
         return this.iotHubs;
     }
     /**
@@ -102,7 +103,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The geo-location where the resource lives
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -116,7 +117,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -130,7 +131,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -144,7 +145,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -158,7 +159,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -172,7 +173,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @return The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -198,7 +199,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Instance(String name, InstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:deviceupdate:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:deviceupdate:Instance", name, args == null ? InstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Instance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

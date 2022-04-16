@@ -41,21 +41,21 @@ public final class CurrentJobDetailsResponse {
      * The ARM Id of the job being executed.
      * 
     */
-    public Optional<String> getJobId() {
+    public Optional<String> jobId() {
         return Optional.ofNullable(this.jobId);
     }
     /**
      * The job name.
      * 
     */
-    public Optional<String> getJobName() {
+    public Optional<String> jobName() {
         return Optional.ofNullable(this.jobName);
     }
     /**
      * The start time of the job.
      * 
     */
-    public Optional<String> getStartTime() {
+    public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
 

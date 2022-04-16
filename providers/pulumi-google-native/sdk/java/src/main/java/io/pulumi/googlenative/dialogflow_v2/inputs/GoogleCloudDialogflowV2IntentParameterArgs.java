@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,8 +28,8 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
-    public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+    public Output<String> defaultValue() {
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="entityTypeDisplayName")
       private final @Nullable Output<String> entityTypeDisplayName;
 
-    public Output<String> getEntityTypeDisplayName() {
-        return this.entityTypeDisplayName == null ? Output.empty() : this.entityTypeDisplayName;
+    public Output<String> entityTypeDisplayName() {
+        return this.entityTypeDisplayName == null ? Codegen.empty() : this.entityTypeDisplayName;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> getIsList() {
-        return this.isList == null ? Output.empty() : this.isList;
+    public Output<Boolean> isList() {
+        return this.isList == null ? Codegen.empty() : this.isList;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="mandatory")
       private final @Nullable Output<Boolean> mandatory;
 
-    public Output<Boolean> getMandatory() {
-        return this.mandatory == null ? Output.empty() : this.mandatory;
+    public Output<Boolean> mandatory() {
+        return this.mandatory == null ? Codegen.empty() : this.mandatory;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="prompts")
       private final @Nullable Output<List<String>> prompts;
 
-    public Output<List<String>> getPrompts() {
-        return this.prompts == null ? Output.empty() : this.prompts;
+    public Output<List<String>> prompts() {
+        return this.prompts == null ? Codegen.empty() : this.prompts;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public GoogleCloudDialogflowV2IntentParameterArgs(
@@ -128,14 +129,14 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     }
 
     private GoogleCloudDialogflowV2IntentParameterArgs() {
-        this.defaultValue = Output.empty();
-        this.displayName = Output.empty();
-        this.entityTypeDisplayName = Output.empty();
-        this.isList = Output.empty();
-        this.mandatory = Output.empty();
-        this.name = Output.empty();
-        this.prompts = Output.empty();
-        this.value = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entityTypeDisplayName = Codegen.empty();
+        this.isList = Codegen.empty();
+        this.mandatory = Codegen.empty();
+        this.name = Codegen.empty();
+        this.prompts = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -193,7 +194,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
             return this;
         }
         public Builder entityTypeDisplayName(@Nullable String entityTypeDisplayName) {
-            this.entityTypeDisplayName = Output.ofNullable(entityTypeDisplayName);
+            this.entityTypeDisplayName = Codegen.ofNullable(entityTypeDisplayName);
             return this;
         }
         public Builder isList(@Nullable Output<Boolean> isList) {
@@ -201,7 +202,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
             return this;
         }
         public Builder isList(@Nullable Boolean isList) {
-            this.isList = Output.ofNullable(isList);
+            this.isList = Codegen.ofNullable(isList);
             return this;
         }
         public Builder mandatory(@Nullable Output<Boolean> mandatory) {
@@ -209,7 +210,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
             return this;
         }
         public Builder mandatory(@Nullable Boolean mandatory) {
-            this.mandatory = Output.ofNullable(mandatory);
+            this.mandatory = Codegen.ofNullable(mandatory);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -217,7 +218,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder prompts(@Nullable Output<List<String>> prompts) {
@@ -225,7 +226,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
             return this;
         }
         public Builder prompts(@Nullable List<String> prompts) {
-            this.prompts = Output.ofNullable(prompts);
+            this.prompts = Codegen.ofNullable(prompts);
             return this;
         }
         public Builder prompts(String... prompts) {
@@ -236,7 +237,7 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public GoogleCloudDialogflowV2IntentParameterArgs build() {
             return new GoogleCloudDialogflowV2IntentParameterArgs(defaultValue, displayName, entityTypeDisplayName, isList, mandatory, name, prompts, value);

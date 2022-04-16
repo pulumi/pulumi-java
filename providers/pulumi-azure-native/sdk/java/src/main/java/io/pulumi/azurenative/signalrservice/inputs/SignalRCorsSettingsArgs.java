@@ -5,6 +5,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class SignalRCorsSettingsArgs extends io.pulumi.resources.ResourceA
     @Import(name="allowedOrigins")
       private final @Nullable Output<List<String>> allowedOrigins;
 
-    public Output<List<String>> getAllowedOrigins() {
-        return this.allowedOrigins == null ? Output.empty() : this.allowedOrigins;
+    public Output<List<String>> allowedOrigins() {
+        return this.allowedOrigins == null ? Codegen.empty() : this.allowedOrigins;
     }
 
     public SignalRCorsSettingsArgs(@Nullable Output<List<String>> allowedOrigins) {
@@ -35,7 +36,7 @@ public final class SignalRCorsSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private SignalRCorsSettingsArgs() {
-        this.allowedOrigins = Output.empty();
+        this.allowedOrigins = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SignalRCorsSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
-            this.allowedOrigins = Output.ofNullable(allowedOrigins);
+            this.allowedOrigins = Codegen.ofNullable(allowedOrigins);
             return this;
         }
         public Builder allowedOrigins(String... allowedOrigins) {

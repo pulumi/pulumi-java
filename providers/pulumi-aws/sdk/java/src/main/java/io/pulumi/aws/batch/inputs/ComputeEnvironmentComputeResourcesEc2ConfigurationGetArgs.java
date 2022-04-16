@@ -5,6 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ext
     @Import(name="imageIdOverride")
       private final @Nullable Output<String> imageIdOverride;
 
-    public Output<String> getImageIdOverride() {
-        return this.imageIdOverride == null ? Output.empty() : this.imageIdOverride;
+    public Output<String> imageIdOverride() {
+        return this.imageIdOverride == null ? Codegen.empty() : this.imageIdOverride;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ext
     @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
-    public Output<String> getImageType() {
-        return this.imageType == null ? Output.empty() : this.imageType;
+    public Output<String> imageType() {
+        return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
     public ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs(
@@ -44,8 +45,8 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ext
     }
 
     private ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs() {
-        this.imageIdOverride = Output.empty();
-        this.imageType = Output.empty();
+        this.imageIdOverride = Codegen.empty();
+        this.imageType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ext
             return this;
         }
         public Builder imageIdOverride(@Nullable String imageIdOverride) {
-            this.imageIdOverride = Output.ofNullable(imageIdOverride);
+            this.imageIdOverride = Codegen.ofNullable(imageIdOverride);
             return this;
         }
         public Builder imageType(@Nullable Output<String> imageType) {
@@ -83,7 +84,7 @@ public final class ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ext
             return this;
         }
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Output.ofNullable(imageType);
+            this.imageType = Codegen.ofNullable(imageType);
             return this;
         }        public ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs build() {
             return new ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs(imageIdOverride, imageType);

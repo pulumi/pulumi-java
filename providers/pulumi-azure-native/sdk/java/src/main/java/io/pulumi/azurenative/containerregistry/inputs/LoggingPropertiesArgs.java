@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerregistry.enums.LogLevel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="auditLogStatus")
       private final @Nullable Output<Either<String,AuditLogStatus>> auditLogStatus;
 
-    public Output<Either<String,AuditLogStatus>> getAuditLogStatus() {
-        return this.auditLogStatus == null ? Output.empty() : this.auditLogStatus;
+    public Output<Either<String,AuditLogStatus>> auditLogStatus() {
+        return this.auditLogStatus == null ? Codegen.empty() : this.auditLogStatus;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
     @Import(name="logLevel")
       private final @Nullable Output<Either<String,LogLevel>> logLevel;
 
-    public Output<Either<String,LogLevel>> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+    public Output<Either<String,LogLevel>> logLevel() {
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     public LoggingPropertiesArgs(
@@ -51,8 +52,8 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LoggingPropertiesArgs() {
-        this.auditLogStatus = Output.empty();
-        this.logLevel = Output.empty();
+        this.auditLogStatus = Codegen.empty();
+        this.logLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder auditLogStatus(@Nullable Either<String,AuditLogStatus> auditLogStatus) {
-            this.auditLogStatus = Output.ofNullable(auditLogStatus);
+            this.auditLogStatus = Codegen.ofNullable(auditLogStatus);
             return this;
         }
         public Builder logLevel(@Nullable Output<Either<String,LogLevel>> logLevel) {
@@ -90,7 +91,7 @@ public final class LoggingPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder logLevel(@Nullable Either<String,LogLevel> logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }        public LoggingPropertiesArgs build() {
             return new LoggingPropertiesArgs(auditLogStatus, logLevel);

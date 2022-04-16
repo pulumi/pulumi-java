@@ -6,6 +6,7 @@ package io.pulumi.awsnative.connect.inputs;
 import io.pulumi.awsnative.connect.enums.UserPhoneType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,28 +25,28 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="afterContactWorkTimeLimit")
       private final @Nullable Output<Integer> afterContactWorkTimeLimit;
 
-    public Output<Integer> getAfterContactWorkTimeLimit() {
-        return this.afterContactWorkTimeLimit == null ? Output.empty() : this.afterContactWorkTimeLimit;
+    public Output<Integer> afterContactWorkTimeLimit() {
+        return this.afterContactWorkTimeLimit == null ? Codegen.empty() : this.afterContactWorkTimeLimit;
     }
 
     @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
-    public Output<Boolean> getAutoAccept() {
-        return this.autoAccept == null ? Output.empty() : this.autoAccept;
+    public Output<Boolean> autoAccept() {
+        return this.autoAccept == null ? Codegen.empty() : this.autoAccept;
     }
 
     @Import(name="deskPhoneNumber")
       private final @Nullable Output<String> deskPhoneNumber;
 
-    public Output<String> getDeskPhoneNumber() {
-        return this.deskPhoneNumber == null ? Output.empty() : this.deskPhoneNumber;
+    public Output<String> deskPhoneNumber() {
+        return this.deskPhoneNumber == null ? Codegen.empty() : this.deskPhoneNumber;
     }
 
     @Import(name="phoneType", required=true)
       private final Output<UserPhoneType> phoneType;
 
-    public Output<UserPhoneType> getPhoneType() {
+    public Output<UserPhoneType> phoneType() {
         return this.phoneType;
     }
 
@@ -61,10 +62,10 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UserPhoneConfigArgs() {
-        this.afterContactWorkTimeLimit = Output.empty();
-        this.autoAccept = Output.empty();
-        this.deskPhoneNumber = Output.empty();
-        this.phoneType = Output.empty();
+        this.afterContactWorkTimeLimit = Codegen.empty();
+        this.autoAccept = Codegen.empty();
+        this.deskPhoneNumber = Codegen.empty();
+        this.phoneType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder afterContactWorkTimeLimit(@Nullable Integer afterContactWorkTimeLimit) {
-            this.afterContactWorkTimeLimit = Output.ofNullable(afterContactWorkTimeLimit);
+            this.afterContactWorkTimeLimit = Codegen.ofNullable(afterContactWorkTimeLimit);
             return this;
         }
         public Builder autoAccept(@Nullable Output<Boolean> autoAccept) {
@@ -106,7 +107,7 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder autoAccept(@Nullable Boolean autoAccept) {
-            this.autoAccept = Output.ofNullable(autoAccept);
+            this.autoAccept = Codegen.ofNullable(autoAccept);
             return this;
         }
         public Builder deskPhoneNumber(@Nullable Output<String> deskPhoneNumber) {
@@ -114,7 +115,7 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder deskPhoneNumber(@Nullable String deskPhoneNumber) {
-            this.deskPhoneNumber = Output.ofNullable(deskPhoneNumber);
+            this.deskPhoneNumber = Codegen.ofNullable(deskPhoneNumber);
             return this;
         }
         public Builder phoneType(Output<UserPhoneType> phoneType) {

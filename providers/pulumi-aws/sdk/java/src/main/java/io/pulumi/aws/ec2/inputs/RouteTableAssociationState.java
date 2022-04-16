@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
-    public Output<String> getGatewayId() {
-        return this.gatewayId == null ? Output.empty() : this.gatewayId;
+    public Output<String> gatewayId() {
+        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     @Import(name="routeTableId")
       private final @Nullable Output<String> routeTableId;
 
-    public Output<String> getRouteTableId() {
-        return this.routeTableId == null ? Output.empty() : this.routeTableId;
+    public Output<String> routeTableId() {
+        return this.routeTableId == null ? Codegen.empty() : this.routeTableId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
-    public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+    public Output<String> subnetId() {
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public RouteTableAssociationState(
@@ -57,9 +58,9 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     }
 
     private RouteTableAssociationState() {
-        this.gatewayId = Output.empty();
-        this.routeTableId = Output.empty();
-        this.subnetId = Output.empty();
+        this.gatewayId = Codegen.empty();
+        this.routeTableId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Output.ofNullable(gatewayId);
+            this.gatewayId = Codegen.ofNullable(gatewayId);
             return this;
         }
         public Builder routeTableId(@Nullable Output<String> routeTableId) {
@@ -99,7 +100,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder routeTableId(@Nullable String routeTableId) {
-            this.routeTableId = Output.ofNullable(routeTableId);
+            this.routeTableId = Codegen.ofNullable(routeTableId);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -107,7 +108,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public RouteTableAssociationState build() {
             return new RouteTableAssociationState(gatewayId, routeTableId, subnetId);

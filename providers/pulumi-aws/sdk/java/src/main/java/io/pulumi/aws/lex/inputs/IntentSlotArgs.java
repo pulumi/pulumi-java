@@ -6,6 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.IntentSlotValueElicitationPromptArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -49,8 +50,8 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="responseCard")
       private final @Nullable Output<String> responseCard;
 
-    public Output<String> getResponseCard() {
-        return this.responseCard == null ? Output.empty() : this.responseCard;
+    public Output<String> responseCard() {
+        return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sampleUtterances")
       private final @Nullable Output<List<String>> sampleUtterances;
 
-    public Output<List<String>> getSampleUtterances() {
-        return this.sampleUtterances == null ? Output.empty() : this.sampleUtterances;
+    public Output<List<String>> sampleUtterances() {
+        return this.sampleUtterances == null ? Codegen.empty() : this.sampleUtterances;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="slotConstraint", required=true)
       private final Output<String> slotConstraint;
 
-    public Output<String> getSlotConstraint() {
+    public Output<String> slotConstraint() {
         return this.slotConstraint;
     }
 
@@ -98,7 +99,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="slotType", required=true)
       private final Output<String> slotType;
 
-    public Output<String> getSlotType() {
+    public Output<String> slotType() {
         return this.slotType;
     }
 
@@ -109,8 +110,8 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="slotTypeVersion")
       private final @Nullable Output<String> slotTypeVersion;
 
-    public Output<String> getSlotTypeVersion() {
-        return this.slotTypeVersion == null ? Output.empty() : this.slotTypeVersion;
+    public Output<String> slotTypeVersion() {
+        return this.slotTypeVersion == null ? Codegen.empty() : this.slotTypeVersion;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="valueElicitationPrompt")
       private final @Nullable Output<IntentSlotValueElicitationPromptArgs> valueElicitationPrompt;
 
-    public Output<IntentSlotValueElicitationPromptArgs> getValueElicitationPrompt() {
-        return this.valueElicitationPrompt == null ? Output.empty() : this.valueElicitationPrompt;
+    public Output<IntentSlotValueElicitationPromptArgs> valueElicitationPrompt() {
+        return this.valueElicitationPrompt == null ? Codegen.empty() : this.valueElicitationPrompt;
     }
 
     public IntentSlotArgs(
@@ -147,15 +148,15 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IntentSlotArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.responseCard = Output.empty();
-        this.sampleUtterances = Output.empty();
-        this.slotConstraint = Output.empty();
-        this.slotType = Output.empty();
-        this.slotTypeVersion = Output.empty();
-        this.valueElicitationPrompt = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.responseCard = Codegen.empty();
+        this.sampleUtterances = Codegen.empty();
+        this.slotConstraint = Codegen.empty();
+        this.slotType = Codegen.empty();
+        this.slotTypeVersion = Codegen.empty();
+        this.valueElicitationPrompt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -215,7 +216,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder responseCard(@Nullable Output<String> responseCard) {
@@ -223,7 +224,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Output.ofNullable(responseCard);
+            this.responseCard = Codegen.ofNullable(responseCard);
             return this;
         }
         public Builder sampleUtterances(@Nullable Output<List<String>> sampleUtterances) {
@@ -231,7 +232,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
-            this.sampleUtterances = Output.ofNullable(sampleUtterances);
+            this.sampleUtterances = Codegen.ofNullable(sampleUtterances);
             return this;
         }
         public Builder sampleUtterances(String... sampleUtterances) {
@@ -258,7 +259,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slotTypeVersion(@Nullable String slotTypeVersion) {
-            this.slotTypeVersion = Output.ofNullable(slotTypeVersion);
+            this.slotTypeVersion = Codegen.ofNullable(slotTypeVersion);
             return this;
         }
         public Builder valueElicitationPrompt(@Nullable Output<IntentSlotValueElicitationPromptArgs> valueElicitationPrompt) {
@@ -266,7 +267,7 @@ public final class IntentSlotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder valueElicitationPrompt(@Nullable IntentSlotValueElicitationPromptArgs valueElicitationPrompt) {
-            this.valueElicitationPrompt = Output.ofNullable(valueElicitationPrompt);
+            this.valueElicitationPrompt = Codegen.ofNullable(valueElicitationPrompt);
             return this;
         }        public IntentSlotArgs build() {
             return new IntentSlotArgs(description, name, priority, responseCard, sampleUtterances, slotConstraint, slotType, slotTypeVersion, valueElicitationPrompt);

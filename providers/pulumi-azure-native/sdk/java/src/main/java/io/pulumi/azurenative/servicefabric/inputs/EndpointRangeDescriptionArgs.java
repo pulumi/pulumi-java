@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
     @Import(name="endPort", required=true)
       private final Output<Integer> endPort;
 
-    public Output<Integer> getEndPort() {
+    public Output<Integer> endPort() {
         return this.endPort;
     }
 
@@ -35,7 +36,7 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
     @Import(name="startPort", required=true)
       private final Output<Integer> startPort;
 
-    public Output<Integer> getStartPort() {
+    public Output<Integer> startPort() {
         return this.startPort;
     }
 
@@ -47,8 +48,8 @@ public final class EndpointRangeDescriptionArgs extends io.pulumi.resources.Reso
     }
 
     private EndpointRangeDescriptionArgs() {
-        this.endPort = Output.empty();
-        this.startPort = Output.empty();
+        this.endPort = Codegen.empty();
+        this.startPort = Codegen.empty();
     }
 
     public static Builder builder() {

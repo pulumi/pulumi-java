@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1.enums.ChangeStatus;
 import io.pulumi.googlenative.dns_v1.inputs.ResourceRecordSetArgs;
 import java.lang.Boolean;
@@ -25,15 +26,15 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="additions")
       private final @Nullable Output<List<ResourceRecordSetArgs>> additions;
 
-    public Output<List<ResourceRecordSetArgs>> getAdditions() {
-        return this.additions == null ? Output.empty() : this.additions;
+    public Output<List<ResourceRecordSetArgs>> additions() {
+        return this.additions == null ? Codegen.empty() : this.additions;
     }
 
     @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
-    public Output<String> getClientOperationId() {
-        return this.clientOperationId == null ? Output.empty() : this.clientOperationId;
+    public Output<String> clientOperationId() {
+        return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deletions")
       private final @Nullable Output<List<ResourceRecordSetArgs>> deletions;
 
-    public Output<List<ResourceRecordSetArgs>> getDeletions() {
-        return this.deletions == null ? Output.empty() : this.deletions;
+    public Output<List<ResourceRecordSetArgs>> deletions() {
+        return this.deletions == null ? Codegen.empty() : this.deletions;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -65,29 +66,29 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isServing")
       private final @Nullable Output<Boolean> isServing;
 
-    public Output<Boolean> getIsServing() {
-        return this.isServing == null ? Output.empty() : this.isServing;
+    public Output<Boolean> isServing() {
+        return this.isServing == null ? Codegen.empty() : this.isServing;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="managedZone", required=true)
       private final Output<String> managedZone;
 
-    public Output<String> getManagedZone() {
+    public Output<String> managedZone() {
         return this.managedZone;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
-    public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+    public Output<String> startTime() {
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="status")
       private final @Nullable Output<ChangeStatus> status;
 
-    public Output<ChangeStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<ChangeStatus> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public ChangeArgs(
@@ -136,16 +137,16 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChangeArgs() {
-        this.additions = Output.empty();
-        this.clientOperationId = Output.empty();
-        this.deletions = Output.empty();
-        this.id = Output.empty();
-        this.isServing = Output.empty();
-        this.kind = Output.empty();
-        this.managedZone = Output.empty();
-        this.project = Output.empty();
-        this.startTime = Output.empty();
-        this.status = Output.empty();
+        this.additions = Codegen.empty();
+        this.clientOperationId = Codegen.empty();
+        this.deletions = Codegen.empty();
+        this.id = Codegen.empty();
+        this.isServing = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managedZone = Codegen.empty();
+        this.project = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additions(@Nullable List<ResourceRecordSetArgs> additions) {
-            this.additions = Output.ofNullable(additions);
+            this.additions = Codegen.ofNullable(additions);
             return this;
         }
         public Builder additions(ResourceRecordSetArgs... additions) {
@@ -202,7 +203,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Output.ofNullable(clientOperationId);
+            this.clientOperationId = Codegen.ofNullable(clientOperationId);
             return this;
         }
         public Builder deletions(@Nullable Output<List<ResourceRecordSetArgs>> deletions) {
@@ -210,7 +211,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletions(@Nullable List<ResourceRecordSetArgs> deletions) {
-            this.deletions = Output.ofNullable(deletions);
+            this.deletions = Codegen.ofNullable(deletions);
             return this;
         }
         public Builder deletions(ResourceRecordSetArgs... deletions) {
@@ -221,7 +222,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder isServing(@Nullable Output<Boolean> isServing) {
@@ -229,7 +230,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isServing(@Nullable Boolean isServing) {
-            this.isServing = Output.ofNullable(isServing);
+            this.isServing = Codegen.ofNullable(isServing);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -237,7 +238,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managedZone(Output<String> managedZone) {
@@ -253,7 +254,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -261,7 +262,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder status(@Nullable Output<ChangeStatus> status) {
@@ -269,7 +270,7 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable ChangeStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public ChangeArgs build() {
             return new ChangeArgs(additions, clientOperationId, deletions, id, isServing, kind, managedZone, project, startTime, status);

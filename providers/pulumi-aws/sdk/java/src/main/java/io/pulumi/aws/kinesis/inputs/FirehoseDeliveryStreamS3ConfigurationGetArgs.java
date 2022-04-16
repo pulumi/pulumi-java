@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -34,8 +35,8 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="bufferInterval")
       private final @Nullable Output<Integer> bufferInterval;
 
-    public Output<Integer> getBufferInterval() {
-        return this.bufferInterval == null ? Output.empty() : this.bufferInterval;
+    public Output<Integer> bufferInterval() {
+        return this.bufferInterval == null ? Codegen.empty() : this.bufferInterval;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="bufferSize")
       private final @Nullable Output<Integer> bufferSize;
 
-    public Output<Integer> getBufferSize() {
-        return this.bufferSize == null ? Output.empty() : this.bufferSize;
+    public Output<Integer> bufferSize() {
+        return this.bufferSize == null ? Codegen.empty() : this.bufferSize;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
-    public Output<FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
+    public Output<FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions() {
+        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="compressionFormat")
       private final @Nullable Output<String> compressionFormat;
 
-    public Output<String> getCompressionFormat() {
-        return this.compressionFormat == null ? Output.empty() : this.compressionFormat;
+    public Output<String> compressionFormat() {
+        return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="errorOutputPrefix")
       private final @Nullable Output<String> errorOutputPrefix;
 
-    public Output<String> getErrorOutputPrefix() {
-        return this.errorOutputPrefix == null ? Output.empty() : this.errorOutputPrefix;
+    public Output<String> errorOutputPrefix() {
+        return this.errorOutputPrefix == null ? Codegen.empty() : this.errorOutputPrefix;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+    public Output<String> kmsKeyArn() {
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
-    public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+    public Output<String> prefix() {
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
@@ -139,15 +140,15 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
     }
 
     private FirehoseDeliveryStreamS3ConfigurationGetArgs() {
-        this.bucketArn = Output.empty();
-        this.bufferInterval = Output.empty();
-        this.bufferSize = Output.empty();
-        this.cloudwatchLoggingOptions = Output.empty();
-        this.compressionFormat = Output.empty();
-        this.errorOutputPrefix = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.prefix = Output.empty();
-        this.roleArn = Output.empty();
+        this.bucketArn = Codegen.empty();
+        this.bufferInterval = Codegen.empty();
+        this.bufferSize = Codegen.empty();
+        this.cloudwatchLoggingOptions = Codegen.empty();
+        this.compressionFormat = Codegen.empty();
+        this.errorOutputPrefix = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder bufferInterval(@Nullable Integer bufferInterval) {
-            this.bufferInterval = Output.ofNullable(bufferInterval);
+            this.bufferInterval = Codegen.ofNullable(bufferInterval);
             return this;
         }
         public Builder bufferSize(@Nullable Output<Integer> bufferSize) {
@@ -207,7 +208,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder bufferSize(@Nullable Integer bufferSize) {
-            this.bufferSize = Output.ofNullable(bufferSize);
+            this.bufferSize = Codegen.ofNullable(bufferSize);
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
@@ -215,7 +216,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
         public Builder compressionFormat(@Nullable Output<String> compressionFormat) {
@@ -223,7 +224,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder compressionFormat(@Nullable String compressionFormat) {
-            this.compressionFormat = Output.ofNullable(compressionFormat);
+            this.compressionFormat = Codegen.ofNullable(compressionFormat);
             return this;
         }
         public Builder errorOutputPrefix(@Nullable Output<String> errorOutputPrefix) {
@@ -231,7 +232,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
-            this.errorOutputPrefix = Output.ofNullable(errorOutputPrefix);
+            this.errorOutputPrefix = Codegen.ofNullable(errorOutputPrefix);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -239,7 +240,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -247,7 +248,7 @@ public final class FirehoseDeliveryStreamS3ConfigurationGetArgs extends io.pulum
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

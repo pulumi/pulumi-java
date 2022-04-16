@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.NetworkProfileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Output<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Output.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> networkProfile() {
+        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
     public ClusterResourcePropertiesArgs(@Nullable Output<NetworkProfileArgs> networkProfile) {
@@ -34,7 +35,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ClusterResourcePropertiesArgs() {
-        this.networkProfile = Output.empty();
+        this.networkProfile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Output.ofNullable(networkProfile);
+            this.networkProfile = Codegen.ofNullable(networkProfile);
             return this;
         }        public ClusterResourcePropertiesArgs build() {
             return new ClusterResourcePropertiesArgs(networkProfile);

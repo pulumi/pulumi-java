@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.TypeUsesArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.enums.OutputOnlyEnumType;
@@ -24,49 +25,49 @@ public class TypeUses extends io.pulumi.resources.CustomResource {
     @Export(name="alpha", type=OutputOnlyEnumType.class, parameters={})
     private Output</* @Nullable */ OutputOnlyEnumType> alpha;
 
-    public Output</* @Nullable */ OutputOnlyEnumType> getAlpha() {
+    public Output</* @Nullable */ OutputOnlyEnumType> alpha() {
         return this.alpha;
     }
     @Export(name="bar", type=SomeOtherObject.class, parameters={})
     private Output</* @Nullable */ SomeOtherObject> bar;
 
-    public Output</* @Nullable */ SomeOtherObject> getBar() {
+    public Output</* @Nullable */ SomeOtherObject> bar() {
         return this.bar;
     }
     @Export(name="baz", type=ObjectWithNodeOptionalInputs.class, parameters={})
     private Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz;
 
-    public Output</* @Nullable */ ObjectWithNodeOptionalInputs> getBaz() {
+    public Output</* @Nullable */ ObjectWithNodeOptionalInputs> baz() {
         return this.baz;
     }
     @Export(name="beta", type=List.class, parameters={OutputOnlyObjectType.class})
     private Output</* @Nullable */ List<OutputOnlyObjectType>> beta;
 
-    public Output</* @Nullable */ List<OutputOnlyObjectType>> getBeta() {
+    public Output</* @Nullable */ List<OutputOnlyObjectType>> beta() {
         return this.beta;
     }
     @Export(name="foo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> foo;
 
-    public Output</* @Nullable */ Object> getFoo() {
+    public Output</* @Nullable */ Object> foo() {
         return this.foo;
     }
     @Export(name="gamma", type=Map.class, parameters={String.class, OutputOnlyEnumType.class})
     private Output</* @Nullable */ Map<String,OutputOnlyEnumType>> gamma;
 
-    public Output</* @Nullable */ Map<String,OutputOnlyEnumType>> getGamma() {
+    public Output</* @Nullable */ Map<String,OutputOnlyEnumType>> gamma() {
         return this.gamma;
     }
     @Export(name="qux", type=RubberTreeVariety.class, parameters={})
     private Output</* @Nullable */ RubberTreeVariety> qux;
 
-    public Output</* @Nullable */ RubberTreeVariety> getQux() {
+    public Output</* @Nullable */ RubberTreeVariety> qux() {
         return this.qux;
     }
     @Export(name="zed", type=OutputOnlyObjectType.class, parameters={})
     private Output</* @Nullable */ OutputOnlyObjectType> zed;
 
-    public Output</* @Nullable */ OutputOnlyObjectType> getZed() {
+    public Output</* @Nullable */ OutputOnlyObjectType> zed() {
         return this.zed;
     }
 
@@ -92,7 +93,7 @@ public class TypeUses extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TypeUses(String name, @Nullable TypeUsesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::TypeUses", name, args == null ? TypeUsesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::TypeUses", name, args == null ? TypeUsesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TypeUses(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sourcerepo_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="deployKeyId")
       private final @Nullable Output<String> deployKeyId;
 
-    public Output<String> getDeployKeyId() {
-        return this.deployKeyId == null ? Output.empty() : this.deployKeyId;
+    public Output<String> deployKeyId() {
+        return this.deployKeyId == null ? Codegen.empty() : this.deployKeyId;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="url")
       private final @Nullable Output<String> url;
 
-    public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+    public Output<String> url() {
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookId")
       private final @Nullable Output<String> webhookId;
 
-    public Output<String> getWebhookId() {
-        return this.webhookId == null ? Output.empty() : this.webhookId;
+    public Output<String> webhookId() {
+        return this.webhookId == null ? Codegen.empty() : this.webhookId;
     }
 
     public MirrorConfigArgs(
@@ -61,9 +62,9 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MirrorConfigArgs() {
-        this.deployKeyId = Output.empty();
-        this.url = Output.empty();
-        this.webhookId = Output.empty();
+        this.deployKeyId = Codegen.empty();
+        this.url = Codegen.empty();
+        this.webhookId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deployKeyId(@Nullable String deployKeyId) {
-            this.deployKeyId = Output.ofNullable(deployKeyId);
+            this.deployKeyId = Codegen.ofNullable(deployKeyId);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -103,7 +104,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }
         public Builder webhookId(@Nullable Output<String> webhookId) {
@@ -111,7 +112,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webhookId(@Nullable String webhookId) {
-            this.webhookId = Output.ofNullable(webhookId);
+            this.webhookId = Codegen.ofNullable(webhookId);
             return this;
         }        public MirrorConfigArgs build() {
             return new MirrorConfigArgs(deployKeyId, url, webhookId);

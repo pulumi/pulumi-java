@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,8 +26,8 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
     @Import(name="networkWatcherFlowAnalyticsConfiguration")
       private final @Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration;
 
-    public Output<TrafficAnalyticsConfigurationPropertiesArgs> getNetworkWatcherFlowAnalyticsConfiguration() {
-        return this.networkWatcherFlowAnalyticsConfiguration == null ? Output.empty() : this.networkWatcherFlowAnalyticsConfiguration;
+    public Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration() {
+        return this.networkWatcherFlowAnalyticsConfiguration == null ? Codegen.empty() : this.networkWatcherFlowAnalyticsConfiguration;
     }
 
     public TrafficAnalyticsPropertiesArgs(@Nullable Output<TrafficAnalyticsConfigurationPropertiesArgs> networkWatcherFlowAnalyticsConfiguration) {
@@ -34,7 +35,7 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
     }
 
     private TrafficAnalyticsPropertiesArgs() {
-        this.networkWatcherFlowAnalyticsConfiguration = Output.empty();
+        this.networkWatcherFlowAnalyticsConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class TrafficAnalyticsPropertiesArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesArgs networkWatcherFlowAnalyticsConfiguration) {
-            this.networkWatcherFlowAnalyticsConfiguration = Output.ofNullable(networkWatcherFlowAnalyticsConfiguration);
+            this.networkWatcherFlowAnalyticsConfiguration = Codegen.ofNullable(networkWatcherFlowAnalyticsConfiguration);
             return this;
         }        public TrafficAnalyticsPropertiesArgs build() {
             return new TrafficAnalyticsPropertiesArgs(networkWatcherFlowAnalyticsConfiguration);

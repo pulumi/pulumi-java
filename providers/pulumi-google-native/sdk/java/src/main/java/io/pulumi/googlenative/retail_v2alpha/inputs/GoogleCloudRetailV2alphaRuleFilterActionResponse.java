@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse extends io.p
     @Import(name="filter", required=true)
       private final String filter;
 
-    public String getFilter() {
+    public String filter() {
         return this.filter;
     }
 

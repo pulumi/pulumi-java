@@ -5,6 +5,7 @@ package io.pulumi.aws.wafregional;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
-    public Output<String> getResourceArn() {
+    public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
@@ -31,7 +32,7 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
     @Import(name="webAclId", required=true)
       private final Output<String> webAclId;
 
-    public Output<String> getWebAclId() {
+    public Output<String> webAclId() {
         return this.webAclId;
     }
 
@@ -43,8 +44,8 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WebAclAssociationArgs() {
-        this.resourceArn = Output.empty();
-        this.webAclId = Output.empty();
+        this.resourceArn = Codegen.empty();
+        this.webAclId = Codegen.empty();
     }
 
     public static Builder builder() {

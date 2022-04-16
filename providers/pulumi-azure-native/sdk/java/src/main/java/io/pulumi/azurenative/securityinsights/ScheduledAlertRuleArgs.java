@@ -9,6 +9,7 @@ import io.pulumi.azurenative.securityinsights.enums.TriggerOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,8 +29,8 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="alertRuleTemplateName")
       private final @Nullable Output<String> alertRuleTemplateName;
 
-    public Output<String> getAlertRuleTemplateName() {
-        return this.alertRuleTemplateName == null ? Output.empty() : this.alertRuleTemplateName;
+    public Output<String> alertRuleTemplateName() {
+        return this.alertRuleTemplateName == null ? Codegen.empty() : this.alertRuleTemplateName;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -61,7 +62,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
+    public Output<Boolean> enabled() {
         return this.enabled;
     }
 
@@ -73,7 +74,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="kind", required=true)
       private final Output<String> kind;
 
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
 
@@ -84,7 +85,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="query", required=true)
       private final Output<String> query;
 
-    public Output<String> getQuery() {
+    public Output<String> query() {
         return this.query;
     }
 
@@ -95,7 +96,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queryFrequency", required=true)
       private final Output<String> queryFrequency;
 
-    public Output<String> getQueryFrequency() {
+    public Output<String> queryFrequency() {
         return this.queryFrequency;
     }
 
@@ -106,7 +107,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queryPeriod", required=true)
       private final Output<String> queryPeriod;
 
-    public Output<String> getQueryPeriod() {
+    public Output<String> queryPeriod() {
         return this.queryPeriod;
     }
 
@@ -117,7 +118,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,8 +129,8 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
-    public Output<String> getRuleId() {
-        return this.ruleId == null ? Output.empty() : this.ruleId;
+    public Output<String> ruleId() {
+        return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="severity", required=true)
       private final Output<Either<String,AlertSeverity>> severity;
 
-    public Output<Either<String,AlertSeverity>> getSeverity() {
+    public Output<Either<String,AlertSeverity>> severity() {
         return this.severity;
     }
 
@@ -150,7 +151,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="suppressionDuration", required=true)
       private final Output<String> suppressionDuration;
 
-    public Output<String> getSuppressionDuration() {
+    public Output<String> suppressionDuration() {
         return this.suppressionDuration;
     }
 
@@ -161,7 +162,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="suppressionEnabled", required=true)
       private final Output<Boolean> suppressionEnabled;
 
-    public Output<Boolean> getSuppressionEnabled() {
+    public Output<Boolean> suppressionEnabled() {
         return this.suppressionEnabled;
     }
 
@@ -172,8 +173,8 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="tactics")
       private final @Nullable Output<List<Either<String,AttackTactic>>> tactics;
 
-    public Output<List<Either<String,AttackTactic>>> getTactics() {
-        return this.tactics == null ? Output.empty() : this.tactics;
+    public Output<List<Either<String,AttackTactic>>> tactics() {
+        return this.tactics == null ? Codegen.empty() : this.tactics;
     }
 
     /**
@@ -183,7 +184,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="triggerOperator", required=true)
       private final Output<TriggerOperator> triggerOperator;
 
-    public Output<TriggerOperator> getTriggerOperator() {
+    public Output<TriggerOperator> triggerOperator() {
         return this.triggerOperator;
     }
 
@@ -194,7 +195,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="triggerThreshold", required=true)
       private final Output<Integer> triggerThreshold;
 
-    public Output<Integer> getTriggerThreshold() {
+    public Output<Integer> triggerThreshold() {
         return this.triggerThreshold;
     }
 
@@ -205,7 +206,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -247,23 +248,23 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ScheduledAlertRuleArgs() {
-        this.alertRuleTemplateName = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.enabled = Output.empty();
-        this.kind = Output.empty();
-        this.query = Output.empty();
-        this.queryFrequency = Output.empty();
-        this.queryPeriod = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleId = Output.empty();
-        this.severity = Output.empty();
-        this.suppressionDuration = Output.empty();
-        this.suppressionEnabled = Output.empty();
-        this.tactics = Output.empty();
-        this.triggerOperator = Output.empty();
-        this.triggerThreshold = Output.empty();
-        this.workspaceName = Output.empty();
+        this.alertRuleTemplateName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.query = Codegen.empty();
+        this.queryFrequency = Codegen.empty();
+        this.queryPeriod = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.suppressionDuration = Codegen.empty();
+        this.suppressionEnabled = Codegen.empty();
+        this.tactics = Codegen.empty();
+        this.triggerOperator = Codegen.empty();
+        this.triggerThreshold = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -323,7 +324,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
-            this.alertRuleTemplateName = Output.ofNullable(alertRuleTemplateName);
+            this.alertRuleTemplateName = Codegen.ofNullable(alertRuleTemplateName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -331,7 +332,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -395,7 +396,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Output.ofNullable(ruleId);
+            this.ruleId = Codegen.ofNullable(ruleId);
             return this;
         }
         public Builder severity(Output<Either<String,AlertSeverity>> severity) {
@@ -427,7 +428,7 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tactics(@Nullable List<Either<String,AttackTactic>> tactics) {
-            this.tactics = Output.ofNullable(tactics);
+            this.tactics = Codegen.ofNullable(tactics);
             return this;
         }
         public Builder tactics(Either<String,AttackTactic>... tactics) {

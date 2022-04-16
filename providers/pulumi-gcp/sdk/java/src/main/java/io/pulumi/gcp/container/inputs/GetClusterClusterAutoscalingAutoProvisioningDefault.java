@@ -16,28 +16,28 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault extends i
     @Import(name="imageType", required=true)
       private final String imageType;
 
-    public String getImageType() {
+    public String imageType() {
         return this.imageType;
     }
 
     @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
-    public String getMinCpuPlatform() {
+    public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
     @Import(name="oauthScopes", required=true)
       private final List<String> oauthScopes;
 
-    public List<String> getOauthScopes() {
+    public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
     @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
-    public String getServiceAccount() {
+    public String serviceAccount() {
         return this.serviceAccount;
     }
 

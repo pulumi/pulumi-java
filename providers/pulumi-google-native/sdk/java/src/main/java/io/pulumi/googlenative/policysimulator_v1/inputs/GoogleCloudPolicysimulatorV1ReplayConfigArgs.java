@@ -5,6 +5,7 @@ package io.pulumi.googlenative.policysimulator_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.policysimulator_v1.enums.GoogleCloudPolicysimulatorV1ReplayConfigLogSource;
 import java.lang.String;
 import java.util.Map;
@@ -27,8 +28,8 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
     @Import(name="logSource")
       private final @Nullable Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource;
 
-    public Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> getLogSource() {
-        return this.logSource == null ? Output.empty() : this.logSource;
+    public Output<GoogleCloudPolicysimulatorV1ReplayConfigLogSource> logSource() {
+        return this.logSource == null ? Codegen.empty() : this.logSource;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
     @Import(name="policyOverlay")
       private final @Nullable Output<Map<String,String>> policyOverlay;
 
-    public Output<Map<String,String>> getPolicyOverlay() {
-        return this.policyOverlay == null ? Output.empty() : this.policyOverlay;
+    public Output<Map<String,String>> policyOverlay() {
+        return this.policyOverlay == null ? Codegen.empty() : this.policyOverlay;
     }
 
     public GoogleCloudPolicysimulatorV1ReplayConfigArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
     }
 
     private GoogleCloudPolicysimulatorV1ReplayConfigArgs() {
-        this.logSource = Output.empty();
-        this.policyOverlay = Output.empty();
+        this.logSource = Codegen.empty();
+        this.policyOverlay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
             return this;
         }
         public Builder logSource(@Nullable GoogleCloudPolicysimulatorV1ReplayConfigLogSource logSource) {
-            this.logSource = Output.ofNullable(logSource);
+            this.logSource = Codegen.ofNullable(logSource);
             return this;
         }
         public Builder policyOverlay(@Nullable Output<Map<String,String>> policyOverlay) {
@@ -89,7 +90,7 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigArgs extends io.pulum
             return this;
         }
         public Builder policyOverlay(@Nullable Map<String,String> policyOverlay) {
-            this.policyOverlay = Output.ofNullable(policyOverlay);
+            this.policyOverlay = Codegen.ofNullable(policyOverlay);
             return this;
         }        public GoogleCloudPolicysimulatorV1ReplayConfigArgs build() {
             return new GoogleCloudPolicysimulatorV1ReplayConfigArgs(logSource, policyOverlay);

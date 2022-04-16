@@ -8,6 +8,7 @@ import io.pulumi.azurenative.desktopvirtualization.enums.StopHostsWhen;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,8 +32,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="daysOfWeek")
       private final @Nullable Output<List<String>> daysOfWeek;
 
-    public Output<List<String>> getDaysOfWeek() {
-        return this.daysOfWeek == null ? Output.empty() : this.daysOfWeek;
+    public Output<List<String>> daysOfWeek() {
+        return this.daysOfWeek == null ? Codegen.empty() : this.daysOfWeek;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="offPeakLoadBalancingAlgorithm")
       private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm;
 
-    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> getOffPeakLoadBalancingAlgorithm() {
-        return this.offPeakLoadBalancingAlgorithm == null ? Output.empty() : this.offPeakLoadBalancingAlgorithm;
+    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm() {
+        return this.offPeakLoadBalancingAlgorithm == null ? Codegen.empty() : this.offPeakLoadBalancingAlgorithm;
     }
 
     /**
@@ -64,8 +65,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="offPeakStartTime")
       private final @Nullable Output<String> offPeakStartTime;
 
-    public Output<String> getOffPeakStartTime() {
-        return this.offPeakStartTime == null ? Output.empty() : this.offPeakStartTime;
+    public Output<String> offPeakStartTime() {
+        return this.offPeakStartTime == null ? Codegen.empty() : this.offPeakStartTime;
     }
 
     /**
@@ -75,8 +76,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="peakLoadBalancingAlgorithm")
       private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm;
 
-    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> getPeakLoadBalancingAlgorithm() {
-        return this.peakLoadBalancingAlgorithm == null ? Output.empty() : this.peakLoadBalancingAlgorithm;
+    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm() {
+        return this.peakLoadBalancingAlgorithm == null ? Codegen.empty() : this.peakLoadBalancingAlgorithm;
     }
 
     /**
@@ -86,8 +87,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="peakStartTime")
       private final @Nullable Output<String> peakStartTime;
 
-    public Output<String> getPeakStartTime() {
-        return this.peakStartTime == null ? Output.empty() : this.peakStartTime;
+    public Output<String> peakStartTime() {
+        return this.peakStartTime == null ? Codegen.empty() : this.peakStartTime;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampDownCapacityThresholdPct")
       private final @Nullable Output<Integer> rampDownCapacityThresholdPct;
 
-    public Output<Integer> getRampDownCapacityThresholdPct() {
-        return this.rampDownCapacityThresholdPct == null ? Output.empty() : this.rampDownCapacityThresholdPct;
+    public Output<Integer> rampDownCapacityThresholdPct() {
+        return this.rampDownCapacityThresholdPct == null ? Codegen.empty() : this.rampDownCapacityThresholdPct;
     }
 
     /**
@@ -108,8 +109,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampDownForceLogoffUsers")
       private final @Nullable Output<Boolean> rampDownForceLogoffUsers;
 
-    public Output<Boolean> getRampDownForceLogoffUsers() {
-        return this.rampDownForceLogoffUsers == null ? Output.empty() : this.rampDownForceLogoffUsers;
+    public Output<Boolean> rampDownForceLogoffUsers() {
+        return this.rampDownForceLogoffUsers == null ? Codegen.empty() : this.rampDownForceLogoffUsers;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampDownLoadBalancingAlgorithm")
       private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm;
 
-    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> getRampDownLoadBalancingAlgorithm() {
-        return this.rampDownLoadBalancingAlgorithm == null ? Output.empty() : this.rampDownLoadBalancingAlgorithm;
+    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm() {
+        return this.rampDownLoadBalancingAlgorithm == null ? Codegen.empty() : this.rampDownLoadBalancingAlgorithm;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampDownMinimumHostsPct")
       private final @Nullable Output<Integer> rampDownMinimumHostsPct;
 
-    public Output<Integer> getRampDownMinimumHostsPct() {
-        return this.rampDownMinimumHostsPct == null ? Output.empty() : this.rampDownMinimumHostsPct;
+    public Output<Integer> rampDownMinimumHostsPct() {
+        return this.rampDownMinimumHostsPct == null ? Codegen.empty() : this.rampDownMinimumHostsPct;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampDownNotificationMessage")
       private final @Nullable Output<String> rampDownNotificationMessage;
 
-    public Output<String> getRampDownNotificationMessage() {
-        return this.rampDownNotificationMessage == null ? Output.empty() : this.rampDownNotificationMessage;
+    public Output<String> rampDownNotificationMessage() {
+        return this.rampDownNotificationMessage == null ? Codegen.empty() : this.rampDownNotificationMessage;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampDownStartTime")
       private final @Nullable Output<String> rampDownStartTime;
 
-    public Output<String> getRampDownStartTime() {
-        return this.rampDownStartTime == null ? Output.empty() : this.rampDownStartTime;
+    public Output<String> rampDownStartTime() {
+        return this.rampDownStartTime == null ? Codegen.empty() : this.rampDownStartTime;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampDownStopHostsWhen")
       private final @Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen;
 
-    public Output<Either<String,StopHostsWhen>> getRampDownStopHostsWhen() {
-        return this.rampDownStopHostsWhen == null ? Output.empty() : this.rampDownStopHostsWhen;
+    public Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen() {
+        return this.rampDownStopHostsWhen == null ? Codegen.empty() : this.rampDownStopHostsWhen;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampDownWaitTimeMinutes")
       private final @Nullable Output<Integer> rampDownWaitTimeMinutes;
 
-    public Output<Integer> getRampDownWaitTimeMinutes() {
-        return this.rampDownWaitTimeMinutes == null ? Output.empty() : this.rampDownWaitTimeMinutes;
+    public Output<Integer> rampDownWaitTimeMinutes() {
+        return this.rampDownWaitTimeMinutes == null ? Codegen.empty() : this.rampDownWaitTimeMinutes;
     }
 
     /**
@@ -185,8 +186,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampUpCapacityThresholdPct")
       private final @Nullable Output<Integer> rampUpCapacityThresholdPct;
 
-    public Output<Integer> getRampUpCapacityThresholdPct() {
-        return this.rampUpCapacityThresholdPct == null ? Output.empty() : this.rampUpCapacityThresholdPct;
+    public Output<Integer> rampUpCapacityThresholdPct() {
+        return this.rampUpCapacityThresholdPct == null ? Codegen.empty() : this.rampUpCapacityThresholdPct;
     }
 
     /**
@@ -196,8 +197,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampUpLoadBalancingAlgorithm")
       private final @Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm;
 
-    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> getRampUpLoadBalancingAlgorithm() {
-        return this.rampUpLoadBalancingAlgorithm == null ? Output.empty() : this.rampUpLoadBalancingAlgorithm;
+    public Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm() {
+        return this.rampUpLoadBalancingAlgorithm == null ? Codegen.empty() : this.rampUpLoadBalancingAlgorithm;
     }
 
     /**
@@ -207,8 +208,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampUpMinimumHostsPct")
       private final @Nullable Output<Integer> rampUpMinimumHostsPct;
 
-    public Output<Integer> getRampUpMinimumHostsPct() {
-        return this.rampUpMinimumHostsPct == null ? Output.empty() : this.rampUpMinimumHostsPct;
+    public Output<Integer> rampUpMinimumHostsPct() {
+        return this.rampUpMinimumHostsPct == null ? Codegen.empty() : this.rampUpMinimumHostsPct;
     }
 
     /**
@@ -218,8 +219,8 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rampUpStartTime")
       private final @Nullable Output<String> rampUpStartTime;
 
-    public Output<String> getRampUpStartTime() {
-        return this.rampUpStartTime == null ? Output.empty() : this.rampUpStartTime;
+    public Output<String> rampUpStartTime() {
+        return this.rampUpStartTime == null ? Codegen.empty() : this.rampUpStartTime;
     }
 
     public ScalingScheduleArgs(
@@ -262,24 +263,24 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScalingScheduleArgs() {
-        this.daysOfWeek = Output.empty();
-        this.name = Output.empty();
-        this.offPeakLoadBalancingAlgorithm = Output.empty();
-        this.offPeakStartTime = Output.empty();
-        this.peakLoadBalancingAlgorithm = Output.empty();
-        this.peakStartTime = Output.empty();
-        this.rampDownCapacityThresholdPct = Output.empty();
-        this.rampDownForceLogoffUsers = Output.empty();
-        this.rampDownLoadBalancingAlgorithm = Output.empty();
-        this.rampDownMinimumHostsPct = Output.empty();
-        this.rampDownNotificationMessage = Output.empty();
-        this.rampDownStartTime = Output.empty();
-        this.rampDownStopHostsWhen = Output.empty();
-        this.rampDownWaitTimeMinutes = Output.empty();
-        this.rampUpCapacityThresholdPct = Output.empty();
-        this.rampUpLoadBalancingAlgorithm = Output.empty();
-        this.rampUpMinimumHostsPct = Output.empty();
-        this.rampUpStartTime = Output.empty();
+        this.daysOfWeek = Codegen.empty();
+        this.name = Codegen.empty();
+        this.offPeakLoadBalancingAlgorithm = Codegen.empty();
+        this.offPeakStartTime = Codegen.empty();
+        this.peakLoadBalancingAlgorithm = Codegen.empty();
+        this.peakStartTime = Codegen.empty();
+        this.rampDownCapacityThresholdPct = Codegen.empty();
+        this.rampDownForceLogoffUsers = Codegen.empty();
+        this.rampDownLoadBalancingAlgorithm = Codegen.empty();
+        this.rampDownMinimumHostsPct = Codegen.empty();
+        this.rampDownNotificationMessage = Codegen.empty();
+        this.rampDownStartTime = Codegen.empty();
+        this.rampDownStopHostsWhen = Codegen.empty();
+        this.rampDownWaitTimeMinutes = Codegen.empty();
+        this.rampUpCapacityThresholdPct = Codegen.empty();
+        this.rampUpLoadBalancingAlgorithm = Codegen.empty();
+        this.rampUpMinimumHostsPct = Codegen.empty();
+        this.rampUpStartTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -341,7 +342,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder daysOfWeek(@Nullable List<String> daysOfWeek) {
-            this.daysOfWeek = Output.ofNullable(daysOfWeek);
+            this.daysOfWeek = Codegen.ofNullable(daysOfWeek);
             return this;
         }
         public Builder daysOfWeek(String... daysOfWeek) {
@@ -352,7 +353,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder offPeakLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> offPeakLoadBalancingAlgorithm) {
@@ -360,7 +361,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder offPeakLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> offPeakLoadBalancingAlgorithm) {
-            this.offPeakLoadBalancingAlgorithm = Output.ofNullable(offPeakLoadBalancingAlgorithm);
+            this.offPeakLoadBalancingAlgorithm = Codegen.ofNullable(offPeakLoadBalancingAlgorithm);
             return this;
         }
         public Builder offPeakStartTime(@Nullable Output<String> offPeakStartTime) {
@@ -368,7 +369,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder offPeakStartTime(@Nullable String offPeakStartTime) {
-            this.offPeakStartTime = Output.ofNullable(offPeakStartTime);
+            this.offPeakStartTime = Codegen.ofNullable(offPeakStartTime);
             return this;
         }
         public Builder peakLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> peakLoadBalancingAlgorithm) {
@@ -376,7 +377,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder peakLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> peakLoadBalancingAlgorithm) {
-            this.peakLoadBalancingAlgorithm = Output.ofNullable(peakLoadBalancingAlgorithm);
+            this.peakLoadBalancingAlgorithm = Codegen.ofNullable(peakLoadBalancingAlgorithm);
             return this;
         }
         public Builder peakStartTime(@Nullable Output<String> peakStartTime) {
@@ -384,7 +385,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder peakStartTime(@Nullable String peakStartTime) {
-            this.peakStartTime = Output.ofNullable(peakStartTime);
+            this.peakStartTime = Codegen.ofNullable(peakStartTime);
             return this;
         }
         public Builder rampDownCapacityThresholdPct(@Nullable Output<Integer> rampDownCapacityThresholdPct) {
@@ -392,7 +393,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampDownCapacityThresholdPct(@Nullable Integer rampDownCapacityThresholdPct) {
-            this.rampDownCapacityThresholdPct = Output.ofNullable(rampDownCapacityThresholdPct);
+            this.rampDownCapacityThresholdPct = Codegen.ofNullable(rampDownCapacityThresholdPct);
             return this;
         }
         public Builder rampDownForceLogoffUsers(@Nullable Output<Boolean> rampDownForceLogoffUsers) {
@@ -400,7 +401,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampDownForceLogoffUsers(@Nullable Boolean rampDownForceLogoffUsers) {
-            this.rampDownForceLogoffUsers = Output.ofNullable(rampDownForceLogoffUsers);
+            this.rampDownForceLogoffUsers = Codegen.ofNullable(rampDownForceLogoffUsers);
             return this;
         }
         public Builder rampDownLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampDownLoadBalancingAlgorithm) {
@@ -408,7 +409,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampDownLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> rampDownLoadBalancingAlgorithm) {
-            this.rampDownLoadBalancingAlgorithm = Output.ofNullable(rampDownLoadBalancingAlgorithm);
+            this.rampDownLoadBalancingAlgorithm = Codegen.ofNullable(rampDownLoadBalancingAlgorithm);
             return this;
         }
         public Builder rampDownMinimumHostsPct(@Nullable Output<Integer> rampDownMinimumHostsPct) {
@@ -416,7 +417,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampDownMinimumHostsPct(@Nullable Integer rampDownMinimumHostsPct) {
-            this.rampDownMinimumHostsPct = Output.ofNullable(rampDownMinimumHostsPct);
+            this.rampDownMinimumHostsPct = Codegen.ofNullable(rampDownMinimumHostsPct);
             return this;
         }
         public Builder rampDownNotificationMessage(@Nullable Output<String> rampDownNotificationMessage) {
@@ -424,7 +425,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampDownNotificationMessage(@Nullable String rampDownNotificationMessage) {
-            this.rampDownNotificationMessage = Output.ofNullable(rampDownNotificationMessage);
+            this.rampDownNotificationMessage = Codegen.ofNullable(rampDownNotificationMessage);
             return this;
         }
         public Builder rampDownStartTime(@Nullable Output<String> rampDownStartTime) {
@@ -432,7 +433,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampDownStartTime(@Nullable String rampDownStartTime) {
-            this.rampDownStartTime = Output.ofNullable(rampDownStartTime);
+            this.rampDownStartTime = Codegen.ofNullable(rampDownStartTime);
             return this;
         }
         public Builder rampDownStopHostsWhen(@Nullable Output<Either<String,StopHostsWhen>> rampDownStopHostsWhen) {
@@ -440,7 +441,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampDownStopHostsWhen(@Nullable Either<String,StopHostsWhen> rampDownStopHostsWhen) {
-            this.rampDownStopHostsWhen = Output.ofNullable(rampDownStopHostsWhen);
+            this.rampDownStopHostsWhen = Codegen.ofNullable(rampDownStopHostsWhen);
             return this;
         }
         public Builder rampDownWaitTimeMinutes(@Nullable Output<Integer> rampDownWaitTimeMinutes) {
@@ -448,7 +449,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampDownWaitTimeMinutes(@Nullable Integer rampDownWaitTimeMinutes) {
-            this.rampDownWaitTimeMinutes = Output.ofNullable(rampDownWaitTimeMinutes);
+            this.rampDownWaitTimeMinutes = Codegen.ofNullable(rampDownWaitTimeMinutes);
             return this;
         }
         public Builder rampUpCapacityThresholdPct(@Nullable Output<Integer> rampUpCapacityThresholdPct) {
@@ -456,7 +457,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampUpCapacityThresholdPct(@Nullable Integer rampUpCapacityThresholdPct) {
-            this.rampUpCapacityThresholdPct = Output.ofNullable(rampUpCapacityThresholdPct);
+            this.rampUpCapacityThresholdPct = Codegen.ofNullable(rampUpCapacityThresholdPct);
             return this;
         }
         public Builder rampUpLoadBalancingAlgorithm(@Nullable Output<Either<String,SessionHostLoadBalancingAlgorithm>> rampUpLoadBalancingAlgorithm) {
@@ -464,7 +465,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampUpLoadBalancingAlgorithm(@Nullable Either<String,SessionHostLoadBalancingAlgorithm> rampUpLoadBalancingAlgorithm) {
-            this.rampUpLoadBalancingAlgorithm = Output.ofNullable(rampUpLoadBalancingAlgorithm);
+            this.rampUpLoadBalancingAlgorithm = Codegen.ofNullable(rampUpLoadBalancingAlgorithm);
             return this;
         }
         public Builder rampUpMinimumHostsPct(@Nullable Output<Integer> rampUpMinimumHostsPct) {
@@ -472,7 +473,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampUpMinimumHostsPct(@Nullable Integer rampUpMinimumHostsPct) {
-            this.rampUpMinimumHostsPct = Output.ofNullable(rampUpMinimumHostsPct);
+            this.rampUpMinimumHostsPct = Codegen.ofNullable(rampUpMinimumHostsPct);
             return this;
         }
         public Builder rampUpStartTime(@Nullable Output<String> rampUpStartTime) {
@@ -480,7 +481,7 @@ public final class ScalingScheduleArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rampUpStartTime(@Nullable String rampUpStartTime) {
-            this.rampUpStartTime = Output.ofNullable(rampUpStartTime);
+            this.rampUpStartTime = Codegen.ofNullable(rampUpStartTime);
             return this;
         }        public ScalingScheduleArgs build() {
             return new ScalingScheduleArgs(daysOfWeek, name, offPeakLoadBalancingAlgorithm, offPeakStartTime, peakLoadBalancingAlgorithm, peakStartTime, rampDownCapacityThresholdPct, rampDownForceLogoffUsers, rampDownLoadBalancingAlgorithm, rampDownMinimumHostsPct, rampDownNotificationMessage, rampDownStartTime, rampDownStopHostsWhen, rampDownWaitTimeMinutes, rampUpCapacityThresholdPct, rampUpLoadBalancingAlgorithm, rampUpMinimumHostsPct, rampUpStartTime);

@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,8 +34,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
-    public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+    public Output<List<Object>> annotations() {
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="clientId")
       private final @Nullable Output<Object> clientId;
 
-    public Output<Object> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+    public Output<Object> clientId() {
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> connectVia() {
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
-    public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+    public Output<Object> encryptedCredential() {
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="language")
       private final @Nullable Output<Object> language;
 
-    public Output<Object> getLanguage() {
-        return this.language == null ? Output.empty() : this.language;
+    public Output<Object> language() {
+        return this.language == null ? Codegen.empty() : this.language;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="logonGroup")
       private final @Nullable Output<Object> logonGroup;
 
-    public Output<Object> getLogonGroup() {
-        return this.logonGroup == null ? Output.empty() : this.logonGroup;
+    public Output<Object> logonGroup() {
+        return this.logonGroup == null ? Codegen.empty() : this.logonGroup;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="messageServer")
       private final @Nullable Output<Object> messageServer;
 
-    public Output<Object> getMessageServer() {
-        return this.messageServer == null ? Output.empty() : this.messageServer;
+    public Output<Object> messageServer() {
+        return this.messageServer == null ? Codegen.empty() : this.messageServer;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="messageServerService")
       private final @Nullable Output<Object> messageServerService;
 
-    public Output<Object> getMessageServerService() {
-        return this.messageServerService == null ? Output.empty() : this.messageServerService;
+    public Output<Object> messageServerService() {
+        return this.messageServerService == null ? Codegen.empty() : this.messageServerService;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -143,8 +144,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -154,8 +155,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="server")
       private final @Nullable Output<Object> server;
 
-    public Output<Object> getServer() {
-        return this.server == null ? Output.empty() : this.server;
+    public Output<Object> server() {
+        return this.server == null ? Codegen.empty() : this.server;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="systemId")
       private final @Nullable Output<Object> systemId;
 
-    public Output<Object> getSystemId() {
-        return this.systemId == null ? Output.empty() : this.systemId;
+    public Output<Object> systemId() {
+        return this.systemId == null ? Codegen.empty() : this.systemId;
     }
 
     /**
@@ -176,8 +177,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="systemNumber")
       private final @Nullable Output<Object> systemNumber;
 
-    public Output<Object> getSystemNumber() {
-        return this.systemNumber == null ? Output.empty() : this.systemNumber;
+    public Output<Object> systemNumber() {
+        return this.systemNumber == null ? Codegen.empty() : this.systemNumber;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -199,8 +200,8 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
-    public Output<Object> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+    public Output<Object> userName() {
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public SapOpenHubLinkedServiceArgs(
@@ -239,22 +240,22 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
     }
 
     private SapOpenHubLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.clientId = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.language = Output.empty();
-        this.logonGroup = Output.empty();
-        this.messageServer = Output.empty();
-        this.messageServerService = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.server = Output.empty();
-        this.systemId = Output.empty();
-        this.systemNumber = Output.empty();
-        this.type = Output.empty();
-        this.userName = Output.empty();
+        this.annotations = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.language = Codegen.empty();
+        this.logonGroup = Codegen.empty();
+        this.messageServer = Codegen.empty();
+        this.messageServerService = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.server = Codegen.empty();
+        this.systemId = Codegen.empty();
+        this.systemNumber = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -312,7 +313,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -323,7 +324,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -331,7 +332,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -339,7 +340,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -347,7 +348,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder language(@Nullable Output<Object> language) {
@@ -355,7 +356,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder language(@Nullable Object language) {
-            this.language = Output.ofNullable(language);
+            this.language = Codegen.ofNullable(language);
             return this;
         }
         public Builder logonGroup(@Nullable Output<Object> logonGroup) {
@@ -363,7 +364,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder logonGroup(@Nullable Object logonGroup) {
-            this.logonGroup = Output.ofNullable(logonGroup);
+            this.logonGroup = Codegen.ofNullable(logonGroup);
             return this;
         }
         public Builder messageServer(@Nullable Output<Object> messageServer) {
@@ -371,7 +372,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder messageServer(@Nullable Object messageServer) {
-            this.messageServer = Output.ofNullable(messageServer);
+            this.messageServer = Codegen.ofNullable(messageServer);
             return this;
         }
         public Builder messageServerService(@Nullable Output<Object> messageServerService) {
@@ -379,7 +380,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder messageServerService(@Nullable Object messageServerService) {
-            this.messageServerService = Output.ofNullable(messageServerService);
+            this.messageServerService = Codegen.ofNullable(messageServerService);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -387,7 +388,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -395,7 +396,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder server(@Nullable Output<Object> server) {
@@ -403,7 +404,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder server(@Nullable Object server) {
-            this.server = Output.ofNullable(server);
+            this.server = Codegen.ofNullable(server);
             return this;
         }
         public Builder systemId(@Nullable Output<Object> systemId) {
@@ -411,7 +412,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder systemId(@Nullable Object systemId) {
-            this.systemId = Output.ofNullable(systemId);
+            this.systemId = Codegen.ofNullable(systemId);
             return this;
         }
         public Builder systemNumber(@Nullable Output<Object> systemNumber) {
@@ -419,7 +420,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder systemNumber(@Nullable Object systemNumber) {
-            this.systemNumber = Output.ofNullable(systemNumber);
+            this.systemNumber = Codegen.ofNullable(systemNumber);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -435,7 +436,7 @@ public final class SapOpenHubLinkedServiceArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder userName(@Nullable Object userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public SapOpenHubLinkedServiceArgs build() {
             return new SapOpenHubLinkedServiceArgs(annotations, clientId, connectVia, description, encryptedCredential, language, logonGroup, messageServer, messageServerService, parameters, password, server, systemId, systemNumber, type, userName);

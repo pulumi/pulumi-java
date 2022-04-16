@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterLabels")
       private final @Nullable Output<Map<String,String>> clusterLabels;
 
-    public Output<Map<String,String>> getClusterLabels() {
-        return this.clusterLabels == null ? Output.empty() : this.clusterLabels;
+    public Output<Map<String,String>> clusterLabels() {
+        return this.clusterLabels == null ? Codegen.empty() : this.clusterLabels;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
-    public Output<String> getClusterName() {
+    public Output<String> clusterName() {
         return this.clusterName;
     }
 
@@ -49,8 +50,8 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobPlacementArgs() {
-        this.clusterLabels = Output.empty();
-        this.clusterName = Output.empty();
+        this.clusterLabels = Codegen.empty();
+        this.clusterName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class JobPlacementArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterLabels(@Nullable Map<String,String> clusterLabels) {
-            this.clusterLabels = Output.ofNullable(clusterLabels);
+            this.clusterLabels = Codegen.ofNullable(clusterLabels);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -42,7 +43,7 @@ public class GuestUsage extends io.pulumi.resources.CustomResource {
      * @return Location of the Guest Usages resource.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -56,7 +57,7 @@ public class GuestUsage extends io.pulumi.resources.CustomResource {
      * @return The name of the Guest Usages resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -70,7 +71,7 @@ public class GuestUsage extends io.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -84,7 +85,7 @@ public class GuestUsage extends io.pulumi.resources.CustomResource {
      * @return An identifier for the tenant for which the resource is being created
      * 
      */
-    public Output</* @Nullable */ String> getTenantId() {
+    public Output</* @Nullable */ String> tenantId() {
         return this.tenantId;
     }
     /**
@@ -98,7 +99,7 @@ public class GuestUsage extends io.pulumi.resources.CustomResource {
      * @return The type of the Guest Usages resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -124,7 +125,7 @@ public class GuestUsage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GuestUsage(String name, GuestUsageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:azureactivedirectory:GuestUsage", name, args == null ? GuestUsageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:azureactivedirectory:GuestUsage", name, args == null ? GuestUsageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GuestUsage(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -23,7 +24,7 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
     @Import(name="path", required=true)
       private final Output<String> path;
 
-    public Output<String> getPath() {
+    public Output<String> path() {
         return this.path;
     }
 
@@ -34,8 +35,8 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
     @Import(name="scanAll")
       private final @Nullable Output<Boolean> scanAll;
 
-    public Output<Boolean> getScanAll() {
-        return this.scanAll == null ? Output.empty() : this.scanAll;
+    public Output<Boolean> scanAll() {
+        return this.scanAll == null ? Codegen.empty() : this.scanAll;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
     @Import(name="scanRate")
       private final @Nullable Output<Double> scanRate;
 
-    public Output<Double> getScanRate() {
-        return this.scanRate == null ? Output.empty() : this.scanRate;
+    public Output<Double> scanRate() {
+        return this.scanRate == null ? Codegen.empty() : this.scanRate;
     }
 
     public CrawlerDynamodbTargetArgs(
@@ -59,9 +60,9 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
     }
 
     private CrawlerDynamodbTargetArgs() {
-        this.path = Output.empty();
-        this.scanAll = Output.empty();
-        this.scanRate = Output.empty();
+        this.path = Codegen.empty();
+        this.scanAll = Codegen.empty();
+        this.scanRate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder scanAll(@Nullable Boolean scanAll) {
-            this.scanAll = Output.ofNullable(scanAll);
+            this.scanAll = Codegen.ofNullable(scanAll);
             return this;
         }
         public Builder scanRate(@Nullable Output<Double> scanRate) {
@@ -109,7 +110,7 @@ public final class CrawlerDynamodbTargetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder scanRate(@Nullable Double scanRate) {
-            this.scanRate = Output.ofNullable(scanRate);
+            this.scanRate = Codegen.ofNullable(scanRate);
             return this;
         }        public CrawlerDynamodbTargetArgs build() {
             return new CrawlerDynamodbTargetArgs(path, scanAll, scanRate);

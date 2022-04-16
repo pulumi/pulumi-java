@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.EncryptionAlgorithm;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
     @Import(name="encryptionAlgorithm", required=true)
       private final Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
 
-    public Output<Either<String,EncryptionAlgorithm>> getEncryptionAlgorithm() {
+    public Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
@@ -38,8 +39,8 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
     @Import(name="encryptionCertThumbprint")
       private final @Nullable Output<String> encryptionCertThumbprint;
 
-    public Output<String> getEncryptionCertThumbprint() {
-        return this.encryptionCertThumbprint == null ? Output.empty() : this.encryptionCertThumbprint;
+    public Output<String> encryptionCertThumbprint() {
+        return this.encryptionCertThumbprint == null ? Codegen.empty() : this.encryptionCertThumbprint;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -63,9 +64,9 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
     }
 
     private AsymmetricEncryptedSecretArgs() {
-        this.encryptionAlgorithm = Output.empty();
-        this.encryptionCertThumbprint = Output.empty();
-        this.value = Output.empty();
+        this.encryptionAlgorithm = Codegen.empty();
+        this.encryptionCertThumbprint = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder encryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
-            this.encryptionCertThumbprint = Output.ofNullable(encryptionCertThumbprint);
+            this.encryptionCertThumbprint = Codegen.ofNullable(encryptionCertThumbprint);
             return this;
         }
         public Builder value(Output<String> value) {

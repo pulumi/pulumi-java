@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleConstraintsResourc
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStatisticsResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,15 +23,15 @@ public final class MonitoringScheduleBaselineConfigArgs extends io.pulumi.resour
     @Import(name="constraintsResource")
       private final @Nullable Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource;
 
-    public Output<MonitoringScheduleConstraintsResourceArgs> getConstraintsResource() {
-        return this.constraintsResource == null ? Output.empty() : this.constraintsResource;
+    public Output<MonitoringScheduleConstraintsResourceArgs> constraintsResource() {
+        return this.constraintsResource == null ? Codegen.empty() : this.constraintsResource;
     }
 
     @Import(name="statisticsResource")
       private final @Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource;
 
-    public Output<MonitoringScheduleStatisticsResourceArgs> getStatisticsResource() {
-        return this.statisticsResource == null ? Output.empty() : this.statisticsResource;
+    public Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource() {
+        return this.statisticsResource == null ? Codegen.empty() : this.statisticsResource;
     }
 
     public MonitoringScheduleBaselineConfigArgs(
@@ -41,8 +42,8 @@ public final class MonitoringScheduleBaselineConfigArgs extends io.pulumi.resour
     }
 
     private MonitoringScheduleBaselineConfigArgs() {
-        this.constraintsResource = Output.empty();
-        this.statisticsResource = Output.empty();
+        this.constraintsResource = Codegen.empty();
+        this.statisticsResource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class MonitoringScheduleBaselineConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder constraintsResource(@Nullable MonitoringScheduleConstraintsResourceArgs constraintsResource) {
-            this.constraintsResource = Output.ofNullable(constraintsResource);
+            this.constraintsResource = Codegen.ofNullable(constraintsResource);
             return this;
         }
         public Builder statisticsResource(@Nullable Output<MonitoringScheduleStatisticsResourceArgs> statisticsResource) {
@@ -80,7 +81,7 @@ public final class MonitoringScheduleBaselineConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder statisticsResource(@Nullable MonitoringScheduleStatisticsResourceArgs statisticsResource) {
-            this.statisticsResource = Output.ofNullable(statisticsResource);
+            this.statisticsResource = Codegen.ofNullable(statisticsResource);
             return this;
         }        public MonitoringScheduleBaselineConfigArgs build() {
             return new MonitoringScheduleBaselineConfigArgs(constraintsResource, statisticsResource);

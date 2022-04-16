@@ -42,21 +42,21 @@ public final class ServiceAuthenticationConfigurationInfoResponse {
      * The audience url for the service
      * 
     */
-    public Optional<String> getAudience() {
+    public Optional<String> audience() {
         return Optional.ofNullable(this.audience);
     }
     /**
      * The authority url for the service
      * 
     */
-    public Optional<String> getAuthority() {
+    public Optional<String> authority() {
         return Optional.ofNullable(this.authority);
     }
     /**
      * If the SMART on FHIR proxy is enabled
      * 
     */
-    public Optional<Boolean> getSmartProxyEnabled() {
+    public Optional<Boolean> smartProxyEnabled() {
         return Optional.ofNullable(this.smartProxyEnabled);
     }
 

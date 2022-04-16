@@ -23,7 +23,7 @@ public final class LoggingConfigurationConditionActionConditionProperties extend
     @Import(name="action", required=true)
       private final LoggingConfigurationConditionActionConditionPropertiesAction action;
 
-    public LoggingConfigurationConditionActionConditionPropertiesAction getAction() {
+    public LoggingConfigurationConditionActionConditionPropertiesAction action() {
         return this.action;
     }
 

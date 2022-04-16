@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storage.enums.RoutingChoice;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publishInternetEndpoints")
       private final @Nullable Output<Boolean> publishInternetEndpoints;
 
-    public Output<Boolean> getPublishInternetEndpoints() {
-        return this.publishInternetEndpoints == null ? Output.empty() : this.publishInternetEndpoints;
+    public Output<Boolean> publishInternetEndpoints() {
+        return this.publishInternetEndpoints == null ? Codegen.empty() : this.publishInternetEndpoints;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publishMicrosoftEndpoints")
       private final @Nullable Output<Boolean> publishMicrosoftEndpoints;
 
-    public Output<Boolean> getPublishMicrosoftEndpoints() {
-        return this.publishMicrosoftEndpoints == null ? Output.empty() : this.publishMicrosoftEndpoints;
+    public Output<Boolean> publishMicrosoftEndpoints() {
+        return this.publishMicrosoftEndpoints == null ? Codegen.empty() : this.publishMicrosoftEndpoints;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
     @Import(name="routingChoice")
       private final @Nullable Output<Either<String,RoutingChoice>> routingChoice;
 
-    public Output<Either<String,RoutingChoice>> getRoutingChoice() {
-        return this.routingChoice == null ? Output.empty() : this.routingChoice;
+    public Output<Either<String,RoutingChoice>> routingChoice() {
+        return this.routingChoice == null ? Codegen.empty() : this.routingChoice;
     }
 
     public RoutingPreferenceArgs(
@@ -64,9 +65,9 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RoutingPreferenceArgs() {
-        this.publishInternetEndpoints = Output.empty();
-        this.publishMicrosoftEndpoints = Output.empty();
-        this.routingChoice = Output.empty();
+        this.publishInternetEndpoints = Codegen.empty();
+        this.publishMicrosoftEndpoints = Codegen.empty();
+        this.routingChoice = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publishInternetEndpoints(@Nullable Boolean publishInternetEndpoints) {
-            this.publishInternetEndpoints = Output.ofNullable(publishInternetEndpoints);
+            this.publishInternetEndpoints = Codegen.ofNullable(publishInternetEndpoints);
             return this;
         }
         public Builder publishMicrosoftEndpoints(@Nullable Output<Boolean> publishMicrosoftEndpoints) {
@@ -106,7 +107,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publishMicrosoftEndpoints(@Nullable Boolean publishMicrosoftEndpoints) {
-            this.publishMicrosoftEndpoints = Output.ofNullable(publishMicrosoftEndpoints);
+            this.publishMicrosoftEndpoints = Codegen.ofNullable(publishMicrosoftEndpoints);
             return this;
         }
         public Builder routingChoice(@Nullable Output<Either<String,RoutingChoice>> routingChoice) {
@@ -114,7 +115,7 @@ public final class RoutingPreferenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder routingChoice(@Nullable Either<String,RoutingChoice> routingChoice) {
-            this.routingChoice = Output.ofNullable(routingChoice);
+            this.routingChoice = Codegen.ofNullable(routingChoice);
             return this;
         }        public RoutingPreferenceArgs build() {
             return new RoutingPreferenceArgs(publishInternetEndpoints, publishMicrosoftEndpoints, routingChoice);

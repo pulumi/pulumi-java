@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudiot_v1.enums.MqttConfigMqttEnabledState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mqttEnabledState")
       private final @Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState;
 
-    public Output<MqttConfigMqttEnabledState> getMqttEnabledState() {
-        return this.mqttEnabledState == null ? Output.empty() : this.mqttEnabledState;
+    public Output<MqttConfigMqttEnabledState> mqttEnabledState() {
+        return this.mqttEnabledState == null ? Codegen.empty() : this.mqttEnabledState;
     }
 
     public MqttConfigArgs(@Nullable Output<MqttConfigMqttEnabledState> mqttEnabledState) {
@@ -34,7 +35,7 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MqttConfigArgs() {
-        this.mqttEnabledState = Output.empty();
+        this.mqttEnabledState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class MqttConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mqttEnabledState(@Nullable MqttConfigMqttEnabledState mqttEnabledState) {
-            this.mqttEnabledState = Output.ofNullable(mqttEnabledState);
+            this.mqttEnabledState = Codegen.ofNullable(mqttEnabledState);
             return this;
         }        public MqttConfigArgs build() {
             return new MqttConfigArgs(mqttEnabledState);

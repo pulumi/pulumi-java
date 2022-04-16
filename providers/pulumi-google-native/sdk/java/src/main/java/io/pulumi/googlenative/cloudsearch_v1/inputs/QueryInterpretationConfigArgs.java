@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
     @Import(name="forceDisableSupplementalResults")
       private final @Nullable Output<Boolean> forceDisableSupplementalResults;
 
-    public Output<Boolean> getForceDisableSupplementalResults() {
-        return this.forceDisableSupplementalResults == null ? Output.empty() : this.forceDisableSupplementalResults;
+    public Output<Boolean> forceDisableSupplementalResults() {
+        return this.forceDisableSupplementalResults == null ? Codegen.empty() : this.forceDisableSupplementalResults;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
     @Import(name="forceVerbatimMode")
       private final @Nullable Output<Boolean> forceVerbatimMode;
 
-    public Output<Boolean> getForceVerbatimMode() {
-        return this.forceVerbatimMode == null ? Output.empty() : this.forceVerbatimMode;
+    public Output<Boolean> forceVerbatimMode() {
+        return this.forceVerbatimMode == null ? Codegen.empty() : this.forceVerbatimMode;
     }
 
     public QueryInterpretationConfigArgs(
@@ -48,8 +49,8 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
     }
 
     private QueryInterpretationConfigArgs() {
-        this.forceDisableSupplementalResults = Output.empty();
-        this.forceVerbatimMode = Output.empty();
+        this.forceDisableSupplementalResults = Codegen.empty();
+        this.forceVerbatimMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder forceDisableSupplementalResults(@Nullable Boolean forceDisableSupplementalResults) {
-            this.forceDisableSupplementalResults = Output.ofNullable(forceDisableSupplementalResults);
+            this.forceDisableSupplementalResults = Codegen.ofNullable(forceDisableSupplementalResults);
             return this;
         }
         public Builder forceVerbatimMode(@Nullable Output<Boolean> forceVerbatimMode) {
@@ -87,7 +88,7 @@ public final class QueryInterpretationConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder forceVerbatimMode(@Nullable Boolean forceVerbatimMode) {
-            this.forceVerbatimMode = Output.ofNullable(forceVerbatimMode);
+            this.forceVerbatimMode = Codegen.ofNullable(forceVerbatimMode);
             return this;
         }        public QueryInterpretationConfigArgs build() {
             return new QueryInterpretationConfigArgs(forceDisableSupplementalResults, forceVerbatimMode);

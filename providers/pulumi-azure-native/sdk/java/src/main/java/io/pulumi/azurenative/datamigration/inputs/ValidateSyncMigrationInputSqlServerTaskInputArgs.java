@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlDbSyncDatab
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
     @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases;
 
-    public Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> getSelectedDatabases() {
+    public Output<List<MigrateSqlServerSqlDbSyncDatabaseInputArgs>> selectedDatabases() {
         return this.selectedDatabases;
     }
 
@@ -37,7 +38,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
     @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
 
@@ -48,7 +49,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
     @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
-    public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {
+    public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
 
@@ -62,9 +63,9 @@ public final class ValidateSyncMigrationInputSqlServerTaskInputArgs extends io.p
     }
 
     private ValidateSyncMigrationInputSqlServerTaskInputArgs() {
-        this.selectedDatabases = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.targetConnectionInfo = Output.empty();
+        this.selectedDatabases = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {

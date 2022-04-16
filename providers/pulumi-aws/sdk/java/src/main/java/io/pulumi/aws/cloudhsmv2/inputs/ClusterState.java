@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudhsmv2.inputs;
 import io.pulumi.aws.cloudhsmv2.inputs.ClusterClusterCertificateGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,8 +30,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterCertificates")
       private final @Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates;
 
-    public Output<List<ClusterClusterCertificateGetArgs>> getClusterCertificates() {
-        return this.clusterCertificates == null ? Output.empty() : this.clusterCertificates;
+    public Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates() {
+        return this.clusterCertificates == null ? Codegen.empty() : this.clusterCertificates;
     }
 
     /**
@@ -40,8 +41,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
-    public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+    public Output<String> clusterId() {
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="clusterState")
       private final @Nullable Output<String> clusterState;
 
-    public Output<String> getClusterState() {
-        return this.clusterState == null ? Output.empty() : this.clusterState;
+    public Output<String> clusterState() {
+        return this.clusterState == null ? Codegen.empty() : this.clusterState;
     }
 
     /**
@@ -62,8 +63,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="hsmType")
       private final @Nullable Output<String> hsmType;
 
-    public Output<String> getHsmType() {
-        return this.hsmType == null ? Output.empty() : this.hsmType;
+    public Output<String> hsmType() {
+        return this.hsmType == null ? Codegen.empty() : this.hsmType;
     }
 
     /**
@@ -73,8 +74,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
-    public Output<String> getSecurityGroupId() {
-        return this.securityGroupId == null ? Output.empty() : this.securityGroupId;
+    public Output<String> securityGroupId() {
+        return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
     }
 
     /**
@@ -84,8 +85,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="sourceBackupIdentifier")
       private final @Nullable Output<String> sourceBackupIdentifier;
 
-    public Output<String> getSourceBackupIdentifier() {
-        return this.sourceBackupIdentifier == null ? Output.empty() : this.sourceBackupIdentifier;
+    public Output<String> sourceBackupIdentifier() {
+        return this.sourceBackupIdentifier == null ? Codegen.empty() : this.sourceBackupIdentifier;
     }
 
     /**
@@ -95,8 +96,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+    public Output<List<String>> subnetIds() {
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -117,8 +118,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -128,8 +129,8 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
-    public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+    public Output<String> vpcId() {
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public ClusterState(
@@ -156,16 +157,16 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.clusterCertificates = Output.empty();
-        this.clusterId = Output.empty();
-        this.clusterState = Output.empty();
-        this.hsmType = Output.empty();
-        this.securityGroupId = Output.empty();
-        this.sourceBackupIdentifier = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
+        this.clusterCertificates = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.clusterState = Codegen.empty();
+        this.hsmType = Codegen.empty();
+        this.securityGroupId = Codegen.empty();
+        this.sourceBackupIdentifier = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterCertificates(@Nullable List<ClusterClusterCertificateGetArgs> clusterCertificates) {
-            this.clusterCertificates = Output.ofNullable(clusterCertificates);
+            this.clusterCertificates = Codegen.ofNullable(clusterCertificates);
             return this;
         }
         public Builder clusterCertificates(ClusterClusterCertificateGetArgs... clusterCertificates) {
@@ -222,7 +223,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder clusterState(@Nullable Output<String> clusterState) {
@@ -230,7 +231,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterState(@Nullable String clusterState) {
-            this.clusterState = Output.ofNullable(clusterState);
+            this.clusterState = Codegen.ofNullable(clusterState);
             return this;
         }
         public Builder hsmType(@Nullable Output<String> hsmType) {
@@ -238,7 +239,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hsmType(@Nullable String hsmType) {
-            this.hsmType = Output.ofNullable(hsmType);
+            this.hsmType = Codegen.ofNullable(hsmType);
             return this;
         }
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
@@ -246,7 +247,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Output.ofNullable(securityGroupId);
+            this.securityGroupId = Codegen.ofNullable(securityGroupId);
             return this;
         }
         public Builder sourceBackupIdentifier(@Nullable Output<String> sourceBackupIdentifier) {
@@ -254,7 +255,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
-            this.sourceBackupIdentifier = Output.ofNullable(sourceBackupIdentifier);
+            this.sourceBackupIdentifier = Codegen.ofNullable(sourceBackupIdentifier);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -262,7 +263,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -273,7 +274,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -281,7 +282,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -289,7 +290,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public ClusterState build() {
             return new ClusterState(clusterCertificates, clusterId, clusterState, hsmType, securityGroupId, sourceBackupIdentifier, subnetIds, tags, tagsAll, vpcId);

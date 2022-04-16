@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
     @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
+    public Output<List<String>> resourceTypes() {
+        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
-    public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+    public Output<List<String>> resources() {
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     public NetworkInsightsAccessScopeResourceStatementRequestArgs(
@@ -37,8 +38,8 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
     }
 
     private NetworkInsightsAccessScopeResourceStatementRequestArgs() {
-        this.resourceTypes = Output.empty();
-        this.resources = Output.empty();
+        this.resourceTypes = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
             return this;
         }
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Output.ofNullable(resourceTypes);
+            this.resourceTypes = Codegen.ofNullable(resourceTypes);
             return this;
         }
         public Builder resourceTypes(String... resourceTypes) {
@@ -79,7 +80,7 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {

@@ -12,6 +12,7 @@ import io.pulumi.aws.autoscaling.outputs.PolicyTargetTrackingConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +51,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
      * 
      */
-    public Output</* @Nullable */ String> getAdjustmentType() {
+    public Output</* @Nullable */ String> adjustmentType() {
         return this.adjustmentType;
     }
     /**
@@ -64,7 +65,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The ARN assigned by AWS to the scaling policy.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -78,7 +79,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The name of the autoscaling group.
      * 
      */
-    public Output<String> getAutoscalingGroupName() {
+    public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
     }
     /**
@@ -92,7 +93,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
      * 
      */
-    public Output</* @Nullable */ Integer> getCooldown() {
+    public Output</* @Nullable */ Integer> cooldown() {
         return this.cooldown;
     }
     /**
@@ -106,7 +107,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
      * 
      */
-    public Output</* @Nullable */ Integer> getEstimatedInstanceWarmup() {
+    public Output</* @Nullable */ Integer> estimatedInstanceWarmup() {
         return this.estimatedInstanceWarmup;
     }
     /**
@@ -120,7 +121,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
      * 
      */
-    public Output<String> getMetricAggregationType() {
+    public Output<String> metricAggregationType() {
         return this.metricAggregationType;
     }
     /**
@@ -134,7 +135,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return Minimum value to scale by when `adjustment_type` is set to `PercentChangeInCapacity`.
      * 
      */
-    public Output</* @Nullable */ Integer> getMinAdjustmentMagnitude() {
+    public Output</* @Nullable */ Integer> minAdjustmentMagnitude() {
         return this.minAdjustmentMagnitude;
     }
     /**
@@ -148,7 +149,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The name of the dimension.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -162,7 +163,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
      * 
      */
-    public Output</* @Nullable */ String> getPolicyType() {
+    public Output</* @Nullable */ String> policyType() {
         return this.policyType;
     }
     /**
@@ -176,7 +177,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
      * 
      */
-    public Output</* @Nullable */ PolicyPredictiveScalingConfiguration> getPredictiveScalingConfiguration() {
+    public Output</* @Nullable */ PolicyPredictiveScalingConfiguration> predictiveScalingConfiguration() {
         return this.predictiveScalingConfiguration;
     }
     /**
@@ -194,7 +195,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * up. A negative value scales down.
      * 
      */
-    public Output</* @Nullable */ Integer> getScalingAdjustment() {
+    public Output</* @Nullable */ Integer> scalingAdjustment() {
         return this.scalingAdjustment;
     }
     /**
@@ -210,7 +211,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * group scaling. These have the following structure:
      * 
      */
-    public Output</* @Nullable */ List<PolicyStepAdjustment>> getStepAdjustments() {
+    public Output</* @Nullable */ List<PolicyStepAdjustment>> stepAdjustments() {
         return this.stepAdjustments;
     }
     /**
@@ -224,7 +225,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @return A target tracking policy. These have the following structure:
      * 
      */
-    public Output</* @Nullable */ PolicyTargetTrackingConfiguration> getTargetTrackingConfiguration() {
+    public Output</* @Nullable */ PolicyTargetTrackingConfiguration> targetTrackingConfiguration() {
         return this.targetTrackingConfiguration;
     }
 
@@ -250,7 +251,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Policy(String name, PolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:autoscaling/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:autoscaling/policy:Policy", name, args == null ? PolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Policy(String name, Output<String> id, @Nullable PolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

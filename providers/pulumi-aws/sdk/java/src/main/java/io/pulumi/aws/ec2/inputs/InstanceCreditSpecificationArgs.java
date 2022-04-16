@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InstanceCreditSpecificationArgs extends io.pulumi.resources.R
     @Import(name="cpuCredits")
       private final @Nullable Output<String> cpuCredits;
 
-    public Output<String> getCpuCredits() {
-        return this.cpuCredits == null ? Output.empty() : this.cpuCredits;
+    public Output<String> cpuCredits() {
+        return this.cpuCredits == null ? Codegen.empty() : this.cpuCredits;
     }
 
     public InstanceCreditSpecificationArgs(@Nullable Output<String> cpuCredits) {
@@ -30,7 +31,7 @@ public final class InstanceCreditSpecificationArgs extends io.pulumi.resources.R
     }
 
     private InstanceCreditSpecificationArgs() {
-        this.cpuCredits = Output.empty();
+        this.cpuCredits = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class InstanceCreditSpecificationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder cpuCredits(@Nullable String cpuCredits) {
-            this.cpuCredits = Output.ofNullable(cpuCredits);
+            this.cpuCredits = Codegen.ofNullable(cpuCredits);
             return this;
         }        public InstanceCreditSpecificationArgs build() {
             return new InstanceCreditSpecificationArgs(cpuCredits);

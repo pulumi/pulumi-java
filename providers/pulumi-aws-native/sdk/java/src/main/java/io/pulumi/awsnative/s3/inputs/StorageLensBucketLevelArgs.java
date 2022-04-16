@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.inputs.StorageLensActivityMetricsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,15 +23,15 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
     @Import(name="activityMetrics")
       private final @Nullable Output<StorageLensActivityMetricsArgs> activityMetrics;
 
-    public Output<StorageLensActivityMetricsArgs> getActivityMetrics() {
-        return this.activityMetrics == null ? Output.empty() : this.activityMetrics;
+    public Output<StorageLensActivityMetricsArgs> activityMetrics() {
+        return this.activityMetrics == null ? Codegen.empty() : this.activityMetrics;
     }
 
     @Import(name="prefixLevel")
       private final @Nullable Output<StorageLensPrefixLevelArgs> prefixLevel;
 
-    public Output<StorageLensPrefixLevelArgs> getPrefixLevel() {
-        return this.prefixLevel == null ? Output.empty() : this.prefixLevel;
+    public Output<StorageLensPrefixLevelArgs> prefixLevel() {
+        return this.prefixLevel == null ? Codegen.empty() : this.prefixLevel;
     }
 
     public StorageLensBucketLevelArgs(
@@ -41,8 +42,8 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
     }
 
     private StorageLensBucketLevelArgs() {
-        this.activityMetrics = Output.empty();
-        this.prefixLevel = Output.empty();
+        this.activityMetrics = Codegen.empty();
+        this.prefixLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder activityMetrics(@Nullable StorageLensActivityMetricsArgs activityMetrics) {
-            this.activityMetrics = Output.ofNullable(activityMetrics);
+            this.activityMetrics = Codegen.ofNullable(activityMetrics);
             return this;
         }
         public Builder prefixLevel(@Nullable Output<StorageLensPrefixLevelArgs> prefixLevel) {
@@ -80,7 +81,7 @@ public final class StorageLensBucketLevelArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder prefixLevel(@Nullable StorageLensPrefixLevelArgs prefixLevel) {
-            this.prefixLevel = Output.ofNullable(prefixLevel);
+            this.prefixLevel = Codegen.ofNullable(prefixLevel);
             return this;
         }        public StorageLensBucketLevelArgs build() {
             return new StorageLensBucketLevelArgs(activityMetrics, prefixLevel);

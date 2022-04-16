@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
-    public Output<Boolean> getIgnoreCase() {
-        return this.ignoreCase == null ? Output.empty() : this.ignoreCase;
+    public Output<Boolean> ignoreCase() {
+        return this.ignoreCase == null ? Codegen.empty() : this.ignoreCase;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     @Import(name="negate")
       private final @Nullable Output<Boolean> negate;
 
-    public Output<Boolean> getNegate() {
-        return this.negate == null ? Output.empty() : this.negate;
+    public Output<Boolean> negate() {
+        return this.negate == null ? Codegen.empty() : this.negate;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
-    public Output<String> getPattern() {
-        return this.pattern == null ? Output.empty() : this.pattern;
+    public Output<String> pattern() {
+        return this.pattern == null ? Codegen.empty() : this.pattern;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     @Import(name="variable")
       private final @Nullable Output<String> variable;
 
-    public Output<String> getVariable() {
-        return this.variable == null ? Output.empty() : this.variable;
+    public Output<String> variable() {
+        return this.variable == null ? Codegen.empty() : this.variable;
     }
 
     public ApplicationGatewayRewriteRuleConditionArgs(
@@ -75,10 +76,10 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
     }
 
     private ApplicationGatewayRewriteRuleConditionArgs() {
-        this.ignoreCase = Output.empty();
-        this.negate = Output.empty();
-        this.pattern = Output.empty();
-        this.variable = Output.empty();
+        this.ignoreCase = Codegen.empty();
+        this.negate = Codegen.empty();
+        this.pattern = Codegen.empty();
+        this.variable = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
             return this;
         }
         public Builder ignoreCase(@Nullable Boolean ignoreCase) {
-            this.ignoreCase = Output.ofNullable(ignoreCase);
+            this.ignoreCase = Codegen.ofNullable(ignoreCase);
             return this;
         }
         public Builder negate(@Nullable Output<Boolean> negate) {
@@ -120,7 +121,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
             return this;
         }
         public Builder negate(@Nullable Boolean negate) {
-            this.negate = Output.ofNullable(negate);
+            this.negate = Codegen.ofNullable(negate);
             return this;
         }
         public Builder pattern(@Nullable Output<String> pattern) {
@@ -128,7 +129,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
             return this;
         }
         public Builder pattern(@Nullable String pattern) {
-            this.pattern = Output.ofNullable(pattern);
+            this.pattern = Codegen.ofNullable(pattern);
             return this;
         }
         public Builder variable(@Nullable Output<String> variable) {
@@ -136,7 +137,7 @@ public final class ApplicationGatewayRewriteRuleConditionArgs extends io.pulumi.
             return this;
         }
         public Builder variable(@Nullable String variable) {
-            this.variable = Output.ofNullable(variable);
+            this.variable = Codegen.ofNullable(variable);
             return this;
         }        public ApplicationGatewayRewriteRuleConditionArgs build() {
             return new ApplicationGatewayRewriteRuleConditionArgs(ignoreCase, negate, pattern, variable);

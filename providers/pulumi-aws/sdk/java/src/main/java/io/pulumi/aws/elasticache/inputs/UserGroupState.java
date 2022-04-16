@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,8 +20,8 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -30,22 +31,22 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="engine")
       private final @Nullable Output<String> engine;
 
-    public Output<String> getEngine() {
-        return this.engine == null ? Output.empty() : this.engine;
+    public Output<String> engine() {
+        return this.engine == null ? Codegen.empty() : this.engine;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userGroupId")
       private final @Nullable Output<String> userGroupId;
 
-    public Output<String> getUserGroupId() {
-        return this.userGroupId == null ? Output.empty() : this.userGroupId;
+    public Output<String> userGroupId() {
+        return this.userGroupId == null ? Codegen.empty() : this.userGroupId;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
-    public Output<List<String>> getUserIds() {
-        return this.userIds == null ? Output.empty() : this.userIds;
+    public Output<List<String>> userIds() {
+        return this.userIds == null ? Codegen.empty() : this.userIds;
     }
 
     public UserGroupState(
@@ -86,12 +87,12 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserGroupState() {
-        this.arn = Output.empty();
-        this.engine = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userGroupId = Output.empty();
-        this.userIds = Output.empty();
+        this.arn = Codegen.empty();
+        this.engine = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userGroupId = Codegen.empty();
+        this.userIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder engine(@Nullable Output<String> engine) {
@@ -137,7 +138,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engine(@Nullable String engine) {
-            this.engine = Output.ofNullable(engine);
+            this.engine = Codegen.ofNullable(engine);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -145,7 +146,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -153,7 +154,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userGroupId(@Nullable Output<String> userGroupId) {
@@ -161,7 +162,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userGroupId(@Nullable String userGroupId) {
-            this.userGroupId = Output.ofNullable(userGroupId);
+            this.userGroupId = Codegen.ofNullable(userGroupId);
             return this;
         }
         public Builder userIds(@Nullable Output<List<String>> userIds) {
@@ -169,7 +170,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Output.ofNullable(userIds);
+            this.userIds = Codegen.ofNullable(userIds);
             return this;
         }
         public Builder userIds(String... userIds) {

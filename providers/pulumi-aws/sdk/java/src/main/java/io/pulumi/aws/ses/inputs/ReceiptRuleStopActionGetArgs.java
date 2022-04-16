@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="position", required=true)
       private final Output<Integer> position;
 
-    public Output<Integer> getPosition() {
+    public Output<Integer> position() {
         return this.position;
     }
 
@@ -33,7 +34,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="scope", required=true)
       private final Output<String> scope;
 
-    public Output<String> getScope() {
+    public Output<String> scope() {
         return this.scope;
     }
 
@@ -44,8 +45,8 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
     @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
-    public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+    public Output<String> topicArn() {
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public ReceiptRuleStopActionGetArgs(
@@ -58,9 +59,9 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
     }
 
     private ReceiptRuleStopActionGetArgs() {
-        this.position = Output.empty();
-        this.scope = Output.empty();
-        this.topicArn = Output.empty();
+        this.position = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ReceiptRuleStopActionGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public ReceiptRuleStopActionGetArgs build() {
             return new ReceiptRuleStopActionGetArgs(position, scope, topicArn);

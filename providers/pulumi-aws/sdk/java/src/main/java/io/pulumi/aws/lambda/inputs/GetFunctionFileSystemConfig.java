@@ -19,14 +19,14 @@ public final class GetFunctionFileSystemConfig extends io.pulumi.resources.Invok
     @Import(name="arn", required=true)
       private final String arn;
 
-    public String getArn() {
+    public String arn() {
         return this.arn;
     }
 
     @Import(name="localMountPath", required=true)
       private final String localMountPath;
 
-    public String getLocalMountPath() {
+    public String localMountPath() {
         return this.localMountPath;
     }
 

@@ -9,6 +9,7 @@ import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsSharingSettingsAr
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsTensorBoardAppSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     @Import(name="executionRole", required=true)
       private final Output<String> executionRole;
 
-    public Output<String> getExecutionRole() {
+    public Output<String> executionRole() {
         return this.executionRole;
     }
 
@@ -37,8 +38,8 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     @Import(name="jupyterServerAppSettings")
       private final @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
-    public Output<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
-        return this.jupyterServerAppSettings == null ? Output.empty() : this.jupyterServerAppSettings;
+    public Output<DomainDefaultUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings() {
+        return this.jupyterServerAppSettings == null ? Codegen.empty() : this.jupyterServerAppSettings;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     @Import(name="kernelGatewayAppSettings")
       private final @Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
-    public Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
-        return this.kernelGatewayAppSettings == null ? Output.empty() : this.kernelGatewayAppSettings;
+    public Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings() {
+        return this.kernelGatewayAppSettings == null ? Codegen.empty() : this.kernelGatewayAppSettings;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+    public Output<List<String>> securityGroups() {
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     @Import(name="sharingSettings")
       private final @Nullable Output<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings;
 
-    public Output<DomainDefaultUserSettingsSharingSettingsArgs> getSharingSettings() {
-        return this.sharingSettings == null ? Output.empty() : this.sharingSettings;
+    public Output<DomainDefaultUserSettingsSharingSettingsArgs> sharingSettings() {
+        return this.sharingSettings == null ? Codegen.empty() : this.sharingSettings;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     @Import(name="tensorBoardAppSettings")
       private final @Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings;
 
-    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> getTensorBoardAppSettings() {
-        return this.tensorBoardAppSettings == null ? Output.empty() : this.tensorBoardAppSettings;
+    public Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings() {
+        return this.tensorBoardAppSettings == null ? Codegen.empty() : this.tensorBoardAppSettings;
     }
 
     public DomainDefaultUserSettingsArgs(
@@ -101,12 +102,12 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
     }
 
     private DomainDefaultUserSettingsArgs() {
-        this.executionRole = Output.empty();
-        this.jupyterServerAppSettings = Output.empty();
-        this.kernelGatewayAppSettings = Output.empty();
-        this.securityGroups = Output.empty();
-        this.sharingSettings = Output.empty();
-        this.tensorBoardAppSettings = Output.empty();
+        this.executionRole = Codegen.empty();
+        this.jupyterServerAppSettings = Codegen.empty();
+        this.kernelGatewayAppSettings = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.sharingSettings = Codegen.empty();
+        this.tensorBoardAppSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder jupyterServerAppSettings(@Nullable DomainDefaultUserSettingsJupyterServerAppSettingsArgs jupyterServerAppSettings) {
-            this.jupyterServerAppSettings = Output.ofNullable(jupyterServerAppSettings);
+            this.jupyterServerAppSettings = Codegen.ofNullable(jupyterServerAppSettings);
             return this;
         }
         public Builder kernelGatewayAppSettings(@Nullable Output<DomainDefaultUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
@@ -160,7 +161,7 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder kernelGatewayAppSettings(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
-            this.kernelGatewayAppSettings = Output.ofNullable(kernelGatewayAppSettings);
+            this.kernelGatewayAppSettings = Codegen.ofNullable(kernelGatewayAppSettings);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -168,7 +169,7 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -179,7 +180,7 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sharingSettings(@Nullable DomainDefaultUserSettingsSharingSettingsArgs sharingSettings) {
-            this.sharingSettings = Output.ofNullable(sharingSettings);
+            this.sharingSettings = Codegen.ofNullable(sharingSettings);
             return this;
         }
         public Builder tensorBoardAppSettings(@Nullable Output<DomainDefaultUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
@@ -187,7 +188,7 @@ public final class DomainDefaultUserSettingsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tensorBoardAppSettings(@Nullable DomainDefaultUserSettingsTensorBoardAppSettingsArgs tensorBoardAppSettings) {
-            this.tensorBoardAppSettings = Output.ofNullable(tensorBoardAppSettings);
+            this.tensorBoardAppSettings = Codegen.ofNullable(tensorBoardAppSettings);
             return this;
         }        public DomainDefaultUserSettingsArgs build() {
             return new DomainDefaultUserSettingsArgs(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings, tensorBoardAppSettings);

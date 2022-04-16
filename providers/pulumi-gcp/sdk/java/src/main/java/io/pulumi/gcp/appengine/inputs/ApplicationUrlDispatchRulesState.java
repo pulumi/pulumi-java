@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,8 +25,8 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
     @Import(name="dispatchRules")
       private final @Nullable Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules;
 
-    public Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> getDispatchRules() {
-        return this.dispatchRules == null ? Output.empty() : this.dispatchRules;
+    public Output<List<ApplicationUrlDispatchRulesDispatchRuleGetArgs>> dispatchRules() {
+        return this.dispatchRules == null ? Codegen.empty() : this.dispatchRules;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ApplicationUrlDispatchRulesState(
@@ -48,8 +49,8 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
     }
 
     private ApplicationUrlDispatchRulesState() {
-        this.dispatchRules = Output.empty();
-        this.project = Output.empty();
+        this.dispatchRules = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
             return this;
         }
         public Builder dispatchRules(@Nullable List<ApplicationUrlDispatchRulesDispatchRuleGetArgs> dispatchRules) {
-            this.dispatchRules = Output.ofNullable(dispatchRules);
+            this.dispatchRules = Codegen.ofNullable(dispatchRules);
             return this;
         }
         public Builder dispatchRules(ApplicationUrlDispatchRulesDispatchRuleGetArgs... dispatchRules) {
@@ -90,7 +91,7 @@ public final class ApplicationUrlDispatchRulesState extends io.pulumi.resources.
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ApplicationUrlDispatchRulesState build() {
             return new ApplicationUrlDispatchRulesState(dispatchRules, project);

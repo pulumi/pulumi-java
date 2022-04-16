@@ -19,7 +19,7 @@ public final class GetGlobalUserOperationStatusArgs extends io.pulumi.resources.
     @Import(name="operationUrl", required=true)
       private final String operationUrl;
 
-    public String getOperationUrl() {
+    public String operationUrl() {
         return this.operationUrl;
     }
 
@@ -30,7 +30,7 @@ public final class GetGlobalUserOperationStatusArgs extends io.pulumi.resources.
     @Import(name="userName", required=true)
       private final String userName;
 
-    public String getUserName() {
+    public String userName() {
         return this.userName;
     }
 

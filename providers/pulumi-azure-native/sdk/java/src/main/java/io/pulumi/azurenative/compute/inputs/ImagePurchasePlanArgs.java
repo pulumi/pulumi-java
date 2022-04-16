@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
     @Import(name="product")
       private final @Nullable Output<String> product;
 
-    public Output<String> getProduct() {
-        return this.product == null ? Output.empty() : this.product;
+    public Output<String> product() {
+        return this.product == null ? Codegen.empty() : this.product;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
     @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
-    public Output<String> getPublisher() {
-        return this.publisher == null ? Output.empty() : this.publisher;
+    public Output<String> publisher() {
+        return this.publisher == null ? Codegen.empty() : this.publisher;
     }
 
     public ImagePurchasePlanArgs(
@@ -61,9 +62,9 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ImagePurchasePlanArgs() {
-        this.name = Output.empty();
-        this.product = Output.empty();
-        this.publisher = Output.empty();
+        this.name = Codegen.empty();
+        this.product = Codegen.empty();
+        this.publisher = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder product(@Nullable Output<String> product) {
@@ -103,7 +104,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder product(@Nullable String product) {
-            this.product = Output.ofNullable(product);
+            this.product = Codegen.ofNullable(product);
             return this;
         }
         public Builder publisher(@Nullable Output<String> publisher) {
@@ -111,7 +112,7 @@ public final class ImagePurchasePlanArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Output.ofNullable(publisher);
+            this.publisher = Codegen.ofNullable(publisher);
             return this;
         }        public ImagePurchasePlanArgs build() {
             return new ImagePurchasePlanArgs(name, product, publisher);

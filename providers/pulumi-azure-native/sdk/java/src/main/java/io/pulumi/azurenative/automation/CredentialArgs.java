@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
-    public Output<String> getAutomationAccountName() {
+    public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
 
@@ -32,8 +33,8 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
 
-    public Output<String> getCredentialName() {
-        return this.credentialName == null ? Output.empty() : this.credentialName;
+    public Output<String> credentialName() {
+        return this.credentialName == null ? Codegen.empty() : this.credentialName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -65,7 +66,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -76,7 +77,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,7 +88,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="userName", required=true)
       private final Output<String> userName;
 
-    public Output<String> getUserName() {
+    public Output<String> userName() {
         return this.userName;
     }
 
@@ -109,13 +110,13 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CredentialArgs() {
-        this.automationAccountName = Output.empty();
-        this.credentialName = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.userName = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.credentialName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentialName(@Nullable String credentialName) {
-            this.credentialName = Output.ofNullable(credentialName);
+            this.credentialName = Codegen.ofNullable(credentialName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -171,7 +172,7 @@ public final class CredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {

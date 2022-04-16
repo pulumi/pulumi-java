@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     @Import(name="condition", required=true)
       private final Output<String> condition;
 
-    public Output<String> getCondition() {
+    public Output<String> condition() {
         return this.condition;
     }
 
@@ -36,7 +37,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     @Import(name="targetColumn", required=true)
       private final Output<String> targetColumn;
 
-    public Output<String> getTargetColumn() {
+    public Output<String> targetColumn() {
         return this.targetColumn;
     }
 
@@ -47,8 +48,8 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     @Import(name="value")
       private final @Nullable Output<String> value;
 
-    public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+    public Output<String> value() {
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public RecipeConditionExpressionArgs(
@@ -61,9 +62,9 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     }
 
     private RecipeConditionExpressionArgs() {
-        this.condition = Output.empty();
-        this.targetColumn = Output.empty();
-        this.value = Output.empty();
+        this.condition = Codegen.empty();
+        this.targetColumn = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public RecipeConditionExpressionArgs build() {
             return new RecipeConditionExpressionArgs(condition, targetColumn, value);

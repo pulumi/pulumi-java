@@ -9,6 +9,7 @@ import io.pulumi.awsnative.stepfunctions.outputs.ActivityTagsEntry;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -24,19 +25,19 @@ public class Activity extends io.pulumi.resources.CustomResource {
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="tags", type=List.class, parameters={ActivityTagsEntry.class})
     private Output</* @Nullable */ List<ActivityTagsEntry>> tags;
 
-    public Output</* @Nullable */ List<ActivityTagsEntry>> getTags() {
+    public Output</* @Nullable */ List<ActivityTagsEntry>> tags() {
         return this.tags;
     }
 
@@ -62,7 +63,7 @@ public class Activity extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Activity(String name, @Nullable ActivityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:stepfunctions:Activity", name, args == null ? ActivityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:stepfunctions:Activity", name, args == null ? ActivityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Activity(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

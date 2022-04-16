@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.endpoints.inputs.ServiceApiMethodArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,29 +20,29 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="methods")
       private final @Nullable Output<List<ServiceApiMethodArgs>> methods;
 
-    public Output<List<ServiceApiMethodArgs>> getMethods() {
-        return this.methods == null ? Output.empty() : this.methods;
+    public Output<List<ServiceApiMethodArgs>> methods() {
+        return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="syntax")
       private final @Nullable Output<String> syntax;
 
-    public Output<String> getSyntax() {
-        return this.syntax == null ? Output.empty() : this.syntax;
+    public Output<String> syntax() {
+        return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
-    public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<String> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ServiceApiArgs(
@@ -56,10 +57,10 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceApiArgs() {
-        this.methods = Output.empty();
-        this.name = Output.empty();
-        this.syntax = Output.empty();
-        this.version = Output.empty();
+        this.methods = Codegen.empty();
+        this.name = Codegen.empty();
+        this.syntax = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder methods(@Nullable List<ServiceApiMethodArgs> methods) {
-            this.methods = Output.ofNullable(methods);
+            this.methods = Codegen.ofNullable(methods);
             return this;
         }
         public Builder methods(ServiceApiMethodArgs... methods) {
@@ -104,7 +105,7 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder syntax(@Nullable Output<String> syntax) {
@@ -112,7 +113,7 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syntax(@Nullable String syntax) {
-            this.syntax = Output.ofNullable(syntax);
+            this.syntax = Codegen.ofNullable(syntax);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -120,7 +121,7 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ServiceApiArgs build() {
             return new ServiceApiArgs(methods, name, syntax, version);

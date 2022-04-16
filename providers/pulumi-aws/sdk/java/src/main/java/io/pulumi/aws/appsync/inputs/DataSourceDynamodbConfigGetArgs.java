@@ -6,6 +6,7 @@ package io.pulumi.aws.appsync.inputs;
 import io.pulumi.aws.appsync.inputs.DataSourceDynamodbConfigDeltaSyncConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,8 +20,8 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
     @Import(name="deltaSyncConfig")
       private final @Nullable Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig;
 
-    public Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> getDeltaSyncConfig() {
-        return this.deltaSyncConfig == null ? Output.empty() : this.deltaSyncConfig;
+    public Output<DataSourceDynamodbConfigDeltaSyncConfigGetArgs> deltaSyncConfig() {
+        return this.deltaSyncConfig == null ? Codegen.empty() : this.deltaSyncConfig;
     }
 
     /**
@@ -30,8 +31,8 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
     @Import(name="region")
       private final @Nullable Output<String> region;
 
-    public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+    public Output<String> region() {
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -52,15 +53,15 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
     @Import(name="useCallerCredentials")
       private final @Nullable Output<Boolean> useCallerCredentials;
 
-    public Output<Boolean> getUseCallerCredentials() {
-        return this.useCallerCredentials == null ? Output.empty() : this.useCallerCredentials;
+    public Output<Boolean> useCallerCredentials() {
+        return this.useCallerCredentials == null ? Codegen.empty() : this.useCallerCredentials;
     }
 
     @Import(name="versioned")
       private final @Nullable Output<Boolean> versioned;
 
-    public Output<Boolean> getVersioned() {
-        return this.versioned == null ? Output.empty() : this.versioned;
+    public Output<Boolean> versioned() {
+        return this.versioned == null ? Codegen.empty() : this.versioned;
     }
 
     public DataSourceDynamodbConfigGetArgs(
@@ -77,11 +78,11 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
     }
 
     private DataSourceDynamodbConfigGetArgs() {
-        this.deltaSyncConfig = Output.empty();
-        this.region = Output.empty();
-        this.tableName = Output.empty();
-        this.useCallerCredentials = Output.empty();
-        this.versioned = Output.empty();
+        this.deltaSyncConfig = Codegen.empty();
+        this.region = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.useCallerCredentials = Codegen.empty();
+        this.versioned = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder deltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfigGetArgs deltaSyncConfig) {
-            this.deltaSyncConfig = Output.ofNullable(deltaSyncConfig);
+            this.deltaSyncConfig = Codegen.ofNullable(deltaSyncConfig);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -125,7 +126,7 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder tableName(Output<String> tableName) {
@@ -141,7 +142,7 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder useCallerCredentials(@Nullable Boolean useCallerCredentials) {
-            this.useCallerCredentials = Output.ofNullable(useCallerCredentials);
+            this.useCallerCredentials = Codegen.ofNullable(useCallerCredentials);
             return this;
         }
         public Builder versioned(@Nullable Output<Boolean> versioned) {
@@ -149,7 +150,7 @@ public final class DataSourceDynamodbConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder versioned(@Nullable Boolean versioned) {
-            this.versioned = Output.ofNullable(versioned);
+            this.versioned = Codegen.ofNullable(versioned);
             return this;
         }        public DataSourceDynamodbConfigGetArgs build() {
             return new DataSourceDynamodbConfigGetArgs(deltaSyncConfig, region, tableName, useCallerCredentials, versioned);

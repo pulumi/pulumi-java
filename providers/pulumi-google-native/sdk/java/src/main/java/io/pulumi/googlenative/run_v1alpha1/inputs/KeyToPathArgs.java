@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key")
       private final @Nullable Output<String> key;
 
-    public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+    public Output<String> key() {
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
-    public Output<Integer> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+    public Output<Integer> mode() {
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public KeyToPathArgs(
@@ -62,9 +63,9 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyToPathArgs() {
-        this.key = Output.empty();
-        this.mode = Output.empty();
-        this.path = Output.empty();
+        this.key = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder mode(@Nullable Output<Integer> mode) {
@@ -104,7 +105,7 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable Integer mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -112,7 +113,7 @@ public final class KeyToPathArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public KeyToPathArgs build() {
             return new KeyToPathArgs(key, mode, path);

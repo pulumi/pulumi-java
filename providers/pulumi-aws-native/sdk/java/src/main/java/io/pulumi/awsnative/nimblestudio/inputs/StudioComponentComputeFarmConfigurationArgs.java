@@ -5,6 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
     @Import(name="activeDirectoryUser")
       private final @Nullable Output<String> activeDirectoryUser;
 
-    public Output<String> getActiveDirectoryUser() {
-        return this.activeDirectoryUser == null ? Output.empty() : this.activeDirectoryUser;
+    public Output<String> activeDirectoryUser() {
+        return this.activeDirectoryUser == null ? Codegen.empty() : this.activeDirectoryUser;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
     @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
-    public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+    public Output<String> endpoint() {
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     public StudioComponentComputeFarmConfigurationArgs(
@@ -48,8 +49,8 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
     }
 
     private StudioComponentComputeFarmConfigurationArgs() {
-        this.activeDirectoryUser = Output.empty();
-        this.endpoint = Output.empty();
+        this.activeDirectoryUser = Codegen.empty();
+        this.endpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder activeDirectoryUser(@Nullable String activeDirectoryUser) {
-            this.activeDirectoryUser = Output.ofNullable(activeDirectoryUser);
+            this.activeDirectoryUser = Codegen.ofNullable(activeDirectoryUser);
             return this;
         }
         public Builder endpoint(@Nullable Output<String> endpoint) {
@@ -87,7 +88,7 @@ public final class StudioComponentComputeFarmConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }        public StudioComponentComputeFarmConfigurationArgs build() {
             return new StudioComponentComputeFarmConfigurationArgs(activeDirectoryUser, endpoint);

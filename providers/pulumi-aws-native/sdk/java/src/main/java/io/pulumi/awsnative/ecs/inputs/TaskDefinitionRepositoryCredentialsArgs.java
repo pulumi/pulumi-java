@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,8 +18,8 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
     @Import(name="credentialsParameter")
       private final @Nullable Output<String> credentialsParameter;
 
-    public Output<String> getCredentialsParameter() {
-        return this.credentialsParameter == null ? Output.empty() : this.credentialsParameter;
+    public Output<String> credentialsParameter() {
+        return this.credentialsParameter == null ? Codegen.empty() : this.credentialsParameter;
     }
 
     public TaskDefinitionRepositoryCredentialsArgs(@Nullable Output<String> credentialsParameter) {
@@ -26,7 +27,7 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
     }
 
     private TaskDefinitionRepositoryCredentialsArgs() {
-        this.credentialsParameter = Output.empty();
+        this.credentialsParameter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
             return this;
         }
         public Builder credentialsParameter(@Nullable String credentialsParameter) {
-            this.credentialsParameter = Output.ofNullable(credentialsParameter);
+            this.credentialsParameter = Codegen.ofNullable(credentialsParameter);
             return this;
         }        public TaskDefinitionRepositoryCredentialsArgs build() {
             return new TaskDefinitionRepositoryCredentialsArgs(credentialsParameter);

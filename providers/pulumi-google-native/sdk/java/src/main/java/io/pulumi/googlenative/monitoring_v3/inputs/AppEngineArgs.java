@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="moduleId")
       private final @Nullable Output<String> moduleId;
 
-    public Output<String> getModuleId() {
-        return this.moduleId == null ? Output.empty() : this.moduleId;
+    public Output<String> moduleId() {
+        return this.moduleId == null ? Codegen.empty() : this.moduleId;
     }
 
     public AppEngineArgs(@Nullable Output<String> moduleId) {
@@ -34,7 +35,7 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppEngineArgs() {
-        this.moduleId = Output.empty();
+        this.moduleId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AppEngineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder moduleId(@Nullable String moduleId) {
-            this.moduleId = Output.ofNullable(moduleId);
+            this.moduleId = Codegen.ofNullable(moduleId);
             return this;
         }        public AppEngineArgs build() {
             return new AppEngineArgs(moduleId);

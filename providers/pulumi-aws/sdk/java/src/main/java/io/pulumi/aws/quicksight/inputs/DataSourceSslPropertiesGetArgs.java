@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class DataSourceSslPropertiesGetArgs extends io.pulumi.resources.Re
     @Import(name="disableSsl", required=true)
       private final Output<Boolean> disableSsl;
 
-    public Output<Boolean> getDisableSsl() {
+    public Output<Boolean> disableSsl() {
         return this.disableSsl;
     }
 
@@ -29,7 +30,7 @@ public final class DataSourceSslPropertiesGetArgs extends io.pulumi.resources.Re
     }
 
     private DataSourceSslPropertiesGetArgs() {
-        this.disableSsl = Output.empty();
+        this.disableSsl = Codegen.empty();
     }
 
     public static Builder builder() {

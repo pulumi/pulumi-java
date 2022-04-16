@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.VpnConnectionRouteGetArgs;
 import io.pulumi.aws.ec2.inputs.VpnConnectionVgwTelemetryGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,8 +28,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerGatewayConfiguration")
       private final @Nullable Output<String> customerGatewayConfiguration;
 
-    public Output<String> getCustomerGatewayConfiguration() {
-        return this.customerGatewayConfiguration == null ? Output.empty() : this.customerGatewayConfiguration;
+    public Output<String> customerGatewayConfiguration() {
+        return this.customerGatewayConfiguration == null ? Codegen.empty() : this.customerGatewayConfiguration;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="customerGatewayId")
       private final @Nullable Output<String> customerGatewayId;
 
-    public Output<String> getCustomerGatewayId() {
-        return this.customerGatewayId == null ? Output.empty() : this.customerGatewayId;
+    public Output<String> customerGatewayId() {
+        return this.customerGatewayId == null ? Codegen.empty() : this.customerGatewayId;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableAcceleration")
       private final @Nullable Output<Boolean> enableAcceleration;
 
-    public Output<Boolean> getEnableAcceleration() {
-        return this.enableAcceleration == null ? Output.empty() : this.enableAcceleration;
+    public Output<Boolean> enableAcceleration() {
+        return this.enableAcceleration == null ? Codegen.empty() : this.enableAcceleration;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="localIpv4NetworkCidr")
       private final @Nullable Output<String> localIpv4NetworkCidr;
 
-    public Output<String> getLocalIpv4NetworkCidr() {
-        return this.localIpv4NetworkCidr == null ? Output.empty() : this.localIpv4NetworkCidr;
+    public Output<String> localIpv4NetworkCidr() {
+        return this.localIpv4NetworkCidr == null ? Codegen.empty() : this.localIpv4NetworkCidr;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="localIpv6NetworkCidr")
       private final @Nullable Output<String> localIpv6NetworkCidr;
 
-    public Output<String> getLocalIpv6NetworkCidr() {
-        return this.localIpv6NetworkCidr == null ? Output.empty() : this.localIpv6NetworkCidr;
+    public Output<String> localIpv6NetworkCidr() {
+        return this.localIpv6NetworkCidr == null ? Codegen.empty() : this.localIpv6NetworkCidr;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="remoteIpv4NetworkCidr")
       private final @Nullable Output<String> remoteIpv4NetworkCidr;
 
-    public Output<String> getRemoteIpv4NetworkCidr() {
-        return this.remoteIpv4NetworkCidr == null ? Output.empty() : this.remoteIpv4NetworkCidr;
+    public Output<String> remoteIpv4NetworkCidr() {
+        return this.remoteIpv4NetworkCidr == null ? Codegen.empty() : this.remoteIpv4NetworkCidr;
     }
 
     /**
@@ -104,8 +105,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="remoteIpv6NetworkCidr")
       private final @Nullable Output<String> remoteIpv6NetworkCidr;
 
-    public Output<String> getRemoteIpv6NetworkCidr() {
-        return this.remoteIpv6NetworkCidr == null ? Output.empty() : this.remoteIpv6NetworkCidr;
+    public Output<String> remoteIpv6NetworkCidr() {
+        return this.remoteIpv6NetworkCidr == null ? Codegen.empty() : this.remoteIpv6NetworkCidr;
     }
 
     /**
@@ -115,8 +116,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="routes")
       private final @Nullable Output<List<VpnConnectionRouteGetArgs>> routes;
 
-    public Output<List<VpnConnectionRouteGetArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+    public Output<List<VpnConnectionRouteGetArgs>> routes() {
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     /**
@@ -126,8 +127,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="staticRoutesOnly")
       private final @Nullable Output<Boolean> staticRoutesOnly;
 
-    public Output<Boolean> getStaticRoutesOnly() {
-        return this.staticRoutesOnly == null ? Output.empty() : this.staticRoutesOnly;
+    public Output<Boolean> staticRoutesOnly() {
+        return this.staticRoutesOnly == null ? Codegen.empty() : this.staticRoutesOnly;
     }
 
     /**
@@ -137,8 +138,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -159,8 +160,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
+    public Output<String> transitGatewayAttachmentId() {
+        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -170,8 +171,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
-    public Output<String> getTransitGatewayId() {
-        return this.transitGatewayId == null ? Output.empty() : this.transitGatewayId;
+    public Output<String> transitGatewayId() {
+        return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
     /**
@@ -181,8 +182,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Address")
       private final @Nullable Output<String> tunnel1Address;
 
-    public Output<String> getTunnel1Address() {
-        return this.tunnel1Address == null ? Output.empty() : this.tunnel1Address;
+    public Output<String> tunnel1Address() {
+        return this.tunnel1Address == null ? Codegen.empty() : this.tunnel1Address;
     }
 
     /**
@@ -192,8 +193,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1BgpAsn")
       private final @Nullable Output<String> tunnel1BgpAsn;
 
-    public Output<String> getTunnel1BgpAsn() {
-        return this.tunnel1BgpAsn == null ? Output.empty() : this.tunnel1BgpAsn;
+    public Output<String> tunnel1BgpAsn() {
+        return this.tunnel1BgpAsn == null ? Codegen.empty() : this.tunnel1BgpAsn;
     }
 
     /**
@@ -203,8 +204,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1BgpHoldtime")
       private final @Nullable Output<Integer> tunnel1BgpHoldtime;
 
-    public Output<Integer> getTunnel1BgpHoldtime() {
-        return this.tunnel1BgpHoldtime == null ? Output.empty() : this.tunnel1BgpHoldtime;
+    public Output<Integer> tunnel1BgpHoldtime() {
+        return this.tunnel1BgpHoldtime == null ? Codegen.empty() : this.tunnel1BgpHoldtime;
     }
 
     /**
@@ -214,8 +215,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1CgwInsideAddress")
       private final @Nullable Output<String> tunnel1CgwInsideAddress;
 
-    public Output<String> getTunnel1CgwInsideAddress() {
-        return this.tunnel1CgwInsideAddress == null ? Output.empty() : this.tunnel1CgwInsideAddress;
+    public Output<String> tunnel1CgwInsideAddress() {
+        return this.tunnel1CgwInsideAddress == null ? Codegen.empty() : this.tunnel1CgwInsideAddress;
     }
 
     /**
@@ -225,8 +226,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1DpdTimeoutAction")
       private final @Nullable Output<String> tunnel1DpdTimeoutAction;
 
-    public Output<String> getTunnel1DpdTimeoutAction() {
-        return this.tunnel1DpdTimeoutAction == null ? Output.empty() : this.tunnel1DpdTimeoutAction;
+    public Output<String> tunnel1DpdTimeoutAction() {
+        return this.tunnel1DpdTimeoutAction == null ? Codegen.empty() : this.tunnel1DpdTimeoutAction;
     }
 
     /**
@@ -236,8 +237,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1DpdTimeoutSeconds")
       private final @Nullable Output<Integer> tunnel1DpdTimeoutSeconds;
 
-    public Output<Integer> getTunnel1DpdTimeoutSeconds() {
-        return this.tunnel1DpdTimeoutSeconds == null ? Output.empty() : this.tunnel1DpdTimeoutSeconds;
+    public Output<Integer> tunnel1DpdTimeoutSeconds() {
+        return this.tunnel1DpdTimeoutSeconds == null ? Codegen.empty() : this.tunnel1DpdTimeoutSeconds;
     }
 
     /**
@@ -247,8 +248,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1IkeVersions")
       private final @Nullable Output<List<String>> tunnel1IkeVersions;
 
-    public Output<List<String>> getTunnel1IkeVersions() {
-        return this.tunnel1IkeVersions == null ? Output.empty() : this.tunnel1IkeVersions;
+    public Output<List<String>> tunnel1IkeVersions() {
+        return this.tunnel1IkeVersions == null ? Codegen.empty() : this.tunnel1IkeVersions;
     }
 
     /**
@@ -258,8 +259,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1InsideCidr")
       private final @Nullable Output<String> tunnel1InsideCidr;
 
-    public Output<String> getTunnel1InsideCidr() {
-        return this.tunnel1InsideCidr == null ? Output.empty() : this.tunnel1InsideCidr;
+    public Output<String> tunnel1InsideCidr() {
+        return this.tunnel1InsideCidr == null ? Codegen.empty() : this.tunnel1InsideCidr;
     }
 
     /**
@@ -269,8 +270,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1InsideIpv6Cidr")
       private final @Nullable Output<String> tunnel1InsideIpv6Cidr;
 
-    public Output<String> getTunnel1InsideIpv6Cidr() {
-        return this.tunnel1InsideIpv6Cidr == null ? Output.empty() : this.tunnel1InsideIpv6Cidr;
+    public Output<String> tunnel1InsideIpv6Cidr() {
+        return this.tunnel1InsideIpv6Cidr == null ? Codegen.empty() : this.tunnel1InsideIpv6Cidr;
     }
 
     /**
@@ -280,8 +281,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Phase1DhGroupNumbers")
       private final @Nullable Output<List<Integer>> tunnel1Phase1DhGroupNumbers;
 
-    public Output<List<Integer>> getTunnel1Phase1DhGroupNumbers() {
-        return this.tunnel1Phase1DhGroupNumbers == null ? Output.empty() : this.tunnel1Phase1DhGroupNumbers;
+    public Output<List<Integer>> tunnel1Phase1DhGroupNumbers() {
+        return this.tunnel1Phase1DhGroupNumbers == null ? Codegen.empty() : this.tunnel1Phase1DhGroupNumbers;
     }
 
     /**
@@ -291,8 +292,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Phase1EncryptionAlgorithms")
       private final @Nullable Output<List<String>> tunnel1Phase1EncryptionAlgorithms;
 
-    public Output<List<String>> getTunnel1Phase1EncryptionAlgorithms() {
-        return this.tunnel1Phase1EncryptionAlgorithms == null ? Output.empty() : this.tunnel1Phase1EncryptionAlgorithms;
+    public Output<List<String>> tunnel1Phase1EncryptionAlgorithms() {
+        return this.tunnel1Phase1EncryptionAlgorithms == null ? Codegen.empty() : this.tunnel1Phase1EncryptionAlgorithms;
     }
 
     /**
@@ -302,8 +303,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Phase1IntegrityAlgorithms")
       private final @Nullable Output<List<String>> tunnel1Phase1IntegrityAlgorithms;
 
-    public Output<List<String>> getTunnel1Phase1IntegrityAlgorithms() {
-        return this.tunnel1Phase1IntegrityAlgorithms == null ? Output.empty() : this.tunnel1Phase1IntegrityAlgorithms;
+    public Output<List<String>> tunnel1Phase1IntegrityAlgorithms() {
+        return this.tunnel1Phase1IntegrityAlgorithms == null ? Codegen.empty() : this.tunnel1Phase1IntegrityAlgorithms;
     }
 
     /**
@@ -313,8 +314,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Phase1LifetimeSeconds")
       private final @Nullable Output<Integer> tunnel1Phase1LifetimeSeconds;
 
-    public Output<Integer> getTunnel1Phase1LifetimeSeconds() {
-        return this.tunnel1Phase1LifetimeSeconds == null ? Output.empty() : this.tunnel1Phase1LifetimeSeconds;
+    public Output<Integer> tunnel1Phase1LifetimeSeconds() {
+        return this.tunnel1Phase1LifetimeSeconds == null ? Codegen.empty() : this.tunnel1Phase1LifetimeSeconds;
     }
 
     /**
@@ -324,8 +325,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Phase2DhGroupNumbers")
       private final @Nullable Output<List<Integer>> tunnel1Phase2DhGroupNumbers;
 
-    public Output<List<Integer>> getTunnel1Phase2DhGroupNumbers() {
-        return this.tunnel1Phase2DhGroupNumbers == null ? Output.empty() : this.tunnel1Phase2DhGroupNumbers;
+    public Output<List<Integer>> tunnel1Phase2DhGroupNumbers() {
+        return this.tunnel1Phase2DhGroupNumbers == null ? Codegen.empty() : this.tunnel1Phase2DhGroupNumbers;
     }
 
     /**
@@ -335,8 +336,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Phase2EncryptionAlgorithms")
       private final @Nullable Output<List<String>> tunnel1Phase2EncryptionAlgorithms;
 
-    public Output<List<String>> getTunnel1Phase2EncryptionAlgorithms() {
-        return this.tunnel1Phase2EncryptionAlgorithms == null ? Output.empty() : this.tunnel1Phase2EncryptionAlgorithms;
+    public Output<List<String>> tunnel1Phase2EncryptionAlgorithms() {
+        return this.tunnel1Phase2EncryptionAlgorithms == null ? Codegen.empty() : this.tunnel1Phase2EncryptionAlgorithms;
     }
 
     /**
@@ -346,8 +347,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Phase2IntegrityAlgorithms")
       private final @Nullable Output<List<String>> tunnel1Phase2IntegrityAlgorithms;
 
-    public Output<List<String>> getTunnel1Phase2IntegrityAlgorithms() {
-        return this.tunnel1Phase2IntegrityAlgorithms == null ? Output.empty() : this.tunnel1Phase2IntegrityAlgorithms;
+    public Output<List<String>> tunnel1Phase2IntegrityAlgorithms() {
+        return this.tunnel1Phase2IntegrityAlgorithms == null ? Codegen.empty() : this.tunnel1Phase2IntegrityAlgorithms;
     }
 
     /**
@@ -357,8 +358,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1Phase2LifetimeSeconds")
       private final @Nullable Output<Integer> tunnel1Phase2LifetimeSeconds;
 
-    public Output<Integer> getTunnel1Phase2LifetimeSeconds() {
-        return this.tunnel1Phase2LifetimeSeconds == null ? Output.empty() : this.tunnel1Phase2LifetimeSeconds;
+    public Output<Integer> tunnel1Phase2LifetimeSeconds() {
+        return this.tunnel1Phase2LifetimeSeconds == null ? Codegen.empty() : this.tunnel1Phase2LifetimeSeconds;
     }
 
     /**
@@ -368,8 +369,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1PresharedKey")
       private final @Nullable Output<String> tunnel1PresharedKey;
 
-    public Output<String> getTunnel1PresharedKey() {
-        return this.tunnel1PresharedKey == null ? Output.empty() : this.tunnel1PresharedKey;
+    public Output<String> tunnel1PresharedKey() {
+        return this.tunnel1PresharedKey == null ? Codegen.empty() : this.tunnel1PresharedKey;
     }
 
     /**
@@ -379,8 +380,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1RekeyFuzzPercentage")
       private final @Nullable Output<Integer> tunnel1RekeyFuzzPercentage;
 
-    public Output<Integer> getTunnel1RekeyFuzzPercentage() {
-        return this.tunnel1RekeyFuzzPercentage == null ? Output.empty() : this.tunnel1RekeyFuzzPercentage;
+    public Output<Integer> tunnel1RekeyFuzzPercentage() {
+        return this.tunnel1RekeyFuzzPercentage == null ? Codegen.empty() : this.tunnel1RekeyFuzzPercentage;
     }
 
     /**
@@ -390,8 +391,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1RekeyMarginTimeSeconds")
       private final @Nullable Output<Integer> tunnel1RekeyMarginTimeSeconds;
 
-    public Output<Integer> getTunnel1RekeyMarginTimeSeconds() {
-        return this.tunnel1RekeyMarginTimeSeconds == null ? Output.empty() : this.tunnel1RekeyMarginTimeSeconds;
+    public Output<Integer> tunnel1RekeyMarginTimeSeconds() {
+        return this.tunnel1RekeyMarginTimeSeconds == null ? Codegen.empty() : this.tunnel1RekeyMarginTimeSeconds;
     }
 
     /**
@@ -401,8 +402,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1ReplayWindowSize")
       private final @Nullable Output<Integer> tunnel1ReplayWindowSize;
 
-    public Output<Integer> getTunnel1ReplayWindowSize() {
-        return this.tunnel1ReplayWindowSize == null ? Output.empty() : this.tunnel1ReplayWindowSize;
+    public Output<Integer> tunnel1ReplayWindowSize() {
+        return this.tunnel1ReplayWindowSize == null ? Codegen.empty() : this.tunnel1ReplayWindowSize;
     }
 
     /**
@@ -412,8 +413,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1StartupAction")
       private final @Nullable Output<String> tunnel1StartupAction;
 
-    public Output<String> getTunnel1StartupAction() {
-        return this.tunnel1StartupAction == null ? Output.empty() : this.tunnel1StartupAction;
+    public Output<String> tunnel1StartupAction() {
+        return this.tunnel1StartupAction == null ? Codegen.empty() : this.tunnel1StartupAction;
     }
 
     /**
@@ -423,8 +424,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel1VgwInsideAddress")
       private final @Nullable Output<String> tunnel1VgwInsideAddress;
 
-    public Output<String> getTunnel1VgwInsideAddress() {
-        return this.tunnel1VgwInsideAddress == null ? Output.empty() : this.tunnel1VgwInsideAddress;
+    public Output<String> tunnel1VgwInsideAddress() {
+        return this.tunnel1VgwInsideAddress == null ? Codegen.empty() : this.tunnel1VgwInsideAddress;
     }
 
     /**
@@ -434,8 +435,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Address")
       private final @Nullable Output<String> tunnel2Address;
 
-    public Output<String> getTunnel2Address() {
-        return this.tunnel2Address == null ? Output.empty() : this.tunnel2Address;
+    public Output<String> tunnel2Address() {
+        return this.tunnel2Address == null ? Codegen.empty() : this.tunnel2Address;
     }
 
     /**
@@ -445,8 +446,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2BgpAsn")
       private final @Nullable Output<String> tunnel2BgpAsn;
 
-    public Output<String> getTunnel2BgpAsn() {
-        return this.tunnel2BgpAsn == null ? Output.empty() : this.tunnel2BgpAsn;
+    public Output<String> tunnel2BgpAsn() {
+        return this.tunnel2BgpAsn == null ? Codegen.empty() : this.tunnel2BgpAsn;
     }
 
     /**
@@ -456,8 +457,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2BgpHoldtime")
       private final @Nullable Output<Integer> tunnel2BgpHoldtime;
 
-    public Output<Integer> getTunnel2BgpHoldtime() {
-        return this.tunnel2BgpHoldtime == null ? Output.empty() : this.tunnel2BgpHoldtime;
+    public Output<Integer> tunnel2BgpHoldtime() {
+        return this.tunnel2BgpHoldtime == null ? Codegen.empty() : this.tunnel2BgpHoldtime;
     }
 
     /**
@@ -467,8 +468,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2CgwInsideAddress")
       private final @Nullable Output<String> tunnel2CgwInsideAddress;
 
-    public Output<String> getTunnel2CgwInsideAddress() {
-        return this.tunnel2CgwInsideAddress == null ? Output.empty() : this.tunnel2CgwInsideAddress;
+    public Output<String> tunnel2CgwInsideAddress() {
+        return this.tunnel2CgwInsideAddress == null ? Codegen.empty() : this.tunnel2CgwInsideAddress;
     }
 
     /**
@@ -478,8 +479,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2DpdTimeoutAction")
       private final @Nullable Output<String> tunnel2DpdTimeoutAction;
 
-    public Output<String> getTunnel2DpdTimeoutAction() {
-        return this.tunnel2DpdTimeoutAction == null ? Output.empty() : this.tunnel2DpdTimeoutAction;
+    public Output<String> tunnel2DpdTimeoutAction() {
+        return this.tunnel2DpdTimeoutAction == null ? Codegen.empty() : this.tunnel2DpdTimeoutAction;
     }
 
     /**
@@ -489,8 +490,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2DpdTimeoutSeconds")
       private final @Nullable Output<Integer> tunnel2DpdTimeoutSeconds;
 
-    public Output<Integer> getTunnel2DpdTimeoutSeconds() {
-        return this.tunnel2DpdTimeoutSeconds == null ? Output.empty() : this.tunnel2DpdTimeoutSeconds;
+    public Output<Integer> tunnel2DpdTimeoutSeconds() {
+        return this.tunnel2DpdTimeoutSeconds == null ? Codegen.empty() : this.tunnel2DpdTimeoutSeconds;
     }
 
     /**
@@ -500,8 +501,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2IkeVersions")
       private final @Nullable Output<List<String>> tunnel2IkeVersions;
 
-    public Output<List<String>> getTunnel2IkeVersions() {
-        return this.tunnel2IkeVersions == null ? Output.empty() : this.tunnel2IkeVersions;
+    public Output<List<String>> tunnel2IkeVersions() {
+        return this.tunnel2IkeVersions == null ? Codegen.empty() : this.tunnel2IkeVersions;
     }
 
     /**
@@ -511,8 +512,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2InsideCidr")
       private final @Nullable Output<String> tunnel2InsideCidr;
 
-    public Output<String> getTunnel2InsideCidr() {
-        return this.tunnel2InsideCidr == null ? Output.empty() : this.tunnel2InsideCidr;
+    public Output<String> tunnel2InsideCidr() {
+        return this.tunnel2InsideCidr == null ? Codegen.empty() : this.tunnel2InsideCidr;
     }
 
     /**
@@ -522,8 +523,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2InsideIpv6Cidr")
       private final @Nullable Output<String> tunnel2InsideIpv6Cidr;
 
-    public Output<String> getTunnel2InsideIpv6Cidr() {
-        return this.tunnel2InsideIpv6Cidr == null ? Output.empty() : this.tunnel2InsideIpv6Cidr;
+    public Output<String> tunnel2InsideIpv6Cidr() {
+        return this.tunnel2InsideIpv6Cidr == null ? Codegen.empty() : this.tunnel2InsideIpv6Cidr;
     }
 
     /**
@@ -533,8 +534,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Phase1DhGroupNumbers")
       private final @Nullable Output<List<Integer>> tunnel2Phase1DhGroupNumbers;
 
-    public Output<List<Integer>> getTunnel2Phase1DhGroupNumbers() {
-        return this.tunnel2Phase1DhGroupNumbers == null ? Output.empty() : this.tunnel2Phase1DhGroupNumbers;
+    public Output<List<Integer>> tunnel2Phase1DhGroupNumbers() {
+        return this.tunnel2Phase1DhGroupNumbers == null ? Codegen.empty() : this.tunnel2Phase1DhGroupNumbers;
     }
 
     /**
@@ -544,8 +545,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Phase1EncryptionAlgorithms")
       private final @Nullable Output<List<String>> tunnel2Phase1EncryptionAlgorithms;
 
-    public Output<List<String>> getTunnel2Phase1EncryptionAlgorithms() {
-        return this.tunnel2Phase1EncryptionAlgorithms == null ? Output.empty() : this.tunnel2Phase1EncryptionAlgorithms;
+    public Output<List<String>> tunnel2Phase1EncryptionAlgorithms() {
+        return this.tunnel2Phase1EncryptionAlgorithms == null ? Codegen.empty() : this.tunnel2Phase1EncryptionAlgorithms;
     }
 
     /**
@@ -555,8 +556,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Phase1IntegrityAlgorithms")
       private final @Nullable Output<List<String>> tunnel2Phase1IntegrityAlgorithms;
 
-    public Output<List<String>> getTunnel2Phase1IntegrityAlgorithms() {
-        return this.tunnel2Phase1IntegrityAlgorithms == null ? Output.empty() : this.tunnel2Phase1IntegrityAlgorithms;
+    public Output<List<String>> tunnel2Phase1IntegrityAlgorithms() {
+        return this.tunnel2Phase1IntegrityAlgorithms == null ? Codegen.empty() : this.tunnel2Phase1IntegrityAlgorithms;
     }
 
     /**
@@ -566,8 +567,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Phase1LifetimeSeconds")
       private final @Nullable Output<Integer> tunnel2Phase1LifetimeSeconds;
 
-    public Output<Integer> getTunnel2Phase1LifetimeSeconds() {
-        return this.tunnel2Phase1LifetimeSeconds == null ? Output.empty() : this.tunnel2Phase1LifetimeSeconds;
+    public Output<Integer> tunnel2Phase1LifetimeSeconds() {
+        return this.tunnel2Phase1LifetimeSeconds == null ? Codegen.empty() : this.tunnel2Phase1LifetimeSeconds;
     }
 
     /**
@@ -577,8 +578,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Phase2DhGroupNumbers")
       private final @Nullable Output<List<Integer>> tunnel2Phase2DhGroupNumbers;
 
-    public Output<List<Integer>> getTunnel2Phase2DhGroupNumbers() {
-        return this.tunnel2Phase2DhGroupNumbers == null ? Output.empty() : this.tunnel2Phase2DhGroupNumbers;
+    public Output<List<Integer>> tunnel2Phase2DhGroupNumbers() {
+        return this.tunnel2Phase2DhGroupNumbers == null ? Codegen.empty() : this.tunnel2Phase2DhGroupNumbers;
     }
 
     /**
@@ -588,8 +589,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Phase2EncryptionAlgorithms")
       private final @Nullable Output<List<String>> tunnel2Phase2EncryptionAlgorithms;
 
-    public Output<List<String>> getTunnel2Phase2EncryptionAlgorithms() {
-        return this.tunnel2Phase2EncryptionAlgorithms == null ? Output.empty() : this.tunnel2Phase2EncryptionAlgorithms;
+    public Output<List<String>> tunnel2Phase2EncryptionAlgorithms() {
+        return this.tunnel2Phase2EncryptionAlgorithms == null ? Codegen.empty() : this.tunnel2Phase2EncryptionAlgorithms;
     }
 
     /**
@@ -599,8 +600,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Phase2IntegrityAlgorithms")
       private final @Nullable Output<List<String>> tunnel2Phase2IntegrityAlgorithms;
 
-    public Output<List<String>> getTunnel2Phase2IntegrityAlgorithms() {
-        return this.tunnel2Phase2IntegrityAlgorithms == null ? Output.empty() : this.tunnel2Phase2IntegrityAlgorithms;
+    public Output<List<String>> tunnel2Phase2IntegrityAlgorithms() {
+        return this.tunnel2Phase2IntegrityAlgorithms == null ? Codegen.empty() : this.tunnel2Phase2IntegrityAlgorithms;
     }
 
     /**
@@ -610,8 +611,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2Phase2LifetimeSeconds")
       private final @Nullable Output<Integer> tunnel2Phase2LifetimeSeconds;
 
-    public Output<Integer> getTunnel2Phase2LifetimeSeconds() {
-        return this.tunnel2Phase2LifetimeSeconds == null ? Output.empty() : this.tunnel2Phase2LifetimeSeconds;
+    public Output<Integer> tunnel2Phase2LifetimeSeconds() {
+        return this.tunnel2Phase2LifetimeSeconds == null ? Codegen.empty() : this.tunnel2Phase2LifetimeSeconds;
     }
 
     /**
@@ -621,8 +622,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2PresharedKey")
       private final @Nullable Output<String> tunnel2PresharedKey;
 
-    public Output<String> getTunnel2PresharedKey() {
-        return this.tunnel2PresharedKey == null ? Output.empty() : this.tunnel2PresharedKey;
+    public Output<String> tunnel2PresharedKey() {
+        return this.tunnel2PresharedKey == null ? Codegen.empty() : this.tunnel2PresharedKey;
     }
 
     /**
@@ -632,8 +633,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2RekeyFuzzPercentage")
       private final @Nullable Output<Integer> tunnel2RekeyFuzzPercentage;
 
-    public Output<Integer> getTunnel2RekeyFuzzPercentage() {
-        return this.tunnel2RekeyFuzzPercentage == null ? Output.empty() : this.tunnel2RekeyFuzzPercentage;
+    public Output<Integer> tunnel2RekeyFuzzPercentage() {
+        return this.tunnel2RekeyFuzzPercentage == null ? Codegen.empty() : this.tunnel2RekeyFuzzPercentage;
     }
 
     /**
@@ -643,8 +644,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2RekeyMarginTimeSeconds")
       private final @Nullable Output<Integer> tunnel2RekeyMarginTimeSeconds;
 
-    public Output<Integer> getTunnel2RekeyMarginTimeSeconds() {
-        return this.tunnel2RekeyMarginTimeSeconds == null ? Output.empty() : this.tunnel2RekeyMarginTimeSeconds;
+    public Output<Integer> tunnel2RekeyMarginTimeSeconds() {
+        return this.tunnel2RekeyMarginTimeSeconds == null ? Codegen.empty() : this.tunnel2RekeyMarginTimeSeconds;
     }
 
     /**
@@ -654,8 +655,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2ReplayWindowSize")
       private final @Nullable Output<Integer> tunnel2ReplayWindowSize;
 
-    public Output<Integer> getTunnel2ReplayWindowSize() {
-        return this.tunnel2ReplayWindowSize == null ? Output.empty() : this.tunnel2ReplayWindowSize;
+    public Output<Integer> tunnel2ReplayWindowSize() {
+        return this.tunnel2ReplayWindowSize == null ? Codegen.empty() : this.tunnel2ReplayWindowSize;
     }
 
     /**
@@ -665,8 +666,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2StartupAction")
       private final @Nullable Output<String> tunnel2StartupAction;
 
-    public Output<String> getTunnel2StartupAction() {
-        return this.tunnel2StartupAction == null ? Output.empty() : this.tunnel2StartupAction;
+    public Output<String> tunnel2StartupAction() {
+        return this.tunnel2StartupAction == null ? Codegen.empty() : this.tunnel2StartupAction;
     }
 
     /**
@@ -676,8 +677,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnel2VgwInsideAddress")
       private final @Nullable Output<String> tunnel2VgwInsideAddress;
 
-    public Output<String> getTunnel2VgwInsideAddress() {
-        return this.tunnel2VgwInsideAddress == null ? Output.empty() : this.tunnel2VgwInsideAddress;
+    public Output<String> tunnel2VgwInsideAddress() {
+        return this.tunnel2VgwInsideAddress == null ? Codegen.empty() : this.tunnel2VgwInsideAddress;
     }
 
     /**
@@ -687,8 +688,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tunnelInsideIpVersion")
       private final @Nullable Output<String> tunnelInsideIpVersion;
 
-    public Output<String> getTunnelInsideIpVersion() {
-        return this.tunnelInsideIpVersion == null ? Output.empty() : this.tunnelInsideIpVersion;
+    public Output<String> tunnelInsideIpVersion() {
+        return this.tunnelInsideIpVersion == null ? Codegen.empty() : this.tunnelInsideIpVersion;
     }
 
     /**
@@ -698,8 +699,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -709,8 +710,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vgwTelemetries")
       private final @Nullable Output<List<VpnConnectionVgwTelemetryGetArgs>> vgwTelemetries;
 
-    public Output<List<VpnConnectionVgwTelemetryGetArgs>> getVgwTelemetries() {
-        return this.vgwTelemetries == null ? Output.empty() : this.vgwTelemetries;
+    public Output<List<VpnConnectionVgwTelemetryGetArgs>> vgwTelemetries() {
+        return this.vgwTelemetries == null ? Codegen.empty() : this.vgwTelemetries;
     }
 
     /**
@@ -720,8 +721,8 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
-    public Output<String> getVpnGatewayId() {
-        return this.vpnGatewayId == null ? Output.empty() : this.vpnGatewayId;
+    public Output<String> vpnGatewayId() {
+        return this.vpnGatewayId == null ? Codegen.empty() : this.vpnGatewayId;
     }
 
     public VpnConnectionState(
@@ -856,70 +857,70 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpnConnectionState() {
-        this.arn = Output.empty();
-        this.customerGatewayConfiguration = Output.empty();
-        this.customerGatewayId = Output.empty();
-        this.enableAcceleration = Output.empty();
-        this.localIpv4NetworkCidr = Output.empty();
-        this.localIpv6NetworkCidr = Output.empty();
-        this.remoteIpv4NetworkCidr = Output.empty();
-        this.remoteIpv6NetworkCidr = Output.empty();
-        this.routes = Output.empty();
-        this.staticRoutesOnly = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayId = Output.empty();
-        this.tunnel1Address = Output.empty();
-        this.tunnel1BgpAsn = Output.empty();
-        this.tunnel1BgpHoldtime = Output.empty();
-        this.tunnel1CgwInsideAddress = Output.empty();
-        this.tunnel1DpdTimeoutAction = Output.empty();
-        this.tunnel1DpdTimeoutSeconds = Output.empty();
-        this.tunnel1IkeVersions = Output.empty();
-        this.tunnel1InsideCidr = Output.empty();
-        this.tunnel1InsideIpv6Cidr = Output.empty();
-        this.tunnel1Phase1DhGroupNumbers = Output.empty();
-        this.tunnel1Phase1EncryptionAlgorithms = Output.empty();
-        this.tunnel1Phase1IntegrityAlgorithms = Output.empty();
-        this.tunnel1Phase1LifetimeSeconds = Output.empty();
-        this.tunnel1Phase2DhGroupNumbers = Output.empty();
-        this.tunnel1Phase2EncryptionAlgorithms = Output.empty();
-        this.tunnel1Phase2IntegrityAlgorithms = Output.empty();
-        this.tunnel1Phase2LifetimeSeconds = Output.empty();
-        this.tunnel1PresharedKey = Output.empty();
-        this.tunnel1RekeyFuzzPercentage = Output.empty();
-        this.tunnel1RekeyMarginTimeSeconds = Output.empty();
-        this.tunnel1ReplayWindowSize = Output.empty();
-        this.tunnel1StartupAction = Output.empty();
-        this.tunnel1VgwInsideAddress = Output.empty();
-        this.tunnel2Address = Output.empty();
-        this.tunnel2BgpAsn = Output.empty();
-        this.tunnel2BgpHoldtime = Output.empty();
-        this.tunnel2CgwInsideAddress = Output.empty();
-        this.tunnel2DpdTimeoutAction = Output.empty();
-        this.tunnel2DpdTimeoutSeconds = Output.empty();
-        this.tunnel2IkeVersions = Output.empty();
-        this.tunnel2InsideCidr = Output.empty();
-        this.tunnel2InsideIpv6Cidr = Output.empty();
-        this.tunnel2Phase1DhGroupNumbers = Output.empty();
-        this.tunnel2Phase1EncryptionAlgorithms = Output.empty();
-        this.tunnel2Phase1IntegrityAlgorithms = Output.empty();
-        this.tunnel2Phase1LifetimeSeconds = Output.empty();
-        this.tunnel2Phase2DhGroupNumbers = Output.empty();
-        this.tunnel2Phase2EncryptionAlgorithms = Output.empty();
-        this.tunnel2Phase2IntegrityAlgorithms = Output.empty();
-        this.tunnel2Phase2LifetimeSeconds = Output.empty();
-        this.tunnel2PresharedKey = Output.empty();
-        this.tunnel2RekeyFuzzPercentage = Output.empty();
-        this.tunnel2RekeyMarginTimeSeconds = Output.empty();
-        this.tunnel2ReplayWindowSize = Output.empty();
-        this.tunnel2StartupAction = Output.empty();
-        this.tunnel2VgwInsideAddress = Output.empty();
-        this.tunnelInsideIpVersion = Output.empty();
-        this.type = Output.empty();
-        this.vgwTelemetries = Output.empty();
-        this.vpnGatewayId = Output.empty();
+        this.arn = Codegen.empty();
+        this.customerGatewayConfiguration = Codegen.empty();
+        this.customerGatewayId = Codegen.empty();
+        this.enableAcceleration = Codegen.empty();
+        this.localIpv4NetworkCidr = Codegen.empty();
+        this.localIpv6NetworkCidr = Codegen.empty();
+        this.remoteIpv4NetworkCidr = Codegen.empty();
+        this.remoteIpv6NetworkCidr = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.staticRoutesOnly = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayId = Codegen.empty();
+        this.tunnel1Address = Codegen.empty();
+        this.tunnel1BgpAsn = Codegen.empty();
+        this.tunnel1BgpHoldtime = Codegen.empty();
+        this.tunnel1CgwInsideAddress = Codegen.empty();
+        this.tunnel1DpdTimeoutAction = Codegen.empty();
+        this.tunnel1DpdTimeoutSeconds = Codegen.empty();
+        this.tunnel1IkeVersions = Codegen.empty();
+        this.tunnel1InsideCidr = Codegen.empty();
+        this.tunnel1InsideIpv6Cidr = Codegen.empty();
+        this.tunnel1Phase1DhGroupNumbers = Codegen.empty();
+        this.tunnel1Phase1EncryptionAlgorithms = Codegen.empty();
+        this.tunnel1Phase1IntegrityAlgorithms = Codegen.empty();
+        this.tunnel1Phase1LifetimeSeconds = Codegen.empty();
+        this.tunnel1Phase2DhGroupNumbers = Codegen.empty();
+        this.tunnel1Phase2EncryptionAlgorithms = Codegen.empty();
+        this.tunnel1Phase2IntegrityAlgorithms = Codegen.empty();
+        this.tunnel1Phase2LifetimeSeconds = Codegen.empty();
+        this.tunnel1PresharedKey = Codegen.empty();
+        this.tunnel1RekeyFuzzPercentage = Codegen.empty();
+        this.tunnel1RekeyMarginTimeSeconds = Codegen.empty();
+        this.tunnel1ReplayWindowSize = Codegen.empty();
+        this.tunnel1StartupAction = Codegen.empty();
+        this.tunnel1VgwInsideAddress = Codegen.empty();
+        this.tunnel2Address = Codegen.empty();
+        this.tunnel2BgpAsn = Codegen.empty();
+        this.tunnel2BgpHoldtime = Codegen.empty();
+        this.tunnel2CgwInsideAddress = Codegen.empty();
+        this.tunnel2DpdTimeoutAction = Codegen.empty();
+        this.tunnel2DpdTimeoutSeconds = Codegen.empty();
+        this.tunnel2IkeVersions = Codegen.empty();
+        this.tunnel2InsideCidr = Codegen.empty();
+        this.tunnel2InsideIpv6Cidr = Codegen.empty();
+        this.tunnel2Phase1DhGroupNumbers = Codegen.empty();
+        this.tunnel2Phase1EncryptionAlgorithms = Codegen.empty();
+        this.tunnel2Phase1IntegrityAlgorithms = Codegen.empty();
+        this.tunnel2Phase1LifetimeSeconds = Codegen.empty();
+        this.tunnel2Phase2DhGroupNumbers = Codegen.empty();
+        this.tunnel2Phase2EncryptionAlgorithms = Codegen.empty();
+        this.tunnel2Phase2IntegrityAlgorithms = Codegen.empty();
+        this.tunnel2Phase2LifetimeSeconds = Codegen.empty();
+        this.tunnel2PresharedKey = Codegen.empty();
+        this.tunnel2RekeyFuzzPercentage = Codegen.empty();
+        this.tunnel2RekeyMarginTimeSeconds = Codegen.empty();
+        this.tunnel2ReplayWindowSize = Codegen.empty();
+        this.tunnel2StartupAction = Codegen.empty();
+        this.tunnel2VgwInsideAddress = Codegen.empty();
+        this.tunnelInsideIpVersion = Codegen.empty();
+        this.type = Codegen.empty();
+        this.vgwTelemetries = Codegen.empty();
+        this.vpnGatewayId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -1073,7 +1074,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder customerGatewayConfiguration(@Nullable Output<String> customerGatewayConfiguration) {
@@ -1081,7 +1082,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerGatewayConfiguration(@Nullable String customerGatewayConfiguration) {
-            this.customerGatewayConfiguration = Output.ofNullable(customerGatewayConfiguration);
+            this.customerGatewayConfiguration = Codegen.ofNullable(customerGatewayConfiguration);
             return this;
         }
         public Builder customerGatewayId(@Nullable Output<String> customerGatewayId) {
@@ -1089,7 +1090,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerGatewayId(@Nullable String customerGatewayId) {
-            this.customerGatewayId = Output.ofNullable(customerGatewayId);
+            this.customerGatewayId = Codegen.ofNullable(customerGatewayId);
             return this;
         }
         public Builder enableAcceleration(@Nullable Output<Boolean> enableAcceleration) {
@@ -1097,7 +1098,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableAcceleration(@Nullable Boolean enableAcceleration) {
-            this.enableAcceleration = Output.ofNullable(enableAcceleration);
+            this.enableAcceleration = Codegen.ofNullable(enableAcceleration);
             return this;
         }
         public Builder localIpv4NetworkCidr(@Nullable Output<String> localIpv4NetworkCidr) {
@@ -1105,7 +1106,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localIpv4NetworkCidr(@Nullable String localIpv4NetworkCidr) {
-            this.localIpv4NetworkCidr = Output.ofNullable(localIpv4NetworkCidr);
+            this.localIpv4NetworkCidr = Codegen.ofNullable(localIpv4NetworkCidr);
             return this;
         }
         public Builder localIpv6NetworkCidr(@Nullable Output<String> localIpv6NetworkCidr) {
@@ -1113,7 +1114,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder localIpv6NetworkCidr(@Nullable String localIpv6NetworkCidr) {
-            this.localIpv6NetworkCidr = Output.ofNullable(localIpv6NetworkCidr);
+            this.localIpv6NetworkCidr = Codegen.ofNullable(localIpv6NetworkCidr);
             return this;
         }
         public Builder remoteIpv4NetworkCidr(@Nullable Output<String> remoteIpv4NetworkCidr) {
@@ -1121,7 +1122,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remoteIpv4NetworkCidr(@Nullable String remoteIpv4NetworkCidr) {
-            this.remoteIpv4NetworkCidr = Output.ofNullable(remoteIpv4NetworkCidr);
+            this.remoteIpv4NetworkCidr = Codegen.ofNullable(remoteIpv4NetworkCidr);
             return this;
         }
         public Builder remoteIpv6NetworkCidr(@Nullable Output<String> remoteIpv6NetworkCidr) {
@@ -1129,7 +1130,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remoteIpv6NetworkCidr(@Nullable String remoteIpv6NetworkCidr) {
-            this.remoteIpv6NetworkCidr = Output.ofNullable(remoteIpv6NetworkCidr);
+            this.remoteIpv6NetworkCidr = Codegen.ofNullable(remoteIpv6NetworkCidr);
             return this;
         }
         public Builder routes(@Nullable Output<List<VpnConnectionRouteGetArgs>> routes) {
@@ -1137,7 +1138,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routes(@Nullable List<VpnConnectionRouteGetArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(VpnConnectionRouteGetArgs... routes) {
@@ -1148,7 +1149,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder staticRoutesOnly(@Nullable Boolean staticRoutesOnly) {
-            this.staticRoutesOnly = Output.ofNullable(staticRoutesOnly);
+            this.staticRoutesOnly = Codegen.ofNullable(staticRoutesOnly);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -1156,7 +1157,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -1164,7 +1165,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
@@ -1172,7 +1173,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
             return this;
         }
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
@@ -1180,7 +1181,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Output.ofNullable(transitGatewayId);
+            this.transitGatewayId = Codegen.ofNullable(transitGatewayId);
             return this;
         }
         public Builder tunnel1Address(@Nullable Output<String> tunnel1Address) {
@@ -1188,7 +1189,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Address(@Nullable String tunnel1Address) {
-            this.tunnel1Address = Output.ofNullable(tunnel1Address);
+            this.tunnel1Address = Codegen.ofNullable(tunnel1Address);
             return this;
         }
         public Builder tunnel1BgpAsn(@Nullable Output<String> tunnel1BgpAsn) {
@@ -1196,7 +1197,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1BgpAsn(@Nullable String tunnel1BgpAsn) {
-            this.tunnel1BgpAsn = Output.ofNullable(tunnel1BgpAsn);
+            this.tunnel1BgpAsn = Codegen.ofNullable(tunnel1BgpAsn);
             return this;
         }
         public Builder tunnel1BgpHoldtime(@Nullable Output<Integer> tunnel1BgpHoldtime) {
@@ -1204,7 +1205,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1BgpHoldtime(@Nullable Integer tunnel1BgpHoldtime) {
-            this.tunnel1BgpHoldtime = Output.ofNullable(tunnel1BgpHoldtime);
+            this.tunnel1BgpHoldtime = Codegen.ofNullable(tunnel1BgpHoldtime);
             return this;
         }
         public Builder tunnel1CgwInsideAddress(@Nullable Output<String> tunnel1CgwInsideAddress) {
@@ -1212,7 +1213,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1CgwInsideAddress(@Nullable String tunnel1CgwInsideAddress) {
-            this.tunnel1CgwInsideAddress = Output.ofNullable(tunnel1CgwInsideAddress);
+            this.tunnel1CgwInsideAddress = Codegen.ofNullable(tunnel1CgwInsideAddress);
             return this;
         }
         public Builder tunnel1DpdTimeoutAction(@Nullable Output<String> tunnel1DpdTimeoutAction) {
@@ -1220,7 +1221,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1DpdTimeoutAction(@Nullable String tunnel1DpdTimeoutAction) {
-            this.tunnel1DpdTimeoutAction = Output.ofNullable(tunnel1DpdTimeoutAction);
+            this.tunnel1DpdTimeoutAction = Codegen.ofNullable(tunnel1DpdTimeoutAction);
             return this;
         }
         public Builder tunnel1DpdTimeoutSeconds(@Nullable Output<Integer> tunnel1DpdTimeoutSeconds) {
@@ -1228,7 +1229,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1DpdTimeoutSeconds(@Nullable Integer tunnel1DpdTimeoutSeconds) {
-            this.tunnel1DpdTimeoutSeconds = Output.ofNullable(tunnel1DpdTimeoutSeconds);
+            this.tunnel1DpdTimeoutSeconds = Codegen.ofNullable(tunnel1DpdTimeoutSeconds);
             return this;
         }
         public Builder tunnel1IkeVersions(@Nullable Output<List<String>> tunnel1IkeVersions) {
@@ -1236,7 +1237,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1IkeVersions(@Nullable List<String> tunnel1IkeVersions) {
-            this.tunnel1IkeVersions = Output.ofNullable(tunnel1IkeVersions);
+            this.tunnel1IkeVersions = Codegen.ofNullable(tunnel1IkeVersions);
             return this;
         }
         public Builder tunnel1IkeVersions(String... tunnel1IkeVersions) {
@@ -1247,7 +1248,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1InsideCidr(@Nullable String tunnel1InsideCidr) {
-            this.tunnel1InsideCidr = Output.ofNullable(tunnel1InsideCidr);
+            this.tunnel1InsideCidr = Codegen.ofNullable(tunnel1InsideCidr);
             return this;
         }
         public Builder tunnel1InsideIpv6Cidr(@Nullable Output<String> tunnel1InsideIpv6Cidr) {
@@ -1255,7 +1256,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1InsideIpv6Cidr(@Nullable String tunnel1InsideIpv6Cidr) {
-            this.tunnel1InsideIpv6Cidr = Output.ofNullable(tunnel1InsideIpv6Cidr);
+            this.tunnel1InsideIpv6Cidr = Codegen.ofNullable(tunnel1InsideIpv6Cidr);
             return this;
         }
         public Builder tunnel1Phase1DhGroupNumbers(@Nullable Output<List<Integer>> tunnel1Phase1DhGroupNumbers) {
@@ -1263,7 +1264,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Phase1DhGroupNumbers(@Nullable List<Integer> tunnel1Phase1DhGroupNumbers) {
-            this.tunnel1Phase1DhGroupNumbers = Output.ofNullable(tunnel1Phase1DhGroupNumbers);
+            this.tunnel1Phase1DhGroupNumbers = Codegen.ofNullable(tunnel1Phase1DhGroupNumbers);
             return this;
         }
         public Builder tunnel1Phase1DhGroupNumbers(Integer... tunnel1Phase1DhGroupNumbers) {
@@ -1274,7 +1275,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Phase1EncryptionAlgorithms(@Nullable List<String> tunnel1Phase1EncryptionAlgorithms) {
-            this.tunnel1Phase1EncryptionAlgorithms = Output.ofNullable(tunnel1Phase1EncryptionAlgorithms);
+            this.tunnel1Phase1EncryptionAlgorithms = Codegen.ofNullable(tunnel1Phase1EncryptionAlgorithms);
             return this;
         }
         public Builder tunnel1Phase1EncryptionAlgorithms(String... tunnel1Phase1EncryptionAlgorithms) {
@@ -1285,7 +1286,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Phase1IntegrityAlgorithms(@Nullable List<String> tunnel1Phase1IntegrityAlgorithms) {
-            this.tunnel1Phase1IntegrityAlgorithms = Output.ofNullable(tunnel1Phase1IntegrityAlgorithms);
+            this.tunnel1Phase1IntegrityAlgorithms = Codegen.ofNullable(tunnel1Phase1IntegrityAlgorithms);
             return this;
         }
         public Builder tunnel1Phase1IntegrityAlgorithms(String... tunnel1Phase1IntegrityAlgorithms) {
@@ -1296,7 +1297,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Phase1LifetimeSeconds(@Nullable Integer tunnel1Phase1LifetimeSeconds) {
-            this.tunnel1Phase1LifetimeSeconds = Output.ofNullable(tunnel1Phase1LifetimeSeconds);
+            this.tunnel1Phase1LifetimeSeconds = Codegen.ofNullable(tunnel1Phase1LifetimeSeconds);
             return this;
         }
         public Builder tunnel1Phase2DhGroupNumbers(@Nullable Output<List<Integer>> tunnel1Phase2DhGroupNumbers) {
@@ -1304,7 +1305,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Phase2DhGroupNumbers(@Nullable List<Integer> tunnel1Phase2DhGroupNumbers) {
-            this.tunnel1Phase2DhGroupNumbers = Output.ofNullable(tunnel1Phase2DhGroupNumbers);
+            this.tunnel1Phase2DhGroupNumbers = Codegen.ofNullable(tunnel1Phase2DhGroupNumbers);
             return this;
         }
         public Builder tunnel1Phase2DhGroupNumbers(Integer... tunnel1Phase2DhGroupNumbers) {
@@ -1315,7 +1316,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Phase2EncryptionAlgorithms(@Nullable List<String> tunnel1Phase2EncryptionAlgorithms) {
-            this.tunnel1Phase2EncryptionAlgorithms = Output.ofNullable(tunnel1Phase2EncryptionAlgorithms);
+            this.tunnel1Phase2EncryptionAlgorithms = Codegen.ofNullable(tunnel1Phase2EncryptionAlgorithms);
             return this;
         }
         public Builder tunnel1Phase2EncryptionAlgorithms(String... tunnel1Phase2EncryptionAlgorithms) {
@@ -1326,7 +1327,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Phase2IntegrityAlgorithms(@Nullable List<String> tunnel1Phase2IntegrityAlgorithms) {
-            this.tunnel1Phase2IntegrityAlgorithms = Output.ofNullable(tunnel1Phase2IntegrityAlgorithms);
+            this.tunnel1Phase2IntegrityAlgorithms = Codegen.ofNullable(tunnel1Phase2IntegrityAlgorithms);
             return this;
         }
         public Builder tunnel1Phase2IntegrityAlgorithms(String... tunnel1Phase2IntegrityAlgorithms) {
@@ -1337,7 +1338,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1Phase2LifetimeSeconds(@Nullable Integer tunnel1Phase2LifetimeSeconds) {
-            this.tunnel1Phase2LifetimeSeconds = Output.ofNullable(tunnel1Phase2LifetimeSeconds);
+            this.tunnel1Phase2LifetimeSeconds = Codegen.ofNullable(tunnel1Phase2LifetimeSeconds);
             return this;
         }
         public Builder tunnel1PresharedKey(@Nullable Output<String> tunnel1PresharedKey) {
@@ -1345,7 +1346,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1PresharedKey(@Nullable String tunnel1PresharedKey) {
-            this.tunnel1PresharedKey = Output.ofNullable(tunnel1PresharedKey);
+            this.tunnel1PresharedKey = Codegen.ofNullable(tunnel1PresharedKey);
             return this;
         }
         public Builder tunnel1RekeyFuzzPercentage(@Nullable Output<Integer> tunnel1RekeyFuzzPercentage) {
@@ -1353,7 +1354,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1RekeyFuzzPercentage(@Nullable Integer tunnel1RekeyFuzzPercentage) {
-            this.tunnel1RekeyFuzzPercentage = Output.ofNullable(tunnel1RekeyFuzzPercentage);
+            this.tunnel1RekeyFuzzPercentage = Codegen.ofNullable(tunnel1RekeyFuzzPercentage);
             return this;
         }
         public Builder tunnel1RekeyMarginTimeSeconds(@Nullable Output<Integer> tunnel1RekeyMarginTimeSeconds) {
@@ -1361,7 +1362,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1RekeyMarginTimeSeconds(@Nullable Integer tunnel1RekeyMarginTimeSeconds) {
-            this.tunnel1RekeyMarginTimeSeconds = Output.ofNullable(tunnel1RekeyMarginTimeSeconds);
+            this.tunnel1RekeyMarginTimeSeconds = Codegen.ofNullable(tunnel1RekeyMarginTimeSeconds);
             return this;
         }
         public Builder tunnel1ReplayWindowSize(@Nullable Output<Integer> tunnel1ReplayWindowSize) {
@@ -1369,7 +1370,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1ReplayWindowSize(@Nullable Integer tunnel1ReplayWindowSize) {
-            this.tunnel1ReplayWindowSize = Output.ofNullable(tunnel1ReplayWindowSize);
+            this.tunnel1ReplayWindowSize = Codegen.ofNullable(tunnel1ReplayWindowSize);
             return this;
         }
         public Builder tunnel1StartupAction(@Nullable Output<String> tunnel1StartupAction) {
@@ -1377,7 +1378,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1StartupAction(@Nullable String tunnel1StartupAction) {
-            this.tunnel1StartupAction = Output.ofNullable(tunnel1StartupAction);
+            this.tunnel1StartupAction = Codegen.ofNullable(tunnel1StartupAction);
             return this;
         }
         public Builder tunnel1VgwInsideAddress(@Nullable Output<String> tunnel1VgwInsideAddress) {
@@ -1385,7 +1386,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel1VgwInsideAddress(@Nullable String tunnel1VgwInsideAddress) {
-            this.tunnel1VgwInsideAddress = Output.ofNullable(tunnel1VgwInsideAddress);
+            this.tunnel1VgwInsideAddress = Codegen.ofNullable(tunnel1VgwInsideAddress);
             return this;
         }
         public Builder tunnel2Address(@Nullable Output<String> tunnel2Address) {
@@ -1393,7 +1394,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Address(@Nullable String tunnel2Address) {
-            this.tunnel2Address = Output.ofNullable(tunnel2Address);
+            this.tunnel2Address = Codegen.ofNullable(tunnel2Address);
             return this;
         }
         public Builder tunnel2BgpAsn(@Nullable Output<String> tunnel2BgpAsn) {
@@ -1401,7 +1402,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2BgpAsn(@Nullable String tunnel2BgpAsn) {
-            this.tunnel2BgpAsn = Output.ofNullable(tunnel2BgpAsn);
+            this.tunnel2BgpAsn = Codegen.ofNullable(tunnel2BgpAsn);
             return this;
         }
         public Builder tunnel2BgpHoldtime(@Nullable Output<Integer> tunnel2BgpHoldtime) {
@@ -1409,7 +1410,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2BgpHoldtime(@Nullable Integer tunnel2BgpHoldtime) {
-            this.tunnel2BgpHoldtime = Output.ofNullable(tunnel2BgpHoldtime);
+            this.tunnel2BgpHoldtime = Codegen.ofNullable(tunnel2BgpHoldtime);
             return this;
         }
         public Builder tunnel2CgwInsideAddress(@Nullable Output<String> tunnel2CgwInsideAddress) {
@@ -1417,7 +1418,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2CgwInsideAddress(@Nullable String tunnel2CgwInsideAddress) {
-            this.tunnel2CgwInsideAddress = Output.ofNullable(tunnel2CgwInsideAddress);
+            this.tunnel2CgwInsideAddress = Codegen.ofNullable(tunnel2CgwInsideAddress);
             return this;
         }
         public Builder tunnel2DpdTimeoutAction(@Nullable Output<String> tunnel2DpdTimeoutAction) {
@@ -1425,7 +1426,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2DpdTimeoutAction(@Nullable String tunnel2DpdTimeoutAction) {
-            this.tunnel2DpdTimeoutAction = Output.ofNullable(tunnel2DpdTimeoutAction);
+            this.tunnel2DpdTimeoutAction = Codegen.ofNullable(tunnel2DpdTimeoutAction);
             return this;
         }
         public Builder tunnel2DpdTimeoutSeconds(@Nullable Output<Integer> tunnel2DpdTimeoutSeconds) {
@@ -1433,7 +1434,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2DpdTimeoutSeconds(@Nullable Integer tunnel2DpdTimeoutSeconds) {
-            this.tunnel2DpdTimeoutSeconds = Output.ofNullable(tunnel2DpdTimeoutSeconds);
+            this.tunnel2DpdTimeoutSeconds = Codegen.ofNullable(tunnel2DpdTimeoutSeconds);
             return this;
         }
         public Builder tunnel2IkeVersions(@Nullable Output<List<String>> tunnel2IkeVersions) {
@@ -1441,7 +1442,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2IkeVersions(@Nullable List<String> tunnel2IkeVersions) {
-            this.tunnel2IkeVersions = Output.ofNullable(tunnel2IkeVersions);
+            this.tunnel2IkeVersions = Codegen.ofNullable(tunnel2IkeVersions);
             return this;
         }
         public Builder tunnel2IkeVersions(String... tunnel2IkeVersions) {
@@ -1452,7 +1453,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2InsideCidr(@Nullable String tunnel2InsideCidr) {
-            this.tunnel2InsideCidr = Output.ofNullable(tunnel2InsideCidr);
+            this.tunnel2InsideCidr = Codegen.ofNullable(tunnel2InsideCidr);
             return this;
         }
         public Builder tunnel2InsideIpv6Cidr(@Nullable Output<String> tunnel2InsideIpv6Cidr) {
@@ -1460,7 +1461,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2InsideIpv6Cidr(@Nullable String tunnel2InsideIpv6Cidr) {
-            this.tunnel2InsideIpv6Cidr = Output.ofNullable(tunnel2InsideIpv6Cidr);
+            this.tunnel2InsideIpv6Cidr = Codegen.ofNullable(tunnel2InsideIpv6Cidr);
             return this;
         }
         public Builder tunnel2Phase1DhGroupNumbers(@Nullable Output<List<Integer>> tunnel2Phase1DhGroupNumbers) {
@@ -1468,7 +1469,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Phase1DhGroupNumbers(@Nullable List<Integer> tunnel2Phase1DhGroupNumbers) {
-            this.tunnel2Phase1DhGroupNumbers = Output.ofNullable(tunnel2Phase1DhGroupNumbers);
+            this.tunnel2Phase1DhGroupNumbers = Codegen.ofNullable(tunnel2Phase1DhGroupNumbers);
             return this;
         }
         public Builder tunnel2Phase1DhGroupNumbers(Integer... tunnel2Phase1DhGroupNumbers) {
@@ -1479,7 +1480,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Phase1EncryptionAlgorithms(@Nullable List<String> tunnel2Phase1EncryptionAlgorithms) {
-            this.tunnel2Phase1EncryptionAlgorithms = Output.ofNullable(tunnel2Phase1EncryptionAlgorithms);
+            this.tunnel2Phase1EncryptionAlgorithms = Codegen.ofNullable(tunnel2Phase1EncryptionAlgorithms);
             return this;
         }
         public Builder tunnel2Phase1EncryptionAlgorithms(String... tunnel2Phase1EncryptionAlgorithms) {
@@ -1490,7 +1491,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Phase1IntegrityAlgorithms(@Nullable List<String> tunnel2Phase1IntegrityAlgorithms) {
-            this.tunnel2Phase1IntegrityAlgorithms = Output.ofNullable(tunnel2Phase1IntegrityAlgorithms);
+            this.tunnel2Phase1IntegrityAlgorithms = Codegen.ofNullable(tunnel2Phase1IntegrityAlgorithms);
             return this;
         }
         public Builder tunnel2Phase1IntegrityAlgorithms(String... tunnel2Phase1IntegrityAlgorithms) {
@@ -1501,7 +1502,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Phase1LifetimeSeconds(@Nullable Integer tunnel2Phase1LifetimeSeconds) {
-            this.tunnel2Phase1LifetimeSeconds = Output.ofNullable(tunnel2Phase1LifetimeSeconds);
+            this.tunnel2Phase1LifetimeSeconds = Codegen.ofNullable(tunnel2Phase1LifetimeSeconds);
             return this;
         }
         public Builder tunnel2Phase2DhGroupNumbers(@Nullable Output<List<Integer>> tunnel2Phase2DhGroupNumbers) {
@@ -1509,7 +1510,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Phase2DhGroupNumbers(@Nullable List<Integer> tunnel2Phase2DhGroupNumbers) {
-            this.tunnel2Phase2DhGroupNumbers = Output.ofNullable(tunnel2Phase2DhGroupNumbers);
+            this.tunnel2Phase2DhGroupNumbers = Codegen.ofNullable(tunnel2Phase2DhGroupNumbers);
             return this;
         }
         public Builder tunnel2Phase2DhGroupNumbers(Integer... tunnel2Phase2DhGroupNumbers) {
@@ -1520,7 +1521,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Phase2EncryptionAlgorithms(@Nullable List<String> tunnel2Phase2EncryptionAlgorithms) {
-            this.tunnel2Phase2EncryptionAlgorithms = Output.ofNullable(tunnel2Phase2EncryptionAlgorithms);
+            this.tunnel2Phase2EncryptionAlgorithms = Codegen.ofNullable(tunnel2Phase2EncryptionAlgorithms);
             return this;
         }
         public Builder tunnel2Phase2EncryptionAlgorithms(String... tunnel2Phase2EncryptionAlgorithms) {
@@ -1531,7 +1532,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Phase2IntegrityAlgorithms(@Nullable List<String> tunnel2Phase2IntegrityAlgorithms) {
-            this.tunnel2Phase2IntegrityAlgorithms = Output.ofNullable(tunnel2Phase2IntegrityAlgorithms);
+            this.tunnel2Phase2IntegrityAlgorithms = Codegen.ofNullable(tunnel2Phase2IntegrityAlgorithms);
             return this;
         }
         public Builder tunnel2Phase2IntegrityAlgorithms(String... tunnel2Phase2IntegrityAlgorithms) {
@@ -1542,7 +1543,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2Phase2LifetimeSeconds(@Nullable Integer tunnel2Phase2LifetimeSeconds) {
-            this.tunnel2Phase2LifetimeSeconds = Output.ofNullable(tunnel2Phase2LifetimeSeconds);
+            this.tunnel2Phase2LifetimeSeconds = Codegen.ofNullable(tunnel2Phase2LifetimeSeconds);
             return this;
         }
         public Builder tunnel2PresharedKey(@Nullable Output<String> tunnel2PresharedKey) {
@@ -1550,7 +1551,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2PresharedKey(@Nullable String tunnel2PresharedKey) {
-            this.tunnel2PresharedKey = Output.ofNullable(tunnel2PresharedKey);
+            this.tunnel2PresharedKey = Codegen.ofNullable(tunnel2PresharedKey);
             return this;
         }
         public Builder tunnel2RekeyFuzzPercentage(@Nullable Output<Integer> tunnel2RekeyFuzzPercentage) {
@@ -1558,7 +1559,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2RekeyFuzzPercentage(@Nullable Integer tunnel2RekeyFuzzPercentage) {
-            this.tunnel2RekeyFuzzPercentage = Output.ofNullable(tunnel2RekeyFuzzPercentage);
+            this.tunnel2RekeyFuzzPercentage = Codegen.ofNullable(tunnel2RekeyFuzzPercentage);
             return this;
         }
         public Builder tunnel2RekeyMarginTimeSeconds(@Nullable Output<Integer> tunnel2RekeyMarginTimeSeconds) {
@@ -1566,7 +1567,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2RekeyMarginTimeSeconds(@Nullable Integer tunnel2RekeyMarginTimeSeconds) {
-            this.tunnel2RekeyMarginTimeSeconds = Output.ofNullable(tunnel2RekeyMarginTimeSeconds);
+            this.tunnel2RekeyMarginTimeSeconds = Codegen.ofNullable(tunnel2RekeyMarginTimeSeconds);
             return this;
         }
         public Builder tunnel2ReplayWindowSize(@Nullable Output<Integer> tunnel2ReplayWindowSize) {
@@ -1574,7 +1575,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2ReplayWindowSize(@Nullable Integer tunnel2ReplayWindowSize) {
-            this.tunnel2ReplayWindowSize = Output.ofNullable(tunnel2ReplayWindowSize);
+            this.tunnel2ReplayWindowSize = Codegen.ofNullable(tunnel2ReplayWindowSize);
             return this;
         }
         public Builder tunnel2StartupAction(@Nullable Output<String> tunnel2StartupAction) {
@@ -1582,7 +1583,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2StartupAction(@Nullable String tunnel2StartupAction) {
-            this.tunnel2StartupAction = Output.ofNullable(tunnel2StartupAction);
+            this.tunnel2StartupAction = Codegen.ofNullable(tunnel2StartupAction);
             return this;
         }
         public Builder tunnel2VgwInsideAddress(@Nullable Output<String> tunnel2VgwInsideAddress) {
@@ -1590,7 +1591,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnel2VgwInsideAddress(@Nullable String tunnel2VgwInsideAddress) {
-            this.tunnel2VgwInsideAddress = Output.ofNullable(tunnel2VgwInsideAddress);
+            this.tunnel2VgwInsideAddress = Codegen.ofNullable(tunnel2VgwInsideAddress);
             return this;
         }
         public Builder tunnelInsideIpVersion(@Nullable Output<String> tunnelInsideIpVersion) {
@@ -1598,7 +1599,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tunnelInsideIpVersion(@Nullable String tunnelInsideIpVersion) {
-            this.tunnelInsideIpVersion = Output.ofNullable(tunnelInsideIpVersion);
+            this.tunnelInsideIpVersion = Codegen.ofNullable(tunnelInsideIpVersion);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -1606,7 +1607,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder vgwTelemetries(@Nullable Output<List<VpnConnectionVgwTelemetryGetArgs>> vgwTelemetries) {
@@ -1614,7 +1615,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vgwTelemetries(@Nullable List<VpnConnectionVgwTelemetryGetArgs> vgwTelemetries) {
-            this.vgwTelemetries = Output.ofNullable(vgwTelemetries);
+            this.vgwTelemetries = Codegen.ofNullable(vgwTelemetries);
             return this;
         }
         public Builder vgwTelemetries(VpnConnectionVgwTelemetryGetArgs... vgwTelemetries) {
@@ -1625,7 +1626,7 @@ public final class VpnConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
-            this.vpnGatewayId = Output.ofNullable(vpnGatewayId);
+            this.vpnGatewayId = Codegen.ofNullable(vpnGatewayId);
             return this;
         }        public VpnConnectionState build() {
             return new VpnConnectionState(arn, customerGatewayConfiguration, customerGatewayId, enableAcceleration, localIpv4NetworkCidr, localIpv6NetworkCidr, remoteIpv4NetworkCidr, remoteIpv6NetworkCidr, routes, staticRoutesOnly, tags, tagsAll, transitGatewayAttachmentId, transitGatewayId, tunnel1Address, tunnel1BgpAsn, tunnel1BgpHoldtime, tunnel1CgwInsideAddress, tunnel1DpdTimeoutAction, tunnel1DpdTimeoutSeconds, tunnel1IkeVersions, tunnel1InsideCidr, tunnel1InsideIpv6Cidr, tunnel1Phase1DhGroupNumbers, tunnel1Phase1EncryptionAlgorithms, tunnel1Phase1IntegrityAlgorithms, tunnel1Phase1LifetimeSeconds, tunnel1Phase2DhGroupNumbers, tunnel1Phase2EncryptionAlgorithms, tunnel1Phase2IntegrityAlgorithms, tunnel1Phase2LifetimeSeconds, tunnel1PresharedKey, tunnel1RekeyFuzzPercentage, tunnel1RekeyMarginTimeSeconds, tunnel1ReplayWindowSize, tunnel1StartupAction, tunnel1VgwInsideAddress, tunnel2Address, tunnel2BgpAsn, tunnel2BgpHoldtime, tunnel2CgwInsideAddress, tunnel2DpdTimeoutAction, tunnel2DpdTimeoutSeconds, tunnel2IkeVersions, tunnel2InsideCidr, tunnel2InsideIpv6Cidr, tunnel2Phase1DhGroupNumbers, tunnel2Phase1EncryptionAlgorithms, tunnel2Phase1IntegrityAlgorithms, tunnel2Phase1LifetimeSeconds, tunnel2Phase2DhGroupNumbers, tunnel2Phase2EncryptionAlgorithms, tunnel2Phase2IntegrityAlgorithms, tunnel2Phase2LifetimeSeconds, tunnel2PresharedKey, tunnel2RekeyFuzzPercentage, tunnel2RekeyMarginTimeSeconds, tunnel2ReplayWindowSize, tunnel2StartupAction, tunnel2VgwInsideAddress, tunnelInsideIpVersion, type, vgwTelemetries, vpnGatewayId);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.contactcenterinsights_v1.ConversationArgs;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnalysisResponse;
@@ -36,7 +37,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return An opaque, user-specified string representing the human agent who handled the conversation.
      * 
      */
-    public Output<String> getAgentId() {
+    public Output<String> agentId() {
         return this.agentId;
     }
     /**
@@ -50,7 +51,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return Call-specific metadata.
      * 
      */
-    public Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse> getCallMetadata() {
+    public Output<GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse> callMetadata() {
         return this.callMetadata;
     }
     /**
@@ -64,7 +65,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The time at which the conversation was created.
      * 
      */
-    public Output<String> getCreateTime() {
+    public Output<String> createTime() {
         return this.createTime;
     }
     /**
@@ -78,7 +79,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The source of the audio and transcription for the conversation.
      * 
      */
-    public Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse> getDataSource() {
+    public Output<GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse> dataSource() {
         return this.dataSource;
     }
     /**
@@ -92,7 +93,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return All the matched Dialogflow intents in the call. The key corresponds to a Dialogflow intent, format: projects/{project}/agent/{agent}/intents/{intent}
      * 
      */
-    public Output<Map<String,String>> getDialogflowIntents() {
+    public Output<Map<String,String>> dialogflowIntents() {
         return this.dialogflowIntents;
     }
     /**
@@ -106,7 +107,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The duration of the conversation.
      * 
      */
-    public Output<String> getDuration() {
+    public Output<String> duration() {
         return this.duration;
     }
     /**
@@ -120,7 +121,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -134,7 +135,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
      * 
      */
-    public Output<Map<String,String>> getLabels() {
+    public Output<Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -148,7 +149,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return A user-specified language code for the conversation.
      * 
      */
-    public Output<String> getLanguageCode() {
+    public Output<String> languageCode() {
         return this.languageCode;
     }
     /**
@@ -162,7 +163,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The conversation's latest analysis, if one exists.
      * 
      */
-    public Output<GoogleCloudContactcenterinsightsV1AnalysisResponse> getLatestAnalysis() {
+    public Output<GoogleCloudContactcenterinsightsV1AnalysisResponse> latestAnalysis() {
         return this.latestAnalysis;
     }
     /**
@@ -176,7 +177,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
      * 
      */
-    public Output<String> getMedium() {
+    public Output<String> medium() {
         return this.medium;
     }
     /**
@@ -190,7 +191,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -204,7 +205,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return Obfuscated user ID which the customer sent to us.
      * 
      */
-    public Output<String> getObfuscatedUserId() {
+    public Output<String> obfuscatedUserId() {
         return this.obfuscatedUserId;
     }
     /**
@@ -218,7 +219,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The annotations that were generated during the customer and agent interaction.
      * 
      */
-    public Output<List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse>> getRuntimeAnnotations() {
+    public Output<List<GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse>> runtimeAnnotations() {
         return this.runtimeAnnotations;
     }
     /**
@@ -232,7 +233,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The time at which the conversation started.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
     /**
@@ -246,7 +247,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The conversation transcript.
      * 
      */
-    public Output<GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse> getTranscript() {
+    public Output<GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse> transcript() {
         return this.transcript;
     }
     /**
@@ -260,7 +261,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
      * 
      */
-    public Output<String> getTtl() {
+    public Output<String> ttl() {
         return this.ttl;
     }
     /**
@@ -274,7 +275,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The number of turns in the conversation.
      * 
      */
-    public Output<Integer> getTurnCount() {
+    public Output<Integer> turnCount() {
         return this.turnCount;
     }
     /**
@@ -288,7 +289,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The most recent time at which the conversation was updated.
      * 
      */
-    public Output<String> getUpdateTime() {
+    public Output<String> updateTime() {
         return this.updateTime;
     }
 
@@ -314,7 +315,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Conversation(String name, @Nullable ConversationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:contactcenterinsights/v1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:contactcenterinsights/v1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Conversation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

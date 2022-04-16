@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
     @Import(name="ultraSSDEnabled")
       private final @Nullable Output<Boolean> ultraSSDEnabled;
 
-    public Output<Boolean> getUltraSSDEnabled() {
-        return this.ultraSSDEnabled == null ? Output.empty() : this.ultraSSDEnabled;
+    public Output<Boolean> ultraSSDEnabled() {
+        return this.ultraSSDEnabled == null ? Codegen.empty() : this.ultraSSDEnabled;
     }
 
     public AdditionalCapabilitiesArgs(@Nullable Output<Boolean> ultraSSDEnabled) {
@@ -34,7 +35,7 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
     }
 
     private AdditionalCapabilitiesArgs() {
-        this.ultraSSDEnabled = Output.empty();
+        this.ultraSSDEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ultraSSDEnabled(@Nullable Boolean ultraSSDEnabled) {
-            this.ultraSSDEnabled = Output.ofNullable(ultraSSDEnabled);
+            this.ultraSSDEnabled = Codegen.ofNullable(ultraSSDEnabled);
             return this;
         }        public AdditionalCapabilitiesArgs build() {
             return new AdditionalCapabilitiesArgs(ultraSSDEnabled);

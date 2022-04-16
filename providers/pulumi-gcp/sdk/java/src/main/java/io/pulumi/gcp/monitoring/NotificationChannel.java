@@ -6,6 +6,7 @@ package io.pulumi.gcp.monitoring;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.NotificationChannelArgs;
 import io.pulumi.gcp.monitoring.inputs.NotificationChannelState;
@@ -64,7 +65,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -78,7 +79,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters.
      * 
      */
-    public Output</* @Nullable */ String> getDisplayName() {
+    public Output</* @Nullable */ String> displayName() {
         return this.displayName;
     }
     /**
@@ -92,7 +93,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of notifications to a particular channel without removing the channel from all alerting policies that reference the channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the same set of alerting policies on the channel at some point in the future.
      * 
      */
-    public Output</* @Nullable */ Boolean> getEnabled() {
+    public Output</* @Nullable */ Boolean> enabled() {
         return this.enabled;
     }
     /**
@@ -116,7 +117,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * the sensitive_labels block, but cannot be configured in both places.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getLabels() {
+    public Output</* @Nullable */ Map<String,String>> labels() {
         return this.labels;
     }
     /**
@@ -132,7 +133,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * [CHANNEL_ID] is automatically assigned by the server on creation.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -148,7 +149,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -174,7 +175,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NotificationChannelSensitiveLabels> getSensitiveLabels() {
+    public Output</* @Nullable */ NotificationChannelSensitiveLabels> sensitiveLabels() {
         return this.sensitiveLabels;
     }
     /**
@@ -188,7 +189,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the list of valid values such as "email", "slack", etc...
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -202,7 +203,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @return User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getUserLabels() {
+    public Output</* @Nullable */ Map<String,String>> userLabels() {
         return this.userLabels;
     }
     /**
@@ -228,7 +229,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.
      * 
      */
-    public Output<String> getVerificationStatus() {
+    public Output<String> verificationStatus() {
         return this.verificationStatus;
     }
 
@@ -254,7 +255,7 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationChannel(String name, NotificationChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:monitoring/notificationChannel:NotificationChannel", name, args == null ? NotificationChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:monitoring/notificationChannel:NotificationChannel", name, args == null ? NotificationChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationChannel(String name, Output<String> id, @Nullable NotificationChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

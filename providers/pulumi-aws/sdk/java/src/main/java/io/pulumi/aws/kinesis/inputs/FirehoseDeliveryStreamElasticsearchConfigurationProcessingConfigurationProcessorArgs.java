@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     @Import(name="parameters")
       private final @Nullable Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs>> parameters;
 
-    public Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -46,8 +47,8 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
     }
 
     private FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorArgs() {
-        this.parameters = Output.empty();
-        this.type = Output.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationProcessingCon
             return this;
         }
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationProcessorParameterArgs... parameters) {

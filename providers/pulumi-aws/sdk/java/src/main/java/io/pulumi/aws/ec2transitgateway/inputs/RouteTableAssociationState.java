@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
-    public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+    public Output<String> resourceId() {
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
-    public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+    public Output<String> resourceType() {
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
-    public Output<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
+    public Output<String> transitGatewayAttachmentId() {
+        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     @Import(name="transitGatewayRouteTableId")
       private final @Nullable Output<String> transitGatewayRouteTableId;
 
-    public Output<String> getTransitGatewayRouteTableId() {
-        return this.transitGatewayRouteTableId == null ? Output.empty() : this.transitGatewayRouteTableId;
+    public Output<String> transitGatewayRouteTableId() {
+        return this.transitGatewayRouteTableId == null ? Codegen.empty() : this.transitGatewayRouteTableId;
     }
 
     public RouteTableAssociationState(
@@ -70,10 +71,10 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
     }
 
     private RouteTableAssociationState() {
-        this.resourceId = Output.empty();
-        this.resourceType = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayRouteTableId = Output.empty();
+        this.resourceId = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayRouteTableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -115,7 +116,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
@@ -123,7 +124,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
             return this;
         }
         public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
@@ -131,7 +132,7 @@ public final class RouteTableAssociationState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Output.ofNullable(transitGatewayRouteTableId);
+            this.transitGatewayRouteTableId = Codegen.ofNullable(transitGatewayRouteTableId);
             return this;
         }        public RouteTableAssociationState build() {
             return new RouteTableAssociationState(resourceId, resourceType, transitGatewayAttachmentId, transitGatewayRouteTableId);

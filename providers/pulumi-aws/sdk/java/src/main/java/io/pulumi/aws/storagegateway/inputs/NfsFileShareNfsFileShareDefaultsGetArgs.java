@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     @Import(name="directoryMode")
       private final @Nullable Output<String> directoryMode;
 
-    public Output<String> getDirectoryMode() {
-        return this.directoryMode == null ? Output.empty() : this.directoryMode;
+    public Output<String> directoryMode() {
+        return this.directoryMode == null ? Codegen.empty() : this.directoryMode;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     @Import(name="fileMode")
       private final @Nullable Output<String> fileMode;
 
-    public Output<String> getFileMode() {
-        return this.fileMode == null ? Output.empty() : this.fileMode;
+    public Output<String> fileMode() {
+        return this.fileMode == null ? Codegen.empty() : this.fileMode;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
-    public Output<String> getGroupId() {
-        return this.groupId == null ? Output.empty() : this.groupId;
+    public Output<String> groupId() {
+        return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
-    public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+    public Output<String> ownerId() {
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     public NfsFileShareNfsFileShareDefaultsGetArgs(
@@ -70,10 +71,10 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
     }
 
     private NfsFileShareNfsFileShareDefaultsGetArgs() {
-        this.directoryMode = Output.empty();
-        this.fileMode = Output.empty();
-        this.groupId = Output.empty();
-        this.ownerId = Output.empty();
+        this.directoryMode = Codegen.empty();
+        this.fileMode = Codegen.empty();
+        this.groupId = Codegen.empty();
+        this.ownerId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder directoryMode(@Nullable String directoryMode) {
-            this.directoryMode = Output.ofNullable(directoryMode);
+            this.directoryMode = Codegen.ofNullable(directoryMode);
             return this;
         }
         public Builder fileMode(@Nullable Output<String> fileMode) {
@@ -115,7 +116,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder fileMode(@Nullable String fileMode) {
-            this.fileMode = Output.ofNullable(fileMode);
+            this.fileMode = Codegen.ofNullable(fileMode);
             return this;
         }
         public Builder groupId(@Nullable Output<String> groupId) {
@@ -123,7 +124,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Output.ofNullable(groupId);
+            this.groupId = Codegen.ofNullable(groupId);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -131,7 +132,7 @@ public final class NfsFileShareNfsFileShareDefaultsGetArgs extends io.pulumi.res
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }        public NfsFileShareNfsFileShareDefaultsGetArgs build() {
             return new NfsFileShareNfsFileShareDefaultsGetArgs(directoryMode, fileMode, groupId, ownerId);

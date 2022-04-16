@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.enums.FilterTrackPropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -27,7 +28,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
     @Import(name="operation", required=true)
       private final Output<Either<String,FilterTrackPropertyCompareOperation>> operation;
 
-    public Output<Either<String,FilterTrackPropertyCompareOperation>> getOperation() {
+    public Output<Either<String,FilterTrackPropertyCompareOperation>> operation() {
         return this.operation;
     }
 
@@ -38,7 +39,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
     @Import(name="property", required=true)
       private final Output<Either<String,FilterTrackPropertyType>> property;
 
-    public Output<Either<String,FilterTrackPropertyType>> getProperty() {
+    public Output<Either<String,FilterTrackPropertyType>> property() {
         return this.property;
     }
 
@@ -49,7 +50,7 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
     @Import(name="value", required=true)
       private final Output<String> value;
 
-    public Output<String> getValue() {
+    public Output<String> value() {
         return this.value;
     }
 
@@ -63,9 +64,9 @@ public final class FilterTrackPropertyConditionArgs extends io.pulumi.resources.
     }
 
     private FilterTrackPropertyConditionArgs() {
-        this.operation = Output.empty();
-        this.property = Output.empty();
-        this.value = Output.empty();
+        this.operation = Codegen.empty();
+        this.property = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

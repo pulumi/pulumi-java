@@ -6,6 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.inputs.EventHandlerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,8 +28,8 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="anonymousConnectPolicy")
       private final @Nullable Output<String> anonymousConnectPolicy;
 
-    public Output<String> getAnonymousConnectPolicy() {
-        return this.anonymousConnectPolicy == null ? Output.empty() : this.anonymousConnectPolicy;
+    public Output<String> anonymousConnectPolicy() {
+        return this.anonymousConnectPolicy == null ? Codegen.empty() : this.anonymousConnectPolicy;
     }
 
     /**
@@ -38,20 +39,20 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
     @Import(name="eventHandlers")
       private final @Nullable Output<List<EventHandlerArgs>> eventHandlers;
 
-    public Output<List<EventHandlerArgs>> getEventHandlers() {
-        return this.eventHandlers == null ? Output.empty() : this.eventHandlers;
+    public Output<List<EventHandlerArgs>> eventHandlers() {
+        return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
     }
 
     public WebPubSubHubPropertiesArgs(
         @Nullable Output<String> anonymousConnectPolicy,
         @Nullable Output<List<EventHandlerArgs>> eventHandlers) {
-        this.anonymousConnectPolicy = anonymousConnectPolicy == null ? Output.ofNullable("deny") : anonymousConnectPolicy;
+        this.anonymousConnectPolicy = anonymousConnectPolicy == null ? Codegen.ofNullable("deny") : anonymousConnectPolicy;
         this.eventHandlers = eventHandlers;
     }
 
     private WebPubSubHubPropertiesArgs() {
-        this.anonymousConnectPolicy = Output.empty();
-        this.eventHandlers = Output.empty();
+        this.anonymousConnectPolicy = Codegen.empty();
+        this.eventHandlers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder anonymousConnectPolicy(@Nullable String anonymousConnectPolicy) {
-            this.anonymousConnectPolicy = Output.ofNullable(anonymousConnectPolicy);
+            this.anonymousConnectPolicy = Codegen.ofNullable(anonymousConnectPolicy);
             return this;
         }
         public Builder eventHandlers(@Nullable Output<List<EventHandlerArgs>> eventHandlers) {
@@ -89,7 +90,7 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder eventHandlers(@Nullable List<EventHandlerArgs> eventHandlers) {
-            this.eventHandlers = Output.ofNullable(eventHandlers);
+            this.eventHandlers = Codegen.ofNullable(eventHandlers);
             return this;
         }
         public Builder eventHandlers(EventHandlerArgs... eventHandlers) {

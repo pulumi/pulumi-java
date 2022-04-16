@@ -45,21 +45,21 @@ public final class DataExportDetailsResponse {
      * Account details of the data to be transferred
      * 
     */
-    public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> getAccountDetails() {
+    public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails() {
         return this.accountDetails;
     }
     /**
      * Level of the logs to be collected.
      * 
     */
-    public Optional<String> getLogCollectionLevel() {
+    public Optional<String> logCollectionLevel() {
         return Optional.ofNullable(this.logCollectionLevel);
     }
     /**
      * Configuration for the data transfer.
      * 
     */
-    public TransferConfigurationResponse getTransferConfiguration() {
+    public TransferConfigurationResponse transferConfiguration() {
         return this.transferConfiguration;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,22 +18,22 @@ public final class SigningJobRevocationRecordGetArgs extends io.pulumi.resources
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     @Import(name="revokedAt")
       private final @Nullable Output<String> revokedAt;
 
-    public Output<String> getRevokedAt() {
-        return this.revokedAt == null ? Output.empty() : this.revokedAt;
+    public Output<String> revokedAt() {
+        return this.revokedAt == null ? Codegen.empty() : this.revokedAt;
     }
 
     @Import(name="revokedBy")
       private final @Nullable Output<String> revokedBy;
 
-    public Output<String> getRevokedBy() {
-        return this.revokedBy == null ? Output.empty() : this.revokedBy;
+    public Output<String> revokedBy() {
+        return this.revokedBy == null ? Codegen.empty() : this.revokedBy;
     }
 
     public SigningJobRevocationRecordGetArgs(
@@ -45,9 +46,9 @@ public final class SigningJobRevocationRecordGetArgs extends io.pulumi.resources
     }
 
     private SigningJobRevocationRecordGetArgs() {
-        this.reason = Output.empty();
-        this.revokedAt = Output.empty();
-        this.revokedBy = Output.empty();
+        this.reason = Codegen.empty();
+        this.revokedAt = Codegen.empty();
+        this.revokedBy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SigningJobRevocationRecordGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }
         public Builder revokedAt(@Nullable Output<String> revokedAt) {
@@ -87,7 +88,7 @@ public final class SigningJobRevocationRecordGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder revokedAt(@Nullable String revokedAt) {
-            this.revokedAt = Output.ofNullable(revokedAt);
+            this.revokedAt = Codegen.ofNullable(revokedAt);
             return this;
         }
         public Builder revokedBy(@Nullable Output<String> revokedBy) {
@@ -95,7 +96,7 @@ public final class SigningJobRevocationRecordGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder revokedBy(@Nullable String revokedBy) {
-            this.revokedBy = Output.ofNullable(revokedBy);
+            this.revokedBy = Codegen.ofNullable(revokedBy);
             return this;
         }        public SigningJobRevocationRecordGetArgs build() {
             return new SigningJobRevocationRecordGetArgs(reason, revokedAt, revokedBy);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.AzureFirewallSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="name")
       private final @Nullable Output<Either<String,AzureFirewallSkuName>> name;
 
-    public Output<Either<String,AzureFirewallSkuName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<Either<String,AzureFirewallSkuName>> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="tier")
       private final @Nullable Output<Either<String,AzureFirewallSkuTier>> tier;
 
-    public Output<Either<String,AzureFirewallSkuTier>> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<Either<String,AzureFirewallSkuTier>> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public AzureFirewallSkuArgs(
@@ -51,8 +52,8 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AzureFirewallSkuArgs() {
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable Either<String,AzureFirewallSkuName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tier(@Nullable Output<Either<String,AzureFirewallSkuTier>> tier) {
@@ -90,7 +91,7 @@ public final class AzureFirewallSkuArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tier(@Nullable Either<String,AzureFirewallSkuTier> tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public AzureFirewallSkuArgs build() {
             return new AzureFirewallSkuArgs(name, tier);

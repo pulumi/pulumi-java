@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.AlertRuleKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
       private final Output<Either<String,AlertRuleKind>> kind;
 
-    public Output<Either<String,AlertRuleKind>> getKind() {
+    public Output<Either<String,AlertRuleKind>> kind() {
         return this.kind;
     }
 
@@ -34,7 +35,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -45,8 +46,8 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ruleId")
       private final @Nullable Output<String> ruleId;
 
-    public Output<String> getRuleId() {
-        return this.ruleId == null ? Output.empty() : this.ruleId;
+    public Output<String> ruleId() {
+        return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -72,10 +73,10 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertRuleArgs() {
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleId = Output.empty();
-        this.workspaceName = Output.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Output.ofNullable(ruleId);
+            this.ruleId = Codegen.ofNullable(ruleId);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

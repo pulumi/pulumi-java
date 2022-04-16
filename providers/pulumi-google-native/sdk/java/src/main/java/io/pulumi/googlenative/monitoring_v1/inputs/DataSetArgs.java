@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.enums.DataSetPlotType;
 import io.pulumi.googlenative.monitoring_v1.enums.DataSetTargetAxis;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
@@ -28,8 +29,8 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="legendTemplate")
       private final @Nullable Output<String> legendTemplate;
 
-    public Output<String> getLegendTemplate() {
-        return this.legendTemplate == null ? Output.empty() : this.legendTemplate;
+    public Output<String> legendTemplate() {
+        return this.legendTemplate == null ? Codegen.empty() : this.legendTemplate;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="minAlignmentPeriod")
       private final @Nullable Output<String> minAlignmentPeriod;
 
-    public Output<String> getMinAlignmentPeriod() {
-        return this.minAlignmentPeriod == null ? Output.empty() : this.minAlignmentPeriod;
+    public Output<String> minAlignmentPeriod() {
+        return this.minAlignmentPeriod == null ? Codegen.empty() : this.minAlignmentPeriod;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="plotType")
       private final @Nullable Output<DataSetPlotType> plotType;
 
-    public Output<DataSetPlotType> getPlotType() {
-        return this.plotType == null ? Output.empty() : this.plotType;
+    public Output<DataSetPlotType> plotType() {
+        return this.plotType == null ? Codegen.empty() : this.plotType;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetAxis")
       private final @Nullable Output<DataSetTargetAxis> targetAxis;
 
-    public Output<DataSetTargetAxis> getTargetAxis() {
-        return this.targetAxis == null ? Output.empty() : this.targetAxis;
+    public Output<DataSetTargetAxis> targetAxis() {
+        return this.targetAxis == null ? Codegen.empty() : this.targetAxis;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeSeriesQuery", required=true)
       private final Output<TimeSeriesQueryArgs> timeSeriesQuery;
 
-    public Output<TimeSeriesQueryArgs> getTimeSeriesQuery() {
+    public Output<TimeSeriesQueryArgs> timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
@@ -90,11 +91,11 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSetArgs() {
-        this.legendTemplate = Output.empty();
-        this.minAlignmentPeriod = Output.empty();
-        this.plotType = Output.empty();
-        this.targetAxis = Output.empty();
-        this.timeSeriesQuery = Output.empty();
+        this.legendTemplate = Codegen.empty();
+        this.minAlignmentPeriod = Codegen.empty();
+        this.plotType = Codegen.empty();
+        this.targetAxis = Codegen.empty();
+        this.timeSeriesQuery = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder legendTemplate(@Nullable String legendTemplate) {
-            this.legendTemplate = Output.ofNullable(legendTemplate);
+            this.legendTemplate = Codegen.ofNullable(legendTemplate);
             return this;
         }
         public Builder minAlignmentPeriod(@Nullable Output<String> minAlignmentPeriod) {
@@ -138,7 +139,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minAlignmentPeriod(@Nullable String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Output.ofNullable(minAlignmentPeriod);
+            this.minAlignmentPeriod = Codegen.ofNullable(minAlignmentPeriod);
             return this;
         }
         public Builder plotType(@Nullable Output<DataSetPlotType> plotType) {
@@ -146,7 +147,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder plotType(@Nullable DataSetPlotType plotType) {
-            this.plotType = Output.ofNullable(plotType);
+            this.plotType = Codegen.ofNullable(plotType);
             return this;
         }
         public Builder targetAxis(@Nullable Output<DataSetTargetAxis> targetAxis) {
@@ -154,7 +155,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetAxis(@Nullable DataSetTargetAxis targetAxis) {
-            this.targetAxis = Output.ofNullable(targetAxis);
+            this.targetAxis = Codegen.ofNullable(targetAxis);
             return this;
         }
         public Builder timeSeriesQuery(Output<TimeSeriesQueryArgs> timeSeriesQuery) {

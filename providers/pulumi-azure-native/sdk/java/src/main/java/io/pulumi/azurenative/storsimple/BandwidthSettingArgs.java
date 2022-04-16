@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.inputs.BandwidthScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +25,8 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="bandwidthSettingName")
       private final @Nullable Output<String> bandwidthSettingName;
 
-    public Output<String> getBandwidthSettingName() {
-        return this.bandwidthSettingName == null ? Output.empty() : this.bandwidthSettingName;
+    public Output<String> bandwidthSettingName() {
+        return this.bandwidthSettingName == null ? Codegen.empty() : this.bandwidthSettingName;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
-    public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<Kind> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
-    public Output<String> getManagerName() {
+    public Output<String> managerName() {
         return this.managerName;
     }
 
@@ -57,7 +58,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,7 +69,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="schedules", required=true)
       private final Output<List<BandwidthScheduleArgs>> schedules;
 
-    public Output<List<BandwidthScheduleArgs>> getSchedules() {
+    public Output<List<BandwidthScheduleArgs>> schedules() {
         return this.schedules;
     }
 
@@ -86,11 +87,11 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BandwidthSettingArgs() {
-        this.bandwidthSettingName = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schedules = Output.empty();
+        this.bandwidthSettingName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schedules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bandwidthSettingName(@Nullable String bandwidthSettingName) {
-            this.bandwidthSettingName = Output.ofNullable(bandwidthSettingName);
+            this.bandwidthSettingName = Codegen.ofNullable(bandwidthSettingName);
             return this;
         }
         public Builder kind(@Nullable Output<Kind> kind) {
@@ -134,7 +135,7 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {

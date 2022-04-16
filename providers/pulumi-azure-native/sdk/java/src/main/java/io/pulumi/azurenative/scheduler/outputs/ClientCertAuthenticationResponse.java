@@ -63,35 +63,35 @@ public final class ClientCertAuthenticationResponse {
      * Gets or sets the certificate expiration date.
      * 
     */
-    public Optional<String> getCertificateExpirationDate() {
+    public Optional<String> certificateExpirationDate() {
         return Optional.ofNullable(this.certificateExpirationDate);
     }
     /**
      * Gets or sets the certificate subject name.
      * 
     */
-    public Optional<String> getCertificateSubjectName() {
+    public Optional<String> certificateSubjectName() {
         return Optional.ofNullable(this.certificateSubjectName);
     }
     /**
      * Gets or sets the certificate thumbprint.
      * 
     */
-    public Optional<String> getCertificateThumbprint() {
+    public Optional<String> certificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
     /**
      * Gets or sets the certificate password, return value will always be empty.
      * 
     */
-    public Optional<String> getPassword() {
+    public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
      * Gets or sets the pfx certificate. Accepts certification in base64 encoding, return value will always be empty.
      * 
     */
-    public Optional<String> getPfx() {
+    public Optional<String> pfx() {
         return Optional.ofNullable(this.pfx);
     }
     /**
@@ -99,7 +99,7 @@ public final class ClientCertAuthenticationResponse {
      * Expected value is 'ClientCertificate'.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

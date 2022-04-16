@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,22 +22,22 @@ public final class JobStatusErrorResultGetArgs extends io.pulumi.resources.Resou
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="message")
       private final @Nullable Output<String> message;
 
-    public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+    public Output<String> message() {
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="reason")
       private final @Nullable Output<String> reason;
 
-    public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+    public Output<String> reason() {
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     public JobStatusErrorResultGetArgs(
@@ -49,9 +50,9 @@ public final class JobStatusErrorResultGetArgs extends io.pulumi.resources.Resou
     }
 
     private JobStatusErrorResultGetArgs() {
-        this.location = Output.empty();
-        this.message = Output.empty();
-        this.reason = Output.empty();
+        this.location = Codegen.empty();
+        this.message = Codegen.empty();
+        this.reason = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class JobStatusErrorResultGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -91,7 +92,7 @@ public final class JobStatusErrorResultGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -99,7 +100,7 @@ public final class JobStatusErrorResultGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }        public JobStatusErrorResultGetArgs build() {
             return new JobStatusErrorResultGetArgs(location, message, reason);

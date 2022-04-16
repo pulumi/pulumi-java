@@ -69,49 +69,49 @@ public final class SubjectDescriptionResponse {
      * The "common name" of the distinguished name.
      * 
     */
-    public String getCommonName() {
+    public String commonName() {
         return this.commonName;
     }
     /**
      * The serial number encoded in lowercase hexadecimal.
      * 
     */
-    public String getHexSerialNumber() {
+    public String hexSerialNumber() {
         return this.hexSerialNumber;
     }
     /**
      * For convenience, the actual lifetime of an issued certificate. Corresponds to 'not_after_time' - 'not_before_time'.
      * 
     */
-    public String getLifetime() {
+    public String lifetime() {
         return this.lifetime;
     }
     /**
      * The time at which the certificate expires.
      * 
     */
-    public String getNotAfterTime() {
+    public String notAfterTime() {
         return this.notAfterTime;
     }
     /**
      * The time at which the certificate becomes valid.
      * 
     */
-    public String getNotBeforeTime() {
+    public String notBeforeTime() {
         return this.notBeforeTime;
     }
     /**
      * Contains distinguished name fields such as the location and organization.
      * 
     */
-    public SubjectResponse getSubject() {
+    public SubjectResponse subject() {
         return this.subject;
     }
     /**
      * The subject alternative name fields.
      * 
     */
-    public SubjectAltNamesResponse getSubjectAltName() {
+    public SubjectAltNamesResponse subjectAltName() {
         return this.subjectAltName;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +22,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
-    public Output<String> getBucketArn() {
+    public Output<String> bucketArn() {
         return this.bucketArn;
     }
 
@@ -32,7 +33,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="fileKey", required=true)
       private final Output<String> fileKey;
 
-    public Output<String> getFileKey() {
+    public Output<String> fileKey() {
         return this.fileKey;
     }
 
@@ -43,8 +44,8 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     @Import(name="objectVersion")
       private final @Nullable Output<String> objectVersion;
 
-    public Output<String> getObjectVersion() {
-        return this.objectVersion == null ? Output.empty() : this.objectVersion;
+    public Output<String> objectVersion() {
+        return this.objectVersion == null ? Codegen.empty() : this.objectVersion;
     }
 
     public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs(
@@ -57,9 +58,9 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     }
 
     private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs() {
-        this.bucketArn = Output.empty();
-        this.fileKey = Output.empty();
-        this.objectVersion = Output.empty();
+        this.bucketArn = Codegen.empty();
+        this.fileKey = Codegen.empty();
+        this.objectVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             return this;
         }
         public Builder objectVersion(@Nullable String objectVersion) {
-            this.objectVersion = Output.ofNullable(objectVersion);
+            this.objectVersion = Codegen.ofNullable(objectVersion);
             return this;
         }        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs(bucketArn, fileKey, objectVersion);

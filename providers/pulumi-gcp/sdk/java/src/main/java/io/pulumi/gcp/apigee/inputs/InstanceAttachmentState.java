@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="environment")
       private final @Nullable Output<String> environment;
 
-    public Output<String> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+    public Output<String> environment() {
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
-    public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+    public Output<String> instanceId() {
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public InstanceAttachmentState(
@@ -58,9 +59,9 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
     }
 
     private InstanceAttachmentState() {
-        this.environment = Output.empty();
-        this.instanceId = Output.empty();
-        this.name = Output.empty();
+        this.environment = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder environment(@Nullable String environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -100,7 +101,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -108,7 +109,7 @@ public final class InstanceAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public InstanceAttachmentState build() {
             return new InstanceAttachmentState(environment, instanceId, name);

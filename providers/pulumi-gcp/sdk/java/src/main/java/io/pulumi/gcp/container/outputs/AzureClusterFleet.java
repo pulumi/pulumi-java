@@ -36,14 +36,14 @@ public final class AzureClusterFleet {
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
      * 
     */
-    public Optional<String> getMembership() {
+    public Optional<String> membership() {
         return Optional.ofNullable(this.membership);
     }
     /**
      * The project for the resource
      * 
     */
-    public Optional<String> getProject() {
+    public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
 

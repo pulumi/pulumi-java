@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     @Import(name="match", required=true)
       private final Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match;
 
-    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> getMatch() {
+    public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match() {
         return this.match;
     }
 
@@ -29,7 +30,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     }
 
     private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesArgs() {
-        this.match = Output.empty();
+        this.match = Codegen.empty();
     }
 
     public static Builder builder() {

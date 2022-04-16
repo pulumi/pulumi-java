@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="resolverRuleId", required=true)
       private final Output<String> resolverRuleId;
 
-    public Output<String> getResolverRuleId() {
+    public Output<String> resolverRuleId() {
         return this.resolverRuleId;
     }
 
@@ -43,7 +44,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
     @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -57,9 +58,9 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
     }
 
     private ResolverRuleAssociationArgs() {
-        this.name = Output.empty();
-        this.resolverRuleId = Output.empty();
-        this.vpcId = Output.empty();
+        this.name = Codegen.empty();
+        this.resolverRuleId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resolverRuleId(Output<String> resolverRuleId) {

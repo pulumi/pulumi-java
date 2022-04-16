@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
     @Import(name="clientPolicy")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy;
 
-    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> getClientPolicy() {
-        return this.clientPolicy == null ? Output.empty() : this.clientPolicy;
+    public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy() {
+        return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
     @Import(name="virtualServiceName", required=true)
       private final Output<String> virtualServiceName;
 
-    public Output<String> getVirtualServiceName() {
+    public Output<String> virtualServiceName() {
         return this.virtualServiceName;
     }
 
@@ -45,8 +46,8 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
     }
 
     private VirtualNodeSpecBackendVirtualServiceArgs() {
-        this.clientPolicy = Output.empty();
-        this.virtualServiceName = Output.empty();
+        this.clientPolicy = Codegen.empty();
+        this.virtualServiceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
             return this;
         }
         public Builder clientPolicy(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyArgs clientPolicy) {
-            this.clientPolicy = Output.ofNullable(clientPolicy);
+            this.clientPolicy = Codegen.ofNullable(clientPolicy);
             return this;
         }
         public Builder virtualServiceName(Output<String> virtualServiceName) {

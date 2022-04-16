@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1DatastoreConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="datastoreConfig")
       private final @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
 
-    public Output<GoogleCloudApigeeV1DatastoreConfigArgs> getDatastoreConfig() {
-        return this.datastoreConfig == null ? Output.empty() : this.datastoreConfig;
+    public Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig() {
+        return this.datastoreConfig == null ? Codegen.empty() : this.datastoreConfig;
     }
 
     /**
@@ -33,14 +34,14 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
-    public Output<String> getOrganizationId() {
+    public Output<String> organizationId() {
         return this.organizationId;
     }
 
@@ -51,8 +52,8 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
-    public Output<String> getTargetType() {
-        return this.targetType == null ? Output.empty() : this.targetType;
+    public Output<String> targetType() {
+        return this.targetType == null ? Codegen.empty() : this.targetType;
     }
 
     public DatastoreArgs(
@@ -67,10 +68,10 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatastoreArgs() {
-        this.datastoreConfig = Output.empty();
-        this.displayName = Output.empty();
-        this.organizationId = Output.empty();
-        this.targetType = Output.empty();
+        this.datastoreConfig = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.targetType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datastoreConfig(@Nullable GoogleCloudApigeeV1DatastoreConfigArgs datastoreConfig) {
-            this.datastoreConfig = Output.ofNullable(datastoreConfig);
+            this.datastoreConfig = Codegen.ofNullable(datastoreConfig);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -128,7 +129,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetType(@Nullable String targetType) {
-            this.targetType = Output.ofNullable(targetType);
+            this.targetType = Codegen.ofNullable(targetType);
             return this;
         }        public DatastoreArgs build() {
             return new DatastoreArgs(datastoreConfig, displayName, organizationId, targetType);

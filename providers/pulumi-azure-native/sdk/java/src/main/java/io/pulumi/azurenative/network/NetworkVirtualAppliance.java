@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +48,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return Address Prefix.
      * 
      */
-    public Output<String> getAddressPrefix() {
+    public Output<String> addressPrefix() {
         return this.addressPrefix;
     }
     /**
@@ -61,7 +62,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return BootStrapConfigurationBlobs storage URLs.
      * 
      */
-    public Output</* @Nullable */ List<String>> getBootStrapConfigurationBlobs() {
+    public Output</* @Nullable */ List<String>> bootStrapConfigurationBlobs() {
         return this.bootStrapConfigurationBlobs;
     }
     /**
@@ -75,7 +76,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return CloudInitConfiguration string in plain text.
      * 
      */
-    public Output</* @Nullable */ String> getCloudInitConfiguration() {
+    public Output</* @Nullable */ String> cloudInitConfiguration() {
         return this.cloudInitConfiguration;
     }
     /**
@@ -89,7 +90,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return CloudInitConfigurationBlob storage URLs.
      * 
      */
-    public Output</* @Nullable */ List<String>> getCloudInitConfigurationBlobs() {
+    public Output</* @Nullable */ List<String>> cloudInitConfigurationBlobs() {
         return this.cloudInitConfigurationBlobs;
     }
     /**
@@ -103,7 +104,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output<String> getEtag() {
+    public Output<String> etag() {
         return this.etag;
     }
     /**
@@ -117,7 +118,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return The service principal that has read access to cloud-init and config blob.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -131,7 +132,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return List of references to InboundSecurityRules.
      * 
      */
-    public Output<List<SubResourceResponse>> getInboundSecurityRules() {
+    public Output<List<SubResourceResponse>> inboundSecurityRules() {
         return this.inboundSecurityRules;
     }
     /**
@@ -145,7 +146,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> getLocation() {
+    public Output</* @Nullable */ String> location() {
         return this.location;
     }
     /**
@@ -159,7 +160,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -173,7 +174,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return Network Virtual Appliance SKU.
      * 
      */
-    public Output</* @Nullable */ VirtualApplianceSkuPropertiesResponse> getNvaSku() {
+    public Output</* @Nullable */ VirtualApplianceSkuPropertiesResponse> nvaSku() {
         return this.nvaSku;
     }
     /**
@@ -187,7 +188,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return The provisioning state of the resource.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -201,7 +202,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -215,7 +216,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return Resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -229,7 +230,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return VirtualAppliance ASN.
      * 
      */
-    public Output</* @Nullable */ Double> getVirtualApplianceAsn() {
+    public Output</* @Nullable */ Double> virtualApplianceAsn() {
         return this.virtualApplianceAsn;
     }
     /**
@@ -243,7 +244,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return List of Virtual Appliance Network Interfaces.
      * 
      */
-    public Output<List<VirtualApplianceNicPropertiesResponse>> getVirtualApplianceNics() {
+    public Output<List<VirtualApplianceNicPropertiesResponse>> virtualApplianceNics() {
         return this.virtualApplianceNics;
     }
     /**
@@ -257,7 +258,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return List of references to VirtualApplianceSite.
      * 
      */
-    public Output<List<SubResourceResponse>> getVirtualApplianceSites() {
+    public Output<List<SubResourceResponse>> virtualApplianceSites() {
         return this.virtualApplianceSites;
     }
     /**
@@ -271,7 +272,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @return The Virtual Hub where Network Virtual Appliance is being deployed.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> getVirtualHub() {
+    public Output</* @Nullable */ SubResourceResponse> virtualHub() {
         return this.virtualHub;
     }
 
@@ -297,7 +298,7 @@ public class NetworkVirtualAppliance extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkVirtualAppliance(String name, NetworkVirtualApplianceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:NetworkVirtualAppliance", name, args == null ? NetworkVirtualApplianceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:network:NetworkVirtualAppliance", name, args == null ? NetworkVirtualApplianceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkVirtualAppliance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointMssEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelectionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
     @Import(name="encryption")
       private final @Nullable Output<OriginEndpointMssEncryptionArgs> encryption;
 
-    public Output<OriginEndpointMssEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+    public Output<OriginEndpointMssEncryptionArgs> encryption() {
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
     @Import(name="manifestWindowSeconds")
       private final @Nullable Output<Integer> manifestWindowSeconds;
 
-    public Output<Integer> getManifestWindowSeconds() {
-        return this.manifestWindowSeconds == null ? Output.empty() : this.manifestWindowSeconds;
+    public Output<Integer> manifestWindowSeconds() {
+        return this.manifestWindowSeconds == null ? Codegen.empty() : this.manifestWindowSeconds;
     }
 
     /**
@@ -45,15 +46,15 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
     @Import(name="segmentDurationSeconds")
       private final @Nullable Output<Integer> segmentDurationSeconds;
 
-    public Output<Integer> getSegmentDurationSeconds() {
-        return this.segmentDurationSeconds == null ? Output.empty() : this.segmentDurationSeconds;
+    public Output<Integer> segmentDurationSeconds() {
+        return this.segmentDurationSeconds == null ? Codegen.empty() : this.segmentDurationSeconds;
     }
 
     @Import(name="streamSelection")
       private final @Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection;
 
-    public Output<OriginEndpointStreamSelectionArgs> getStreamSelection() {
-        return this.streamSelection == null ? Output.empty() : this.streamSelection;
+    public Output<OriginEndpointStreamSelectionArgs> streamSelection() {
+        return this.streamSelection == null ? Codegen.empty() : this.streamSelection;
     }
 
     public OriginEndpointMssPackageArgs(
@@ -68,10 +69,10 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
     }
 
     private OriginEndpointMssPackageArgs() {
-        this.encryption = Output.empty();
-        this.manifestWindowSeconds = Output.empty();
-        this.segmentDurationSeconds = Output.empty();
-        this.streamSelection = Output.empty();
+        this.encryption = Codegen.empty();
+        this.manifestWindowSeconds = Codegen.empty();
+        this.segmentDurationSeconds = Codegen.empty();
+        this.streamSelection = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder encryption(@Nullable OriginEndpointMssEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder manifestWindowSeconds(@Nullable Output<Integer> manifestWindowSeconds) {
@@ -113,7 +114,7 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
-            this.manifestWindowSeconds = Output.ofNullable(manifestWindowSeconds);
+            this.manifestWindowSeconds = Codegen.ofNullable(manifestWindowSeconds);
             return this;
         }
         public Builder segmentDurationSeconds(@Nullable Output<Integer> segmentDurationSeconds) {
@@ -121,7 +122,7 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
-            this.segmentDurationSeconds = Output.ofNullable(segmentDurationSeconds);
+            this.segmentDurationSeconds = Codegen.ofNullable(segmentDurationSeconds);
             return this;
         }
         public Builder streamSelection(@Nullable Output<OriginEndpointStreamSelectionArgs> streamSelection) {
@@ -129,7 +130,7 @@ public final class OriginEndpointMssPackageArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
-            this.streamSelection = Output.ofNullable(streamSelection);
+            this.streamSelection = Codegen.ofNullable(streamSelection);
             return this;
         }        public OriginEndpointMssPackageArgs build() {
             return new OriginEndpointMssPackageArgs(encryption, manifestWindowSeconds, segmentDurationSeconds, streamSelection);

@@ -11,6 +11,7 @@ import io.pulumi.aws.transfer.outputs.AccessPosixProfile;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @return The SID of a group in the directory connected to the Transfer Server (e.g., `S-1-1-12-1234567890-123456789-1234567890-1234`)
      * 
      */
-    public Output<String> getExternalId() {
+    public Output<String> externalId() {
         return this.externalId;
     }
     /**
@@ -56,7 +57,7 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @return The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
      * 
      */
-    public Output</* @Nullable */ String> getHomeDirectory() {
+    public Output</* @Nullable */ String> homeDirectory() {
         return this.homeDirectory;
     }
     /**
@@ -70,7 +71,7 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @return Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. See Home Directory Mappings below.
      * 
      */
-    public Output</* @Nullable */ List<AccessHomeDirectoryMapping>> getHomeDirectoryMappings() {
+    public Output</* @Nullable */ List<AccessHomeDirectoryMapping>> homeDirectoryMappings() {
         return this.homeDirectoryMappings;
     }
     /**
@@ -84,13 +85,13 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @return The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
      * 
      */
-    public Output</* @Nullable */ String> getHomeDirectoryType() {
+    public Output</* @Nullable */ String> homeDirectoryType() {
         return this.homeDirectoryType;
     }
     @Export(name="policy", type=String.class, parameters={})
     private Output</* @Nullable */ String> policy;
 
-    public Output</* @Nullable */ String> getPolicy() {
+    public Output</* @Nullable */ String> policy() {
         return this.policy;
     }
     /**
@@ -104,7 +105,7 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @return Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.
      * 
      */
-    public Output</* @Nullable */ AccessPosixProfile> getPosixProfile() {
+    public Output</* @Nullable */ AccessPosixProfile> posixProfile() {
         return this.posixProfile;
     }
     /**
@@ -118,7 +119,7 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of an IAM role that allows the service to controls your user’s access to your Amazon S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> getRole() {
+    public Output</* @Nullable */ String> role() {
         return this.role;
     }
     /**
@@ -132,7 +133,7 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @return The Server ID of the Transfer Server (e.g., `s-12345678`)
      * 
      */
-    public Output<String> getServerId() {
+    public Output<String> serverId() {
         return this.serverId;
     }
 
@@ -158,7 +159,7 @@ public class Access extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Access(String name, AccessArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:transfer/access:Access", name, args == null ? AccessArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:transfer/access:Access", name, args == null ? AccessArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Access(String name, Output<String> id, @Nullable AccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

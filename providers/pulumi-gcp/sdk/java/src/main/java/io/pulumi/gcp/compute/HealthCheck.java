@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.HealthCheckArgs;
 import io.pulumi.gcp.compute.inputs.HealthCheckState;
@@ -77,7 +78,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getCheckIntervalSec() {
+    public Output</* @Nullable */ Integer> checkIntervalSec() {
         return this.checkIntervalSec;
     }
     /**
@@ -91,7 +92,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -107,7 +108,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -123,7 +124,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ HealthCheckGrpcHealthCheck> getGrpcHealthCheck() {
+    public Output</* @Nullable */ HealthCheckGrpcHealthCheck> grpcHealthCheck() {
         return this.grpcHealthCheck;
     }
     /**
@@ -139,7 +140,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * consecutive successes. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> getHealthyThreshold() {
+    public Output</* @Nullable */ Integer> healthyThreshold() {
         return this.healthyThreshold;
     }
     /**
@@ -155,7 +156,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ HealthCheckHttp2HealthCheck> getHttp2HealthCheck() {
+    public Output</* @Nullable */ HealthCheckHttp2HealthCheck> http2HealthCheck() {
         return this.http2HealthCheck;
     }
     /**
@@ -171,7 +172,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ HealthCheckHttpHealthCheck> getHttpHealthCheck() {
+    public Output</* @Nullable */ HealthCheckHttpHealthCheck> httpHealthCheck() {
         return this.httpHealthCheck;
     }
     /**
@@ -187,7 +188,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ HealthCheckHttpsHealthCheck> getHttpsHealthCheck() {
+    public Output</* @Nullable */ HealthCheckHttpsHealthCheck> httpsHealthCheck() {
         return this.httpsHealthCheck;
     }
     /**
@@ -203,7 +204,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output<HealthCheckLogConfig> getLogConfig() {
+    public Output<HealthCheckLogConfig> logConfig() {
         return this.logConfig;
     }
     /**
@@ -229,7 +230,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -245,7 +246,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    public Output<String> getProject() {
+    public Output<String> project() {
         return this.project;
     }
     /**
@@ -259,7 +260,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * @return The URI of the created resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -275,7 +276,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ HealthCheckSslHealthCheck> getSslHealthCheck() {
+    public Output</* @Nullable */ HealthCheckSslHealthCheck> sslHealthCheck() {
         return this.sslHealthCheck;
     }
     /**
@@ -291,7 +292,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ HealthCheckTcpHealthCheck> getTcpHealthCheck() {
+    public Output</* @Nullable */ HealthCheckTcpHealthCheck> tcpHealthCheck() {
         return this.tcpHealthCheck;
     }
     /**
@@ -309,7 +310,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * greater value than checkIntervalSec.
      * 
      */
-    public Output</* @Nullable */ Integer> getTimeoutSec() {
+    public Output</* @Nullable */ Integer> timeoutSec() {
         return this.timeoutSec;
     }
     /**
@@ -323,7 +324,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * @return The type of the health check. One of HTTP, HTTPS, TCP, or SSL.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -339,7 +340,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * consecutive failures. The default value is 2.
      * 
      */
-    public Output</* @Nullable */ Integer> getUnhealthyThreshold() {
+    public Output</* @Nullable */ Integer> unhealthyThreshold() {
         return this.unhealthyThreshold;
     }
 
@@ -365,7 +366,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HealthCheck(String name, @Nullable HealthCheckArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/healthCheck:HealthCheck", name, args == null ? HealthCheckArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/healthCheck:HealthCheck", name, args == null ? HealthCheckArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HealthCheck(String name, Output<String> id, @Nullable HealthCheckState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -89,63 +89,63 @@ public final class GoogleCloudRetailV2betaRuleResponse {
      * A boost action.
      * 
     */
-    public GoogleCloudRetailV2betaRuleBoostActionResponse getBoostAction() {
+    public GoogleCloudRetailV2betaRuleBoostActionResponse boostAction() {
         return this.boostAction;
     }
     /**
      * The condition that triggers the rule. If the condition is empty, the rule will always apply.
      * 
     */
-    public GoogleCloudRetailV2betaConditionResponse getCondition() {
+    public GoogleCloudRetailV2betaConditionResponse condition() {
         return this.condition;
     }
     /**
      * Prevents term from being associated with other terms.
      * 
     */
-    public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse getDoNotAssociateAction() {
+    public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse doNotAssociateAction() {
         return this.doNotAssociateAction;
     }
     /**
      * Filters results.
      * 
     */
-    public GoogleCloudRetailV2betaRuleFilterActionResponse getFilterAction() {
+    public GoogleCloudRetailV2betaRuleFilterActionResponse filterAction() {
         return this.filterAction;
     }
     /**
      * Ignores specific terms from query during search.
      * 
     */
-    public GoogleCloudRetailV2betaRuleIgnoreActionResponse getIgnoreAction() {
+    public GoogleCloudRetailV2betaRuleIgnoreActionResponse ignoreAction() {
         return this.ignoreAction;
     }
     /**
      * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
      * 
     */
-    public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse getOnewaySynonymsAction() {
+    public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse onewaySynonymsAction() {
         return this.onewaySynonymsAction;
     }
     /**
      * Redirects a shopper to a specific page.
      * 
     */
-    public GoogleCloudRetailV2betaRuleRedirectActionResponse getRedirectAction() {
+    public GoogleCloudRetailV2betaRuleRedirectActionResponse redirectAction() {
         return this.redirectAction;
     }
     /**
      * Replaces specific terms in the query.
      * 
     */
-    public GoogleCloudRetailV2betaRuleReplacementActionResponse getReplacementAction() {
+    public GoogleCloudRetailV2betaRuleReplacementActionResponse replacementAction() {
         return this.replacementAction;
     }
     /**
      * Treats a set of terms as synonyms of one another.
      * 
     */
-    public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse getTwowaySynonymsAction() {
+    public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse twowaySynonymsAction() {
         return this.twowaySynonymsAction;
     }
 

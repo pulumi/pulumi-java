@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,8 +24,8 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="deleted")
       private final @Nullable Output<Boolean> deleted;
 
-    public Output<Boolean> getDeleted() {
-        return this.deleted == null ? Output.empty() : this.deleted;
+    public Output<Boolean> deleted() {
+        return this.deleted == null ? Codegen.empty() : this.deleted;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
-    public Output<String> getOrgId() {
-        return this.orgId == null ? Output.empty() : this.orgId;
+    public Output<String> orgId() {
+        return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
-    public Output<List<String>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+    public Output<List<String>> permissions() {
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="roleId")
       private final @Nullable Output<String> roleId;
 
-    public Output<String> getRoleId() {
-        return this.roleId == null ? Output.empty() : this.roleId;
+    public Output<String> roleId() {
+        return this.roleId == null ? Codegen.empty() : this.roleId;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="stage")
       private final @Nullable Output<String> stage;
 
-    public Output<String> getStage() {
-        return this.stage == null ? Output.empty() : this.stage;
+    public Output<String> stage() {
+        return this.stage == null ? Codegen.empty() : this.stage;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public IAMCustomRoleState(
@@ -126,14 +127,14 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMCustomRoleState() {
-        this.deleted = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.orgId = Output.empty();
-        this.permissions = Output.empty();
-        this.roleId = Output.empty();
-        this.stage = Output.empty();
-        this.title = Output.empty();
+        this.deleted = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.roleId = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleted(@Nullable Boolean deleted) {
-            this.deleted = Output.ofNullable(deleted);
+            this.deleted = Codegen.ofNullable(deleted);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -183,7 +184,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -191,7 +192,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgId(@Nullable Output<String> orgId) {
@@ -199,7 +200,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Output.ofNullable(orgId);
+            this.orgId = Codegen.ofNullable(orgId);
             return this;
         }
         public Builder permissions(@Nullable Output<List<String>> permissions) {
@@ -207,7 +208,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable List<String> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(String... permissions) {
@@ -218,7 +219,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleId(@Nullable String roleId) {
-            this.roleId = Output.ofNullable(roleId);
+            this.roleId = Codegen.ofNullable(roleId);
             return this;
         }
         public Builder stage(@Nullable Output<String> stage) {
@@ -226,7 +227,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stage(@Nullable String stage) {
-            this.stage = Output.ofNullable(stage);
+            this.stage = Codegen.ofNullable(stage);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -234,7 +235,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public IAMCustomRoleState build() {
             return new IAMCustomRoleState(deleted, description, name, orgId, permissions, roleId, stage, title);

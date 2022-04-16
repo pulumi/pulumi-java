@@ -5,6 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,8 +24,8 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cellName")
       private final @Nullable Output<String> cellName;
 
-    public Output<String> getCellName() {
-        return this.cellName == null ? Output.empty() : this.cellName;
+    public Output<String> cellName() {
+        return this.cellName == null ? Codegen.empty() : this.cellName;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
     @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
-    public Output<List<String>> getCells() {
-        return this.cells == null ? Output.empty() : this.cells;
+    public Output<List<String>> cells() {
+        return this.cells == null ? Codegen.empty() : this.cells;
     }
 
     /**
@@ -56,8 +57,8 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
     @Import(name="parentReadinessScopes")
       private final @Nullable Output<List<String>> parentReadinessScopes;
 
-    public Output<List<String>> getParentReadinessScopes() {
-        return this.parentReadinessScopes == null ? Output.empty() : this.parentReadinessScopes;
+    public Output<List<String>> parentReadinessScopes() {
+        return this.parentReadinessScopes == null ? Codegen.empty() : this.parentReadinessScopes;
     }
 
     /**
@@ -67,8 +68,8 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -78,8 +79,8 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public CellState(
@@ -98,12 +99,12 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
     }
 
     private CellState() {
-        this.arn = Output.empty();
-        this.cellName = Output.empty();
-        this.cells = Output.empty();
-        this.parentReadinessScopes = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.cellName = Codegen.empty();
+        this.cells = Codegen.empty();
+        this.parentReadinessScopes = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cellName(@Nullable Output<String> cellName) {
@@ -149,7 +150,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cellName(@Nullable String cellName) {
-            this.cellName = Output.ofNullable(cellName);
+            this.cellName = Codegen.ofNullable(cellName);
             return this;
         }
         public Builder cells(@Nullable Output<List<String>> cells) {
@@ -157,7 +158,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cells(@Nullable List<String> cells) {
-            this.cells = Output.ofNullable(cells);
+            this.cells = Codegen.ofNullable(cells);
             return this;
         }
         public Builder cells(String... cells) {
@@ -168,7 +169,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentReadinessScopes(@Nullable List<String> parentReadinessScopes) {
-            this.parentReadinessScopes = Output.ofNullable(parentReadinessScopes);
+            this.parentReadinessScopes = Codegen.ofNullable(parentReadinessScopes);
             return this;
         }
         public Builder parentReadinessScopes(String... parentReadinessScopes) {
@@ -179,7 +180,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -187,7 +188,7 @@ public final class CellState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public CellState build() {
             return new CellState(arn, cellName, cells, parentReadinessScopes, tags, tagsAll);

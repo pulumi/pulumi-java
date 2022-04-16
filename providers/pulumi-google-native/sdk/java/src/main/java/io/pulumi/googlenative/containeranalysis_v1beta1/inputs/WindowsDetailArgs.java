@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.KnowledgeBaseArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cpeUri", required=true)
       private final Output<String> cpeUri;
 
-    public Output<String> getCpeUri() {
+    public Output<String> cpeUri() {
         return this.cpeUri;
     }
 
@@ -34,8 +35,8 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="fixingKbs", required=true)
       private final Output<List<KnowledgeBaseArgs>> fixingKbs;
 
-    public Output<List<KnowledgeBaseArgs>> getFixingKbs() {
+    public Output<List<KnowledgeBaseArgs>> fixingKbs() {
         return this.fixingKbs;
     }
 
@@ -56,7 +57,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -72,10 +73,10 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WindowsDetailArgs() {
-        this.cpeUri = Output.empty();
-        this.description = Output.empty();
-        this.fixingKbs = Output.empty();
-        this.name = Output.empty();
+        this.cpeUri = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fixingKbs = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fixingKbs(Output<List<KnowledgeBaseArgs>> fixingKbs) {

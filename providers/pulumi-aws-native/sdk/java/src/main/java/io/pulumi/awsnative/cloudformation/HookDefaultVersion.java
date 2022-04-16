@@ -8,6 +8,7 @@ import io.pulumi.awsnative.cloudformation.HookDefaultVersionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public class HookDefaultVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a HookDefaultVersion
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -46,7 +47,7 @@ public class HookDefaultVersion extends io.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> getTypeName() {
+    public Output</* @Nullable */ String> typeName() {
         return this.typeName;
     }
     /**
@@ -60,7 +61,7 @@ public class HookDefaultVersion extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    public Output</* @Nullable */ String> getTypeVersionArn() {
+    public Output</* @Nullable */ String> typeVersionArn() {
         return this.typeVersionArn;
     }
     /**
@@ -74,7 +75,7 @@ public class HookDefaultVersion extends io.pulumi.resources.CustomResource {
      * @return The ID of an existing version of the hook to set as the default.
      * 
      */
-    public Output</* @Nullable */ String> getVersionId() {
+    public Output</* @Nullable */ String> versionId() {
         return this.versionId;
     }
 
@@ -100,7 +101,7 @@ public class HookDefaultVersion extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HookDefaultVersion(String name, @Nullable HookDefaultVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:cloudformation:HookDefaultVersion", name, args == null ? HookDefaultVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:cloudformation:HookDefaultVersion", name, args == null ? HookDefaultVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HookDefaultVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

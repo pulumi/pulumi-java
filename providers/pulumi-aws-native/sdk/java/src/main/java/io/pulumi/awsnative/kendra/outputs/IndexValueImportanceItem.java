@@ -23,10 +23,10 @@ public final class IndexValueImportanceItem {
         this.value = value;
     }
 
-    public Optional<String> getKey() {
+    public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
-    public Optional<Integer> getValue() {
+    public Optional<Integer> value() {
         return Optional.ofNullable(this.value);
     }
 

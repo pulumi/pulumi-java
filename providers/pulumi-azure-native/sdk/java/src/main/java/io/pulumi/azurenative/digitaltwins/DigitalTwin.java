@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return Time when DigitalTwinsInstance was created.
      * 
      */
-    public Output<String> getCreatedTime() {
+    public Output<String> createdTime() {
         return this.createdTime;
     }
     /**
@@ -58,7 +59,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return Api endpoint to work with DigitalTwinsInstance.
      * 
      */
-    public Output<String> getHostName() {
+    public Output<String> hostName() {
         return this.hostName;
     }
     /**
@@ -72,7 +73,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The managed identity for the DigitalTwinsInstance.
      * 
      */
-    public Output</* @Nullable */ DigitalTwinsIdentityResponse> getIdentity() {
+    public Output</* @Nullable */ DigitalTwinsIdentityResponse> identity() {
         return this.identity;
     }
     /**
@@ -86,7 +87,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return Time when DigitalTwinsInstance was updated.
      * 
      */
-    public Output<String> getLastUpdatedTime() {
+    public Output<String> lastUpdatedTime() {
         return this.lastUpdatedTime;
     }
     /**
@@ -100,7 +101,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -114,13 +115,13 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
-    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> getPrivateEndpointConnections() {
+    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
@@ -134,7 +135,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The provisioning state.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -148,7 +149,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return Public network access for the DigitalTwinsInstance.
      * 
      */
-    public Output</* @Nullable */ String> getPublicNetworkAccess() {
+    public Output</* @Nullable */ String> publicNetworkAccess() {
         return this.publicNetworkAccess;
     }
     /**
@@ -162,7 +163,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -176,7 +177,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @return The resource type.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -202,7 +203,7 @@ public class DigitalTwin extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DigitalTwin(String name, DigitalTwinArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:digitaltwins:DigitalTwin", name, args == null ? DigitalTwinArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:digitaltwins:DigitalTwin", name, args == null ? DigitalTwinArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DigitalTwin(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.RateBasedRulePredicateGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,8 +26,8 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
-    public Output<String> getMetricName() {
-        return this.metricName == null ? Output.empty() : this.metricName;
+    public Output<String> metricName() {
+        return this.metricName == null ? Codegen.empty() : this.metricName;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="predicates")
       private final @Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates;
 
-    public Output<List<RateBasedRulePredicateGetArgs>> getPredicates() {
-        return this.predicates == null ? Output.empty() : this.predicates;
+    public Output<List<RateBasedRulePredicateGetArgs>> predicates() {
+        return this.predicates == null ? Codegen.empty() : this.predicates;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rateKey")
       private final @Nullable Output<String> rateKey;
 
-    public Output<String> getRateKey() {
-        return this.rateKey == null ? Output.empty() : this.rateKey;
+    public Output<String> rateKey() {
+        return this.rateKey == null ? Codegen.empty() : this.rateKey;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="rateLimit")
       private final @Nullable Output<Integer> rateLimit;
 
-    public Output<Integer> getRateLimit() {
-        return this.rateLimit == null ? Output.empty() : this.rateLimit;
+    public Output<Integer> rateLimit() {
+        return this.rateLimit == null ? Codegen.empty() : this.rateLimit;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+    public Output<Map<String,String>> tagsAll() {
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public RateBasedRuleState(
@@ -126,14 +127,14 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RateBasedRuleState() {
-        this.arn = Output.empty();
-        this.metricName = Output.empty();
-        this.name = Output.empty();
-        this.predicates = Output.empty();
-        this.rateKey = Output.empty();
-        this.rateLimit = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.predicates = Codegen.empty();
+        this.rateKey = Codegen.empty();
+        this.rateLimit = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder metricName(@Nullable Output<String> metricName) {
@@ -183,7 +184,7 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = Output.ofNullable(metricName);
+            this.metricName = Codegen.ofNullable(metricName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -191,7 +192,7 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder predicates(@Nullable Output<List<RateBasedRulePredicateGetArgs>> predicates) {
@@ -199,7 +200,7 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predicates(@Nullable List<RateBasedRulePredicateGetArgs> predicates) {
-            this.predicates = Output.ofNullable(predicates);
+            this.predicates = Codegen.ofNullable(predicates);
             return this;
         }
         public Builder predicates(RateBasedRulePredicateGetArgs... predicates) {
@@ -210,7 +211,7 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rateKey(@Nullable String rateKey) {
-            this.rateKey = Output.ofNullable(rateKey);
+            this.rateKey = Codegen.ofNullable(rateKey);
             return this;
         }
         public Builder rateLimit(@Nullable Output<Integer> rateLimit) {
@@ -218,7 +219,7 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rateLimit(@Nullable Integer rateLimit) {
-            this.rateLimit = Output.ofNullable(rateLimit);
+            this.rateLimit = Codegen.ofNullable(rateLimit);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -226,7 +227,7 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -234,7 +235,7 @@ public final class RateBasedRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public RateBasedRuleState build() {
             return new RateBasedRuleState(arn, metricName, name, predicates, rateKey, rateLimit, tags, tagsAll);

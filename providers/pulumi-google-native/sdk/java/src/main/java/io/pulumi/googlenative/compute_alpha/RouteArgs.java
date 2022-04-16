@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.RouteIlbRouteBehaviorOnUnhealthy;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,8 +26,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowConflictingSubnetworks")
       private final @Nullable Output<Boolean> allowConflictingSubnetworks;
 
-    public Output<Boolean> getAllowConflictingSubnetworks() {
-        return this.allowConflictingSubnetworks == null ? Output.empty() : this.allowConflictingSubnetworks;
+    public Output<Boolean> allowConflictingSubnetworks() {
+        return this.allowConflictingSubnetworks == null ? Codegen.empty() : this.allowConflictingSubnetworks;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="destRange")
       private final @Nullable Output<String> destRange;
 
-    public Output<String> getDestRange() {
-        return this.destRange == null ? Output.empty() : this.destRange;
+    public Output<String> destRange() {
+        return this.destRange == null ? Codegen.empty() : this.destRange;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="ilbRouteBehaviorOnUnhealthy")
       private final @Nullable Output<RouteIlbRouteBehaviorOnUnhealthy> ilbRouteBehaviorOnUnhealthy;
 
-    public Output<RouteIlbRouteBehaviorOnUnhealthy> getIlbRouteBehaviorOnUnhealthy() {
-        return this.ilbRouteBehaviorOnUnhealthy == null ? Output.empty() : this.ilbRouteBehaviorOnUnhealthy;
+    public Output<RouteIlbRouteBehaviorOnUnhealthy> ilbRouteBehaviorOnUnhealthy() {
+        return this.ilbRouteBehaviorOnUnhealthy == null ? Codegen.empty() : this.ilbRouteBehaviorOnUnhealthy;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,8 +81,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="network")
       private final @Nullable Output<String> network;
 
-    public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+    public Output<String> network() {
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -91,8 +92,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopGateway")
       private final @Nullable Output<String> nextHopGateway;
 
-    public Output<String> getNextHopGateway() {
-        return this.nextHopGateway == null ? Output.empty() : this.nextHopGateway;
+    public Output<String> nextHopGateway() {
+        return this.nextHopGateway == null ? Codegen.empty() : this.nextHopGateway;
     }
 
     /**
@@ -102,8 +103,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopIlb")
       private final @Nullable Output<String> nextHopIlb;
 
-    public Output<String> getNextHopIlb() {
-        return this.nextHopIlb == null ? Output.empty() : this.nextHopIlb;
+    public Output<String> nextHopIlb() {
+        return this.nextHopIlb == null ? Codegen.empty() : this.nextHopIlb;
     }
 
     /**
@@ -113,8 +114,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopInstance")
       private final @Nullable Output<String> nextHopInstance;
 
-    public Output<String> getNextHopInstance() {
-        return this.nextHopInstance == null ? Output.empty() : this.nextHopInstance;
+    public Output<String> nextHopInstance() {
+        return this.nextHopInstance == null ? Codegen.empty() : this.nextHopInstance;
     }
 
     /**
@@ -124,8 +125,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopIp")
       private final @Nullable Output<String> nextHopIp;
 
-    public Output<String> getNextHopIp() {
-        return this.nextHopIp == null ? Output.empty() : this.nextHopIp;
+    public Output<String> nextHopIp() {
+        return this.nextHopIp == null ? Codegen.empty() : this.nextHopIp;
     }
 
     /**
@@ -135,8 +136,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopNetwork")
       private final @Nullable Output<String> nextHopNetwork;
 
-    public Output<String> getNextHopNetwork() {
-        return this.nextHopNetwork == null ? Output.empty() : this.nextHopNetwork;
+    public Output<String> nextHopNetwork() {
+        return this.nextHopNetwork == null ? Codegen.empty() : this.nextHopNetwork;
     }
 
     /**
@@ -146,8 +147,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="nextHopVpnTunnel")
       private final @Nullable Output<String> nextHopVpnTunnel;
 
-    public Output<String> getNextHopVpnTunnel() {
-        return this.nextHopVpnTunnel == null ? Output.empty() : this.nextHopVpnTunnel;
+    public Output<String> nextHopVpnTunnel() {
+        return this.nextHopVpnTunnel == null ? Codegen.empty() : this.nextHopVpnTunnel;
     }
 
     /**
@@ -157,22 +158,22 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+    public Output<Integer> priority() {
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -182,8 +183,8 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RouteArgs(
@@ -222,22 +223,22 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.allowConflictingSubnetworks = Output.empty();
-        this.description = Output.empty();
-        this.destRange = Output.empty();
-        this.ilbRouteBehaviorOnUnhealthy = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.nextHopGateway = Output.empty();
-        this.nextHopIlb = Output.empty();
-        this.nextHopInstance = Output.empty();
-        this.nextHopIp = Output.empty();
-        this.nextHopNetwork = Output.empty();
-        this.nextHopVpnTunnel = Output.empty();
-        this.priority = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.tags = Output.empty();
+        this.allowConflictingSubnetworks = Codegen.empty();
+        this.description = Codegen.empty();
+        this.destRange = Codegen.empty();
+        this.ilbRouteBehaviorOnUnhealthy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.nextHopGateway = Codegen.empty();
+        this.nextHopIlb = Codegen.empty();
+        this.nextHopInstance = Codegen.empty();
+        this.nextHopIp = Codegen.empty();
+        this.nextHopNetwork = Codegen.empty();
+        this.nextHopVpnTunnel = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -295,7 +296,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowConflictingSubnetworks(@Nullable Boolean allowConflictingSubnetworks) {
-            this.allowConflictingSubnetworks = Output.ofNullable(allowConflictingSubnetworks);
+            this.allowConflictingSubnetworks = Codegen.ofNullable(allowConflictingSubnetworks);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -303,7 +304,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destRange(@Nullable Output<String> destRange) {
@@ -311,7 +312,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destRange(@Nullable String destRange) {
-            this.destRange = Output.ofNullable(destRange);
+            this.destRange = Codegen.ofNullable(destRange);
             return this;
         }
         public Builder ilbRouteBehaviorOnUnhealthy(@Nullable Output<RouteIlbRouteBehaviorOnUnhealthy> ilbRouteBehaviorOnUnhealthy) {
@@ -319,7 +320,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ilbRouteBehaviorOnUnhealthy(@Nullable RouteIlbRouteBehaviorOnUnhealthy ilbRouteBehaviorOnUnhealthy) {
-            this.ilbRouteBehaviorOnUnhealthy = Output.ofNullable(ilbRouteBehaviorOnUnhealthy);
+            this.ilbRouteBehaviorOnUnhealthy = Codegen.ofNullable(ilbRouteBehaviorOnUnhealthy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -327,7 +328,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -335,7 +336,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder nextHopGateway(@Nullable Output<String> nextHopGateway) {
@@ -343,7 +344,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextHopGateway(@Nullable String nextHopGateway) {
-            this.nextHopGateway = Output.ofNullable(nextHopGateway);
+            this.nextHopGateway = Codegen.ofNullable(nextHopGateway);
             return this;
         }
         public Builder nextHopIlb(@Nullable Output<String> nextHopIlb) {
@@ -351,7 +352,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextHopIlb(@Nullable String nextHopIlb) {
-            this.nextHopIlb = Output.ofNullable(nextHopIlb);
+            this.nextHopIlb = Codegen.ofNullable(nextHopIlb);
             return this;
         }
         public Builder nextHopInstance(@Nullable Output<String> nextHopInstance) {
@@ -359,7 +360,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextHopInstance(@Nullable String nextHopInstance) {
-            this.nextHopInstance = Output.ofNullable(nextHopInstance);
+            this.nextHopInstance = Codegen.ofNullable(nextHopInstance);
             return this;
         }
         public Builder nextHopIp(@Nullable Output<String> nextHopIp) {
@@ -367,7 +368,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextHopIp(@Nullable String nextHopIp) {
-            this.nextHopIp = Output.ofNullable(nextHopIp);
+            this.nextHopIp = Codegen.ofNullable(nextHopIp);
             return this;
         }
         public Builder nextHopNetwork(@Nullable Output<String> nextHopNetwork) {
@@ -375,7 +376,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextHopNetwork(@Nullable String nextHopNetwork) {
-            this.nextHopNetwork = Output.ofNullable(nextHopNetwork);
+            this.nextHopNetwork = Codegen.ofNullable(nextHopNetwork);
             return this;
         }
         public Builder nextHopVpnTunnel(@Nullable Output<String> nextHopVpnTunnel) {
@@ -383,7 +384,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nextHopVpnTunnel(@Nullable String nextHopVpnTunnel) {
-            this.nextHopVpnTunnel = Output.ofNullable(nextHopVpnTunnel);
+            this.nextHopVpnTunnel = Codegen.ofNullable(nextHopVpnTunnel);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -391,7 +392,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -399,7 +400,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -407,7 +408,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -415,7 +416,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {

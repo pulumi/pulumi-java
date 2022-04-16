@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
     @Import(name="truststoreUri", required=true)
       private final Output<String> truststoreUri;
 
-    public Output<String> getTruststoreUri() {
+    public Output<String> truststoreUri() {
         return this.truststoreUri;
     }
 
@@ -33,8 +34,8 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
     @Import(name="truststoreVersion")
       private final @Nullable Output<String> truststoreVersion;
 
-    public Output<String> getTruststoreVersion() {
-        return this.truststoreVersion == null ? Output.empty() : this.truststoreVersion;
+    public Output<String> truststoreVersion() {
+        return this.truststoreVersion == null ? Codegen.empty() : this.truststoreVersion;
     }
 
     public DomainNameMutualTlsAuthenticationGetArgs(
@@ -45,8 +46,8 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
     }
 
     private DomainNameMutualTlsAuthenticationGetArgs() {
-        this.truststoreUri = Output.empty();
-        this.truststoreVersion = Output.empty();
+        this.truststoreUri = Codegen.empty();
+        this.truststoreVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
             return this;
         }
         public Builder truststoreVersion(@Nullable String truststoreVersion) {
-            this.truststoreVersion = Output.ofNullable(truststoreVersion);
+            this.truststoreVersion = Codegen.ofNullable(truststoreVersion);
             return this;
         }        public DomainNameMutualTlsAuthenticationGetArgs build() {
             return new DomainNameMutualTlsAuthenticationGetArgs(truststoreUri, truststoreVersion);

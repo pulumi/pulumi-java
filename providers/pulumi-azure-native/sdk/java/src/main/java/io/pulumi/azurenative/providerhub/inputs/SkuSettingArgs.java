@@ -9,6 +9,7 @@ import io.pulumi.azurenative.providerhub.inputs.SkuLocationInfoArgs;
 import io.pulumi.azurenative.providerhub.inputs.SkuSettingCapacityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,85 +23,85 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="capabilities")
       private final @Nullable Output<List<SkuCapabilityArgs>> capabilities;
 
-    public Output<List<SkuCapabilityArgs>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+    public Output<List<SkuCapabilityArgs>> capabilities() {
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     @Import(name="capacity")
       private final @Nullable Output<SkuSettingCapacityArgs> capacity;
 
-    public Output<SkuSettingCapacityArgs> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+    public Output<SkuSettingCapacityArgs> capacity() {
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     @Import(name="costs")
       private final @Nullable Output<List<SkuCostArgs>> costs;
 
-    public Output<List<SkuCostArgs>> getCosts() {
-        return this.costs == null ? Output.empty() : this.costs;
+    public Output<List<SkuCostArgs>> costs() {
+        return this.costs == null ? Codegen.empty() : this.costs;
     }
 
     @Import(name="family")
       private final @Nullable Output<String> family;
 
-    public Output<String> getFamily() {
-        return this.family == null ? Output.empty() : this.family;
+    public Output<String> family() {
+        return this.family == null ? Codegen.empty() : this.family;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     @Import(name="locationInfo")
       private final @Nullable Output<List<SkuLocationInfoArgs>> locationInfo;
 
-    public Output<List<SkuLocationInfoArgs>> getLocationInfo() {
-        return this.locationInfo == null ? Output.empty() : this.locationInfo;
+    public Output<List<SkuLocationInfoArgs>> locationInfo() {
+        return this.locationInfo == null ? Codegen.empty() : this.locationInfo;
     }
 
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+    public Output<List<String>> locations() {
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Output<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
+    public Output<List<String>> requiredFeatures() {
+        return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     @Import(name="requiredQuotaIds")
       private final @Nullable Output<List<String>> requiredQuotaIds;
 
-    public Output<List<String>> getRequiredQuotaIds() {
-        return this.requiredQuotaIds == null ? Output.empty() : this.requiredQuotaIds;
+    public Output<List<String>> requiredQuotaIds() {
+        return this.requiredQuotaIds == null ? Codegen.empty() : this.requiredQuotaIds;
     }
 
     @Import(name="size")
       private final @Nullable Output<String> size;
 
-    public Output<String> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+    public Output<String> size() {
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<String> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public SkuSettingArgs(
@@ -131,18 +132,18 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuSettingArgs() {
-        this.capabilities = Output.empty();
-        this.capacity = Output.empty();
-        this.costs = Output.empty();
-        this.family = Output.empty();
-        this.kind = Output.empty();
-        this.locationInfo = Output.empty();
-        this.locations = Output.empty();
-        this.name = Output.empty();
-        this.requiredFeatures = Output.empty();
-        this.requiredQuotaIds = Output.empty();
-        this.size = Output.empty();
-        this.tier = Output.empty();
+        this.capabilities = Codegen.empty();
+        this.capacity = Codegen.empty();
+        this.costs = Codegen.empty();
+        this.family = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.locationInfo = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.requiredFeatures = Codegen.empty();
+        this.requiredQuotaIds = Codegen.empty();
+        this.size = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capabilities(@Nullable List<SkuCapabilityArgs> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(SkuCapabilityArgs... capabilities) {
@@ -203,7 +204,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable SkuSettingCapacityArgs capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder costs(@Nullable Output<List<SkuCostArgs>> costs) {
@@ -211,7 +212,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder costs(@Nullable List<SkuCostArgs> costs) {
-            this.costs = Output.ofNullable(costs);
+            this.costs = Codegen.ofNullable(costs);
             return this;
         }
         public Builder costs(SkuCostArgs... costs) {
@@ -222,7 +223,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder family(@Nullable String family) {
-            this.family = Output.ofNullable(family);
+            this.family = Codegen.ofNullable(family);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -230,7 +231,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder locationInfo(@Nullable Output<List<SkuLocationInfoArgs>> locationInfo) {
@@ -238,7 +239,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationInfo(@Nullable List<SkuLocationInfoArgs> locationInfo) {
-            this.locationInfo = Output.ofNullable(locationInfo);
+            this.locationInfo = Codegen.ofNullable(locationInfo);
             return this;
         }
         public Builder locationInfo(SkuLocationInfoArgs... locationInfo) {
@@ -249,7 +250,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -268,7 +269,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Output.ofNullable(requiredFeatures);
+            this.requiredFeatures = Codegen.ofNullable(requiredFeatures);
             return this;
         }
         public Builder requiredFeatures(String... requiredFeatures) {
@@ -279,7 +280,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiredQuotaIds(@Nullable List<String> requiredQuotaIds) {
-            this.requiredQuotaIds = Output.ofNullable(requiredQuotaIds);
+            this.requiredQuotaIds = Codegen.ofNullable(requiredQuotaIds);
             return this;
         }
         public Builder requiredQuotaIds(String... requiredQuotaIds) {
@@ -290,7 +291,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable String size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -298,7 +299,7 @@ public final class SkuSettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public SkuSettingArgs build() {
             return new SkuSettingArgs(capabilities, capacity, costs, family, kind, locationInfo, locations, name, requiredFeatures, requiredQuotaIds, size, tier);

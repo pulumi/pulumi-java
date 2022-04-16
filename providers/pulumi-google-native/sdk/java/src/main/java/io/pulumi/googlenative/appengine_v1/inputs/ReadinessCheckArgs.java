@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="appStartTimeout")
       private final @Nullable Output<String> appStartTimeout;
 
-    public Output<String> getAppStartTimeout() {
-        return this.appStartTimeout == null ? Output.empty() : this.appStartTimeout;
+    public Output<String> appStartTimeout() {
+        return this.appStartTimeout == null ? Codegen.empty() : this.appStartTimeout;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="checkInterval")
       private final @Nullable Output<String> checkInterval;
 
-    public Output<String> getCheckInterval() {
-        return this.checkInterval == null ? Output.empty() : this.checkInterval;
+    public Output<String> checkInterval() {
+        return this.checkInterval == null ? Codegen.empty() : this.checkInterval;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
+    public Output<Integer> failureThreshold() {
+        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="host")
       private final @Nullable Output<String> host;
 
-    public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+    public Output<String> host() {
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="path")
       private final @Nullable Output<String> path;
 
-    public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+    public Output<String> path() {
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -81,8 +82,8 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="successThreshold")
       private final @Nullable Output<Integer> successThreshold;
 
-    public Output<Integer> getSuccessThreshold() {
-        return this.successThreshold == null ? Output.empty() : this.successThreshold;
+    public Output<Integer> successThreshold() {
+        return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
     /**
@@ -92,8 +93,8 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
-    public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+    public Output<String> timeout() {
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public ReadinessCheckArgs(
@@ -114,13 +115,13 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReadinessCheckArgs() {
-        this.appStartTimeout = Output.empty();
-        this.checkInterval = Output.empty();
-        this.failureThreshold = Output.empty();
-        this.host = Output.empty();
-        this.path = Output.empty();
-        this.successThreshold = Output.empty();
-        this.timeout = Output.empty();
+        this.appStartTimeout = Codegen.empty();
+        this.checkInterval = Codegen.empty();
+        this.failureThreshold = Codegen.empty();
+        this.host = Codegen.empty();
+        this.path = Codegen.empty();
+        this.successThreshold = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appStartTimeout(@Nullable String appStartTimeout) {
-            this.appStartTimeout = Output.ofNullable(appStartTimeout);
+            this.appStartTimeout = Codegen.ofNullable(appStartTimeout);
             return this;
         }
         public Builder checkInterval(@Nullable Output<String> checkInterval) {
@@ -168,7 +169,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder checkInterval(@Nullable String checkInterval) {
-            this.checkInterval = Output.ofNullable(checkInterval);
+            this.checkInterval = Codegen.ofNullable(checkInterval);
             return this;
         }
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
@@ -176,7 +177,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Output.ofNullable(failureThreshold);
+            this.failureThreshold = Codegen.ofNullable(failureThreshold);
             return this;
         }
         public Builder host(@Nullable Output<String> host) {
@@ -184,7 +185,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -192,7 +193,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
@@ -200,7 +201,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = Output.ofNullable(successThreshold);
+            this.successThreshold = Codegen.ofNullable(successThreshold);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -208,7 +209,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public ReadinessCheckArgs build() {
             return new ReadinessCheckArgs(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.ApiArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthenticationArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.BackendArgs;
@@ -43,8 +44,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="apis")
       private final @Nullable Output<List<ApiArgs>> apis;
 
-    public Output<List<ApiArgs>> getApis() {
-        return this.apis == null ? Output.empty() : this.apis;
+    public Output<List<ApiArgs>> apis() {
+        return this.apis == null ? Codegen.empty() : this.apis;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="authentication")
       private final @Nullable Output<AuthenticationArgs> authentication;
 
-    public Output<AuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+    public Output<AuthenticationArgs> authentication() {
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="backend")
       private final @Nullable Output<BackendArgs> backend;
 
-    public Output<BackendArgs> getBackend() {
-        return this.backend == null ? Output.empty() : this.backend;
+    public Output<BackendArgs> backend() {
+        return this.backend == null ? Codegen.empty() : this.backend;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="billing")
       private final @Nullable Output<BillingArgs> billing;
 
-    public Output<BillingArgs> getBilling() {
-        return this.billing == null ? Output.empty() : this.billing;
+    public Output<BillingArgs> billing() {
+        return this.billing == null ? Codegen.empty() : this.billing;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="configVersion")
       private final @Nullable Output<Integer> configVersion;
 
-    public Output<Integer> getConfigVersion() {
-        return this.configVersion == null ? Output.empty() : this.configVersion;
+    public Output<Integer> configVersion() {
+        return this.configVersion == null ? Codegen.empty() : this.configVersion;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="context")
       private final @Nullable Output<ContextArgs> context;
 
-    public Output<ContextArgs> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+    public Output<ContextArgs> context() {
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -109,8 +110,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="control")
       private final @Nullable Output<ControlArgs> control;
 
-    public Output<ControlArgs> getControl() {
-        return this.control == null ? Output.empty() : this.control;
+    public Output<ControlArgs> control() {
+        return this.control == null ? Codegen.empty() : this.control;
     }
 
     /**
@@ -120,8 +121,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customError")
       private final @Nullable Output<CustomErrorArgs> customError;
 
-    public Output<CustomErrorArgs> getCustomError() {
-        return this.customError == null ? Output.empty() : this.customError;
+    public Output<CustomErrorArgs> customError() {
+        return this.customError == null ? Codegen.empty() : this.customError;
     }
 
     /**
@@ -131,8 +132,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="documentation")
       private final @Nullable Output<DocumentationArgs> documentation;
 
-    public Output<DocumentationArgs> getDocumentation() {
-        return this.documentation == null ? Output.empty() : this.documentation;
+    public Output<DocumentationArgs> documentation() {
+        return this.documentation == null ? Codegen.empty() : this.documentation;
     }
 
     /**
@@ -142,8 +143,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="endpoints")
       private final @Nullable Output<List<EndpointArgs>> endpoints;
 
-    public Output<List<EndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+    public Output<List<EndpointArgs>> endpoints() {
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -153,8 +154,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enums")
       private final @Nullable Output<List<EnumArgs>> enums;
 
-    public Output<List<EnumArgs>> getEnums() {
-        return this.enums == null ? Output.empty() : this.enums;
+    public Output<List<EnumArgs>> enums() {
+        return this.enums == null ? Codegen.empty() : this.enums;
     }
 
     /**
@@ -164,8 +165,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="http")
       private final @Nullable Output<HttpArgs> http;
 
-    public Output<HttpArgs> getHttp() {
-        return this.http == null ? Output.empty() : this.http;
+    public Output<HttpArgs> http() {
+        return this.http == null ? Codegen.empty() : this.http;
     }
 
     /**
@@ -175,8 +176,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="id")
       private final @Nullable Output<String> id;
 
-    public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+    public Output<String> id() {
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -186,8 +187,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logging")
       private final @Nullable Output<LoggingArgs> logging;
 
-    public Output<LoggingArgs> getLogging() {
-        return this.logging == null ? Output.empty() : this.logging;
+    public Output<LoggingArgs> logging() {
+        return this.logging == null ? Codegen.empty() : this.logging;
     }
 
     /**
@@ -197,8 +198,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="logs")
       private final @Nullable Output<List<LogDescriptorArgs>> logs;
 
-    public Output<List<LogDescriptorArgs>> getLogs() {
-        return this.logs == null ? Output.empty() : this.logs;
+    public Output<List<LogDescriptorArgs>> logs() {
+        return this.logs == null ? Codegen.empty() : this.logs;
     }
 
     /**
@@ -208,8 +209,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="metrics")
       private final @Nullable Output<List<MetricDescriptorArgs>> metrics;
 
-    public Output<List<MetricDescriptorArgs>> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+    public Output<List<MetricDescriptorArgs>> metrics() {
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -219,8 +220,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoredResources")
       private final @Nullable Output<List<MonitoredResourceDescriptorArgs>> monitoredResources;
 
-    public Output<List<MonitoredResourceDescriptorArgs>> getMonitoredResources() {
-        return this.monitoredResources == null ? Output.empty() : this.monitoredResources;
+    public Output<List<MonitoredResourceDescriptorArgs>> monitoredResources() {
+        return this.monitoredResources == null ? Codegen.empty() : this.monitoredResources;
     }
 
     /**
@@ -230,8 +231,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="monitoring")
       private final @Nullable Output<MonitoringArgs> monitoring;
 
-    public Output<MonitoringArgs> getMonitoring() {
-        return this.monitoring == null ? Output.empty() : this.monitoring;
+    public Output<MonitoringArgs> monitoring() {
+        return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
     /**
@@ -241,8 +242,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -252,8 +253,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="producerProjectId")
       private final @Nullable Output<String> producerProjectId;
 
-    public Output<String> getProducerProjectId() {
-        return this.producerProjectId == null ? Output.empty() : this.producerProjectId;
+    public Output<String> producerProjectId() {
+        return this.producerProjectId == null ? Codegen.empty() : this.producerProjectId;
     }
 
     /**
@@ -263,14 +264,14 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="quota")
       private final @Nullable Output<QuotaArgs> quota;
 
-    public Output<QuotaArgs> getQuota() {
-        return this.quota == null ? Output.empty() : this.quota;
+    public Output<QuotaArgs> quota() {
+        return this.quota == null ? Codegen.empty() : this.quota;
     }
 
     @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
-    public Output<String> getServiceName() {
+    public Output<String> serviceName() {
         return this.serviceName;
     }
 
@@ -281,8 +282,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemParameters")
       private final @Nullable Output<SystemParametersArgs> systemParameters;
 
-    public Output<SystemParametersArgs> getSystemParameters() {
-        return this.systemParameters == null ? Output.empty() : this.systemParameters;
+    public Output<SystemParametersArgs> systemParameters() {
+        return this.systemParameters == null ? Codegen.empty() : this.systemParameters;
     }
 
     /**
@@ -292,8 +293,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="systemTypes")
       private final @Nullable Output<List<TypeArgs>> systemTypes;
 
-    public Output<List<TypeArgs>> getSystemTypes() {
-        return this.systemTypes == null ? Output.empty() : this.systemTypes;
+    public Output<List<TypeArgs>> systemTypes() {
+        return this.systemTypes == null ? Codegen.empty() : this.systemTypes;
     }
 
     /**
@@ -303,8 +304,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="title")
       private final @Nullable Output<String> title;
 
-    public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+    public Output<String> title() {
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -314,8 +315,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="types")
       private final @Nullable Output<List<TypeArgs>> types;
 
-    public Output<List<TypeArgs>> getTypes() {
-        return this.types == null ? Output.empty() : this.types;
+    public Output<List<TypeArgs>> types() {
+        return this.types == null ? Codegen.empty() : this.types;
     }
 
     /**
@@ -325,8 +326,8 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="usage")
       private final @Nullable Output<UsageArgs> usage;
 
-    public Output<UsageArgs> getUsage() {
-        return this.usage == null ? Output.empty() : this.usage;
+    public Output<UsageArgs> usage() {
+        return this.usage == null ? Codegen.empty() : this.usage;
     }
 
     public ConfigArgs(
@@ -387,33 +388,33 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConfigArgs() {
-        this.apis = Output.empty();
-        this.authentication = Output.empty();
-        this.backend = Output.empty();
-        this.billing = Output.empty();
-        this.configVersion = Output.empty();
-        this.context = Output.empty();
-        this.control = Output.empty();
-        this.customError = Output.empty();
-        this.documentation = Output.empty();
-        this.endpoints = Output.empty();
-        this.enums = Output.empty();
-        this.http = Output.empty();
-        this.id = Output.empty();
-        this.logging = Output.empty();
-        this.logs = Output.empty();
-        this.metrics = Output.empty();
-        this.monitoredResources = Output.empty();
-        this.monitoring = Output.empty();
-        this.name = Output.empty();
-        this.producerProjectId = Output.empty();
-        this.quota = Output.empty();
-        this.serviceName = Output.empty();
-        this.systemParameters = Output.empty();
-        this.systemTypes = Output.empty();
-        this.title = Output.empty();
-        this.types = Output.empty();
-        this.usage = Output.empty();
+        this.apis = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.backend = Codegen.empty();
+        this.billing = Codegen.empty();
+        this.configVersion = Codegen.empty();
+        this.context = Codegen.empty();
+        this.control = Codegen.empty();
+        this.customError = Codegen.empty();
+        this.documentation = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.enums = Codegen.empty();
+        this.http = Codegen.empty();
+        this.id = Codegen.empty();
+        this.logging = Codegen.empty();
+        this.logs = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.monitoredResources = Codegen.empty();
+        this.monitoring = Codegen.empty();
+        this.name = Codegen.empty();
+        this.producerProjectId = Codegen.empty();
+        this.quota = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.systemParameters = Codegen.empty();
+        this.systemTypes = Codegen.empty();
+        this.title = Codegen.empty();
+        this.types = Codegen.empty();
+        this.usage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -493,7 +494,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apis(@Nullable List<ApiArgs> apis) {
-            this.apis = Output.ofNullable(apis);
+            this.apis = Codegen.ofNullable(apis);
             return this;
         }
         public Builder apis(ApiArgs... apis) {
@@ -504,7 +505,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable AuthenticationArgs authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder backend(@Nullable Output<BackendArgs> backend) {
@@ -512,7 +513,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backend(@Nullable BackendArgs backend) {
-            this.backend = Output.ofNullable(backend);
+            this.backend = Codegen.ofNullable(backend);
             return this;
         }
         public Builder billing(@Nullable Output<BillingArgs> billing) {
@@ -520,7 +521,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billing(@Nullable BillingArgs billing) {
-            this.billing = Output.ofNullable(billing);
+            this.billing = Codegen.ofNullable(billing);
             return this;
         }
         public Builder configVersion(@Nullable Output<Integer> configVersion) {
@@ -528,7 +529,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configVersion(@Nullable Integer configVersion) {
-            this.configVersion = Output.ofNullable(configVersion);
+            this.configVersion = Codegen.ofNullable(configVersion);
             return this;
         }
         public Builder context(@Nullable Output<ContextArgs> context) {
@@ -536,7 +537,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder context(@Nullable ContextArgs context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder control(@Nullable Output<ControlArgs> control) {
@@ -544,7 +545,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder control(@Nullable ControlArgs control) {
-            this.control = Output.ofNullable(control);
+            this.control = Codegen.ofNullable(control);
             return this;
         }
         public Builder customError(@Nullable Output<CustomErrorArgs> customError) {
@@ -552,7 +553,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customError(@Nullable CustomErrorArgs customError) {
-            this.customError = Output.ofNullable(customError);
+            this.customError = Codegen.ofNullable(customError);
             return this;
         }
         public Builder documentation(@Nullable Output<DocumentationArgs> documentation) {
@@ -560,7 +561,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentation(@Nullable DocumentationArgs documentation) {
-            this.documentation = Output.ofNullable(documentation);
+            this.documentation = Codegen.ofNullable(documentation);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<EndpointArgs>> endpoints) {
@@ -568,7 +569,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(EndpointArgs... endpoints) {
@@ -579,7 +580,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enums(@Nullable List<EnumArgs> enums) {
-            this.enums = Output.ofNullable(enums);
+            this.enums = Codegen.ofNullable(enums);
             return this;
         }
         public Builder enums(EnumArgs... enums) {
@@ -590,7 +591,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder http(@Nullable HttpArgs http) {
-            this.http = Output.ofNullable(http);
+            this.http = Codegen.ofNullable(http);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -598,7 +599,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder logging(@Nullable Output<LoggingArgs> logging) {
@@ -606,7 +607,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logging(@Nullable LoggingArgs logging) {
-            this.logging = Output.ofNullable(logging);
+            this.logging = Codegen.ofNullable(logging);
             return this;
         }
         public Builder logs(@Nullable Output<List<LogDescriptorArgs>> logs) {
@@ -614,7 +615,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logs(@Nullable List<LogDescriptorArgs> logs) {
-            this.logs = Output.ofNullable(logs);
+            this.logs = Codegen.ofNullable(logs);
             return this;
         }
         public Builder logs(LogDescriptorArgs... logs) {
@@ -625,7 +626,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metrics(@Nullable List<MetricDescriptorArgs> metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder metrics(MetricDescriptorArgs... metrics) {
@@ -636,7 +637,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder monitoredResources(@Nullable List<MonitoredResourceDescriptorArgs> monitoredResources) {
-            this.monitoredResources = Output.ofNullable(monitoredResources);
+            this.monitoredResources = Codegen.ofNullable(monitoredResources);
             return this;
         }
         public Builder monitoredResources(MonitoredResourceDescriptorArgs... monitoredResources) {
@@ -647,7 +648,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder monitoring(@Nullable MonitoringArgs monitoring) {
-            this.monitoring = Output.ofNullable(monitoring);
+            this.monitoring = Codegen.ofNullable(monitoring);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -655,7 +656,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder producerProjectId(@Nullable Output<String> producerProjectId) {
@@ -663,7 +664,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder producerProjectId(@Nullable String producerProjectId) {
-            this.producerProjectId = Output.ofNullable(producerProjectId);
+            this.producerProjectId = Codegen.ofNullable(producerProjectId);
             return this;
         }
         public Builder quota(@Nullable Output<QuotaArgs> quota) {
@@ -671,7 +672,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quota(@Nullable QuotaArgs quota) {
-            this.quota = Output.ofNullable(quota);
+            this.quota = Codegen.ofNullable(quota);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -687,7 +688,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemParameters(@Nullable SystemParametersArgs systemParameters) {
-            this.systemParameters = Output.ofNullable(systemParameters);
+            this.systemParameters = Codegen.ofNullable(systemParameters);
             return this;
         }
         public Builder systemTypes(@Nullable Output<List<TypeArgs>> systemTypes) {
@@ -695,7 +696,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemTypes(@Nullable List<TypeArgs> systemTypes) {
-            this.systemTypes = Output.ofNullable(systemTypes);
+            this.systemTypes = Codegen.ofNullable(systemTypes);
             return this;
         }
         public Builder systemTypes(TypeArgs... systemTypes) {
@@ -706,7 +707,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder types(@Nullable Output<List<TypeArgs>> types) {
@@ -714,7 +715,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder types(@Nullable List<TypeArgs> types) {
-            this.types = Output.ofNullable(types);
+            this.types = Codegen.ofNullable(types);
             return this;
         }
         public Builder types(TypeArgs... types) {
@@ -725,7 +726,7 @@ public final class ConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usage(@Nullable UsageArgs usage) {
-            this.usage = Output.ofNullable(usage);
+            this.usage = Codegen.ofNullable(usage);
             return this;
         }        public ConfigArgs build() {
             return new ConfigArgs(apis, authentication, backend, billing, configVersion, context, control, customError, documentation, endpoints, enums, http, id, logging, logs, metrics, monitoredResources, monitoring, name, producerProjectId, quota, serviceName, systemParameters, systemTypes, title, types, usage);

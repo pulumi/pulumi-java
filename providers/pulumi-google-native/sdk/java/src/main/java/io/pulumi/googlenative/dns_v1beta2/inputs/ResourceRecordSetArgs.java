@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1beta2.inputs.RRSetRoutingPolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,8 +25,8 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
-    public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<String> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="routingPolicy")
       private final @Nullable Output<RRSetRoutingPolicyArgs> routingPolicy;
 
-    public Output<RRSetRoutingPolicyArgs> getRoutingPolicy() {
-        return this.routingPolicy == null ? Output.empty() : this.routingPolicy;
+    public Output<RRSetRoutingPolicyArgs> routingPolicy() {
+        return this.routingPolicy == null ? Codegen.empty() : this.routingPolicy;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="rrdatas")
       private final @Nullable Output<List<String>> rrdatas;
 
-    public Output<List<String>> getRrdatas() {
-        return this.rrdatas == null ? Output.empty() : this.rrdatas;
+    public Output<List<String>> rrdatas() {
+        return this.rrdatas == null ? Codegen.empty() : this.rrdatas;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="signatureRrdatas")
       private final @Nullable Output<List<String>> signatureRrdatas;
 
-    public Output<List<String>> getSignatureRrdatas() {
-        return this.signatureRrdatas == null ? Output.empty() : this.signatureRrdatas;
+    public Output<List<String>> signatureRrdatas() {
+        return this.signatureRrdatas == null ? Codegen.empty() : this.signatureRrdatas;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
-    public Output<Integer> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+    public Output<Integer> ttl() {
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="type")
       private final @Nullable Output<String> type;
 
-    public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<String> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ResourceRecordSetArgs(
@@ -112,13 +113,13 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ResourceRecordSetArgs() {
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.routingPolicy = Output.empty();
-        this.rrdatas = Output.empty();
-        this.signatureRrdatas = Output.empty();
-        this.ttl = Output.empty();
-        this.type = Output.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.routingPolicy = Codegen.empty();
+        this.rrdatas = Codegen.empty();
+        this.signatureRrdatas = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -166,7 +167,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder routingPolicy(@Nullable Output<RRSetRoutingPolicyArgs> routingPolicy) {
@@ -174,7 +175,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder routingPolicy(@Nullable RRSetRoutingPolicyArgs routingPolicy) {
-            this.routingPolicy = Output.ofNullable(routingPolicy);
+            this.routingPolicy = Codegen.ofNullable(routingPolicy);
             return this;
         }
         public Builder rrdatas(@Nullable Output<List<String>> rrdatas) {
@@ -182,7 +183,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rrdatas(@Nullable List<String> rrdatas) {
-            this.rrdatas = Output.ofNullable(rrdatas);
+            this.rrdatas = Codegen.ofNullable(rrdatas);
             return this;
         }
         public Builder rrdatas(String... rrdatas) {
@@ -193,7 +194,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
-            this.signatureRrdatas = Output.ofNullable(signatureRrdatas);
+            this.signatureRrdatas = Codegen.ofNullable(signatureRrdatas);
             return this;
         }
         public Builder signatureRrdatas(String... signatureRrdatas) {
@@ -204,7 +205,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -212,7 +213,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ResourceRecordSetArgs build() {
             return new ResourceRecordSetArgs(kind, name, routingPolicy, rrdatas, signatureRrdatas, ttl, type);

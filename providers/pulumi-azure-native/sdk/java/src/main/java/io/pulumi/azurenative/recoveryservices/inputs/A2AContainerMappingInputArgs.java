@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.AgentAutoUpdateStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
     @Import(name="agentAutoUpdateStatus")
       private final @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
 
-    public Output<Either<String,AgentAutoUpdateStatus>> getAgentAutoUpdateStatus() {
-        return this.agentAutoUpdateStatus == null ? Output.empty() : this.agentAutoUpdateStatus;
+    public Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus() {
+        return this.agentAutoUpdateStatus == null ? Codegen.empty() : this.agentAutoUpdateStatus;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
     @Import(name="automationAccountArmId")
       private final @Nullable Output<String> automationAccountArmId;
 
-    public Output<String> getAutomationAccountArmId() {
-        return this.automationAccountArmId == null ? Output.empty() : this.automationAccountArmId;
+    public Output<String> automationAccountArmId() {
+        return this.automationAccountArmId == null ? Codegen.empty() : this.automationAccountArmId;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+    public Output<String> instanceType() {
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     public A2AContainerMappingInputArgs(
@@ -64,9 +65,9 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
     }
 
     private A2AContainerMappingInputArgs() {
-        this.agentAutoUpdateStatus = Output.empty();
-        this.automationAccountArmId = Output.empty();
-        this.instanceType = Output.empty();
+        this.agentAutoUpdateStatus = Codegen.empty();
+        this.automationAccountArmId = Codegen.empty();
+        this.instanceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder agentAutoUpdateStatus(@Nullable Either<String,AgentAutoUpdateStatus> agentAutoUpdateStatus) {
-            this.agentAutoUpdateStatus = Output.ofNullable(agentAutoUpdateStatus);
+            this.agentAutoUpdateStatus = Codegen.ofNullable(agentAutoUpdateStatus);
             return this;
         }
         public Builder automationAccountArmId(@Nullable Output<String> automationAccountArmId) {
@@ -106,7 +107,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
-            this.automationAccountArmId = Output.ofNullable(automationAccountArmId);
+            this.automationAccountArmId = Codegen.ofNullable(automationAccountArmId);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -114,7 +115,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }        public A2AContainerMappingInputArgs build() {
             return new A2AContainerMappingInputArgs(agentAutoUpdateStatus, automationAccountArmId, instanceType);

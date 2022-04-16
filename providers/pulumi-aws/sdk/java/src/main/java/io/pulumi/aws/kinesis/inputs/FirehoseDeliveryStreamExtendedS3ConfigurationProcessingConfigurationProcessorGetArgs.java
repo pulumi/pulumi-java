@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     @Import(name="parameters")
       private final @Nullable Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
-    public Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+    public Output<List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters() {
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -46,8 +47,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorGetArgs() {
-        this.parameters = Output.empty();
-        this.type = Output.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
             return this;
         }
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessorParameterGetArgs... parameters) {

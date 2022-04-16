@@ -18,6 +18,7 @@ import io.pulumi.aws.glue.outputs.CrawlerSchemaChangePolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -50,13 +51,13 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return The ARN of the crawler
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     @Export(name="catalogTargets", type=List.class, parameters={CrawlerCatalogTarget.class})
     private Output</* @Nullable */ List<CrawlerCatalogTarget>> catalogTargets;
 
-    public Output</* @Nullable */ List<CrawlerCatalogTarget>> getCatalogTargets() {
+    public Output</* @Nullable */ List<CrawlerCatalogTarget>> catalogTargets() {
         return this.catalogTargets;
     }
     /**
@@ -70,7 +71,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.
      * 
      */
-    public Output</* @Nullable */ List<String>> getClassifiers() {
+    public Output</* @Nullable */ List<String>> classifiers() {
         return this.classifiers;
     }
     /**
@@ -84,7 +85,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
      * 
      */
-    public Output</* @Nullable */ String> getConfiguration() {
+    public Output</* @Nullable */ String> configuration() {
         return this.configuration;
     }
     /**
@@ -98,13 +99,13 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return The name of the Glue database to be synchronized.
      * 
      */
-    public Output<String> getDatabaseName() {
+    public Output<String> databaseName() {
         return this.databaseName;
     }
     @Export(name="deltaTargets", type=List.class, parameters={CrawlerDeltaTarget.class})
     private Output</* @Nullable */ List<CrawlerDeltaTarget>> deltaTargets;
 
-    public Output</* @Nullable */ List<CrawlerDeltaTarget>> getDeltaTargets() {
+    public Output</* @Nullable */ List<CrawlerDeltaTarget>> deltaTargets() {
         return this.deltaTargets;
     }
     /**
@@ -118,7 +119,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return Description of the crawler.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -132,7 +133,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return List of nested DynamoDB target arguments. See Dynamodb Target below.
      * 
      */
-    public Output</* @Nullable */ List<CrawlerDynamodbTarget>> getDynamodbTargets() {
+    public Output</* @Nullable */ List<CrawlerDynamodbTarget>> dynamodbTargets() {
         return this.dynamodbTargets;
     }
     /**
@@ -146,7 +147,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return List of nested JBDC target arguments. See JDBC Target below.
      * 
      */
-    public Output</* @Nullable */ List<CrawlerJdbcTarget>> getJdbcTargets() {
+    public Output</* @Nullable */ List<CrawlerJdbcTarget>> jdbcTargets() {
         return this.jdbcTargets;
     }
     /**
@@ -160,7 +161,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return Specifies data lineage configuration settings for the crawler. See Lineage Configuration below.
      * 
      */
-    public Output</* @Nullable */ CrawlerLineageConfiguration> getLineageConfiguration() {
+    public Output</* @Nullable */ CrawlerLineageConfiguration> lineageConfiguration() {
         return this.lineageConfiguration;
     }
     /**
@@ -174,7 +175,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return List nested MongoDB target arguments. See MongoDB Target below.
      * 
      */
-    public Output</* @Nullable */ List<CrawlerMongodbTarget>> getMongodbTargets() {
+    public Output</* @Nullable */ List<CrawlerMongodbTarget>> mongodbTargets() {
         return this.mongodbTargets;
     }
     /**
@@ -188,7 +189,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return Name of the crawler.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -202,7 +203,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.
      * 
      */
-    public Output</* @Nullable */ CrawlerRecrawlPolicy> getRecrawlPolicy() {
+    public Output</* @Nullable */ CrawlerRecrawlPolicy> recrawlPolicy() {
         return this.recrawlPolicy;
     }
     /**
@@ -216,7 +217,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.
      * 
      */
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
     /**
@@ -230,7 +231,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return List nested Amazon S3 target arguments. See S3 Target below.
      * 
      */
-    public Output</* @Nullable */ List<CrawlerS3Target>> getS3Targets() {
+    public Output</* @Nullable */ List<CrawlerS3Target>> s3Targets() {
         return this.s3Targets;
     }
     /**
@@ -244,7 +245,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return A cron expression used to specify the schedule. For more information, see [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html). For example, to run something every day at 12:15 UTC, you would specify: `cron(15 12 * * ? *)`.
      * 
      */
-    public Output</* @Nullable */ String> getSchedule() {
+    public Output</* @Nullable */ String> schedule() {
         return this.schedule;
     }
     /**
@@ -258,7 +259,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return Policy for the crawler's update and deletion behavior. See Schema Change Policy below.
      * 
      */
-    public Output</* @Nullable */ CrawlerSchemaChangePolicy> getSchemaChangePolicy() {
+    public Output</* @Nullable */ CrawlerSchemaChangePolicy> schemaChangePolicy() {
         return this.schemaChangePolicy;
     }
     /**
@@ -272,7 +273,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return The name of Security Configuration to be used by the crawler
      * 
      */
-    public Output</* @Nullable */ String> getSecurityConfiguration() {
+    public Output</* @Nullable */ String> securityConfiguration() {
         return this.securityConfiguration;
     }
     /**
@@ -286,7 +287,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return The table prefix used for catalog tables that are created.
      * 
      */
-    public Output</* @Nullable */ String> getTablePrefix() {
+    public Output</* @Nullable */ String> tablePrefix() {
         return this.tablePrefix;
     }
     /**
@@ -300,7 +301,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -314,7 +315,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
 
@@ -340,7 +341,7 @@ public class Crawler extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Crawler(String name, CrawlerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/crawler:Crawler", name, args == null ? CrawlerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/crawler:Crawler", name, args == null ? CrawlerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Crawler(String name, Output<String> id, @Nullable CrawlerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

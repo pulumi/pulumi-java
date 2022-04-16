@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
     @Import(name="dateFormat")
       private final @Nullable Output<Object> dateFormat;
 
-    public Output<Object> getDateFormat() {
-        return this.dateFormat == null ? Output.empty() : this.dateFormat;
+    public Output<Object> dateFormat() {
+        return this.dateFormat == null ? Codegen.empty() : this.dateFormat;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
     @Import(name="timestampFormat")
       private final @Nullable Output<Object> timestampFormat;
 
-    public Output<Object> getTimestampFormat() {
-        return this.timestampFormat == null ? Output.empty() : this.timestampFormat;
+    public Output<Object> timestampFormat() {
+        return this.timestampFormat == null ? Codegen.empty() : this.timestampFormat;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
     @Import(name="type", required=true)
       private final Output<String> type;
 
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -63,9 +64,9 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
     }
 
     private AzureDatabricksDeltaLakeExportCommandArgs() {
-        this.dateFormat = Output.empty();
-        this.timestampFormat = Output.empty();
-        this.type = Output.empty();
+        this.dateFormat = Codegen.empty();
+        this.timestampFormat = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
             return this;
         }
         public Builder dateFormat(@Nullable Object dateFormat) {
-            this.dateFormat = Output.ofNullable(dateFormat);
+            this.dateFormat = Codegen.ofNullable(dateFormat);
             return this;
         }
         public Builder timestampFormat(@Nullable Output<Object> timestampFormat) {
@@ -105,7 +106,7 @@ public final class AzureDatabricksDeltaLakeExportCommandArgs extends io.pulumi.r
             return this;
         }
         public Builder timestampFormat(@Nullable Object timestampFormat) {
-            this.timestampFormat = Output.ofNullable(timestampFormat);
+            this.timestampFormat = Codegen.ofNullable(timestampFormat);
             return this;
         }
         public Builder type(Output<String> type) {

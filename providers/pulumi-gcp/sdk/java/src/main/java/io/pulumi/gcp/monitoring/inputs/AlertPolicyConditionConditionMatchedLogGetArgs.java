@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends io.pul
     @Import(name="filter", required=true)
       private final Output<String> filter;
 
-    public Output<String> getFilter() {
+    public Output<String> filter() {
         return this.filter;
     }
 
@@ -39,8 +40,8 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends io.pul
     @Import(name="labelExtractors")
       private final @Nullable Output<Map<String,String>> labelExtractors;
 
-    public Output<Map<String,String>> getLabelExtractors() {
-        return this.labelExtractors == null ? Output.empty() : this.labelExtractors;
+    public Output<Map<String,String>> labelExtractors() {
+        return this.labelExtractors == null ? Codegen.empty() : this.labelExtractors;
     }
 
     public AlertPolicyConditionConditionMatchedLogGetArgs(
@@ -51,8 +52,8 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends io.pul
     }
 
     private AlertPolicyConditionConditionMatchedLogGetArgs() {
-        this.filter = Output.empty();
-        this.labelExtractors = Output.empty();
+        this.filter = Codegen.empty();
+        this.labelExtractors = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class AlertPolicyConditionConditionMatchedLogGetArgs extends io.pul
             return this;
         }
         public Builder labelExtractors(@Nullable Map<String,String> labelExtractors) {
-            this.labelExtractors = Output.ofNullable(labelExtractors);
+            this.labelExtractors = Codegen.ofNullable(labelExtractors);
             return this;
         }        public AlertPolicyConditionConditionMatchedLogGetArgs build() {
             return new AlertPolicyConditionConditionMatchedLogGetArgs(filter, labelExtractors);

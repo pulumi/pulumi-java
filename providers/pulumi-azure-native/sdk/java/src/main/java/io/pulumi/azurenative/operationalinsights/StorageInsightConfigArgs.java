@@ -6,6 +6,7 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.operationalinsights.inputs.StorageAccountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,8 +25,8 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="containers")
       private final @Nullable Output<List<String>> containers;
 
-    public Output<List<String>> getContainers() {
-        return this.containers == null ? Output.empty() : this.containers;
+    public Output<List<String>> containers() {
+        return this.containers == null ? Codegen.empty() : this.containers;
     }
 
     /**
@@ -35,8 +36,8 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
-    public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+    public Output<String> eTag() {
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,7 +58,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="storageAccount", required=true)
       private final Output<StorageAccountArgs> storageAccount;
 
-    public Output<StorageAccountArgs> getStorageAccount() {
+    public Output<StorageAccountArgs> storageAccount() {
         return this.storageAccount;
     }
 
@@ -68,8 +69,8 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="storageInsightName")
       private final @Nullable Output<String> storageInsightName;
 
-    public Output<String> getStorageInsightName() {
-        return this.storageInsightName == null ? Output.empty() : this.storageInsightName;
+    public Output<String> storageInsightName() {
+        return this.storageInsightName == null ? Codegen.empty() : this.storageInsightName;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="tables")
       private final @Nullable Output<List<String>> tables;
 
-    public Output<List<String>> getTables() {
-        return this.tables == null ? Output.empty() : this.tables;
+    public Output<List<String>> tables() {
+        return this.tables == null ? Codegen.empty() : this.tables;
     }
 
     /**
@@ -90,8 +91,8 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
-    public Output<String> getWorkspaceName() {
+    public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
@@ -125,14 +126,14 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
     }
 
     private StorageInsightConfigArgs() {
-        this.containers = Output.empty();
-        this.eTag = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccount = Output.empty();
-        this.storageInsightName = Output.empty();
-        this.tables = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.containers = Codegen.empty();
+        this.eTag = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccount = Codegen.empty();
+        this.storageInsightName = Codegen.empty();
+        this.tables = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder containers(@Nullable List<String> containers) {
-            this.containers = Output.ofNullable(containers);
+            this.containers = Codegen.ofNullable(containers);
             return this;
         }
         public Builder containers(String... containers) {
@@ -185,7 +186,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -209,7 +210,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder storageInsightName(@Nullable String storageInsightName) {
-            this.storageInsightName = Output.ofNullable(storageInsightName);
+            this.storageInsightName = Codegen.ofNullable(storageInsightName);
             return this;
         }
         public Builder tables(@Nullable Output<List<String>> tables) {
@@ -217,7 +218,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tables(@Nullable List<String> tables) {
-            this.tables = Output.ofNullable(tables);
+            this.tables = Codegen.ofNullable(tables);
             return this;
         }
         public Builder tables(String... tables) {
@@ -228,7 +229,7 @@ public final class StorageInsightConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionSslCertificateArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.SslCertificateManagedSslCertificateResponse;
@@ -31,7 +32,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
      * 
      */
-    public Output<String> getCertificate() {
+    public Output<String> certificate() {
         return this.certificate;
     }
     /**
@@ -45,7 +46,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Creation timestamp in RFC3339 text format.
      * 
      */
-    public Output<String> getCreationTimestamp() {
+    public Output<String> creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
@@ -59,7 +60,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
     /**
@@ -73,7 +74,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Expire time of the certificate. RFC3339
      * 
      */
-    public Output<String> getExpireTime() {
+    public Output<String> expireTime() {
         return this.expireTime;
     }
     /**
@@ -87,7 +88,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Type of the resource. Always compute#sslCertificate for SSL certificates.
      * 
      */
-    public Output<String> getKind() {
+    public Output<String> kind() {
         return this.kind;
     }
     /**
@@ -101,7 +102,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Configuration and status of a managed SSL certificate.
      * 
      */
-    public Output<SslCertificateManagedSslCertificateResponse> getManaged() {
+    public Output<SslCertificateManagedSslCertificateResponse> managed() {
         return this.managed;
     }
     /**
@@ -115,7 +116,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -129,7 +130,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
      * 
      */
-    public Output<String> getPrivateKey() {
+    public Output<String> privateKey() {
         return this.privateKey;
     }
     /**
@@ -143,7 +144,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.
      * 
      */
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
     /**
@@ -157,7 +158,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return [Output only] Server-defined URL for the resource.
      * 
      */
-    public Output<String> getSelfLink() {
+    public Output<String> selfLink() {
         return this.selfLink;
     }
     /**
@@ -171,7 +172,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Server-defined URL for this resource with the resource id.
      * 
      */
-    public Output<String> getSelfLinkWithId() {
+    public Output<String> selfLinkWithId() {
         return this.selfLinkWithId;
     }
     /**
@@ -185,7 +186,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Configuration and status of a self-managed SSL certificate.
      * 
      */
-    public Output<SslCertificateSelfManagedSslCertificateResponse> getSelfManaged() {
+    public Output<SslCertificateSelfManagedSslCertificateResponse> selfManaged() {
         return this.selfManaged;
     }
     /**
@@ -199,7 +200,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return Domains associated with the certificate via Subject Alternative Name.
      * 
      */
-    public Output<List<String>> getSubjectAlternativeNames() {
+    public Output<List<String>> subjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
     /**
@@ -213,7 +214,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @return (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -239,7 +240,7 @@ public class RegionSslCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionSslCertificate(String name, RegionSslCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionSslCertificate", name, args == null ? RegionSslCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionSslCertificate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

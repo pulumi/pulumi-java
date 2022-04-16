@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentTrainingPhraseType;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs;
 import java.lang.Integer;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
     @Import(name="parts", required=true)
       private final Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> parts;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> getParts() {
+    public Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartArgs>> parts() {
         return this.parts;
     }
 
@@ -39,8 +40,8 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
     @Import(name="timesAddedCount")
       private final @Nullable Output<Integer> timesAddedCount;
 
-    public Output<Integer> getTimesAddedCount() {
-        return this.timesAddedCount == null ? Output.empty() : this.timesAddedCount;
+    public Output<Integer> timesAddedCount() {
+        return this.timesAddedCount == null ? Codegen.empty() : this.timesAddedCount;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
     @Import(name="type", required=true)
       private final Output<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> type;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> getType() {
+    public Output<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> type() {
         return this.type;
     }
 
@@ -64,9 +65,9 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
     }
 
     private GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs() {
-        this.parts = Output.empty();
-        this.timesAddedCount = Output.empty();
-        this.type = Output.empty();
+        this.parts = Codegen.empty();
+        this.timesAddedCount = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs extends 
             return this;
         }
         public Builder timesAddedCount(@Nullable Integer timesAddedCount) {
-            this.timesAddedCount = Output.ofNullable(timesAddedCount);
+            this.timesAddedCount = Codegen.ofNullable(timesAddedCount);
             return this;
         }
         public Builder type(Output<GoogleCloudDialogflowV2beta1IntentTrainingPhraseType> type) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.TableArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.RestoreInfoResponse;
@@ -30,7 +31,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
      * 
      */
-    public Output<Map<String,String>> getClusterStates() {
+    public Output<Map<String,String>> clusterStates() {
         return this.clusterStates;
     }
     /**
@@ -44,7 +45,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
      * 
      */
-    public Output<Map<String,String>> getColumnFamilies() {
+    public Output<Map<String,String>> columnFamilies() {
         return this.columnFamilies;
     }
     /**
@@ -58,7 +59,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
      * 
      */
-    public Output<String> getGranularity() {
+    public Output<String> granularity() {
         return this.granularity;
     }
     /**
@@ -72,7 +73,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -86,7 +87,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @return If this table was restored from another data source (e.g. a backup), this field will be populated with information about the restore.
      * 
      */
-    public Output<RestoreInfoResponse> getRestoreInfo() {
+    public Output<RestoreInfoResponse> restoreInfo() {
         return this.restoreInfo;
     }
 
@@ -112,7 +113,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Table(String name, TableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:bigtableadmin/v2:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:bigtableadmin/v2:Table", name, args == null ? TableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Table(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

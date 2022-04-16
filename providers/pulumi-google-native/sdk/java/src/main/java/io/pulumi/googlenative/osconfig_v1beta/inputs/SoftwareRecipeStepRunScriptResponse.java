@@ -25,7 +25,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
     @Import(name="allowedExitCodes", required=true)
       private final List<Integer> allowedExitCodes;
 
-    public List<Integer> getAllowedExitCodes() {
+    public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
     }
 
@@ -36,7 +36,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
     @Import(name="interpreter", required=true)
       private final String interpreter;
 
-    public String getInterpreter() {
+    public String interpreter() {
         return this.interpreter;
     }
 
@@ -47,7 +47,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends io.pulumi.resourc
     @Import(name="script", required=true)
       private final String script;
 
-    public String getScript() {
+    public String script() {
         return this.script;
     }
 

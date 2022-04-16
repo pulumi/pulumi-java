@@ -5,6 +5,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,15 +22,15 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
     @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
-    public Output<String> getInstanceType() {
+    public Output<String> instanceType() {
         return this.instanceType;
     }
 
     @Import(name="weightedCapacity")
       private final @Nullable Output<String> weightedCapacity;
 
-    public Output<String> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
+    public Output<String> weightedCapacity() {
+        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 
     public GameServerGroupInstanceDefinitionArgs(
@@ -40,8 +41,8 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
     }
 
     private GameServerGroupInstanceDefinitionArgs() {
-        this.instanceType = Output.empty();
-        this.weightedCapacity = Output.empty();
+        this.instanceType = Codegen.empty();
+        this.weightedCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GameServerGroupInstanceDefinitionArgs extends io.pulumi.resou
             return this;
         }
         public Builder weightedCapacity(@Nullable String weightedCapacity) {
-            this.weightedCapacity = Output.ofNullable(weightedCapacity);
+            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
             return this;
         }        public GameServerGroupInstanceDefinitionArgs build() {
             return new GameServerGroupInstanceDefinitionArgs(instanceType, weightedCapacity);

@@ -23,7 +23,7 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
     @Import(name="createdAt", required=true)
       private final String createdAt;
 
-    public String getCreatedAt() {
+    public String createdAt() {
         return this.createdAt;
     }
 
@@ -34,7 +34,7 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
     @Import(name="createdBy", required=true)
       private final String createdBy;
 
-    public String getCreatedBy() {
+    public String createdBy() {
         return this.createdBy;
     }
 
@@ -45,7 +45,7 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
     @Import(name="createdByType", required=true)
       private final String createdByType;
 
-    public String getCreatedByType() {
+    public String createdByType() {
         return this.createdByType;
     }
 
@@ -56,7 +56,7 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
     @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
 
-    public String getLastModifiedAt() {
+    public String lastModifiedAt() {
         return this.lastModifiedAt;
     }
 
@@ -67,7 +67,7 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
     @Import(name="lastModifiedBy", required=true)
       private final String lastModifiedBy;
 
-    public String getLastModifiedBy() {
+    public String lastModifiedBy() {
         return this.lastModifiedBy;
     }
 
@@ -78,7 +78,7 @@ public final class AccountPropertiesResponseSystemData extends io.pulumi.resourc
     @Import(name="lastModifiedByType", required=true)
       private final String lastModifiedByType;
 
-    public String getLastModifiedByType() {
+    public String lastModifiedByType() {
         return this.lastModifiedByType;
     }
 

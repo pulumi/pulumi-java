@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.AccessRights;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
     @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
-    public Output<String> getKeyName() {
+    public Output<String> keyName() {
         return this.keyName;
     }
 
@@ -37,8 +38,8 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
     @Import(name="primaryKey")
       private final @Nullable Output<String> primaryKey;
 
-    public Output<String> getPrimaryKey() {
-        return this.primaryKey == null ? Output.empty() : this.primaryKey;
+    public Output<String> primaryKey() {
+        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
     @Import(name="rights", required=true)
       private final Output<AccessRights> rights;
 
-    public Output<AccessRights> getRights() {
+    public Output<AccessRights> rights() {
         return this.rights;
     }
 
@@ -59,8 +60,8 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
     @Import(name="secondaryKey")
       private final @Nullable Output<String> secondaryKey;
 
-    public Output<String> getSecondaryKey() {
-        return this.secondaryKey == null ? Output.empty() : this.secondaryKey;
+    public Output<String> secondaryKey() {
+        return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
     }
 
     public SharedAccessSignatureAuthorizationRuleArgs(
@@ -75,10 +76,10 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
     }
 
     private SharedAccessSignatureAuthorizationRuleArgs() {
-        this.keyName = Output.empty();
-        this.primaryKey = Output.empty();
-        this.rights = Output.empty();
-        this.secondaryKey = Output.empty();
+        this.keyName = Codegen.empty();
+        this.primaryKey = Codegen.empty();
+        this.rights = Codegen.empty();
+        this.secondaryKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
             return this;
         }
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Output.ofNullable(primaryKey);
+            this.primaryKey = Codegen.ofNullable(primaryKey);
             return this;
         }
         public Builder rights(Output<AccessRights> rights) {
@@ -136,7 +137,7 @@ public final class SharedAccessSignatureAuthorizationRuleArgs extends io.pulumi.
             return this;
         }
         public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Output.ofNullable(secondaryKey);
+            this.secondaryKey = Codegen.ofNullable(secondaryKey);
             return this;
         }        public SharedAccessSignatureAuthorizationRuleArgs build() {
             return new SharedAccessSignatureAuthorizationRuleArgs(keyName, primaryKey, rights, secondaryKey);

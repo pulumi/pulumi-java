@@ -76,56 +76,56 @@ public final class GetContainerResult {
      * Current status of the container.
      * 
     */
-    public String getContainerStatus() {
+    public String containerStatus() {
         return this.containerStatus;
     }
     /**
      * The UTC time when container got created.
      * 
     */
-    public String getCreatedDateTime() {
+    public String createdDateTime() {
         return this.createdDateTime;
     }
     /**
      * DataFormat for Container
      * 
     */
-    public String getDataFormat() {
+    public String dataFormat() {
         return this.dataFormat;
     }
     /**
      * The path ID that uniquely identifies the object.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * The object name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * Details of the refresh job on this container.
      * 
     */
-    public RefreshDetailsResponse getRefreshDetails() {
+    public RefreshDetailsResponse refreshDetails() {
         return this.refreshDetails;
     }
     /**
      * Container in DataBoxEdge Resource
      * 
     */
-    public SystemDataResponse getSystemData() {
+    public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
      * The hierarchical type of the object.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1beta1.enums.PublicKeyType;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="key", required=true)
       private final Output<String> key;
 
-    public Output<String> getKey() {
+    public Output<String> key() {
         return this.key;
     }
 
@@ -37,8 +38,8 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="type")
       private final @Nullable Output<PublicKeyType> type;
 
-    public Output<PublicKeyType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+    public Output<PublicKeyType> type() {
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public PublicKeyArgs(
@@ -49,8 +50,8 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublicKeyArgs() {
-        this.key = Output.empty();
-        this.type = Output.empty();
+        this.key = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable PublicKeyType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public PublicKeyArgs build() {
             return new PublicKeyArgs(key, type);

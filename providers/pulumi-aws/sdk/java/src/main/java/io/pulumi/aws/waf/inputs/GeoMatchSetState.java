@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.GeoMatchSetGeoMatchConstraintGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class GeoMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="arn")
       private final @Nullable Output<String> arn;
 
-    public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+    public Output<String> arn() {
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class GeoMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="geoMatchConstraints")
       private final @Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints;
 
-    public Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> getGeoMatchConstraints() {
-        return this.geoMatchConstraints == null ? Output.empty() : this.geoMatchConstraints;
+    public Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints() {
+        return this.geoMatchConstraints == null ? Codegen.empty() : this.geoMatchConstraints;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class GeoMatchSetState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public GeoMatchSetState(
@@ -59,9 +60,9 @@ public final class GeoMatchSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GeoMatchSetState() {
-        this.arn = Output.empty();
-        this.geoMatchConstraints = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.geoMatchConstraints = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class GeoMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder geoMatchConstraints(@Nullable Output<List<GeoMatchSetGeoMatchConstraintGetArgs>> geoMatchConstraints) {
@@ -101,7 +102,7 @@ public final class GeoMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder geoMatchConstraints(@Nullable List<GeoMatchSetGeoMatchConstraintGetArgs> geoMatchConstraints) {
-            this.geoMatchConstraints = Output.ofNullable(geoMatchConstraints);
+            this.geoMatchConstraints = Codegen.ofNullable(geoMatchConstraints);
             return this;
         }
         public Builder geoMatchConstraints(GeoMatchSetGeoMatchConstraintGetArgs... geoMatchConstraints) {
@@ -112,7 +113,7 @@ public final class GeoMatchSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public GeoMatchSetState build() {
             return new GeoMatchSetState(arn, geoMatchConstraints, name);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.GatewayPlatformArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,8 +26,8 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayCapabilitySummaries")
       private final @Nullable Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
 
-    public Output<List<GatewayCapabilitySummaryArgs>> getGatewayCapabilitySummaries() {
-        return this.gatewayCapabilitySummaries == null ? Output.empty() : this.gatewayCapabilitySummaries;
+    public Output<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries() {
+        return this.gatewayCapabilitySummaries == null ? Codegen.empty() : this.gatewayCapabilitySummaries;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
-    public Output<String> getGatewayName() {
-        return this.gatewayName == null ? Output.empty() : this.gatewayName;
+    public Output<String> gatewayName() {
+        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="gatewayPlatform", required=true)
       private final Output<GatewayPlatformArgs> gatewayPlatform;
 
-    public Output<GatewayPlatformArgs> getGatewayPlatform() {
+    public Output<GatewayPlatformArgs> gatewayPlatform() {
         return this.gatewayPlatform;
     }
 
@@ -58,8 +59,8 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<List<GatewayTagArgs>> tags;
 
-    public Output<List<GatewayTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<GatewayTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GatewayArgs(
@@ -74,10 +75,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayArgs() {
-        this.gatewayCapabilitySummaries = Output.empty();
-        this.gatewayName = Output.empty();
-        this.gatewayPlatform = Output.empty();
-        this.tags = Output.empty();
+        this.gatewayCapabilitySummaries = Codegen.empty();
+        this.gatewayName = Codegen.empty();
+        this.gatewayPlatform = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummaryArgs> gatewayCapabilitySummaries) {
-            this.gatewayCapabilitySummaries = Output.ofNullable(gatewayCapabilitySummaries);
+            this.gatewayCapabilitySummaries = Codegen.ofNullable(gatewayCapabilitySummaries);
             return this;
         }
         public Builder gatewayCapabilitySummaries(GatewayCapabilitySummaryArgs... gatewayCapabilitySummaries) {
@@ -122,7 +123,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Output.ofNullable(gatewayName);
+            this.gatewayName = Codegen.ofNullable(gatewayName);
             return this;
         }
         public Builder gatewayPlatform(Output<GatewayPlatformArgs> gatewayPlatform) {
@@ -138,7 +139,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<GatewayTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(GatewayTagArgs... tags) {

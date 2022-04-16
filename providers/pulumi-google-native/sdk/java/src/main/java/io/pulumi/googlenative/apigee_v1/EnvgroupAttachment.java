@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.EnvgroupAttachmentArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * @return The time at which the environment group attachment was created as milliseconds since epoch.
      * 
      */
-    public Output<String> getCreatedAt() {
+    public Output<String> createdAt() {
         return this.createdAt;
     }
     /**
@@ -42,7 +43,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * @return ID of the attached environment.
      * 
      */
-    public Output<String> getEnvironment() {
+    public Output<String> environment() {
         return this.environment;
     }
     /**
@@ -56,7 +57,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * @return ID of the environment group attachment.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -82,7 +83,7 @@ public class EnvgroupAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvgroupAttachment(String name, EnvgroupAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:EnvgroupAttachment", name, args == null ? EnvgroupAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:EnvgroupAttachment", name, args == null ? EnvgroupAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnvgroupAttachment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

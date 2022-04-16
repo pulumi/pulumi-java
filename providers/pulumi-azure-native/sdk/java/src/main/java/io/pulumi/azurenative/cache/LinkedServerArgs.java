@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cache;
 import io.pulumi.azurenative.cache.enums.ReplicationRole;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedRedisCacheId", required=true)
       private final Output<String> linkedRedisCacheId;
 
-    public Output<String> getLinkedRedisCacheId() {
+    public Output<String> linkedRedisCacheId() {
         return this.linkedRedisCacheId;
     }
 
@@ -33,7 +34,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedRedisCacheLocation", required=true)
       private final Output<String> linkedRedisCacheLocation;
 
-    public Output<String> getLinkedRedisCacheLocation() {
+    public Output<String> linkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
     }
 
@@ -44,8 +45,8 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="linkedServerName")
       private final @Nullable Output<String> linkedServerName;
 
-    public Output<String> getLinkedServerName() {
-        return this.linkedServerName == null ? Output.empty() : this.linkedServerName;
+    public Output<String> linkedServerName() {
+        return this.linkedServerName == null ? Codegen.empty() : this.linkedServerName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
       private final Output<String> name;
 
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -66,7 +67,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,7 +78,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="serverRole", required=true)
       private final Output<ReplicationRole> serverRole;
 
-    public Output<ReplicationRole> getServerRole() {
+    public Output<ReplicationRole> serverRole() {
         return this.serverRole;
     }
 
@@ -97,12 +98,12 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkedServerArgs() {
-        this.linkedRedisCacheId = Output.empty();
-        this.linkedRedisCacheLocation = Output.empty();
-        this.linkedServerName = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverRole = Output.empty();
+        this.linkedRedisCacheId = Codegen.empty();
+        this.linkedRedisCacheLocation = Codegen.empty();
+        this.linkedServerName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverRole = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedServerName(@Nullable String linkedServerName) {
-            this.linkedServerName = Output.ofNullable(linkedServerName);
+            this.linkedServerName = Codegen.ofNullable(linkedServerName);
             return this;
         }
         public Builder name(Output<String> name) {

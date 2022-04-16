@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -43,7 +44,7 @@ public class ServiceRegistry extends io.pulumi.resources.CustomResource {
      * @return The name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -57,7 +58,7 @@ public class ServiceRegistry extends io.pulumi.resources.CustomResource {
      * @return Service Registry properties payload
      * 
      */
-    public Output<ServiceRegistryPropertiesResponse> getProperties() {
+    public Output<ServiceRegistryPropertiesResponse> properties() {
         return this.properties;
     }
     /**
@@ -71,7 +72,7 @@ public class ServiceRegistry extends io.pulumi.resources.CustomResource {
      * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -85,7 +86,7 @@ public class ServiceRegistry extends io.pulumi.resources.CustomResource {
      * @return The type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -111,7 +112,7 @@ public class ServiceRegistry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceRegistry(String name, ServiceRegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:appplatform:ServiceRegistry", name, args == null ? ServiceRegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:appplatform:ServiceRegistry", name, args == null ? ServiceRegistryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceRegistry(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

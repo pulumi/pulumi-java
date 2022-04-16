@@ -7,6 +7,7 @@ import io.pulumi.azurenative.automation.enums.LinuxUpdateClasses;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="excludedPackageNameMasks")
       private final @Nullable Output<List<String>> excludedPackageNameMasks;
 
-    public Output<List<String>> getExcludedPackageNameMasks() {
-        return this.excludedPackageNameMasks == null ? Output.empty() : this.excludedPackageNameMasks;
+    public Output<List<String>> excludedPackageNameMasks() {
+        return this.excludedPackageNameMasks == null ? Codegen.empty() : this.excludedPackageNameMasks;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includedPackageClassifications")
       private final @Nullable Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
 
-    public Output<Either<String,LinuxUpdateClasses>> getIncludedPackageClassifications() {
-        return this.includedPackageClassifications == null ? Output.empty() : this.includedPackageClassifications;
+    public Output<Either<String,LinuxUpdateClasses>> includedPackageClassifications() {
+        return this.includedPackageClassifications == null ? Codegen.empty() : this.includedPackageClassifications;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="includedPackageNameMasks")
       private final @Nullable Output<List<String>> includedPackageNameMasks;
 
-    public Output<List<String>> getIncludedPackageNameMasks() {
-        return this.includedPackageNameMasks == null ? Output.empty() : this.includedPackageNameMasks;
+    public Output<List<String>> includedPackageNameMasks() {
+        return this.includedPackageNameMasks == null ? Codegen.empty() : this.includedPackageNameMasks;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="rebootSetting")
       private final @Nullable Output<String> rebootSetting;
 
-    public Output<String> getRebootSetting() {
-        return this.rebootSetting == null ? Output.empty() : this.rebootSetting;
+    public Output<String> rebootSetting() {
+        return this.rebootSetting == null ? Codegen.empty() : this.rebootSetting;
     }
 
     public LinuxPropertiesArgs(
@@ -77,10 +78,10 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private LinuxPropertiesArgs() {
-        this.excludedPackageNameMasks = Output.empty();
-        this.includedPackageClassifications = Output.empty();
-        this.includedPackageNameMasks = Output.empty();
-        this.rebootSetting = Output.empty();
+        this.excludedPackageNameMasks = Codegen.empty();
+        this.includedPackageClassifications = Codegen.empty();
+        this.includedPackageNameMasks = Codegen.empty();
+        this.rebootSetting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder excludedPackageNameMasks(@Nullable List<String> excludedPackageNameMasks) {
-            this.excludedPackageNameMasks = Output.ofNullable(excludedPackageNameMasks);
+            this.excludedPackageNameMasks = Codegen.ofNullable(excludedPackageNameMasks);
             return this;
         }
         public Builder excludedPackageNameMasks(String... excludedPackageNameMasks) {
@@ -125,7 +126,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includedPackageClassifications(@Nullable Either<String,LinuxUpdateClasses> includedPackageClassifications) {
-            this.includedPackageClassifications = Output.ofNullable(includedPackageClassifications);
+            this.includedPackageClassifications = Codegen.ofNullable(includedPackageClassifications);
             return this;
         }
         public Builder includedPackageNameMasks(@Nullable Output<List<String>> includedPackageNameMasks) {
@@ -133,7 +134,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder includedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
-            this.includedPackageNameMasks = Output.ofNullable(includedPackageNameMasks);
+            this.includedPackageNameMasks = Codegen.ofNullable(includedPackageNameMasks);
             return this;
         }
         public Builder includedPackageNameMasks(String... includedPackageNameMasks) {
@@ -144,7 +145,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder rebootSetting(@Nullable String rebootSetting) {
-            this.rebootSetting = Output.ofNullable(rebootSetting);
+            this.rebootSetting = Codegen.ofNullable(rebootSetting);
             return this;
         }        public LinuxPropertiesArgs build() {
             return new LinuxPropertiesArgs(excludedPackageNameMasks, includedPackageClassifications, includedPackageNameMasks, rebootSetting);

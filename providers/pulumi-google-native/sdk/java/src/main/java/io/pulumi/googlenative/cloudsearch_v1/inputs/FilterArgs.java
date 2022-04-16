@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.CompositeFilterArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.ValueFilterArgs;
 import java.util.Objects;
@@ -22,15 +23,15 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="compositeFilter")
       private final @Nullable Output<CompositeFilterArgs> compositeFilter;
 
-    public Output<CompositeFilterArgs> getCompositeFilter() {
-        return this.compositeFilter == null ? Output.empty() : this.compositeFilter;
+    public Output<CompositeFilterArgs> compositeFilter() {
+        return this.compositeFilter == null ? Codegen.empty() : this.compositeFilter;
     }
 
     @Import(name="valueFilter")
       private final @Nullable Output<ValueFilterArgs> valueFilter;
 
-    public Output<ValueFilterArgs> getValueFilter() {
-        return this.valueFilter == null ? Output.empty() : this.valueFilter;
+    public Output<ValueFilterArgs> valueFilter() {
+        return this.valueFilter == null ? Codegen.empty() : this.valueFilter;
     }
 
     public FilterArgs(
@@ -41,8 +42,8 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FilterArgs() {
-        this.compositeFilter = Output.empty();
-        this.valueFilter = Output.empty();
+        this.compositeFilter = Codegen.empty();
+        this.valueFilter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder compositeFilter(@Nullable CompositeFilterArgs compositeFilter) {
-            this.compositeFilter = Output.ofNullable(compositeFilter);
+            this.compositeFilter = Codegen.ofNullable(compositeFilter);
             return this;
         }
         public Builder valueFilter(@Nullable Output<ValueFilterArgs> valueFilter) {
@@ -80,7 +81,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder valueFilter(@Nullable ValueFilterArgs valueFilter) {
-            this.valueFilter = Output.ofNullable(valueFilter);
+            this.valueFilter = Codegen.ofNullable(valueFilter);
             return this;
         }        public FilterArgs build() {
             return new FilterArgs(compositeFilter, valueFilter);

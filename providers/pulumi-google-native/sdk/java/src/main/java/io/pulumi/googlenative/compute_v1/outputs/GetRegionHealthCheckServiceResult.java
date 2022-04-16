@@ -96,77 +96,77 @@ public final class GetRegionHealthCheckServiceResult {
      * Creation timestamp in RFC3339 text format.
      * 
     */
-    public String getCreationTimestamp() {
+    public String creationTimestamp() {
         return this.creationTimestamp;
     }
     /**
      * An optional description of this resource. Provide this property when you create the resource.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a HealthCheckService. An up-to-date fingerprint must be provided in order to patch/update the HealthCheckService; Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve the HealthCheckService.
      * 
     */
-    public String getFingerprint() {
+    public String fingerprint() {
         return this.fingerprint;
     }
     /**
      * A list of URLs to the HealthCheck resources. Must have at least one HealthCheck, and not more than 10. HealthCheck resources must have portSpecification=USE_SERVING_PORT or portSpecification=USE_FIXED_PORT. For regional HealthCheckService, the HealthCheck must be regional and in the same region. For global HealthCheckService, HealthCheck must be global. Mix of regional and global HealthChecks is not supported. Multiple regional HealthChecks must belong to the same region. Regional HealthChecks must belong to the same region as zones of NEGs.
      * 
     */
-    public List<String> getHealthChecks() {
+    public List<String> healthChecks() {
         return this.healthChecks;
     }
     /**
      * Optional. Policy for how the results from multiple health checks for the same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified. - NO_AGGREGATION. An EndpointHealth message is returned for each pair in the health check service. - AND. If any health check of an endpoint reports UNHEALTHY, then UNHEALTHY is the HealthState of the endpoint. If all health checks report HEALTHY, the HealthState of the endpoint is HEALTHY. .
      * 
     */
-    public String getHealthStatusAggregationPolicy() {
+    public String healthStatusAggregationPolicy() {
         return this.healthStatusAggregationPolicy;
     }
     /**
      * [Output only] Type of the resource. Always compute#healthCheckServicefor health check services.
      * 
     */
-    public String getKind() {
+    public String kind() {
         return this.kind;
     }
     /**
      * Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * A list of URLs to the NetworkEndpointGroup resources. Must not have more than 100. For regional HealthCheckService, NEGs must be in zones in the region of the HealthCheckService.
      * 
     */
-    public List<String> getNetworkEndpointGroups() {
+    public List<String> networkEndpointGroups() {
         return this.networkEndpointGroups;
     }
     /**
      * A list of URLs to the NotificationEndpoint resources. Must not have more than 10. A list of endpoints for receiving notifications of change in health status. For regional HealthCheckService, NotificationEndpoint must be regional and in the same region. For global HealthCheckService, NotificationEndpoint must be global.
      * 
     */
-    public List<String> getNotificationEndpoints() {
+    public List<String> notificationEndpoints() {
         return this.notificationEndpoints;
     }
     /**
      * URL of the region where the health check service resides. This field is not applicable to global health check services. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
     */
-    public String getRegion() {
+    public String region() {
         return this.region;
     }
     /**
      * Server-defined URL for the resource.
      * 
     */
-    public String getSelfLink() {
+    public String selfLink() {
         return this.selfLink;
     }
 

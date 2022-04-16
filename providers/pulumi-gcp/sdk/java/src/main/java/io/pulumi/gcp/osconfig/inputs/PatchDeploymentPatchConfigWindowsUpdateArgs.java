@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
     @Import(name="classifications")
       private final @Nullable Output<List<String>> classifications;
 
-    public Output<List<String>> getClassifications() {
-        return this.classifications == null ? Output.empty() : this.classifications;
+    public Output<List<String>> classifications() {
+        return this.classifications == null ? Codegen.empty() : this.classifications;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
     @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+    public Output<List<String>> excludes() {
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
     @Import(name="exclusivePatches")
       private final @Nullable Output<List<String>> exclusivePatches;
 
-    public Output<List<String>> getExclusivePatches() {
-        return this.exclusivePatches == null ? Output.empty() : this.exclusivePatches;
+    public Output<List<String>> exclusivePatches() {
+        return this.exclusivePatches == null ? Codegen.empty() : this.exclusivePatches;
     }
 
     public PatchDeploymentPatchConfigWindowsUpdateArgs(
@@ -60,9 +61,9 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
     }
 
     private PatchDeploymentPatchConfigWindowsUpdateArgs() {
-        this.classifications = Output.empty();
-        this.excludes = Output.empty();
-        this.exclusivePatches = Output.empty();
+        this.classifications = Codegen.empty();
+        this.excludes = Codegen.empty();
+        this.exclusivePatches = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
             return this;
         }
         public Builder classifications(@Nullable List<String> classifications) {
-            this.classifications = Output.ofNullable(classifications);
+            this.classifications = Codegen.ofNullable(classifications);
             return this;
         }
         public Builder classifications(String... classifications) {
@@ -105,7 +106,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
             return this;
         }
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder excludes(String... excludes) {
@@ -116,7 +117,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
             return this;
         }
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
-            this.exclusivePatches = Output.ofNullable(exclusivePatches);
+            this.exclusivePatches = Codegen.ofNullable(exclusivePatches);
             return this;
         }
         public Builder exclusivePatches(String... exclusivePatches) {

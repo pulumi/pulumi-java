@@ -5,6 +5,7 @@ package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesGetArgs;
 import io.pulumi.gcp.filestore.inputs.InstanceNetworkGetArgs;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
-    public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+    public Output<String> createTime() {
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
-    public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+    public Output<String> etag() {
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -60,8 +61,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileShares")
       private final @Nullable Output<InstanceFileSharesGetArgs> fileShares;
 
-    public Output<InstanceFileSharesGetArgs> getFileShares() {
-        return this.fileShares == null ? Output.empty() : this.fileShares;
+    public Output<InstanceFileSharesGetArgs> fileShares() {
+        return this.fileShares == null ? Codegen.empty() : this.fileShares;
     }
 
     /**
@@ -71,8 +72,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+    public Output<Map<String,String>> labels() {
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -82,8 +83,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -93,8 +94,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -106,8 +107,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="networks")
       private final @Nullable Output<List<InstanceNetworkGetArgs>> networks;
 
-    public Output<List<InstanceNetworkGetArgs>> getNetworks() {
-        return this.networks == null ? Output.empty() : this.networks;
+    public Output<List<InstanceNetworkGetArgs>> networks() {
+        return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     /**
@@ -118,8 +119,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     @Import(name="tier")
       private final @Nullable Output<String> tier;
 
-    public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+    public Output<String> tier() {
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     /**
@@ -148,8 +149,8 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> zone;
 
     @Deprecated /* Deprecated in favor of location. */
-    public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+    public Output<String> zone() {
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceState(
@@ -178,17 +179,17 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.fileShares = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.networks = Output.empty();
-        this.project = Output.empty();
-        this.tier = Output.empty();
-        this.zone = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.fileShares = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networks = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -236,7 +237,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -244,7 +245,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -252,7 +253,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder fileShares(@Nullable Output<InstanceFileSharesGetArgs> fileShares) {
@@ -260,7 +261,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileShares(@Nullable InstanceFileSharesGetArgs fileShares) {
-            this.fileShares = Output.ofNullable(fileShares);
+            this.fileShares = Codegen.ofNullable(fileShares);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -268,7 +269,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -276,7 +277,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -284,7 +285,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networks(@Nullable Output<List<InstanceNetworkGetArgs>> networks) {
@@ -292,7 +293,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networks(@Nullable List<InstanceNetworkGetArgs> networks) {
-            this.networks = Output.ofNullable(networks);
+            this.networks = Codegen.ofNullable(networks);
             return this;
         }
         public Builder networks(InstanceNetworkGetArgs... networks) {
@@ -303,7 +304,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -311,7 +312,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -319,7 +320,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceState build() {
             return new InstanceState(createTime, description, etag, fileShares, labels, location, name, networks, project, tier, zone);

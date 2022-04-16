@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
-    public Output<String> getAccountName() {
+    public Output<String> accountName() {
         return this.accountName;
     }
 
@@ -33,8 +34,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="allowUpdates")
       private final @Nullable Output<Boolean> allowUpdates;
 
-    public Output<Boolean> getAllowUpdates() {
-        return this.allowUpdates == null ? Output.empty() : this.allowUpdates;
+    public Output<Boolean> allowUpdates() {
+        return this.allowUpdates == null ? Codegen.empty() : this.allowUpdates;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
-    public Output<String> getApplicationName() {
-        return this.applicationName == null ? Output.empty() : this.applicationName;
+    public Output<String> applicationName() {
+        return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultVersion")
       private final @Nullable Output<String> defaultVersion;
 
-    public Output<String> getDefaultVersion() {
-        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
+    public Output<String> defaultVersion() {
+        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
-    public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+    public Output<String> displayName() {
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -97,12 +98,12 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.accountName = Output.empty();
-        this.allowUpdates = Output.empty();
-        this.applicationName = Output.empty();
-        this.defaultVersion = Output.empty();
-        this.displayName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.allowUpdates = Codegen.empty();
+        this.applicationName = Codegen.empty();
+        this.defaultVersion = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowUpdates(@Nullable Boolean allowUpdates) {
-            this.allowUpdates = Output.ofNullable(allowUpdates);
+            this.allowUpdates = Codegen.ofNullable(allowUpdates);
             return this;
         }
         public Builder applicationName(@Nullable Output<String> applicationName) {
@@ -156,7 +157,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Output.ofNullable(applicationName);
+            this.applicationName = Codegen.ofNullable(applicationName);
             return this;
         }
         public Builder defaultVersion(@Nullable Output<String> defaultVersion) {
@@ -164,7 +165,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultVersion(@Nullable String defaultVersion) {
-            this.defaultVersion = Output.ofNullable(defaultVersion);
+            this.defaultVersion = Codegen.ofNullable(defaultVersion);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -172,7 +173,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

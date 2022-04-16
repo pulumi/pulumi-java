@@ -10,6 +10,7 @@ import io.pulumi.aws.lex.outputs.BotAliasConversationLogs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -41,7 +42,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return The ARN of the bot alias.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return The name of the bot.
      * 
      */
-    public Output<String> getBotName() {
+    public Output<String> botName() {
         return this.botName;
     }
     /**
@@ -69,7 +70,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return The name of the bot.
      * 
      */
-    public Output<String> getBotVersion() {
+    public Output<String> botVersion() {
         return this.botVersion;
     }
     /**
@@ -83,7 +84,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return Checksum of the bot alias.
      * 
      */
-    public Output<String> getChecksum() {
+    public Output<String> checksum() {
         return this.checksum;
     }
     /**
@@ -97,7 +98,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
      * 
      */
-    public Output</* @Nullable */ BotAliasConversationLogs> getConversationLogs() {
+    public Output</* @Nullable */ BotAliasConversationLogs> conversationLogs() {
         return this.conversationLogs;
     }
     /**
@@ -111,7 +112,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return The date that the bot alias was created.
      * 
      */
-    public Output<String> getCreatedDate() {
+    public Output<String> createdDate() {
         return this.createdDate;
     }
     /**
@@ -125,7 +126,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return A description of the alias. Must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -139,7 +140,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
      * 
      */
-    public Output<String> getLastUpdatedDate() {
+    public Output<String> lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
@@ -153,7 +154,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @return The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -179,7 +180,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BotAlias(String name, BotAliasArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lex/botAlias:BotAlias", name, args == null ? BotAliasArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lex/botAlias:BotAlias", name, args == null ? BotAliasArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BotAlias(String name, Output<String> id, @Nullable BotAliasState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

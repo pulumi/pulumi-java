@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,8 +25,8 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
     @Import(name="payload")
       private final @Nullable Output<DetectorModelPayloadArgs> payload;
 
-    public Output<DetectorModelPayloadArgs> getPayload() {
-        return this.payload == null ? Output.empty() : this.payload;
+    public Output<DetectorModelPayloadArgs> payload() {
+        return this.payload == null ? Codegen.empty() : this.payload;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
     @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
-    public Output<String> getTableName() {
+    public Output<String> tableName() {
         return this.tableName;
     }
 
@@ -47,8 +48,8 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
     }
 
     private DetectorModelDynamoDBv2Args() {
-        this.payload = Output.empty();
-        this.tableName = Output.empty();
+        this.payload = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class DetectorModelDynamoDBv2Args extends io.pulumi.resources.Resou
             return this;
         }
         public Builder payload(@Nullable DetectorModelPayloadArgs payload) {
-            this.payload = Output.ofNullable(payload);
+            this.payload = Codegen.ofNullable(payload);
             return this;
         }
         public Builder tableName(Output<String> tableName) {

@@ -9,6 +9,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,85 +28,85 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
     @Import(name="crawlAttachments")
       private final @Nullable Output<Boolean> crawlAttachments;
 
-    public Output<Boolean> getCrawlAttachments() {
-        return this.crawlAttachments == null ? Output.empty() : this.crawlAttachments;
+    public Output<Boolean> crawlAttachments() {
+        return this.crawlAttachments == null ? Codegen.empty() : this.crawlAttachments;
     }
 
     @Import(name="disableLocalGroups")
       private final @Nullable Output<Boolean> disableLocalGroups;
 
-    public Output<Boolean> getDisableLocalGroups() {
-        return this.disableLocalGroups == null ? Output.empty() : this.disableLocalGroups;
+    public Output<Boolean> disableLocalGroups() {
+        return this.disableLocalGroups == null ? Codegen.empty() : this.disableLocalGroups;
     }
 
     @Import(name="documentTitleFieldName")
       private final @Nullable Output<String> documentTitleFieldName;
 
-    public Output<String> getDocumentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Output.empty() : this.documentTitleFieldName;
+    public Output<String> documentTitleFieldName() {
+        return this.documentTitleFieldName == null ? Codegen.empty() : this.documentTitleFieldName;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
-    public Output<List<String>> getExclusionPatterns() {
-        return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
+    public Output<List<String>> exclusionPatterns() {
+        return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
-    public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
+    public Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings() {
+        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
-    public Output<List<String>> getInclusionPatterns() {
-        return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
+    public Output<List<String>> inclusionPatterns() {
+        return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
-    public Output<String> getSecretArn() {
+    public Output<String> secretArn() {
         return this.secretArn;
     }
 
     @Import(name="sharePointVersion", required=true)
       private final Output<DataSourceSharePointConfigurationSharePointVersion> sharePointVersion;
 
-    public Output<DataSourceSharePointConfigurationSharePointVersion> getSharePointVersion() {
+    public Output<DataSourceSharePointConfigurationSharePointVersion> sharePointVersion() {
         return this.sharePointVersion;
     }
 
     @Import(name="sslCertificateS3Path")
       private final @Nullable Output<DataSourceS3PathArgs> sslCertificateS3Path;
 
-    public Output<DataSourceS3PathArgs> getSslCertificateS3Path() {
-        return this.sslCertificateS3Path == null ? Output.empty() : this.sslCertificateS3Path;
+    public Output<DataSourceS3PathArgs> sslCertificateS3Path() {
+        return this.sslCertificateS3Path == null ? Codegen.empty() : this.sslCertificateS3Path;
     }
 
     @Import(name="urls", required=true)
       private final Output<List<String>> urls;
 
-    public Output<List<String>> getUrls() {
+    public Output<List<String>> urls() {
         return this.urls;
     }
 
     @Import(name="useChangeLog")
       private final @Nullable Output<Boolean> useChangeLog;
 
-    public Output<Boolean> getUseChangeLog() {
-        return this.useChangeLog == null ? Output.empty() : this.useChangeLog;
+    public Output<Boolean> useChangeLog() {
+        return this.useChangeLog == null ? Codegen.empty() : this.useChangeLog;
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
-    public Output<DataSourceVpcConfigurationArgs> getVpcConfiguration() {
-        return this.vpcConfiguration == null ? Output.empty() : this.vpcConfiguration;
+    public Output<DataSourceVpcConfigurationArgs> vpcConfiguration() {
+        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 
     public DataSourceSharePointConfigurationArgs(
@@ -136,18 +137,18 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
     }
 
     private DataSourceSharePointConfigurationArgs() {
-        this.crawlAttachments = Output.empty();
-        this.disableLocalGroups = Output.empty();
-        this.documentTitleFieldName = Output.empty();
-        this.exclusionPatterns = Output.empty();
-        this.fieldMappings = Output.empty();
-        this.inclusionPatterns = Output.empty();
-        this.secretArn = Output.empty();
-        this.sharePointVersion = Output.empty();
-        this.sslCertificateS3Path = Output.empty();
-        this.urls = Output.empty();
-        this.useChangeLog = Output.empty();
-        this.vpcConfiguration = Output.empty();
+        this.crawlAttachments = Codegen.empty();
+        this.disableLocalGroups = Codegen.empty();
+        this.documentTitleFieldName = Codegen.empty();
+        this.exclusionPatterns = Codegen.empty();
+        this.fieldMappings = Codegen.empty();
+        this.inclusionPatterns = Codegen.empty();
+        this.secretArn = Codegen.empty();
+        this.sharePointVersion = Codegen.empty();
+        this.sslCertificateS3Path = Codegen.empty();
+        this.urls = Codegen.empty();
+        this.useChangeLog = Codegen.empty();
+        this.vpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = Output.ofNullable(crawlAttachments);
+            this.crawlAttachments = Codegen.ofNullable(crawlAttachments);
             return this;
         }
         public Builder disableLocalGroups(@Nullable Output<Boolean> disableLocalGroups) {
@@ -205,7 +206,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
-            this.disableLocalGroups = Output.ofNullable(disableLocalGroups);
+            this.disableLocalGroups = Codegen.ofNullable(disableLocalGroups);
             return this;
         }
         public Builder documentTitleFieldName(@Nullable Output<String> documentTitleFieldName) {
@@ -213,7 +214,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = Output.ofNullable(documentTitleFieldName);
+            this.documentTitleFieldName = Codegen.ofNullable(documentTitleFieldName);
             return this;
         }
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
@@ -221,7 +222,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
+            this.exclusionPatterns = Codegen.ofNullable(exclusionPatterns);
             return this;
         }
         public Builder exclusionPatterns(String... exclusionPatterns) {
@@ -232,7 +233,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Output.ofNullable(fieldMappings);
+            this.fieldMappings = Codegen.ofNullable(fieldMappings);
             return this;
         }
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
@@ -243,7 +244,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
+            this.inclusionPatterns = Codegen.ofNullable(inclusionPatterns);
             return this;
         }
         public Builder inclusionPatterns(String... inclusionPatterns) {
@@ -270,7 +271,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder sslCertificateS3Path(@Nullable DataSourceS3PathArgs sslCertificateS3Path) {
-            this.sslCertificateS3Path = Output.ofNullable(sslCertificateS3Path);
+            this.sslCertificateS3Path = Codegen.ofNullable(sslCertificateS3Path);
             return this;
         }
         public Builder urls(Output<List<String>> urls) {
@@ -289,7 +290,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder useChangeLog(@Nullable Boolean useChangeLog) {
-            this.useChangeLog = Output.ofNullable(useChangeLog);
+            this.useChangeLog = Codegen.ofNullable(useChangeLog);
             return this;
         }
         public Builder vpcConfiguration(@Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration) {
@@ -297,7 +298,7 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
+            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
             return this;
         }        public DataSourceSharePointConfigurationArgs build() {
             return new DataSourceSharePointConfigurationArgs(crawlAttachments, disableLocalGroups, documentTitleFieldName, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn, sharePointVersion, sslCertificateS3Path, urls, useChangeLog, vpcConfiguration);

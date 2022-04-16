@@ -5,6 +5,7 @@ package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     @Import(name="host", required=true)
       private final Output<String> host;
 
-    public Output<String> getHost() {
+    public Output<String> host() {
         return this.host;
     }
 
@@ -33,8 +34,8 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
 
@@ -55,7 +56,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
-    public Output<String> getProtocol() {
+    public Output<String> protocol() {
         return this.protocol;
     }
 
@@ -66,7 +67,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
-    public Output<Integer> getWeight() {
+    public Output<Integer> weight() {
         return this.weight;
     }
 
@@ -84,11 +85,11 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
     }
 
     private VoiceConnectorOrganizationRouteGetArgs() {
-        this.host = Output.empty();
-        this.port = Output.empty();
-        this.priority = Output.empty();
-        this.protocol = Output.empty();
-        this.weight = Output.empty();
+        this.host = Codegen.empty();
+        this.port = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class VoiceConnectorOrganizationRouteGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder priority(Output<Integer> priority) {

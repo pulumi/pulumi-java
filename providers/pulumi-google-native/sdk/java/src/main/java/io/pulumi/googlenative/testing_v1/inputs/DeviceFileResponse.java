@@ -24,7 +24,7 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="obbFile", required=true)
       private final ObbFileResponse obbFile;
 
-    public ObbFileResponse getObbFile() {
+    public ObbFileResponse obbFile() {
         return this.obbFile;
     }
 
@@ -35,7 +35,7 @@ public final class DeviceFileResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="regularFile", required=true)
       private final RegularFileResponse regularFile;
 
-    public RegularFileResponse getRegularFile() {
+    public RegularFileResponse regularFile() {
         return this.regularFile;
     }
 

@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.IngressArgs;
@@ -47,7 +48,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    public Output</* @Nullable */ String> getApiVersion() {
+    public Output</* @Nullable */ String> apiVersion() {
         return this.apiVersion;
     }
     /**
@@ -61,7 +62,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -75,7 +76,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    public Output</* @Nullable */ ObjectMeta> getMetadata() {
+    public Output</* @Nullable */ ObjectMeta> metadata() {
         return this.metadata;
     }
     /**
@@ -89,7 +90,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return Spec is the desired state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    public Output</* @Nullable */ IngressSpec> getSpec() {
+    public Output</* @Nullable */ IngressSpec> spec() {
         return this.spec;
     }
     /**
@@ -103,7 +104,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @return Status is the current state of the Ingress. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    public Output</* @Nullable */ IngressStatus> getStatus() {
+    public Output</* @Nullable */ IngressStatus> status() {
         return this.status;
     }
 
@@ -129,7 +130,7 @@ public class Ingress extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Ingress(String name, @Nullable IngressArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:networking.k8s.io/v1beta1:Ingress", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:networking.k8s.io/v1beta1:Ingress", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Ingress(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

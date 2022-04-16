@@ -11,6 +11,7 @@ import io.pulumi.aws.networkfirewall.outputs.FirewallSubnetMapping;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) that identifies the firewall.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -58,7 +59,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getDeleteProtection() {
+    public Output</* @Nullable */ Boolean> deleteProtection() {
         return this.deleteProtection;
     }
     /**
@@ -72,7 +73,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return A friendly description of the firewall.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -86,7 +87,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the VPC Firewall policy.
      * 
      */
-    public Output<String> getFirewallPolicyArn() {
+    public Output<String> firewallPolicyArn() {
         return this.firewallPolicyArn;
     }
     /**
@@ -100,7 +101,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getFirewallPolicyChangeProtection() {
+    public Output</* @Nullable */ Boolean> firewallPolicyChangeProtection() {
         return this.firewallPolicyChangeProtection;
     }
     /**
@@ -114,7 +115,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return Nested list of information about the current status of the firewall.
      * 
      */
-    public Output<List<FirewallFirewallStatus>> getFirewallStatuses() {
+    public Output<List<FirewallFirewallStatus>> firewallStatuses() {
         return this.firewallStatuses;
     }
     /**
@@ -128,7 +129,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return A friendly name of the firewall.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -142,7 +143,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> getSubnetChangeProtection() {
+    public Output</* @Nullable */ Boolean> subnetChangeProtection() {
         return this.subnetChangeProtection;
     }
     /**
@@ -156,7 +157,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
      * 
      */
-    public Output<List<FirewallSubnetMapping>> getSubnetMappings() {
+    public Output<List<FirewallSubnetMapping>> subnetMappings() {
         return this.subnetMappings;
     }
     /**
@@ -170,7 +171,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return Map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -184,7 +185,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -198,7 +199,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return A string token used when updating a firewall.
      * 
      */
-    public Output<String> getUpdateToken() {
+    public Output<String> updateToken() {
         return this.updateToken;
     }
     /**
@@ -212,7 +213,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of the VPC where AWS Network Firewall should create the firewall.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -238,7 +239,7 @@ public class Firewall extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Firewall(String name, FirewallArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:networkfirewall/firewall:Firewall", name, args == null ? FirewallArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:networkfirewall/firewall:Firewall", name, args == null ? FirewallArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Firewall(String name, Output<String> id, @Nullable FirewallState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

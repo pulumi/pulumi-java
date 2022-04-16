@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -21,7 +22,7 @@ public final class VirtualRouterSpecArgs extends io.pulumi.resources.ResourceArg
     @Import(name="listener", required=true)
       private final Output<VirtualRouterSpecListenerArgs> listener;
 
-    public Output<VirtualRouterSpecListenerArgs> getListener() {
+    public Output<VirtualRouterSpecListenerArgs> listener() {
         return this.listener;
     }
 
@@ -30,7 +31,7 @@ public final class VirtualRouterSpecArgs extends io.pulumi.resources.ResourceArg
     }
 
     private VirtualRouterSpecArgs() {
-        this.listener = Output.empty();
+        this.listener = Codegen.empty();
     }
 
     public static Builder builder() {

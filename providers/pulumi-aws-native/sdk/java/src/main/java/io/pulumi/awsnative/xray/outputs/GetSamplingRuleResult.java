@@ -39,22 +39,22 @@ public final class GetSamplingRuleResult {
         this.tags = tags;
     }
 
-    public Optional<String> getRuleARN() {
+    public Optional<String> ruleARN() {
         return Optional.ofNullable(this.ruleARN);
     }
-    public Optional<String> getRuleName() {
+    public Optional<String> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
-    public Optional<SamplingRule> getSamplingRule() {
+    public Optional<SamplingRule> samplingRule() {
         return Optional.ofNullable(this.samplingRule);
     }
-    public Optional<SamplingRuleRecord> getSamplingRuleRecord() {
+    public Optional<SamplingRuleRecord> samplingRuleRecord() {
         return Optional.ofNullable(this.samplingRuleRecord);
     }
-    public Optional<SamplingRuleUpdate> getSamplingRuleUpdate() {
+    public Optional<SamplingRuleUpdate> samplingRuleUpdate() {
         return Optional.ofNullable(this.samplingRuleUpdate);
     }
-    public List<TagsItemProperties> getTags() {
+    public List<TagsItemProperties> tags() {
         return this.tags == null ? List.of() : this.tags;
     }
 

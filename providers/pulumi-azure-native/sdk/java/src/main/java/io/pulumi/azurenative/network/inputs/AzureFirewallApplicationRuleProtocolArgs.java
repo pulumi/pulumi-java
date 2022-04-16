@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.AzureFirewallApplicationRuleProtocolT
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,8 +29,8 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
     @Import(name="protocolType")
       private final @Nullable Output<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType;
 
-    public Output<Either<String,AzureFirewallApplicationRuleProtocolType>> getProtocolType() {
-        return this.protocolType == null ? Output.empty() : this.protocolType;
+    public Output<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType() {
+        return this.protocolType == null ? Codegen.empty() : this.protocolType;
     }
 
     public AzureFirewallApplicationRuleProtocolArgs(
@@ -51,8 +52,8 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
     }
 
     private AzureFirewallApplicationRuleProtocolArgs() {
-        this.port = Output.empty();
-        this.protocolType = Output.empty();
+        this.port = Codegen.empty();
+        this.protocolType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocolType(@Nullable Output<Either<String,AzureFirewallApplicationRuleProtocolType>> protocolType) {
@@ -90,7 +91,7 @@ public final class AzureFirewallApplicationRuleProtocolArgs extends io.pulumi.re
             return this;
         }
         public Builder protocolType(@Nullable Either<String,AzureFirewallApplicationRuleProtocolType> protocolType) {
-            this.protocolType = Output.ofNullable(protocolType);
+            this.protocolType = Codegen.ofNullable(protocolType);
             return this;
         }        public AzureFirewallApplicationRuleProtocolArgs build() {
             return new AzureFirewallApplicationRuleProtocolArgs(port, protocolType);

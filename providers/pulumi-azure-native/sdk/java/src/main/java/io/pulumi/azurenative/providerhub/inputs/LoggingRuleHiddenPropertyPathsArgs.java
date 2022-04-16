@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,15 +19,15 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
     @Import(name="hiddenPathsOnRequest")
       private final @Nullable Output<List<String>> hiddenPathsOnRequest;
 
-    public Output<List<String>> getHiddenPathsOnRequest() {
-        return this.hiddenPathsOnRequest == null ? Output.empty() : this.hiddenPathsOnRequest;
+    public Output<List<String>> hiddenPathsOnRequest() {
+        return this.hiddenPathsOnRequest == null ? Codegen.empty() : this.hiddenPathsOnRequest;
     }
 
     @Import(name="hiddenPathsOnResponse")
       private final @Nullable Output<List<String>> hiddenPathsOnResponse;
 
-    public Output<List<String>> getHiddenPathsOnResponse() {
-        return this.hiddenPathsOnResponse == null ? Output.empty() : this.hiddenPathsOnResponse;
+    public Output<List<String>> hiddenPathsOnResponse() {
+        return this.hiddenPathsOnResponse == null ? Codegen.empty() : this.hiddenPathsOnResponse;
     }
 
     public LoggingRuleHiddenPropertyPathsArgs(
@@ -37,8 +38,8 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
     }
 
     private LoggingRuleHiddenPropertyPathsArgs() {
-        this.hiddenPathsOnRequest = Output.empty();
-        this.hiddenPathsOnResponse = Output.empty();
+        this.hiddenPathsOnRequest = Codegen.empty();
+        this.hiddenPathsOnResponse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
             return this;
         }
         public Builder hiddenPathsOnRequest(@Nullable List<String> hiddenPathsOnRequest) {
-            this.hiddenPathsOnRequest = Output.ofNullable(hiddenPathsOnRequest);
+            this.hiddenPathsOnRequest = Codegen.ofNullable(hiddenPathsOnRequest);
             return this;
         }
         public Builder hiddenPathsOnRequest(String... hiddenPathsOnRequest) {
@@ -79,7 +80,7 @@ public final class LoggingRuleHiddenPropertyPathsArgs extends io.pulumi.resource
             return this;
         }
         public Builder hiddenPathsOnResponse(@Nullable List<String> hiddenPathsOnResponse) {
-            this.hiddenPathsOnResponse = Output.ofNullable(hiddenPathsOnResponse);
+            this.hiddenPathsOnResponse = Codegen.ofNullable(hiddenPathsOnResponse);
             return this;
         }
         public Builder hiddenPathsOnResponse(String... hiddenPathsOnResponse) {

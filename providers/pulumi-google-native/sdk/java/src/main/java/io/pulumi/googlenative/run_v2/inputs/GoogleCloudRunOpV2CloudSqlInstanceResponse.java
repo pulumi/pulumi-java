@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse extends io.pulumi.
     @Import(name="connections", required=true)
       private final List<String> connections;
 
-    public List<String> getConnections() {
+    public List<String> connections() {
         return this.connections;
     }
 

@@ -12,6 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.SetupScriptsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -32,8 +33,8 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="applicationSharingPolicy")
       private final @Nullable Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy;
 
-    public Output<Either<String,ApplicationSharingPolicy>> getApplicationSharingPolicy() {
-        return this.applicationSharingPolicy == null ? Output.empty() : this.applicationSharingPolicy;
+    public Output<Either<String,ApplicationSharingPolicy>> applicationSharingPolicy() {
+        return this.applicationSharingPolicy == null ? Codegen.empty() : this.applicationSharingPolicy;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="computeInstanceAuthorizationType")
       private final @Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType;
 
-    public Output<Either<String,ComputeInstanceAuthorizationType>> getComputeInstanceAuthorizationType() {
-        return this.computeInstanceAuthorizationType == null ? Output.empty() : this.computeInstanceAuthorizationType;
+    public Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType() {
+        return this.computeInstanceAuthorizationType == null ? Codegen.empty() : this.computeInstanceAuthorizationType;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="personalComputeInstanceSettings")
       private final @Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings;
 
-    public Output<PersonalComputeInstanceSettingsArgs> getPersonalComputeInstanceSettings() {
-        return this.personalComputeInstanceSettings == null ? Output.empty() : this.personalComputeInstanceSettings;
+    public Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings() {
+        return this.personalComputeInstanceSettings == null ? Codegen.empty() : this.personalComputeInstanceSettings;
     }
 
     /**
@@ -65,8 +66,8 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="setupScripts")
       private final @Nullable Output<SetupScriptsArgs> setupScripts;
 
-    public Output<SetupScriptsArgs> getSetupScripts() {
-        return this.setupScripts == null ? Output.empty() : this.setupScripts;
+    public Output<SetupScriptsArgs> setupScripts() {
+        return this.setupScripts == null ? Codegen.empty() : this.setupScripts;
     }
 
     /**
@@ -76,8 +77,8 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="sshSettings")
       private final @Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings;
 
-    public Output<ComputeInstanceSshSettingsArgs> getSshSettings() {
-        return this.sshSettings == null ? Output.empty() : this.sshSettings;
+    public Output<ComputeInstanceSshSettingsArgs> sshSettings() {
+        return this.sshSettings == null ? Codegen.empty() : this.sshSettings;
     }
 
     /**
@@ -87,8 +88,8 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="subnet")
       private final @Nullable Output<ResourceIdArgs> subnet;
 
-    public Output<ResourceIdArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+    public Output<ResourceIdArgs> subnet() {
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -98,8 +99,8 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
-    public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+    public Output<String> vmSize() {
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     public ComputeInstancePropertiesArgs(
@@ -120,13 +121,13 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
     }
 
     private ComputeInstancePropertiesArgs() {
-        this.applicationSharingPolicy = Output.empty();
-        this.computeInstanceAuthorizationType = Output.empty();
-        this.personalComputeInstanceSettings = Output.empty();
-        this.setupScripts = Output.empty();
-        this.sshSettings = Output.empty();
-        this.subnet = Output.empty();
-        this.vmSize = Output.empty();
+        this.applicationSharingPolicy = Codegen.empty();
+        this.computeInstanceAuthorizationType = Codegen.empty();
+        this.personalComputeInstanceSettings = Codegen.empty();
+        this.setupScripts = Codegen.empty();
+        this.sshSettings = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder applicationSharingPolicy(@Nullable Either<String,ApplicationSharingPolicy> applicationSharingPolicy) {
-            this.applicationSharingPolicy = Output.ofNullable(applicationSharingPolicy);
+            this.applicationSharingPolicy = Codegen.ofNullable(applicationSharingPolicy);
             return this;
         }
         public Builder computeInstanceAuthorizationType(@Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
@@ -174,7 +175,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder computeInstanceAuthorizationType(@Nullable Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
-            this.computeInstanceAuthorizationType = Output.ofNullable(computeInstanceAuthorizationType);
+            this.computeInstanceAuthorizationType = Codegen.ofNullable(computeInstanceAuthorizationType);
             return this;
         }
         public Builder personalComputeInstanceSettings(@Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {
@@ -182,7 +183,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder personalComputeInstanceSettings(@Nullable PersonalComputeInstanceSettingsArgs personalComputeInstanceSettings) {
-            this.personalComputeInstanceSettings = Output.ofNullable(personalComputeInstanceSettings);
+            this.personalComputeInstanceSettings = Codegen.ofNullable(personalComputeInstanceSettings);
             return this;
         }
         public Builder setupScripts(@Nullable Output<SetupScriptsArgs> setupScripts) {
@@ -190,7 +191,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder setupScripts(@Nullable SetupScriptsArgs setupScripts) {
-            this.setupScripts = Output.ofNullable(setupScripts);
+            this.setupScripts = Codegen.ofNullable(setupScripts);
             return this;
         }
         public Builder sshSettings(@Nullable Output<ComputeInstanceSshSettingsArgs> sshSettings) {
@@ -198,7 +199,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sshSettings(@Nullable ComputeInstanceSshSettingsArgs sshSettings) {
-            this.sshSettings = Output.ofNullable(sshSettings);
+            this.sshSettings = Codegen.ofNullable(sshSettings);
             return this;
         }
         public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
@@ -206,7 +207,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder subnet(@Nullable ResourceIdArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder vmSize(@Nullable Output<String> vmSize) {
@@ -214,7 +215,7 @@ public final class ComputeInstancePropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }        public ComputeInstancePropertiesArgs build() {
             return new ComputeInstancePropertiesArgs(applicationSharingPolicy, computeInstanceAuthorizationType, personalComputeInstanceSettings, setupScripts, sshSettings, subnet, vmSize);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.inspectorv2.inputs.FilterNumberFilterArgs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,43 +19,43 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     @Import(name="architecture")
       private final @Nullable Output<FilterStringFilterArgs> architecture;
 
-    public Output<FilterStringFilterArgs> getArchitecture() {
-        return this.architecture == null ? Output.empty() : this.architecture;
+    public Output<FilterStringFilterArgs> architecture() {
+        return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
     @Import(name="epoch")
       private final @Nullable Output<FilterNumberFilterArgs> epoch;
 
-    public Output<FilterNumberFilterArgs> getEpoch() {
-        return this.epoch == null ? Output.empty() : this.epoch;
+    public Output<FilterNumberFilterArgs> epoch() {
+        return this.epoch == null ? Codegen.empty() : this.epoch;
     }
 
     @Import(name="name")
       private final @Nullable Output<FilterStringFilterArgs> name;
 
-    public Output<FilterStringFilterArgs> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<FilterStringFilterArgs> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="release")
       private final @Nullable Output<FilterStringFilterArgs> release;
 
-    public Output<FilterStringFilterArgs> getRelease() {
-        return this.release == null ? Output.empty() : this.release;
+    public Output<FilterStringFilterArgs> release() {
+        return this.release == null ? Codegen.empty() : this.release;
     }
 
     @Import(name="sourceLayerHash")
       private final @Nullable Output<FilterStringFilterArgs> sourceLayerHash;
 
-    public Output<FilterStringFilterArgs> getSourceLayerHash() {
-        return this.sourceLayerHash == null ? Output.empty() : this.sourceLayerHash;
+    public Output<FilterStringFilterArgs> sourceLayerHash() {
+        return this.sourceLayerHash == null ? Codegen.empty() : this.sourceLayerHash;
     }
 
     @Import(name="version")
       private final @Nullable Output<FilterStringFilterArgs> version;
 
-    public Output<FilterStringFilterArgs> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+    public Output<FilterStringFilterArgs> version() {
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public FilterPackageFilterArgs(
@@ -73,12 +74,12 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
     }
 
     private FilterPackageFilterArgs() {
-        this.architecture = Output.empty();
-        this.epoch = Output.empty();
-        this.name = Output.empty();
-        this.release = Output.empty();
-        this.sourceLayerHash = Output.empty();
-        this.version = Output.empty();
+        this.architecture = Codegen.empty();
+        this.epoch = Codegen.empty();
+        this.name = Codegen.empty();
+        this.release = Codegen.empty();
+        this.sourceLayerHash = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder architecture(@Nullable FilterStringFilterArgs architecture) {
-            this.architecture = Output.ofNullable(architecture);
+            this.architecture = Codegen.ofNullable(architecture);
             return this;
         }
         public Builder epoch(@Nullable Output<FilterNumberFilterArgs> epoch) {
@@ -124,7 +125,7 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder epoch(@Nullable FilterNumberFilterArgs epoch) {
-            this.epoch = Output.ofNullable(epoch);
+            this.epoch = Codegen.ofNullable(epoch);
             return this;
         }
         public Builder name(@Nullable Output<FilterStringFilterArgs> name) {
@@ -132,7 +133,7 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable FilterStringFilterArgs name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder release(@Nullable Output<FilterStringFilterArgs> release) {
@@ -140,7 +141,7 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder release(@Nullable FilterStringFilterArgs release) {
-            this.release = Output.ofNullable(release);
+            this.release = Codegen.ofNullable(release);
             return this;
         }
         public Builder sourceLayerHash(@Nullable Output<FilterStringFilterArgs> sourceLayerHash) {
@@ -148,7 +149,7 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceLayerHash(@Nullable FilterStringFilterArgs sourceLayerHash) {
-            this.sourceLayerHash = Output.ofNullable(sourceLayerHash);
+            this.sourceLayerHash = Codegen.ofNullable(sourceLayerHash);
             return this;
         }
         public Builder version(@Nullable Output<FilterStringFilterArgs> version) {
@@ -156,7 +157,7 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder version(@Nullable FilterStringFilterArgs version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public FilterPackageFilterArgs build() {
             return new FilterPackageFilterArgs(architecture, epoch, name, release, sourceLayerHash, version);

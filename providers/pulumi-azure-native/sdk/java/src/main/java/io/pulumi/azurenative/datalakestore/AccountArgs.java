@@ -15,6 +15,7 @@ import io.pulumi.azurenative.datalakestore.inputs.EncryptionConfigArgs;
 import io.pulumi.azurenative.datalakestore.inputs.EncryptionIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -33,8 +34,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
-    public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+    public Output<String> accountName() {
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="defaultGroup")
       private final @Nullable Output<String> defaultGroup;
 
-    public Output<String> getDefaultGroup() {
-        return this.defaultGroup == null ? Output.empty() : this.defaultGroup;
+    public Output<String> defaultGroup() {
+        return this.defaultGroup == null ? Codegen.empty() : this.defaultGroup;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+    public Output<EncryptionConfigArgs> encryptionConfig() {
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="encryptionState")
       private final @Nullable Output<EncryptionState> encryptionState;
 
-    public Output<EncryptionState> getEncryptionState() {
-        return this.encryptionState == null ? Output.empty() : this.encryptionState;
+    public Output<EncryptionState> encryptionState() {
+        return this.encryptionState == null ? Codegen.empty() : this.encryptionState;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firewallAllowAzureIps")
       private final @Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps;
 
-    public Output<FirewallAllowAzureIpsState> getFirewallAllowAzureIps() {
-        return this.firewallAllowAzureIps == null ? Output.empty() : this.firewallAllowAzureIps;
+    public Output<FirewallAllowAzureIpsState> firewallAllowAzureIps() {
+        return this.firewallAllowAzureIps == null ? Codegen.empty() : this.firewallAllowAzureIps;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firewallRules")
       private final @Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules;
 
-    public Output<List<CreateFirewallRuleWithAccountParametersArgs>> getFirewallRules() {
-        return this.firewallRules == null ? Output.empty() : this.firewallRules;
+    public Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules() {
+        return this.firewallRules == null ? Codegen.empty() : this.firewallRules;
     }
 
     /**
@@ -99,8 +100,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="firewallState")
       private final @Nullable Output<FirewallState> firewallState;
 
-    public Output<FirewallState> getFirewallState() {
-        return this.firewallState == null ? Output.empty() : this.firewallState;
+    public Output<FirewallState> firewallState() {
+        return this.firewallState == null ? Codegen.empty() : this.firewallState;
     }
 
     /**
@@ -110,8 +111,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="identity")
       private final @Nullable Output<EncryptionIdentityArgs> identity;
 
-    public Output<EncryptionIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+    public Output<EncryptionIdentityArgs> identity() {
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -132,8 +133,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="newTier")
       private final @Nullable Output<TierType> newTier;
 
-    public Output<TierType> getNewTier() {
-        return this.newTier == null ? Output.empty() : this.newTier;
+    public Output<TierType> newTier() {
+        return this.newTier == null ? Codegen.empty() : this.newTier;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -154,8 +155,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -165,8 +166,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustedIdProviderState")
       private final @Nullable Output<TrustedIdProviderState> trustedIdProviderState;
 
-    public Output<TrustedIdProviderState> getTrustedIdProviderState() {
-        return this.trustedIdProviderState == null ? Output.empty() : this.trustedIdProviderState;
+    public Output<TrustedIdProviderState> trustedIdProviderState() {
+        return this.trustedIdProviderState == null ? Codegen.empty() : this.trustedIdProviderState;
     }
 
     /**
@@ -176,8 +177,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="trustedIdProviders")
       private final @Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders;
 
-    public Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> getTrustedIdProviders() {
-        return this.trustedIdProviders == null ? Output.empty() : this.trustedIdProviders;
+    public Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders() {
+        return this.trustedIdProviders == null ? Codegen.empty() : this.trustedIdProviders;
     }
 
     /**
@@ -187,8 +188,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules;
 
-    public Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> getVirtualNetworkRules() {
-        return this.virtualNetworkRules == null ? Output.empty() : this.virtualNetworkRules;
+    public Output<List<CreateVirtualNetworkRuleWithAccountParametersArgs>> virtualNetworkRules() {
+        return this.virtualNetworkRules == null ? Codegen.empty() : this.virtualNetworkRules;
     }
 
     public AccountArgs(
@@ -225,21 +226,21 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountName = Output.empty();
-        this.defaultGroup = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.encryptionState = Output.empty();
-        this.firewallAllowAzureIps = Output.empty();
-        this.firewallRules = Output.empty();
-        this.firewallState = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.newTier = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.trustedIdProviderState = Output.empty();
-        this.trustedIdProviders = Output.empty();
-        this.virtualNetworkRules = Output.empty();
+        this.accountName = Codegen.empty();
+        this.defaultGroup = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.encryptionState = Codegen.empty();
+        this.firewallAllowAzureIps = Codegen.empty();
+        this.firewallRules = Codegen.empty();
+        this.firewallState = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.newTier = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.trustedIdProviderState = Codegen.empty();
+        this.trustedIdProviders = Codegen.empty();
+        this.virtualNetworkRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -295,7 +296,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder defaultGroup(@Nullable Output<String> defaultGroup) {
@@ -303,7 +304,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultGroup(@Nullable String defaultGroup) {
-            this.defaultGroup = Output.ofNullable(defaultGroup);
+            this.defaultGroup = Codegen.ofNullable(defaultGroup);
             return this;
         }
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
@@ -311,7 +312,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder encryptionState(@Nullable Output<EncryptionState> encryptionState) {
@@ -319,7 +320,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionState(@Nullable EncryptionState encryptionState) {
-            this.encryptionState = Output.ofNullable(encryptionState);
+            this.encryptionState = Codegen.ofNullable(encryptionState);
             return this;
         }
         public Builder firewallAllowAzureIps(@Nullable Output<FirewallAllowAzureIpsState> firewallAllowAzureIps) {
@@ -327,7 +328,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallAllowAzureIps(@Nullable FirewallAllowAzureIpsState firewallAllowAzureIps) {
-            this.firewallAllowAzureIps = Output.ofNullable(firewallAllowAzureIps);
+            this.firewallAllowAzureIps = Codegen.ofNullable(firewallAllowAzureIps);
             return this;
         }
         public Builder firewallRules(@Nullable Output<List<CreateFirewallRuleWithAccountParametersArgs>> firewallRules) {
@@ -335,7 +336,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallRules(@Nullable List<CreateFirewallRuleWithAccountParametersArgs> firewallRules) {
-            this.firewallRules = Output.ofNullable(firewallRules);
+            this.firewallRules = Codegen.ofNullable(firewallRules);
             return this;
         }
         public Builder firewallRules(CreateFirewallRuleWithAccountParametersArgs... firewallRules) {
@@ -346,7 +347,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallState(@Nullable FirewallState firewallState) {
-            this.firewallState = Output.ofNullable(firewallState);
+            this.firewallState = Codegen.ofNullable(firewallState);
             return this;
         }
         public Builder identity(@Nullable Output<EncryptionIdentityArgs> identity) {
@@ -354,7 +355,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable EncryptionIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -362,7 +363,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder newTier(@Nullable Output<TierType> newTier) {
@@ -370,7 +371,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder newTier(@Nullable TierType newTier) {
-            this.newTier = Output.ofNullable(newTier);
+            this.newTier = Codegen.ofNullable(newTier);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -386,7 +387,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder trustedIdProviderState(@Nullable Output<TrustedIdProviderState> trustedIdProviderState) {
@@ -394,7 +395,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustedIdProviderState(@Nullable TrustedIdProviderState trustedIdProviderState) {
-            this.trustedIdProviderState = Output.ofNullable(trustedIdProviderState);
+            this.trustedIdProviderState = Codegen.ofNullable(trustedIdProviderState);
             return this;
         }
         public Builder trustedIdProviders(@Nullable Output<List<CreateTrustedIdProviderWithAccountParametersArgs>> trustedIdProviders) {
@@ -402,7 +403,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trustedIdProviders(@Nullable List<CreateTrustedIdProviderWithAccountParametersArgs> trustedIdProviders) {
-            this.trustedIdProviders = Output.ofNullable(trustedIdProviders);
+            this.trustedIdProviders = Codegen.ofNullable(trustedIdProviders);
             return this;
         }
         public Builder trustedIdProviders(CreateTrustedIdProviderWithAccountParametersArgs... trustedIdProviders) {
@@ -413,7 +414,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworkRules(@Nullable List<CreateVirtualNetworkRuleWithAccountParametersArgs> virtualNetworkRules) {
-            this.virtualNetworkRules = Output.ofNullable(virtualNetworkRules);
+            this.virtualNetworkRules = Codegen.ofNullable(virtualNetworkRules);
             return this;
         }
         public Builder virtualNetworkRules(CreateVirtualNetworkRuleWithAccountParametersArgs... virtualNetworkRules) {

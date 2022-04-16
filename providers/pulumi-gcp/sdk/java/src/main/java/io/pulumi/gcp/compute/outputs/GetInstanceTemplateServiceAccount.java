@@ -37,7 +37,7 @@ public final class GetInstanceTemplateServiceAccount {
      * default Google Compute Engine service account is used.
      * 
     */
-    public String getEmail() {
+    public String email() {
         return this.email;
     }
     /**
@@ -46,7 +46,7 @@ public final class GetInstanceTemplateServiceAccount {
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * 
     */
-    public List<String> getScopes() {
+    public List<String> scopes() {
         return this.scopes;
     }
 

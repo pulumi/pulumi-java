@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
     @Import(name="dnsIps", required=true)
       private final Output<List<String>> dnsIps;
 
-    public Output<List<String>> getDnsIps() {
+    public Output<List<String>> dnsIps() {
         return this.dnsIps;
     }
 
@@ -33,7 +34,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
     @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
-    public Output<String> getDomainName() {
+    public Output<String> domainName() {
         return this.domainName;
     }
 
@@ -44,8 +45,8 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
     @Import(name="fileSystemAdministratorsGroup")
       private final @Nullable Output<String> fileSystemAdministratorsGroup;
 
-    public Output<String> getFileSystemAdministratorsGroup() {
-        return this.fileSystemAdministratorsGroup == null ? Output.empty() : this.fileSystemAdministratorsGroup;
+    public Output<String> fileSystemAdministratorsGroup() {
+        return this.fileSystemAdministratorsGroup == null ? Codegen.empty() : this.fileSystemAdministratorsGroup;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
     @Import(name="organizationalUnitDistinguishedName")
       private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
-    public Output<String> getOrganizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Output.empty() : this.organizationalUnitDistinguishedName;
+    public Output<String> organizationalUnitDistinguishedName() {
+        return this.organizationalUnitDistinguishedName == null ? Codegen.empty() : this.organizationalUnitDistinguishedName;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
     @Import(name="password", required=true)
       private final Output<String> password;
 
-    public Output<String> getPassword() {
+    public Output<String> password() {
         return this.password;
     }
 
@@ -77,7 +78,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -97,12 +98,12 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
     }
 
     private WindowsFileSystemSelfManagedActiveDirectoryGetArgs() {
-        this.dnsIps = Output.empty();
-        this.domainName = Output.empty();
-        this.fileSystemAdministratorsGroup = Output.empty();
-        this.organizationalUnitDistinguishedName = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.dnsIps = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.fileSystemAdministratorsGroup = Codegen.empty();
+        this.organizationalUnitDistinguishedName = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
             return this;
         }
         public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
-            this.fileSystemAdministratorsGroup = Output.ofNullable(fileSystemAdministratorsGroup);
+            this.fileSystemAdministratorsGroup = Codegen.ofNullable(fileSystemAdministratorsGroup);
             return this;
         }
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
@@ -167,7 +168,7 @@ public final class WindowsFileSystemSelfManagedActiveDirectoryGetArgs extends io
             return this;
         }
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
+            this.organizationalUnitDistinguishedName = Codegen.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }
         public Builder password(Output<String> password) {

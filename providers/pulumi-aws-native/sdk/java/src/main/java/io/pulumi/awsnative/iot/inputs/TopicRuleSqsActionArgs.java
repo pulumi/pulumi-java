@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,22 +19,22 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
-    public Output<String> getQueueUrl() {
+    public Output<String> queueUrl() {
         return this.queueUrl;
     }
 
     @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
-    public Output<String> getRoleArn() {
+    public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="useBase64")
       private final @Nullable Output<Boolean> useBase64;
 
-    public Output<Boolean> getUseBase64() {
-        return this.useBase64 == null ? Output.empty() : this.useBase64;
+    public Output<Boolean> useBase64() {
+        return this.useBase64 == null ? Codegen.empty() : this.useBase64;
     }
 
     public TopicRuleSqsActionArgs(
@@ -46,9 +47,9 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private TopicRuleSqsActionArgs() {
-        this.queueUrl = Output.empty();
-        this.roleArn = Output.empty();
-        this.useBase64 = Output.empty();
+        this.queueUrl = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.useBase64 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder useBase64(@Nullable Boolean useBase64) {
-            this.useBase64 = Output.ofNullable(useBase64);
+            this.useBase64 = Codegen.ofNullable(useBase64);
             return this;
         }        public TopicRuleSqsActionArgs build() {
             return new TopicRuleSqsActionArgs(queueUrl, roleArn, useBase64);

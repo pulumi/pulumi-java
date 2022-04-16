@@ -23,7 +23,7 @@ public final class VpcPeeringConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="subnet", required=true)
       private final String subnet;
 
-    public String getSubnet() {
+    public String subnet() {
         return this.subnet;
     }
 
@@ -34,7 +34,7 @@ public final class VpcPeeringConfigResponse extends io.pulumi.resources.InvokeAr
     @Import(name="vpc", required=true)
       private final String vpc;
 
-    public String getVpc() {
+    public String vpc() {
         return this.vpc;
     }
 

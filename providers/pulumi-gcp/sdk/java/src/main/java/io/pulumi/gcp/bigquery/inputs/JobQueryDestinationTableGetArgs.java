@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class JobQueryDestinationTableGetArgs extends io.pulumi.resources.R
     @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
-    public Output<String> getDatasetId() {
-        return this.datasetId == null ? Output.empty() : this.datasetId;
+    public Output<String> datasetId() {
+        return this.datasetId == null ? Codegen.empty() : this.datasetId;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class JobQueryDestinationTableGetArgs extends io.pulumi.resources.R
     @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
-    public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+    public Output<String> projectId() {
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class JobQueryDestinationTableGetArgs extends io.pulumi.resources.R
     @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
-    public Output<String> getTableId() {
+    public Output<String> tableId() {
         return this.tableId;
     }
 
@@ -58,9 +59,9 @@ public final class JobQueryDestinationTableGetArgs extends io.pulumi.resources.R
     }
 
     private JobQueryDestinationTableGetArgs() {
-        this.datasetId = Output.empty();
-        this.projectId = Output.empty();
-        this.tableId = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.tableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class JobQueryDestinationTableGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder datasetId(@Nullable String datasetId) {
-            this.datasetId = Output.ofNullable(datasetId);
+            this.datasetId = Codegen.ofNullable(datasetId);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -100,7 +101,7 @@ public final class JobQueryDestinationTableGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }
         public Builder tableId(Output<String> tableId) {

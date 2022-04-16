@@ -39,16 +39,16 @@ public final class BotStillWaitingResponseSpecification {
      * Indicates whether the user can interrupt a speech prompt from the bot.
      * 
     */
-    public Optional<Boolean> getAllowInterrupt() {
+    public Optional<Boolean> allowInterrupt() {
         return Optional.ofNullable(this.allowInterrupt);
     }
-    public Integer getFrequencyInSeconds() {
+    public Integer frequencyInSeconds() {
         return this.frequencyInSeconds;
     }
-    public List<BotMessageGroup> getMessageGroupsList() {
+    public List<BotMessageGroup> messageGroupsList() {
         return this.messageGroupsList;
     }
-    public Integer getTimeoutInSeconds() {
+    public Integer timeoutInSeconds() {
         return this.timeoutInSeconds;
     }
 

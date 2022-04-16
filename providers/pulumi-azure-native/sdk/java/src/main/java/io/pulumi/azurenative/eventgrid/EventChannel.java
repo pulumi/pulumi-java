@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @return Represents the destination of an event channel.
      * 
      */
-    public Output</* @Nullable */ EventChannelDestinationResponse> getDestination() {
+    public Output</* @Nullable */ EventChannelDestinationResponse> destination() {
         return this.destination;
     }
     /**
@@ -61,7 +62,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * the event channel and corresponding partner topic are deleted.
      * 
      */
-    public Output</* @Nullable */ String> getExpirationTimeIfNotActivatedUtc() {
+    public Output</* @Nullable */ String> expirationTimeIfNotActivatedUtc() {
         return this.expirationTimeIfNotActivatedUtc;
     }
     /**
@@ -75,7 +76,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @return Information about the filter for the event channel.
      * 
      */
-    public Output</* @Nullable */ EventChannelFilterResponse> getFilter() {
+    public Output</* @Nullable */ EventChannelFilterResponse> filter() {
         return this.filter;
     }
     /**
@@ -89,7 +90,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @return Name of the resource.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -105,7 +106,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * This will be helpful to remove any ambiguity of the origin of creation of the partner topic for the customer.
      * 
      */
-    public Output</* @Nullable */ String> getPartnerTopicFriendlyDescription() {
+    public Output</* @Nullable */ String> partnerTopicFriendlyDescription() {
         return this.partnerTopicFriendlyDescription;
     }
     /**
@@ -119,7 +120,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @return The readiness state of the corresponding partner topic.
      * 
      */
-    public Output<String> getPartnerTopicReadinessState() {
+    public Output<String> partnerTopicReadinessState() {
         return this.partnerTopicReadinessState;
     }
     /**
@@ -133,7 +134,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @return Provisioning state of the event channel.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -147,7 +148,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @return Source of the event channel. This represents a unique resource in the partner's resource model.
      * 
      */
-    public Output</* @Nullable */ EventChannelSourceResponse> getSource() {
+    public Output</* @Nullable */ EventChannelSourceResponse> source() {
         return this.source;
     }
     /**
@@ -161,7 +162,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @return The system metadata relating to Event Channel resource.
      * 
      */
-    public Output<SystemDataResponse> getSystemData() {
+    public Output<SystemDataResponse> systemData() {
         return this.systemData;
     }
     /**
@@ -175,7 +176,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @return Type of the resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -201,7 +202,7 @@ public class EventChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventChannel(String name, EventChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventgrid:EventChannel", name, args == null ? EventChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventgrid:EventChannel", name, args == null ? EventChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventChannel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

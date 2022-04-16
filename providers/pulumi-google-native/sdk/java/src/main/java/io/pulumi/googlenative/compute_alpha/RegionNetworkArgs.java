@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.RegionNetworkNetworkFirewallPolicyEnforcementOrder;
 import io.pulumi.googlenative.compute_alpha.inputs.NetworkRoutingConfigArgs;
 import java.lang.Boolean;
@@ -25,8 +26,8 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="autoCreateSubnetworks")
       private final @Nullable Output<Boolean> autoCreateSubnetworks;
 
-    public Output<Boolean> getAutoCreateSubnetworks() {
-        return this.autoCreateSubnetworks == null ? Output.empty() : this.autoCreateSubnetworks;
+    public Output<Boolean> autoCreateSubnetworks() {
+        return this.autoCreateSubnetworks == null ? Codegen.empty() : this.autoCreateSubnetworks;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="enableUlaInternalIpv6")
       private final @Nullable Output<Boolean> enableUlaInternalIpv6;
 
-    public Output<Boolean> getEnableUlaInternalIpv6() {
-        return this.enableUlaInternalIpv6 == null ? Output.empty() : this.enableUlaInternalIpv6;
+    public Output<Boolean> enableUlaInternalIpv6() {
+        return this.enableUlaInternalIpv6 == null ? Codegen.empty() : this.enableUlaInternalIpv6;
     }
 
     /**
@@ -58,8 +59,8 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="internalIpv6Range")
       private final @Nullable Output<String> internalIpv6Range;
 
-    public Output<String> getInternalIpv6Range() {
-        return this.internalIpv6Range == null ? Output.empty() : this.internalIpv6Range;
+    public Output<String> internalIpv6Range() {
+        return this.internalIpv6Range == null ? Codegen.empty() : this.internalIpv6Range;
     }
 
     /**
@@ -69,8 +70,8 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
-    public Output<Integer> getMtu() {
-        return this.mtu == null ? Output.empty() : this.mtu;
+    public Output<Integer> mtu() {
+        return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
     /**
@@ -80,36 +81,36 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="networkFirewallPolicyEnforcementOrder")
       private final @Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
 
-    public Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> getNetworkFirewallPolicyEnforcementOrder() {
-        return this.networkFirewallPolicyEnforcementOrder == null ? Output.empty() : this.networkFirewallPolicyEnforcementOrder;
+    public Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder() {
+        return this.networkFirewallPolicyEnforcementOrder == null ? Codegen.empty() : this.networkFirewallPolicyEnforcementOrder;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
       private final Output<String> region;
 
-    public Output<String> getRegion() {
+    public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
-    public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+    public Output<String> requestId() {
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -119,8 +120,8 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="routingConfig")
       private final @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
 
-    public Output<NetworkRoutingConfigArgs> getRoutingConfig() {
-        return this.routingConfig == null ? Output.empty() : this.routingConfig;
+    public Output<NetworkRoutingConfigArgs> routingConfig() {
+        return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
     }
 
     public RegionNetworkArgs(
@@ -149,17 +150,17 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegionNetworkArgs() {
-        this.autoCreateSubnetworks = Output.empty();
-        this.description = Output.empty();
-        this.enableUlaInternalIpv6 = Output.empty();
-        this.internalIpv6Range = Output.empty();
-        this.mtu = Output.empty();
-        this.name = Output.empty();
-        this.networkFirewallPolicyEnforcementOrder = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.routingConfig = Output.empty();
+        this.autoCreateSubnetworks = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableUlaInternalIpv6 = Codegen.empty();
+        this.internalIpv6Range = Codegen.empty();
+        this.mtu = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkFirewallPolicyEnforcementOrder = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.routingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
-            this.autoCreateSubnetworks = Output.ofNullable(autoCreateSubnetworks);
+            this.autoCreateSubnetworks = Codegen.ofNullable(autoCreateSubnetworks);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -215,7 +216,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableUlaInternalIpv6(@Nullable Output<Boolean> enableUlaInternalIpv6) {
@@ -223,7 +224,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableUlaInternalIpv6(@Nullable Boolean enableUlaInternalIpv6) {
-            this.enableUlaInternalIpv6 = Output.ofNullable(enableUlaInternalIpv6);
+            this.enableUlaInternalIpv6 = Codegen.ofNullable(enableUlaInternalIpv6);
             return this;
         }
         public Builder internalIpv6Range(@Nullable Output<String> internalIpv6Range) {
@@ -231,7 +232,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder internalIpv6Range(@Nullable String internalIpv6Range) {
-            this.internalIpv6Range = Output.ofNullable(internalIpv6Range);
+            this.internalIpv6Range = Codegen.ofNullable(internalIpv6Range);
             return this;
         }
         public Builder mtu(@Nullable Output<Integer> mtu) {
@@ -239,7 +240,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Output.ofNullable(mtu);
+            this.mtu = Codegen.ofNullable(mtu);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -247,7 +248,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkFirewallPolicyEnforcementOrder(@Nullable Output<RegionNetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder) {
@@ -255,7 +256,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkFirewallPolicyEnforcementOrder(@Nullable RegionNetworkNetworkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder) {
-            this.networkFirewallPolicyEnforcementOrder = Output.ofNullable(networkFirewallPolicyEnforcementOrder);
+            this.networkFirewallPolicyEnforcementOrder = Codegen.ofNullable(networkFirewallPolicyEnforcementOrder);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -263,7 +264,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -279,7 +280,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder routingConfig(@Nullable Output<NetworkRoutingConfigArgs> routingConfig) {
@@ -287,7 +288,7 @@ public final class RegionNetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingConfig(@Nullable NetworkRoutingConfigArgs routingConfig) {
-            this.routingConfig = Output.ofNullable(routingConfig);
+            this.routingConfig = Codegen.ofNullable(routingConfig);
             return this;
         }        public RegionNetworkArgs build() {
             return new RegionNetworkArgs(autoCreateSubnetworks, description, enableUlaInternalIpv6, internalIpv6Range, mtu, name, networkFirewallPolicyEnforcementOrder, project, region, requestId, routingConfig);

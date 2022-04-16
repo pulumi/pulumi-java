@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +24,7 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
     @Import(name="identityPoolId", required=true)
       private final Output<String> identityPoolId;
 
-    public Output<String> getIdentityPoolId() {
+    public Output<String> identityPoolId() {
         return this.identityPoolId;
     }
 
@@ -36,22 +37,22 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
     @Import(name="identityProviderName", required=true)
       private final Output<String> identityProviderName;
 
-    public Output<String> getIdentityProviderName() {
+    public Output<String> identityProviderName() {
         return this.identityProviderName;
     }
 
     @Import(name="principalTags")
       private final @Nullable Output<Map<String,String>> principalTags;
 
-    public Output<Map<String,String>> getPrincipalTags() {
-        return this.principalTags == null ? Output.empty() : this.principalTags;
+    public Output<Map<String,String>> principalTags() {
+        return this.principalTags == null ? Codegen.empty() : this.principalTags;
     }
 
     @Import(name="useDefaults")
       private final @Nullable Output<Boolean> useDefaults;
 
-    public Output<Boolean> getUseDefaults() {
-        return this.useDefaults == null ? Output.empty() : this.useDefaults;
+    public Output<Boolean> useDefaults() {
+        return this.useDefaults == null ? Codegen.empty() : this.useDefaults;
     }
 
     public IdentityPoolProviderPrincipalTagArgs(
@@ -66,10 +67,10 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
     }
 
     private IdentityPoolProviderPrincipalTagArgs() {
-        this.identityPoolId = Output.empty();
-        this.identityProviderName = Output.empty();
-        this.principalTags = Output.empty();
-        this.useDefaults = Output.empty();
+        this.identityPoolId = Codegen.empty();
+        this.identityProviderName = Codegen.empty();
+        this.principalTags = Codegen.empty();
+        this.useDefaults = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
             return this;
         }
         public Builder principalTags(@Nullable Map<String,String> principalTags) {
-            this.principalTags = Output.ofNullable(principalTags);
+            this.principalTags = Codegen.ofNullable(principalTags);
             return this;
         }
         public Builder useDefaults(@Nullable Output<Boolean> useDefaults) {
@@ -127,7 +128,7 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
             return this;
         }
         public Builder useDefaults(@Nullable Boolean useDefaults) {
-            this.useDefaults = Output.ofNullable(useDefaults);
+            this.useDefaults = Codegen.ofNullable(useDefaults);
             return this;
         }        public IdentityPoolProviderPrincipalTagArgs build() {
             return new IdentityPoolProviderPrincipalTagArgs(identityPoolId, identityProviderName, principalTags, useDefaults);

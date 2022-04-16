@@ -10,6 +10,7 @@ import io.pulumi.aws.ecr.outputs.ReplicationConfigurationReplicationConfiguratio
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -43,7 +44,7 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
      * @return The account ID of the destination registry to replicate to.
      * 
      */
-    public Output<String> getRegistryId() {
+    public Output<String> registryId() {
         return this.registryId;
     }
     /**
@@ -57,7 +58,7 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
      * @return Replication configuration for a registry. See Replication Configuration.
      * 
      */
-    public Output</* @Nullable */ ReplicationConfigurationReplicationConfiguration> getReplicationConfiguration() {
+    public Output</* @Nullable */ ReplicationConfigurationReplicationConfiguration> replicationConfiguration() {
         return this.replicationConfiguration;
     }
 
@@ -83,7 +84,7 @@ public class ReplicationConfiguration extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationConfiguration(String name, @Nullable ReplicationConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/replicationConfiguration:ReplicationConfiguration", name, args == null ? ReplicationConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecr/replicationConfiguration:ReplicationConfiguration", name, args == null ? ReplicationConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationConfiguration(String name, Output<String> id, @Nullable ReplicationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

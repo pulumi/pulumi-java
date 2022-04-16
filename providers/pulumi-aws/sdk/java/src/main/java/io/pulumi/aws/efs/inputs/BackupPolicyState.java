@@ -6,6 +6,7 @@ package io.pulumi.aws.efs.inputs;
 import io.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,8 +23,8 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="backupPolicy")
       private final @Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy;
 
-    public Output<BackupPolicyBackupPolicyGetArgs> getBackupPolicy() {
-        return this.backupPolicy == null ? Output.empty() : this.backupPolicy;
+    public Output<BackupPolicyBackupPolicyGetArgs> backupPolicy() {
+        return this.backupPolicy == null ? Codegen.empty() : this.backupPolicy;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
-    public Output<String> getFileSystemId() {
-        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
+    public Output<String> fileSystemId() {
+        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
     public BackupPolicyState(
@@ -45,8 +46,8 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyState() {
-        this.backupPolicy = Output.empty();
-        this.fileSystemId = Output.empty();
+        this.backupPolicy = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupPolicy(@Nullable BackupPolicyBackupPolicyGetArgs backupPolicy) {
-            this.backupPolicy = Output.ofNullable(backupPolicy);
+            this.backupPolicy = Codegen.ofNullable(backupPolicy);
             return this;
         }
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
@@ -84,7 +85,7 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Output.ofNullable(fileSystemId);
+            this.fileSystemId = Codegen.ofNullable(fileSystemId);
             return this;
         }        public BackupPolicyState build() {
             return new BackupPolicyState(backupPolicy, fileSystemId);

@@ -9,6 +9,7 @@ import io.pulumi.aws.route53.inputs.ResolverFirewallRuleGroupAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +42,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @return The ARN (Amazon Resource Name) of the firewall rule group association.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @return The unique identifier of the firewall rule group.
      * 
      */
-    public Output<String> getFirewallRuleGroupId() {
+    public Output<String> firewallRuleGroupId() {
         return this.firewallRuleGroupId;
     }
     /**
@@ -69,7 +70,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @return If enabled, this setting disallows modification or removal of the association, to help prevent against accidentally altering DNS firewall protections. Valid values: `ENABLED`, `DISABLED`.
      * 
      */
-    public Output<String> getMutationProtection() {
+    public Output<String> mutationProtection() {
         return this.mutationProtection;
     }
     /**
@@ -83,7 +84,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @return A name that lets you identify the rule group association, to manage and use it.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -97,7 +98,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @return The setting that determines the processing order of the rule group among the rule groups that you associate with the specified VPC. DNS Firewall filters VPC traffic starting from the rule group with the lowest numeric priority setting.
      * 
      */
-    public Output<Integer> getPriority() {
+    public Output<Integer> priority() {
         return this.priority;
     }
     /**
@@ -111,7 +112,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -125,7 +126,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @return A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -139,7 +140,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @return The unique identifier of the VPC that you want to associate with the rule group.
      * 
      */
-    public Output<String> getVpcId() {
+    public Output<String> vpcId() {
         return this.vpcId;
     }
 
@@ -165,7 +166,7 @@ public class ResolverFirewallRuleGroupAssociation extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public ResolverFirewallRuleGroupAssociation(String name, ResolverFirewallRuleGroupAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation", name, args == null ? ResolverFirewallRuleGroupAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/resolverFirewallRuleGroupAssociation:ResolverFirewallRuleGroupAssociation", name, args == null ? ResolverFirewallRuleGroupAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResolverFirewallRuleGroupAssociation(String name, Output<String> id, @Nullable ResolverFirewallRuleGroupAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

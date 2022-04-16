@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2beta1.ConversationArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse;
@@ -32,7 +33,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
      * 
      */
-    public Output<String> getConversationProfile() {
+    public Output<String> conversationProfile() {
         return this.conversationProfile;
     }
     /**
@@ -46,7 +47,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
      * 
      */
-    public Output<String> getConversationStage() {
+    public Output<String> conversationStage() {
         return this.conversationStage;
     }
     /**
@@ -60,7 +61,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The time the conversation was finished.
      * 
      */
-    public Output<String> getEndTime() {
+    public Output<String> endTime() {
         return this.endTime;
     }
     /**
@@ -74,7 +75,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The current state of the Conversation.
      * 
      */
-    public Output<String> getLifecycleState() {
+    public Output<String> lifecycleState() {
         return this.lifecycleState;
     }
     /**
@@ -88,7 +89,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The unique identifier of this conversation. Format: `projects//locations//conversations/`.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -102,7 +103,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return Required if the conversation is to be connected over telephony.
      * 
      */
-    public Output<GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse> getPhoneNumber() {
+    public Output<GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse> phoneNumber() {
         return this.phoneNumber;
     }
     /**
@@ -116,7 +117,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @return The time the conversation was started.
      * 
      */
-    public Output<String> getStartTime() {
+    public Output<String> startTime() {
         return this.startTime;
     }
 
@@ -142,7 +143,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Conversation(String name, ConversationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2beta1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v2beta1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Conversation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

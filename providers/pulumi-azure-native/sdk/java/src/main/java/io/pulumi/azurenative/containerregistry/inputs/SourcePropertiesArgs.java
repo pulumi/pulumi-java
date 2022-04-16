@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.AuthInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="branch")
       private final @Nullable Output<String> branch;
 
-    public Output<String> getBranch() {
-        return this.branch == null ? Output.empty() : this.branch;
+    public Output<String> branch() {
+        return this.branch == null ? Codegen.empty() : this.branch;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
-    public Output<String> getRepositoryUrl() {
+    public Output<String> repositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -51,8 +52,8 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceControlAuthProperties")
       private final @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
 
-    public Output<AuthInfoArgs> getSourceControlAuthProperties() {
-        return this.sourceControlAuthProperties == null ? Output.empty() : this.sourceControlAuthProperties;
+    public Output<AuthInfoArgs> sourceControlAuthProperties() {
+        return this.sourceControlAuthProperties == null ? Codegen.empty() : this.sourceControlAuthProperties;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="sourceControlType", required=true)
       private final Output<Either<String,SourceControlType>> sourceControlType;
 
-    public Output<Either<String,SourceControlType>> getSourceControlType() {
+    public Output<Either<String,SourceControlType>> sourceControlType() {
         return this.sourceControlType;
     }
 
@@ -78,10 +79,10 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SourcePropertiesArgs() {
-        this.branch = Output.empty();
-        this.repositoryUrl = Output.empty();
-        this.sourceControlAuthProperties = Output.empty();
-        this.sourceControlType = Output.empty();
+        this.branch = Codegen.empty();
+        this.repositoryUrl = Codegen.empty();
+        this.sourceControlAuthProperties = Codegen.empty();
+        this.sourceControlType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder branch(@Nullable String branch) {
-            this.branch = Output.ofNullable(branch);
+            this.branch = Codegen.ofNullable(branch);
             return this;
         }
         public Builder repositoryUrl(Output<String> repositoryUrl) {
@@ -131,7 +132,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sourceControlAuthProperties(@Nullable AuthInfoArgs sourceControlAuthProperties) {
-            this.sourceControlAuthProperties = Output.ofNullable(sourceControlAuthProperties);
+            this.sourceControlAuthProperties = Codegen.ofNullable(sourceControlAuthProperties);
             return this;
         }
         public Builder sourceControlType(Output<Either<String,SourceControlType>> sourceControlType) {

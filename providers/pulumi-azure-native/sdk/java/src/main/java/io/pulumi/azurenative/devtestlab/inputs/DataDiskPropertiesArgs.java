@@ -8,6 +8,7 @@ import io.pulumi.azurenative.devtestlab.inputs.AttachNewDataDiskOptionsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,8 +29,8 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="attachNewDataDiskOptions")
       private final @Nullable Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions;
 
-    public Output<AttachNewDataDiskOptionsArgs> getAttachNewDataDiskOptions() {
-        return this.attachNewDataDiskOptions == null ? Output.empty() : this.attachNewDataDiskOptions;
+    public Output<AttachNewDataDiskOptionsArgs> attachNewDataDiskOptions() {
+        return this.attachNewDataDiskOptions == null ? Codegen.empty() : this.attachNewDataDiskOptions;
     }
 
     /**
@@ -39,8 +40,8 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="existingLabDiskId")
       private final @Nullable Output<String> existingLabDiskId;
 
-    public Output<String> getExistingLabDiskId() {
-        return this.existingLabDiskId == null ? Output.empty() : this.existingLabDiskId;
+    public Output<String> existingLabDiskId() {
+        return this.existingLabDiskId == null ? Codegen.empty() : this.existingLabDiskId;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     @Import(name="hostCaching")
       private final @Nullable Output<Either<String,HostCachingOptions>> hostCaching;
 
-    public Output<Either<String,HostCachingOptions>> getHostCaching() {
-        return this.hostCaching == null ? Output.empty() : this.hostCaching;
+    public Output<Either<String,HostCachingOptions>> hostCaching() {
+        return this.hostCaching == null ? Codegen.empty() : this.hostCaching;
     }
 
     public DataDiskPropertiesArgs(
@@ -64,9 +65,9 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DataDiskPropertiesArgs() {
-        this.attachNewDataDiskOptions = Output.empty();
-        this.existingLabDiskId = Output.empty();
-        this.hostCaching = Output.empty();
+        this.attachNewDataDiskOptions = Codegen.empty();
+        this.existingLabDiskId = Codegen.empty();
+        this.hostCaching = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder attachNewDataDiskOptions(@Nullable AttachNewDataDiskOptionsArgs attachNewDataDiskOptions) {
-            this.attachNewDataDiskOptions = Output.ofNullable(attachNewDataDiskOptions);
+            this.attachNewDataDiskOptions = Codegen.ofNullable(attachNewDataDiskOptions);
             return this;
         }
         public Builder existingLabDiskId(@Nullable Output<String> existingLabDiskId) {
@@ -106,7 +107,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder existingLabDiskId(@Nullable String existingLabDiskId) {
-            this.existingLabDiskId = Output.ofNullable(existingLabDiskId);
+            this.existingLabDiskId = Codegen.ofNullable(existingLabDiskId);
             return this;
         }
         public Builder hostCaching(@Nullable Output<Either<String,HostCachingOptions>> hostCaching) {
@@ -114,7 +115,7 @@ public final class DataDiskPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder hostCaching(@Nullable Either<String,HostCachingOptions> hostCaching) {
-            this.hostCaching = Output.ofNullable(hostCaching);
+            this.hostCaching = Codegen.ofNullable(hostCaching);
             return this;
         }        public DataDiskPropertiesArgs build() {
             return new DataDiskPropertiesArgs(attachNewDataDiskOptions, existingLabDiskId, hostCaching);

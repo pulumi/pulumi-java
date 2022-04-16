@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.RetentionTagArgs;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedBackupCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.List;
@@ -29,8 +30,8 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="criteria")
       private final @Nullable Output<List<ScheduleBasedBackupCriteriaArgs>> criteria;
 
-    public Output<List<ScheduleBasedBackupCriteriaArgs>> getCriteria() {
-        return this.criteria == null ? Output.empty() : this.criteria;
+    public Output<List<ScheduleBasedBackupCriteriaArgs>> criteria() {
+        return this.criteria == null ? Codegen.empty() : this.criteria;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="isDefault", required=true)
       private final Output<Boolean> isDefault;
 
-    public Output<Boolean> getIsDefault() {
+    public Output<Boolean> isDefault() {
         return this.isDefault;
     }
 
@@ -51,7 +52,7 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="tagInfo", required=true)
       private final Output<RetentionTagArgs> tagInfo;
 
-    public Output<RetentionTagArgs> getTagInfo() {
+    public Output<RetentionTagArgs> tagInfo() {
         return this.tagInfo;
     }
 
@@ -62,7 +63,7 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="taggingPriority", required=true)
       private final Output<Double> taggingPriority;
 
-    public Output<Double> getTaggingPriority() {
+    public Output<Double> taggingPriority() {
         return this.taggingPriority;
     }
 
@@ -78,10 +79,10 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TaggingCriteriaArgs() {
-        this.criteria = Output.empty();
-        this.isDefault = Output.empty();
-        this.tagInfo = Output.empty();
-        this.taggingPriority = Output.empty();
+        this.criteria = Codegen.empty();
+        this.isDefault = Codegen.empty();
+        this.tagInfo = Codegen.empty();
+        this.taggingPriority = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class TaggingCriteriaArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder criteria(@Nullable List<ScheduleBasedBackupCriteriaArgs> criteria) {
-            this.criteria = Output.ofNullable(criteria);
+            this.criteria = Codegen.ofNullable(criteria);
             return this;
         }
         public Builder criteria(ScheduleBasedBackupCriteriaArgs... criteria) {

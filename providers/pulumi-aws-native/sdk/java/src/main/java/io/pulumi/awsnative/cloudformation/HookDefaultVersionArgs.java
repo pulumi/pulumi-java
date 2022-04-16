@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,8 +24,8 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
-    public Output<String> getTypeName() {
-        return this.typeName == null ? Output.empty() : this.typeName;
+    public Output<String> typeName() {
+        return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     /**
@@ -34,8 +35,8 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="typeVersionArn")
       private final @Nullable Output<String> typeVersionArn;
 
-    public Output<String> getTypeVersionArn() {
-        return this.typeVersionArn == null ? Output.empty() : this.typeVersionArn;
+    public Output<String> typeVersionArn() {
+        return this.typeVersionArn == null ? Codegen.empty() : this.typeVersionArn;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
-    public Output<String> getVersionId() {
-        return this.versionId == null ? Output.empty() : this.versionId;
+    public Output<String> versionId() {
+        return this.versionId == null ? Codegen.empty() : this.versionId;
     }
 
     public HookDefaultVersionArgs(
@@ -59,9 +60,9 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HookDefaultVersionArgs() {
-        this.typeName = Output.empty();
-        this.typeVersionArn = Output.empty();
-        this.versionId = Output.empty();
+        this.typeName = Codegen.empty();
+        this.typeVersionArn = Codegen.empty();
+        this.versionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Output.ofNullable(typeName);
+            this.typeName = Codegen.ofNullable(typeName);
             return this;
         }
         public Builder typeVersionArn(@Nullable Output<String> typeVersionArn) {
@@ -101,7 +102,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder typeVersionArn(@Nullable String typeVersionArn) {
-            this.typeVersionArn = Output.ofNullable(typeVersionArn);
+            this.typeVersionArn = Codegen.ofNullable(typeVersionArn);
             return this;
         }
         public Builder versionId(@Nullable Output<String> versionId) {
@@ -109,7 +110,7 @@ public final class HookDefaultVersionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder versionId(@Nullable String versionId) {
-            this.versionId = Output.ofNullable(versionId);
+            this.versionId = Codegen.ofNullable(versionId);
             return this;
         }        public HookDefaultVersionArgs build() {
             return new HookDefaultVersionArgs(typeName, typeVersionArn, versionId);

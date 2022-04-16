@@ -5,6 +5,7 @@ package io.pulumi.aws.glacier.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     @Import(name="completeLock")
       private final @Nullable Output<Boolean> completeLock;
 
-    public Output<Boolean> getCompleteLock() {
-        return this.completeLock == null ? Output.empty() : this.completeLock;
+    public Output<Boolean> completeLock() {
+        return this.completeLock == null ? Codegen.empty() : this.completeLock;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     @Import(name="ignoreDeletionError")
       private final @Nullable Output<Boolean> ignoreDeletionError;
 
-    public Output<Boolean> getIgnoreDeletionError() {
-        return this.ignoreDeletionError == null ? Output.empty() : this.ignoreDeletionError;
+    public Output<Boolean> ignoreDeletionError() {
+        return this.ignoreDeletionError == null ? Codegen.empty() : this.ignoreDeletionError;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     @Import(name="vaultName")
       private final @Nullable Output<String> vaultName;
 
-    public Output<String> getVaultName() {
-        return this.vaultName == null ? Output.empty() : this.vaultName;
+    public Output<String> vaultName() {
+        return this.vaultName == null ? Codegen.empty() : this.vaultName;
     }
 
     public VaultLockState(
@@ -71,10 +72,10 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultLockState() {
-        this.completeLock = Output.empty();
-        this.ignoreDeletionError = Output.empty();
-        this.policy = Output.empty();
-        this.vaultName = Output.empty();
+        this.completeLock = Codegen.empty();
+        this.ignoreDeletionError = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder completeLock(@Nullable Boolean completeLock) {
-            this.completeLock = Output.ofNullable(completeLock);
+            this.completeLock = Codegen.ofNullable(completeLock);
             return this;
         }
         public Builder ignoreDeletionError(@Nullable Output<Boolean> ignoreDeletionError) {
@@ -116,7 +117,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
-            this.ignoreDeletionError = Output.ofNullable(ignoreDeletionError);
+            this.ignoreDeletionError = Codegen.ofNullable(ignoreDeletionError);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -124,7 +125,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder vaultName(@Nullable Output<String> vaultName) {
@@ -132,7 +133,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vaultName(@Nullable String vaultName) {
-            this.vaultName = Output.ofNullable(vaultName);
+            this.vaultName = Codegen.ofNullable(vaultName);
             return this;
         }        public VaultLockState build() {
             return new VaultLockState(completeLock, ignoreDeletionError, policy, vaultName);

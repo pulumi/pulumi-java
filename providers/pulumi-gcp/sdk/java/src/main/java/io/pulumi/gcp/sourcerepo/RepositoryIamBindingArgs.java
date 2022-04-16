@@ -5,6 +5,7 @@ package io.pulumi.gcp.sourcerepo;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,14 +20,14 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="condition")
       private final @Nullable Output<RepositoryIamBindingConditionArgs> condition;
 
-    public Output<RepositoryIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<RepositoryIamBindingConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
       private final Output<List<String>> members;
 
-    public Output<List<String>> getMembers() {
+    public Output<List<String>> members() {
         return this.members;
     }
 
@@ -38,14 +39,14 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="project")
       private final @Nullable Output<String> project;
 
-    public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+    public Output<String> project() {
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="repository", required=true)
       private final Output<String> repository;
 
-    public Output<String> getRepository() {
+    public Output<String> repository() {
         return this.repository;
     }
 
@@ -58,7 +59,7 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -76,11 +77,11 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
     }
 
     private RepositoryIamBindingArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.repository = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.repository = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder condition(@Nullable RepositoryIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {
@@ -135,7 +136,7 @@ public final class RepositoryIamBindingArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder repository(Output<String> repository) {

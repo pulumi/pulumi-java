@@ -6,6 +6,7 @@ package io.pulumi.googlenative.iap_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iap_v1.BrandArgs;
 import java.lang.Boolean;
@@ -32,7 +33,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Application name displayed on OAuth consent screen.
      * 
      */
-    public Output<String> getApplicationTitle() {
+    public Output<String> applicationTitle() {
         return this.applicationTitle;
     }
     /**
@@ -46,7 +47,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Identifier of the brand. NOTE: GCP project number achieves the same brand identification purpose as only one brand per project can be created.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -60,7 +61,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Whether the brand is only intended for usage inside the G Suite organization only.
      * 
      */
-    public Output<Boolean> getOrgInternalOnly() {
+    public Output<Boolean> orgInternalOnly() {
         return this.orgInternalOnly;
     }
     /**
@@ -74,7 +75,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @return Support email displayed on the OAuth consent screen.
      * 
      */
-    public Output<String> getSupportEmail() {
+    public Output<String> supportEmail() {
         return this.supportEmail;
     }
 
@@ -100,7 +101,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Brand(String name, @Nullable BrandArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:iap/v1:Brand", name, args == null ? BrandArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:iap/v1:Brand", name, args == null ? BrandArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Brand(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

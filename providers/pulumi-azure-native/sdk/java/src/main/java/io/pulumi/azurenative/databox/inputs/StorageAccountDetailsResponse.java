@@ -24,7 +24,7 @@ public final class StorageAccountDetailsResponse extends io.pulumi.resources.Inv
     @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
-    public String getDataAccountType() {
+    public String dataAccountType() {
         return this.dataAccountType;
     }
 
@@ -35,7 +35,7 @@ public final class StorageAccountDetailsResponse extends io.pulumi.resources.Inv
     @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
-    public String getStorageAccountId() {
+    public String storageAccountId() {
         return this.storageAccountId;
     }
 

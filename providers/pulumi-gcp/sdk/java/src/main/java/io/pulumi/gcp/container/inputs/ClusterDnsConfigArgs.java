@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterDns")
       private final @Nullable Output<String> clusterDns;
 
-    public Output<String> getClusterDns() {
-        return this.clusterDns == null ? Output.empty() : this.clusterDns;
+    public Output<String> clusterDns() {
+        return this.clusterDns == null ? Codegen.empty() : this.clusterDns;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterDnsDomain")
       private final @Nullable Output<String> clusterDnsDomain;
 
-    public Output<String> getClusterDnsDomain() {
-        return this.clusterDnsDomain == null ? Output.empty() : this.clusterDnsDomain;
+    public Output<String> clusterDnsDomain() {
+        return this.clusterDnsDomain == null ? Codegen.empty() : this.clusterDnsDomain;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="clusterDnsScope")
       private final @Nullable Output<String> clusterDnsScope;
 
-    public Output<String> getClusterDnsScope() {
-        return this.clusterDnsScope == null ? Output.empty() : this.clusterDnsScope;
+    public Output<String> clusterDnsScope() {
+        return this.clusterDnsScope == null ? Codegen.empty() : this.clusterDnsScope;
     }
 
     public ClusterDnsConfigArgs(
@@ -57,9 +58,9 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ClusterDnsConfigArgs() {
-        this.clusterDns = Output.empty();
-        this.clusterDnsDomain = Output.empty();
-        this.clusterDnsScope = Output.empty();
+        this.clusterDns = Codegen.empty();
+        this.clusterDnsDomain = Codegen.empty();
+        this.clusterDnsScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clusterDns(@Nullable String clusterDns) {
-            this.clusterDns = Output.ofNullable(clusterDns);
+            this.clusterDns = Codegen.ofNullable(clusterDns);
             return this;
         }
         public Builder clusterDnsDomain(@Nullable Output<String> clusterDnsDomain) {
@@ -99,7 +100,7 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clusterDnsDomain(@Nullable String clusterDnsDomain) {
-            this.clusterDnsDomain = Output.ofNullable(clusterDnsDomain);
+            this.clusterDnsDomain = Codegen.ofNullable(clusterDnsDomain);
             return this;
         }
         public Builder clusterDnsScope(@Nullable Output<String> clusterDnsScope) {
@@ -107,7 +108,7 @@ public final class ClusterDnsConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clusterDnsScope(@Nullable String clusterDnsScope) {
-            this.clusterDnsScope = Output.ofNullable(clusterDnsScope);
+            this.clusterDnsScope = Codegen.ofNullable(clusterDnsScope);
             return this;
         }        public ClusterDnsConfigArgs build() {
             return new ClusterDnsConfigArgs(clusterDns, clusterDnsDomain, clusterDnsScope);

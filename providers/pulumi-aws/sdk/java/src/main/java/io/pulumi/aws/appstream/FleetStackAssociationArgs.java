@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +21,7 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="fleetName", required=true)
       private final Output<String> fleetName;
 
-    public Output<String> getFleetName() {
+    public Output<String> fleetName() {
         return this.fleetName;
     }
 
@@ -31,7 +32,7 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
     @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
-    public Output<String> getStackName() {
+    public Output<String> stackName() {
         return this.stackName;
     }
 
@@ -43,8 +44,8 @@ public final class FleetStackAssociationArgs extends io.pulumi.resources.Resourc
     }
 
     private FleetStackAssociationArgs() {
-        this.fleetName = Output.empty();
-        this.stackName = Output.empty();
+        this.fleetName = Codegen.empty();
+        this.stackName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -44,7 +45,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return The description of this Shared Image Gallery resource. This property is updatable.
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -58,7 +59,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Describes the gallery unique name.
      * 
      */
-    public Output</* @Nullable */ GalleryIdentifierResponse> getIdentifier() {
+    public Output</* @Nullable */ GalleryIdentifierResponse> identifier() {
         return this.identifier;
     }
     /**
@@ -72,7 +73,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output<String> getLocation() {
+    public Output<String> location() {
         return this.location;
     }
     /**
@@ -86,7 +87,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Resource name
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -100,7 +101,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return The provisioning state, which only appears in the response.
      * 
      */
-    public Output<String> getProvisioningState() {
+    public Output<String> provisioningState() {
         return this.provisioningState;
     }
     /**
@@ -114,7 +115,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Profile for gallery sharing to subscription or tenant
      * 
      */
-    public Output</* @Nullable */ SharingProfileResponse> getSharingProfile() {
+    public Output</* @Nullable */ SharingProfileResponse> sharingProfile() {
         return this.sharingProfile;
     }
     /**
@@ -128,7 +129,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -142,7 +143,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @return Resource type
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -168,7 +169,7 @@ public class Gallery extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Gallery(String name, GalleryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:Gallery", name, args == null ? GalleryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:compute:Gallery", name, args == null ? GalleryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Gallery(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
     @Import(name="driver", required=true)
       private final Output<String> driver;
 
-    public Output<String> getDriver() {
+    public Output<String> driver() {
         return this.driver;
     }
 
@@ -39,8 +40,8 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
     @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
-    public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+    public Output<String> fsType() {
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
     @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
-    public Output<Map<String,String>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+    public Output<Map<String,String>> options() {
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+    public Output<Boolean> readOnly() {
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -72,8 +73,8 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
     @Import(name="secretRef")
       private final @Nullable Output<SecretReferenceArgs> secretRef;
 
-    public Output<SecretReferenceArgs> getSecretRef() {
-        return this.secretRef == null ? Output.empty() : this.secretRef;
+    public Output<SecretReferenceArgs> secretRef() {
+        return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
     public FlexPersistentVolumeSourceArgs(
@@ -90,11 +91,11 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
     }
 
     private FlexPersistentVolumeSourceArgs() {
-        this.driver = Output.empty();
-        this.fsType = Output.empty();
-        this.options = Output.empty();
-        this.readOnly = Output.empty();
-        this.secretRef = Output.empty();
+        this.driver = Codegen.empty();
+        this.fsType = Codegen.empty();
+        this.options = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.secretRef = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder options(@Nullable Output<Map<String,String>> options) {
@@ -146,7 +147,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder options(@Nullable Map<String,String> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -154,7 +155,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
@@ -162,7 +163,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder secretRef(@Nullable SecretReferenceArgs secretRef) {
-            this.secretRef = Output.ofNullable(secretRef);
+            this.secretRef = Codegen.ofNullable(secretRef);
             return this;
         }        public FlexPersistentVolumeSourceArgs build() {
             return new FlexPersistentVolumeSourceArgs(driver, fsType, options, readOnly, secretRef);

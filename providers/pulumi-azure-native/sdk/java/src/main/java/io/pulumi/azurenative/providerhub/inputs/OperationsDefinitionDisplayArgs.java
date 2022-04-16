@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,28 +21,28 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     @Import(name="description", required=true)
       private final Output<String> description;
 
-    public Output<String> getDescription() {
+    public Output<String> description() {
         return this.description;
     }
 
     @Import(name="operation", required=true)
       private final Output<String> operation;
 
-    public Output<String> getOperation() {
+    public Output<String> operation() {
         return this.operation;
     }
 
     @Import(name="provider", required=true)
       private final Output<String> provider;
 
-    public Output<String> getProvider() {
+    public Output<String> provider() {
         return this.provider;
     }
 
     @Import(name="resource", required=true)
       private final Output<String> resource;
 
-    public Output<String> getResource() {
+    public Output<String> resource() {
         return this.resource;
     }
 
@@ -57,10 +58,10 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     }
 
     private OperationsDefinitionDisplayArgs() {
-        this.description = Output.empty();
-        this.operation = Output.empty();
-        this.provider = Output.empty();
-        this.resource = Output.empty();
+        this.description = Codegen.empty();
+        this.operation = Codegen.empty();
+        this.provider = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {

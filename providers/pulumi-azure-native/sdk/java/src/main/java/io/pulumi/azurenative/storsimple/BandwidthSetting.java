@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +44,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> getKind() {
+    public Output</* @Nullable */ String> kind() {
         return this.kind;
     }
     /**
@@ -57,7 +58,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * @return The name of the object.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -71,7 +72,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * @return The schedules.
      * 
      */
-    public Output<List<BandwidthScheduleResponse>> getSchedules() {
+    public Output<List<BandwidthScheduleResponse>> schedules() {
         return this.schedules;
     }
     /**
@@ -85,7 +86,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -99,7 +100,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * @return The number of volumes that uses the bandwidth setting.
      * 
      */
-    public Output<Integer> getVolumeCount() {
+    public Output<Integer> volumeCount() {
         return this.volumeCount;
     }
 
@@ -125,7 +126,7 @@ public class BandwidthSetting extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BandwidthSetting(String name, BandwidthSettingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storsimple:BandwidthSetting", name, args == null ? BandwidthSettingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storsimple:BandwidthSetting", name, args == null ? BandwidthSettingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BandwidthSetting(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

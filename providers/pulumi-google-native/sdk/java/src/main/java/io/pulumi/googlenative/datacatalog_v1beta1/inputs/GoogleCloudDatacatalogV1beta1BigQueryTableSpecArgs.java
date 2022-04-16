@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1TableSpecArgs;
 import io.pulumi.googlenative.datacatalog_v1beta1.inputs.GoogleCloudDatacatalogV1beta1ViewSpecArgs;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io
     @Import(name="tableSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1beta1TableSpecArgs> tableSpec;
 
-    public Output<GoogleCloudDatacatalogV1beta1TableSpecArgs> getTableSpec() {
-        return this.tableSpec == null ? Output.empty() : this.tableSpec;
+    public Output<GoogleCloudDatacatalogV1beta1TableSpecArgs> tableSpec() {
+        return this.tableSpec == null ? Codegen.empty() : this.tableSpec;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io
     @Import(name="viewSpec")
       private final @Nullable Output<GoogleCloudDatacatalogV1beta1ViewSpecArgs> viewSpec;
 
-    public Output<GoogleCloudDatacatalogV1beta1ViewSpecArgs> getViewSpec() {
-        return this.viewSpec == null ? Output.empty() : this.viewSpec;
+    public Output<GoogleCloudDatacatalogV1beta1ViewSpecArgs> viewSpec() {
+        return this.viewSpec == null ? Codegen.empty() : this.viewSpec;
     }
 
     public GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io
     }
 
     private GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs() {
-        this.tableSpec = Output.empty();
-        this.viewSpec = Output.empty();
+        this.tableSpec = Codegen.empty();
+        this.viewSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io
             return this;
         }
         public Builder tableSpec(@Nullable GoogleCloudDatacatalogV1beta1TableSpecArgs tableSpec) {
-            this.tableSpec = Output.ofNullable(tableSpec);
+            this.tableSpec = Codegen.ofNullable(tableSpec);
             return this;
         }
         public Builder viewSpec(@Nullable Output<GoogleCloudDatacatalogV1beta1ViewSpecArgs> viewSpec) {
@@ -88,7 +89,7 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs extends io
             return this;
         }
         public Builder viewSpec(@Nullable GoogleCloudDatacatalogV1beta1ViewSpecArgs viewSpec) {
-            this.viewSpec = Output.ofNullable(viewSpec);
+            this.viewSpec = Codegen.ofNullable(viewSpec);
             return this;
         }        public GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs build() {
             return new GoogleCloudDatacatalogV1beta1BigQueryTableSpecArgs(tableSpec, viewSpec);

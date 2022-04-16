@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,8 +24,8 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
-    public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+    public Output<String> bucketName() {
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
-    public Output<Boolean> getEnable() {
+    public Output<Boolean> enable() {
         return this.enable;
     }
 
@@ -45,8 +46,8 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
     @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
-    public Output<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
+    public Output<String> s3KeyPrefix() {
+        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
     public ClusterLoggingGetArgs(
@@ -59,9 +60,9 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ClusterLoggingGetArgs() {
-        this.bucketName = Output.empty();
-        this.enable = Output.empty();
-        this.s3KeyPrefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.enable = Codegen.empty();
+        this.s3KeyPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder enable(Output<Boolean> enable) {
@@ -109,7 +110,7 @@ public final class ClusterLoggingGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
             return this;
         }        public ClusterLoggingGetArgs build() {
             return new ClusterLoggingGetArgs(bucketName, enable, s3KeyPrefix);

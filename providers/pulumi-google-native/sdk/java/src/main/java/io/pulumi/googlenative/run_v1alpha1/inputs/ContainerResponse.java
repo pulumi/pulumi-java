@@ -31,14 +31,14 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="args", required=true)
       private final List<String> args;
 
-    public List<String> getArgs() {
+    public List<String> args() {
         return this.args;
     }
 
     @Import(name="command", required=true)
       private final List<String> command;
 
-    public List<String> getCommand() {
+    public List<String> command() {
         return this.command;
     }
 
@@ -49,7 +49,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="env", required=true)
       private final List<EnvVarResponse> env;
 
-    public List<EnvVarResponse> getEnv() {
+    public List<EnvVarResponse> env() {
         return this.env;
     }
 
@@ -60,7 +60,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="envFrom", required=true)
       private final List<EnvFromSourceResponse> envFrom;
 
-    public List<EnvFromSourceResponse> getEnvFrom() {
+    public List<EnvFromSourceResponse> envFrom() {
         return this.envFrom;
     }
 
@@ -71,7 +71,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="image", required=true)
       private final String image;
 
-    public String getImage() {
+    public String image() {
         return this.image;
     }
 
@@ -82,7 +82,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="imagePullPolicy", required=true)
       private final String imagePullPolicy;
 
-    public String getImagePullPolicy() {
+    public String imagePullPolicy() {
         return this.imagePullPolicy;
     }
 
@@ -93,7 +93,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="livenessProbe", required=true)
       private final ProbeResponse livenessProbe;
 
-    public ProbeResponse getLivenessProbe() {
+    public ProbeResponse livenessProbe() {
         return this.livenessProbe;
     }
 
@@ -104,7 +104,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
       private final String name;
 
-    public String getName() {
+    public String name() {
         return this.name;
     }
 
@@ -115,7 +115,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="ports", required=true)
       private final List<ContainerPortResponse> ports;
 
-    public List<ContainerPortResponse> getPorts() {
+    public List<ContainerPortResponse> ports() {
         return this.ports;
     }
 
@@ -126,7 +126,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="readinessProbe", required=true)
       private final ProbeResponse readinessProbe;
 
-    public ProbeResponse getReadinessProbe() {
+    public ProbeResponse readinessProbe() {
         return this.readinessProbe;
     }
 
@@ -137,7 +137,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="resources", required=true)
       private final ResourceRequirementsResponse resources;
 
-    public ResourceRequirementsResponse getResources() {
+    public ResourceRequirementsResponse resources() {
         return this.resources;
     }
 
@@ -148,7 +148,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="securityContext", required=true)
       private final SecurityContextResponse securityContext;
 
-    public SecurityContextResponse getSecurityContext() {
+    public SecurityContextResponse securityContext() {
         return this.securityContext;
     }
 
@@ -159,7 +159,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="startupProbe", required=true)
       private final ProbeResponse startupProbe;
 
-    public ProbeResponse getStartupProbe() {
+    public ProbeResponse startupProbe() {
         return this.startupProbe;
     }
 
@@ -170,7 +170,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="terminationMessagePath", required=true)
       private final String terminationMessagePath;
 
-    public String getTerminationMessagePath() {
+    public String terminationMessagePath() {
         return this.terminationMessagePath;
     }
 
@@ -181,7 +181,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="terminationMessagePolicy", required=true)
       private final String terminationMessagePolicy;
 
-    public String getTerminationMessagePolicy() {
+    public String terminationMessagePolicy() {
         return this.terminationMessagePolicy;
     }
 
@@ -192,7 +192,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="volumeMounts", required=true)
       private final List<VolumeMountResponse> volumeMounts;
 
-    public List<VolumeMountResponse> getVolumeMounts() {
+    public List<VolumeMountResponse> volumeMounts() {
         return this.volumeMounts;
     }
 
@@ -203,7 +203,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
     @Import(name="workingDir", required=true)
       private final String workingDir;
 
-    public String getWorkingDir() {
+    public String workingDir() {
         return this.workingDir;
     }
 

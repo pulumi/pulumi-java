@@ -13,6 +13,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return The contact details.
      * 
      */
-    public Output<ContactDetailsResponse> getContactInformation() {
+    public Output<ContactDetailsResponse> contactInformation() {
         return this.contactInformation;
     }
     /**
@@ -59,7 +60,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return Current status of the order.
      * 
      */
-    public Output<OrderStatusResponse> getCurrentStatus() {
+    public Output<OrderStatusResponse> currentStatus() {
         return this.currentStatus;
     }
     /**
@@ -73,7 +74,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return Tracking information for the package delivered to the customer whether it has an original or a replacement device.
      * 
      */
-    public Output<List<TrackingInfoResponse>> getDeliveryTrackingInfo() {
+    public Output<List<TrackingInfoResponse>> deliveryTrackingInfo() {
         return this.deliveryTrackingInfo;
     }
     /**
@@ -87,7 +88,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return The object name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -101,7 +102,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return List of status changes in the order.
      * 
      */
-    public Output<List<OrderStatusResponse>> getOrderHistory() {
+    public Output<List<OrderStatusResponse>> orderHistory() {
         return this.orderHistory;
     }
     /**
@@ -115,7 +116,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return Tracking information for the package returned from the customer whether it has an original or a replacement device.
      * 
      */
-    public Output<List<TrackingInfoResponse>> getReturnTrackingInfo() {
+    public Output<List<TrackingInfoResponse>> returnTrackingInfo() {
         return this.returnTrackingInfo;
     }
     /**
@@ -129,7 +130,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return Serial number of the device.
      * 
      */
-    public Output<String> getSerialNumber() {
+    public Output<String> serialNumber() {
         return this.serialNumber;
     }
     /**
@@ -143,7 +144,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return ShipmentType of the order
      * 
      */
-    public Output</* @Nullable */ String> getShipmentType() {
+    public Output</* @Nullable */ String> shipmentType() {
         return this.shipmentType;
     }
     /**
@@ -157,7 +158,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return The shipping address.
      * 
      */
-    public Output</* @Nullable */ AddressResponse> getShippingAddress() {
+    public Output</* @Nullable */ AddressResponse> shippingAddress() {
         return this.shippingAddress;
     }
     /**
@@ -171,7 +172,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @return The hierarchical type of the object.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
 
@@ -197,7 +198,7 @@ public class Order extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Order(String name, OrderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:Order", name, args == null ? OrderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:databoxedge:Order", name, args == null ? OrderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Order(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

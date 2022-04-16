@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.enums.CertificateStoreLocation;
 import io.pulumi.azurenative.batch.enums.CertificateVisibility;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="id", required=true)
       private final Output<String> id;
 
-    public Output<String> getId() {
+    public Output<String> id() {
         return this.id;
     }
 
@@ -31,8 +32,8 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="storeLocation")
       private final @Nullable Output<CertificateStoreLocation> storeLocation;
 
-    public Output<CertificateStoreLocation> getStoreLocation() {
-        return this.storeLocation == null ? Output.empty() : this.storeLocation;
+    public Output<CertificateStoreLocation> storeLocation() {
+        return this.storeLocation == null ? Codegen.empty() : this.storeLocation;
     }
 
     /**
@@ -42,15 +43,15 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     @Import(name="storeName")
       private final @Nullable Output<String> storeName;
 
-    public Output<String> getStoreName() {
-        return this.storeName == null ? Output.empty() : this.storeName;
+    public Output<String> storeName() {
+        return this.storeName == null ? Codegen.empty() : this.storeName;
     }
 
     @Import(name="visibility")
       private final @Nullable Output<List<CertificateVisibility>> visibility;
 
-    public Output<List<CertificateVisibility>> getVisibility() {
-        return this.visibility == null ? Output.empty() : this.visibility;
+    public Output<List<CertificateVisibility>> visibility() {
+        return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 
     public CertificateReferenceArgs(
@@ -65,10 +66,10 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateReferenceArgs() {
-        this.id = Output.empty();
-        this.storeLocation = Output.empty();
-        this.storeName = Output.empty();
-        this.visibility = Output.empty();
+        this.id = Codegen.empty();
+        this.storeLocation = Codegen.empty();
+        this.storeName = Codegen.empty();
+        this.visibility = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder storeLocation(@Nullable CertificateStoreLocation storeLocation) {
-            this.storeLocation = Output.ofNullable(storeLocation);
+            this.storeLocation = Codegen.ofNullable(storeLocation);
             return this;
         }
         public Builder storeName(@Nullable Output<String> storeName) {
@@ -118,7 +119,7 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder storeName(@Nullable String storeName) {
-            this.storeName = Output.ofNullable(storeName);
+            this.storeName = Codegen.ofNullable(storeName);
             return this;
         }
         public Builder visibility(@Nullable Output<List<CertificateVisibility>> visibility) {
@@ -126,7 +127,7 @@ public final class CertificateReferenceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder visibility(@Nullable List<CertificateVisibility> visibility) {
-            this.visibility = Output.ofNullable(visibility);
+            this.visibility = Codegen.ofNullable(visibility);
             return this;
         }
         public Builder visibility(CertificateVisibility... visibility) {

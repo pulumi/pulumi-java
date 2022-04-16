@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerGithubPullRequestArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerGithubPushArgs;
 import java.lang.String;
@@ -25,8 +26,8 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="owner")
       private final @Nullable Output<String> owner;
 
-    public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+    public Output<String> owner() {
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="pullRequest")
       private final @Nullable Output<TriggerGithubPullRequestArgs> pullRequest;
 
-    public Output<TriggerGithubPullRequestArgs> getPullRequest() {
-        return this.pullRequest == null ? Output.empty() : this.pullRequest;
+    public Output<TriggerGithubPullRequestArgs> pullRequest() {
+        return this.pullRequest == null ? Codegen.empty() : this.pullRequest;
     }
 
     /**
@@ -61,8 +62,8 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="push")
       private final @Nullable Output<TriggerGithubPushArgs> push;
 
-    public Output<TriggerGithubPushArgs> getPush() {
-        return this.push == null ? Output.empty() : this.push;
+    public Output<TriggerGithubPushArgs> push() {
+        return this.push == null ? Codegen.empty() : this.push;
     }
 
     public TriggerGithubArgs(
@@ -77,10 +78,10 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerGithubArgs() {
-        this.name = Output.empty();
-        this.owner = Output.empty();
-        this.pullRequest = Output.empty();
-        this.push = Output.empty();
+        this.name = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.pullRequest = Codegen.empty();
+        this.push = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -122,7 +123,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder pullRequest(@Nullable Output<TriggerGithubPullRequestArgs> pullRequest) {
@@ -130,7 +131,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pullRequest(@Nullable TriggerGithubPullRequestArgs pullRequest) {
-            this.pullRequest = Output.ofNullable(pullRequest);
+            this.pullRequest = Codegen.ofNullable(pullRequest);
             return this;
         }
         public Builder push(@Nullable Output<TriggerGithubPushArgs> push) {
@@ -138,7 +139,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder push(@Nullable TriggerGithubPushArgs push) {
-            this.push = Output.ofNullable(push);
+            this.push = Codegen.ofNullable(push);
             return this;
         }        public TriggerGithubArgs build() {
             return new TriggerGithubArgs(name, owner, pullRequest, push);

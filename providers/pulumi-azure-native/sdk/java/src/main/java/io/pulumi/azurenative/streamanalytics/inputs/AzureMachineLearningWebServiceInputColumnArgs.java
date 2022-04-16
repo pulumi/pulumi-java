@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
     @Import(name="dataType")
       private final @Nullable Output<String> dataType;
 
-    public Output<String> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+    public Output<String> dataType() {
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
     @Import(name="mapTo")
       private final @Nullable Output<Integer> mapTo;
 
-    public Output<Integer> getMapTo() {
-        return this.mapTo == null ? Output.empty() : this.mapTo;
+    public Output<Integer> mapTo() {
+        return this.mapTo == null ? Codegen.empty() : this.mapTo;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public AzureMachineLearningWebServiceInputColumnArgs(
@@ -62,9 +63,9 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
     }
 
     private AzureMachineLearningWebServiceInputColumnArgs() {
-        this.dataType = Output.empty();
-        this.mapTo = Output.empty();
-        this.name = Output.empty();
+        this.dataType = Codegen.empty();
+        this.mapTo = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
             return this;
         }
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder mapTo(@Nullable Output<Integer> mapTo) {
@@ -104,7 +105,7 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
             return this;
         }
         public Builder mapTo(@Nullable Integer mapTo) {
-            this.mapTo = Output.ofNullable(mapTo);
+            this.mapTo = Codegen.ofNullable(mapTo);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -112,7 +113,7 @@ public final class AzureMachineLearningWebServiceInputColumnArgs extends io.pulu
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public AzureMachineLearningWebServiceInputColumnArgs build() {
             return new AzureMachineLearningWebServiceInputColumnArgs(dataType, mapTo, name);

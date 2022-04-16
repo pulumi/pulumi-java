@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.inputs.DestinationsSpecAzureMonitorMetrics
 import io.pulumi.azurenative.insights.inputs.LogAnalyticsDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,8 +28,8 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
     @Import(name="azureMonitorMetrics")
       private final @Nullable Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics;
 
-    public Output<DestinationsSpecAzureMonitorMetricsArgs> getAzureMonitorMetrics() {
-        return this.azureMonitorMetrics == null ? Output.empty() : this.azureMonitorMetrics;
+    public Output<DestinationsSpecAzureMonitorMetricsArgs> azureMonitorMetrics() {
+        return this.azureMonitorMetrics == null ? Codegen.empty() : this.azureMonitorMetrics;
     }
 
     /**
@@ -38,8 +39,8 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
     @Import(name="logAnalytics")
       private final @Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics;
 
-    public Output<List<LogAnalyticsDestinationArgs>> getLogAnalytics() {
-        return this.logAnalytics == null ? Output.empty() : this.logAnalytics;
+    public Output<List<LogAnalyticsDestinationArgs>> logAnalytics() {
+        return this.logAnalytics == null ? Codegen.empty() : this.logAnalytics;
     }
 
     public DataCollectionRuleDestinationsArgs(
@@ -50,8 +51,8 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
     }
 
     private DataCollectionRuleDestinationsArgs() {
-        this.azureMonitorMetrics = Output.empty();
-        this.logAnalytics = Output.empty();
+        this.azureMonitorMetrics = Codegen.empty();
+        this.logAnalytics = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
             return this;
         }
         public Builder azureMonitorMetrics(@Nullable DestinationsSpecAzureMonitorMetricsArgs azureMonitorMetrics) {
-            this.azureMonitorMetrics = Output.ofNullable(azureMonitorMetrics);
+            this.azureMonitorMetrics = Codegen.ofNullable(azureMonitorMetrics);
             return this;
         }
         public Builder logAnalytics(@Nullable Output<List<LogAnalyticsDestinationArgs>> logAnalytics) {
@@ -89,7 +90,7 @@ public final class DataCollectionRuleDestinationsArgs extends io.pulumi.resource
             return this;
         }
         public Builder logAnalytics(@Nullable List<LogAnalyticsDestinationArgs> logAnalytics) {
-            this.logAnalytics = Output.ofNullable(logAnalytics);
+            this.logAnalytics = Codegen.ofNullable(logAnalytics);
             return this;
         }
         public Builder logAnalytics(LogAnalyticsDestinationArgs... logAnalytics) {

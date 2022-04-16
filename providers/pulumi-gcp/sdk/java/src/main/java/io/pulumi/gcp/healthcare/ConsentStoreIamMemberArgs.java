@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,8 +19,8 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
     @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamMemberConditionArgs> condition;
 
-    public Output<ConsentStoreIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+    public Output<ConsentStoreIamMemberConditionArgs> condition() {
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
     @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
-    public Output<String> getConsentStoreId() {
+    public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
@@ -42,14 +43,14 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
     @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
-    public Output<String> getDataset() {
+    public Output<String> dataset() {
         return this.dataset;
     }
 
     @Import(name="member", required=true)
       private final Output<String> member;
 
-    public Output<String> getMember() {
+    public Output<String> member() {
         return this.member;
     }
 
@@ -62,7 +63,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
     @Import(name="role", required=true)
       private final Output<String> role;
 
-    public Output<String> getRole() {
+    public Output<String> role() {
         return this.role;
     }
 
@@ -80,11 +81,11 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
     }
 
     private ConsentStoreIamMemberArgs() {
-        this.condition = Output.empty();
-        this.consentStoreId = Output.empty();
-        this.dataset = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.consentStoreId = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ConsentStoreIamMemberArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder condition(@Nullable ConsentStoreIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder consentStoreId(Output<String> consentStoreId) {

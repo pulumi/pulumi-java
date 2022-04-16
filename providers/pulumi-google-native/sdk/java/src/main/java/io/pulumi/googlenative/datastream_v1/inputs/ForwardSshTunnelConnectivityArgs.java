@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
-    public Output<String> getHostname() {
+    public Output<String> hostname() {
         return this.hostname;
     }
 
@@ -37,8 +38,8 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="password")
       private final @Nullable Output<String> password;
 
-    public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+    public Output<String> password() {
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
-    public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+    public Output<Integer> port() {
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
-    public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+    public Output<String> privateKey() {
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     @Import(name="username", required=true)
       private final Output<String> username;
 
-    public Output<String> getUsername() {
+    public Output<String> username() {
         return this.username;
     }
 
@@ -88,11 +89,11 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
     }
 
     private ForwardSshTunnelConnectivityArgs() {
-        this.hostname = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.privateKey = Output.empty();
-        this.username = Output.empty();
+        this.hostname = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -144,7 +145,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder privateKey(@Nullable Output<String> privateKey) {
@@ -152,7 +153,7 @@ public final class ForwardSshTunnelConnectivityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }
         public Builder username(Output<String> username) {

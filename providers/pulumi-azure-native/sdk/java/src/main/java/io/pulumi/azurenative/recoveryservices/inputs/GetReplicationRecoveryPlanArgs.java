@@ -19,7 +19,7 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
     @Import(name="recoveryPlanName", required=true)
       private final String recoveryPlanName;
 
-    public String getRecoveryPlanName() {
+    public String recoveryPlanName() {
         return this.recoveryPlanName;
     }
 
@@ -30,7 +30,7 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
-    public String getResourceGroupName() {
+    public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,7 +41,7 @@ public final class GetReplicationRecoveryPlanArgs extends io.pulumi.resources.In
     @Import(name="resourceName", required=true)
       private final String resourceName;
 
-    public String getPropResourceName() {
+    public String resourceName() {
         return this.resourceName;
     }
 

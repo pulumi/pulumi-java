@@ -5,6 +5,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="packageSid")
       private final @Nullable Output<String> packageSid;
 
-    public Output<String> getPackageSid() {
-        return this.packageSid == null ? Output.empty() : this.packageSid;
+    public Output<String> packageSid() {
+        return this.packageSid == null ? Codegen.empty() : this.packageSid;
     }
 
     /**
@@ -36,8 +37,8 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
 
-    public Output<String> getSecretKey() {
-        return this.secretKey == null ? Output.empty() : this.secretKey;
+    public Output<String> secretKey() {
+        return this.secretKey == null ? Codegen.empty() : this.secretKey;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="windowsLiveEndpoint")
       private final @Nullable Output<String> windowsLiveEndpoint;
 
-    public Output<String> getWindowsLiveEndpoint() {
-        return this.windowsLiveEndpoint == null ? Output.empty() : this.windowsLiveEndpoint;
+    public Output<String> windowsLiveEndpoint() {
+        return this.windowsLiveEndpoint == null ? Codegen.empty() : this.windowsLiveEndpoint;
     }
 
     public WnsCredentialArgs(
@@ -61,9 +62,9 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WnsCredentialArgs() {
-        this.packageSid = Output.empty();
-        this.secretKey = Output.empty();
-        this.windowsLiveEndpoint = Output.empty();
+        this.packageSid = Codegen.empty();
+        this.secretKey = Codegen.empty();
+        this.windowsLiveEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageSid(@Nullable String packageSid) {
-            this.packageSid = Output.ofNullable(packageSid);
+            this.packageSid = Codegen.ofNullable(packageSid);
             return this;
         }
         public Builder secretKey(@Nullable Output<String> secretKey) {
@@ -103,7 +104,7 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretKey(@Nullable String secretKey) {
-            this.secretKey = Output.ofNullable(secretKey);
+            this.secretKey = Codegen.ofNullable(secretKey);
             return this;
         }
         public Builder windowsLiveEndpoint(@Nullable Output<String> windowsLiveEndpoint) {
@@ -111,7 +112,7 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder windowsLiveEndpoint(@Nullable String windowsLiveEndpoint) {
-            this.windowsLiveEndpoint = Output.ofNullable(windowsLiveEndpoint);
+            this.windowsLiveEndpoint = Codegen.ofNullable(windowsLiveEndpoint);
             return this;
         }        public WnsCredentialArgs build() {
             return new WnsCredentialArgs(packageSid, secretKey, windowsLiveEndpoint);

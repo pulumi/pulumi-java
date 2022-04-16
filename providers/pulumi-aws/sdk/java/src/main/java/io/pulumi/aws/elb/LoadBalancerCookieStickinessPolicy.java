@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +37,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * the session cookie should be considered stale, expressed in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> getCookieExpirationPeriod() {
+    public Output</* @Nullable */ Integer> cookieExpirationPeriod() {
         return this.cookieExpirationPeriod;
     }
     /**
@@ -54,7 +55,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * balancer.
      * 
      */
-    public Output<Integer> getLbPort() {
+    public Output<Integer> lbPort() {
         return this.lbPort;
     }
     /**
@@ -70,7 +71,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * should be attached.
      * 
      */
-    public Output<String> getLoadBalancer() {
+    public Output<String> loadBalancer() {
         return this.loadBalancer;
     }
     /**
@@ -84,7 +85,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * @return The name of the stickiness policy.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
 
@@ -110,7 +111,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * @param options A bag of options that control this resource's behavior.
      */
     public LoadBalancerCookieStickinessPolicy(String name, LoadBalancerCookieStickinessPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elb/loadBalancerCookieStickinessPolicy:LoadBalancerCookieStickinessPolicy", name, args == null ? LoadBalancerCookieStickinessPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elb/loadBalancerCookieStickinessPolicy:LoadBalancerCookieStickinessPolicy", name, args == null ? LoadBalancerCookieStickinessPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LoadBalancerCookieStickinessPolicy(String name, Output<String> id, @Nullable LoadBalancerCookieStickinessPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

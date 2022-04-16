@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.providerhub.inputs.ProviderRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,8 +19,8 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
     @Import(name="properties")
       private final @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
-    public Output<ProviderRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+    public Output<ProviderRegistrationPropertiesArgs> properties() {
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -29,8 +30,8 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
     @Import(name="providerNamespace")
       private final @Nullable Output<String> providerNamespace;
 
-    public Output<String> getProviderNamespace() {
-        return this.providerNamespace == null ? Output.empty() : this.providerNamespace;
+    public Output<String> providerNamespace() {
+        return this.providerNamespace == null ? Codegen.empty() : this.providerNamespace;
     }
 
     public ProviderRegistrationArgs(
@@ -41,8 +42,8 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
     }
 
     private ProviderRegistrationArgs() {
-        this.properties = Output.empty();
-        this.providerNamespace = Output.empty();
+        this.properties = Codegen.empty();
+        this.providerNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder properties(@Nullable ProviderRegistrationPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder providerNamespace(@Nullable Output<String> providerNamespace) {
@@ -80,7 +81,7 @@ public final class ProviderRegistrationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder providerNamespace(@Nullable String providerNamespace) {
-            this.providerNamespace = Output.ofNullable(providerNamespace);
+            this.providerNamespace = Codegen.ofNullable(providerNamespace);
             return this;
         }        public ProviderRegistrationArgs build() {
             return new ProviderRegistrationArgs(properties, providerNamespace);

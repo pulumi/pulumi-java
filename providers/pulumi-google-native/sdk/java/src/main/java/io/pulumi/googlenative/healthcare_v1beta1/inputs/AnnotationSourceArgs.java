@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.CloudHealthcareSourceArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
     @Import(name="cloudHealthcareSource")
       private final @Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource;
 
-    public Output<CloudHealthcareSourceArgs> getCloudHealthcareSource() {
-        return this.cloudHealthcareSource == null ? Output.empty() : this.cloudHealthcareSource;
+    public Output<CloudHealthcareSourceArgs> cloudHealthcareSource() {
+        return this.cloudHealthcareSource == null ? Codegen.empty() : this.cloudHealthcareSource;
     }
 
     public AnnotationSourceArgs(@Nullable Output<CloudHealthcareSourceArgs> cloudHealthcareSource) {
@@ -34,7 +35,7 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AnnotationSourceArgs() {
-        this.cloudHealthcareSource = Output.empty();
+        this.cloudHealthcareSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cloudHealthcareSource(@Nullable CloudHealthcareSourceArgs cloudHealthcareSource) {
-            this.cloudHealthcareSource = Output.ofNullable(cloudHealthcareSource);
+            this.cloudHealthcareSource = Codegen.ofNullable(cloudHealthcareSource);
             return this;
         }        public AnnotationSourceArgs build() {
             return new AnnotationSourceArgs(cloudHealthcareSource);

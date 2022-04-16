@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+    public Output<Boolean> enabled() {
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
     @Import(name="lockedTime")
       private final @Nullable Output<String> lockedTime;
 
-    public Output<String> getLockedTime() {
-        return this.lockedTime == null ? Output.empty() : this.lockedTime;
+    public Output<String> lockedTime() {
+        return this.lockedTime == null ? Codegen.empty() : this.lockedTime;
     }
 
     public BucketIamConfigurationBucketPolicyOnlyArgs(
@@ -49,8 +50,8 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
     }
 
     private BucketIamConfigurationBucketPolicyOnlyArgs() {
-        this.enabled = Output.empty();
-        this.lockedTime = Output.empty();
+        this.enabled = Codegen.empty();
+        this.lockedTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder lockedTime(@Nullable Output<String> lockedTime) {
@@ -88,7 +89,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
             return this;
         }
         public Builder lockedTime(@Nullable String lockedTime) {
-            this.lockedTime = Output.ofNullable(lockedTime);
+            this.lockedTime = Codegen.ofNullable(lockedTime);
             return this;
         }        public BucketIamConfigurationBucketPolicyOnlyArgs build() {
             return new BucketIamConfigurationBucketPolicyOnlyArgs(enabled, lockedTime);

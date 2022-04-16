@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="policy")
       private final @Nullable Output<String> policy;
 
-    public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+    public Output<String> policy() {
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
     @Import(name="restApiId")
       private final @Nullable Output<String> restApiId;
 
-    public Output<String> getRestApiId() {
-        return this.restApiId == null ? Output.empty() : this.restApiId;
+    public Output<String> restApiId() {
+        return this.restApiId == null ? Codegen.empty() : this.restApiId;
     }
 
     public RestApiPolicyState(
@@ -44,8 +45,8 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RestApiPolicyState() {
-        this.policy = Output.empty();
-        this.restApiId = Output.empty();
+        this.policy = Codegen.empty();
+        this.restApiId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder restApiId(@Nullable Output<String> restApiId) {
@@ -83,7 +84,7 @@ public final class RestApiPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Output.ofNullable(restApiId);
+            this.restApiId = Codegen.ofNullable(restApiId);
             return this;
         }        public RestApiPolicyState build() {
             return new RestApiPolicyState(policy, restApiId);

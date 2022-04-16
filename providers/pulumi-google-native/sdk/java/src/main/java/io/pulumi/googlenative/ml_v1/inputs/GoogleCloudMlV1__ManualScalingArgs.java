@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
     @Import(name="nodes")
       private final @Nullable Output<Integer> nodes;
 
-    public Output<Integer> getNodes() {
-        return this.nodes == null ? Output.empty() : this.nodes;
+    public Output<Integer> nodes() {
+        return this.nodes == null ? Codegen.empty() : this.nodes;
     }
 
     public GoogleCloudMlV1__ManualScalingArgs(@Nullable Output<Integer> nodes) {
@@ -34,7 +35,7 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
     }
 
     private GoogleCloudMlV1__ManualScalingArgs() {
-        this.nodes = Output.empty();
+        this.nodes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
             return this;
         }
         public Builder nodes(@Nullable Integer nodes) {
-            this.nodes = Output.ofNullable(nodes);
+            this.nodes = Codegen.ofNullable(nodes);
             return this;
         }        public GoogleCloudMlV1__ManualScalingArgs build() {
             return new GoogleCloudMlV1__ManualScalingArgs(nodes);

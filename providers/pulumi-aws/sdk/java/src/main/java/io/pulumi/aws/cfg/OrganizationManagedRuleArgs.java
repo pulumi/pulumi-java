@@ -5,6 +5,7 @@ package io.pulumi.aws.cfg;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,8 +23,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,8 +34,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
 
-    public Output<List<String>> getExcludedAccounts() {
-        return this.excludedAccounts == null ? Output.empty() : this.excludedAccounts;
+    public Output<List<String>> excludedAccounts() {
+        return this.excludedAccounts == null ? Codegen.empty() : this.excludedAccounts;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="inputParameters")
       private final @Nullable Output<String> inputParameters;
 
-    public Output<String> getInputParameters() {
-        return this.inputParameters == null ? Output.empty() : this.inputParameters;
+    public Output<String> inputParameters() {
+        return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
     /**
@@ -55,8 +56,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
-    public Output<String> getMaximumExecutionFrequency() {
-        return this.maximumExecutionFrequency == null ? Output.empty() : this.maximumExecutionFrequency;
+    public Output<String> maximumExecutionFrequency() {
+        return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
     }
 
     /**
@@ -66,8 +67,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,8 +78,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="resourceIdScope")
       private final @Nullable Output<String> resourceIdScope;
 
-    public Output<String> getResourceIdScope() {
-        return this.resourceIdScope == null ? Output.empty() : this.resourceIdScope;
+    public Output<String> resourceIdScope() {
+        return this.resourceIdScope == null ? Codegen.empty() : this.resourceIdScope;
     }
 
     /**
@@ -88,8 +89,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="resourceTypesScopes")
       private final @Nullable Output<List<String>> resourceTypesScopes;
 
-    public Output<List<String>> getResourceTypesScopes() {
-        return this.resourceTypesScopes == null ? Output.empty() : this.resourceTypesScopes;
+    public Output<List<String>> resourceTypesScopes() {
+        return this.resourceTypesScopes == null ? Codegen.empty() : this.resourceTypesScopes;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="ruleIdentifier", required=true)
       private final Output<String> ruleIdentifier;
 
-    public Output<String> getRuleIdentifier() {
+    public Output<String> ruleIdentifier() {
         return this.ruleIdentifier;
     }
 
@@ -110,8 +111,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="tagKeyScope")
       private final @Nullable Output<String> tagKeyScope;
 
-    public Output<String> getTagKeyScope() {
-        return this.tagKeyScope == null ? Output.empty() : this.tagKeyScope;
+    public Output<String> tagKeyScope() {
+        return this.tagKeyScope == null ? Codegen.empty() : this.tagKeyScope;
     }
 
     /**
@@ -121,8 +122,8 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     @Import(name="tagValueScope")
       private final @Nullable Output<String> tagValueScope;
 
-    public Output<String> getTagValueScope() {
-        return this.tagValueScope == null ? Output.empty() : this.tagValueScope;
+    public Output<String> tagValueScope() {
+        return this.tagValueScope == null ? Codegen.empty() : this.tagValueScope;
     }
 
     public OrganizationManagedRuleArgs(
@@ -149,16 +150,16 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
     }
 
     private OrganizationManagedRuleArgs() {
-        this.description = Output.empty();
-        this.excludedAccounts = Output.empty();
-        this.inputParameters = Output.empty();
-        this.maximumExecutionFrequency = Output.empty();
-        this.name = Output.empty();
-        this.resourceIdScope = Output.empty();
-        this.resourceTypesScopes = Output.empty();
-        this.ruleIdentifier = Output.empty();
-        this.tagKeyScope = Output.empty();
-        this.tagValueScope = Output.empty();
+        this.description = Codegen.empty();
+        this.excludedAccounts = Codegen.empty();
+        this.inputParameters = Codegen.empty();
+        this.maximumExecutionFrequency = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceIdScope = Codegen.empty();
+        this.resourceTypesScopes = Codegen.empty();
+        this.ruleIdentifier = Codegen.empty();
+        this.tagKeyScope = Codegen.empty();
+        this.tagValueScope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -204,7 +205,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder excludedAccounts(@Nullable Output<List<String>> excludedAccounts) {
@@ -212,7 +213,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder excludedAccounts(@Nullable List<String> excludedAccounts) {
-            this.excludedAccounts = Output.ofNullable(excludedAccounts);
+            this.excludedAccounts = Codegen.ofNullable(excludedAccounts);
             return this;
         }
         public Builder excludedAccounts(String... excludedAccounts) {
@@ -223,7 +224,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder inputParameters(@Nullable String inputParameters) {
-            this.inputParameters = Output.ofNullable(inputParameters);
+            this.inputParameters = Codegen.ofNullable(inputParameters);
             return this;
         }
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
@@ -231,7 +232,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
+            this.maximumExecutionFrequency = Codegen.ofNullable(maximumExecutionFrequency);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -239,7 +240,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceIdScope(@Nullable Output<String> resourceIdScope) {
@@ -247,7 +248,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resourceIdScope(@Nullable String resourceIdScope) {
-            this.resourceIdScope = Output.ofNullable(resourceIdScope);
+            this.resourceIdScope = Codegen.ofNullable(resourceIdScope);
             return this;
         }
         public Builder resourceTypesScopes(@Nullable Output<List<String>> resourceTypesScopes) {
@@ -255,7 +256,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resourceTypesScopes(@Nullable List<String> resourceTypesScopes) {
-            this.resourceTypesScopes = Output.ofNullable(resourceTypesScopes);
+            this.resourceTypesScopes = Codegen.ofNullable(resourceTypesScopes);
             return this;
         }
         public Builder resourceTypesScopes(String... resourceTypesScopes) {
@@ -274,7 +275,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tagKeyScope(@Nullable String tagKeyScope) {
-            this.tagKeyScope = Output.ofNullable(tagKeyScope);
+            this.tagKeyScope = Codegen.ofNullable(tagKeyScope);
             return this;
         }
         public Builder tagValueScope(@Nullable Output<String> tagValueScope) {
@@ -282,7 +283,7 @@ public final class OrganizationManagedRuleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tagValueScope(@Nullable String tagValueScope) {
-            this.tagValueScope = Output.ofNullable(tagValueScope);
+            this.tagValueScope = Codegen.ofNullable(tagValueScope);
             return this;
         }        public OrganizationManagedRuleArgs build() {
             return new OrganizationManagedRuleArgs(description, excludedAccounts, inputParameters, maximumExecutionFrequency, name, resourceIdScope, resourceTypesScopes, ruleIdentifier, tagKeyScope, tagValueScope);

@@ -13,6 +13,7 @@ import io.pulumi.azurenative.security.inputs.UserDefinedResourcesPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,8 +32,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="additionalWorkspaces")
       private final @Nullable Output<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces;
 
-    public Output<List<AdditionalWorkspacesPropertiesArgs>> getAdditionalWorkspaces() {
-        return this.additionalWorkspaces == null ? Output.empty() : this.additionalWorkspaces;
+    public Output<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces() {
+        return this.additionalWorkspaces == null ? Codegen.empty() : this.additionalWorkspaces;
     }
 
     /**
@@ -42,8 +43,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="disabledDataSources")
       private final @Nullable Output<List<Either<String,DataSource>>> disabledDataSources;
 
-    public Output<List<Either<String,DataSource>>> getDisabledDataSources() {
-        return this.disabledDataSources == null ? Output.empty() : this.disabledDataSources;
+    public Output<List<Either<String,DataSource>>> disabledDataSources() {
+        return this.disabledDataSources == null ? Codegen.empty() : this.disabledDataSources;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
-    public Output<String> getDisplayName() {
+    public Output<String> displayName() {
         return this.displayName;
     }
 
@@ -64,8 +65,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="export")
       private final @Nullable Output<List<Either<String,ExportData>>> export;
 
-    public Output<List<Either<String,ExportData>>> getExport() {
-        return this.export == null ? Output.empty() : this.export;
+    public Output<List<Either<String,ExportData>>> export() {
+        return this.export == null ? Codegen.empty() : this.export;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="iotHubs", required=true)
       private final Output<List<String>> iotHubs;
 
-    public Output<List<String>> getIotHubs() {
+    public Output<List<String>> iotHubs() {
         return this.iotHubs;
     }
 
@@ -86,8 +87,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -97,8 +98,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="recommendationsConfiguration")
       private final @Nullable Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration;
 
-    public Output<List<RecommendationConfigurationPropertiesArgs>> getRecommendationsConfiguration() {
-        return this.recommendationsConfiguration == null ? Output.empty() : this.recommendationsConfiguration;
+    public Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration() {
+        return this.recommendationsConfiguration == null ? Codegen.empty() : this.recommendationsConfiguration;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -119,8 +120,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="solutionName")
       private final @Nullable Output<String> solutionName;
 
-    public Output<String> getSolutionName() {
-        return this.solutionName == null ? Output.empty() : this.solutionName;
+    public Output<String> solutionName() {
+        return this.solutionName == null ? Codegen.empty() : this.solutionName;
     }
 
     /**
@@ -130,8 +131,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="status")
       private final @Nullable Output<Either<String,SecuritySolutionStatus>> status;
 
-    public Output<Either<String,SecuritySolutionStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+    public Output<Either<String,SecuritySolutionStatus>> status() {
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -141,8 +142,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -152,8 +153,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="unmaskedIpLoggingStatus")
       private final @Nullable Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus;
 
-    public Output<Either<String,UnmaskedIpLoggingStatus>> getUnmaskedIpLoggingStatus() {
-        return this.unmaskedIpLoggingStatus == null ? Output.empty() : this.unmaskedIpLoggingStatus;
+    public Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus() {
+        return this.unmaskedIpLoggingStatus == null ? Codegen.empty() : this.unmaskedIpLoggingStatus;
     }
 
     /**
@@ -163,8 +164,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="userDefinedResources")
       private final @Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources;
 
-    public Output<UserDefinedResourcesPropertiesArgs> getUserDefinedResources() {
-        return this.userDefinedResources == null ? Output.empty() : this.userDefinedResources;
+    public Output<UserDefinedResourcesPropertiesArgs> userDefinedResources() {
+        return this.userDefinedResources == null ? Codegen.empty() : this.userDefinedResources;
     }
 
     /**
@@ -174,8 +175,8 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     @Import(name="workspace")
       private final @Nullable Output<String> workspace;
 
-    public Output<String> getWorkspace() {
-        return this.workspace == null ? Output.empty() : this.workspace;
+    public Output<String> workspace() {
+        return this.workspace == null ? Codegen.empty() : this.workspace;
     }
 
     public IotSecuritySolutionArgs(
@@ -210,20 +211,20 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
     }
 
     private IotSecuritySolutionArgs() {
-        this.additionalWorkspaces = Output.empty();
-        this.disabledDataSources = Output.empty();
-        this.displayName = Output.empty();
-        this.export = Output.empty();
-        this.iotHubs = Output.empty();
-        this.location = Output.empty();
-        this.recommendationsConfiguration = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.solutionName = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.unmaskedIpLoggingStatus = Output.empty();
-        this.userDefinedResources = Output.empty();
-        this.workspace = Output.empty();
+        this.additionalWorkspaces = Codegen.empty();
+        this.disabledDataSources = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.export = Codegen.empty();
+        this.iotHubs = Codegen.empty();
+        this.location = Codegen.empty();
+        this.recommendationsConfiguration = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.solutionName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.unmaskedIpLoggingStatus = Codegen.empty();
+        this.userDefinedResources = Codegen.empty();
+        this.workspace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -277,7 +278,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder additionalWorkspaces(@Nullable List<AdditionalWorkspacesPropertiesArgs> additionalWorkspaces) {
-            this.additionalWorkspaces = Output.ofNullable(additionalWorkspaces);
+            this.additionalWorkspaces = Codegen.ofNullable(additionalWorkspaces);
             return this;
         }
         public Builder additionalWorkspaces(AdditionalWorkspacesPropertiesArgs... additionalWorkspaces) {
@@ -288,7 +289,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder disabledDataSources(@Nullable List<Either<String,DataSource>> disabledDataSources) {
-            this.disabledDataSources = Output.ofNullable(disabledDataSources);
+            this.disabledDataSources = Codegen.ofNullable(disabledDataSources);
             return this;
         }
         public Builder disabledDataSources(Either<String,DataSource>... disabledDataSources) {
@@ -307,7 +308,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder export(@Nullable List<Either<String,ExportData>> export) {
-            this.export = Output.ofNullable(export);
+            this.export = Codegen.ofNullable(export);
             return this;
         }
         public Builder export(Either<String,ExportData>... export) {
@@ -329,7 +330,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder recommendationsConfiguration(@Nullable Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration) {
@@ -337,7 +338,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder recommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesArgs> recommendationsConfiguration) {
-            this.recommendationsConfiguration = Output.ofNullable(recommendationsConfiguration);
+            this.recommendationsConfiguration = Codegen.ofNullable(recommendationsConfiguration);
             return this;
         }
         public Builder recommendationsConfiguration(RecommendationConfigurationPropertiesArgs... recommendationsConfiguration) {
@@ -356,7 +357,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder solutionName(@Nullable String solutionName) {
-            this.solutionName = Output.ofNullable(solutionName);
+            this.solutionName = Codegen.ofNullable(solutionName);
             return this;
         }
         public Builder status(@Nullable Output<Either<String,SecuritySolutionStatus>> status) {
@@ -364,7 +365,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder status(@Nullable Either<String,SecuritySolutionStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -372,7 +373,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder unmaskedIpLoggingStatus(@Nullable Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus) {
@@ -380,7 +381,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder unmaskedIpLoggingStatus(@Nullable Either<String,UnmaskedIpLoggingStatus> unmaskedIpLoggingStatus) {
-            this.unmaskedIpLoggingStatus = Output.ofNullable(unmaskedIpLoggingStatus);
+            this.unmaskedIpLoggingStatus = Codegen.ofNullable(unmaskedIpLoggingStatus);
             return this;
         }
         public Builder userDefinedResources(@Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources) {
@@ -388,7 +389,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userDefinedResources(@Nullable UserDefinedResourcesPropertiesArgs userDefinedResources) {
-            this.userDefinedResources = Output.ofNullable(userDefinedResources);
+            this.userDefinedResources = Codegen.ofNullable(userDefinedResources);
             return this;
         }
         public Builder workspace(@Nullable Output<String> workspace) {
@@ -396,7 +397,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder workspace(@Nullable String workspace) {
-            this.workspace = Output.ofNullable(workspace);
+            this.workspace = Codegen.ofNullable(workspace);
             return this;
         }        public IotSecuritySolutionArgs build() {
             return new IotSecuritySolutionArgs(additionalWorkspaces, disabledDataSources, displayName, export, iotHubs, location, recommendationsConfiguration, resourceGroupName, solutionName, status, tags, unmaskedIpLoggingStatus, userDefinedResources, workspace);

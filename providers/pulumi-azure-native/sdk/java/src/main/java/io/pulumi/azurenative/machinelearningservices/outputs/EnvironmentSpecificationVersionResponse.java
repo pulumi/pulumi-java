@@ -85,21 +85,21 @@ public final class EnvironmentSpecificationVersionResponse {
      * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
      * 
     */
-    public Optional<String> getCondaFile() {
+    public Optional<String> condaFile() {
         return Optional.ofNullable(this.condaFile);
     }
     /**
      * The asset description text.
      * 
     */
-    public Optional<String> getDescription() {
+    public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
      * Configuration settings for Docker.
      * 
     */
-    public Optional<Either<DockerBuildResponse,DockerImageResponse>> getDocker() {
+    public Optional<Either<DockerBuildResponse,DockerImageResponse>> docker() {
         return Optional.ofNullable(this.docker);
     }
     /**
@@ -107,35 +107,35 @@ public final class EnvironmentSpecificationVersionResponse {
      * <see href="https://docs.microsoft.com/en-us/azure/machine-learning/resource-curated-environments" />
      * 
     */
-    public String getEnvironmentSpecificationType() {
+    public String environmentSpecificationType() {
         return this.environmentSpecificationType;
     }
     /**
      * Defines configuration specific to inference.
      * 
     */
-    public Optional<InferenceContainerPropertiesResponse> getInferenceContainerProperties() {
+    public Optional<InferenceContainerPropertiesResponse> inferenceContainerProperties() {
         return Optional.ofNullable(this.inferenceContainerProperties);
     }
     /**
      * If the name version are system generated (anonymous registration).
      * 
     */
-    public Optional<Boolean> getIsAnonymous() {
+    public Optional<Boolean> isAnonymous() {
         return Optional.ofNullable(this.isAnonymous);
     }
     /**
      * The asset property dictionary.
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
     */
-    public Map<String,String> getTags() {
+    public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 

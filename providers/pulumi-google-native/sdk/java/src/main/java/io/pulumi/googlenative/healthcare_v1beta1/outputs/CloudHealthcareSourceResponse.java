@@ -24,7 +24,7 @@ public final class CloudHealthcareSourceResponse {
      * Full path of a Cloud Healthcare API resource.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

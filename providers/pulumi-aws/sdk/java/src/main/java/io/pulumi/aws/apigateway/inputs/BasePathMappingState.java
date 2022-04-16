@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,8 +22,8 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
     @Import(name="basePath")
       private final @Nullable Output<String> basePath;
 
-    public Output<String> getBasePath() {
-        return this.basePath == null ? Output.empty() : this.basePath;
+    public Output<String> basePath() {
+        return this.basePath == null ? Codegen.empty() : this.basePath;
     }
 
     /**
@@ -32,8 +33,8 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
     @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
-    public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+    public Output<String> domainName() {
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -43,8 +44,8 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
     @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
-    public Output<String> getRestApi() {
-        return this.restApi == null ? Output.empty() : this.restApi;
+    public Output<String> restApi() {
+        return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
     /**
@@ -54,8 +55,8 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
-    public Output<String> getStageName() {
-        return this.stageName == null ? Output.empty() : this.stageName;
+    public Output<String> stageName() {
+        return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
     public BasePathMappingState(
@@ -70,10 +71,10 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
     }
 
     private BasePathMappingState() {
-        this.basePath = Output.empty();
-        this.domainName = Output.empty();
-        this.restApi = Output.empty();
-        this.stageName = Output.empty();
+        this.basePath = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder basePath(@Nullable String basePath) {
-            this.basePath = Output.ofNullable(basePath);
+            this.basePath = Codegen.ofNullable(basePath);
             return this;
         }
         public Builder domainName(@Nullable Output<String> domainName) {
@@ -115,7 +116,7 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder restApi(@Nullable Output<String> restApi) {
@@ -127,7 +128,7 @@ public final class BasePathMappingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Output.ofNullable(stageName);
+            this.stageName = Codegen.ofNullable(stageName);
             return this;
         }        public BasePathMappingState build() {
             return new BasePathMappingState(basePath, domainName, restApi, stageName);

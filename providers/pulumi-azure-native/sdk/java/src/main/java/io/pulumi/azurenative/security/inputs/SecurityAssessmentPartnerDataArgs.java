@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +25,7 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
     @Import(name="partnerName", required=true)
       private final Output<String> partnerName;
 
-    public Output<String> getPartnerName() {
+    public Output<String> partnerName() {
         return this.partnerName;
     }
 
@@ -35,7 +36,7 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
     @Import(name="secret", required=true)
       private final Output<String> secret;
 
-    public Output<String> getSecret() {
+    public Output<String> secret() {
         return this.secret;
     }
 
@@ -47,8 +48,8 @@ public final class SecurityAssessmentPartnerDataArgs extends io.pulumi.resources
     }
 
     private SecurityAssessmentPartnerDataArgs() {
-        this.partnerName = Output.empty();
-        this.secret = Output.empty();
+        this.partnerName = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {

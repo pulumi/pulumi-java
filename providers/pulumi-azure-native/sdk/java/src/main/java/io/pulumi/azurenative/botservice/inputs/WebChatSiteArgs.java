@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
-    public Output<Boolean> getIsEnabled() {
+    public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
 
@@ -36,7 +37,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="isWebchatPreviewEnabled", required=true)
       private final Output<Boolean> isWebchatPreviewEnabled;
 
-    public Output<Boolean> getIsWebchatPreviewEnabled() {
+    public Output<Boolean> isWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
     }
 
@@ -47,7 +48,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="siteName", required=true)
       private final Output<String> siteName;
 
-    public Output<String> getSiteName() {
+    public Output<String> siteName() {
         return this.siteName;
     }
 
@@ -56,14 +57,14 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
         Output<Boolean> isWebchatPreviewEnabled,
         Output<String> siteName) {
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled == null ? Output.ofNullable(false) : Objects.requireNonNull(isWebchatPreviewEnabled, "expected parameter 'isWebchatPreviewEnabled' to be non-null");
+        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled == null ? Codegen.ofNullable(false) : Objects.requireNonNull(isWebchatPreviewEnabled, "expected parameter 'isWebchatPreviewEnabled' to be non-null");
         this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
     }
 
     private WebChatSiteArgs() {
-        this.isEnabled = Output.empty();
-        this.isWebchatPreviewEnabled = Output.empty();
-        this.siteName = Output.empty();
+        this.isEnabled = Codegen.empty();
+        this.isWebchatPreviewEnabled = Codegen.empty();
+        this.siteName = Codegen.empty();
     }
 
     public static Builder builder() {

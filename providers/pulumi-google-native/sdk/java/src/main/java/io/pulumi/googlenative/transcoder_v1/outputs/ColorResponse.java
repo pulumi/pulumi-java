@@ -39,21 +39,21 @@ public final class ColorResponse {
      * Control brightness of the video. Enter a value between -1 and 1, where -1 is minimum brightness and 1 is maximum brightness. 0 is no change. The default is 0.
      * 
     */
-    public Double getBrightness() {
+    public Double brightness() {
         return this.brightness;
     }
     /**
      * Control black and white contrast of the video. Enter a value between -1 and 1, where -1 is minimum contrast and 1 is maximum contrast. 0 is no change. The default is 0.
      * 
     */
-    public Double getContrast() {
+    public Double contrast() {
         return this.contrast;
     }
     /**
      * Control color saturation of the video. Enter a value between -1 and 1, where -1 is fully desaturated and 1 is maximum saturation. 0 is no change. The default is 0.
      * 
     */
-    public Double getSaturation() {
+    public Double saturation() {
         return this.saturation;
     }
 

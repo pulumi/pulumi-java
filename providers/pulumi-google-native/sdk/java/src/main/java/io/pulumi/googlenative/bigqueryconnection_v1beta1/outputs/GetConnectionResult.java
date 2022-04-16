@@ -69,49 +69,49 @@ public final class GetConnectionResult {
      * Cloud SQL properties.
      * 
     */
-    public CloudSqlPropertiesResponse getCloudSql() {
+    public CloudSqlPropertiesResponse cloudSql() {
         return this.cloudSql;
     }
     /**
      * The creation timestamp of the connection.
      * 
     */
-    public String getCreationTime() {
+    public String creationTime() {
         return this.creationTime;
     }
     /**
      * User provided description.
      * 
     */
-    public String getDescription() {
+    public String description() {
         return this.description;
     }
     /**
      * User provided display name for the connection.
      * 
     */
-    public String getFriendlyName() {
+    public String friendlyName() {
         return this.friendlyName;
     }
     /**
      * True, if credential is configured for this connection.
      * 
     */
-    public Boolean getHasCredential() {
+    public Boolean hasCredential() {
         return this.hasCredential;
     }
     /**
      * The last update timestamp of the connection.
      * 
     */
-    public String getLastModifiedTime() {
+    public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
      * The resource name of the connection in the form of: `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
 

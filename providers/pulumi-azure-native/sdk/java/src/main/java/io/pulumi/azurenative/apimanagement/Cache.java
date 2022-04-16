@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Runtime connection string to cache
      * 
      */
-    public Output<String> getConnectionString() {
+    public Output<String> connectionString() {
         return this.connectionString;
     }
     /**
@@ -55,7 +56,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Cache description
      * 
      */
-    public Output</* @Nullable */ String> getDescription() {
+    public Output</* @Nullable */ String> description() {
         return this.description;
     }
     /**
@@ -69,7 +70,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Resource name.
      * 
      */
-    public Output<String> getName() {
+    public Output<String> name() {
         return this.name;
     }
     /**
@@ -83,7 +84,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Original uri of entity in external system cache points to
      * 
      */
-    public Output</* @Nullable */ String> getResourceId() {
+    public Output</* @Nullable */ String> resourceId() {
         return this.resourceId;
     }
     /**
@@ -97,7 +98,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Resource type for API Management resource.
      * 
      */
-    public Output<String> getType() {
+    public Output<String> type() {
         return this.type;
     }
     /**
@@ -111,7 +112,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @return Location identifier to use cache from (should be either 'default' or valid Azure region identifier)
      * 
      */
-    public Output<String> getUseFromLocation() {
+    public Output<String> useFromLocation() {
         return this.useFromLocation;
     }
 
@@ -137,7 +138,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cache(String name, CacheArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:apimanagement:Cache", name, args == null ? CacheArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cache(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecGrpcRouteActionTargetGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -20,7 +21,7 @@ public final class GatewayRouteSpecGrpcRouteActionGetArgs extends io.pulumi.reso
     @Import(name="target", required=true)
       private final Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> target;
 
-    public Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> getTarget() {
+    public Output<GatewayRouteSpecGrpcRouteActionTargetGetArgs> target() {
         return this.target;
     }
 
@@ -29,7 +30,7 @@ public final class GatewayRouteSpecGrpcRouteActionGetArgs extends io.pulumi.reso
     }
 
     private GatewayRouteSpecGrpcRouteActionGetArgs() {
-        this.target = Output.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

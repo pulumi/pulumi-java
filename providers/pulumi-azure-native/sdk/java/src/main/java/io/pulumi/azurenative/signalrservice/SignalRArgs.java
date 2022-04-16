@@ -12,6 +12,7 @@ import io.pulumi.azurenative.signalrservice.inputs.SignalRNetworkACLsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,8 +31,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="cors")
       private final @Nullable Output<SignalRCorsSettingsArgs> cors;
 
-    public Output<SignalRCorsSettingsArgs> getCors() {
-        return this.cors == null ? Output.empty() : this.cors;
+    public Output<SignalRCorsSettingsArgs> cors() {
+        return this.cors == null ? Codegen.empty() : this.cors;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="features")
       private final @Nullable Output<List<SignalRFeatureArgs>> features;
 
-    public Output<List<SignalRFeatureArgs>> getFeatures() {
-        return this.features == null ? Output.empty() : this.features;
+    public Output<List<SignalRFeatureArgs>> features() {
+        return this.features == null ? Codegen.empty() : this.features;
     }
 
     /**
@@ -57,8 +58,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="kind")
       private final @Nullable Output<Either<String,ServiceKind>> kind;
 
-    public Output<Either<String,ServiceKind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+    public Output<Either<String,ServiceKind>> kind() {
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -68,8 +69,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -79,8 +80,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="networkACLs")
       private final @Nullable Output<SignalRNetworkACLsArgs> networkACLs;
 
-    public Output<SignalRNetworkACLsArgs> getNetworkACLs() {
-        return this.networkACLs == null ? Output.empty() : this.networkACLs;
+    public Output<SignalRNetworkACLsArgs> networkACLs() {
+        return this.networkACLs == null ? Codegen.empty() : this.networkACLs;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -101,8 +102,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
-    public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+    public Output<String> resourceName() {
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -112,8 +113,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
-    public Output<ResourceSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<ResourceSkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -123,8 +124,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -134,8 +135,8 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="upstream")
       private final @Nullable Output<ServerlessUpstreamSettingsArgs> upstream;
 
-    public Output<ServerlessUpstreamSettingsArgs> getUpstream() {
-        return this.upstream == null ? Output.empty() : this.upstream;
+    public Output<ServerlessUpstreamSettingsArgs> upstream() {
+        return this.upstream == null ? Codegen.empty() : this.upstream;
     }
 
     public SignalRArgs(
@@ -162,16 +163,16 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SignalRArgs() {
-        this.cors = Output.empty();
-        this.features = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.networkACLs = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.upstream = Output.empty();
+        this.cors = Codegen.empty();
+        this.features = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkACLs = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.upstream = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -217,7 +218,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cors(@Nullable SignalRCorsSettingsArgs cors) {
-            this.cors = Output.ofNullable(cors);
+            this.cors = Codegen.ofNullable(cors);
             return this;
         }
         public Builder features(@Nullable Output<List<SignalRFeatureArgs>> features) {
@@ -225,7 +226,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder features(@Nullable List<SignalRFeatureArgs> features) {
-            this.features = Output.ofNullable(features);
+            this.features = Codegen.ofNullable(features);
             return this;
         }
         public Builder features(SignalRFeatureArgs... features) {
@@ -236,7 +237,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable Either<String,ServiceKind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -244,7 +245,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkACLs(@Nullable Output<SignalRNetworkACLsArgs> networkACLs) {
@@ -252,7 +253,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkACLs(@Nullable SignalRNetworkACLsArgs networkACLs) {
-            this.networkACLs = Output.ofNullable(networkACLs);
+            this.networkACLs = Codegen.ofNullable(networkACLs);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -268,7 +269,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
@@ -276,7 +277,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable ResourceSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -284,7 +285,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder upstream(@Nullable Output<ServerlessUpstreamSettingsArgs> upstream) {
@@ -292,7 +293,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder upstream(@Nullable ServerlessUpstreamSettingsArgs upstream) {
-            this.upstream = Output.ofNullable(upstream);
+            this.upstream = Codegen.ofNullable(upstream);
             return this;
         }        public SignalRArgs build() {
             return new SignalRArgs(cors, features, kind, location, networkACLs, resourceGroupName, resourceName, sku, tags, upstream);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,8 +26,8 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
 
-    public Output<Integer> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+    public Output<Integer> cpu() {
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     public AgentPropertiesArgs(@Nullable Output<Integer> cpu) {
@@ -34,7 +35,7 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AgentPropertiesArgs() {
-        this.cpu = Output.empty();
+        this.cpu = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AgentPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder cpu(@Nullable Integer cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }        public AgentPropertiesArgs build() {
             return new AgentPropertiesArgs(cpu);

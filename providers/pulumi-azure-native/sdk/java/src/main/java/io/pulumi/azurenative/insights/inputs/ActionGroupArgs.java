@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="actionGroupId", required=true)
       private final Output<String> actionGroupId;
 
-    public Output<String> getActionGroupId() {
+    public Output<String> actionGroupId() {
         return this.actionGroupId;
     }
 
@@ -37,8 +38,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="webhookProperties")
       private final @Nullable Output<Map<String,String>> webhookProperties;
 
-    public Output<Map<String,String>> getWebhookProperties() {
-        return this.webhookProperties == null ? Output.empty() : this.webhookProperties;
+    public Output<Map<String,String>> webhookProperties() {
+        return this.webhookProperties == null ? Codegen.empty() : this.webhookProperties;
     }
 
     public ActionGroupArgs(
@@ -49,8 +50,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActionGroupArgs() {
-        this.actionGroupId = Output.empty();
-        this.webhookProperties = Output.empty();
+        this.actionGroupId = Codegen.empty();
+        this.webhookProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webhookProperties(@Nullable Map<String,String> webhookProperties) {
-            this.webhookProperties = Output.ofNullable(webhookProperties);
+            this.webhookProperties = Codegen.ofNullable(webhookProperties);
             return this;
         }        public ActionGroupArgs build() {
             return new ActionGroupArgs(actionGroupId, webhookProperties);

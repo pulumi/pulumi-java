@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.storage.k8s.io_v1.inputs.CSINodeDriverArgs;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="drivers", required=true)
       private final Output<List<CSINodeDriverArgs>> drivers;
 
-    public Output<List<CSINodeDriverArgs>> getDrivers() {
+    public Output<List<CSINodeDriverArgs>> drivers() {
         return this.drivers;
     }
 
@@ -34,7 +35,7 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CSINodeSpecArgs() {
-        this.drivers = Output.empty();
+        this.drivers = Codegen.empty();
     }
 
     public static Builder builder() {

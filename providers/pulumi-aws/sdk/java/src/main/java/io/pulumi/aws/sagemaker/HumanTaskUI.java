@@ -10,6 +10,7 @@ import io.pulumi.aws.sagemaker.outputs.HumanTaskUIUiTemplate;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) assigned by AWS to this Human Task UI.
      * 
      */
-    public Output<String> getArn() {
+    public Output<String> arn() {
         return this.arn;
     }
     /**
@@ -55,7 +56,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * @return The name of the Human Task UI.
      * 
      */
-    public Output<String> getHumanTaskUiName() {
+    public Output<String> humanTaskUiName() {
         return this.humanTaskUiName;
     }
     /**
@@ -69,7 +70,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> getTags() {
+    public Output</* @Nullable */ Map<String,String>> tags() {
         return this.tags;
     }
     /**
@@ -83,7 +84,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * @return A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    public Output<Map<String,String>> getTagsAll() {
+    public Output<Map<String,String>> tagsAll() {
         return this.tagsAll;
     }
     /**
@@ -97,7 +98,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * @return The Liquid template for the worker user interface. See UI Template below.
      * 
      */
-    public Output<HumanTaskUIUiTemplate> getUiTemplate() {
+    public Output<HumanTaskUIUiTemplate> uiTemplate() {
         return this.uiTemplate;
     }
 
@@ -123,7 +124,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public HumanTaskUI(String name, HumanTaskUIArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/humanTaskUI:HumanTaskUI", name, args == null ? HumanTaskUIArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/humanTaskUI:HumanTaskUI", name, args == null ? HumanTaskUIArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HumanTaskUI(String name, Output<String> id, @Nullable HumanTaskUIState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.enums.IPSetScope;
 import io.pulumi.awsnative.wafv2.inputs.IPSetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,43 +26,43 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="addresses", required=true)
       private final Output<List<String>> addresses;
 
-    public Output<List<String>> getAddresses() {
+    public Output<List<String>> addresses() {
         return this.addresses;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
-    public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+    public Output<String> description() {
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="iPAddressVersion", required=true)
       private final Output<IPSetIPAddressVersion> iPAddressVersion;
 
-    public Output<IPSetIPAddressVersion> getIPAddressVersion() {
+    public Output<IPSetIPAddressVersion> iPAddressVersion() {
         return this.iPAddressVersion;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
-    public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+    public Output<String> name() {
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="scope", required=true)
       private final Output<IPSetScope> scope;
 
-    public Output<IPSetScope> getScope() {
+    public Output<IPSetScope> scope() {
         return this.scope;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<IPSetTagArgs>> tags;
 
-    public Output<List<IPSetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<List<IPSetTagArgs>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IPSetArgs(
@@ -80,12 +81,12 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPSetArgs() {
-        this.addresses = Output.empty();
-        this.description = Output.empty();
-        this.iPAddressVersion = Output.empty();
-        this.name = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
+        this.addresses = Codegen.empty();
+        this.description = Codegen.empty();
+        this.iPAddressVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder iPAddressVersion(Output<IPSetIPAddressVersion> iPAddressVersion) {
@@ -150,7 +151,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder scope(Output<IPSetScope> scope) {
@@ -166,7 +167,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<IPSetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(IPSetTagArgs... tags) {

@@ -74,49 +74,49 @@ public final class WorkflowTemplateJobPrestoJob {
      * Optional. Presto client tags to attach to this query
      * 
     */
-    public List<String> getClientTags() {
+    public List<String> clientTags() {
         return this.clientTags == null ? List.of() : this.clientTags;
     }
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
      * 
     */
-    public Optional<Boolean> getContinueOnFailure() {
+    public Optional<Boolean> continueOnFailure() {
         return Optional.ofNullable(this.continueOnFailure);
     }
     /**
      * Optional. The runtime log config for job execution.
      * 
     */
-    public Optional<WorkflowTemplateJobPrestoJobLoggingConfig> getLoggingConfig() {
+    public Optional<WorkflowTemplateJobPrestoJobLoggingConfig> loggingConfig() {
         return Optional.ofNullable(this.loggingConfig);
     }
     /**
      * Optional. The format in which query output will be displayed. See the Presto documentation for supported output formats
      * 
     */
-    public Optional<String> getOutputFormat() {
+    public Optional<String> outputFormat() {
         return Optional.ofNullable(this.outputFormat);
     }
     /**
      * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
     */
-    public Map<String,String> getProperties() {
+    public Map<String,String> properties() {
         return this.properties == null ? Map.of() : this.properties;
     }
     /**
      * The HCFS URI of the script that contains SQL queries.
      * 
     */
-    public Optional<String> getQueryFileUri() {
+    public Optional<String> queryFileUri() {
         return Optional.ofNullable(this.queryFileUri);
     }
     /**
      * A list of queries.
      * 
     */
-    public Optional<WorkflowTemplateJobPrestoJobQueryList> getQueryList() {
+    public Optional<WorkflowTemplateJobPrestoJobQueryList> queryList() {
         return Optional.ofNullable(this.queryList);
     }
 

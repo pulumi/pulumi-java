@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.ManagedRuleSetListArgs;
 import io.pulumi.azurenative.network.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,8 +27,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="customRules")
       private final @Nullable Output<CustomRuleListArgs> customRules;
 
-    public Output<CustomRuleListArgs> getCustomRules() {
-        return this.customRules == null ? Output.empty() : this.customRules;
+    public Output<CustomRuleListArgs> customRules() {
+        return this.customRules == null ? Codegen.empty() : this.customRules;
     }
 
     /**
@@ -37,8 +38,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="location")
       private final @Nullable Output<String> location;
 
-    public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+    public Output<String> location() {
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="managedRules")
       private final @Nullable Output<ManagedRuleSetListArgs> managedRules;
 
-    public Output<ManagedRuleSetListArgs> getManagedRules() {
-        return this.managedRules == null ? Output.empty() : this.managedRules;
+    public Output<ManagedRuleSetListArgs> managedRules() {
+        return this.managedRules == null ? Codegen.empty() : this.managedRules;
     }
 
     /**
@@ -59,8 +60,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
-    public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+    public Output<String> policyName() {
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     /**
@@ -70,8 +71,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="policySettings")
       private final @Nullable Output<FrontDoorPolicySettingsArgs> policySettings;
 
-    public Output<FrontDoorPolicySettingsArgs> getPolicySettings() {
-        return this.policySettings == null ? Output.empty() : this.policySettings;
+    public Output<FrontDoorPolicySettingsArgs> policySettings() {
+        return this.policySettings == null ? Codegen.empty() : this.policySettings;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
-    public Output<String> getResourceGroupName() {
+    public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,8 +93,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
-    public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+    public Output<SkuArgs> sku() {
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -103,8 +104,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+    public Output<Map<String,String>> tags() {
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PolicyArgs(
@@ -127,14 +128,14 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.customRules = Output.empty();
-        this.location = Output.empty();
-        this.managedRules = Output.empty();
-        this.policyName = Output.empty();
-        this.policySettings = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.customRules = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedRules = Codegen.empty();
+        this.policyName = Codegen.empty();
+        this.policySettings = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customRules(@Nullable CustomRuleListArgs customRules) {
-            this.customRules = Output.ofNullable(customRules);
+            this.customRules = Codegen.ofNullable(customRules);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -184,7 +185,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedRules(@Nullable Output<ManagedRuleSetListArgs> managedRules) {
@@ -192,7 +193,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedRules(@Nullable ManagedRuleSetListArgs managedRules) {
-            this.managedRules = Output.ofNullable(managedRules);
+            this.managedRules = Codegen.ofNullable(managedRules);
             return this;
         }
         public Builder policyName(@Nullable Output<String> policyName) {
@@ -200,7 +201,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }
         public Builder policySettings(@Nullable Output<FrontDoorPolicySettingsArgs> policySettings) {
@@ -208,7 +209,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policySettings(@Nullable FrontDoorPolicySettingsArgs policySettings) {
-            this.policySettings = Output.ofNullable(policySettings);
+            this.policySettings = Codegen.ofNullable(policySettings);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -224,7 +225,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -232,7 +233,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PolicyArgs build() {
             return new PolicyArgs(customRules, location, managedRules, policyName, policySettings, resourceGroupName, sku, tags);

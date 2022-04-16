@@ -53,35 +53,35 @@ public final class GetFirewallRuleResult {
      * highest IP address included in the range
      * 
     */
-    public String getEndIP() {
+    public String endIP() {
         return this.endIP;
     }
     /**
      * Resource ID.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
     /**
      * Resource name.
      * 
     */
-    public String getName() {
+    public String name() {
         return this.name;
     }
     /**
      * lowest IP address included in the range
      * 
     */
-    public String getStartIP() {
+    public String startIP() {
         return this.startIP;
     }
     /**
      * Resource type.
      * 
     */
-    public String getType() {
+    public String type() {
         return this.type;
     }
 

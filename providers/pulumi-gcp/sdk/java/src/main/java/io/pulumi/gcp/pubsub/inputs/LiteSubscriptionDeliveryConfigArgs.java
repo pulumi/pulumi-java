@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public final class LiteSubscriptionDeliveryConfigArgs extends io.pulumi.resource
     @Import(name="deliveryRequirement", required=true)
       private final Output<String> deliveryRequirement;
 
-    public Output<String> getDeliveryRequirement() {
+    public Output<String> deliveryRequirement() {
         return this.deliveryRequirement;
     }
 
@@ -30,7 +31,7 @@ public final class LiteSubscriptionDeliveryConfigArgs extends io.pulumi.resource
     }
 
     private LiteSubscriptionDeliveryConfigArgs() {
-        this.deliveryRequirement = Output.empty();
+        this.deliveryRequirement = Codegen.empty();
     }
 
     public static Builder builder() {

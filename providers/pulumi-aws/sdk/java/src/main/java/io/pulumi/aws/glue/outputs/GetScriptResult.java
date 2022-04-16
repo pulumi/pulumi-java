@@ -49,34 +49,34 @@ public final class GetScriptResult {
         this.scalaCode = scalaCode;
     }
 
-    public List<GetScriptDagEdge> getDagEdges() {
+    public List<GetScriptDagEdge> dagEdges() {
         return this.dagEdges;
     }
-    public List<GetScriptDagNode> getDagNodes() {
+    public List<GetScriptDagNode> dagNodes() {
         return this.dagNodes;
     }
     /**
      * The provider-assigned unique ID for this managed resource.
      * 
     */
-    public String getId() {
+    public String id() {
         return this.id;
     }
-    public Optional<String> getLanguage() {
+    public Optional<String> language() {
         return Optional.ofNullable(this.language);
     }
     /**
      * The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
      * 
     */
-    public String getPythonScript() {
+    public String pythonScript() {
         return this.pythonScript;
     }
     /**
      * The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
      * 
     */
-    public String getScalaCode() {
+    public String scalaCode() {
         return this.scalaCode;
     }
 
