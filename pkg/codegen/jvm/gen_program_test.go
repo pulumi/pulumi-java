@@ -130,3 +130,7 @@ func TestAwsWebserver(t *testing.T) {
 func TestSimpleInvokeWithRange(t *testing.T) {
 	compileSingleFile("simple-invoke-with-range.pp", t)
 }
+
+func TestAzureNativeExample(t *testing.T) {
+	compileSingleFile("azure-native.pp", t)
+}
