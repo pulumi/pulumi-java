@@ -123,6 +123,10 @@ func TestAwsStaticWebsite(t *testing.T) {
 	compileSingleFile("aws-s3-folder.pp", t)
 }
 
+func TestAwsWebserver(t *testing.T) {
+	compileSingleFile("aws-webserver.pp", t)
+}
+
 func TestSimpleInvokeWithRange(t *testing.T) {
 	compileSingleFile("simple-invoke-with-range.pp", t)
 }
