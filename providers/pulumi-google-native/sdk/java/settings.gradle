@@ -9,5 +9,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.google-native"
+rootProject.name = "com.pulumi.google-native"
 include("lib")

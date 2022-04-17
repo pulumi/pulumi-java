@@ -9,5 +9,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.docker"
+rootProject.name = "com.pulumi.docker"
 include("lib")
