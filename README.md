@@ -71,3 +71,4 @@ expected stack outputs.
 This repo adapts code from `VirtusLab/pulumi` fork of `pulumi/pulumi`
 starting with the `jvm-lang-codegen-rewrite` branch. The upstream
 history is preserved so that updates can be merged via Git.
+
