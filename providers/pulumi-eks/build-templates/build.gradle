@@ -41,9 +41,25 @@ repositories {
     }
 }
 
-var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1-SNAPSHOT"
-var pulumiAwsSdkVersion = System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: "4.37.3";
-var pulumiKubernetesSdkVersion = System.getenv("PULUMI_KUBERNETES_PROVIDER_SDK_VERSION") ?: "3.15.1";
+var prerelease = version.contains("+")
+
+var defaultPulumiJavaSdkVersion = "0.0.1";
+
+var pulumiJavaSdkVersion = prerelease
+    ? (System.getenv("PULUMI_JAVA_SDK_VERSION") ?: defaultPulumiJavaSdkVersion)
+    : defaultPulumiJavaSdkVersion;
+
+var defaultPulumiAwsSdkVersion = "4.37.3";
+
+var pulumiAwsSdkVersion = prerelease
+    ? (System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: defaultPulumiAwsSdkVersion)
+    : defaultPulumiAwsSdkVersion;
+
+var defaultPulumiKubernetesSdkVersion = "3.15.1";
+
+var pulumiKubernetesSdkVersion = prerelease
+    ? (System.getenv("PULUMI_KUBERNETES_PROVIDER_SDK_VERSION") ?: defaultPulumiKubernetesSdkVersion)
+    : defaultPulumiKubernetesSdkVersion;
 
 dependencies {
     implementation("com.google.code.findbugs:jsr305:3.0.2")

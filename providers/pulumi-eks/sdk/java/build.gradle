@@ -41,9 +41,25 @@ repositories {
     }
 }
 
-var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1-SNAPSHOT"
-var pulumiAwsSdkVersion = System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: "4.37.3";
-var pulumiKubernetesSdkVersion = System.getenv("PULUMI_KUBERNETES_PROVIDER_SDK_VERSION") ?: "3.15.1";
+var prerelease = version.contains("+")
+
+var defaultPulumiJavaSdkVersion = "0.0.1";
+
+var pulumiJavaSdkVersion = prerelease
+    ? (System.getenv("PULUMI_JAVA_SDK_VERSION") ?: defaultPulumiJavaSdkVersion)
+    : defaultPulumiJavaSdkVersion;
+
+var defaultPulumiAwsSdkVersion = "4.37.3";
+
+var pulumiAwsSdkVersion = prerelease
+    ? (System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: defaultPulumiAwsSdkVersion)
+    : defaultPulumiAwsSdkVersion;
+
+var defaultPulumiKubernetesSdkVersion = "3.15.1";
+
+var pulumiKubernetesSdkVersion = prerelease
+    ? (System.getenv("PULUMI_KUBERNETES_PROVIDER_SDK_VERSION") ?: defaultPulumiKubernetesSdkVersion)
+    : defaultPulumiKubernetesSdkVersion;
 
 dependencies {
     implementation("com.google.code.findbugs:jsr305:3.0.2")
@@ -53,9 +69,9 @@ dependencies {
     implementation("com.google.protobuf:protobuf-java:3.12.0") // make sure we don't clash with grpc deps
     implementation("com.google.protobuf:protobuf-java-util:3.12.0") // make sure we don't clash with grpc deps
 
-    implementation("io.pulumi:pulumi:$pulumiJavaSdkVersion")
-    implementation("io.pulumi:aws:$pulumiAwsSdkVersion")
-    implementation("io.pulumi:kubernetes:$pulumiKubernetesSdkVersion")
+    implementation("com.pulumi:pulumi:$pulumiJavaSdkVersion")
+    implementation("com.pulumi:aws:$pulumiAwsSdkVersion")
+    implementation("com.pulumi:kubernetes:$pulumiKubernetesSdkVersion")
 
     def junitVersion = "5.7.2"
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
@@ -92,7 +108,7 @@ publishing {
         //
         // https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry
         gpr(MavenPublication) {
-            groupId = "io.pulumi"
+            groupId = "com.pulumi"
             artifactId = "eks"
             version = version
             from components.java

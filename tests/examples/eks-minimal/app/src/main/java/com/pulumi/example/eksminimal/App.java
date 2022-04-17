@@ -23,7 +23,7 @@ public class App {
         var vpcIdOutput = Output.of(
                 Ec2Functions.getVpc(
                         GetVpcArgs.builder().default_(true).build()
-                ).thenApply(GetVpcResult::getId)
+                ).thenApply(GetVpcResult::id)
         );
         ctx.export("vpcIdOutput", vpcIdOutput);
 
@@ -32,7 +32,7 @@ public class App {
                                 .vpcId(vpcId)
                                 .build())))
                 .applyValue(getSubnetIdsResult ->
-                        getSubnetIdsResult.getIds()
+                        getSubnetIdsResult.ids()
                                 .stream()
                                 .sorted()
                                 .limit(2)
@@ -48,7 +48,7 @@ public class App {
                 .maxSize(2)
                 .build());
 
-        ctx.export("kubeconfig", cluster.getKubeconfig());
+        ctx.export("kubeconfig", cluster.kubeconfig());
         return ctx.exports();
     }
 }

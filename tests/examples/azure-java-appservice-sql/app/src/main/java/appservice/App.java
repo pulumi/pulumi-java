@@ -51,28 +51,28 @@ public class App {
         var resourceGroup = new ResourceGroup("resourceGroup");
 
         var storageAccount = new StorageAccount("sa",
-                StorageAccountArgs.builder().resourceGroupName(resourceGroup.getName())
+                StorageAccountArgs.builder().resourceGroupName(resourceGroup.name())
                         .kind(Either.ofRight(Kind.StorageV2))
                         .sku(SkuArgs.builder().name(Either.ofRight(SkuName.Standard_LRS)).build())
                         .build());
 
         var storageContainer = new BlobContainer("container",
-                BlobContainerArgs.builder().resourceGroupName(resourceGroup.getName())
-                        .accountName(storageAccount.getName())
+                BlobContainerArgs.builder().resourceGroupName(resourceGroup.name())
+                        .accountName(storageAccount.name())
                         .publicAccess(PublicAccess.None)
                         .build());
 
         var blob = new Blob("blob",
-                BlobArgs.builder().resourceGroupName(resourceGroup.getName())
-                        .accountName(storageAccount.getName())
-                        .containerName(storageContainer.getName())
+                BlobArgs.builder().resourceGroupName(resourceGroup.name())
+                        .accountName(storageAccount.name())
+                        .containerName(storageContainer.name())
                         .source(new FileArchive("wwwroot"))
                         .build());
 
-        var codeBlobUrl = getSASToken(storageAccount.getName(), storageContainer.getName(), blob.getName(), resourceGroup.getName());
+        var codeBlobUrl = getSASToken(storageAccount.name(), storageContainer.name(), blob.name(), resourceGroup.name());
 
         var appInsights = new Component("ai",
-                ComponentArgs.builder().resourceGroupName(resourceGroup.getName())
+                ComponentArgs.builder().resourceGroupName(resourceGroup.name())
                         .kind("web")
                         .applicationType(Either.ofRight(ApplicationType.Web))
                         .build());
@@ -83,36 +83,36 @@ public class App {
         var pwd = ctx.config().require("sqlPassword");
 
         var sqlServer = new Server("sqlserver",
-                ServerArgs.builder().resourceGroupName(resourceGroup.getName())
+                ServerArgs.builder().resourceGroupName(resourceGroup.name())
                         .administratorLogin(username)
                         .administratorLoginPassword(pwd)
                         .version("12.0")
                         .build());
 
         var database = new Database("db",
-                DatabaseArgs.builder().resourceGroupName(resourceGroup.getName())
-                        .serverName(sqlServer.getName())
+                DatabaseArgs.builder().resourceGroupName(resourceGroup.name())
+                        .serverName(sqlServer.name())
                         .sku(com.pulumi.azurenative.sql.inputs.SkuArgs.builder().name("S0").build())
                         .build());
 
         var appServicePlan = new AppServicePlan("asp",
-                AppServicePlanArgs.builder().resourceGroupName(resourceGroup.getName())
+                AppServicePlanArgs.builder().resourceGroupName(resourceGroup.name())
                         .kind("App")
                         .sku(SkuDescriptionArgs.builder().name("B1").tier("Basic").build())
                         .build());
 
         var app = new WebApp("webapp",
-                WebAppArgs.builder().resourceGroupName(resourceGroup.getName())
+                WebAppArgs.builder().resourceGroupName(resourceGroup.name())
                         .serverFarmId(appServicePlan.getId())
                         .siteConfig(SiteConfigArgs.builder()
                                 .appSettings(
                                         NameValuePairArgs.builder()
                                                 .name("APPINSIGHTS_INSTRUMENTATIONKEY")
-                                                .value(appInsights.getInstrumentationKey())
+                                                .value(appInsights.instrumentationKey())
                                                 .build(),
                                         NameValuePairArgs.builder()
                                                 .name("APPLICATIONINSIGHTS_CONNECTION_STRING")
-                                                .value(Output.format("InstrumentationKey=%s", appInsights.getInstrumentationKey()))
+                                                .value(Output.format("InstrumentationKey=%s", appInsights.instrumentationKey()))
                                                 .build(),
                                         NameValuePairArgs.builder()
                                                 .name("ApplicationInsightsAgent_EXTENSION_VERSION")
@@ -128,14 +128,14 @@ public class App {
                                                 .connectionString(
                                                         Output.format(
                                                                 "Server=tcp:%s.database.windows.net;initial catalog=%s;user ID=%s;password=%s;Min Pool Size=0;Max Pool Size=30;Persist Security Info=true;",
-                                                                sqlServer.getName(), database.getName(), Output.of(username), Output.of(pwd)))
+                                                                sqlServer.name(), database.name(), Output.of(username), Output.of(pwd)))
                                                 .type(ConnectionStringType.SQLAzure)
                                                 .build())
                                 .build())
                         .httpsOnly(true)
                         .build());
 
-        return ctx.export("endpoint", Output.format("https://%s", app.getDefaultHostName()));
+        return ctx.export("endpoint", Output.format("https://%s", app.defaultHostName()));
     }
 
     private static Output<String> getSASToken(Output<String> storageAccountName, Output<String> storageContainerName,
@@ -155,7 +155,7 @@ public class App {
                                 .contentDisposition("inline")
                                 .contentEncoding("deflate")
                                 .build())));
-        var token = blobSAS.applyValue(ListStorageAccountServiceSASResult::getServiceSasToken);
+        var token = blobSAS.applyValue(ListStorageAccountServiceSASResult::serviceSasToken);
         return Output.format("https://%s.blob.core.windows.net/%s/%s?%s", storageAccountName, storageContainerName, blobName, token);
     }
 }

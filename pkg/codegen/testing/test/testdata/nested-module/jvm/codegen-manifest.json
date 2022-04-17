@@ -3,10 +3,10 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
-    "src/main/java/io/pulumi/foo/Provider.java",
-    "src/main/java/io/pulumi/foo/ProviderArgs.java",
-    "src/main/java/io/pulumi/foo/Utilities.java",
-    "src/main/java/io/pulumi/foo/nested_module/Resource.java",
-    "src/main/java/io/pulumi/foo/nested_module/ResourceArgs.java"
+    "src/main/java/com/pulumi/foo/Provider.java",
+    "src/main/java/com/pulumi/foo/ProviderArgs.java",
+    "src/main/java/com/pulumi/foo/Utilities.java",
+    "src/main/java/com/pulumi/foo/nested_module/Resource.java",
+    "src/main/java/com/pulumi/foo/nested_module/ResourceArgs.java"
   ]
 }

@@ -10,5 +10,5 @@ pluginManagement {
   }
 }
 
-rootProject.name = "io.pulumi.kubernetes"
+rootProject.name = "com.pulumi.kubernetes"
 include("lib")
