@@ -52,23 +52,27 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 	}
 
 	if multiLine {
-		g.Fgen(w, "@")
+		g.Fgen(w, "\"\"\"\n")
 	}
 	if expressions {
 		g.Fgen(w, "String.format(\"")
-	} else {
-		g.Fgen(w, "\"")
 	}
 	var args []model.Expression
 	for _, expr := range expr.Parts {
 		if lit, ok := expr.(*model.LiteralValueExpression); ok && model.StringType.AssignableFrom(lit.Type()) {
-			g.Fgen(w, g.escapeString(lit.Value.AsString(), multiLine, expressions))
+			if multiLine {
+				// no need to escape
+				g.Fgen(w, lit.Value.AsString())
+			} else {
+				g.Fgen(w, g.escapeString(lit.Value.AsString(), false, expressions))
+			}
+
 		} else {
 			args = append(args, expr)
-			g.Fgen(w, g.escapeString("%s", multiLine, expressions))
+			g.Fgen(w, g.escapeString("%s", false, expressions))
 		}
 	}
-	g.Fgen(w, "\"")
+
 	if expressions {
 		g.Fgen(w, ", ")
 		for index, arg := range args {
@@ -78,6 +82,10 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 				g.Fgenf(w, "%.v,", arg)
 			}
 		}
+	}
+
+	if multiLine {
+		g.Fgenf(w, "%s\"\"\"", g.Indent)
 	}
 }
 
@@ -128,13 +136,13 @@ func GenerateProgram(program *pcl.Program) (map[string][]byte, hcl.Diagnostics, 
 	// FIX ME: not sure what this is doing...
 	for _, p := range program.Packages() {
 		if err := p.ImportLanguages(map[string]schema.Language{"java": Importer}); err != nil {
-			return make(map[string][]byte), nil, err
+			return nil, nil, err
 		}
 	}
 
 	g := &generator{
 		program:         program,
-		functionInvokes: make(map[string]*schema.Function),
+		functionInvokes: map[string]*schema.Function{},
 	}
 
 	g.Formatter = format.NewFormatter(g)
@@ -162,10 +170,10 @@ func (g *generator) genImport(w io.Writer, qualifiedName string) {
 	g.Fprintf(w, "import %s;\n", qualifiedName)
 }
 
-func (g *generator) makeIndent(w io.Writer) {
+func (g *generator) genIndent(w io.Writer) {
 	g.Fgenf(w, "%s", g.Indent)
 }
-func (g *generator) newline(w io.Writer) {
+func (g *generator) genNewline(w io.Writer) {
 	g.Fgen(w, "\n")
 }
 
@@ -184,21 +192,21 @@ func containConfigVariables(nodes []pcl.Node) bool {
 // genPreamble generates import statements, class definition and constructor.
 func (g *generator) genPreamble(w io.Writer, nodes []pcl.Node) {
 	g.Fgen(w, "package generated_program;")
-	g.newline(w)
-	g.newline(w)
+	g.genNewline(w)
+	g.genNewline(w)
 	g.genImport(w, "java.util.*")
 	g.genImport(w, "java.io.*")
 	g.genImport(w, "java.nio.*")
 	g.genImport(w, "com.pulumi.*")
-	g.newline(w)
+	g.genNewline(w)
 	// Emit Stack class signature
 	g.Fprint(w, "public class App {")
-	g.newline(w)
+	g.genNewline(w)
 	g.Fprint(w, "    public static void main(String[] args) {\n")
 	g.Fgen(w, "        int exitCode = Pulumi.run(App::stack);\n")
 	g.Fgen(w, "        System.exit(exitCode);\n")
 	g.Fgen(w, "    }\n")
-	g.newline(w)
+	g.genNewline(w)
 	g.Fprint(w, "    public static Exports stack(Context ctx) {\n")
 	if containConfigVariables(nodes) {
 		g.Fprint(w, "        final var config = Config.of();\n")
@@ -259,13 +267,13 @@ func (g *generator) generateJsonMethods(w io.Writer) {
 	g.Fgenf(w, "\n%sstatic String ToJson(Map<String, Object> map) {\n", g.Indent)
 	g.Indented(func() {
 		g.Fgenf(w, "%s// Bring your own JSON library here to serialize map", g.Indent)
-		g.newline(w)
+		g.genNewline(w)
 		g.Fgenf(w, "%sreturn \"{}\";\n", g.Indent)
 	})
 	g.Fgenf(w, "%s}\n", g.Indent)
-	g.newline(w)
+	g.genNewline(w)
 
-	g.makeIndent(w)
+	g.genIndent(w)
 	g.Fgen(w, "@SafeVarargs")
 	g.Fgenf(w, "\n%sstatic Map<String, Object> JObject(java.util.Map.Entry<String, Object> ...entries) {\n", g.Indent)
 	g.Indented(func() {
@@ -274,27 +282,27 @@ func (g *generator) generateJsonMethods(w io.Writer) {
 		g.Fgenf(w, "%sreturn map;\n", g.Indent)
 	})
 	g.Fgenf(w, "%s}\n", g.Indent)
-	g.newline(w)
+	g.genNewline(w)
 
 	g.Fgenf(w, "\n%sstatic java.util.Map.Entry<String, Object> JProperty(String key, Object value) {\n", g.Indent)
 	g.Indented(func() {
 		g.Fgenf(w, "%sreturn java.util.Map.entry(key, value);\n", g.Indent)
 	})
 	g.Fgenf(w, "%s}\n", g.Indent)
-	g.newline(w)
+	g.genNewline(w)
 
 	g.Fgenf(w, "\n%sObject[] JArray(Object ...items) {\n", g.Indent)
 	g.Indented(func() {
 		g.Fgenf(w, "%sreturn items;\n", g.Indent)
 	})
 	g.Fgenf(w, "%s}\n", g.Indent)
-	g.newline(w)
+	g.genNewline(w)
 }
 
 // genPostamble closes the method and the class and declares stack output statements.
 func (g *generator) genPostamble(w io.Writer, nodes []pcl.Node) {
 	g.Indented(func() {
-		g.makeIndent(w)
+		g.genIndent(w)
 		g.Fprintf(w, "%sreturn ctx.exports();\n", g.Indent)
 		g.Fprintf(w, "%s}\n", g.Indent)
 		if containsFunctionCall("readDir", nodes) {
@@ -345,22 +353,22 @@ func makeResourceName(baseName string, suffix string) string {
 	return fmt.Sprintf(`"%s-"`, baseName) + " + " + suffix
 }
 
-func (g *generator) findResourceSchema(resource *pcl.Resource) (bool, *schema.Resource) {
+func (g *generator) findResourceSchema(resource *pcl.Resource) (*schema.Resource, bool) {
 	if resource.Schema == nil {
-		return false, nil
+		return nil, false
 	}
 
 	for _, pkg := range g.program.Packages() {
 		if pkg.Resources != nil {
 			for _, resourceSchame := range pkg.Resources {
 				if resourceSchame != nil && resourceSchame.Token == resource.Schema.Token {
-					return true, resourceSchame
+					return resourceSchame, true
 				}
 			}
 		}
 	}
 
-	return false, nil
+	return nil, false
 }
 
 func (g *generator) findFunctionSchema(w io.Writer, function string) (bool, *schema.Function) {
@@ -398,8 +406,8 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 	resourceArgs := resourceArgsTypeName(resource)
 	variableName := names.Camel(names.MakeValidIdentifier(resource.Name()))
 	instantiate := func(resName string) {
-		resourceProperties := make(map[string]schema.Type)
-		foundSchema, resourceSchema := g.findResourceSchema(resource)
+		resourceProperties := map[string]schema.Type{}
+		resourceSchema, foundSchema := g.findResourceSchema(resource)
 		if foundSchema && resourceSchema.Properties != nil {
 			for _, property := range resourceSchema.Properties {
 				if property != nil && property.Type != nil {
@@ -462,7 +470,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 							if functionSchema, isInvoke := g.functionInvokes[traversalExpr.RootName]; isInvoke {
 								resultTypeName := names.Camel(typeName(functionSchema.Outputs))
 								part := getTraversalKey(traversalExpr.Traversal.SimpleSplit().Rel)
-								g.makeIndent(w)
+								g.genIndent(w)
 								g.Fgenf(w, "final var %s = ", resource.Name())
 								g.Fgenf(w, "%s.apply(%s -> {\n", traversalExpr.RootName, resultTypeName)
 								g.Indented(func() {
@@ -521,7 +529,7 @@ func (g *generator) genResource(w io.Writer, resource *pcl.Resource) {
 }
 
 func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVariable) {
-	g.makeIndent(w)
+	g.genIndent(w)
 	if configVariable.DefaultValue != nil {
 		g.Fgenf(w, "final var %s = config.get(\"%s\").orElse(%v);",
 			names.MakeValidIdentifier(configVariable.Name()),
@@ -532,10 +540,10 @@ func (g *generator) genConfigVariable(w io.Writer, configVariable *pcl.ConfigVar
 			names.MakeValidIdentifier(configVariable.Name()),
 			configVariable.Name())
 	}
-	g.newline(w)
+	g.genNewline(w)
 }
 
-func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariable) (bool, *schema.Function) {
+func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariable) (*schema.Function, bool) {
 	value := localVariable.Definition.Value
 	switch value.(type) {
 	case *model.FunctionCallExpression:
@@ -546,18 +554,18 @@ func (g *generator) isFunctionInvoke(w io.Writer, localVariable *pcl.LocalVariab
 			_, schemaName := g.functionName(args)
 			foundFunction, functionSchema := g.findFunctionSchema(w, schemaName)
 			if foundFunction {
-				return true, functionSchema
+				return functionSchema, true
 			}
 		}
 	}
 
-	return false, nil
+	return nil, false
 }
 
 func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariable) {
 	variableName := localVariable.Name()
-	isInvokeCall, functionSchema := g.isFunctionInvoke(w, localVariable)
-	g.makeIndent(w)
+	functionSchema, isInvokeCall := g.isFunctionInvoke(w, localVariable)
+	g.genIndent(w)
 	if isInvokeCall {
 		g.functionInvokes[variableName] = functionSchema
 		// convert CompletableFuture<T> to Output<T> using Output.of
@@ -570,14 +578,14 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 		variable := localVariable.Definition.Value
 		g.Fgenf(w, "final var %s = %v;", variableName, g.lowerExpression(variable, variable.Type()))
 	}
-	g.newline(w)
+	g.genNewline(w)
 }
 
 func (g *generator) genOutputAssignment(w io.Writer, outputVariable *pcl.OutputVariable) {
-	g.makeIndent(w)
+	g.genIndent(w)
 	rewrittenOutVar := g.lowerExpression(outputVariable.Value, outputVariable.Type())
 	g.Fgenf(w, "ctx.export(\"%s\", %v);", outputVariable.Name(), rewrittenOutVar)
-	g.newline(w)
+	g.genNewline(w)
 }
 
 func (g *generator) genNode(w io.Writer, n pcl.Node) {
