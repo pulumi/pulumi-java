@@ -351,9 +351,9 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "Convert.ToBase64String(System.Text.UTF8.GetBytes(%v))", expr.Args[0])
 	case "toJSON":
 		g.Fgen(w, "SerializeJson(")
-		g.newline(w)
+		g.genNewline(w)
 		g.Indented(func() {
-			g.makeIndent(w)
+			g.genIndent(w)
 			g.genJson(w, expr.Args[0])
 		})
 		g.Fgen(w, ")")
@@ -375,22 +375,22 @@ func (g *generator) genJson(w io.Writer, expr model.Expression) {
 	switch expr := expr.(type) {
 	case *model.ObjectConsExpression:
 		g.Fgen(w, "JsonObject(")
-		g.newline(w)
+		g.genNewline(w)
 		g.Indented(func() {
 			for index, item := range expr.Items {
 
-				g.makeIndent(w)
+				g.genIndent(w)
 				g.Fgenf(w, "JsonProperty(%s, ", item.Key)
 				g.genJson(w, item.Value)
 				g.Fgen(w, ")")
 				if index < len(expr.Items)-1 {
 					// elements
 					g.Fgen(w, ",")
-					g.newline(w)
+					g.genNewline(w)
 				}
 			}
 		})
-		g.newline(w)
+		g.genNewline(w)
 		g.Fgenf(w, "%s)", g.Indent)
 	case *model.TupleConsExpression:
 		if len(expr.Expressions) == 1 {
@@ -400,18 +400,18 @@ func (g *generator) genJson(w io.Writer, expr model.Expression) {
 			return
 		}
 		g.Fgen(w, "JsonArray(")
-		g.newline(w)
+		g.genNewline(w)
 		g.Indented(func() {
 			for index, value := range expr.Expressions {
-				g.makeIndent(w)
+				g.genIndent(w)
 				if index == len(expr.Expressions)-1 {
 					// last element: no trailing comma
 					g.genJson(w, value)
-					g.newline(w)
+					g.genNewline(w)
 				} else {
 					g.genJson(w, value)
 					g.Fgen(w, ", ")
-					g.newline(w)
+					g.genNewline(w)
 				}
 			}
 		})
@@ -429,11 +429,7 @@ func (g *generator) GenIndexExpression(w io.Writer, expr *model.IndexExpression)
 func (g *generator) escapeString(v string, verbatim, expressions bool) string {
 	builder := strings.Builder{}
 	for _, c := range v {
-		if verbatim {
-			if c == '"' {
-				builder.WriteRune('"')
-			}
-		} else {
+		if !verbatim {
 			if c == '"' || c == '\\' {
 				builder.WriteRune('\\')
 			}
@@ -615,19 +611,19 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 			objectProperties[property.Name] = codegen.UnwrapType(property.Type)
 		}
 		g.Fgenf(w, "%s.builder()", typeName(destType))
-		g.newline(w)
+		g.genNewline(w)
 		g.Indented(func() {
 			for _, item := range expr.Items {
 				lit := item.Key.(*model.LiteralValueExpression)
 				key := names.MakeValidIdentifier(names.LowerCamelCase(lit.Value.AsString()))
 				attributeType := objectProperties[key]
-				g.makeIndent(w)
+				g.genIndent(w)
 				g.typedObjectExprScope(attributeType, func() {
 					g.Fgenf(w, ".%s(%.v)", key, g.lowerExpression(item.Value, item.Value.Type()))
 				})
-				g.newline(w)
+				g.genNewline(w)
 			}
-			g.makeIndent(w)
+			g.genIndent(w)
 			g.Fgenf(w, ".build()")
 		})
 	case *schema.ArrayType:
@@ -748,18 +744,18 @@ func (g *generator) genArrayOfUnion(w io.Writer, union *schema.UnionType, exprs 
 				objectType := pickTypeFromUnion(union, expr)
 				if index == 0 {
 					// first expression, no need for a new line
-					g.makeIndent(w)
+					g.genIndent(w)
 					g.genObjectConsExpression(w, expr, objectType)
 					g.Fgen(w, ",")
 				} else if index == len(exprs)-1 {
 					// last element, no trailing comma
-					g.newline(w)
-					g.makeIndent(w)
+					g.genNewline(w)
+					g.genIndent(w)
 					g.genObjectConsExpression(w, expr, objectType)
 				} else {
 					// elements in between: new line and trailing comma
-					g.newline(w)
-					g.makeIndent(w)
+					g.genNewline(w)
+					g.genIndent(w)
 					g.genObjectConsExpression(w, expr, objectType)
 					g.Fgen(w, ",")
 				}
