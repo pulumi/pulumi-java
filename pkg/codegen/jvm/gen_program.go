@@ -53,9 +53,10 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 
 	if multiLine {
 		g.Fgen(w, "\"\"\"\n")
-	}
-	if expressions {
+	} else if expressions {
 		g.Fgen(w, "String.format(\"")
+	} else {
+		g.Fgen(w, "\"")
 	}
 	var args []model.Expression
 	for _, expr := range expr.Parts {
@@ -74,18 +75,22 @@ func (g *generator) GenTemplateExpression(w io.Writer, expr *model.TemplateExpre
 	}
 
 	if expressions {
+		// at the end of the interpolated string, append the quote
+		g.Fgen(w, "\"")
+		// emit the interpolated values, one at a time
 		g.Fgen(w, ", ")
 		for index, arg := range args {
 			if index == len(args)-1 {
+				// last element gets a closing parentheses
 				g.Fgenf(w, "%.v)", arg)
 			} else {
 				g.Fgenf(w, "%.v,", arg)
 			}
 		}
-	}
-
-	if multiLine {
+	} else if multiLine {
 		g.Fgenf(w, "%s\"\"\"", g.Indent)
+	} else {
+		g.Fgen(w, "\"")
 	}
 }
 
@@ -573,10 +578,10 @@ func (g *generator) genLocalVariable(w io.Writer, localVariable *pcl.LocalVariab
 		functionDefinition := outputOf(localVariable.Definition.Value)
 		// TODO: lowerExpression isn't what we expect: function call should extract outputs into .apply(...) calls
 		//functionDefinitionWithApplies := g.lowerExpression(functionDefinition, localVariable.Definition.Value.Type())
-		g.Fgenf(w, "final var %s = %v;", variableName, functionDefinition)
+		g.Fgenf(w, "final var %s = %v;\n", variableName, functionDefinition)
 	} else {
 		variable := localVariable.Definition.Value
-		g.Fgenf(w, "final var %s = %v;", variableName, g.lowerExpression(variable, variable.Type()))
+		g.Fgenf(w, "final var %s = %v;\n", variableName, g.lowerExpression(variable, variable.Type()))
 	}
 	g.genNewline(w)
 }
