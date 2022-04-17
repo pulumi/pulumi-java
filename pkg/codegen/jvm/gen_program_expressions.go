@@ -63,12 +63,7 @@ func (g *generator) GetPrecedence(expr model.Expression) int {
 	case *model.UnaryOpExpression:
 		return 17
 	case *model.FunctionCallExpression:
-		switch expr.Name {
-		case intrinsicAwait:
-			return 17
-		default:
-			return 20
-		}
+		return 20
 	case *model.ForExpression, *model.IndexExpression, *model.RelativeTraversalExpression, *model.SplatExpression,
 		*model.TemplateJoinExpression:
 		return 20
@@ -298,7 +293,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "ComputeFileBase64Sha256(%v)", expr.Args[0])
 	case pcl.Invoke:
 		fullyQualifiedName, schemaName := g.functionName(expr.Args[0])
-		foundFunction, functionSchema := g.findFunctionSchema(w, schemaName)
+		functionSchema, foundFunction := g.findFunctionSchema(schemaName)
 		if foundFunction {
 			g.Fprintf(w, "%s(", fullyQualifiedName)
 			invokeArgumentsExpr := expr.Args[1]
@@ -309,7 +304,6 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 			}
 			g.Fprint(w, ")")
 			return
-
 		}
 		g.Fprintf(w, "%s(", fullyQualifiedName)
 		isOutput, outArgs, _ := pcl.RecognizeOutputVersionedInvoke(expr)
@@ -332,9 +326,6 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 		g.Fgenf(w, "%.20v.length()", expr.Args[0])
 	case "lookup":
 		g.Fgenf(w, "%v[%v]", expr.Args[0], expr.Args[1])
-		if len(expr.Args) == 3 {
-			g.Fgenf(w, " ?? %v", expr.Args[2])
-		}
 	case "range":
 		g.genRange(w, expr, false)
 	case "readFile":
@@ -350,6 +341,7 @@ func (g *generator) GenFunctionCallExpression(w io.Writer, expr *model.FunctionC
 	case "toBase64":
 		g.Fgenf(w, "Convert.ToBase64String(System.Text.UTF8.GetBytes(%v))", expr.Args[0])
 	case "toJSON":
+		// Assumes SerializeJson is part of the SDK
 		g.Fgen(w, "SerializeJson(")
 		g.genNewline(w)
 		g.Indented(func() {
@@ -535,9 +527,17 @@ func (g *generator) genObjectConsExpression(w io.Writer, expr *model.ObjectConsE
 
 // Returns the name of the type
 func typeName(schemaType schema.Type) string {
-	fullyQualifiedTypeName := schemaType.String()
-	nameParts := strings.Split(fullyQualifiedTypeName, ":")
-	return names.Title(nameParts[len(nameParts)-1])
+	switch schemaType.(type) {
+	case *schema.ObjectType:
+		objectType := schemaType.(*schema.ObjectType)
+		fullyQualifiedTypeName := objectType.Token
+		nameParts := strings.Split(fullyQualifiedTypeName, ":")
+		return names.Title(nameParts[len(nameParts)-1])
+	default:
+		fullyQualifiedTypeName := schemaType.String()
+		nameParts := strings.Split(fullyQualifiedTypeName, ":")
+		return names.Title(nameParts[len(nameParts)-1])
+	}
 }
 
 // Checks whether the type is an object type
@@ -616,7 +616,7 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 			for _, item := range expr.Items {
 				lit := item.Key.(*model.LiteralValueExpression)
 				key := names.MakeValidIdentifier(names.LowerCamelCase(lit.Value.AsString()))
-				attributeType := objectProperties[key]
+				attributeType := objectProperties[lit.Value.AsString()]
 				g.genIndent(w)
 				g.typedObjectExprScope(attributeType, func() {
 					g.Fgenf(w, ".%s(%.v)", key, g.lowerExpression(item.Value, item.Value.Type()))
@@ -629,6 +629,10 @@ func (g *generator) genObjectConsExpressionWithTypeName(
 	case *schema.ArrayType:
 		// recurse into inner type
 		innerType := destType.(*schema.ArrayType).ElementType
+		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
+	case *schema.InputType:
+		// recurse into inner type
+		innerType := destType.(*schema.InputType).ElementType
 		g.genObjectConsExpressionWithTypeName(w, expr, innerType)
 	case *schema.UnionType:
 		union := destType.(*schema.UnionType)
