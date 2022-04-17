@@ -1,15 +1,15 @@
 package myproject;
 
-import io.pulumi.Pulumi;
-import io.pulumi.kubernetes.apps_v1.Deployment;
-import io.pulumi.kubernetes.apps_v1.DeploymentArgs;
-import io.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
-import io.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
-import io.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
-import io.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
-import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
-import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
-import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
+import com.pulumi.Pulumi;
+import com.pulumi.kubernetes.apps_v1.Deployment;
+import com.pulumi.kubernetes.apps_v1.DeploymentArgs;
+import com.pulumi.kubernetes.apps_v1.inputs.DeploymentSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerArgs;
+import com.pulumi.kubernetes.core_v1.inputs.ContainerPortArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
+import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
+import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 
 import java.util.Map;
 

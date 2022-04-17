@@ -30,9 +30,9 @@ var pulumiKubernetesSdkVersion = System.getenv("PULUMI_KUBERNETES_PROVIDER_SDK_V
 var pulumiGcpSdkVersion = System.getenv("PULUMI_GCP_PROVIDER_SDK_VERSION") ?: "6.11.0";
 
 dependencies {
-    implementation "io.pulumi:pulumi:$pulumiJavaSdkVersion"
-    implementation "io.pulumi:kubernetes:$pulumiKubernetesSdkVersion"
-    implementation "io.pulumi:gcp:$pulumiGcpSdkVersion"
+    implementation "com.pulumi:pulumi:$pulumiJavaSdkVersion"
+    implementation "com.pulumi:kubernetes:$pulumiKubernetesSdkVersion"
+    implementation "com.pulumi:gcp:$pulumiGcpSdkVersion"
 }
 
 application {
