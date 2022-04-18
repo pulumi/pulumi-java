@@ -1,9 +1,9 @@
 package myproject;
 
-import io.pulumi.Pulumi;
-import io.pulumi.core.Output;
-import io.pulumi.gcp.storage.Bucket;
-import io.pulumi.gcp.storage.BucketArgs;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.gcp.storage.Bucket;
+import com.pulumi.gcp.storage.BucketArgs;
 
 public class App {
     public static void main(String[] args) {

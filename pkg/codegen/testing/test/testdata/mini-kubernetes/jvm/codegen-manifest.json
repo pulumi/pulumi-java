@@ -3,10 +3,10 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
-    "src/main/java/io/pulumi/kubernetes/Provider.java",
-    "src/main/java/io/pulumi/kubernetes/ProviderArgs.java",
-    "src/main/java/io/pulumi/kubernetes/Utilities.java",
-    "src/main/java/io/pulumi/kubernetes/inputs/KubeClientSettingsArgs.java",
-    "src/main/java/io/pulumi/kubernetes/outputs/KubeClientSettingsArgs.java"
+    "src/main/java/com/pulumi/kubernetes/Provider.java",
+    "src/main/java/com/pulumi/kubernetes/ProviderArgs.java",
+    "src/main/java/com/pulumi/kubernetes/Utilities.java",
+    "src/main/java/com/pulumi/kubernetes/inputs/KubeClientSettingsArgs.java",
+    "src/main/java/com/pulumi/kubernetes/outputs/KubeClientSettingsArgs.java"
   ]
 }

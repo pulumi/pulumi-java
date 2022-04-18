@@ -3,15 +3,15 @@
     "README.md",
     "build.gradle",
     "settings.gradle",
-    "src/main/java/io/pulumi/example/ExampleFunctions.java",
-    "src/main/java/io/pulumi/example/OtherResource.java",
-    "src/main/java/io/pulumi/example/OtherResourceArgs.java",
-    "src/main/java/io/pulumi/example/Provider.java",
-    "src/main/java/io/pulumi/example/ProviderArgs.java",
-    "src/main/java/io/pulumi/example/Resource.java",
-    "src/main/java/io/pulumi/example/ResourceArgs.java",
-    "src/main/java/io/pulumi/example/Utilities.java",
-    "src/main/java/io/pulumi/example/inputs/ArgFunctionArgs.java",
-    "src/main/java/io/pulumi/example/outputs/ArgFunctionResult.java"
+    "src/main/java/com/pulumi/example/ExampleFunctions.java",
+    "src/main/java/com/pulumi/example/OtherResource.java",
+    "src/main/java/com/pulumi/example/OtherResourceArgs.java",
+    "src/main/java/com/pulumi/example/Provider.java",
+    "src/main/java/com/pulumi/example/ProviderArgs.java",
+    "src/main/java/com/pulumi/example/Resource.java",
+    "src/main/java/com/pulumi/example/ResourceArgs.java",
+    "src/main/java/com/pulumi/example/Utilities.java",
+    "src/main/java/com/pulumi/example/inputs/ArgFunctionArgs.java",
+    "src/main/java/com/pulumi/example/outputs/ArgFunctionResult.java"
   ]
 }

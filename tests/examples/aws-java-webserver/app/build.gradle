@@ -29,8 +29,8 @@ var pulumiJavaSdkVersion = System.getenv("PULUMI_JAVA_SDK_VERSION") ?: "0.0.1"
 var pulumiAwsSdkVersion = System.getenv("PULUMI_AWS_PROVIDER_SDK_VERSION") ?: "4.37.3";
 
 dependencies {
-    implementation "io.pulumi:pulumi:$pulumiJavaSdkVersion"
-    implementation "io.pulumi:aws:$pulumiAwsSdkVersion"
+    implementation "com.pulumi:pulumi:$pulumiJavaSdkVersion"
+    implementation "com.pulumi:aws:$pulumiAwsSdkVersion"
 }
 
 application {

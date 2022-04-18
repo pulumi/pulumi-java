@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/delete-package-versions@v3
         with:
-          package-name: 'io.pulumi.pulumi'
+          package-name: 'com.pulumi.pulumi'
           min-versions-to-keep: 20
           delete-only-pre-release-versions: "true"
 
@@ -33,6 +33,6 @@ jobs:
     steps:
       - uses: actions/delete-package-versions@v3
         with:
-          package-name: 'io.pulumi.${{ matrix.provider }}'
+          package-name: 'com.pulumi.${{ matrix.provider }}'
           min-versions-to-keep: 20
           delete-only-pre-release-versions: "true"
