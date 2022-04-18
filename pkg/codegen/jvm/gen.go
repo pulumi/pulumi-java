@@ -2070,21 +2070,7 @@ func (mod *modContext) genConfig(ctx *classFileContext, variables []*schema.Prop
 			return err
 		}
 
-		propertyType, getFunc := mod.getConfigProperty(ctx, typ, p.Name)
 		getterName := names.Ident(mod.propertyName(p)).AsProperty().Getter()
-		returnStatement := getFunc.String()
-
-		if p.DefaultValue != nil {
-			defaultValueString, defType, err := mod.getDefaultValue(ctx, p.DefaultValue, typ)
-			if err != nil {
-				return err
-			}
-			defaultValueInitializer := typeInitializer(ctx, typ, defaultValueString, defType)
-			returnStatement = fmt.Sprintf("%s.combine(%s, %s)",
-				ctx.ref(names.Optionals),
-				returnStatement,
-				defaultValueInitializer)
-		}
 
 		if p.Comment != "" {
 			fprintf(w, "/**\n")
